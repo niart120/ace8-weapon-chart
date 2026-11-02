@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "MSL",
+    "category": "MSL",
+    "order": 0,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 40,
+      "partMultipliers": {},
+      "targetMultiplierKey": "missile"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "TANK",
+    "category": "GROUND",
+    "order": 0,
+    "partOf": null,
+    "missionVariant": null,
+    "hp": 55,
+    "damageMultipliers": {
+      "missile": 1
+    },
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
+  }
+]

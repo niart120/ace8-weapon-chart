@@ -12,7 +12,8 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "generate:data": "node --experimental-strip-types scripts/generate-data/cli.ts"
   },
   "dependencies": {
     "react": "^19.3.1",
