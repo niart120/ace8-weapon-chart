@@ -1,0 +1,824 @@
+{
+  "scope": "Stored display strings in the supplied Japanese-mode localization. Weapon definitions are not an approved app roster or proof of availability.",
+  "source_hashes": {
+    "docs/initial/ref/raw_guides/Live/Content/Localization/GameData/CP_Cmn.dat": "dc773dbb11f1535b5b1a5809520a9b520b97b557d1c3fc54806837103237c4e6",
+    "docs/initial/ref/raw_guides/Live/Content/Localization/GameData/CP_A.dat": "9e84a8c6ced711c58a36561a81f1b121120054255eeaded877310fa26000fc81"
+  },
+  "decoder": "docs/initial/ref/scripts/extract_target_names.py:decode",
+  "tree_bytes_consumed": 777044,
+  "verified_target_strings": 737,
+  "power_parts": [
+    {
+      "row": "RAW_00002011",
+      "id": 2011802,
+      "name_key": "Parts_Name_12",
+      "name": "高威力化改修対応砲弾",
+      "short_name_key": "PartsShort_Name_12",
+      "short_name": "GUN.POW+",
+      "filter": [
+        "EPartsFilter::MachineGun"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 83,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        },
+        {
+          "ParameterLabel": 117,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002014",
+      "id": 2014802,
+      "name_key": "Parts_Name_15",
+      "name": "指向性近接信管 (標準ミサイル用)",
+      "short_name_key": "PartsShort_Name_15",
+      "short_name": "MSL.POW+",
+      "filter": [
+        "EPartsFilter::NormalMissile"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 95,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002021",
+      "id": 2021802,
+      "name_key": "Parts_Name_22",
+      "name": "対空弾道補正モジュール (特殊兵装用)",
+      "short_name_key": "PartsShort_Name_22",
+      "short_name": "AIR.POW+",
+      "filter": [
+        "EPartsFilter::SpecialMissile"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 235,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002022",
+      "id": 2022802,
+      "name_key": "Parts_Name_23",
+      "name": "対地弾道補正モジュール (特殊兵装用)",
+      "short_name_key": "PartsShort_Name_23",
+      "short_name": "GND.POW+",
+      "filter": [
+        "EPartsFilter::SpecialMissile"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 253,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002032",
+      "id": 2032802,
+      "name_key": "Parts_Name_37",
+      "name": "高性能炸薬",
+      "short_name_key": "PartsShort_Name_37",
+      "short_name": "BOMB.POW+",
+      "filter": [
+        "EPartsFilter::Bomb"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 124,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        },
+        {
+          "ParameterLabel": 0,
+          "SpecialConditionLabel": 0,
+          "OperationType": 0,
+          "ParameterValue": 0
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002038",
+      "id": 2038802,
+      "name_key": "Parts_Name_43",
+      "name": "ロケット弾用追加炸薬",
+      "short_name_key": "PartsShort_Name_43",
+      "short_name": "RKT.POW+",
+      "filter": [
+        "EPartsFilter::OthersWeapon"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 180,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002040",
+      "id": 2040802,
+      "name_key": "Parts_Name_45",
+      "name": "集光補正装置",
+      "short_name_key": "PartsShort_Name_45",
+      "short_name": "TLS.POW+",
+      "filter": [
+        "EPartsFilter::LaserWeapon"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 213,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.149999976158142
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002042",
+      "id": 2042802,
+      "name_key": "Parts_Name_47",
+      "name": "高速投射体",
+      "short_name_key": "PartsShort_Name_47",
+      "short_name": "EML.POW+",
+      "filter": [
+        "EPartsFilter::OthersWeapon"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 192,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25
+        },
+        {
+          "ParameterLabel": 206,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25
+        },
+        {
+          "ParameterLabel": 199,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002058",
+      "id": 2058802,
+      "name_key": "Parts_Name_58",
+      "name": "対空弾道補正モジュール (標準ミサイル用)",
+      "short_name_key": "PartsShort_Name_58",
+      "short_name": "MSL.AIR.POW+",
+      "filter": [
+        "EPartsFilter::NormalMissile"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 114,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858
+        }
+      ]
+    },
+    {
+      "row": "RAW_00002059",
+      "id": 2059802,
+      "name_key": "Parts_Name_59",
+      "name": "対地弾道補正モジュール (標準ミサイル用)",
+      "short_name_key": "PartsShort_Name_59",
+      "short_name": "MSL.GND.POW+",
+      "filter": [
+        "EPartsFilter::NormalMissile"
+      ],
+      "parameters": [
+        {
+          "ParameterLabel": 115,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858
+        }
+      ]
+    }
+  ],
+  "weapon_definitions": [
+    {
+      "row": "Row_1",
+      "id": 1,
+      "string_id": "mg",
+      "name_key": "Weapon_Name_mg",
+      "name": "GUN",
+      "short_name_key": "WeaponShort_Name_mg",
+      "short_name": "GUN",
+      "category": 2
+    },
+    {
+      "row": "Row_2",
+      "id": 2,
+      "string_id": "msl",
+      "name_key": "Weapon_Name_msl",
+      "name": "MISSILE",
+      "short_name_key": "WeaponShort_Name_msl",
+      "short_name": "MSL",
+      "category": 2
+    },
+    {
+      "row": "Row_3",
+      "id": 4,
+      "string_id": "4aam",
+      "name_key": "Weapon_Name_4aam",
+      "name": "4 Target Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_4aam",
+      "short_name": "4AAM",
+      "category": 0
+    },
+    {
+      "row": "Row_4",
+      "id": 5,
+      "string_id": "4agm",
+      "name_key": "Weapon_Name_4agm",
+      "name": "4 Target Air-to-Ground Missile",
+      "short_name_key": "WeaponShort_Name_4agm",
+      "short_name": "4AGM",
+      "category": 1
+    },
+    {
+      "row": "Row_5",
+      "id": 6,
+      "string_id": "6aam",
+      "name_key": "Weapon_Name_6aam",
+      "name": "6 Target Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_6aam",
+      "short_name": "6AAM",
+      "category": 0
+    },
+    {
+      "row": "Row_6",
+      "id": 8,
+      "string_id": "8aam",
+      "name_key": "Weapon_Name_8aam",
+      "name": "8 Target Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_8aam",
+      "short_name": "8AAM",
+      "category": 0
+    },
+    {
+      "row": "Row_7",
+      "id": 9,
+      "string_id": "8agm",
+      "name_key": "Weapon_Name_8agm",
+      "name": "8 Target Air-to-Ground Missile",
+      "short_name_key": "WeaponShort_Name_8agm",
+      "short_name": "8AGM",
+      "category": 1
+    },
+    {
+      "row": "Row_8",
+      "id": 10,
+      "string_id": "eml",
+      "name_key": "Weapon_Name_emlb",
+      "name": "Electromagnetic Launcher (Burst)",
+      "short_name_key": "WeaponShort_Name_emlb",
+      "short_name": "EMLB",
+      "category": 2
+    },
+    {
+      "row": "Row_9",
+      "id": 11,
+      "string_id": "gpb",
+      "name_key": "Weapon_Name_gpb",
+      "name": "Guided Penetration Bomb",
+      "short_name_key": "WeaponShort_Name_gpb",
+      "short_name": "GPB",
+      "category": 1
+    },
+    {
+      "row": "Row_10",
+      "id": 12,
+      "string_id": "gntk",
+      "name_key": "Weapon_Name_gntk",
+      "name": null,
+      "short_name_key": "WeaponShort_Name_gntk",
+      "short_name": null,
+      "category": 1
+    },
+    {
+      "row": "Row_11",
+      "id": 13,
+      "string_id": "hcaa",
+      "name_key": "Weapon_Name_hcaa",
+      "name": "High-Capacity Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_hcaa",
+      "short_name": "HCAA",
+      "category": 0
+    },
+    {
+      "row": "Row_12",
+      "id": 14,
+      "string_id": "hpaa",
+      "name_key": "Weapon_Name_hpaa",
+      "name": "High-Power Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_hpaa",
+      "short_name": "HPAA",
+      "category": 0
+    },
+    {
+      "row": "Row_13",
+      "id": 15,
+      "string_id": "hvaa",
+      "name_key": "Weapon_Name_hvaa",
+      "name": "Hyper-Velocity Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_hvaa",
+      "short_name": "HVAA",
+      "category": 0
+    },
+    {
+      "row": "Row_14",
+      "id": 16,
+      "string_id": "laam",
+      "name_key": "Weapon_Name_laam",
+      "name": "Long-Range Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_laam",
+      "short_name": "LAAM",
+      "category": 0
+    },
+    {
+      "row": "Row_15",
+      "id": 17,
+      "string_id": "lacm",
+      "name_key": "Weapon_Name_lacm",
+      "name": "Land-Attack Cruise Missile",
+      "short_name_key": "WeaponShort_Name_lacm",
+      "short_name": "LACM",
+      "category": 1
+    },
+    {
+      "row": "Row_16",
+      "id": 18,
+      "string_id": "lagm",
+      "name_key": "Weapon_Name_lagm",
+      "name": "Long-Range Air-to-Ground Missile",
+      "short_name_key": "WeaponShort_Name_lagm",
+      "short_name": "LAGM",
+      "category": 1
+    },
+    {
+      "row": "Row_17",
+      "id": 19,
+      "string_id": "lasm",
+      "name_key": "Weapon_Name_lasm",
+      "name": "Long-Range Air-to-Surface Missile",
+      "short_name_key": "WeaponShort_Name_lasm",
+      "short_name": "LASM",
+      "category": 1
+    },
+    {
+      "row": "Row_18",
+      "id": 20,
+      "string_id": "mgp",
+      "name_key": "Weapon_Name_mgp",
+      "name": "Machine Gun Pod",
+      "short_name_key": "WeaponShort_Name_mgp",
+      "short_name": "MGP",
+      "category": 2
+    },
+    {
+      "row": "Row_19",
+      "id": 21,
+      "string_id": "qaam",
+      "name_key": "Weapon_Name_qaam",
+      "name": "Quick Maneuver Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_qaam",
+      "short_name": "QAAM",
+      "category": 0
+    },
+    {
+      "row": "Row_20",
+      "id": 22,
+      "string_id": "rkt",
+      "name_key": "Weapon_Name_rkt",
+      "name": "Rocket Launcher",
+      "short_name_key": "WeaponShort_Name_rkt",
+      "short_name": "RKT",
+      "category": 1
+    },
+    {
+      "row": "Row_21",
+      "id": 23,
+      "string_id": "saam",
+      "name_key": "Weapon_Name_saam",
+      "name": "Semi-Active Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_saam",
+      "short_name": "SAAM",
+      "category": 0
+    },
+    {
+      "row": "Row_22",
+      "id": 24,
+      "string_id": "sasm",
+      "name_key": "Weapon_Name_sasm",
+      "name": "Short-Range Aerial Suppression Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_sasm",
+      "short_name": "SASM",
+      "category": 0
+    },
+    {
+      "row": "Row_23",
+      "id": 25,
+      "string_id": "plsl",
+      "name_key": "Weapon_Name_plsl",
+      "name": "Pulse Laser",
+      "short_name_key": "WeaponShort_Name_plsl",
+      "short_name": "PLSL",
+      "category": 2
+    },
+    {
+      "row": "Row_24",
+      "id": 26,
+      "string_id": "sffs",
+      "name_key": "Weapon_Name_sffs",
+      "name": "Self Forging Fragment Submunitions",
+      "short_name_key": "WeaponShort_Name_sffs",
+      "short_name": "SFFS",
+      "category": 1
+    },
+    {
+      "row": "Row_25",
+      "id": 27,
+      "string_id": "sod",
+      "name_key": "Weapon_Name_sod",
+      "name": "Stand-Off Dispenser",
+      "short_name_key": "WeaponShort_Name_sod",
+      "short_name": "SOD",
+      "category": 1
+    },
+    {
+      "row": "Row_26",
+      "id": 28,
+      "string_id": "tls",
+      "name_key": "Weapon_Name_tls",
+      "name": "Tactical Laser System",
+      "short_name_key": "WeaponShort_Name_tls",
+      "short_name": "TLS",
+      "category": 2
+    },
+    {
+      "row": "Row_27",
+      "id": 103,
+      "string_id": "4uav",
+      "name_key": "Weapon_Name_4uav",
+      "name": "Laser Turret UAV",
+      "short_name_key": "WeaponShort_Name_uav_x40a",
+      "short_name": "UAVT",
+      "category": 2
+    },
+    {
+      "row": "Row_28",
+      "id": 30,
+      "string_id": "ugb",
+      "name_key": "Weapon_Name_ugb",
+      "name": "Unguided Bomb",
+      "short_name_key": "WeaponShort_Name_ugb",
+      "short_name": "UGB",
+      "category": 1
+    },
+    {
+      "row": "Row_29",
+      "id": 31,
+      "string_id": "xsdb",
+      "name_key": "Weapon_Name_xsdb",
+      "name": "Advanced Small Diameter Bomb",
+      "short_name_key": "WeaponShort_Name_xsdb",
+      "short_name": "XSDB",
+      "category": 1
+    },
+    {
+      "row": "Row_30",
+      "id": 32,
+      "string_id": "faeb",
+      "name_key": "Weapon_Name_faeb",
+      "name": "Fuel-Air Explosive Bomb",
+      "short_name_key": "WeaponShort_Name_faeb",
+      "short_name": "FAEB",
+      "category": 1
+    },
+    {
+      "row": "Row_31",
+      "id": 33,
+      "string_id": "mpbm",
+      "name_key": "Weapon_Name_mpbm",
+      "name": "Multi-Purpose Burst Missile",
+      "short_name_key": "WeaponShort_Name_mpbm",
+      "short_name": "MPBM",
+      "category": 2
+    },
+    {
+      "row": "Row_32",
+      "id": 34,
+      "string_id": "esm",
+      "name_key": "Weapon_Name_esm",
+      "name": "Electronic Support Measures",
+      "short_name_key": "WeaponShort_Name_esm",
+      "short_name": "ESM",
+      "category": 2
+    },
+    {
+      "row": "Row_33",
+      "id": 35,
+      "string_id": "pgun",
+      "name_key": "Weapon_Name_pgun",
+      "name": "Pulse Laser ",
+      "short_name_key": "WeaponShort_Name_pgun",
+      "short_name": "PLSL",
+      "category": 2
+    },
+    {
+      "row": "Row_34",
+      "id": 100,
+      "string_id": "tgtp",
+      "name_key": "Weapon_Name_tgtp",
+      "name": "Targeting Pod",
+      "short_name_key": "WeaponShort_Name_tgtp",
+      "short_name": "TGTP",
+      "category": 2
+    },
+    {
+      "row": "Row_35",
+      "id": 36,
+      "string_id": "msl",
+      "name_key": "Weapon_Name_msl",
+      "name": "MISSILE",
+      "short_name_key": "WeaponShort_Name_msl",
+      "short_name": "MSL",
+      "category": 2
+    },
+    {
+      "row": "Row_36",
+      "id": 37,
+      "string_id": "msl",
+      "name_key": "Weapon_Name_msl",
+      "name": "MISSILE",
+      "short_name_key": "WeaponShort_Name_msl",
+      "short_name": "MSL",
+      "category": 2
+    },
+    {
+      "row": "Row_37",
+      "id": 38,
+      "string_id": "msl",
+      "name_key": "Weapon_Name_msl",
+      "name": "MISSILE",
+      "short_name_key": "WeaponShort_Name_msl",
+      "short_name": "MSL",
+      "category": 0
+    },
+    {
+      "row": "Row_38",
+      "id": 39,
+      "string_id": "msl",
+      "name_key": "Weapon_Name_msl",
+      "name": "MISSILE",
+      "short_name_key": "WeaponShort_Name_msl",
+      "short_name": "MSL",
+      "category": 2
+    },
+    {
+      "row": "Row_39",
+      "id": 40,
+      "string_id": "ecm",
+      "name_key": "Weapon_Name_ecm",
+      "name": "Electronic Countermeasure",
+      "short_name_key": "WeaponShort_Name_ecm",
+      "short_name": "ECM",
+      "category": 2
+    },
+    {
+      "row": "Row_40",
+      "id": 41,
+      "string_id": "iews",
+      "name_key": "Weapon_Name_iews",
+      "name": "Integrated Electronic Warfare System",
+      "short_name_key": "WeaponShort_Name_iews",
+      "short_name": "IEWS",
+      "category": 2
+    },
+    {
+      "row": "Row_41",
+      "id": 3,
+      "string_id": "2aam",
+      "name_key": "Weapon_Name_2aam",
+      "name": "2 Target Air-to-Air Missile",
+      "short_name_key": "WeaponShort_Name_2aam",
+      "short_name": "2AAM",
+      "category": 0
+    },
+    {
+      "row": "Row_42",
+      "id": 7,
+      "string_id": "6agm",
+      "name_key": "Weapon_Name_6agm",
+      "name": "6 Target Air-to-Ground Missile",
+      "short_name_key": "WeaponShort_Name_6agm",
+      "short_name": "6AGM",
+      "category": 1
+    },
+    {
+      "row": "Row_43",
+      "id": 44,
+      "string_id": "emlt",
+      "name_key": "Weapon_Name_emlt",
+      "name": "Electromagnetic Launcher (Twin)",
+      "short_name_key": "WeaponShort_Name_emlt",
+      "short_name": "EMLT",
+      "category": 2
+    },
+    {
+      "row": "Row_44",
+      "id": 45,
+      "string_id": "emlb",
+      "name_key": "Weapon_Name_emlb",
+      "name": "Electromagnetic Launcher (Burst)",
+      "short_name_key": "WeaponShort_Name_emlb",
+      "short_name": "EMLB",
+      "category": 2
+    },
+    {
+      "row": "Row_45",
+      "id": 42,
+      "string_id": "admm",
+      "name_key": "Weapon_Name_admm",
+      "name": "All Direction Multi-Purpose Missile",
+      "short_name_key": "WeaponShort_Name_admm",
+      "short_name": "ADMM",
+      "category": 2
+    },
+    {
+      "row": "Row_46",
+      "id": 101,
+      "string_id": "uavp",
+      "name_key": "Weapon_Name_uavp",
+      "name": "Pulse-Laser UAV",
+      "short_name_key": "WeaponShort_Name_uavp",
+      "short_name": "UAVP",
+      "category": 2
+    },
+    {
+      "row": "Row_47",
+      "id": 102,
+      "string_id": "uavg",
+      "name_key": "Weapon_Name_uavg",
+      "name": "Gun-Mounted UAV",
+      "short_name_key": "WeaponShort_Name_uavg",
+      "short_name": "UAVG",
+      "category": 2
+    },
+    {
+      "row": "Row_48",
+      "id": 43,
+      "string_id": "ugbl",
+      "name_key": "Weapon_Name_ugbl",
+      "name": "Unguided Bomb (Large)",
+      "short_name_key": "WeaponShort_Name_ugbl",
+      "short_name": "UGBL",
+      "category": 1
+    },
+    {
+      "row": "Row_49",
+      "id": 35,
+      "string_id": "pgun",
+      "name_key": "Weapon_Name_pgun",
+      "name": "Pulse Laser ",
+      "short_name_key": "WeaponShort_Name_pgun",
+      "short_name": "PLSL",
+      "category": 2
+    }
+  ],
+  "category_label_candidates": [
+    {
+      "key": "HangarAircrafttype_Name_Attecker",
+      "text": "ATTACKER"
+    },
+    {
+      "key": "HangarAircrafttype_Name_Electronic",
+      "text": "ELECTRONIC WARFARE"
+    },
+    {
+      "key": "HangarAircrafttype_Name_Fighter",
+      "text": "FIGHTER"
+    },
+    {
+      "key": "HangarAircrafttype_Name_Multirole",
+      "text": "MULTIROLE"
+    },
+    {
+      "key": "HangarWeaponType_Name_Ataglo",
+      "text": "AIR TO AIR/GROUND LOCK-ON"
+    },
+    {
+      "key": "HangarWeaponType_Name_Ataglom",
+      "text": "AIR TO AIR/GROUND LOCK-ON MISSILE"
+    },
+    {
+      "key": "HangarWeaponType_Name_Ataglou",
+      "text": "AIR TO AIR/GROUND LOCK-ON UAV"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atalo",
+      "text": "AIR TO AIR LOCK-ON"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atalom",
+      "text": "AIR TO AIR LOCK-ON MISSILE"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atglo",
+      "text": "AIR TO GROUND LOCK-ON"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atglob",
+      "text": "AIR TO GROUND LOCK-ON BOMB"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atglom",
+      "text": "AIR TO GROUND LOCK-ON MISSILE"
+    },
+    {
+      "key": "HangarWeaponType_Name_Atglor",
+      "text": "AIR TO GROUND LOCK-ON ROCKET"
+    },
+    {
+      "key": "HangarWeaponType_Name_Bomb",
+      "text": "BOMB"
+    },
+    {
+      "key": "HangarWeaponType_Name_Laser",
+      "text": "LASER"
+    },
+    {
+      "key": "HangarWeaponType_Name_Missile",
+      "text": "MISSILE"
+    },
+    {
+      "key": "HangarWeaponType_Name_Other",
+      "text": "OTHER"
+    },
+    {
+      "key": "HangarWeaponType_Name_Railgun",
+      "text": "RAILGUN"
+    },
+    {
+      "key": "HangarWeaponType_Name_Rocket",
+      "text": "ROCKET"
+    },
+    {
+      "key": "HangarWeaponType_Name_Uav",
+      "text": "UAV"
+    }
+  ]
+}
