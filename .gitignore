@@ -29,3 +29,9 @@ dist-ssr
 # Test artifacts
 coverage/
 .vitest/
+
+# Local data generation inputs
+/data/local/
+/.cache/
+/test-results/
+/playwright-report/

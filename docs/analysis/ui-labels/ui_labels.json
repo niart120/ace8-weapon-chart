@@ -15,9 +15,7 @@
       "name": "高威力化改修対応砲弾",
       "short_name_key": "PartsShort_Name_12",
       "short_name": "GUN.POW+",
-      "filter": [
-        "EPartsFilter::MachineGun"
-      ],
+      "filter": ["EPartsFilter::MachineGun"],
       "parameters": [
         {
           "ParameterLabel": 83,
@@ -40,9 +38,7 @@
       "name": "指向性近接信管 (標準ミサイル用)",
       "short_name_key": "PartsShort_Name_15",
       "short_name": "MSL.POW+",
-      "filter": [
-        "EPartsFilter::NormalMissile"
-      ],
+      "filter": ["EPartsFilter::NormalMissile"],
       "parameters": [
         {
           "ParameterLabel": 95,
@@ -59,9 +55,7 @@
       "name": "対空弾道補正モジュール (特殊兵装用)",
       "short_name_key": "PartsShort_Name_22",
       "short_name": "AIR.POW+",
-      "filter": [
-        "EPartsFilter::SpecialMissile"
-      ],
+      "filter": ["EPartsFilter::SpecialMissile"],
       "parameters": [
         {
           "ParameterLabel": 235,
@@ -90,9 +84,7 @@
       "name": "対地弾道補正モジュール (特殊兵装用)",
       "short_name_key": "PartsShort_Name_23",
       "short_name": "GND.POW+",
-      "filter": [
-        "EPartsFilter::SpecialMissile"
-      ],
+      "filter": ["EPartsFilter::SpecialMissile"],
       "parameters": [
         {
           "ParameterLabel": 253,
@@ -121,9 +113,7 @@
       "name": "高性能炸薬",
       "short_name_key": "PartsShort_Name_37",
       "short_name": "BOMB.POW+",
-      "filter": [
-        "EPartsFilter::Bomb"
-      ],
+      "filter": ["EPartsFilter::Bomb"],
       "parameters": [
         {
           "ParameterLabel": 124,
@@ -146,9 +136,7 @@
       "name": "ロケット弾用追加炸薬",
       "short_name_key": "PartsShort_Name_43",
       "short_name": "RKT.POW+",
-      "filter": [
-        "EPartsFilter::OthersWeapon"
-      ],
+      "filter": ["EPartsFilter::OthersWeapon"],
       "parameters": [
         {
           "ParameterLabel": 180,
@@ -165,9 +153,7 @@
       "name": "集光補正装置",
       "short_name_key": "PartsShort_Name_45",
       "short_name": "TLS.POW+",
-      "filter": [
-        "EPartsFilter::LaserWeapon"
-      ],
+      "filter": ["EPartsFilter::LaserWeapon"],
       "parameters": [
         {
           "ParameterLabel": 213,
@@ -184,9 +170,7 @@
       "name": "高速投射体",
       "short_name_key": "PartsShort_Name_47",
       "short_name": "EML.POW+",
-      "filter": [
-        "EPartsFilter::OthersWeapon"
-      ],
+      "filter": ["EPartsFilter::OthersWeapon"],
       "parameters": [
         {
           "ParameterLabel": 192,
@@ -215,9 +199,7 @@
       "name": "対空弾道補正モジュール (標準ミサイル用)",
       "short_name_key": "PartsShort_Name_58",
       "short_name": "MSL.AIR.POW+",
-      "filter": [
-        "EPartsFilter::NormalMissile"
-      ],
+      "filter": ["EPartsFilter::NormalMissile"],
       "parameters": [
         {
           "ParameterLabel": 114,
@@ -234,9 +216,7 @@
       "name": "対地弾道補正モジュール (標準ミサイル用)",
       "short_name_key": "PartsShort_Name_59",
       "short_name": "MSL.GND.POW+",
-      "filter": [
-        "EPartsFilter::NormalMissile"
-      ],
+      "filter": ["EPartsFilter::NormalMissile"],
       "parameters": [
         {
           "ParameterLabel": 115,

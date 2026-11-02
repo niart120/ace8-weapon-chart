@@ -1,0 +1,386 @@
+[
+  {
+    "role": "Fighter",
+    "parts": "none",
+    "hp": 55,
+    "damage": 50.0,
+    "hits": 2,
+    "healthInternal": [550, 50, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "none",
+    "hp": 65,
+    "damage": 50.0,
+    "hits": 2,
+    "healthInternal": [650, 150, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "none",
+    "hp": 300,
+    "damage": 50.0,
+    "hits": 6,
+    "healthInternal": [3000, 2500, 2000, 1500, 1000, 500, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "air10",
+    "hp": 55,
+    "damage": 55.0,
+    "hits": 1,
+    "healthInternal": [550, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "air10",
+    "hp": 65,
+    "damage": 55.0,
+    "hits": 2,
+    "healthInternal": [650, 100, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "air10",
+    "hp": 300,
+    "damage": 55.0,
+    "hits": 6,
+    "healthInternal": [3000, 2450, 1900, 1350, 800, 250, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "power20",
+    "hp": 55,
+    "damage": 60.0,
+    "hits": 1,
+    "healthInternal": [550, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "power20",
+    "hp": 65,
+    "damage": 60.0,
+    "hits": 2,
+    "healthInternal": [650, 50, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "power20",
+    "hp": 300,
+    "damage": 60.0,
+    "hits": 5,
+    "healthInternal": [3000, 2400, 1800, 1200, 600, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "both",
+    "hp": 55,
+    "damage": 66.0,
+    "hits": 1,
+    "healthInternal": [550, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "both",
+    "hp": 65,
+    "damage": 66.0,
+    "hits": 1,
+    "healthInternal": [650, 0]
+  },
+  {
+    "role": "Fighter",
+    "parts": "both",
+    "hp": 300,
+    "damage": 66.0,
+    "hits": 5,
+    "healthInternal": [3000, 2340, 1680, 1020, 360, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "none",
+    "hp": 55,
+    "damage": 40.0,
+    "hits": 2,
+    "healthInternal": [550, 150, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "none",
+    "hp": 65,
+    "damage": 40.0,
+    "hits": 2,
+    "healthInternal": [650, 250, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "none",
+    "hp": 300,
+    "damage": 40.0,
+    "hits": 8,
+    "healthInternal": [3000, 2600, 2200, 1800, 1400, 1000, 600, 200, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "air10",
+    "hp": 55,
+    "damage": 44.0,
+    "hits": 2,
+    "healthInternal": [550, 110, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "air10",
+    "hp": 65,
+    "damage": 44.0,
+    "hits": 2,
+    "healthInternal": [650, 210, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "air10",
+    "hp": 300,
+    "damage": 44.0,
+    "hits": 7,
+    "healthInternal": [3000, 2560, 2120, 1680, 1240, 800, 360, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "power20",
+    "hp": 55,
+    "damage": 48.0,
+    "hits": 2,
+    "healthInternal": [550, 70, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "power20",
+    "hp": 65,
+    "damage": 48.0,
+    "hits": 2,
+    "healthInternal": [650, 170, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "power20",
+    "hp": 300,
+    "damage": 48.0,
+    "hits": 7,
+    "healthInternal": [3000, 2520, 2040, 1560, 1080, 600, 120, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "both",
+    "hp": 55,
+    "damage": 52.80000305175781,
+    "hits": 2,
+    "healthInternal": [550, 21, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "both",
+    "hp": 65,
+    "damage": 52.80000305175781,
+    "hits": 2,
+    "healthInternal": [650, 121, 0]
+  },
+  {
+    "role": "Multirole",
+    "parts": "both",
+    "hp": 300,
+    "damage": 52.80000305175781,
+    "hits": 6,
+    "healthInternal": [3000, 2472, 1944, 1416, 888, 360, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "none",
+    "hp": 55,
+    "damage": 35.0,
+    "hits": 2,
+    "healthInternal": [550, 200, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "none",
+    "hp": 65,
+    "damage": 35.0,
+    "hits": 2,
+    "healthInternal": [650, 300, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "none",
+    "hp": 300,
+    "damage": 35.0,
+    "hits": 9,
+    "healthInternal": [3000, 2650, 2300, 1950, 1600, 1250, 900, 550, 200, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "air10",
+    "hp": 55,
+    "damage": 38.5,
+    "hits": 2,
+    "healthInternal": [550, 165, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "air10",
+    "hp": 65,
+    "damage": 38.5,
+    "hits": 2,
+    "healthInternal": [650, 265, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "air10",
+    "hp": 300,
+    "damage": 38.5,
+    "hits": 8,
+    "healthInternal": [3000, 2615, 2230, 1845, 1460, 1075, 690, 305, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "power20",
+    "hp": 55,
+    "damage": 42.0,
+    "hits": 2,
+    "healthInternal": [550, 130, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "power20",
+    "hp": 65,
+    "damage": 42.0,
+    "hits": 2,
+    "healthInternal": [650, 230, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "power20",
+    "hp": 300,
+    "damage": 42.0,
+    "hits": 8,
+    "healthInternal": [3000, 2580, 2160, 1740, 1320, 900, 480, 60, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "both",
+    "hp": 55,
+    "damage": 46.20000076293945,
+    "hits": 2,
+    "healthInternal": [550, 87, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "both",
+    "hp": 65,
+    "damage": 46.20000076293945,
+    "hits": 2,
+    "healthInternal": [650, 188, 0]
+  },
+  {
+    "role": "Attacker",
+    "parts": "both",
+    "hp": 300,
+    "damage": 46.20000076293945,
+    "hits": 7,
+    "healthInternal": [3000, 2538, 2076, 1614, 1152, 690, 228, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "none",
+    "hp": 55,
+    "damage": 40.0,
+    "hits": 2,
+    "healthInternal": [550, 150, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "none",
+    "hp": 65,
+    "damage": 40.0,
+    "hits": 2,
+    "healthInternal": [650, 250, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "none",
+    "hp": 300,
+    "damage": 40.0,
+    "hits": 8,
+    "healthInternal": [3000, 2600, 2200, 1800, 1400, 1000, 600, 200, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "air10",
+    "hp": 55,
+    "damage": 44.0,
+    "hits": 2,
+    "healthInternal": [550, 110, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "air10",
+    "hp": 65,
+    "damage": 44.0,
+    "hits": 2,
+    "healthInternal": [650, 210, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "air10",
+    "hp": 300,
+    "damage": 44.0,
+    "hits": 7,
+    "healthInternal": [3000, 2560, 2120, 1680, 1240, 800, 360, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "power20",
+    "hp": 55,
+    "damage": 48.0,
+    "hits": 2,
+    "healthInternal": [550, 70, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "power20",
+    "hp": 65,
+    "damage": 48.0,
+    "hits": 2,
+    "healthInternal": [650, 170, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "power20",
+    "hp": 300,
+    "damage": 48.0,
+    "hits": 7,
+    "healthInternal": [3000, 2520, 2040, 1560, 1080, 600, 120, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "both",
+    "hp": 55,
+    "damage": 52.80000305175781,
+    "hits": 2,
+    "healthInternal": [550, 21, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "both",
+    "hp": 65,
+    "damage": 52.80000305175781,
+    "hits": 2,
+    "healthInternal": [650, 121, 0]
+  },
+  {
+    "role": "Electronic",
+    "parts": "both",
+    "hp": 300,
+    "damage": 52.80000305175781,
+    "hits": 6,
+    "healthInternal": [3000, 2472, 1944, 1416, 888, 360, 0]
+  }
+]
