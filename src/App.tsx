@@ -1,102 +1,94 @@
-import { useState } from 'react';
-import heroImg from './assets/hero.png';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import { useEffect, useState } from 'react';
+import { modifiers, targets, weapons } from './data/masters';
+import {
+  initialPreferences,
+  resetPreferences,
+  selectedTargets,
+  selectedWeapons,
+} from './state/preferences';
+import { browserStorage, readPreferences, writePreferences } from './storage/preferences';
+import { CalculationControls } from './components/CalculationControls';
+import { IconButton, SettingsIcon } from './components/IconButton';
+import { Panel } from './components/Panel';
+import { SelectionPanel } from './components/SelectionPanel';
+import { ResultsTable } from './components/ResultsTable';
 import './App.css';
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const catalog = { targets, weapons };
+function useMobile() {
+  const [mobile, setMobile] = useState(() => window.matchMedia('(max-width: 767px)').matches);
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 767px)');
+    const update = () => setMobile(query.matches);
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+  return mobile;
+}
+export default function App() {
+  const mobile = useMobile();
+  const [state, setState] = useState(() =>
+    readPreferences(
+      browserStorage(),
+      initialPreferences(mobile, catalog),
+      catalog,
+      modifiers.parts.map((p) => p.key)
+    )
+  );
+  const [panel, setPanel] = useState<'weapons' | 'targets' | 'settings' | null>(null);
+  useEffect(() => writePreferences(browserStorage(), state), [state]);
+  const reset = (section: 'conditions' | 'weapons' | 'targets' | 'all') =>
+    setState((current) => resetPreferences(current, section, mobile, catalog));
+  const controls = (
+    <CalculationControls
+      value={state.conditions}
+      onChange={(conditions) => setState((current) => ({ ...current, conditions }))}
+      onReset={() => reset('conditions')}
+    />
+  );
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button type="button" className="counter" onClick={() => setCount((count) => count + 1)}>
-          Count is {count}
+    <main className="app-shell">
+      <header className="app-heading">
+        <h1>
+          ACE COMBAT 8<span>WEAPON GUIDE</span>
+        </h1>
+      </header>
+      <div className="desktop-controls">{controls}</div>
+      <nav className="table-toolbar" aria-label="Display controls">
+        <button type="button" onClick={() => setPanel('weapons')}>
+          WEAPONS
         </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <button type="button" onClick={() => setPanel('targets')}>
+          TARGETS
+        </button>
+        <div className="toolbar-spacer" />
+        <button className="reset-all" type="button" onClick={() => reset('all')}>
+          RESET
+        </button>
+        <div className="mobile-settings">
+          <IconButton name="SETTINGS" onClick={() => setPanel('settings')}>
+            <SettingsIcon />
+          </IconButton>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </nav>
+      <ResultsTable
+        targets={selectedTargets(state, targets)}
+        weapons={selectedWeapons(state, weapons)}
+        conditions={state.conditions}
+      />
+      {panel === 'settings' && (
+        <Panel title="SETTINGS" onClose={() => setPanel(null)} onReset={() => reset('conditions')}>
+          {controls}
+        </Panel>
+      )}
+      {(panel === 'weapons' || panel === 'targets') && (
+        <SelectionPanel
+          kind={panel}
+          state={state}
+          setState={setState}
+          onClose={() => setPanel(null)}
+          onReset={() => reset(panel)}
+        />
+      )}
+    </main>
   );
 }
-
-export default App;

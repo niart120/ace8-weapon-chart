@@ -15,6 +15,11 @@ out = root / 'data/local/native'
 out.mkdir(parents=True, exist_ok=True)
 def dump(addr):
     instructions = c.disasm_full(addr)
+    if not instructions:
+        pos=c.pe.get_offset_from_rva(addr-c.base);instructions=[]
+        for ins in c.md.disasm(c.data[pos:pos+128],addr):
+            instructions.append(ins)
+            if ins.mnemonic in ['jmp','ret']:break
     lines = []
     for ins in instructions:
         suffix = ''

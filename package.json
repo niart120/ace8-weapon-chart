@@ -13,7 +13,8 @@
     "format:check": "oxfmt --check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "generate:data": "node --experimental-strip-types scripts/generate-data/cli.ts"
+    "generate:data": "python -B scripts/generate-data/resolve-reference.py && node --experimental-strip-types scripts/generate-data/cli.ts",
+    "test:browser": "playwright test"
   },
   "dependencies": {
     "react": "^19.3.1",

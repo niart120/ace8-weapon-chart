@@ -7,8 +7,614 @@
     "calculation": "hits",
     "primary": {
       "baseDamage": 40,
+      "partMultipliers": {
+        "missilePower": 1.2000000476837158,
+        "missileAirPower": 1.100000023841858,
+        "missileGroundPower": 1.100000023841858
+      },
+      "targetMultiplierKey": "standardMissile"
+    }
+  },
+  {
+    "id": 2,
+    "name": "MSL (Rookie)",
+    "category": "MSL",
+    "order": 1,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 56,
+      "partMultipliers": {
+        "missilePower": 1.2000000476837158,
+        "missileAirPower": 1.100000023841858,
+        "missileGroundPower": 1.100000023841858
+      },
+      "targetMultiplierKey": "standardMissile"
+    }
+  },
+  {
+    "id": 3,
+    "name": "2AAM",
+    "category": "MSL.AIR",
+    "order": 2,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 60,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 4,
+    "name": "4AAM",
+    "category": "MSL.AIR",
+    "order": 3,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 5,
+    "name": "6AAM",
+    "category": "MSL.AIR",
+    "order": 4,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 6,
+    "name": "8AAM",
+    "category": "MSL.AIR",
+    "order": 5,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 7,
+    "name": "HCAA",
+    "category": "MSL.AIR",
+    "order": 6,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 60,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 8,
+    "name": "HPAA",
+    "category": "MSL.AIR",
+    "order": 7,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 160,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 9,
+    "name": "HVAA",
+    "category": "MSL.AIR",
+    "order": 8,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 10,
+    "name": "LAAM",
+    "category": "MSL.AIR",
+    "order": 9,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 11,
+    "name": "QAAM",
+    "category": "MSL.AIR",
+    "order": 10,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 12,
+    "name": "SAAM",
+    "category": "MSL.AIR",
+    "order": 11,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 13,
+    "name": "SASM",
+    "category": "MSL.AIR",
+    "order": 12,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 50,
+      "partMultipliers": {
+        "specialAirPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "airMissile"
+    },
+    "additional": {
+      "baseDamage": 30,
       "partMultipliers": {},
-      "targetMultiplierKey": "missile"
+      "targetMultiplierKey": "airMissile"
+    }
+  },
+  {
+    "id": 14,
+    "name": "4AGM",
+    "category": "MSL.GND",
+    "order": 13,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "groundMissile"
+    }
+  },
+  {
+    "id": 15,
+    "name": "6AGM",
+    "category": "MSL.GND",
+    "order": 14,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "groundMissile"
+    }
+  },
+  {
+    "id": 16,
+    "name": "8AGM",
+    "category": "MSL.GND",
+    "order": 15,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "groundMissile"
+    }
+  },
+  {
+    "id": 17,
+    "name": "LACM",
+    "category": "MSL.GND",
+    "order": 16,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 100,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "groundMissile"
+    },
+    "additional": {
+      "baseDamage": 100,
+      "partMultipliers": {},
+      "targetMultiplierKey": "lacmBlast"
+    }
+  },
+  {
+    "id": 18,
+    "name": "LAGM",
+    "category": "MSL.GND",
+    "order": 17,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 60,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "groundMissile"
+    },
+    "additional": {
+      "baseDamage": 60,
+      "partMultipliers": {},
+      "targetMultiplierKey": "lagmBlast"
+    }
+  },
+  {
+    "id": 19,
+    "name": "LASM",
+    "category": "MSL.GND",
+    "order": 18,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "specialGroundPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "antiShipMissile",
+      "antiShipMultiplier": 1.5
+    },
+    "additional": {
+      "baseDamage": 80,
+      "partMultipliers": {},
+      "targetMultiplierKey": "lasmBlast",
+      "antiShipMultiplier": 1.5
+    }
+  },
+  {
+    "id": 20,
+    "name": "GPB",
+    "category": "BOMB",
+    "order": 19,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 120,
+      "partMultipliers": {
+        "bombPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "guidedBomb"
+    }
+  },
+  {
+    "id": 21,
+    "name": "SFFS",
+    "category": "BOMB",
+    "order": 20,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 40,
+      "partMultipliers": {},
+      "targetMultiplierKey": "bomb"
+    },
+    "unverifiedParts": ["bombPower"]
+  },
+  {
+    "id": 22,
+    "name": "SOD",
+    "category": "BOMB",
+    "order": 21,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 40,
+      "partMultipliers": {
+        "bombPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "bomb"
+    }
+  },
+  {
+    "id": 23,
+    "name": "UGB",
+    "category": "BOMB",
+    "order": 22,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 75,
+      "partMultipliers": {
+        "bombPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "bomb"
+    }
+  },
+  {
+    "id": 24,
+    "name": "UGBL",
+    "category": "BOMB",
+    "order": 23,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 90,
+      "partMultipliers": {
+        "bombPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "bomb"
+    }
+  },
+  {
+    "id": 25,
+    "name": "XSDB",
+    "category": "BOMB",
+    "order": 24,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 60,
+      "partMultipliers": {
+        "bombPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "bomb"
+    }
+  },
+  {
+    "id": 26,
+    "name": "GUN TypeA",
+    "category": "GUN",
+    "order": 25,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 5,
+      "partMultipliers": {
+        "gunPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "standardMissile",
+      "antiShipMultiplier": 0.19999998807907104
+    }
+  },
+  {
+    "id": 27,
+    "name": "GUN TypeB",
+    "category": "GUN",
+    "order": 26,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 15,
+      "partMultipliers": {
+        "gunPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "standardMissile",
+      "antiShipMultiplier": 0.19999998807907104
+    }
+  },
+  {
+    "id": 28,
+    "name": "GUN TypeC",
+    "category": "GUN",
+    "order": 27,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 10,
+      "partMultipliers": {
+        "gunPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "standardMissile",
+      "antiShipMultiplier": 0.19999998807907104
+    }
+  },
+  {
+    "id": 29,
+    "name": "MGP",
+    "category": "GUN",
+    "order": 28,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 5,
+      "partMultipliers": {
+        "gunPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "standardMissile"
+    }
+  },
+  {
+    "id": 30,
+    "name": "RKT",
+    "category": "RKT",
+    "order": 29,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 40,
+      "partMultipliers": {
+        "rocketPower": 1.2000000476837158
+      },
+      "targetMultiplierKey": "rocket"
+    }
+  },
+  {
+    "id": 31,
+    "name": "EMLB",
+    "category": "OTHER",
+    "order": 30,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 80,
+      "partMultipliers": {
+        "railgunPower": 1.25
+      },
+      "targetMultiplierKey": "railgun"
+    }
+  },
+  {
+    "id": 32,
+    "name": "MPBM",
+    "category": "OTHER",
+    "order": 31,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 100,
+      "partMultipliers": {
+        "specialAirPower": 1.1200000047683716,
+        "specialGroundPower": 1.1200000047683716
+      },
+      "targetMultiplierKey": "mpbm"
+    },
+    "additional": {
+      "baseDamage": 50,
+      "partMultipliers": {},
+      "targetMultiplierKey": "mpbm"
+    }
+  },
+  {
+    "id": 33,
+    "name": "TLS [s]",
+    "category": "OTHER",
+    "order": 32,
+    "calculation": "tls",
+    "primary": {
+      "baseDamage": 40,
+      "partMultipliers": {
+        "laserPower": 1.149999976158142
+      },
+      "targetMultiplierKey": "laser"
+    },
+    "continuous": {
+      "damage": 18,
+      "startDelay": 0.05000000074505806,
+      "interval": 0.4000000059604645
+    }
+  },
+  {
+    "id": 34,
+    "name": "UAVT",
+    "category": "OTHER",
+    "order": 33,
+    "calculation": "unresolved",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {},
+      "targetMultiplierKey": "uavt"
+    }
+  },
+  {
+    "id": 35,
+    "name": "EML",
+    "category": "UNUSED",
+    "order": 34,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": 140,
+      "partMultipliers": {
+        "railgunPower": 1.25
+      },
+      "targetMultiplierKey": "railgun"
+    }
+  },
+  {
+    "id": 36,
+    "name": "PLSL",
+    "category": "UNUSED",
+    "order": 35,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {
+        "laserPower": 1.149999976158142
+      },
+      "targetMultiplierKey": "laser"
+    }
+  },
+  {
+    "id": 37,
+    "name": "PGUN",
+    "category": "UNUSED",
+    "order": 36,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {},
+      "targetMultiplierKey": "laser"
+    }
+  },
+  {
+    "id": 38,
+    "name": "ADMM",
+    "category": "UNUSED",
+    "order": 37,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {
+        "specialAirPower": 1.1200000047683716,
+        "specialGroundPower": 1.1200000047683716
+      },
+      "targetMultiplierKey": "mpbm"
+    }
+  },
+  {
+    "id": 39,
+    "name": "EMLT",
+    "category": "UNUSED",
+    "order": 38,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {
+        "railgunPower": 1.25
+      },
+      "targetMultiplierKey": "railgun"
+    }
+  },
+  {
+    "id": 40,
+    "name": "UAVG",
+    "category": "UNUSED",
+    "order": 39,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {},
+      "targetMultiplierKey": "uavg"
+    }
+  },
+  {
+    "id": 41,
+    "name": "UAVP",
+    "category": "UNUSED",
+    "order": 40,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {},
+      "targetMultiplierKey": "uavp"
+    }
+  },
+  {
+    "id": 42,
+    "name": "FAEB",
+    "category": "UNUSED",
+    "order": 41,
+    "calculation": "hits",
+    "primary": {
+      "baseDamage": null,
+      "partMultipliers": {},
+      "targetMultiplierKey": "fuelAirBomb"
     }
   }
 ]

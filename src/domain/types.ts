@@ -13,11 +13,12 @@ export const weaponCategories = [
 export const targetCategories = ['AIRCRAFT', 'GROUND', 'SHIP', 'STRUCTURE', 'OTHER'] as const;
 export type WeaponCategory = (typeof weaponCategories)[number] | 'UNUSED';
 export type TargetCategory = (typeof targetCategories)[number] | 'EXCLUDED';
-export type RoleGroup = 'air' | 'ground' | 'ship';
+export type RoleGroup = 'air' | 'ground' | 'ship' | 'none';
 export interface DamageComponent {
   readonly baseDamage: number | null;
   readonly partMultipliers: Readonly<Record<string, number>>;
   readonly targetMultiplierKey: string;
+  readonly antiShipMultiplier?: number;
 }
 export interface Weapon {
   readonly id: number;
@@ -26,6 +27,7 @@ export interface Weapon {
   readonly order: number;
   readonly primary: DamageComponent;
   readonly additional?: DamageComponent;
+  readonly unverifiedParts?: readonly string[];
   readonly calculation: 'hits' | 'tls' | 'unresolved';
   readonly continuous?: {
     readonly damage: number;

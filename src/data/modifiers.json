@@ -3,25 +3,35 @@
     "FIGHTER": {
       "air": 1.25,
       "ground": 0.875,
-      "ship": 0.875
-    },
-    "ATTACKER": {
-      "air": 0.875,
-      "ground": 1.5,
-      "ship": 1
+      "ship": 0.875,
+      "none": 1
     },
     "MULTIROLE": {
       "air": 1,
       "ground": 1,
-      "ship": 1
+      "ship": 1,
+      "none": 1
+    },
+    "ATTACKER": {
+      "air": 0.875,
+      "ground": 1.5,
+      "ship": 1,
+      "none": 1
     },
     "ELECTRONIC WARFARE": {
       "air": 1,
       "ground": 1,
-      "ship": 1
+      "ship": 1,
+      "none": 1
     }
   },
   "parts": [
+    {
+      "key": "gunPower",
+      "name": "GUN.POW+",
+      "condition": "all",
+      "stage": "base"
+    },
     {
       "key": "missilePower",
       "name": "MSL.POW+",
@@ -49,6 +59,30 @@
     {
       "key": "specialGroundPower",
       "name": "GND.POW+",
+      "condition": "all",
+      "stage": "base"
+    },
+    {
+      "key": "bombPower",
+      "name": "BOMB.POW+",
+      "condition": "all",
+      "stage": "base"
+    },
+    {
+      "key": "rocketPower",
+      "name": "RKT.POW+",
+      "condition": "all",
+      "stage": "base"
+    },
+    {
+      "key": "laserPower",
+      "name": "TLS.POW+",
+      "condition": "all",
+      "stage": "base"
+    },
+    {
+      "key": "railgunPower",
+      "name": "EML.POW+",
       "condition": "all",
       "stage": "base"
     }

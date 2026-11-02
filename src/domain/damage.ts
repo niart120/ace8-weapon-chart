@@ -7,6 +7,7 @@ export function componentDamage(
   conditions: Conditions
 ): number | null {
   const resistance = target.damageMultipliers[component.targetMultiplierKey];
+  if (resistance === 0 || component.baseDamage === 0) return 0;
   if (
     resistance === null ||
     resistance === undefined ||
@@ -28,6 +29,10 @@ export function componentDamage(
     else afterRole = f32(afterRole * f32(rate));
   }
   const adjusted = f32(f32(component.baseDamage) * base);
-  const roleAdjusted = f32(adjusted * f32(modifiers.roles[conditions.role][target.roleGroup]));
+  const shipAdjusted =
+    target.roleGroup === 'ship' && component.antiShipMultiplier !== undefined
+      ? f32(f32(component.antiShipMultiplier) * adjusted)
+      : adjusted;
+  const roleAdjusted = f32(shipAdjusted * f32(modifiers.roles[conditions.role][target.roleGroup]));
   return f32(f32(roleAdjusted * afterRole) * f32(resistance));
 }

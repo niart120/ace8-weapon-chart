@@ -164,3 +164,28 @@ test('入力は変更せず、特殊処理・TLS・UAVTの未確認を数値化�
       kind: 'unknown',
     });
 });
+
+test('艦船用倍率はROLEより前に成分単位で適用する', () => {
+  const t = { ...target, roleGroup: 'ship' as const, isAir: false };
+  expect(
+    componentDamage(
+      t,
+      {
+        ...missile.primary,
+        baseDamage: 5,
+        partMultipliers: {},
+        antiShipMultiplier: Math.fround(0.2),
+      },
+      { ...neutral, role: 'FIGHTER' }
+    )
+  ).toBe(0.875);
+});
+test('確認済みの倍率0では未使用のROLE属性を要求しない', () => {
+  expect(
+    calculateDefeatRequirement(
+      { ...target, roleGroup: null, damageMultipliers: { missile: 0 } },
+      missile,
+      neutral
+    )
+  ).toEqual({ kind: 'zeroDamage' });
+});

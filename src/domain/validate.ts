@@ -59,7 +59,7 @@ export function validateMasters(
   for (const role of roles) {
     const row = modifiers.roles[role];
     requireValue(
-      isRecord(row) && ['air', 'ground', 'ship'].every((key) => finite(row[key])),
+      isRecord(row) && ['air', 'ground', 'ship', 'none'].every((key) => finite(row[key])),
       `ROLE欠落: ${role}`
     );
   }
@@ -84,8 +84,18 @@ export function validateMasters(
       );
       for (const [key, rate] of Object.entries(component.partMultipliers))
         requireValue(keys.has(key) && finite(rate), `パーツ参照不備: ${key}`);
+      requireValue(
+        component.antiShipMultiplier === undefined || finite(component.antiShipMultiplier),
+        '艦船倍率不備'
+      );
       multiplierKeys.add(component.targetMultiplierKey);
     }
+    if (weapon.unverifiedParts !== undefined)
+      requireValue(
+        Array.isArray(weapon.unverifiedParts) &&
+          weapon.unverifiedParts.every((key) => typeof key === 'string' && keys.has(key)),
+        '未確認パーツ参照不備'
+      );
     if (weapon.continuous !== undefined)
       requireValue(
         isRecord(weapon.continuous) &&
@@ -117,7 +127,8 @@ export function validateMasters(
     );
     requireValue(target.isAir === null || typeof target.isAir === 'boolean', 'isAir欠落');
     requireValue(
-      target.roleGroup === null || ['air', 'ground', 'ship'].includes(String(target.roleGroup)),
+      target.roleGroup === null ||
+        ['air', 'ground', 'ship', 'none'].includes(String(target.roleGroup)),
       'roleGroup欠落'
     );
     requireValue(
