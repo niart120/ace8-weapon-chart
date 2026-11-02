@@ -58,9 +58,9 @@ SFFS・SODは子弾1発を単位とする。MPBMは直撃・範囲初撃まで�
 
 根拠は静的な抽出値と処理。実ゲームでのダメージ測定は行っていない。元の数値資料と追加解析の対象EXEはビルドが異なるため、出典と確認範囲を[計算調査](docs/analysis/calculation/CALCULATION_EVIDENCE.md)で区別する。
 
-- [仕様書](spec/agent/wip/local_001/INITIAL_DESIGN.md)
+- [仕様書](spec/agent/complete/local_001/INITIAL_DESIGN.md)
 - [マスタ照合](docs/analysis/calculation/MASTER_AUDIT.md)
 - [全体検証](docs/analysis/calculation/VALIDATION.md)
-- [未対応課題](spec/agent/wip/local_001/ISSUES.md)
+- [未対応課題](spec/agent/complete/local_001/ISSUES.md)
 
 選択と計算条件は同じブラウザーのlocalStorageに自動保存する。検索・パネル開閉・計算結果は保存しない。保存できない環境でも画面操作を続けられる。

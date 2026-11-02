@@ -27,7 +27,7 @@ TLSの `BP_plwp_tls_x0_C` はDamage40、SlipDamage18、DamageStartDelay約0.05�
 
 UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimportへ解決し、`BP_uavwp_tls_C` を指すことを確認した。展開側はAttackTime約7.7秒、LifeTime11秒、MaxLoadedCount4、ShotIntervalTime1秒。搭載側はDamage20、SlipDamage20、初回遅延約0.45秒、継続間隔約0.65秒、LifeTime約6.8秒。装填数や活動時間だけから同一目標への全攻撃回数を確定していない。分散・展開・活動時間と攻撃の単位が未決なので、最大ダメージや必要展開数は採用せず `unknown`。
 
-SOD子弾（104）はBombPowerグループに対応する。SFFS子弾（105）は同梱マッピングの1〜104の範囲外。子弾40は確認済みだが、親のBombPowerを転送する全経路が不足するため、SFFSはBOMB.POW+選択時だけ未確認とする。SODやパーツなしの子弾計算まで一律に止めない。
+`npc_damage_after_role.asm.txt` の0x147c93bdc〜0x147c93c10と0x147c93d4b〜0x147c93d64で、耐性参照時に子弾104→SOD（27）、105→SFFS（26）へ置き換える処理を確認した。両者のCategory07を使うことは、子弾に親の威力を流用することとは別である。SOD子弾（104）はBombPowerグループに対応する。SFFS子弾（105）は同梱マッピングの1〜104の範囲外。子弾40は確認済みだが、親のBombPowerを転送する全経路が不足するため、SFFSはBOMB.POW+選択時だけ未確認とする。SODやパーツなしの子弾計算まで一律に止めない。
 
 8AAMはDT_LiveWeaponに定義があるが、同梱のプレイヤー兵装Blueprintに基礎威力がない。隣接する6AAMやBot用定義から補完せずnullを保持する。
 
