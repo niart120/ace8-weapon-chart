@@ -1,0 +1,76 @@
+---
+name: gh-pages-release
+description: Inspect and merge a release-please GitHub Pages release PR with an explicit patch, minor, or major release decision. Use when Codex is asked to run a release, verify release-please output, check CI, adjust Release-As, merge the release PR, or confirm deployment to GitHub Pages.
+---
+
+# リリース実行
+
+目的: release-please が作成したリリース PR を確認し、ユーザ指定のバージョン種別でリリースを実行する。
+
+### 入力
+
+- `releaseType`: `patch` / `minor` / `major`
+
+### 前提条件
+
+- main ブランチに未リリースのコミットが存在すること
+- release-please によるリリース PR が存在すること
+- CI が通過していること
+
+### 実行手順
+
+1. **差分取得**
+   - `git fetch origin` で最新を取得
+   - `git log --oneline --no-merges <最新タグ>..origin/main` で未リリースの変更一覧を表示
+   - 変更を `Added / Changed / Fixed / Removed` に分類してユーザに提示
+
+2. **release-please PR の確認**
+   - 利用可能な GitHub MCP または `gh pr list` で `release-please` ラベルまたはタイトルに "release" を含む PR を検索
+   - PR が存在しない場合、main への push 後に release-please が PR を作成するまで待つ旨を通知して中断
+   - PR の CHANGELOG ドラフト内容を表示
+
+3. **CI 状態の確認**
+   - 利用可能な GitHub MCP または `gh pr checks` で release-please PR の head commit 状態を確認
+   - `autorelease: pending` ラベルは release-please の正常な「リリース PR マージ待ち」状態として扱い、中断条件にしない
+   - combined status が `pending` でも、`statuses` / `check_runs` が 0 件の場合は「チェック未作成」として扱う
+     - release-please PR は `github-actions[bot]` により作成・更新されるため、PR head に通常の `pull_request` CI が付かない場合がある
+     - この場合は `origin/main` の直近 CI と Release Please workflow が成功し、PR が `MERGEABLE` / `CLEAN` であれば続行可能と判断する
+   - `check_runs` または `statuses` に `queued` / `in_progress` / `pending` が存在する場合は、実行中の CI が残っているため中断し、再実行または待機をユーザに案内する
+   - `failure` / `cancelled` / `timed_out` が存在する場合は CI 失敗として中断する
+
+4. **バージョン判定**
+   - release-please が自動判定したバージョンと、ユーザ指定の `releaseType` を照合
+   - 不一致の場合:
+     - PR 本文に `Release-As: X.Y.Z` ヘッダを利用可能な GitHub MCP または `gh pr edit` で追加
+     - 追加後、release-please が PR を更新するのを待つ (手動で retrigger が必要な場合はその旨通知)
+   - 一致の場合: そのまま続行
+
+5. **変更規模の妥当性チェック**
+   - 変更内容と指定バージョンの整合性を確認
+   - 具体的な検査:
+     - `feat` コミットが含まれるのに `patch` 指定 → コミットの動機が fix 相当でないか確認を促す
+     - `BREAKING CHANGE` / `!` 付きコミットがあるのに `minor` 以下 → 警告
+   - 乖離が大きい場合はユーザに警告し、以下の選択肢を提示:
+     - (a) release-please の自動判定のまま続行
+     - (b) `Release-As` で上書きして再処理を待つ
+     - (c) 中断し、コミット prefix の修正を検討
+
+6. **PR マージ**
+   - 利用可能な GitHub MCP または `gh pr merge` でマージを実行
+   - マージ方法: merge commit (release-please のデフォルト)
+
+7. **結果確認**
+   - マージ後、release-please がタグと GitHub Release を作成したことを確認
+   - CI → CD パイプラインが起動したことを通知
+   - デプロイ先 URL を表示
+
+### 中断条件
+
+- release-please PR が存在しない
+- CI が失敗している
+- 実行中または pending の CI check/status が残っている
+- 変更規模とリリース種別の乖離が大きく、ユーザが続行を拒否した
+
+### 依頼例
+
+あなたはリリースアシスタントです。上記の手順に従い、release-please が作成したリリース PR を確認し、ユーザ指定のバージョン種別 (`patch` / `minor` / `major`) でリリースを実行してください。各段階で状態を検査し、問題があれば中止して詳細報告を行ってください。
