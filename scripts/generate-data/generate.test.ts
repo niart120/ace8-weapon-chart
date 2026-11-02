@@ -56,3 +56,8 @@ test('明示nullは許容し、同じ入力は同じ結果・固定IDとなる',
   expect(generateMasters(unknown).targets[0].damageMultipliers.missile).toBeNull();
   expect(generateMasters(input)).toEqual(generateMasters(input));
 });
+
+test('生成専用の出典情報を兵装出力へ持ち込まない', () => {
+  const withSource = { ...input.weapons[0], sourceRefs: [{ table: 'private', row: 'weapon' }] };
+  expect(() => generateMasters({ ...input, weapons: [withSource] })).toThrow('出典');
+});

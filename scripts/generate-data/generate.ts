@@ -42,6 +42,8 @@ export function generateMasters(input: GenerationInput): Masters {
     targets: targets.sort(byOrder),
     modifiers: input.modifiers,
   };
+  if ([...masters.weapons, ...masters.targets].some((row) => 'sourceRefs' in row))
+    throw new Error('出典が配信データに混入');
   validateMasters(masters);
   return masters;
 }

@@ -33,7 +33,6 @@ export function validateMasters(
         typeof row.name === 'string' && row.name.length && finite(row.order),
         `${label}: 表示情報欠落`
       );
-      requireValue(!('sourceRefs' in row), '出典が配信データに混入');
     }
     return seen;
   };
