@@ -13,11 +13,13 @@ if hashlib.sha256(p.exe).hexdigest()!='3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf
 w=load('inspect_weapons')
 w.classes=json.loads((root/'data/local/current-native/indexes/native_classes.json').read_text(encoding='utf-8'))
 w.class_addresses={int(v['address'],16):k for k,v in w.classes.items()}
-b=load('parse_blueprints',[("recover_native('Actor',0x14bbee080)",''),("recover_native('LiveBomb',0x14c5cdec0)",''),("recover_native('LiveBullet',0x14c5e83b0)",''),("[7,8,9]","[0,1,2,3,4,5,6,7,8,9]"),("'EnumProperty':30","'EnumProperty':30,'MulticastInlineDelegateProperty':26"),("if t=='EnumProperty':","if t=='MulticastInlineDelegateProperty':r.read('i')\n        if t=='EnumProperty':")])
+b=load('parse_blueprints',[("recover_native('Actor',0x14bbee080)",''),("recover_native('LiveBomb',0x14c5cdec0)",''),("recover_native('LiveBullet',0x14c5e83b0)",''),("[7,8,9]","[0,1,2,3,4,5,6,7,8,9]"),("if not z:r.read('i')","r.value(p.normalized('BlueprintGeneratedClass')[i],z)"),("'EnumProperty':30","'EnumProperty':30,'MulticastInlineDelegateProperty':26"),("if t=='EnumProperty':","if t=='MulticastInlineDelegateProperty':r.read('i')\n        if t=='EnumProperty':")])
 
 
 b.recover_native('Pawn',0x14bde8dc0)
 b.recover_native('Actor',0x14bbd95b0)
+# DynamicBindingObjects is an array, not a single four-byte object reference.
+b.recover_native('BlueprintGeneratedClass',0x14bc40030)
 p.schemas.update(json.loads((root/'data/local/current-native/indexes/native_schema.json').read_text(encoding='utf-8')))
 p.schemas.update(w.classes)
 p.by_addr.update({int(v['address'],16):k for k,v in p.schemas.items()})

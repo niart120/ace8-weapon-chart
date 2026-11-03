@@ -1,0 +1,199 @@
+{
+  "description": "Static extracted CDO / native evidence; original table build differs from supplementary EXE. See local_002 LAND_BATTLESHIP_REVIEW sections 15-16.",
+  "exeSha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "resolvedTargetIds": [151, 153, 488, 249, 258],
+  "blueprints": {
+    "BP_GR037_ldbs2_AAGun_C": {
+      "sha256": "23a13216f37cb3b324be44dc02366288a2690251617a77ed1af056b5122aad8f",
+      "consumed": 119,
+      "exportBytes": 119,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_AAGun_C",
+          "uexp_offset": 458,
+          "zero_mask": false,
+          "schema_index": 77
+        }
+      }
+    },
+    "BP_GR037_ldbs2_AAGun_BI_C": {
+      "sha256": "d564adf7f10354b2f301fba8540b4a108159f236d52f3a4f3e23ec5294fc7825",
+      "consumed": 127,
+      "exportBytes": 127,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_AAGun_BI_C",
+          "uexp_offset": 612,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      }
+    },
+    "BP_GR037_ldbs2_VLSM_C": {
+      "sha256": "d269b54fdcd1527f3bd269d6f131cf10fda588e41cd903a05022b4648d69ce38",
+      "consumed": 119,
+      "exportBytes": 119,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_VLSM_C",
+          "uexp_offset": 768,
+          "zero_mask": false,
+          "schema_index": 76
+        }
+      }
+    },
+    "BP_GR037_ldbs2_EXSAM_BI_L1_C": {
+      "sha256": "e7291dace980a8686e5f26986873ee9ef00963da840acdbc5b91fbb22d77d3a9",
+      "consumed": 46,
+      "exportBytes": 46,
+      "attributes": {},
+      "origins": {}
+    },
+    "BP_GR037_ldbs2_EXSAM_BI_C": {
+      "sha256": "ff751466c77e53900a65e84c863529278189484fab5e1ae0c28ef0078e90a86a",
+      "consumed": 115,
+      "exportBytes": 115,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_EXSAM_BI_C",
+          "uexp_offset": 596,
+          "zero_mask": false,
+          "schema_index": 74
+        }
+      }
+    },
+    "BP_GR037_ldbs2_EXSAM_BI_L2_C": {
+      "sha256": "e7291dace980a8686e5f26986873ee9ef00963da840acdbc5b91fbb22d77d3a9",
+      "consumed": 46,
+      "exportBytes": 46,
+      "attributes": {},
+      "origins": {}
+    },
+    "BP_GR037_ldbs2_EXSAM_BI_R1_C": {
+      "sha256": "1a112754ee49fc42ad92f86f2a9101e713a5478a44f12cc00f8a8878719aea5b",
+      "consumed": 58,
+      "exportBytes": 58,
+      "attributes": {},
+      "origins": {}
+    },
+    "BP_GR037_ldbs2_EXSAM_BI_R2_C": {
+      "sha256": "e7291dace980a8686e5f26986873ee9ef00963da840acdbc5b91fbb22d77d3a9",
+      "consumed": 46,
+      "exportBytes": 46,
+      "attributes": {},
+      "origins": {}
+    },
+    "BP_GR036_ldbs1_SubCat_C": {
+      "sha256": "557cbeef56d4d2f71d695ce591b7cd137f1c870dc1001a728c7c1426ba412065",
+      "consumed": 250,
+      "exportBytes": 250,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_SubCat_C",
+          "uexp_offset": 691,
+          "zero_mask": false,
+          "schema_index": 77
+        }
+      }
+    },
+    "BP_GR036_ldbs1_SubCat_Core_C": {
+      "sha256": "cdbd0dafd4a135e5442ed1bdd9be7c906e9d47c61e43833e70e6a87ce5e5e8cb",
+      "consumed": 145,
+      "exportBytes": 145,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_SubCat_Core_C",
+          "uexp_offset": 581,
+          "zero_mask": false,
+          "schema_index": 73
+        }
+      }
+    },
+    "BP_GR036_ldbs1_Thruster_L1_C": {
+      "sha256": "f7526f4033b2dca0e1384b578eb544a31c205967894bc73d2e0fbfd5aac37f24",
+      "consumed": 72,
+      "exportBytes": 72,
+      "attributes": {},
+      "origins": {}
+    },
+    "BP_GR036_ldbs1_Thruster_Base_C": {
+      "sha256": "2fa4e3e147cd04091575e283da9c6e3e19a687a1a1b5396f37810a77c8dae1fe",
+      "consumed": 104,
+      "exportBytes": 104,
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_Thruster_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 74
+        }
+      }
+    },
+    "BP_GR036_ldbs1_Thruster_L2_C": {
+      "sha256": "7ef22cf71c9c175b8a1ee06faca9bd99aff31ed0c5ed038e8e1e99790b41fa6e",
+      "consumed": 72,
+      "exportBytes": 72,
+      "attributes": {},
+      "origins": {}
+    }
+  },
+  "parents": {
+    "GR036_ldbs1_01": [
+      "GR036_ldbs1_AAGun_L1",
+      "GR036_ldbs1_AAGun_L2",
+      "GR036_ldbs1_AAGun_L3",
+      "GR036_ldbs1_AAGun_L4",
+      "GR036_ldbs1_AAGun_L5",
+      "GR036_ldbs1_AAGun_R1",
+      "GR036_ldbs1_AAGun_R2",
+      "GR036_ldbs1_AAGun_R3",
+      "GR036_ldbs1_AAGun_R4",
+      "GR036_ldbs1_AAGun_R5",
+      "GR036_ldbs1_Gun_L1_01",
+      "GR036_ldbs1_Gun_L2_01",
+      "GR036_ldbs1_Gun_R1_01",
+      "GR036_ldbs1_Gun_R2_01",
+      "GR036_ldbs1_SubCannon_L1",
+      "GR036_ldbs1_SubCannon_L2",
+      "GR036_ldbs1_SubCannon_R1",
+      "GR036_ldbs1_SubCannon_R2",
+      "GR036_ldbs1_SubCat_L1",
+      "GR036_ldbs1_SubCat_L2",
+      "GR036_ldbs1_SubCat_L3",
+      "GR036_ldbs1_SubCat_L4",
+      "GR036_ldbs1_SubCat_R1",
+      "GR036_ldbs1_SubCat_R2",
+      "GR036_ldbs1_SubCat_R3",
+      "GR036_ldbs1_SubCat_R4",
+      "GR036_ldbs1_Thruster_L1_01",
+      "GR036_ldbs1_Thruster_L2",
+      "GR036_ldbs1_Thruster_R1",
+      "GR036_ldbs1_Thruster_R2",
+      "GR036_ldbs1_VLSM1",
+      "GR036_ldbs1_VLSM2"
+    ],
+    "GR039_ldbs4_B_01": ["GR039_ldbs4_B_MainCannon1"],
+    "GR039_ldbs4_C_01": ["GR039_ldbs4_C_MainCannon2", "GR039_ldbs4_C_MainCannon3"]
+  }
+}

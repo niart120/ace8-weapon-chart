@@ -321,7 +321,7 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
     page.getByRole('rowheader', { name: 'LAND BATTLESHIP 2 [M19]', exact: true })
   ).toHaveCount(0);
   await expect(
-    page.getByRole('rowheader', { name: 'MAIN GUN《LAND BATTLESHIP 1》', exact: true })
+    page.getByRole('rowheader', { name: 'MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》', exact: true })
   ).toHaveCount(1);
   await expect(
     page.getByRole('rowheader', { name: 'AA GUN《LAND BATTLESHIP 2》', exact: true })
@@ -339,6 +339,76 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
   }
   await panel.getByRole('searchbox').fill('LAND BATTLESHIP 2 [M19]');
   await expect(panel.locator('.group-items label')).toHaveCount(0);
-  await panel.getByRole('searchbox').fill('MAIN GUN《LAND BATTLESHIP 1》');
+  await panel.getByRole('searchbox').fill('MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》');
   await expect(panel.locator('.group-items label')).toHaveCount(1);
 });
+
+for (const width of [1440, 390]) {
+  test(`陸上戦艦部位: ${width}pxで旧ID移行・新名検索・表示切替を確認`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.addInitScript(() => {
+      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      localStorage.setItem(
+        'ace8-weapon-guide.preferences',
+        JSON.stringify({
+          version: 1,
+          conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
+          weaponIds: [1],
+          targetIds: [249, 258, 151, 152, 372, 153, 488, 154],
+          showParts: false,
+          showMissionVariants: false,
+        })
+      );
+    });
+    await page.goto('/');
+    await expect(page.getByRole('rowheader')).toHaveCount(0);
+    const selectedIds = [248, 254, 151, 152, 372, 153, 488, 154];
+    for (const showParts of [false, true])
+      for (const showVariants of [false, true]) {
+        await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+        const panel = page.getByRole('dialog', { name: 'TARGETS' });
+        await panel
+          .getByRole('checkbox', { name: 'TARGET PARTS', exact: true })
+          .setChecked(showParts);
+        await panel
+          .getByRole('checkbox', { name: 'MISSION VARIANTS', exact: true })
+          .setChecked(showVariants);
+        if (showParts) {
+          for (const [query, count] of [
+            ['SUB CATERPILLAR', 2],
+            ['ROCKY ISLAND', 1],
+            ['AA GUN《LAND BATTLESHIP 2》', 1],
+            ['VLS《LAND BATTLESHIP 2》', 1],
+          ] as const) {
+            await panel.getByRole('searchbox').fill(query);
+            await expect(panel.locator('.group-items label')).toHaveCount(count);
+          }
+        }
+        await panel.getByRole('button', { name: 'Close targets', exact: true }).click();
+        await expect(page.getByRole('rowheader')).toHaveCount(
+          showParts ? (showVariants ? 8 : 7) : 0
+        );
+        if (showParts) {
+          await expect(
+            page.getByRole('rowheader', {
+              name: 'MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》',
+              exact: true,
+            })
+          ).toHaveCount(1);
+          const sub = page
+            .getByRole('row')
+            .filter({ has: page.getByRole('rowheader', { name: 'SUB CATERPILLAR', exact: true }) });
+          await expect(sub.locator('td').nth(1)).toHaveText('1');
+        }
+        await expect
+          .poll(() =>
+            page.evaluate(
+              () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+            )
+          )
+          .toEqual(selectedIds);
+      }
+    await page.reload();
+    await expect(page.getByRole('rowheader')).toHaveCount(8);
+  });
+}

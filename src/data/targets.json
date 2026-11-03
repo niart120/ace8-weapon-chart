@@ -6101,10 +6101,10 @@
   },
   {
     "id": 372,
-    "name": "MAIN GUN《LAND BATTLESHIP 1》",
+    "name": "MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》",
     "category": "GROUND",
     "order": 188,
-    "partOf": 147,
+    "partOf": 371,
     "missionVariant": null,
     "hp": 80,
     "damageMultipliers": {
@@ -6133,7 +6133,7 @@
   },
   {
     "id": 151,
-    "name": "SUB CATERPILLAR《LAND BATTLESHIP 1》",
+    "name": "SUB CATERPILLAR",
     "category": "GROUND",
     "order": 189,
     "partOf": 147,
@@ -6159,13 +6159,13 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
     "id": 152,
-    "name": "SUB CATERPILLAR《LAND BATTLESHIP 1》",
+    "name": "SUB CATERPILLAR (CORE)",
     "category": "GROUND",
     "order": 190,
     "partOf": 147,
@@ -6255,8 +6255,8 @@
       "lagmBlast": 1.399999976158142,
       "lasmBlast": 0.5
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6289,8 +6289,8 @@
       "lagmBlast": 1.399999976158142,
       "lasmBlast": 0.5
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6492,7 +6492,7 @@
   {
     "id": 249,
     "name": "AA GUN《LAND BATTLESHIP 2》",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 200,
     "partOf": 247,
     "missionVariant": null,
@@ -6517,8 +6517,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6780,7 +6780,7 @@
   {
     "id": 258,
     "name": "VLS《LAND BATTLESHIP 2》",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 209,
     "partOf": 247,
     "missionVariant": null,
@@ -6805,8 +6805,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {

@@ -1,5 +1,6 @@
 import { isRecord } from '../domain/validate';
 import { roles } from '../domain/types';
+import { mergedTargetIds } from '../data/target-merges';
 import type { DamageType, Role } from '../domain/types';
 import type { Catalog, Preferences } from '../state/preferences';
 export const storageKey = 'ace8-weapon-guide.preferences';
@@ -55,7 +56,11 @@ export function restorePreferences(
       parts: [...new Set(value.conditions.parts.filter((key: string) => partKeys.includes(key)))],
     },
     weaponIds: [...new Set(value.weaponIds.filter((id) => weaponIds.has(id)))],
-    targetIds: [...new Set(value.targetIds.filter((id) => targetIds.has(id)))],
+    targetIds: [
+      ...new Set(
+        value.targetIds.map((id) => mergedTargetIds.get(id) ?? id).filter((id) => targetIds.has(id))
+      ),
+    ],
     showParts: value.showParts,
     showMissionVariants: value.showMissionVariants,
   };

@@ -25,6 +25,41 @@ test('全解除を保存・復元し、検索・パネル・結果は保存し�
     'showMissionVariants',
   ]);
 });
+
+test('統合した陸上戦艦部位の旧選択を代表IDへ移し、重複・全解除・非表示を保持する', () => {
+  for (const [savedIds, expected] of [
+    [
+      [249, 258, 372, 151, 152],
+      [248, 254, 372, 151, 152],
+    ],
+    [
+      [249, 248, 258, 254, 330, 999],
+      [248, 254],
+    ],
+    [[], []],
+  ]) {
+    const saved = {
+      ...initial,
+      version: 1,
+      targetIds: savedIds,
+      showParts: false,
+      showMissionVariants: false,
+    };
+    const restored = restorePreferences(saved, initial, catalog, parts);
+    expect(restored.targetIds).toEqual(expected);
+    expect(restored.showParts).toBe(false);
+    expect(restored.showMissionVariants).toBe(false);
+    const values = new Map<string, string>();
+    const storage = {
+      getItem: (key: string) => values.get(key) ?? null,
+      setItem: (key: string, value: string) => {
+        values.set(key, value);
+      },
+    };
+    writePreferences(storage, restored);
+    expect(readPreferences(storage, initial, catalog, parts)).toEqual(restored);
+  }
+});
 test('IDが追加・削除・改名・並べ替えされても選択だけを照合する', () => {
   const saved = {
     version: 1,

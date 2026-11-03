@@ -17,11 +17,11 @@
 | 分類 | 行数 |
 | --- | ---: |
 | AIRCRAFT | 132 |
-| GROUND | 72 |
+| GROUND | 70 |
 | SHIP | 59 |
 | STRUCTURE | 43 |
 | OTHER | 8 |
-| EXCLUDED | 192 |
+| EXCLUDED | 194 |
 
 ## 未確認項目
 
@@ -47,18 +47,13 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 459 | X-40 NOSE UNIT | isAir |
 | 106 | LAND AEGIS | isAir, roleGroup |
 | 315 | LAND AEGIS [M23] | isAir, roleGroup |
-| 151 | SUB CATERPILLAR《LAND BATTLESHIP 1》 | isAir, roleGroup |
 | 154 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup, standardDamage |
-| 488 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup |
-| 153 | THRUSTER《LAND BATTLESHIP 1》 [M9] | isAir, roleGroup |
 | 155 | VLS《LAND BATTLESHIP 1》 | isAir, roleGroup |
-| 249 | AA GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 251 | BREACH《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 252 | CIWS《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 250 | CORE UNIT《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 255 | MAIN GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 256 | SAM《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 258 | VLS《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 228 | MAIN GUN《LAND BATTLESHIP 3》 | isAir, roleGroup |
 | 310 | LAND DESTROYER | isAir, roleGroup |
 | 314 | DISP. RAIL GUN《LAND DESTROYER》 | isAir, roleGroup |
@@ -115,4 +110,9 @@ Q002では表示名を持つダミー用定義6行をEXCLUDEDに変更。この�
 Q003のうちM24のID330は、攻撃可能な対象との対応が未確認であることを踏まえたユーザーの掲載判断によりEXCLUDEDへ変更。この時点で掲載319行・EXCLUDED187行。M25の同モデル・主砲を除外せず、ID330のcategory以外を維持した。実際の攻撃不能や未使用を確定したものではない。詳細は[陸上戦艦の調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)の12節を参照。
 
 
-Q003の後続判断で、陸上戦艦の本体ID147・371・494・247・226もEXCLUDEDへ変更。現在は掲載314行・EXCLUDED192行、本体8行が非表示、部位24行は掲載を維持する。固定ID・元定義・計算値・親参照は保持。本体6行のisAir・roleGroupの未確認値も保持するが、上の「掲載対象」の属性表からは除いた。本体HP100を艦全体の撃破条件と解釈できる根拠が不足しており、部位を中心とする攻略記事とユーザー判断に基づく掲載方針である。実際の攻撃不能を確定したものではない。[陸上戦艦の調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)の13節を参照。
+Q003の後続判断で、陸上戦艦の本体ID147・371・494・247・226もEXCLUDEDへ変更。本体除外時点では掲載314行・EXCLUDED192行、本体8行が非表示、部位24行は掲載を維持した。固定ID・元定義・計算値・親参照は保持。本体6行のisAir・roleGroupの未確認値も保持するが、上の「掲載対象」の属性表からは除いた。本体HP100を艦全体の撃破条件と解釈できる根拠が不足しており、部位を中心とする攻略記事とユーザー判断に基づく掲載方針である。実際の攻撃不能を確定したものではない。[陸上戦艦の調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)の13節を参照。
+
+
+Q003の確認済み部位属性を反映し、151・153・488・249・258をisAir=false・ROLE=shipへ更新した。249→248、258→254を同条件として統合し、旧IDはEXCLUDEDとして保持、旧保存の選択は代表IDへ移す。旧出典は履歴用IDにも残し、代表IDにも追加して生成時に同条件を照合する。これら9出典は掲載を続けるため、元定義の除外指定282件には追加しない。
+
+現在は固定ID506件、掲載312行・EXCLUDED194行。陸上戦艦部位は固定ID24件のうち22行を掲載。SUB CATERPILLAR 151・152の所属ラベルを省略して152へ(CORE)を付け、M25主砲372をROCKY ISLAND表記・partOf=371へ修正した。HP・耐性・任務差分・並び順、THRUSTERの名前と右側154の全設定は維持。根拠・検証は[陸上戦艦の調査16節](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md#16-合意した部位変更の実装と検証)を参照。現行の静的属性を確認したもので、基準ビルドとの同一性や実ゲーム測定を確認した意味ではない。
