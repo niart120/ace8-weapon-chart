@@ -1,0 +1,1979 @@
+{
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "target_mapping": {
+    "id": 429,
+    "name": "PILLAR《MEGAFLOAT》",
+    "sourceRefs": [
+      {
+        "table": "DT_NPC_Mission027",
+        "row": "Megafloat_Center_CorePillar_01"
+      }
+    ]
+  },
+  "event_entries": {
+    "BP_Megafloat_Center_CorePillar_C": {
+      "OnBlendOut_520DB31342D091680048C3B71E86BE2B": 211,
+      "OnChangeDamageState": 1442,
+      "OnCompleted_520DB31342D091680048C3B71E86BE2B": 239,
+      "OnCoreDeath_イベント": 1145,
+      "OnDestructAnimEnd": 1716,
+      "OnInterrupted_520DB31342D091680048C3B71E86BE2B": 183,
+      "OnNotifyBegin_520DB31342D091680048C3B71E86BE2B": 155,
+      "OnNotifyEnd_520DB31342D091680048C3B71E86BE2B": 127,
+      "OnOuterDeath_イベント": 1429,
+      "ReceiveBeginPlay": 1623
+    },
+    "BP_Megafloat_Center_Core_C": {
+      "OnDeath": 49,
+      "OnOuterDeath_イベント": 10,
+      "ReceiveBeginPlay": 126
+    },
+    "BP_Megafloat_Center_Core_Outer_C": {
+      "OnDeath": 34
+    }
+  },
+  "self_death_parameters": {
+    "function_params": "0x14dd75690",
+    "parameters": [
+      {
+        "name": "InTime",
+        "address": "0x14ca209e0"
+      },
+      {
+        "name": "bForceKill",
+        "address": "0x14ca209a0"
+      }
+    ]
+  },
+  "construction_damage_states": {
+    "0": "None",
+    "1": "Minor",
+    "2": "Moderate",
+    "3": "Induced",
+    "4": "Destruct"
+  },
+  "native_enums_sha256": "0272870bfb51f9652cfd09a2494ab56b69f7ccb6cdb6c4793d1fcc647c4f2f37",
+  "scope": "2026-11-03 static asset/native analysis. No game execution. Excerpts of data/local/local003-core-pillar.json; full AST and native instructions reproducible with investigate_core_pillar.py.",
+  "source_tables": {
+    "DT_NPC": {
+      "sha256": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+      "rows": {
+        "Megafloat_Center_CorePillar_01": {
+          "ModelId": "Megafloat_Center_CorePillar",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "ChildNPCId": ["Megafloat_Center_Core_01"],
+          "ChildNPCComponentNames": ["Child_Core"],
+          "GameObjectDisplayName02": "",
+          "MaxHealthDifference": 0,
+          "DamageRateToParent": 0
+        },
+        "Megafloat_Center_Core_01": {
+          "ModelId": "Megafloat_Center_Core",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "ChildNPCId": ["Megafloat_Center_Core_Outer_01"],
+          "ChildNPCComponentNames": ["Child_Outer"],
+          "GameObjectDisplayName02": "",
+          "MaxHealthDifference": 0,
+          "DamageRateToParent": 0
+        },
+        "Megafloat_Center_Core_Outer_01": {
+          "ModelId": "Megafloat_Center_Core_Outer",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "ChildNPCId": [],
+          "ChildNPCComponentNames": [],
+          "GameObjectDisplayName02": "",
+          "MaxHealthDifference": 0,
+          "DamageRateToParent": 0
+        }
+      }
+    },
+    "DT_NPC_Model": {
+      "sha256": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+      "rows": {
+        "Megafloat_Center_CorePillar": {
+          "GameObjectDisplayName01": "",
+          "BriefingDisplayNameID": "None",
+          "BlueprintClass": {
+            "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_CorePillar",
+            "asset": "BP_Megafloat_Center_CorePillar_C",
+            "subpath": ""
+          },
+          "MaxHealth": 120.0
+        },
+        "Megafloat_Center_Core": {
+          "GameObjectDisplayName01": "ContainerGround_Name_TransmissionUnit",
+          "BriefingDisplayNameID": "ContainerGround_Name_TransmissionUnit",
+          "BlueprintClass": {
+            "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core",
+            "asset": "BP_Megafloat_Center_Core_C",
+            "subpath": ""
+          },
+          "MaxHealth": 40.0
+        },
+        "Megafloat_Center_Core_Outer": {
+          "GameObjectDisplayName01": "ContainerGround_Name_TransmissionUnit",
+          "BriefingDisplayNameID": "ContainerGround_Name_TransmissionUnit",
+          "BlueprintClass": {
+            "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core_Outer",
+            "asset": "BP_Megafloat_Center_Core_Outer_C",
+            "subpath": ""
+          },
+          "MaxHealth": 40.0
+        }
+      }
+    },
+    "DT_NPC_Mission027": {
+      "sha256": "052035a5e995c5e587c70a3a37e4c4c15944bed9660f2070291dc3069144d2d2",
+      "rows": {
+        "Megafloat_Center_CorePillar_01": {
+          "NpcId": "Megafloat_Center_CorePillar_01",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "MaxHealthDifference": 0,
+          "MinHealth": 0
+        },
+        "Megafloat_Center_Core_01": {
+          "NpcId": "Megafloat_Center_Core_01",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "MaxHealthDifference": 0,
+          "MinHealth": 0
+        },
+        "Megafloat_Center_Core_Outer_01": {
+          "NpcId": "Megafloat_Center_Core_Outer_01",
+          "WeaponDurabilityId": "NPC_WPDur_000",
+          "MaxHealthDifference": 0,
+          "MinHealth": 0
+        }
+      }
+    }
+  },
+  "blueprints": {
+    "BP_Megafloat_Center_CorePillar_C": {
+      "source": "data/local/npc-raw/Live/Content/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_CorePillar.uasset",
+      "uasset_sha256": "93883d3d8d1c7869a899cd98245822c7c2fdfdb83e11fb71b6184c3922eec3bf",
+      "uexp_sha256": "6d924b88c92a6e1f6fc15890770c57af5ee6b48e27588f534c1ea91060b18dd1",
+      "cdo": {
+        "blueprint": "BP_Megafloat_Center_CorePillar_C",
+        "parent": "LiveAIMegafloatCorePillar",
+        "consumed": 201,
+        "export_bytes": 201,
+        "error": null,
+        "properties": {
+          "PanelMontageAsset": -4,
+          "DestructMontageAsset": -3,
+          "DeathAnimLoopTIme": 5.0,
+          "OuterPanelPartsModel": [
+            -138, -139, -140, -141, -142, -143, -144, -145, -146, -147, -148, -149, -150, -151, -152
+          ],
+          "bInitialInvincible": 1,
+          "bShouldRecordForDebriefing": false,
+          "bShowHUDBox": false,
+          "bIsIgnoreScoreBoard": 1,
+          "MaxHealth": 120.0
+        },
+        "origins": {
+          "PanelMontageAsset": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 957,
+            "zero_mask": false,
+            "schema_index": 8
+          },
+          "DestructMontageAsset": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 961,
+            "zero_mask": false,
+            "schema_index": 9
+          },
+          "DeathAnimLoopTIme": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 965,
+            "zero_mask": false,
+            "schema_index": 10
+          },
+          "OuterPanelPartsModel": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 973,
+            "zero_mask": false,
+            "schema_index": 11
+          },
+          "bInitialInvincible": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 1053,
+            "zero_mask": false,
+            "schema_index": 16
+          },
+          "bShouldRecordForDebriefing": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 1058,
+            "zero_mask": true,
+            "schema_index": 63
+          },
+          "bShowHUDBox": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 1058,
+            "zero_mask": true,
+            "schema_index": 64
+          },
+          "bIsIgnoreScoreBoard": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 1058,
+            "zero_mask": false,
+            "schema_index": 65
+          },
+          "MaxHealth": {
+            "blueprint": "BP_Megafloat_Center_CorePillar_C",
+            "uexp_offset": 1069,
+            "zero_mask": false,
+            "schema_index": 131
+          }
+        },
+        "resolved_asset_properties": {
+          "PanelMontageAsset": {
+            "index": -4,
+            "name": "AM_MGF_CorePillar"
+          },
+          "DestructMontageAsset": {
+            "index": -3,
+            "name": "AM_CorePillar_Destruct"
+          },
+          "OuterPanelPartsModel": [
+            {
+              "index": -138,
+              "name": "SM_MGF_CorePanelParts001_I07"
+            },
+            {
+              "index": -139,
+              "name": "SM_MGF_CorePanelParts002_I07"
+            },
+            {
+              "index": -140,
+              "name": "SM_MGF_CorePanelParts003_I07"
+            },
+            {
+              "index": -141,
+              "name": "SM_MGF_CorePanelParts004_I07"
+            },
+            {
+              "index": -142,
+              "name": "SM_MGF_CorePanelParts005_I07"
+            },
+            {
+              "index": -143,
+              "name": "SM_MGF_CorePanelParts006_I07"
+            },
+            {
+              "index": -144,
+              "name": "SM_MGF_CorePanelParts007_I07"
+            },
+            {
+              "index": -145,
+              "name": "SM_MGF_CorePanelParts008_I07"
+            },
+            {
+              "index": -146,
+              "name": "SM_MGF_CorePanelParts009_I07"
+            },
+            {
+              "index": -147,
+              "name": "SM_MGF_CorePanelParts010_I07"
+            },
+            {
+              "index": -148,
+              "name": "SM_MGF_CorePanelParts011_I07"
+            },
+            {
+              "index": -149,
+              "name": "SM_MGF_CorePanelParts012_I07"
+            },
+            {
+              "index": -150,
+              "name": "SM_MGF_CorePanelParts013_I07"
+            },
+            {
+              "index": -151,
+              "name": "SM_MGF_CorePanelParts014_I07"
+            },
+            {
+              "index": -152,
+              "name": "SM_MGF_CorePanelParts015_I07"
+            }
+          ]
+        }
+      },
+      "mesh_references": [
+        {
+          "index": -130,
+          "class_package": "/Script/Engine",
+          "class_name": "SkeletalMesh",
+          "outer": -97,
+          "name": "SK_MGF_CentralControlPillar001P001_I07",
+          "optional": 0
+        },
+        {
+          "index": -135,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -98,
+          "name": "SM_MGF_CentralControlPillar001P001_I07",
+          "optional": 0
+        },
+        {
+          "index": -136,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -99,
+          "name": "SM_MGF_CentralControlPillar001P002_I07",
+          "optional": 0
+        },
+        {
+          "index": -137,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -100,
+          "name": "SM_MGF_CentralControlPillar001P003_I07",
+          "optional": 0
+        },
+        {
+          "index": -138,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -101,
+          "name": "SM_MGF_CorePanelParts001_I07",
+          "optional": 0
+        },
+        {
+          "index": -139,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -102,
+          "name": "SM_MGF_CorePanelParts002_I07",
+          "optional": 0
+        },
+        {
+          "index": -140,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -103,
+          "name": "SM_MGF_CorePanelParts003_I07",
+          "optional": 0
+        },
+        {
+          "index": -141,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -104,
+          "name": "SM_MGF_CorePanelParts004_I07",
+          "optional": 0
+        },
+        {
+          "index": -142,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -105,
+          "name": "SM_MGF_CorePanelParts005_I07",
+          "optional": 0
+        },
+        {
+          "index": -143,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -106,
+          "name": "SM_MGF_CorePanelParts006_I07",
+          "optional": 0
+        },
+        {
+          "index": -144,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -107,
+          "name": "SM_MGF_CorePanelParts007_I07",
+          "optional": 0
+        },
+        {
+          "index": -145,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -108,
+          "name": "SM_MGF_CorePanelParts008_I07",
+          "optional": 0
+        },
+        {
+          "index": -146,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -109,
+          "name": "SM_MGF_CorePanelParts009_I07",
+          "optional": 0
+        },
+        {
+          "index": -147,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -110,
+          "name": "SM_MGF_CorePanelParts010_I07",
+          "optional": 0
+        },
+        {
+          "index": -148,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -111,
+          "name": "SM_MGF_CorePanelParts011_I07",
+          "optional": 0
+        },
+        {
+          "index": -149,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -112,
+          "name": "SM_MGF_CorePanelParts012_I07",
+          "optional": 0
+        },
+        {
+          "index": -150,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -113,
+          "name": "SM_MGF_CorePanelParts013_I07",
+          "optional": 0
+        },
+        {
+          "index": -151,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -114,
+          "name": "SM_MGF_CorePanelParts014_I07",
+          "optional": 0
+        },
+        {
+          "index": -152,
+          "class_package": "/Script/Engine",
+          "class_name": "StaticMesh",
+          "outer": -115,
+          "name": "SM_MGF_CorePanelParts015_I07",
+          "optional": 0
+        }
+      ],
+      "functions": {
+        "ExecuteUbergraph_BP_Megafloat_Center_CorePillar": {
+          "export_index": 4,
+          "uexp_offset": 1125,
+          "script_offset": 2553,
+          "memory_size": 1724,
+          "stored_size": 2412,
+          "function_flags": 32769,
+          "tail_zero_bytes": 8,
+          "code_sha256": "1d46ef5ebbe97f8007b804198cb6dcd35175a072931769a837bede4f2d2c8ae8",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "PushExecutionFlow",
+              "expression": "PushExecutionFlow 0x6b9"
+            },
+            {
+              "vm": "0x5",
+              "stored": "0x5",
+              "op": "ComputedJump",
+              "expression": "ComputedJump EntryPoint"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0x17",
+              "op": "LocalVirtualFunction",
+              "expression": "OnDestructAnimEnd()"
+            },
+            {
+              "vm": "0x1d",
+              "stored": "0x21",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x1e",
+              "stored": "0x22",
+              "op": "LetObj",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue_1 = SK_Pillar.GetAnimInstance()"
+            },
+            {
+              "vm": "0x48",
+              "stored": "0x60",
+              "op": "Context",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue_1.Montage_JumpToSection('DestructEnd_C', DestructMontageAsset)"
+            },
+            {
+              "vm": "0x7e",
+              "stored": "0x9e",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x7f",
+              "stored": "0x9f",
+              "op": "Let",
+              "expression": "Temp_name_Variable = K2Node_CustomEvent_NotifyName_4"
+            },
+            {
+              "vm": "0x9a",
+              "stored": "0xd2",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x9b",
+              "stored": "0xd3",
+              "op": "Let",
+              "expression": "Temp_name_Variable = K2Node_CustomEvent_NotifyName_3"
+            },
+            {
+              "vm": "0xb6",
+              "stored": "0x106",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0xb7",
+              "stored": "0x107",
+              "op": "Let",
+              "expression": "Temp_name_Variable = K2Node_CustomEvent_NotifyName_2"
+            },
+            {
+              "vm": "0xd2",
+              "stored": "0x13a",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0xd3",
+              "stored": "0x13b",
+              "op": "Let",
+              "expression": "Temp_name_Variable = K2Node_CustomEvent_NotifyName_1"
+            },
+            {
+              "vm": "0xee",
+              "stored": "0x16e",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0xef",
+              "stored": "0x16f",
+              "op": "Let",
+              "expression": "Temp_name_Variable = K2Node_CustomEvent_NotifyName"
+            },
+            {
+              "vm": "0x10a",
+              "stored": "0x1a2",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x10b",
+              "stored": "0x1a3",
+              "op": "Context",
+              "expression": "SK_Pillar.SetComponentTickEnabled(True)"
+            },
+            {
+              "vm": "0x130",
+              "stored": "0x1cc",
+              "op": "FinalFunction",
+              "expression": "SetVisibilityOuterPanels(True)"
+            },
+            {
+              "vm": "0x13b",
+              "stored": "0x1d3",
+              "op": "LetObj",
+              "expression": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue = CreateProxyObjectForPlayMontage(SK_Pillar, PanelMontageAsset, 1.0, 0.0, 'CrackOuter_A')"
+            },
+            {
+              "vm": "0x178",
+              "stored": "0x220",
+              "op": "LetBool",
+              "expression": "CallFunc_IsValid_ReturnValue = IsValid(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue)"
+            },
+            {
+              "vm": "0x195",
+              "stored": "0x249",
+              "op": "PopExecutionFlowIfNot",
+              "expression": "PopExecutionFlowIfNot CallFunc_IsValid_ReturnValue"
+            },
+            {
+              "vm": "0x19f",
+              "stored": "0x25b",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_4 := Self.OnCompleted_520DB31342D091680048C3B71E86BE2B"
+            },
+            {
+              "vm": "0x1b6",
+              "stored": "0x276",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue.OnCompleted, K2Node_CreateDelegate_OutputDelegate_4)"
+            },
+            {
+              "vm": "0x1df",
+              "stored": "0x2bf",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_3 := Self.OnBlendOut_520DB31342D091680048C3B71E86BE2B"
+            },
+            {
+              "vm": "0x1f6",
+              "stored": "0x2da",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue.OnBlendOut, K2Node_CreateDelegate_OutputDelegate_3)"
+            },
+            {
+              "vm": "0x21f",
+              "stored": "0x323",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_2 := Self.OnInterrupted_520DB31342D091680048C3B71E86BE2B"
+            },
+            {
+              "vm": "0x236",
+              "stored": "0x33e",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue.OnInterrupted, K2Node_CreateDelegate_OutputDelegate_2)"
+            },
+            {
+              "vm": "0x25f",
+              "stored": "0x387",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_1 := Self.OnNotifyBegin_520DB31342D091680048C3B71E86BE2B"
+            },
+            {
+              "vm": "0x276",
+              "stored": "0x3a2",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue.OnNotifyBegin, K2Node_CreateDelegate_OutputDelegate_1)"
+            },
+            {
+              "vm": "0x29f",
+              "stored": "0x3eb",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate := Self.OnNotifyEnd_520DB31342D091680048C3B71E86BE2B"
+            },
+            {
+              "vm": "0x2b6",
+              "stored": "0x406",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_CreateProxyObjectForPlayMontage_ReturnValue.OnNotifyEnd, K2Node_CreateDelegate_OutputDelegate)"
+            },
+            {
+              "vm": "0x2df",
+              "stored": "0x44f",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x2e0",
+              "stored": "0x450",
+              "op": "LetObj",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue = SK_Pillar.GetAnimInstance()"
+            },
+            {
+              "vm": "0x30a",
+              "stored": "0x48e",
+              "op": "Context",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue.Montage_JumpToSection('LoopEnd_B', PanelMontageAsset)"
+            },
+            {
+              "vm": "0x340",
+              "stored": "0x4cc",
+              "op": "LetObj",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue = SK_Pillar.GetAnimInstance()"
+            },
+            {
+              "vm": "0x36a",
+              "stored": "0x50a",
+              "op": "Let",
+              "expression": "CallFunc_Montage_Play_ReturnValue = CallFunc_GetAnimInstance_ReturnValue.Montage_Play(DestructMontageAsset, 1.0, 0, 0.0, False)"
+            },
+            {
+              "vm": "0x3b2",
+              "stored": "0x576",
+              "op": "Context",
+              "expression": "LiveSelfTimerDamage.SelfDeath(0.0, True)"
+            },
+            {
+              "vm": "0x3d8",
+              "stored": "0x5a0",
+              "op": "CallMath",
+              "expression": "Delay(Self, CallFunc_Montage_Play_ReturnValue, LatentActionInfo{SkipOffsetConst 0xf, 636271824, 'ExecuteUbergraph_BP_Megafloat_Center_CorePillar', Self})"
+            },
+            {
+              "vm": "0x412",
+              "stored": "0x5d6",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x413",
+              "stored": "0x5d7",
+              "op": "LetObj",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue = SK_Pillar.GetAnimInstance()"
+            },
+            {
+              "vm": "0x43d",
+              "stored": "0x615",
+              "op": "Context",
+              "expression": "CallFunc_GetAnimInstance_ReturnValue.Montage_SetNextSection('WaitLoop_A', 'CrackOuter_B', NoObject)"
+            },
+            {
+              "vm": "0x478",
+              "stored": "0x64c",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x479",
+              "stored": "0x64d",
+              "op": "FinalFunction",
+              "expression": "SetDamageState(4)"
+            },
+            {
+              "vm": "0x485",
+              "stored": "0x655",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x486",
+              "stored": "0x656",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_AsBP_Megafloat_Center_Core = BP_Megafloat_Center_Core_C(Child_Core.ChildActor)"
+            },
+            {
+              "vm": "0x4c0",
+              "stored": "0x6ac",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_bSuccess = PrimitiveCast 1 K2Node_DynamicCast_AsBP_Megafloat_Center_Core"
+            },
+            {
+              "vm": "0x4dd",
+              "stored": "0x6d9",
+              "op": "PopExecutionFlowIfNot",
+              "expression": "PopExecutionFlowIfNot K2Node_DynamicCast_bSuccess"
+            },
+            {
+              "vm": "0x4e7",
+              "stored": "0x6eb",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_5 := Self.OnCoreDeath_イベント"
+            },
+            {
+              "vm": "0x4fe",
+              "stored": "0x706",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(K2Node_DynamicCast_AsBP_Megafloat_Center_Core.OnCoreDeath, K2Node_CreateDelegate_OutputDelegate_5)"
+            },
+            {
+              "vm": "0x527",
+              "stored": "0x74f",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate_6 := Self.OnOuterDeath_イベント"
+            },
+            {
+              "vm": "0x53e",
+              "stored": "0x76a",
+              "op": "Context",
+              "expression": "K2Node_DynamicCast_AsBP_Megafloat_Center_Core.GetCoreOuter(CallFunc_GetCoreOuter_CoreOuterBP)"
+            },
+            {
+              "vm": "0x56b",
+              "stored": "0x7a3",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(CallFunc_GetCoreOuter_CoreOuterBP.OnOuterDeath, K2Node_CreateDelegate_OutputDelegate_6)"
+            },
+            {
+              "vm": "0x594",
+              "stored": "0x7ec",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x595",
+              "stored": "0x7ed",
+              "op": "FinalFunction",
+              "expression": "SetDamageState(1)"
+            },
+            {
+              "vm": "0x5a1",
+              "stored": "0x7f5",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x5a2",
+              "stored": "0x7f6",
+              "op": "LetBool",
+              "expression": "K2Node_SwitchEnum_CmpSuccess = NotEqual_ByteByte(K2Node_Event_ChangeState, 1)"
+            },
+            {
+              "vm": "0x5c1",
+              "stored": "0x821",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_SwitchEnum_CmpSuccess -> 0x10b"
+            },
+            {
+              "vm": "0x5cf",
+              "stored": "0x837",
+              "op": "LetBool",
+              "expression": "K2Node_SwitchEnum_CmpSuccess = NotEqual_ByteByte(K2Node_Event_ChangeState, 2)"
+            },
+            {
+              "vm": "0x5ee",
+              "stored": "0x862",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_SwitchEnum_CmpSuccess -> 0x413"
+            },
+            {
+              "vm": "0x5fc",
+              "stored": "0x878",
+              "op": "LetBool",
+              "expression": "K2Node_SwitchEnum_CmpSuccess = NotEqual_ByteByte(K2Node_Event_ChangeState, 3)"
+            },
+            {
+              "vm": "0x61b",
+              "stored": "0x8a3",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_SwitchEnum_CmpSuccess -> 0x413"
+            },
+            {
+              "vm": "0x629",
+              "stored": "0x8b9",
+              "op": "LetBool",
+              "expression": "K2Node_SwitchEnum_CmpSuccess = NotEqual_ByteByte(K2Node_Event_ChangeState, 4)"
+            },
+            {
+              "vm": "0x648",
+              "stored": "0x8e4",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_SwitchEnum_CmpSuccess -> 0x2e0"
+            },
+            {
+              "vm": "0x656",
+              "stored": "0x8fa",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x657",
+              "stored": "0x8fb",
+              "op": "Jump",
+              "expression": "Jump 0x486"
+            },
+            {
+              "vm": "0x65c",
+              "stored": "0x900",
+              "op": "Let",
+              "expression": "CallFunc_Delay_Duration_ImplicitCast = PrimitiveCast 3 DeathAnimLoopTIme"
+            },
+            {
+              "vm": "0x679",
+              "stored": "0x92d",
+              "op": "CallMath",
+              "expression": "Delay(Self, CallFunc_Delay_Duration_ImplicitCast, LatentActionInfo{SkipOffsetConst 0x1e, 2015609522, 'ExecuteUbergraph_BP_Megafloat_Center_CorePillar', Self})"
+            },
+            {
+              "vm": "0x6b3",
+              "stored": "0x963",
+              "op": "PopExecutionFlow",
+              "expression": "PopExecutionFlow"
+            },
+            {
+              "vm": "0x6b4",
+              "stored": "0x964",
+              "op": "Jump",
+              "expression": "Jump 0x65c"
+            },
+            {
+              "vm": "0x6b9",
+              "stored": "0x969",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x6bb",
+              "stored": "0x96b",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnBlendOut_520DB31342D091680048C3B71E86BE2B": {
+          "export_index": 5,
+          "uexp_offset": 4977,
+          "script_offset": 5054,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "f24129f4a3364bf1695aa9759b9431b57e61e83f9fcc469b31c03d0f20d35688",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_CustomEvent_NotifyName_1 = NotifyName"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(211)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnChangeDamageState": {
+          "export_index": 6,
+          "uexp_offset": 5114,
+          "script_offset": 5348,
+          "memory_size": 54,
+          "stored_size": 82,
+          "function_flags": 134744064,
+          "tail_zero_bytes": 8,
+          "code_sha256": "02a1a4927a335c9766490c0bf1cfca557c81f2edfb829eff1603abdaadd14061",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_Event_ChangeState = ChangeState"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_Event_PrevState = PrevState"
+            },
+            {
+              "vm": "0x24",
+              "stored": "0x44",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(1442)"
+            },
+            {
+              "vm": "0x33",
+              "stored": "0x4f",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x35",
+              "stored": "0x51",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnCompleted_520DB31342D091680048C3B71E86BE2B": {
+          "export_index": 7,
+          "uexp_offset": 5442,
+          "script_offset": 5519,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "bb0ca5e0a6831e0a2ab2d2ce7615119cf2acc226350ad89c28c822a1ee46532b",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_CustomEvent_NotifyName = NotifyName"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(239)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnCoreDeath_イベント": {
+          "export_index": 8,
+          "uexp_offset": 5579,
+          "script_offset": 5609,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "c328dcdceb709678c37d1e8823a895c9e4a7b516f6e9c5f83a0957f1e22fd2c3",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(1145)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnDestructAnimEnd": {
+          "export_index": 9,
+          "uexp_offset": 5635,
+          "script_offset": 5665,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "dc1eecddb1cc24af6a14524cdd5caacae637d04613c01b96045d9ffd5cfd5e8f",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(1716)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnInterrupted_520DB31342D091680048C3B71E86BE2B": {
+          "export_index": 10,
+          "uexp_offset": 5691,
+          "script_offset": 5768,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "2c2273b38b1f7a48df2d7c41c887f9ca858ae6b237063054dbb4220e47589e2b",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_CustomEvent_NotifyName_2 = NotifyName"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(183)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnNotifyBegin_520DB31342D091680048C3B71E86BE2B": {
+          "export_index": 11,
+          "uexp_offset": 5828,
+          "script_offset": 5905,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "3dbdbf4881059b15a8b0172da0db162ae7463b96acdf8db495ed0ebfe3221061",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_CustomEvent_NotifyName_3 = NotifyName"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(155)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnNotifyEnd_520DB31342D091680048C3B71E86BE2B": {
+          "export_index": 12,
+          "uexp_offset": 5965,
+          "script_offset": 6042,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "9d8bca82a6d9908f638fe904a2c644b5058c972bc717f016e64ce5a9d0548c32",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_CustomEvent_NotifyName_4 = NotifyName"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(127)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnOuterDeath_イベント": {
+          "export_index": 13,
+          "uexp_offset": 6102,
+          "script_offset": 6132,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "765a2e8ca3a049fa3809dcb25ed553fe9d807f3b6791af981a8dcf94392d8730",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(1429)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "ReceiveBeginPlay": {
+          "export_index": 14,
+          "uexp_offset": 6158,
+          "script_offset": 6188,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 134744064,
+          "tail_zero_bytes": 8,
+          "code_sha256": "20ea8c3253675221e80928bfbe3d69ca136a3699696841d8937e56a5ae0bc4a6",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_CorePillar(1623)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        }
+      }
+    },
+    "BP_Megafloat_Center_Core_C": {
+      "source": "data/local/npc-raw/Live/Content/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core.uasset",
+      "uasset_sha256": "af2a4ed0b8376fb39176c2dd45e147acd2dcc2259c2c0cc14bdfe8fe5b717c77",
+      "uexp_sha256": "0b3dd3b59f742ce6c8670bc0f105c95cc795bc8dea076158373c9f2c631ff8d1",
+      "cdo": {
+        "blueprint": "BP_Megafloat_Center_Core_C",
+        "parent": "LiveAIMegafloatConstruction",
+        "consumed": 114,
+        "export_bytes": 114,
+        "error": null,
+        "properties": {
+          "bInitialInvincible": 1,
+          "bInitialMarkerHide": 1,
+          "MaxHealth": 40.0
+        },
+        "origins": {
+          "bInitialInvincible": {
+            "blueprint": "BP_Megafloat_Center_Core_C",
+            "uexp_offset": 557,
+            "zero_mask": false,
+            "schema_index": 6
+          },
+          "bInitialMarkerHide": {
+            "blueprint": "BP_Megafloat_Center_Core_C",
+            "uexp_offset": 558,
+            "zero_mask": false,
+            "schema_index": 7
+          },
+          "MaxHealth": {
+            "blueprint": "BP_Megafloat_Center_Core_C",
+            "uexp_offset": 574,
+            "zero_mask": false,
+            "schema_index": 121
+          }
+        },
+        "resolved_asset_properties": {}
+      },
+      "mesh_references": [],
+      "functions": {
+        "ExecuteUbergraph_BP_Megafloat_Center_Core": {
+          "export_index": 4,
+          "uexp_offset": 713,
+          "script_offset": 996,
+          "memory_size": 328,
+          "stored_size": 444,
+          "function_flags": 32769,
+          "tail_zero_bytes": 8,
+          "code_sha256": "8fd5bb4339d4a2f9a63a8c0ddd6160ba6e5bb28b01ea99acbb79e7c94cb514b1",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "ComputedJump",
+              "expression": "ComputedJump EntryPoint"
+            },
+            {
+              "vm": "0xa",
+              "stored": "0x12",
+              "op": "Context",
+              "expression": "SM_Outer_Break.SetVisibility(True, False)"
+            },
+            {
+              "vm": "0x2c",
+              "stored": "0x38",
+              "op": "Jump",
+              "expression": "Jump 0x145"
+            },
+            {
+              "vm": "0x31",
+              "stored": "0x3d",
+              "op": "FinalFunction",
+              "expression": "LiveGameObject.OnDeath(K2Node_Event_DeadGameObject)"
+            },
+            {
+              "vm": "0x44",
+              "stored": "0x54",
+              "op": "Context",
+              "expression": "SM_Outer_Break.SetVisibility(False, False)"
+            },
+            {
+              "vm": "0x66",
+              "stored": "0x7a",
+              "op": "CallMulticastDelegate",
+              "expression": "broadcast OnCoreDeath()"
+            },
+            {
+              "vm": "0x79",
+              "stored": "0x91",
+              "op": "Jump",
+              "expression": "Jump 0x145"
+            },
+            {
+              "vm": "0x7e",
+              "stored": "0x96",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer = BP_Megafloat_Center_Core_Outer_C(Child_Outer.ChildActor)"
+            },
+            {
+              "vm": "0xb8",
+              "stored": "0xec",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_bSuccess = PrimitiveCast 1 K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer"
+            },
+            {
+              "vm": "0xd5",
+              "stored": "0x119",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_DynamicCast_bSuccess -> 0x145"
+            },
+            {
+              "vm": "0xe3",
+              "stored": "0x12f",
+              "op": "BindDelegate",
+              "expression": "bind K2Node_CreateDelegate_OutputDelegate := Self.OnOuterDeath_イベント"
+            },
+            {
+              "vm": "0xfa",
+              "stored": "0x14a",
+              "op": "AddMulticastDelegate",
+              "expression": "AddMulticastDelegate(K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer.OnOuterDeath, K2Node_CreateDelegate_OutputDelegate)"
+            },
+            {
+              "vm": "0x123",
+              "stored": "0x193",
+              "op": "Context",
+              "expression": "SM_Outer_Break.SetVisibility(False, False)"
+            },
+            {
+              "vm": "0x145",
+              "stored": "0x1b9",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x147",
+              "stored": "0x1bb",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "GetCoreOuter": {
+          "export_index": 5,
+          "uexp_offset": 1452,
+          "script_offset": 1637,
+          "memory_size": 123,
+          "stored_size": 191,
+          "function_flags": 474087424,
+          "tail_zero_bytes": 8,
+          "code_sha256": "6681ee5159d00b68dda530303686d0154d0427b42aa1c37b7d493258a0352ba9",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer = BP_Megafloat_Center_Core_Outer_C(Child_Outer.ChildActor)"
+            },
+            {
+              "vm": "0x3a",
+              "stored": "0x56",
+              "op": "Let",
+              "expression": "K2Node_DynamicCast_bSuccess = PrimitiveCast 1 K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer"
+            },
+            {
+              "vm": "0x57",
+              "stored": "0x83",
+              "op": "JumpIfNot",
+              "expression": "if not K2Node_DynamicCast_bSuccess -> 0x78"
+            },
+            {
+              "vm": "0x65",
+              "stored": "0x99",
+              "op": "LetObj",
+              "expression": "CoreOuterBP = K2Node_DynamicCast_AsBP_Megafloat_Center_Core_Outer"
+            },
+            {
+              "vm": "0x78",
+              "stored": "0xbc",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x7a",
+              "stored": "0xbe",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnCoreDeath__DelegateSignature": {
+          "export_index": 6,
+          "uexp_offset": 1840,
+          "script_offset": 1870,
+          "memory_size": 3,
+          "stored_size": 3,
+          "function_flags": 202506240,
+          "tail_zero_bytes": 8,
+          "code_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x2",
+              "stored": "0x2",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnDeath": {
+          "export_index": 7,
+          "uexp_offset": 1885,
+          "script_offset": 1966,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 134350848,
+          "tail_zero_bytes": 8,
+          "code_sha256": "fc08b96c7fe44aacb06912b79f91f892639658a915b2d81fe3b26253de61ee4d",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_Event_DeadGameObject = DeadGameObject"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_Core(49)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnOuterDeath_イベント": {
+          "export_index": 8,
+          "uexp_offset": 2026,
+          "script_offset": 2056,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 201326592,
+          "tail_zero_bytes": 8,
+          "code_sha256": "475e52775bbf1982d78e7af1ff0c3c793ad89c3396f1c6ce2051b2d2cb8f8f8e",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_Core(10)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "ReceiveBeginPlay": {
+          "export_index": 9,
+          "uexp_offset": 2082,
+          "script_offset": 2112,
+          "memory_size": 18,
+          "stored_size": 14,
+          "function_flags": 134744064,
+          "tail_zero_bytes": 8,
+          "code_sha256": "459525bef14d822b9f14fae5b4a371d82fb9cc0ae6bfb365ed0996b897601e1f",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_Core(126)"
+            },
+            {
+              "vm": "0xf",
+              "stored": "0xb",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x11",
+              "stored": "0xd",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        }
+      }
+    },
+    "BP_Megafloat_Center_Core_Outer_C": {
+      "source": "data/local/npc-raw/Live/Content/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core_Outer.uasset",
+      "uasset_sha256": "fd14891bba53cc1d33fdd20d67d6492b4aa5ea0f9e0bcceb259c4e8846121700",
+      "uexp_sha256": "41fcc5502bee87ddb604a1c8baeef8a7704dedf0eafa45411f2e346dbf1a6ac7",
+      "cdo": {
+        "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+        "parent": "LiveAIMegafloatConstruction",
+        "consumed": 114,
+        "export_bytes": 114,
+        "error": null,
+        "properties": {
+          "bInitialInvincible": 1,
+          "bInitialMarkerHide": 1,
+          "MaxHealth": 40.0
+        },
+        "origins": {
+          "bInitialInvincible": {
+            "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+            "uexp_offset": 407,
+            "zero_mask": false,
+            "schema_index": 4
+          },
+          "bInitialMarkerHide": {
+            "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+            "uexp_offset": 408,
+            "zero_mask": false,
+            "schema_index": 5
+          },
+          "MaxHealth": {
+            "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+            "uexp_offset": 424,
+            "zero_mask": false,
+            "schema_index": 119
+          }
+        },
+        "resolved_asset_properties": {}
+      },
+      "mesh_references": [],
+      "functions": {
+        "ExecuteUbergraph_BP_Megafloat_Center_Core_Outer": {
+          "export_index": 3,
+          "uexp_offset": 484,
+          "script_offset": 612,
+          "memory_size": 61,
+          "stored_size": 77,
+          "function_flags": 32769,
+          "tail_zero_bytes": 8,
+          "code_sha256": "b0940f02799f071fb5e0fd7dae63b8c7a1d3dbaefde10fb83c321cc33323fe58",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "ComputedJump",
+              "expression": "ComputedJump EntryPoint"
+            },
+            {
+              "vm": "0xa",
+              "stored": "0x12",
+              "op": "CallMulticastDelegate",
+              "expression": "broadcast OnOuterDeath()"
+            },
+            {
+              "vm": "0x1d",
+              "stored": "0x29",
+              "op": "Jump",
+              "expression": "Jump 0x3a"
+            },
+            {
+              "vm": "0x22",
+              "stored": "0x2e",
+              "op": "FinalFunction",
+              "expression": "LiveGameObject.OnDeath(K2Node_Event_DeadGameObject)"
+            },
+            {
+              "vm": "0x35",
+              "stored": "0x45",
+              "op": "Jump",
+              "expression": "Jump 0xa"
+            },
+            {
+              "vm": "0x3a",
+              "stored": "0x4a",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x3c",
+              "stored": "0x4c",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnDeath": {
+          "export_index": 4,
+          "uexp_offset": 701,
+          "script_offset": 782,
+          "memory_size": 36,
+          "stored_size": 48,
+          "function_flags": 134350848,
+          "tail_zero_bytes": 8,
+          "code_sha256": "d11c37cf16758500b90302982aedacc626e7380d571eafb3457fe15334aaf549",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "LetValueOnPersistentFrame",
+              "expression": "K2Node_Event_DeadGameObject = DeadGameObject"
+            },
+            {
+              "vm": "0x12",
+              "stored": "0x22",
+              "op": "LocalFinalFunction",
+              "expression": "ExecuteUbergraph_BP_Megafloat_Center_Core_Outer(34)"
+            },
+            {
+              "vm": "0x21",
+              "stored": "0x2d",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x23",
+              "stored": "0x2f",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        },
+        "OnOuterDeath__DelegateSignature": {
+          "export_index": 5,
+          "uexp_offset": 842,
+          "script_offset": 872,
+          "memory_size": 3,
+          "stored_size": 3,
+          "function_flags": 202506240,
+          "tail_zero_bytes": 8,
+          "code_sha256": "10941dedc1b7fd60933ac0dba3e874553eabd6afa293a147e89244bcd2f966f1",
+          "trace": [
+            {
+              "vm": "0x0",
+              "stored": "0x0",
+              "op": "Return",
+              "expression": "Return Nothing"
+            },
+            {
+              "vm": "0x2",
+              "stored": "0x2",
+              "op": "EndOfScript",
+              "expression": "EndOfScript"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "native": {
+    "core_pillar_setup": {
+      "address": "0x147e60fe0",
+      "code_sha256": "1d50048ac1b95358869f333c3ba09199413b3c522a12a6956faae381ceff01f9",
+      "full_instruction_count": 386,
+      "excerpt_is_complete_function": false,
+      "instructions": [
+        "0x147e60fe0 push rbp",
+        "0x147e60fe2 push rbx",
+        "0x147e60fe3 push rsi",
+        "0x147e60fe4 push rdi",
+        "0x147e60fe5 push r15",
+        "0x147e60fe7 lea rbp, [rsp - 0x37]",
+        "0x147e60fec sub rsp, 0x90",
+        "0x147e60ff3 mov rsi, rcx",
+        "0x147e60ff6 call 0x147c84db0",
+        "0x147e60ffb cmp byte ptr [rsi + 0x520], 0",
+        "0x147e61002 je 0x147e61016",
+        "0x147e61004 cmp qword ptr [rsi + 0xfa0], 0",
+        "0x147e6100c je 0x147e61016",
+        "0x147e6100e mov rcx, rsi",
+        "0x147e61011 call 0x147c571f0",
+        "0x147e61016 cmp byte ptr [rsi + 0x2ac0], 0",
+        "0x147e6101d je 0x147e6102d",
+        "0x147e6101f mov rax, qword ptr [rsi]",
+        "0x147e61022 mov dl, 1",
+        "0x147e61024 mov rcx, rsi",
+        "0x147e61027 call qword ptr [rax + 0x970]",
+        "0x147e6102d cmp byte ptr [rsi + 0x2ac1], 0",
+        "0x147e61034 je 0x147e61044",
+        "0x147e61036 mov rax, qword ptr [rsi]",
+        "0x147e61039 xor edx, edx",
+        "0x147e6103b mov rcx, rsi",
+        "0x147e6103e call qword ptr [rax + 0xc98]",
+        "0x147e61044 call 0x1439418b0"
+      ]
+    },
+    "set_damage_state": {
+      "address": "0x147e60a00",
+      "code_sha256": "d2fdc01b5b70a34335cd9d44d0459a140472f82cc8fe7c6172413d1f325af664",
+      "full_instruction_count": 92,
+      "excerpt_is_complete_function": false,
+      "instructions": [
+        "0x147e60a00 push rsi",
+        "0x147e60a02 push r15",
+        "0x147e60a04 sub rsp, 0x48",
+        "0x147e60a08 movzx eax, byte ptr [rcx + 0x2ac2]",
+        "0x147e60a0f mov rsi, rcx",
+        "0x147e60a12 movzx r15d, dl",
+        "0x147e60a16 cmp al, r15b",
+        "0x147e60a19 jae 0x147e60b5c",
+        "0x147e60a1f mov qword ptr [rsp + 0x60], rbx",
+        "0x147e60a24 mov qword ptr [rsp + 0x70], rbp",
+        "0x147e60a29 mov byte ptr [rsp + 0x69], al",
+        "0x147e60a2d mov rax, qword ptr [rcx]",
+        "0x147e60a30 mov qword ptr [rsp + 0x40], rdi",
+        "0x147e60a35 mov byte ptr [rcx + 0x2ac2], r15b",
+        "0x147e60a3c mov rdx, qword ptr [rip + 0x64ab77d]",
+        "0x147e60a43 mov rbx, qword ptr [rax + 0x268]",
+        "0x147e60a4a mov qword ptr [rsp + 0x38], r12",
+        "0x147e60a4f mov qword ptr [rsp + 0x30], r14",
+        "0x147e60a54 mov byte ptr [rsp + 0x68], r15b",
+        "0x147e60a59 call 0x141a9b730",
+        "0x147e60a5e lea r8, [rsp + 0x68]",
+        "0x147e60a63 mov rdx, rax",
+        "0x147e60a66 mov rcx, rsi",
+        "0x147e60a69 call rbx"
+      ]
+    },
+    "self_death_exec": {
+      "address": "0x146fda520",
+      "code_sha256": "2902e206351c5ae73194da864dcca8d0ba4b68d40b7e5cb3b6d4c237731b2323",
+      "full_instruction_count": 160,
+      "excerpt_is_complete_function": false,
+      "instructions": [
+        "0x146fda6a4 mov rcx, qword ptr [rsi + 0xa0]",
+        "0x146fda6ab mov rsi, qword ptr [rsp + 0x78]",
+        "0x146fda6b0 test rcx, rcx",
+        "0x146fda6b3 je 0x146fda794",
+        "0x146fda6b9 movss xmm0, dword ptr [rcx + 0x3b4]",
+        "0x146fda6c1 mov rax, rbp",
+        "0x146fda6c4 cmp dword ptr [rsp + 0xa0], ebp",
+        "0x146fda6cb addss xmm0, xmm0",
+        "0x146fda6cf movaps xmmword ptr [rsp + 0x60], xmm6",
+        "0x146fda6d4 movss xmm6, dword ptr [rsp + 0xa8]",
+        "0x146fda6dd setne byte ptr [rsp + 0x28]",
+        "0x146fda6e2 add rcx, 0x318",
+        "0x146fda6e9 movss dword ptr [rsp + 0x20], xmm6",
+        "0x146fda6ef mov qword ptr [rsp + 0x38], rbp",
+        "0x146fda6f4 movss dword ptr [rsp + 0x24], xmm0",
+        "0x146fda6fa mov dword ptr [rsp + 0x40], ebp",
+        "0x146fda6fe mov qword ptr [rsp + 0xb8], rbp",
+        "0x146fda706 mov qword ptr [rsp + 0x2c], rax",
+        "0x146fda70b call 0x147c030f0",
+        "0x146fda710 comiss xmm6, xmm7",
+        "0x146fda713 movaps xmm6, xmmword ptr [rsp + 0x60]",
+        "0x146fda718 jbe 0x146fda74e",
+        "0x146fda71a movsxd rdi, dword ptr [rax + 0x58]",
+        "0x146fda71e lea rbx, [rax + 0x50]",
+        "0x146fda722 lea eax, [rdi + 1]",
+        "0x146fda725 mov dword ptr [rbx + 8], eax",
+        "0x146fda728 cmp eax, dword ptr [rbx + 0xc]",
+        "0x146fda72b jbe 0x146fda737",
+        "0x146fda72d mov edx, edi",
+        "0x146fda72f mov rcx, rbx",
+        "0x146fda732 call 0x141709d20",
+        "0x146fda737 mov rax, qword ptr [rbx]",
+        "0x146fda73a lea rcx, [rdi + rdi*4]",
+        "0x146fda73e lea rdx, [rsp + 0x20]",
+        "0x146fda743 lea rcx, [rax + rcx*8]",
+        "0x146fda747 call 0x147c032f0",
+        "0x146fda74c jmp 0x146fda75b",
+        "0x146fda74e lea rdx, [rsp + 0x20]",
+        "0x146fda753 mov rcx, rax",
+        "0x146fda756 call 0x147bffc40",
+        "0x146fda75b mov rcx, qword ptr [rsp + 0x38]"
+      ]
+    },
+    "self_damage_immediate": {
+      "address": "0x147bffc40",
+      "code_sha256": "0d0a501266189dd3e3cc92deef66cf9d915fc0b40c60b9f4b1fd94271d4c2c8c",
+      "full_instruction_count": 114,
+      "excerpt_is_complete_function": false,
+      "instructions": [
+        "0x147bffcc8 test al, al",
+        "0x147bffcca je 0x147bffe2b",
+        "0x147bffcd0 cmp byte ptr [rsi + 8], 0",
+        "0x147bffcd4 je 0x147bffd02",
+        "0x147bffcd6 cvttss2si eax, dword ptr [rbx + 0x3b4]",
+        "0x147bffcde mov ecx, edi",
+        "0x147bffce0 test eax, eax",
+        "0x147bffce2 cmovs ecx, eax",
+        "0x147bffce5 mov rax, qword ptr [rbx]",
+        "0x147bffce8 xor edx, edx",
+        "0x147bffcea movd xmm0, ecx",
+        "0x147bffcee mov rcx, rbx",
+        "0x147bffcf1 cvtdq2ps xmm0, xmm0",
+        "0x147bffcf4 movss dword ptr [rbx + 0x3b8], xmm0",
+        "0x147bffcfc call qword ptr [rax + 0x970]",
+        "0x147bffd02 mov rax, qword ptr [rbx + 0x1a0]",
+        "0x147bffd09 test rax, rax",
+        "0x147bffd0c je 0x147bffd2e",
+        "0x147bffd0e movups xmm0, xmmword ptr [rax + 0x220]",
+        "0x147bffd15 movups xmmword ptr [rsp + 0x30], xmm0",
+        "0x147bffd1a movups xmm0, xmmword ptr [rax + 0x230]",
+        "0x147bffd21 lea rax, [rsp + 0x30]",
+        "0x147bffd26 movsd qword ptr [rsp + 0x40], xmm0",
+        "0x147bffd2c jmp 0x147bffd4d",
+        "0x147bffd2e movups xmm0, xmmword ptr [rip + 0x60455e3]",
+        "0x147bffd35 lea rax, [rsp + 0x48]",
+        "0x147bffd3a movsd xmm1, qword ptr [rip + 0x60455e6]",
+        "0x147bffd42 movups xmmword ptr [rsp + 0x48], xmm0",
+        "0x147bffd47 movsd qword ptr [rsp + 0x58], xmm1",
+        "0x147bffd4d movups xmm0, xmmword ptr [rax]",
+        "0x147bffd50 lea rcx, [rsi + 0xc]",
+        "0x147bffd54 mov word ptr [rsp + 0x78], 0xe",
+        "0x147bffd5b movsd xmm1, qword ptr [rax + 0x10]",
+        "0x147bffd60 movups xmmword ptr [rsp + 0x60], xmm0",
+        "0x147bffd65 movsd qword ptr [rsp + 0x70], xmm1",
+        "0x147bffd6b mov qword ptr [rsp + 0x80], rdi",
+        "0x147bffd73 mov qword ptr [rsp + 0x88], 0",
+        "0x147bffd7f mov qword ptr [rsp + 0x90], rdi",
+        "0x147bffd87 mov qword ptr [rsp + 0x98], 0",
+        "0x147bffd93 call 0x141ad95e0",
+        "0x147bffd98 mov r10, qword ptr [rbx]",
+        "0x147bffd9b lea r8, [rsp + 0x60]",
+        "0x147bffda0 movss xmm1, dword ptr [rsi + 4]",
+        "0x147bffda5 mov r9, rax",
+        "0x147bffda8 mov rcx, rbx",
+        "0x147bffdab mov qword ptr [rsp + 0x20], rdi",
+        "0x147bffdb0 call qword ptr [r10 + 0xa38]",
+        "0x147bffdb7 cmp dword ptr [rsi + 0x20], 0"
+      ]
+    },
+    "building_invincibility": {
+      "address": "0x147c5b8a0",
+      "code_sha256": "a11c09fdc4ba5f8534ca8dfce32d5c1332da14b3250e138670c8d961a9f66fba",
+      "full_instruction_count": 84,
+      "excerpt_is_complete_function": true,
+      "instructions": [
+        "0x147c5b8a0 mov qword ptr [rsp + 0x10], rbx",
+        "0x147c5b8a5 mov qword ptr [rsp + 0x18], rsi",
+        "0x147c5b8aa push rdi",
+        "0x147c5b8ab sub rsp, 0x30",
+        "0x147c5b8af mov r8d, dword ptr [rcx + 0x2aac]",
+        "0x147c5b8b6 movzx edi, dl",
+        "0x147c5b8b9 mov rbx, rcx",
+        "0x147c5b8bc test r8d, r8d",
+        "0x147c5b8bf je 0x147c5b96f",
+        "0x147c5b8c5 mov eax, dword ptr [rcx + 0x2aa8]",
+        "0x147c5b8cb test eax, eax",
+        "0x147c5b8cd js 0x147c5b96f",
+        "0x147c5b8d3 cmp eax, dword ptr [rip + 0x5fef41b]",
+        "0x147c5b8d9 jge 0x147c5b96f",
+        "0x147c5b8df mov ecx, eax",
+        "0x147c5b8e1 movzx eax, ax",
+        "0x147c5b8e4 shr rcx, 0x10",
+        "0x147c5b8e8 lea rdx, [rax + rax*2]",
+        "0x147c5b8ec mov rax, qword ptr [rip + 0x5fef3ed]",
+        "0x147c5b8f3 mov rcx, qword ptr [rax + rcx*8]",
+        "0x147c5b8f7 lea rax, [rcx + rdx*8]",
+        "0x147c5b8fb test rax, rax",
+        "0x147c5b8fe je 0x147c5b96f",
+        "0x147c5b900 cmp dword ptr [rax + 0x10], r8d",
+        "0x147c5b904 jne 0x147c5b96f",
+        "0x147c5b906 mov ecx, dword ptr [rip + 0x5fd7d14]",
+        "0x147c5b90c mov eax, dword ptr [rax + 8]",
+        "0x147c5b90f bts ecx, 0x15",
+        "0x147c5b913 test ecx, eax",
+        "0x147c5b915 jne 0x147c5b96f",
+        "0x147c5b917 lea rcx, [rbx + 0x2aa8]",
+        "0x147c5b91e call 0x141ad95e0",
+        "0x147c5b923 cmp byte ptr [rax + 0xdb8], 0",
+        "0x147c5b92a je 0x147c5b930",
+        "0x147c5b92c xor eax, eax",
+        "0x147c5b92e jmp 0x147c5b94c",
+        "0x147c5b930 movd xmm1, dword ptr [rax + 0xda8]",
+        "0x147c5b938 xorps xmm0, xmm0",
+        "0x147c5b93b cvtdq2ps xmm1, xmm1",
+        "0x147c5b93e mulss xmm1, dword ptr [rip + 0x56379d6]",
+        "0x147c5b946 comiss xmm1, xmm0",
+        "0x147c5b949 seta al",
+        "0x147c5b94c test al, al",
+        "0x147c5b94e je 0x147c5b96f",
+        "0x147c5b950 lea rcx, [rbx + 0x2aa8]",
+        "0x147c5b957 call 0x141ad95e0",
+        "0x147c5b95c movzx edx, dil",
+        "0x147c5b960 mov rcx, rax",
+        "0x147c5b963 mov r8, qword ptr [rax]",
+        "0x147c5b966 call qword ptr [r8 + 0x970]",
+        "0x147c5b96d jmp 0x147c5b976",
+        "0x147c5b96f mov byte ptr [rbx + 0x3f8], dil",
+        "0x147c5b976 mov rcx, rbx",
+        "0x147c5b979 call 0x143fb5420",
+        "0x147c5b97e mov rcx, rax",
+        "0x147c5b981 call 0x147847ed0",
+        "0x147c5b986 mov rsi, rax",
+        "0x147c5b989 test rax, rax",
+        "0x147c5b98c je 0x147c5b9e1",
+        "0x147c5b98e mov rcx, rbx",
+        "0x147c5b991 call 0x147d133f0",
+        "0x147c5b996 test al, al",
+        "0x147c5b998 jne 0x147c5b9e1",
+        "0x147c5b99a lea rcx, [rsi + 8]",
+        "0x147c5b99e call 0x141ad95e0",
+        "0x147c5b9a3 mov rcx, rax",
+        "0x147c5b9a6 call 0x14783c830",
+        "0x147c5b9ab test al, al",
+        "0x147c5b9ad je 0x147c5b9e1",
+        "0x147c5b9af lea rcx, [rsi + 8]",
+        "0x147c5b9b3 mov byte ptr [rsp + 0x40], dil",
+        "0x147c5b9b8 call 0x141ad95e0",
+        "0x147c5b9bd lea r9, [rsp + 0x40]",
+        "0x147c5b9c2 mov dword ptr [rsp + 0x28], 4",
+        "0x147c5b9ca mov r8b, 0x31",
+        "0x147c5b9cd mov qword ptr [rsp + 0x20], 1",
+        "0x147c5b9d6 mov rdx, rbx",
+        "0x147c5b9d9 mov rcx, rax",
+        "0x147c5b9dc call 0x14783c8b0",
+        "0x147c5b9e1 mov rbx, qword ptr [rsp + 0x48]",
+        "0x147c5b9e6 mov rsi, qword ptr [rsp + 0x50]",
+        "0x147c5b9eb add rsp, 0x30",
+        "0x147c5b9ef pop rdi",
+        "0x147c5b9f0 ret "
+      ]
+    }
+  }
+}

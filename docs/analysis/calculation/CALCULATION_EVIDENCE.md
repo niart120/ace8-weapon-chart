@@ -43,7 +43,7 @@ UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimpor
 
 数値マスタは基準資料、補足属性は現行の静的設定に基づく。旧ビルドの全Blueprintとのバイト単位の一致や、イベント実行後の属性までは確認できていない。このビルド差は残る検証範囲であり、実ゲームで全組み合わせを確認済みとは扱わない。
 
-全レベル配置のROLE無効化、特殊なダメージ変更、イベントによるHP・耐性変更は網羅していない。アプリは静的な初期設定を扱い、最低HP・特殊経路を解決できない行はunknownにする。具体的な対象は[マスタ照合](MASTER_AUDIT.md)に記録する。
+全レベル配置のROLE無効化、特殊なダメージ変更、イベントによるHP・耐性変更は網羅していない。アプリは合意した各オブジェクトの元HPと静的な補正・耐性を扱う。掲載行の計算属性はlocal_003で確認済みだが、全局面の被弾可能性を再現するものではない。計算に必要な未確認値はunknownとして扱い、具体的な対象は[マスタ照合](MASTER_AUDIT.md)に記録する。
 
 
 ## local_002の陸上戦艦部位属性の追加確認
@@ -61,10 +61,10 @@ GameObjectCategory=8の5行は、基準ビルドと現行EXEでNPC用ROLE配列�
 
 全13行のstandardDamage=falseは旧解析での基底クラス確認失敗によるものだった。今回LiveAIGameObject継承と非正の任務MinHealthを確認したが、特にMEGAFLOAT系12行の破壊条件・イベント後の状態は未解析であり、通常の確定数計算を無条件に有効化しない。
 
-[local_003の調査記録](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)と[証拠JSON](TARGET_ATTRIBUTE_EVIDENCE.json)を参照。既存catalog・配信3ファイル・npc-evidence・native-constructorsは変更していない。基準ビルドとの資産差・全レベル配置・実ゲーム未測定の制約は継続する。
+[local_003の調査記録](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md)と[証拠JSON](TARGET_ATTRIBUTE_EVIDENCE.json)を参照。既存catalog・配信3ファイル・npc-evidence・native-constructorsは変更していない。基準ビルドとの資産差・全レベル配置・実ゲーム未測定の制約は継続する。
 
 
-後続の承認により、41行のうち既存ROLE区分の24行を配信へ反映した。CH-47のstandardDamageはクラス読取失敗によるfalseから通常判定へ復元。24行を反映した時点では、区分8の5行・MEGAFLOAT系12行は未反映だった。初回証拠JSONは当時の配信値を含む調査履歴として保持し、調査スクリプトの対象を41固定IDへ固定して反映後も再現できるようにした。[反映範囲と検証](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
+後続の承認により、41行のうち既存ROLE区分の24行を配信へ反映した。CH-47のstandardDamageはクラス読取失敗によるfalseから通常判定へ復元。24行を反映した時点では、区分8の5行・MEGAFLOAT系12行は未反映だった。初回証拠JSONは当時の配信値を含む調査履歴として保持し、調査スクリプトの対象を41固定IDへ固定して反映後も再現できるようにした。[反映範囲と検証](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
 
 
 ## local_003 区分8の反映とROLE適用範囲
@@ -72,3 +72,25 @@ GameObjectCategory=8の5行は、基準ビルドと現行EXEでNPC用ROLE配列�
 区分8の5行は元category=8を保持し、計算用roleGroupのみnoneへ変更した。全ROLEでMSL40、対空パーツ時44、対地パーツ時40を検証。nullの既定値を一律1へ変える処理は導入していない。MEGAFLOAT12行と兵装側の既存未確認は維持した。
 
 全934モデルと42兵装の横並び調査、現行NPC補正関数の分岐確認を[ROLE_SCOPE_AUDIT.md](ROLE_SCOPE_AUDIT.md)に記録した。区分0の既存41行はnoneで一致。武器種別のROLE除外は新たに確定していない。配置による無効化、プレイヤー以外の攻撃、子兵装・継続攻撃の全経路未確認を、倍率1の目標分類とは区別する。
+
+## local_003 MEGAFLOATの最低HP・破壊条件（反映前の調査）
+
+[追加調査](MEGAFLOAT_REVIEW.md)で、通常支柱6行のnative再初期化がMinHealthをmin(trunc(MaxHealth),1)へ書き換えることを確認した。現行EXEの`0x147e65380`、書込`0x147e653f5`、共通取得`0x147c84080`が根拠。初回調査の任務表MinHealth=0と矛盾せず、表の値だけでは実効最低HPを保証できない。
+
+甲板の6条件オブジェクトは全境界を検証して復号し、Num/Line/PillarのOR評価を現行`0x147e62d60`で確認。Cannonの子条件は親Blueprintの設定を継承する。初期無敵の設定を適用するコード、関連部位への遅延ダメージ、原子炉・中央支柱のイベント関数も確認した。ただし全状態遷移、無敵解除、HPからSleepへ入る条件は未確定。[証拠抜粋](MEGAFLOAT_EVIDENCE.json)にCDO・関数位置・元資産ハッシュを保持する。
+
+通常支柱の全出典は元HP100/200、NPC/任務HP差分0、通常MSLの耐性列Category01=500。MULTIROLE・パーツなしの1発は40×5=200で、1発で倒せたというユーザーの記憶と整合する。HP40へ変更しない。HP1までと元HPを削り切るまでの境界差は小ダメージで生じ得るため、各オブジェクト1個の静的理論値を表示する案と実際の無力化条件を分ける。原子炉は各40、中央支柱は120。
+
+通常被弾関数の共有を確認しても、特殊な最低HP・状態を否定したことにはならない。逆に、初期無敵や演出待ちがあるという理由だけで、被弾可能な1個の静的計算を保留する必要もない。今回アプリ・配信データは変更しておらず、計算範囲の整理と反映候補をlocal_003の13節へ記録した。実ゲーム測定・コンテナからの再抽出・基準ビルドとの全資産照合は未実施。
+
+後続のユーザー判断により、通常支柱の計算は元HP100/200を採用し、最低HP1への到達を計算へ取り込まない。上記の最低HP書換えと境界例は調査事実として残すが、追加議論や実装の前提条件にはしない。Front型はHP100、昇降機部品を持つEV型はHP200で、両型とも内外の定義を持つ。甲板2行の除外・Front/EV命名方針は[local_003](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md)に記録し、データ反映は未実装。
+
+中央支柱429は[後続の解析](CORE_PILLAR_REVIEW.md)で、炉の死亡通知からの連動処理を確認した。外側炉死亡→Minor、内側炉死亡→Destruct、崩壊アニメーションとSelfDeath(0, bForceKill=true)が接続する。native `0x146fda520`→`0x147bffc40`で、遅延0の強制自己破壊が無敵を解除して自身の被弾処理を呼ぶことを確認。429のHP120を直接攻撃による必要命中数へ変換する根拠とはせず、親構造物として除外を推奨する。原子炉430の各HP40やFront/EV支柱の計算は別に扱う。実ゲーム測定なし、配信未変更。
+
+## local_003 MEGAFLOATの計算反映
+
+上記調査後、ユーザー承認により甲板418/423・中央支柱429をEXCLUDEDへ変更し、原子炉・支柱・シャッターの9行を計算対象にした。12行のisAir=false・roleGroup=groundを反映し、元category=4をcatalogへ保持。親3行はstandardDamage=falseを維持する。全固定ID・HP・耐性・親参照・任務差分は不変。
+
+計算は被弾可能な各1個の元HPを使い、最低HP1、露出・無敵解除・崩壊待ちを命中数へ組み込まない。FrontはHP100、EVはHP200で、MULTIROLE・通常MSLなら40×5=200の各1命中。MGPは5×0.35=1.75から整数HP更新により56/112命中。原子炉は内外各HP40として計算し、総HP80や中央柱のHP120へ読み替えない。SHUTTERの共通/M27耐性差も保持した。
+
+固定期待値・保存復元・画面を含む105テストとChrome12シナリオ、型・Lint・整形・ビルド・再生成一致を検証した。[local_003の14節](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#14-megafloatの承認済み変更と検証)に変更範囲と残る制約を記録。兵装側の既存未確認、ビルド差・配置・イベントの未確認は維持し、実ゲーム測定済みとは扱わない。

@@ -344,6 +344,82 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
 });
 
 for (const width of [1440, 390]) {
+  test(`MEGAFLOAT: ${width}pxで親除外・旧選択・Front/EVと任務名を確認`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.addInitScript(() => {
+      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      localStorage.setItem(
+        'ace8-weapon-guide.preferences',
+        JSON.stringify({
+          version: 1,
+          conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
+          weaponIds: [1],
+          targetIds: [418, 423, 429, 424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425],
+          showParts: false,
+          showMissionVariants: false,
+        })
+      );
+    });
+    await page.goto('/');
+    const selectedIds = [424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425];
+    for (const showParts of [false, true])
+      for (const showVariants of [false, true]) {
+        await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+        const panel = page.getByRole('dialog', { name: 'TARGETS' });
+        await panel
+          .getByRole('checkbox', { name: 'TARGET PARTS', exact: true })
+          .setChecked(showParts);
+        await panel
+          .getByRole('checkbox', { name: 'MISSION VARIANTS', exact: true })
+          .setChecked(showVariants);
+        for (const type of ['Front', 'EV']) {
+          await panel.getByRole('searchbox').fill(`PILLAR (${type})`);
+          await expect(panel.locator('.group-items label')).toHaveCount(
+            showParts ? (showVariants ? 3 : 2) : 0
+          );
+        }
+        await panel.getByRole('searchbox').fill('PILLAR《MEGAFLOAT》');
+        await expect(panel.locator('.group-items label')).toHaveCount(0);
+        await panel.getByRole('button', { name: 'Close targets', exact: true }).click();
+        await expect(page.getByRole('rowheader')).toHaveCount(
+          showParts ? (showVariants ? 12 : 8) : 0
+        );
+        await expect(page.getByRole('rowheader', { name: 'MEGAFLOAT', exact: true })).toHaveCount(
+          0
+        );
+        await expect(
+          page.getByRole('rowheader', { name: 'PILLAR《MEGAFLOAT》', exact: true })
+        ).toHaveCount(0);
+        if (showParts) {
+          const reactor = page.getByRole('row').filter({
+            has: page.getByRole('rowheader', { name: 'FUSION REACTOR《MEGAFLOAT》', exact: true }),
+          });
+          await expect(reactor.locator('td').nth(0)).toHaveText('40');
+          await expect(reactor.locator('td').nth(1)).toHaveText('1');
+          for (const type of ['Front', 'EV']) {
+            await expect(
+              page.getByRole('rowheader', { name: `PILLAR (${type})《MEGAFLOAT》`, exact: true })
+            ).toHaveCount(2);
+            await expect(
+              page.getByRole('rowheader', {
+                name: `PILLAR (${type})《MEGAFLOAT》 [M27]`,
+                exact: true,
+              })
+            ).toHaveCount(showVariants ? 1 : 0);
+          }
+        }
+        await expect
+          .poll(() =>
+            page.evaluate(
+              () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+            )
+          )
+          .toEqual(selectedIds);
+      }
+    await page.reload();
+    await expect(page.getByRole('rowheader')).toHaveCount(12);
+  });
+
   test(`陸上戦艦部位: ${width}pxで旧ID移行・新名検索・表示切替を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {

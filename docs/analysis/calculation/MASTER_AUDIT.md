@@ -2,7 +2,7 @@
 
 更新日: 2026-11-03。数値は同梱のbuild 25201480の抽出表。実ゲーム測定なし。
 
-全兵装42件（掲載34・UNUSED8）、全目標506行（掲載311・EXCLUDED195、固定ID・件数の基準HEAD `9342e63`、24行の属性および区分8の5行反映後）。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
+全兵装42件（掲載34・UNUSED8）、全目標506行（掲載308・EXCLUDED198、local_003の41行の属性反映と親構造物3行の除外後）。固定IDと元定義の基準HEADは`dd22f35`。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
 
 ## 掲載範囲と固定ID
 
@@ -19,9 +19,9 @@
 | AIRCRAFT | 132 |
 | GROUND | 69 |
 | SHIP | 59 |
-| STRUCTURE | 43 |
+| STRUCTURE | 40 |
 | OTHER | 8 |
-| EXCLUDED | 195 |
+| EXCLUDED | 198 |
 
 ## 未確認項目
 
@@ -29,22 +29,18 @@ TLSは威力40・継続18・初回遅延0.05000000074505806・間隔0.4000000059
 
 SFFS子弾（105）はグループマッピングの範囲外、SOD子弾（104）はBombPower（124）への対応を確認。SFFSの親から子へのパーツ転送経路は旧ビルドで未確認のため、BOMB.POW+選択時だけ `?`。パーツなしは子弾40を使用する。
 
-ROLEのnoneは確認済みの補正なしを表す。元区分0（配列添字0=100）と区分8（8要素配列の範囲外=100）をcatalog・証拠で区別したまま倍率1を共有する。未解決の区分をnoneや1へ補完しない。以下は**配信データで未確認扱いの12行**。local_003で41行の静的属性を確認し、承認済み24行と区分8の5行を反映した。MEGAFLOAT系12行は未反映。[調査結果と残件](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)を参照。isAirだけが未確認なら通常MSLの条件付きパーツを選択していない計算は継続できる。
+ROLEのnoneは確認済みの補正なしを表す。元区分0（配列添字0=100）と区分8（8要素配列の範囲外=100）をcatalog・証拠で区別したまま倍率1を共有する。未解決の区分をnoneや1へ補完しない。
 
-| ID | 目標 | 未確認 |
-| ---: | --- | --- |
-| 418 | MEGAFLOAT | isAir, roleGroup, standardDamage |
-| 423 | MEGAFLOAT | isAir, roleGroup, standardDamage |
-| 430 | FUSION REACTOR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 420 | PILLAR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 422 | PILLAR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 429 | PILLAR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 500 | PILLAR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 501 | PILLAR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 419 | PILLAR《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
-| 421 | PILLAR《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
-| 503 | SHUTTER《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
-| 426 | SHUTTER《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
+local_003の41行への対応後、**掲載308行のisAir・roleGroupの未確認値とstandardDamage=falseは0件**。MEGAFLOAT12行には静的isAir=false・元区分4・roleGroup=groundを反映した。[追加調査](MEGAFLOAT_REVIEW.md)とユーザー承認により、甲板418/423・中央支柱429はEXCLUDED、部位9行は元HPでの計算対象とした。
+
+| 対象 | 現在の扱い |
+| --- | --- |
+| 418・423・429 | 除外した親構造物。元HP・出典・固定ID・standardDamage=falseを保持 |
+| 420・500・419 / 422・501・421 | FrontはHP100、EVはHP200で計算。内外・共通/M27の耐性差を維持 |
+| 430 | 原子炉の内側・外側各HP40を同条件として統合。各1個の計算 |
+| 503・426 | シャッター各HP100。共通とM27の耐性差を維持 |
+
+この反映は実ゲームの露出・無敵解除・崩壊全体の必要命中数を確定した意味ではない。全配置・イベント・ビルド差の制約は以下に残す。
 
 ### 通常・爆風耐性が未確認の共通行（Q002で非表示）
 
@@ -90,7 +86,7 @@ local_002の16節時点では固定ID506件、掲載312行・EXCLUDED194行。�
 
 ## local_002完了時点とlocal_003の再調査
 
-local_002の最終承認でTHRUSTER154をEXCLUDEDへ変更した。現行は固定ID506件、掲載311行・EXCLUDED195行、GROUND69行、陸上戦艦掲載部位21行。元定義1459件・除外指定284件。153・488は左右修飾なしで、共通／M9の耐性差を維持する。154は上の掲載中の属性一覧から除いた。過去各節の件数は履歴であり、現在値ではない。
+local_002の最終承認でTHRUSTER154をEXCLUDEDへ変更した。この時点では固定ID506件、掲載311行・EXCLUDED195行、GROUND69行、陸上戦艦掲載部位21行。元定義1459件・除外指定284件。153・488は左右修飾なしで、共通／M9の耐性差を維持する。154は掲載中の属性一覧から除いた。過去各節の件数は履歴であり、現在値ではない。
 
 local_003では、掲載中の属性未確認41行（isAir 36行、roleGroup 34行）の117出典・48モデルを再照合した。既存抽出資産と現行EXEを使用し、72 Blueprintの全CDO読取とnative初期値から全41行のisAir・GameObjectCategoryを確認した。対象の静的属性確認に必要な資産不足は0件。配信JSON・生成catalog・既存属性証拠は未変更。
 
@@ -102,14 +98,14 @@ local_003では、掲載中の属性未確認41行（isAir 36行、roleGroup 34�
 
 standardDamage=falseの全13行は、今回全てLiveAIGameObjectへの継承を確認した。全出典のMinHealthは0または共通NPCの設定なし。この再読取結果だけで全局面の撃破数を保証しない。全レベル配置のROLE無効化、任務イベントによる値変更、基準build 25201480との資産同一性は残る制約である。
 
-対象一覧・読取不具合の原因・反映候補は[local_003](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)、出典・ハッシュ・命令は[TARGET_ATTRIBUTE_EVIDENCE.json](TARGET_ATTRIBUTE_EVIDENCE.json)へ記録した。
+対象一覧・読取不具合の原因・反映候補は[local_003](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md)、出典・ハッシュ・命令は[TARGET_ATTRIBUTE_EVIDENCE.json](TARGET_ATTRIBUTE_EVIDENCE.json)へ記録した。
 
 
 ## local_003の承認済み24行の反映
 
 30モデルの確認値を生成catalogへ反映し、24行のisAir・17行のroleGroup・CH-47のstandardDamageを更新した。全固定ID・表示分類・名前・HP・耐性・任務差分・親子関係・出典は維持。掲載311行・EXCLUDED195行は変わらない。この時点の未確認は17行（isAir未確認12行、roleGroup未確認17行、standardDamage=false 12行）だった。現在の一覧は後続の区分8対応を反映している。
 
-CH-47はクラス名の大小文字による読取失敗を解消したため、既存の通常目標と同じ判定基準へ戻した。区分8の5行とMEGAFLOAT系12行の配信値は変更していない。単体100テスト、Chrome10シナリオ、型検査・Lint・整形・ビルド成功。配信3ファイルの再生成一致を確認。詳細は[local_003の9節](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
+CH-47はクラス名の大小文字による読取失敗を解消したため、既存の通常目標と同じ判定基準へ戻した。区分8の5行とMEGAFLOAT系12行の配信値は変更していない。単体100テスト、Chrome10シナリオ、型検査・Lint・整形・ビルド成功。配信3ファイルの再生成一致を確認。詳細は[local_003の9節](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
 
 
 ## local_003 区分8の5行反映と横並び監査（2026-11-03）
@@ -117,3 +113,21 @@ CH-47はクラス名の大小文字による読取失敗を解消したため、
 201・264・505・463・462のroleGroupのみをnullからnoneへ更新した。6モデルの元category=8は保持。固定ID・HP・耐性・isAir・standardDamage・任務差分などは不変。初回41行のうち29行が反映済みで、未反映はMEGAFLOAT12行（isAir/roleGroup未確認、standardDamage=false）となった。
 
 934モデルと42兵装を横並び調査した。掲載311行では、区分0の既存41行は既にnoneで、今回5行以外の補正なし分類漏れは見つからなかった。NPC共通のROLE処理に武器ID固有の除外分岐はないが、配置での無効化・攻撃者の条件・特殊経路の未確認を区別する。[適用範囲監査](ROLE_SCOPE_AUDIT.md)に全件確認の範囲・資産不足・残件を記録した。
+
+## local_003 MEGAFLOATの追加調査（反映前の履歴）
+
+[MEGAFLOAT_REVIEW.md](MEGAFLOAT_REVIEW.md)で12行・43出典を再調査した。13 Blueprint・甲板の6条件オブジェクトを全読取。静的属性は全12行で地上・元区分4と確認済み。配信属性がnullであることと、元属性が調査不能であることは区別する。
+
+通常支柱6行はnative再初期化で最低HP1を書き込む経路があり、表のMinHealth=0だけでは実効値を判断できない。甲板2行には初期無敵と条件集計による崩壊、原子炉430と中央支柱429には初期無敵・イベント関数がある。シャッター2行の通常被弾経路も確認した。全12行を一括して通常計算へ変更していない。
+
+通常PILLARに通常MSL1発で足りたというユーザーの記憶は、元HP100/200・MSL被ダメージ500%によるMULTIROLEの1発200と整合する。HP40へ差し替える根拠にはしない。各オブジェクト1個の静的計算を採用する案を、任務全体・崩壊演出・無力化の境界と分けて検討している。掲載311・EXCLUDED195、全固定ID・HP・耐性・catalog・配信データは不変。
+
+後続の判断で、通常支柱は元HPを使い、最低HP1の判定を計算へ取り込まない方針を採用。HP100のFront型とHP200のEV型（昇降機部品を持つ）を名称で区別する。両型ともIN/OUTを持つ。甲板418/423は表示名なし・初期無敵・HUD枠非表示・条件崩壊を持つ親定義としてEXCLUDEDにする方針を採用した。子部位と固定IDは維持する。これらは未実装で、上記の現行掲載数と配信値はまだ変わっていない。詳細は[local_003の13.4節](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#134-元hp計算支柱名甲板の掲載判断)を参照。
+
+中央支柱429の[追加調査](CORE_PILLAR_REVIEW.md)では、原子炉の死亡通知から柱の損傷・崩壊・強制自己破壊へ至る経路を確認した。全20関数の保存/VMサイズと分岐先、nativeのbForceKillによる自己破壊処理を照合。429は核融合炉を収める親構造物で、通常攻撃用のHP120目標としては掲載せずEXCLUDEDを推奨する。未使用と断定した意味ではない。429の除外は未実装で、現行件数は不変。
+
+## local_003 MEGAFLOATの反映結果
+
+上記調査後の承認に従い、418/423/429をEXCLUDED、Front/EV支柱6行を識別名付きに変更し、12行の属性と部位9行の通常計算を反映した。原子炉・砲塔・シャッター・支柱などの部位12行を維持し、親参照を変更していない。旧保存の掲載部位IDと非表示中の選択を保持し、除外3行だけを既存ルールで除去する。
+
+全固定ID506件・元定義1459件は不変、掲載308・EXCLUDED198、除外指定287件。HP・耐性・任務差分・順序・出典は維持。元HPでの静的計算を検証し、105テスト・Chrome12シナリオ・型検査・Lint・整形・ビルド・再生成一致が成功した。詳細は[local_003の14節](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#14-megafloatの承認済み変更と検証)を参照。実ゲーム測定は行っていない。

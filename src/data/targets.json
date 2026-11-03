@@ -10206,7 +10206,7 @@
   {
     "id": 418,
     "name": "MEGAFLOAT",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 315,
     "partOf": null,
     "missionVariant": null,
@@ -10231,14 +10231,14 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ground",
     "standardDamage": false
   },
   {
     "id": 423,
     "name": "MEGAFLOAT",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 316,
     "partOf": null,
     "missionVariant": null,
@@ -10263,8 +10263,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ground",
     "standardDamage": false
   },
   {
@@ -10327,13 +10327,13 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 420,
-    "name": "PILLAR《MEGAFLOAT》",
+    "name": "PILLAR (Front)《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 319,
     "partOf": 418,
@@ -10359,13 +10359,13 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 422,
-    "name": "PILLAR《MEGAFLOAT》",
+    "name": "PILLAR (EV)《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 320,
     "partOf": 418,
@@ -10391,14 +10391,14 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 429,
     "name": "PILLAR《MEGAFLOAT》",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 321,
     "partOf": 418,
     "missionVariant": null,
@@ -10423,13 +10423,13 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ground",
     "standardDamage": false
   },
   {
     "id": 500,
-    "name": "PILLAR《MEGAFLOAT》",
+    "name": "PILLAR (Front)《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 322,
     "partOf": 418,
@@ -10455,13 +10455,13 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 501,
-    "name": "PILLAR《MEGAFLOAT》",
+    "name": "PILLAR (EV)《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 323,
     "partOf": 418,
@@ -10487,13 +10487,13 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 419,
-    "name": "PILLAR《MEGAFLOAT》 [M27]",
+    "name": "PILLAR (Front)《MEGAFLOAT》 [M27]",
     "category": "STRUCTURE",
     "order": 324,
     "partOf": 418,
@@ -10521,13 +10521,13 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 421,
-    "name": "PILLAR《MEGAFLOAT》 [M27]",
+    "name": "PILLAR (EV)《MEGAFLOAT》 [M27]",
     "category": "STRUCTURE",
     "order": 325,
     "partOf": 418,
@@ -10555,9 +10555,9 @@
       "lagmBlast": 5,
       "lasmBlast": 5
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 503,
@@ -10587,9 +10587,9 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 426,
@@ -10621,9 +10621,9 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": false,
+    "roleGroup": "ground",
+    "standardDamage": true
   },
   {
     "id": 502,

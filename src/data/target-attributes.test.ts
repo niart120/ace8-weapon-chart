@@ -67,12 +67,20 @@ test('CH-47をHP35・攻撃機MSL35ダメージの1命中として計算する',
   ).toEqual({ kind: 'value', value: 1 });
 });
 
-test('MEGAFLOAT系12行は今回の属性反映から除外する', () => {
+test('MEGAFLOATの属性を反映し、親構造物3行を除外して部位9行を計算対象にする', () => {
   const megafloatIds = [418, 423, 430, 420, 422, 429, 500, 501, 419, 421, 503, 426];
-  for (const id of megafloatIds)
-    expect(targets.find((target) => target.id === id)?.roleGroup).toBeNull();
-  for (const id of megafloatIds)
-    expect(targets.find((target) => target.id === id)?.standardDamage).toBe(false);
+  for (const id of megafloatIds) {
+    const excluded = [418, 423, 429].includes(id);
+    expect(
+      targets.find((target) => target.id === id),
+      `ID${id}`
+    ).toMatchObject({
+      category: excluded ? 'EXCLUDED' : 'STRUCTURE',
+      isAir: false,
+      roleGroup: 'ground',
+      standardDamage: !excluded,
+    });
+  }
 });
 
 test('区分8の5行は全ROLEで補正なしとなり、対空MSLパーツと旧選択は維持する', () => {

@@ -1,0 +1,3762 @@
+{
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "numeric_source_sha256": {
+    "docs\\initial\\ref\\tables\\DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "docs\\initial\\ref\\tables\\DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs\\initial\\ref\\tables\\DT_NPC_WeaponDurability.json": "25cb9445a9c07f81b2dd3ed5d6fc07276b0cdd645e4c1f936fc464a055604a59",
+    "docs\\initial\\ref\\tables\\DT_LiveWeapon.json": "8b0066d77466bc37121e54399c77f931805733e3450c73fc179814655260a5b4",
+    "docs\\initial\\ref\\tables\\blueprint_weapons.json": "00c68022645ec330b91538991d5fe2e990c8bbde7409aabeacf4838b942873d0",
+    "docs\\initial\\ref\\tables\\DT_CategoryDamageRateForPlayerDataTable.json": "0372039a9052242ebe6e81282662c6b3390ec879a4c70624c23300aea6fca34a",
+    "docs\\initial\\ref\\tables\\DT_NPC_Mission027.json": "052035a5e995c5e587c70a3a37e4c4c15944bed9660f2070291dc3069144d2d2"
+  },
+  "normal_missile": {
+    "weapon_id": 2,
+    "blueprint": "BP_plwp_msl_a0_C",
+    "base_damage": 40.0,
+    "durability_column": "Category01",
+    "role_column_for_category4": "Category08",
+    "role_percent": {
+      "0": 87.5,
+      "1": 100.0,
+      "2": 150.0,
+      "3": 100.0
+    }
+  },
+  "numeric_recheck": {
+    "418": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_01",
+          "model": "Megafloat_Deck",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    },
+    "423": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_Cannon_01",
+          "model": "Megafloat_Deck_Cannon",
+          "minHealth": 0,
+          "model_npc_mission_hp": [1000.0, 0, 0],
+          "resolved_hp": 1000,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    },
+    "430": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_01",
+          "model": "Megafloat_Center_Core",
+          "minHealth": 0,
+          "model_npc_mission_hp": [40.0, 0, 0],
+          "resolved_hp": 40,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_Outer_01",
+          "model": "Megafloat_Center_Core_Outer",
+          "minHealth": 0,
+          "model_npc_mission_hp": [40.0, 0, 0],
+          "resolved_hp": 40,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    },
+    "420": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "422": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "429": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_CorePillar_01",
+          "model": "Megafloat_Center_CorePillar",
+          "minHealth": 0,
+          "model_npc_mission_hp": [120.0, 0, 0],
+          "resolved_hp": 120,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    },
+    "500": {
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "501": {
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_001",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "419": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "421": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0,
+          "model_npc_mission_hp": [200.0, 0, 0],
+          "resolved_hp": 200,
+          "durability_id": "MGFPillar_WPDur_000",
+          "missile_percent": 500.0,
+          "missile_multiplier": 5.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 175.0,
+        "1": 200.0,
+        "2": 300.0,
+        "3": 200.0
+      }
+    },
+    "503": {
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": null,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "NPC_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    },
+    "426": {
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": 0,
+          "model_npc_mission_hp": [100.0, 0, 0],
+          "resolved_hp": 100,
+          "durability_id": "MGFMainCannon_Core_WPDur_000",
+          "missile_percent": 100.0,
+          "missile_multiplier": 1.0
+        }
+      ],
+      "missile_damage_no_parts": {
+        "0": 35.0,
+        "1": 40.0,
+        "2": 60.0,
+        "3": 40.0
+      }
+    }
+  },
+  "conditional_mgp_boundary": {
+    "conditional_only": true,
+    "blueprint": "BP_plwp_mgp_a0_C",
+    "base_damage": 5.0,
+    "durability_column": "Category02",
+    "durability_percent": 35.0,
+    "role_percent": 100,
+    "no_parts_damage": 1.75,
+    "examples": [
+      {
+        "hp": 100,
+        "hits_to_hp0": 56,
+        "hits_to_hp1_if_that_were_the_goal": 55
+      },
+      {
+        "hp": 200,
+        "hits_to_hp0": 112,
+        "hits_to_hp1_if_that_were_the_goal": 111
+      }
+    ]
+  },
+  "model_identity": {
+    "Megafloat_Deck": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck",
+        "asset": "BP_Megafloat_Deck_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "",
+      "BriefingDisplayNameID": "None",
+      "MaxHealth": 100.0
+    },
+    "Megafloat_Deck_Cannon": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck_Cannon",
+        "asset": "BP_Megafloat_Deck_Cannon_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "",
+      "BriefingDisplayNameID": "ContainerGround_Name_MainCannon",
+      "MaxHealth": 1000.0
+    },
+    "Megafloat_Center_Core": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core",
+        "asset": "BP_Megafloat_Center_Core_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_TransmissionUnit",
+      "BriefingDisplayNameID": "ContainerGround_Name_TransmissionUnit",
+      "MaxHealth": 40.0
+    },
+    "Megafloat_Center_Core_Outer": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core_Outer",
+        "asset": "BP_Megafloat_Center_Core_Outer_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_TransmissionUnit",
+      "BriefingDisplayNameID": "ContainerGround_Name_TransmissionUnit",
+      "MaxHealth": 40.0
+    },
+    "MGFPillar_L_Front_OUT": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_Front_OUT",
+        "asset": "BP_MGFPillar_L_Front_OUT_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 100.0
+    },
+    "MGFPillar_L_EV_OUT": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_EV_OUT",
+        "asset": "BP_MGFPillar_L_EV_OUT_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 200.0
+    },
+    "MGFPillar_R_EV_OUT": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_R_EV_OUT",
+        "asset": "BP_MGFPillar_R_EV_OUT_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 200.0
+    },
+    "Megafloat_Center_CorePillar": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_CorePillar",
+        "asset": "BP_Megafloat_Center_CorePillar_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "",
+      "BriefingDisplayNameID": "None",
+      "MaxHealth": 120.0
+    },
+    "MGFPillar_L_Front_IN": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_Front_IN",
+        "asset": "BP_MGFPillar_L_Front_IN_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 100.0
+    },
+    "MGFPillar_L_EV_IN": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_EV_IN",
+        "asset": "BP_MGFPillar_L_EV_IN_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 200.0
+    },
+    "MGFPillar_R_EV_IN": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_R_EV_IN",
+        "asset": "BP_MGFPillar_R_EV_IN_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Pillar",
+      "BriefingDisplayNameID": "ContainerGround_Name_Pillar",
+      "MaxHealth": 200.0
+    },
+    "Megafloat_Center_Shutter": {
+      "BlueprintClass": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Shutter",
+        "asset": "BP_Megafloat_Center_Shutter_C",
+        "subpath": ""
+      },
+      "GameObjectDisplayName01": "ContainerGround_Name_Shutter",
+      "BriefingDisplayNameID": "ContainerGround_Name_Shutter",
+      "MaxHealth": 100.0
+    }
+  },
+  "deck_assemblies": {
+    "Megafloat_Deck_01": {
+      "model": "Megafloat_Deck",
+      "display_name": "",
+      "children": [
+        {
+          "component": "Pillar_L000_IN",
+          "npc": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN"
+        },
+        {
+          "component": "Pillar_L000_OUT",
+          "npc": "MGFPillar_L000_OUT",
+          "model": "MGFPillar_L_Front_OUT"
+        },
+        {
+          "component": "Pillar_L001_IN",
+          "npc": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L001_OUT",
+          "npc": "MGFPillar_L001_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L002_IN",
+          "npc": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L002_OUT",
+          "npc": "MGFPillar_L002_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L003_IN",
+          "npc": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L003_OUT",
+          "npc": "MGFPillar_L003_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L004_IN",
+          "npc": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L004_OUT",
+          "npc": "MGFPillar_L004_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L005_IN",
+          "npc": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L005_OUT",
+          "npc": "MGFPillar_L005_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_R000_IN",
+          "npc": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN"
+        },
+        {
+          "component": "Pillar_R000_OUT",
+          "npc": "MGFPillar_R000_OUT",
+          "model": "MGFPillar_L_Front_OUT"
+        },
+        {
+          "component": "Pillar_R001_IN",
+          "npc": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R001_OUT",
+          "npc": "MGFPillar_R001_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R002_IN",
+          "npc": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R002_OUT",
+          "npc": "MGFPillar_R002_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R003_IN",
+          "npc": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R003_OUT",
+          "npc": "MGFPillar_R003_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R004_IN",
+          "npc": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R004_OUT",
+          "npc": "MGFPillar_R004_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R005_IN",
+          "npc": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R005_OUT",
+          "npc": "MGFPillar_R005_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        }
+      ]
+    },
+    "Megafloat_Deck_Cannon_01": {
+      "model": "Megafloat_Deck_Cannon",
+      "display_name": "",
+      "children": [
+        {
+          "component": "MainCannon",
+          "npc": "Megafloat_MainCannnon_01",
+          "model": "Megafloat_MainCannnon"
+        },
+        {
+          "component": "MainCannon_Core",
+          "npc": "Megafloat_MainCannon_Core_01",
+          "model": "Megafloat_MainCannon_Core"
+        },
+        {
+          "component": "Pillar_L000_IN",
+          "npc": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN"
+        },
+        {
+          "component": "Pillar_L000_OUT",
+          "npc": "MGFPillar_L000_OUT",
+          "model": "MGFPillar_L_Front_OUT"
+        },
+        {
+          "component": "Pillar_L001_IN",
+          "npc": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L001_OUT",
+          "npc": "MGFPillar_L001_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L002_IN",
+          "npc": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L002_OUT",
+          "npc": "MGFPillar_L002_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L003_IN",
+          "npc": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L003_OUT",
+          "npc": "MGFPillar_L003_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L004_IN",
+          "npc": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L004_OUT",
+          "npc": "MGFPillar_L004_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_L005_IN",
+          "npc": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN"
+        },
+        {
+          "component": "Pillar_L005_OUT",
+          "npc": "MGFPillar_L005_OUT",
+          "model": "MGFPillar_L_EV_OUT"
+        },
+        {
+          "component": "Pillar_R000_IN",
+          "npc": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN"
+        },
+        {
+          "component": "Pillar_R000_OUT",
+          "npc": "MGFPillar_R000_OUT",
+          "model": "MGFPillar_L_Front_OUT"
+        },
+        {
+          "component": "Pillar_R001_IN",
+          "npc": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R001_OUT",
+          "npc": "MGFPillar_R001_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R002_IN",
+          "npc": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R002_OUT",
+          "npc": "MGFPillar_R002_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R003_IN",
+          "npc": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R003_OUT",
+          "npc": "MGFPillar_R003_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R004_IN",
+          "npc": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R004_OUT",
+          "npc": "MGFPillar_R004_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        },
+        {
+          "component": "Pillar_R005_IN",
+          "npc": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN"
+        },
+        {
+          "component": "Pillar_R005_OUT",
+          "npc": "MGFPillar_R005_OUT",
+          "model": "MGFPillar_R_EV_OUT"
+        }
+      ]
+    }
+  },
+  "targets": [
+    {
+      "id": 418,
+      "name": "MEGAFLOAT",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_01",
+          "model": "Megafloat_Deck",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 423,
+      "name": "MEGAFLOAT",
+      "current": {
+        "hp": 1000,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_Cannon_01",
+          "model": "Megafloat_Deck_Cannon",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 430,
+      "name": "FUSION REACTOR《MEGAFLOAT》",
+      "current": {
+        "hp": 40,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_01",
+          "model": "Megafloat_Center_Core",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_Outer_01",
+          "model": "Megafloat_Center_Core_Outer",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 420,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 422,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "hp": 200,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 429,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "hp": 120,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_CorePillar_01",
+          "model": "Megafloat_Center_CorePillar",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 500,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 501,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "hp": 200,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 419,
+      "name": "PILLAR《MEGAFLOAT》 [M27]",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 421,
+      "name": "PILLAR《MEGAFLOAT》 [M27]",
+      "current": {
+        "hp": 200,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 503,
+      "name": "SHUTTER《MEGAFLOAT》",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    },
+    {
+      "id": 426,
+      "name": "SHUTTER《MEGAFLOAT》 [M27]",
+      "current": {
+        "hp": 100,
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealthInSourceTables": false
+    }
+  ],
+  "model_chains": {
+    "Megafloat_Deck": [
+      "BP_Megafloat_Deck_C",
+      "LiveAIMegafloatDeck",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "Megafloat_Deck_Cannon": [
+      "BP_Megafloat_Deck_Cannon_C",
+      "BP_Megafloat_Deck_C",
+      "LiveAIMegafloatDeck",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "Megafloat_Center_Core": [
+      "BP_Megafloat_Center_Core_C",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "Megafloat_Center_Core_Outer": [
+      "BP_Megafloat_Center_Core_Outer_C",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_L_Front_OUT": [
+      "BP_MGFPillar_L_Front_OUT_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_L_EV_OUT": [
+      "BP_MGFPillar_L_EV_OUT_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_R_EV_OUT": [
+      "BP_MGFPillar_R_EV_OUT_C",
+      "BP_MGFPillar_L_EV_IN_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "Megafloat_Center_CorePillar": [
+      "BP_Megafloat_Center_CorePillar_C",
+      "LiveAIMegafloatCorePillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_L_Front_IN": [
+      "BP_MGFPillar_L_Front_IN_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_L_EV_IN": [
+      "BP_MGFPillar_L_EV_IN_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "MGFPillar_R_EV_IN": [
+      "BP_MGFPillar_R_EV_IN_C",
+      "BP_MGFPillar_L_EV_OUT_C",
+      "BP_Megafloat_Pillar_Base_mock_C",
+      "LiveAIMegafloatPillar",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ],
+    "Megafloat_Center_Shutter": [
+      "BP_Megafloat_Center_Shutter_C",
+      "LiveAIMegafloatShutter",
+      "LiveAIMegafloatConstruction",
+      "LiveAIBuildingObject",
+      "LiveAIArrangementObject",
+      "LiveAIGameObject",
+      "LiveGameObject",
+      "Pawn",
+      "Actor",
+      "Object"
+    ]
+  },
+  "decoded": {
+    "BP_MGFPillar_L_EV_IN_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "consumed": 165,
+      "export_bytes": 165,
+      "uexp_sha256": "e1443b26e2c1405cfe33f140ff4bed33ecc0f3160c8d339521d7d15ece6eb4ce",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_EV_IN.uasset",
+      "uasset_sha256": "08c6bb4b6c0a95861d06417803b71cbe87fad98ab784126c93274be3fdb0e4ee",
+      "properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "MaxHealth": 200.0
+      },
+      "origins": {
+        "DestructInfos[0]": {
+          "blueprint": "BP_MGFPillar_L_EV_IN_C",
+          "uexp_offset": 491,
+          "zero_mask": false,
+          "schema_index": 9
+        },
+        "MaxHealth": {
+          "blueprint": "BP_MGFPillar_L_EV_IN_C",
+          "uexp_offset": 574,
+          "zero_mask": false,
+          "schema_index": 134
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": ["Elevator_SM_GEN_VARIABLE"],
+      "identity_mesh_imports": [
+        "SK_MGF_Pillar002Inside001_I07",
+        "SM_MGF_Elevator002_I07",
+        "SM_MGF_Pillar002_I07",
+        "SM_MGF_Pillar002P000_I07",
+        "SM_MGF_Pillar002P001_I07",
+        "SM_MGF_Pillar002P002_I07",
+        "SM_MGF_Pillar002P003_I07",
+        "SM_MGF_Pillar002P004_I07"
+      ]
+    },
+    "BP_MGFPillar_L_EV_OUT_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "consumed": 168,
+      "export_bytes": 168,
+      "uexp_sha256": "f65e36e5cfa94b87d99a9b31d2cc0ba61d443f009014cb8ff150298b38069d80",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_EV_OUT.uasset",
+      "uasset_sha256": "f734d2df91907f6fe8c934bf7d67a6f120fd7ea931541a9b25ab5d2588bc2c75",
+      "properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "MaxHealth": 200.0
+      },
+      "origins": {
+        "DestructInfos[0]": {
+          "blueprint": "BP_MGFPillar_L_EV_OUT_C",
+          "uexp_offset": 493,
+          "zero_mask": false,
+          "schema_index": 9
+        },
+        "MaxHealth": {
+          "blueprint": "BP_MGFPillar_L_EV_OUT_C",
+          "uexp_offset": 577,
+          "zero_mask": false,
+          "schema_index": 134
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": ["Elevator_SM_GEN_VARIABLE"],
+      "identity_mesh_imports": [
+        "SK_MGF_Pillar002Outside001_I07",
+        "SM_MGF_Elevator001_I07",
+        "SM_MGF_Pillar002_I07",
+        "SM_MGF_Pillar002P000_I07",
+        "SM_MGF_Pillar002P001_I07",
+        "SM_MGF_Pillar002P002_I07",
+        "SM_MGF_Pillar002P003_I07",
+        "SM_MGF_Pillar002P004_I07"
+      ]
+    },
+    "BP_MGFPillar_L_Front_IN_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "consumed": 159,
+      "export_bytes": 159,
+      "uexp_sha256": "4278dbff23b823404ab1f5e5135df5ba2064b70abd12f5e6efac4bae2ded5b4e",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_Front_IN.uasset",
+      "uasset_sha256": "48da681f203550c55f1cd2587c35d37c5045d21b4ab87f4c3ce42809cd3c0a74",
+      "properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        }
+      },
+      "origins": {
+        "DestructInfos[0]": {
+          "blueprint": "BP_MGFPillar_L_Front_IN_C",
+          "uexp_offset": 438,
+          "zero_mask": false,
+          "schema_index": 8
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": [],
+      "identity_mesh_imports": [
+        "SK_MGF_Pillar001Inside001_I07",
+        "SM_MGF_PillarInside001_I07",
+        "SM_MGF_PillarInside001P000_I07",
+        "SM_MGF_PillarInside001P001_I07",
+        "SM_MGF_PillarInside001P002_I07",
+        "SM_MGF_PillarInside001P003_I07",
+        "SM_MGF_PillarInside001P004_I07"
+      ]
+    },
+    "BP_MGFPillar_L_Front_OUT_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "consumed": 159,
+      "export_bytes": 159,
+      "uexp_sha256": "b3a7c99d79f4eb4b78f135075cb8cb39c314bfddf0d45b0f1baa771c89f58154",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_Front_OUT.uasset",
+      "uasset_sha256": "9056254af3baeaf1de8cb78e994dcf3d8f3dbf015da92501ce707069fcdc096e",
+      "properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        }
+      },
+      "origins": {
+        "DestructInfos[0]": {
+          "blueprint": "BP_MGFPillar_L_Front_OUT_C",
+          "uexp_offset": 438,
+          "zero_mask": false,
+          "schema_index": 8
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": [],
+      "identity_mesh_imports": [
+        "SK_MGF_Pillar001Outside001_I07",
+        "SM_MGF_PillarOutside001_I07",
+        "SM_MGF_PillarOutside001P000_I07",
+        "SM_MGF_PillarOutside001P001_I07",
+        "SM_MGF_PillarOutside001P002_I07",
+        "SM_MGF_PillarOutside001P003_I07",
+        "SM_MGF_PillarOutside001P004_I07"
+      ]
+    },
+    "BP_MGFPillar_R_EV_IN_C": {
+      "parent": "BP_MGFPillar_L_EV_OUT_C",
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "929e7c8db8f330ae92cbb77d6c2d750e58f03a191719bcb616b0c93be38a81dd",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_R_EV_IN.uasset",
+      "uasset_sha256": "20143a424b78edf941747e600225a9e38be6ebf1817f88c15fd4ee95637d3a01",
+      "properties": {},
+      "origins": {},
+      "function_exports": [],
+      "identity_component_exports": ["Elevator_SM_GEN_VARIABLE"],
+      "identity_mesh_imports": ["SM_MGF_Elevator002_I07"]
+    },
+    "BP_MGFPillar_R_EV_OUT_C": {
+      "parent": "BP_MGFPillar_L_EV_IN_C",
+      "consumed": 55,
+      "export_bytes": 55,
+      "uexp_sha256": "b9e23588ab7ce663f105a0eff3d35cda6a1f006c1b56ce6cb2bad15e1651a9dc",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_R_EV_OUT.uasset",
+      "uasset_sha256": "7126c81b7844698b5e0b3b14bc8023096d593e08572128d812182d415c6553e3",
+      "properties": {},
+      "origins": {},
+      "function_exports": [],
+      "identity_component_exports": ["Elevator_SM_GEN_VARIABLE"],
+      "identity_mesh_imports": ["SM_MGF_Elevator001_I07"]
+    },
+    "BP_Megafloat_Center_CorePillar_C": {
+      "parent": "LiveAIMegafloatCorePillar",
+      "consumed": 201,
+      "export_bytes": 201,
+      "uexp_sha256": "6d924b88c92a6e1f6fc15890770c57af5ee6b48e27588f534c1ea91060b18dd1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_CorePillar.uasset",
+      "uasset_sha256": "93883d3d8d1c7869a899cd98245822c7c2fdfdb83e11fb71b6184c3922eec3bf",
+      "properties": {
+        "bInitialInvincible": 1,
+        "bShouldRecordForDebriefing": false,
+        "bShowHUDBox": false,
+        "bIsIgnoreScoreBoard": 1,
+        "MaxHealth": 120.0
+      },
+      "origins": {
+        "bInitialInvincible": {
+          "blueprint": "BP_Megafloat_Center_CorePillar_C",
+          "uexp_offset": 1053,
+          "zero_mask": false,
+          "schema_index": 16
+        },
+        "bShouldRecordForDebriefing": {
+          "blueprint": "BP_Megafloat_Center_CorePillar_C",
+          "uexp_offset": 1058,
+          "zero_mask": true,
+          "schema_index": 63
+        },
+        "bShowHUDBox": {
+          "blueprint": "BP_Megafloat_Center_CorePillar_C",
+          "uexp_offset": 1058,
+          "zero_mask": true,
+          "schema_index": 64
+        },
+        "bIsIgnoreScoreBoard": {
+          "blueprint": "BP_Megafloat_Center_CorePillar_C",
+          "uexp_offset": 1058,
+          "zero_mask": false,
+          "schema_index": 65
+        },
+        "MaxHealth": {
+          "blueprint": "BP_Megafloat_Center_CorePillar_C",
+          "uexp_offset": 1069,
+          "zero_mask": false,
+          "schema_index": 131
+        }
+      },
+      "function_exports": [
+        "ExecuteUbergraph_BP_Megafloat_Center_CorePillar",
+        "OnBlendOut_520DB31342D091680048C3B71E86BE2B",
+        "OnChangeDamageState",
+        "OnCompleted_520DB31342D091680048C3B71E86BE2B",
+        "OnCoreDeath_イベント",
+        "OnDestructAnimEnd",
+        "OnInterrupted_520DB31342D091680048C3B71E86BE2B",
+        "OnNotifyBegin_520DB31342D091680048C3B71E86BE2B",
+        "OnNotifyEnd_520DB31342D091680048C3B71E86BE2B",
+        "OnOuterDeath_イベント",
+        "ReceiveBeginPlay"
+      ],
+      "identity_component_exports": [],
+      "identity_mesh_imports": []
+    },
+    "BP_Megafloat_Center_Core_C": {
+      "parent": "LiveAIMegafloatConstruction",
+      "consumed": 114,
+      "export_bytes": 114,
+      "uexp_sha256": "0b3dd3b59f742ce6c8670bc0f105c95cc795bc8dea076158373c9f2c631ff8d1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Core.uasset",
+      "uasset_sha256": "af2a4ed0b8376fb39176c2dd45e147acd2dcc2259c2c0cc14bdfe8fe5b717c77",
+      "properties": {
+        "bInitialInvincible": 1,
+        "bInitialMarkerHide": 1,
+        "bIsContainer": 1,
+        "MaxHealth": 40.0
+      },
+      "origins": {
+        "bInitialInvincible": {
+          "blueprint": "BP_Megafloat_Center_Core_C",
+          "uexp_offset": 557,
+          "zero_mask": false,
+          "schema_index": 6
+        },
+        "bInitialMarkerHide": {
+          "blueprint": "BP_Megafloat_Center_Core_C",
+          "uexp_offset": 558,
+          "zero_mask": false,
+          "schema_index": 7
+        },
+        "bIsContainer": {
+          "blueprint": "BP_Megafloat_Center_Core_C",
+          "uexp_offset": 563,
+          "zero_mask": false,
+          "schema_index": 70
+        },
+        "MaxHealth": {
+          "blueprint": "BP_Megafloat_Center_Core_C",
+          "uexp_offset": 574,
+          "zero_mask": false,
+          "schema_index": 121
+        }
+      },
+      "function_exports": [
+        "ExecuteUbergraph_BP_Megafloat_Center_Core",
+        "GetCoreOuter",
+        "OnCoreDeath__DelegateSignature",
+        "OnDeath",
+        "OnOuterDeath_イベント",
+        "ReceiveBeginPlay"
+      ],
+      "identity_component_exports": [],
+      "identity_mesh_imports": []
+    },
+    "BP_Megafloat_Center_Core_Outer_C": {
+      "parent": "LiveAIMegafloatConstruction",
+      "consumed": 114,
+      "export_bytes": 114,
+      "uexp_sha256": "41fcc5502bee87ddb604a1c8baeef8a7704dedf0eafa45411f2e346dbf1a6ac7",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Core_Outer.uasset",
+      "uasset_sha256": "fd14891bba53cc1d33fdd20d67d6492b4aa5ea0f9e0bcceb259c4e8846121700",
+      "properties": {
+        "bInitialInvincible": 1,
+        "bInitialMarkerHide": 1,
+        "bIsContainer": 1,
+        "MaxHealth": 40.0
+      },
+      "origins": {
+        "bInitialInvincible": {
+          "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+          "uexp_offset": 407,
+          "zero_mask": false,
+          "schema_index": 4
+        },
+        "bInitialMarkerHide": {
+          "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+          "uexp_offset": 408,
+          "zero_mask": false,
+          "schema_index": 5
+        },
+        "bIsContainer": {
+          "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+          "uexp_offset": 413,
+          "zero_mask": false,
+          "schema_index": 68
+        },
+        "MaxHealth": {
+          "blueprint": "BP_Megafloat_Center_Core_Outer_C",
+          "uexp_offset": 424,
+          "zero_mask": false,
+          "schema_index": 119
+        }
+      },
+      "function_exports": [
+        "ExecuteUbergraph_BP_Megafloat_Center_Core_Outer",
+        "OnDeath",
+        "OnOuterDeath__DelegateSignature"
+      ],
+      "identity_component_exports": [],
+      "identity_mesh_imports": []
+    },
+    "BP_Megafloat_Center_Shutter_C": {
+      "parent": "LiveAIMegafloatShutter",
+      "consumed": 101,
+      "export_bytes": 101,
+      "uexp_sha256": "a904c7ef2956c885f852c9e8b511eaab56e114ba06461fd676bd85231ffe8b22",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Shutter.uasset",
+      "uasset_sha256": "bad8f1cdbae77b7f614cd0973dd1d3bf726696171b6396d7209b17cc7be60e67",
+      "properties": {
+        "FreeFlightInitialEventName": "Open",
+        "bShouldRecordForDebriefing": false,
+        "bIsIgnoreScoreBoard": 1
+      },
+      "origins": {
+        "FreeFlightInitialEventName": {
+          "blueprint": "BP_Megafloat_Center_Shutter_C",
+          "uexp_offset": 603,
+          "zero_mask": false,
+          "schema_index": 7
+        },
+        "bShouldRecordForDebriefing": {
+          "blueprint": "BP_Megafloat_Center_Shutter_C",
+          "uexp_offset": 619,
+          "zero_mask": true,
+          "schema_index": 55
+        },
+        "bIsIgnoreScoreBoard": {
+          "blueprint": "BP_Megafloat_Center_Shutter_C",
+          "uexp_offset": 619,
+          "zero_mask": false,
+          "schema_index": 57
+        }
+      },
+      "function_exports": ["DebugPauseShutter", "DebugPlayShutter", "DebugTickShutter"],
+      "identity_component_exports": [],
+      "identity_mesh_imports": []
+    },
+    "BP_Megafloat_Deck_C": {
+      "parent": "LiveAIMegafloatDeck",
+      "consumed": 440,
+      "export_bytes": 440,
+      "uexp_sha256": "8e0356bd309d1985ab6e3f738ba00b6f2ee51f3390771881dd0c08c931fae13d",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Deck.uasset",
+      "uasset_sha256": "7a290fc13bc11824d4d52a9fdf639440ba54502e3753e79af2221c9143c03290",
+      "properties": {
+        "DestructConditions": [185, 184, 186],
+        "PillarDestructDelayRange": {
+          "Min": 2.0,
+          "Max": 8.0
+        },
+        "RunwayMeshNames[0]": "SM_MGF_UpperDeckA002_I07",
+        "RunwayMeshNames[1]": "SM_MGF_UpperDeckB002_I07",
+        "RunwayMeshNames[2]": "SM_MGF_UpperDeckA011_I07",
+        "RunwayMeshNames[3]": "SM_MGF_UpperDeckB011_I07",
+        "DeckFieldMeshName": "SM_MGF_UpperDeckC001_I07",
+        "bInitialInvincible": 1,
+        "bShowHUDBox": false,
+        "MaxHealth": 1000.0,
+        "bIsInvincibleInducedExplosion": 1
+      },
+      "origins": {
+        "DestructConditions": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6272,
+          "zero_mask": false,
+          "schema_index": 77
+        },
+        "PillarDestructDelayRange": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6288,
+          "zero_mask": false,
+          "schema_index": 78
+        },
+        "RunwayMeshNames[0]": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6570,
+          "zero_mask": false,
+          "schema_index": 82
+        },
+        "RunwayMeshNames[1]": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6578,
+          "zero_mask": false,
+          "schema_index": 83
+        },
+        "RunwayMeshNames[2]": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6586,
+          "zero_mask": false,
+          "schema_index": 84
+        },
+        "RunwayMeshNames[3]": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6594,
+          "zero_mask": false,
+          "schema_index": 85
+        },
+        "DeckFieldMeshName": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6602,
+          "zero_mask": false,
+          "schema_index": 86
+        },
+        "bInitialInvincible": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6610,
+          "zero_mask": false,
+          "schema_index": 90
+        },
+        "bShowHUDBox": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6615,
+          "zero_mask": true,
+          "schema_index": 138
+        },
+        "MaxHealth": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6626,
+          "zero_mask": false,
+          "schema_index": 205
+        },
+        "bIsInvincibleInducedExplosion": {
+          "blueprint": "BP_Megafloat_Deck_C",
+          "uexp_offset": 6630,
+          "zero_mask": false,
+          "schema_index": 248
+        }
+      },
+      "function_exports": [
+        "CreateKey",
+        "ExecuteUbergraph_BP_Megafloat_Deck",
+        "OnDeckCrackStart",
+        "PauseDeckCrack",
+        "ResumeDeckCrack",
+        "StartCrack"
+      ],
+      "identity_component_exports": [],
+      "identity_mesh_imports": [
+        "SM_MGF_UpperDeckA001_I07",
+        "SM_MGF_UpperDeckA002_I07",
+        "SM_MGF_UpperDeckA003_I07",
+        "SM_MGF_UpperDeckA004_I07",
+        "SM_MGF_UpperDeckA005_I07",
+        "SM_MGF_UpperDeckA006_I07",
+        "SM_MGF_UpperDeckA007_I07",
+        "SM_MGF_UpperDeckA008_I07",
+        "SM_MGF_UpperDeckA009_I07",
+        "SM_MGF_UpperDeckA010_I07",
+        "SM_MGF_UpperDeckA011_I07",
+        "SM_MGF_UpperDeckB001_I07",
+        "SM_MGF_UpperDeckB002_I07",
+        "SM_MGF_UpperDeckB003_I07",
+        "SM_MGF_UpperDeckB004_I07",
+        "SM_MGF_UpperDeckB005_I07",
+        "SM_MGF_UpperDeckB006_I07",
+        "SM_MGF_UpperDeckB007_I07",
+        "SM_MGF_UpperDeckB008_I07",
+        "SM_MGF_UpperDeckB009_I07",
+        "SM_MGF_UpperDeckB010_I07",
+        "SM_MGF_UpperDeckB011_I07",
+        "SM_MGF_UpperDeckC001_I07"
+      ]
+    },
+    "BP_Megafloat_Deck_Cannon_C": {
+      "parent": "BP_Megafloat_Deck_C",
+      "consumed": 73,
+      "export_bytes": 73,
+      "uexp_sha256": "3f47de944de4d113687a75283138816822749d2e21537d0bcd99b802651972f5",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Deck_Cannon.uasset",
+      "uasset_sha256": "91d9d0193848bc58d751bb82e4e72d20819c9261803b7b6db6a9708db0a65372",
+      "properties": {
+        "DestructConditions": [174, 173, 175]
+      },
+      "origins": {
+        "DestructConditions": {
+          "blueprint": "BP_Megafloat_Deck_Cannon_C",
+          "uexp_offset": 472,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": ["MainCannon_Core_GEN_VARIABLE", "MainCannon_GEN_VARIABLE"],
+      "identity_mesh_imports": [
+        "SM_MGF_UpperDeckC002_I07",
+        "SM_MGF_UpperDeckA001_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA002_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA003_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA004_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA005_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA006_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA007_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA008_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA009_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA010_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckA011_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB001_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB002_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB003_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB004_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB005_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB006_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB007_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB008_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB009_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB010_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckB011_I07_GEN_VARIABLE",
+        "SM_MGF_UpperDeckC001_I07_GEN_VARIABLE"
+      ]
+    },
+    "BP_Megafloat_Pillar_Base_mock_C": {
+      "parent": "LiveAIMegafloatPillar",
+      "consumed": 126,
+      "export_bytes": 126,
+      "uexp_sha256": "911b038469ae753bef70875bcfe8487f4de6b6c734a50ad3207e1e30afb52731",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Pillar_Base_mock.uasset",
+      "uasset_sha256": "8dd32724d3b080a0e57fafaa502c823d4494c5836d5ae1148e36bb5eb16f775a",
+      "properties": {
+        "DestructInfos[0]": {
+          "DamagedMeshName": "SM_Damaged1"
+        },
+        "bShowHUDBox": false
+      },
+      "origins": {
+        "DestructInfos[0]": {
+          "blueprint": "BP_Megafloat_Pillar_Base_mock_C",
+          "uexp_offset": 235,
+          "zero_mask": false,
+          "schema_index": 2
+        },
+        "bShowHUDBox": {
+          "blueprint": "BP_Megafloat_Pillar_Base_mock_C",
+          "uexp_offset": 300,
+          "zero_mask": true,
+          "schema_index": 60
+        }
+      },
+      "function_exports": [],
+      "identity_component_exports": [],
+      "identity_mesh_imports": []
+    }
+  },
+  "conditions": {
+    "BP_Megafloat_Deck_C:LiveMegafloatDeckDestructConditionNum_0": {
+      "class": "LiveMegafloatDeckDestructConditionNum",
+      "export_index": 185,
+      "uexp_offset": 16404,
+      "consumed": 15,
+      "size": 15,
+      "template": ["/Script/Live", "Default__LiveMegafloatDeckDestructConditionNum"],
+      "serialized_overrides": {
+        "ConditionState": 2,
+        "ConditionNum": 6
+      },
+      "effective_known_values": {
+        "ConditionState": 2,
+        "ConditionNum": 6
+      }
+    },
+    "BP_Megafloat_Deck_C:LiveMegafloatDeckDestructConditionLine_0": {
+      "class": "LiveMegafloatDeckDestructConditionLine",
+      "export_index": 184,
+      "uexp_offset": 16392,
+      "consumed": 12,
+      "size": 12,
+      "template": ["/Script/Live", "Default__LiveMegafloatDeckDestructConditionLine"],
+      "serialized_overrides": {
+        "ConditionState": 3,
+        "bCheckX": 1
+      },
+      "effective_known_values": {
+        "ConditionState": 3,
+        "bCheckX": 1
+      }
+    },
+    "BP_Megafloat_Deck_C:LiveMegafloatDeckDestructConditionPillar_0": {
+      "class": "LiveMegafloatDeckDestructConditionPillar",
+      "export_index": 186,
+      "uexp_offset": 16419,
+      "consumed": 14,
+      "size": 14,
+      "template": ["/Script/Live", "Default__LiveMegafloatDeckDestructConditionPillar"],
+      "serialized_overrides": {
+        "DestructNum": 5
+      },
+      "effective_known_values": {
+        "ThresholdDamage": 1,
+        "DestructNum": 5
+      }
+    },
+    "BP_Megafloat_Deck_Cannon_C:LiveMegafloatDeckDestructConditionNum_0": {
+      "class": "LiveMegafloatDeckDestructConditionNum",
+      "export_index": 174,
+      "uexp_offset": 6964,
+      "consumed": 14,
+      "size": 14,
+      "template": [
+        "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck",
+        "Default__BP_Megafloat_Deck_C",
+        "LiveMegafloatDeckDestructConditionNum_0"
+      ],
+      "serialized_overrides": {
+        "ConditionNum": 5
+      },
+      "effective_known_values": {
+        "ConditionState": 2,
+        "ConditionNum": 5
+      }
+    },
+    "BP_Megafloat_Deck_Cannon_C:LiveMegafloatDeckDestructConditionLine_0": {
+      "class": "LiveMegafloatDeckDestructConditionLine",
+      "export_index": 173,
+      "uexp_offset": 6954,
+      "consumed": 10,
+      "size": 10,
+      "template": [
+        "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck",
+        "Default__BP_Megafloat_Deck_C",
+        "LiveMegafloatDeckDestructConditionLine_0"
+      ],
+      "serialized_overrides": {},
+      "effective_known_values": {
+        "ConditionState": 3,
+        "bCheckX": 1
+      }
+    },
+    "BP_Megafloat_Deck_Cannon_C:LiveMegafloatDeckDestructConditionPillar_0": {
+      "class": "LiveMegafloatDeckDestructConditionPillar",
+      "export_index": 175,
+      "uexp_offset": 6978,
+      "consumed": 10,
+      "size": 10,
+      "template": [
+        "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck",
+        "Default__BP_Megafloat_Deck_C",
+        "LiveMegafloatDeckDestructConditionPillar_0"
+      ],
+      "serialized_overrides": {},
+      "effective_known_values": {
+        "ThresholdDamage": 1,
+        "DestructNum": 5
+      }
+    }
+  },
+  "threshold_native_default": {
+    "address": "0x157bc12f0",
+    "bytes": "c6432c01",
+    "value": 1
+  },
+  "pillar_count_excluded_tag": {
+    "address": "0x14cbfb690",
+    "value": "IgnoreDestroyCount"
+  },
+  "native_tables": {
+    "LiveAIBuildingObject": {
+      "constructor": "0x147c5ade0",
+      "vtable": "0x14c4ba5d8",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147c5b570",
+        "0x9d0": "0x147c51590",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    },
+    "LiveAIMegafloatConstruction": {
+      "constructor": "0x147e607e0",
+      "vtable": "0x14c51c828",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147c5b570",
+        "0x9d0": "0x147e60b70",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    },
+    "LiveAIMegafloatDeck": {
+      "constructor": "0x157b6e3b0",
+      "vtable": "0x14c51a700",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147e61c10",
+        "0x9d0": "0x147e60b70",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    },
+    "LiveAIMegafloatPillar": {
+      "constructor": "0x157bc22d0",
+      "vtable": "0x14c536bc8",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147e65410",
+        "0x9d0": "0x147e65380",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    },
+    "LiveAIMegafloatCorePillar": {
+      "constructor": "0x157b6de00",
+      "vtable": "0x14c51b858",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147c5b570",
+        "0x9d0": "0x147e60b70",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    },
+    "LiveAIMegafloatShutter": {
+      "constructor": "0x146d2c6e0",
+      "vtable": "0x14c535c38",
+      "slots": {
+        "0x918": "0x147d0c580",
+        "0x928": "0x147c84080",
+        "0x930": "0x1416e2490",
+        "0x938": "0x147d0c830",
+        "0x970": "0x147c5b8a0",
+        "0x9c0": "0x147c5b570",
+        "0x9d0": "0x147e60b70",
+        "0xa38": "0x147c5b410",
+        "0xa40": "0x147c82f70"
+      }
+    }
+  },
+  "enums": {
+    "ELiveMegafloatDeckBlockDamage": {
+      "0": "None",
+      "1": "Minor",
+      "2": "Moderate",
+      "3": "Critically"
+    },
+    "ELiveMegafloatConstructionDamage": {
+      "0": "None",
+      "1": "Minor",
+      "2": "Moderate",
+      "3": "Induced",
+      "4": "Destruct"
+    },
+    "ELiveMegafloatPillarPart": {
+      "0": "Top",
+      "1": "Middle_Upper",
+      "2": "Middle",
+      "3": "Middle_Lower",
+      "4": "BottomBase",
+      "5": "Max"
+    },
+    "ELiveMegafloatDeckDestructPattern": {
+      "0": "Block0",
+      "1": "Block1",
+      "2": "Block2",
+      "3": "Block3",
+      "4": "Block4",
+      "5": "Block5",
+      "6": "Invalid"
+    },
+    "ELiveMegafloatRunwaySection": {
+      "0": "LF",
+      "1": "RF",
+      "2": "LR",
+      "3": "RR",
+      "4": "Max"
+    },
+    "ELiveMegafloatDeckArea": {
+      "0": "None",
+      "1": "Upper",
+      "2": "Lower"
+    },
+    "ELiveMegafloatDeckDestructionNotify": {
+      "0": "Crack",
+      "1": "DestructStart",
+      "2": "DestructHalf",
+      "3": "DestructComplete",
+      "4": "Max"
+    }
+  },
+  "code": {
+    "construction_constructor": {
+      "address": "0x147e607e0",
+      "code_sha256": "093d0cf1babf06e7bf888fb8b421416b185b65f06644d2feb2eab4fdd1c4f5f6",
+      "full_instruction_count": 33,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e607e0 push rbx",
+        "0x147e607e2 sub rsp, 0x20",
+        "0x147e607e6 mov rbx, rcx",
+        "0x147e607e9 call 0x147c5ade0",
+        "0x147e607ee lea rax, [rip + 0x46bc033]",
+        "0x147e607f5 mov word ptr [rbx + 0x2ac0], 0",
+        "0x147e607fe mov qword ptr [rbx], rax",
+        "0x147e60801 lea rax, [rip + 0x46bbfc8]",
+        "0x147e60808 mov qword ptr [rbx + 0x290], rax",
+        "0x147e6080f lea rax, [rip + 0x46bcdb2]",
+        "0x147e60816 mov qword ptr [rbx + 0x318], rax",
+        "0x147e6081d lea rax, [rip + 0x46bcd74]",
+        "0x147e60824 mov qword ptr [rbx + 0x320], rax",
+        "0x147e6082b lea rax, [rip + 0x46bcf16]",
+        "0x147e60832 mov qword ptr [rbx + 0x328], rax",
+        "0x147e60839 lea rax, [rip + 0x46bced0]",
+        "0x147e60840 mov qword ptr [rbx + 0x330], rax",
+        "0x147e60847 lea rax, [rip + 0x46bcf4a]",
+        "0x147e6084e mov qword ptr [rbx + 0xf48], rax",
+        "0x147e60855 lea rax, [rip + 0x46bcf14]",
+        "0x147e6085c mov qword ptr [rbx + 0xf50], rax",
+        "0x147e60863 xor eax, eax",
+        "0x147e60865 mov qword ptr [rbx + 0x2ac8], rax",
+        "0x147e6086c mov qword ptr [rbx + 0x2ad0], rax",
+        "0x147e60873 mov qword ptr [rbx + 0x2ae0], rax",
+        "0x147e6087a mov byte ptr [rbx + 0x2aa4], al",
+        "0x147e60880 mov rax, rbx",
+        "0x147e60883 mov byte ptr [rbx + 0x2ac2], 0",
+        "0x147e6088a mov qword ptr [rbx + 0x2ad8], 2",
+        "0x147e60895 mov byte ptr [rbx + 0x3ac], 4",
+        "0x147e6089c add rsp, 0x20",
+        "0x147e608a0 pop rbx",
+        "0x147e608a1 ret "
+      ]
+    },
+    "construction_initial_invincibility": {
+      "address": "0x147e608d0",
+      "code_sha256": "f11a34932ee420d653f54615bfb6e26313a9110c4bebef3f8aeb64cbd5215713",
+      "full_instruction_count": 87,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e608d0 mov qword ptr [rsp + 0x10], rbx",
+        "0x147e608d5 mov qword ptr [rsp + 0x18], rsi",
+        "0x147e608da push rdi",
+        "0x147e608db sub rsp, 0x20",
+        "0x147e608df mov rbx, rcx",
+        "0x147e608e2 call 0x147c84db0",
+        "0x147e608e7 cmp byte ptr [rbx + 0x520], 0",
+        "0x147e608ee je 0x147e60902",
+        "0x147e608f0 cmp qword ptr [rbx + 0xfa0], 0",
+        "0x147e608f8 je 0x147e60902",
+        "0x147e608fa mov rcx, rbx",
+        "0x147e608fd call 0x147c571f0",
+        "0x147e60902 cmp byte ptr [rbx + 0x2ac0], 0",
+        "0x147e60909 je 0x147e60919",
+        "0x147e6090b mov rax, qword ptr [rbx]",
+        "0x147e6090e mov dl, 1",
+        "0x147e60910 mov rcx, rbx",
+        "0x147e60913 call qword ptr [rax + 0x970]",
+        "0x147e60919 cmp byte ptr [rbx + 0x2ac1], 0",
+        "0x147e60920 je 0x147e60930",
+        "0x147e60922 mov rax, qword ptr [rbx]",
+        "0x147e60925 xor edx, edx",
+        "0x147e60927 mov rcx, rbx",
+        "0x147e6092a call qword ptr [rax + 0xc98]",
+        "0x147e60930 call 0x1439418b0",
+        "0x147e60935 cmp byte ptr [rip + 0x65bb2ac], 0",
+        "0x147e6093c mov rdi, rax",
+        "0x147e6093f je 0x147e60950",
+        "0x147e60941 test rax, rax",
+        "0x147e60944 je 0x147e60988",
+        "0x147e60946 mov rcx, rax",
+        "0x147e60949 call 0x1419ca240",
+        "0x147e6094e jmp 0x147e60955",
+        "0x147e60950 test rdi, rdi",
+        "0x147e60953 je 0x147e60988",
+        "0x147e60955 call 0x1437475b0",
+        "0x147e6095a test rax, rax",
+        "0x147e6095d je 0x147e60988",
+        "0x147e6095f lea rdx, [rax + 0x30]",
+        "0x147e60963 movsxd rax, dword ptr [rax + 0x38]",
+        "0x147e60967 cmp eax, dword ptr [rdi + 0x38]",
+        "0x147e6096a jg 0x147e6097d",
+        "0x147e6096c mov rcx, rax",
+        "0x147e6096f mov rax, qword ptr [rdi + 0x30]",
+        "0x147e60973 cmp qword ptr [rax + rcx*8], rdx",
+        "0x147e60977 jne 0x147e6097d",
+        "0x147e60979 mov al, 1",
+        "0x147e6097b jmp 0x147e6097f",
+        "0x147e6097d xor eax, eax",
+        "0x147e6097f test al, al",
+        "0x147e60981 je 0x147e60988",
+        "0x147e60983 mov rsi, rdi",
+        "0x147e60986 jmp 0x147e6098a",
+        "0x147e60988 xor esi, esi",
+        "0x147e6098a call 0x1437475b0",
+        "0x147e6098f cmp rsi, rax",
+        "0x147e60992 jne 0x147e609c5",
+        "0x147e60994 cmp byte ptr [rip + 0x65bb24d], 0",
+        "0x147e6099b je 0x147e609aa",
+        "0x147e6099d test rdi, rdi",
+        "0x147e609a0 je 0x147e609aa",
+        "0x147e609a2 mov rcx, rdi",
+        "0x147e609a5 call 0x1419ca240",
+        "0x147e609aa xor r8d, r8d",
+        "0x147e609ad mov rcx, rbx",
+        "0x147e609b0 call 0x147e8ba90",
+        "0x147e609b5 mov rbx, qword ptr [rsp + 0x38]",
+        "0x147e609ba mov rsi, qword ptr [rsp + 0x40]",
+        "0x147e609bf add rsp, 0x20",
+        "0x147e609c3 pop rdi",
+        "0x147e609c4 ret ",
+        "0x147e609c5 cmp byte ptr [rip + 0x65bb21c], 0",
+        "0x147e609cc mov qword ptr [rsp + 0x30], rdi",
+        "0x147e609d1 je 0x147e609e0",
+        "0x147e609d3 test rdi, rdi",
+        "0x147e609d6 je 0x147e609e0",
+        "0x147e609d8 mov rcx, rdi",
+        "0x147e609db call 0x1419ca240",
+        "0x147e609e0 xor r8d, r8d",
+        "0x147e609e3 lea rdx, [rsp + 0x30]",
+        "0x147e609e8 mov rcx, rbx",
+        "0x147e609eb call 0x147e8bca0",
+        "0x147e609f0 mov rbx, qword ptr [rsp + 0x38]",
+        "0x147e609f5 mov rsi, qword ptr [rsp + 0x40]",
+        "0x147e609fa add rsp, 0x20",
+        "0x147e609fe pop rdi",
+        "0x147e609ff ret "
+      ]
+    },
+    "construction_damage_state": {
+      "address": "0x147e60a00",
+      "code_sha256": "d2fdc01b5b70a34335cd9d44d0459a140472f82cc8fe7c6172413d1f325af664",
+      "full_instruction_count": 92,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e60a00 push rsi",
+        "0x147e60a02 push r15",
+        "0x147e60a04 sub rsp, 0x48",
+        "0x147e60a08 movzx eax, byte ptr [rcx + 0x2ac2]",
+        "0x147e60a0f mov rsi, rcx",
+        "0x147e60a12 movzx r15d, dl",
+        "0x147e60a16 cmp al, r15b",
+        "0x147e60a19 jae 0x147e60b5c",
+        "0x147e60a1f mov qword ptr [rsp + 0x60], rbx",
+        "0x147e60a24 mov qword ptr [rsp + 0x70], rbp",
+        "0x147e60a29 mov byte ptr [rsp + 0x69], al",
+        "0x147e60a2d mov rax, qword ptr [rcx]",
+        "0x147e60a30 mov qword ptr [rsp + 0x40], rdi",
+        "0x147e60a35 mov byte ptr [rcx + 0x2ac2], r15b",
+        "0x147e60a3c mov rdx, qword ptr [rip + 0x64ab77d]",
+        "0x147e60a43 mov rbx, qword ptr [rax + 0x268]",
+        "0x147e60a4a mov qword ptr [rsp + 0x38], r12",
+        "0x147e60a4f mov qword ptr [rsp + 0x30], r14",
+        "0x147e60a54 mov byte ptr [rsp + 0x68], r15b",
+        "0x147e60a59 call 0x141a9b730",
+        "0x147e60a5e lea r8, [rsp + 0x68]",
+        "0x147e60a63 mov rdx, rax",
+        "0x147e60a66 mov rcx, rsi",
+        "0x147e60a69 call rbx",
+        "0x147e60a6b movzx r12d, byte ptr [rsi + 0x2ac2]",
+        "0x147e60a73 lea r14, [rsi + 0x2ac8]",
+        "0x147e60a7a inc dword ptr [r14 + 0x14]",
+        "0x147e60a7e xor bpl, bpl",
+        "0x147e60a81 mov eax, dword ptr [r14 + 8]",
+        "0x147e60a85 sub eax, 1",
+        "0x147e60a88 movsxd rdi, eax",
+        "0x147e60a8b js 0x147e60ac5",
+        "0x147e60a8d mov rbx, rdi",
+        "0x147e60a90 shl rbx, 4",
+        "0x147e60a94 mov rax, qword ptr [r14]",
+        "0x147e60a97 cmp dword ptr [rbx + rax + 8], 0",
+        "0x147e60a9c je 0x147e60ab8",
+        "0x147e60a9e mov rcx, qword ptr [rbx + rax]",
+        "0x147e60aa2 test rcx, rcx",
+        "0x147e60aa5 je 0x147e60ab8",
+        "0x147e60aa7 mov rax, qword ptr [rcx]",
+        "0x147e60aaa movzx r8d, r12b",
+        "0x147e60aae mov rdx, rsi",
+        "0x147e60ab1 call qword ptr [rax + 0x60]",
+        "0x147e60ab4 test al, al",
+        "0x147e60ab6 jne 0x147e60abb",
+        "0x147e60ab8 mov bpl, 1",
+        "0x147e60abb sub rbx, 0x10",
+        "0x147e60abf sub rdi, 1",
+        "0x147e60ac3 jns 0x147e60a94",
+        "0x147e60ac5 dec dword ptr [r14 + 0x14]",
+        "0x147e60ac9 mov r12, qword ptr [rsp + 0x38]",
+        "0x147e60ace test bpl, bpl",
+        "0x147e60ad1 mov rbp, qword ptr [rsp + 0x70]",
+        "0x147e60ad6 mov rdi, qword ptr [rsp + 0x40]",
+        "0x147e60adb je 0x147e60ae7",
+        "0x147e60add xor edx, edx",
+        "0x147e60adf mov rcx, r14",
+        "0x147e60ae2 call 0x1416e00d0",
+        "0x147e60ae7 mov rcx, rsi",
+        "0x147e60aea call 0x143fb5420",
+        "0x147e60aef mov rcx, rax",
+        "0x147e60af2 call 0x147847ed0",
+        "0x147e60af7 mov r14, qword ptr [rsp + 0x30]",
+        "0x147e60afc mov rbx, rax",
+        "0x147e60aff test rax, rax",
+        "0x147e60b02 je 0x147e60b57",
+        "0x147e60b04 mov rcx, rsi",
+        "0x147e60b07 call 0x147d133f0",
+        "0x147e60b0c test al, al",
+        "0x147e60b0e jne 0x147e60b57",
+        "0x147e60b10 lea rcx, [rbx + 8]",
+        "0x147e60b14 call 0x141ad95e0",
+        "0x147e60b19 mov rcx, rax",
+        "0x147e60b1c call 0x14783c830",
+        "0x147e60b21 test al, al",
+        "0x147e60b23 je 0x147e60b57",
+        "0x147e60b25 lea rcx, [rbx + 8]",
+        "0x147e60b29 mov dword ptr [rsp + 0x68], r15d",
+        "0x147e60b2e call 0x141ad95e0",
+        "0x147e60b33 lea r9, [rsp + 0x68]",
+        "0x147e60b38 mov dword ptr [rsp + 0x28], 4",
+        "0x147e60b40 mov r8b, 0x2f",
+        "0x147e60b43 mov qword ptr [rsp + 0x20], 4",
+        "0x147e60b4c mov rdx, rsi",
+        "0x147e60b4f mov rcx, rax",
+        "0x147e60b52 call 0x14783c8b0",
+        "0x147e60b57 mov rbx, qword ptr [rsp + 0x60]",
+        "0x147e60b5c add rsp, 0x48",
+        "0x147e60b60 pop r15",
+        "0x147e60b62 pop rsi",
+        "0x147e60b63 ret "
+      ]
+    },
+    "building_invincibility": {
+      "address": "0x147c5b8a0",
+      "code_sha256": "a11c09fdc4ba5f8534ca8dfce32d5c1332da14b3250e138670c8d961a9f66fba",
+      "full_instruction_count": 84,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147c5b8a0 mov qword ptr [rsp + 0x10], rbx",
+        "0x147c5b8a5 mov qword ptr [rsp + 0x18], rsi",
+        "0x147c5b8aa push rdi",
+        "0x147c5b8ab sub rsp, 0x30",
+        "0x147c5b8af mov r8d, dword ptr [rcx + 0x2aac]",
+        "0x147c5b8b6 movzx edi, dl",
+        "0x147c5b8b9 mov rbx, rcx",
+        "0x147c5b8bc test r8d, r8d",
+        "0x147c5b8bf je 0x147c5b96f",
+        "0x147c5b8c5 mov eax, dword ptr [rcx + 0x2aa8]",
+        "0x147c5b8cb test eax, eax",
+        "0x147c5b8cd js 0x147c5b96f",
+        "0x147c5b8d3 cmp eax, dword ptr [rip + 0x5fef41b]",
+        "0x147c5b8d9 jge 0x147c5b96f",
+        "0x147c5b8df mov ecx, eax",
+        "0x147c5b8e1 movzx eax, ax",
+        "0x147c5b8e4 shr rcx, 0x10",
+        "0x147c5b8e8 lea rdx, [rax + rax*2]",
+        "0x147c5b8ec mov rax, qword ptr [rip + 0x5fef3ed]",
+        "0x147c5b8f3 mov rcx, qword ptr [rax + rcx*8]",
+        "0x147c5b8f7 lea rax, [rcx + rdx*8]",
+        "0x147c5b8fb test rax, rax",
+        "0x147c5b8fe je 0x147c5b96f",
+        "0x147c5b900 cmp dword ptr [rax + 0x10], r8d",
+        "0x147c5b904 jne 0x147c5b96f",
+        "0x147c5b906 mov ecx, dword ptr [rip + 0x5fd7d14]",
+        "0x147c5b90c mov eax, dword ptr [rax + 8]",
+        "0x147c5b90f bts ecx, 0x15",
+        "0x147c5b913 test ecx, eax",
+        "0x147c5b915 jne 0x147c5b96f",
+        "0x147c5b917 lea rcx, [rbx + 0x2aa8]",
+        "0x147c5b91e call 0x141ad95e0",
+        "0x147c5b923 cmp byte ptr [rax + 0xdb8], 0",
+        "0x147c5b92a je 0x147c5b930",
+        "0x147c5b92c xor eax, eax",
+        "0x147c5b92e jmp 0x147c5b94c",
+        "0x147c5b930 movd xmm1, dword ptr [rax + 0xda8]",
+        "0x147c5b938 xorps xmm0, xmm0",
+        "0x147c5b93b cvtdq2ps xmm1, xmm1",
+        "0x147c5b93e mulss xmm1, dword ptr [rip + 0x56379d6]",
+        "0x147c5b946 comiss xmm1, xmm0",
+        "0x147c5b949 seta al",
+        "0x147c5b94c test al, al",
+        "0x147c5b94e je 0x147c5b96f",
+        "0x147c5b950 lea rcx, [rbx + 0x2aa8]",
+        "0x147c5b957 call 0x141ad95e0",
+        "0x147c5b95c movzx edx, dil",
+        "0x147c5b960 mov rcx, rax",
+        "0x147c5b963 mov r8, qword ptr [rax]",
+        "0x147c5b966 call qword ptr [r8 + 0x970]",
+        "0x147c5b96d jmp 0x147c5b976",
+        "0x147c5b96f mov byte ptr [rbx + 0x3f8], dil",
+        "0x147c5b976 mov rcx, rbx",
+        "0x147c5b979 call 0x143fb5420",
+        "0x147c5b97e mov rcx, rax",
+        "0x147c5b981 call 0x147847ed0",
+        "0x147c5b986 mov rsi, rax",
+        "0x147c5b989 test rax, rax",
+        "0x147c5b98c je 0x147c5b9e1",
+        "0x147c5b98e mov rcx, rbx",
+        "0x147c5b991 call 0x147d133f0",
+        "0x147c5b996 test al, al",
+        "0x147c5b998 jne 0x147c5b9e1",
+        "0x147c5b99a lea rcx, [rsi + 8]",
+        "0x147c5b99e call 0x141ad95e0",
+        "0x147c5b9a3 mov rcx, rax",
+        "0x147c5b9a6 call 0x14783c830",
+        "0x147c5b9ab test al, al",
+        "0x147c5b9ad je 0x147c5b9e1",
+        "0x147c5b9af lea rcx, [rsi + 8]",
+        "0x147c5b9b3 mov byte ptr [rsp + 0x40], dil",
+        "0x147c5b9b8 call 0x141ad95e0",
+        "0x147c5b9bd lea r9, [rsp + 0x40]",
+        "0x147c5b9c2 mov dword ptr [rsp + 0x28], 4",
+        "0x147c5b9ca mov r8b, 0x31",
+        "0x147c5b9cd mov qword ptr [rsp + 0x20], 1",
+        "0x147c5b9d6 mov rdx, rbx",
+        "0x147c5b9d9 mov rcx, rax",
+        "0x147c5b9dc call 0x14783c8b0",
+        "0x147c5b9e1 mov rbx, qword ptr [rsp + 0x48]",
+        "0x147c5b9e6 mov rsi, qword ptr [rsp + 0x50]",
+        "0x147c5b9eb add rsp, 0x30",
+        "0x147c5b9ef pop rdi",
+        "0x147c5b9f0 ret "
+      ]
+    },
+    "building_take_damage": {
+      "address": "0x147c5b410",
+      "code_sha256": "00a0366e45a6ae157e3a2cdf6e9307ba9b28f5c2c3c86878cab1e9bec60df2ff",
+      "full_instruction_count": 87,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147c5b410 mov qword ptr [rsp + 0x18], rbx",
+        "0x147c5b415 mov qword ptr [rsp + 0x20], rbp",
+        "0x147c5b41a push rdi",
+        "0x147c5b41b sub rsp, 0x60",
+        "0x147c5b41f movaps xmmword ptr [rsp + 0x50], xmm6",
+        "0x147c5b424 movaps xmm6, xmm1",
+        "0x147c5b427 mov rbx, r9",
+        "0x147c5b42a mov rbp, r8",
+        "0x147c5b42d mov rdi, rcx",
+        "0x147c5b430 test r9, r9",
+        "0x147c5b433 je 0x147c5b546",
+        "0x147c5b439 mov eax, dword ptr [r9 + 8]",
+        "0x147c5b43d shr eax, 0x1e",
+        "0x147c5b440 not al",
+        "0x147c5b442 test al, 1",
+        "0x147c5b444 je 0x147c5b546",
+        "0x147c5b44a mov rax, qword ptr [r9]",
+        "0x147c5b44d mov rcx, rbx",
+        "0x147c5b450 call qword ptr [rax + 0xaa0]",
+        "0x147c5b456 test al, al",
+        "0x147c5b458 je 0x147c5b546",
+        "0x147c5b45e lea rax, [rip + 0x4f09443]",
+        "0x147c5b465 mov qword ptr [rsp + 0x70], rsi",
+        "0x147c5b46a mov qword ptr [rsp + 0x78], r14",
+        "0x147c5b46f lea rcx, [rsp + 0x38]",
+        "0x147c5b474 xor r14d, r14d",
+        "0x147c5b477 mov qword ptr [rsp + 0x40], 1",
+        "0x147c5b480 xor edx, edx",
+        "0x147c5b482 mov qword ptr [rsp + 0x38], r14",
+        "0x147c5b487 mov qword ptr [rsp + 0x48], r14",
+        "0x147c5b48c mov qword ptr [rsp + 0x30], rax",
+        "0x147c5b491 call 0x1416daed0",
+        "0x147c5b496 cmp byte ptr [rip + 0x67c074b], r14b",
+        "0x147c5b49d mov rax, qword ptr [rsp + 0x38]",
+        "0x147c5b4a2 mov byte ptr [rax], 0xb3",
+        "0x147c5b4a5 je 0x147c5b4b4",
+        "0x147c5b4a7 test rdi, rdi",
+        "0x147c5b4aa je 0x147c5b4b4",
+        "0x147c5b4ac mov rcx, rdi",
+        "0x147c5b4af call 0x1419ca240",
+        "0x147c5b4b4 mov rcx, rdi",
+        "0x147c5b4b7 mov qword ptr [rsp + 0x48], rdi",
+        "0x147c5b4bc call 0x143fb5420",
+        "0x147c5b4c1 mov rcx, rax",
+        "0x147c5b4c4 call 0x1470bdef0",
+        "0x147c5b4c9 mov rcx, qword ptr [rsp + 0x30]",
+        "0x147c5b4ce mov rsi, rax",
+        "0x147c5b4d1 lea rax, [rip - 0x659fb78]",
+        "0x147c5b4d8 mov rdx, qword ptr [rcx + 0x48]",
+        "0x147c5b4dc cmp rdx, rax",
+        "0x147c5b4df jne 0x147c5b4e5",
+        "0x147c5b4e1 mov al, 1",
+        "0x147c5b4e3 jmp 0x147c5b4ec",
+        "0x147c5b4e5 lea rcx, [rsp + 0x30]",
+        "0x147c5b4ea call rdx",
+        "0x147c5b4ec test al, al",
+        "0x147c5b4ee lea rdx, [rsp + 0x30]",
+        "0x147c5b4f3 mov r8d, 2",
+        "0x147c5b4f9 mov rcx, rsi",
+        "0x147c5b4fc cmovne r8d, r14d",
+        "0x147c5b500 call 0x147c8c340",
+        "0x147c5b505 mov rsi, qword ptr [rsp + 0x38]",
+        "0x147c5b50a lea rax, [rip + 0x491c407]",
+        "0x147c5b511 mov r14, qword ptr [rsp + 0x78]",
+        "0x147c5b516 mov qword ptr [rsp + 0x30], rax",
+        "0x147c5b51b test rsi, rsi",
+        "0x147c5b51e je 0x147c5b541",
+        "0x147c5b520 mov rcx, qword ptr [rip + 0x67b4d59]",
+        "0x147c5b527 test rcx, rcx",
+        "0x147c5b52a jne 0x147c5b538",
+        "0x147c5b52c call 0x141725640",
+        "0x147c5b531 mov rcx, qword ptr [rip + 0x67b4d48]",
+        "0x147c5b538 mov rax, qword ptr [rcx]",
+        "0x147c5b53b mov rdx, rsi",
+        "0x147c5b53e call qword ptr [rax + 0x48]",
+        "0x147c5b541 mov rsi, qword ptr [rsp + 0x70]",
+        "0x147c5b546 mov r9, rbx",
+        "0x147c5b549 mov r8, rbp",
+        "0x147c5b54c movaps xmm1, xmm6",
+        "0x147c5b54f mov rcx, rdi",
+        "0x147c5b552 movaps xmm6, xmmword ptr [rsp + 0x50]",
+        "0x147c5b557 lea r11, [rsp + 0x60]",
+        "0x147c5b55c mov rbx, qword ptr [r11 + 0x20]",
+        "0x147c5b560 mov rbp, qword ptr [r11 + 0x28]",
+        "0x147c5b564 mov rsp, r11",
+        "0x147c5b567 pop rdi",
+        "0x147c5b568 jmp 0x147c82df0"
+      ]
+    },
+    "npc_take_damage": {
+      "address": "0x147c82df0",
+      "code_sha256": "f8fbb0ef1a62e214017eff73a55fb8f79a6d04b55712c33743404d765705e033",
+      "full_instruction_count": 104,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147c82df0 mov qword ptr [rsp + 0x10], rbx",
+        "0x147c82df5 mov qword ptr [rsp + 0x18], rsi",
+        "0x147c82dfa push rdi",
+        "0x147c82dfb push r14",
+        "0x147c82dfd push r15",
+        "0x147c82dff sub rsp, 0x50",
+        "0x147c82e03 mov r15, qword ptr [rsp + 0x90]",
+        "0x147c82e0b mov rsi, r9",
+        "0x147c82e0e movaps xmmword ptr [rsp + 0x40], xmm6",
+        "0x147c82e13 mov r14, r8",
+        "0x147c82e16 movaps xmmword ptr [rsp + 0x30], xmm7",
+        "0x147c82e1b mov rdi, rcx",
+        "0x147c82e1e movaps xmm7, xmm1",
+        "0x147c82e21 mov qword ptr [rsp + 0x20], r15",
+        "0x147c82e26 call 0x147d0fde0",
+        "0x147c82e2b mov rax, qword ptr [rdi]",
+        "0x147c82e2e mov rcx, rdi",
+        "0x147c82e31 movaps xmm6, xmm0",
+        "0x147c82e34 call qword ptr [rax + 0xb30]",
+        "0x147c82e3a cmp al, 1",
+        "0x147c82e3c je 0x147c82e52",
+        "0x147c82e3e mov rax, qword ptr [rdi]",
+        "0x147c82e41 mov rcx, rdi",
+        "0x147c82e44 call qword ptr [rax + 0xb30]",
+        "0x147c82e4a cmp al, 2",
+        "0x147c82e4c jne 0x147c82ee2",
+        "0x147c82e52 test rsi, rsi",
+        "0x147c82e55 je 0x147c82ee2",
+        "0x147c82e5b call 0x147076d60",
+        "0x147c82e60 mov rdx, qword ptr [rsi + 0x10]",
+        "0x147c82e64 lea r8, [rax + 0x30]",
+        "0x147c82e68 movsxd rax, dword ptr [rax + 0x38]",
+        "0x147c82e6c cmp eax, dword ptr [rdx + 0x38]",
+        "0x147c82e6f jg 0x147c82ee2",
+        "0x147c82e71 mov rcx, rax",
+        "0x147c82e74 mov rax, qword ptr [rdx + 0x30]",
+        "0x147c82e78 cmp qword ptr [rax + rcx*8], r8",
+        "0x147c82e7c jne 0x147c82ee2",
+        "0x147c82e7e mov rbx, qword ptr [rsi + 0xf78]",
+        "0x147c82e85 mov rcx, qword ptr [rsi + 0xf70]",
+        "0x147c82e8c test rbx, rbx",
+        "0x147c82e8f je 0x147c82e95",
+        "0x147c82e91 lock inc dword ptr [rbx + 8]",
+        "0x147c82e95 test rcx, rcx",
+        "0x147c82e98 je 0x147c82ea5",
+        "0x147c82e9a mov r8b, 1",
+        "0x147c82e9d mov rdx, rdi",
+        "0x147c82ea0 call 0x147db8aa0",
+        "0x147c82ea5 test rbx, rbx",
+        "0x147c82ea8 je 0x147c82ee2",
+        "0x147c82eaa mov qword ptr [rsp + 0x70], rbp",
+        "0x147c82eaf mov ebp, 0xffffffff",
+        "0x147c82eb4 mov eax, ebp",
+        "0x147c82eb6 lock xadd dword ptr [rbx + 8], eax",
+        "0x147c82ebb cmp eax, 1",
+        "0x147c82ebe jne 0x147c82edd",
+        "0x147c82ec0 mov rax, qword ptr [rbx]",
+        "0x147c82ec3 mov rcx, rbx",
+        "0x147c82ec6 call qword ptr [rax]",
+        "0x147c82ec8 lock xadd dword ptr [rbx + 0xc], ebp",
+        "0x147c82ecd cmp ebp, 1",
+        "0x147c82ed0 jne 0x147c82edd",
+        "0x147c82ed2 mov rax, qword ptr [rbx]",
+        "0x147c82ed5 mov edx, ebp",
+        "0x147c82ed7 mov rcx, rbx",
+        "0x147c82eda call qword ptr [rax + 8]",
+        "0x147c82edd mov rbp, qword ptr [rsp + 0x70]",
+        "0x147c82ee2 cmp byte ptr [rdi + 0x1178], 0",
+        "0x147c82ee9 je 0x147c82f48",
+        "0x147c82eeb mov rax, qword ptr [rdi + 0x1a0]",
+        "0x147c82ef2 mov rbx, qword ptr [rax + 0xb0]",
+        "0x147c82ef9 test rbx, rbx",
+        "0x147c82efc je 0x147c82f48",
+        "0x147c82efe call 0x146d93eb0",
+        "0x147c82f03 mov rcx, qword ptr [rbx + 0x10]",
+        "0x147c82f07 lea r8, [rax + 0x30]",
+        "0x147c82f0b movsxd rax, dword ptr [rax + 0x38]",
+        "0x147c82f0f cmp eax, dword ptr [rcx + 0x38]",
+        "0x147c82f12 jg 0x147c82f48",
+        "0x147c82f14 mov rdx, rax",
+        "0x147c82f17 mov rax, qword ptr [rcx + 0x30]",
+        "0x147c82f1b cmp qword ptr [rax + rdx*8], r8",
+        "0x147c82f1f jne 0x147c82f48",
+        "0x147c82f21 mov rcx, rbx",
+        "0x147c82f24 call 0x1472bf390",
+        "0x147c82f29 test rax, rax",
+        "0x147c82f2c je 0x147c82f48",
+        "0x147c82f2e mov rdx, qword ptr [rax]",
+        "0x147c82f31 mov r9, rsi",
+        "0x147c82f34 mov r8, r14",
+        "0x147c82f37 mov qword ptr [rsp + 0x20], r15",
+        "0x147c82f3c movaps xmm1, xmm7",
+        "0x147c82f3f mov rcx, rax",
+        "0x147c82f42 call qword ptr [rdx + 0xa38]",
+        "0x147c82f48 mov rbx, qword ptr [rsp + 0x78]",
+        "0x147c82f4d movaps xmm0, xmm6",
+        "0x147c82f50 movaps xmm6, xmmword ptr [rsp + 0x40]",
+        "0x147c82f55 mov rsi, qword ptr [rsp + 0x80]",
+        "0x147c82f5d movaps xmm7, xmmword ptr [rsp + 0x30]",
+        "0x147c82f62 add rsp, 0x50",
+        "0x147c82f66 pop r15",
+        "0x147c82f68 pop r14",
+        "0x147c82f6a pop rdi",
+        "0x147c82f6b ret "
+      ]
+    },
+    "common_take_damage": {
+      "address": "0x147d0fde0",
+      "code_sha256": "e4a541d473f32c0af0d283d817340b7a98bc096cb52fd1c17c0afb8d6b3520b9",
+      "full_instruction_count": 420,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147d0fde0 mov rax, rsp",
+        "0x147d0fde3 mov qword ptr [rax + 0x18], r8",
+        "0x147d0fde7 mov qword ptr [rax + 8], rcx",
+        "0x147d0fdeb push rbp",
+        "0x147d0fdec push rbx",
+        "0x147d0fded push rsi",
+        "0x147d0fdee push rdi",
+        "0x147d0fdef push r12",
+        "0x147d0fdf1 push r14",
+        "0x147d0fdf3 lea rbp, [rax - 0xd8]",
+        "0x147d0fdfa sub rsp, 0x1a8",
+        "0x147d0fe01 movaps xmmword ptr [rax - 0x48], xmm6",
+        "0x147d0fe05 mov rsi, r9",
+        "0x147d0fe08 movaps xmmword ptr [rax - 0x68], xmm8",
+        "0x147d0fe0d movaps xmm6, xmm1",
+        "0x147d0fe10 mov r14, r8",
+        "0x147d0fe13 mov rdi, rcx",
+        "0x147d0fe16 call 0x143fb5420",
+        "0x147d0fe1b xor r12d, r12d",
+        "0x147d0fe1e mov rbx, qword ptr [rax + 0x1d8]",
+        "0x147d0fe25 test rbx, rbx",
+        "0x147d0fe28 je 0x147d0fe4d",
+        "0x147d0fe2a call 0x146e2f590",
+        "0x147d0fe2f mov rdx, qword ptr [rbx + 0x10]",
+        "0x147d0fe33 lea r8, [rax + 0x30]",
+        "0x147d0fe37 movsxd rax, dword ptr [rax + 0x38]",
+        "0x147d0fe3b cmp eax, dword ptr [rdx + 0x38]",
+        "0x147d0fe3e jg 0x147d0fe4d",
+        "0x147d0fe40 mov rcx, rax",
+        "0x147d0fe43 mov rax, qword ptr [rdx + 0x30]",
+        "0x147d0fe47 cmp qword ptr [rax + rcx*8], r8",
+        "0x147d0fe4b je 0x147d0fe50",
+        "0x147d0fe4d mov rbx, r12",
+        "0x147d0fe50 xorps xmm8, xmm8",
+        "0x147d0fe54 mov rax, qword ptr [rbx + 0x928]",
+        "0x147d0fe5b mov qword ptr [rsp + 0x1e8], r13",
+        "0x147d0fe63 mov qword ptr [rbp - 0x68], rax"
+      ]
+    },
+    "minimum_health": {
+      "address": "0x147c84080",
+      "code_sha256": "371649fe8ddab9ac730e603516bb679e306369d90c2255ea303eeb3b31d33625",
+      "full_instruction_count": 23,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147c84080 push rbx",
+        "0x147c84082 sub rsp, 0x20",
+        "0x147c84086 cmp byte ptr [rip + 0x688c4fb], 0",
+        "0x147c8408d mov rbx, rcx",
+        "0x147c84090 je 0x147c840c5",
+        "0x147c84092 call 0x143fb5420",
+        "0x147c84097 mov rcx, rax",
+        "0x147c8409a call 0x147208fc0",
+        "0x147c8409f mov rdx, qword ptr [rax + 0x1e0]",
+        "0x147c840a6 test rdx, rdx",
+        "0x147c840a9 je 0x147c840c5",
+        "0x147c840ab mov rcx, rbx",
+        "0x147c840ae call 0x147d0ba00",
+        "0x147c840b3 test al, al",
+        "0x147c840b5 jne 0x147c840c5",
+        "0x147c840b7 movss xmm0, dword ptr [rip + 0x560fa89]",
+        "0x147c840bf add rsp, 0x20",
+        "0x147c840c3 pop rbx",
+        "0x147c840c4 ret ",
+        "0x147c840c5 movss xmm0, dword ptr [rbx + 0x3b8]",
+        "0x147c840cd add rsp, 0x20",
+        "0x147c840d1 pop rbx",
+        "0x147c840d2 ret "
+      ]
+    },
+    "pillar_reset": {
+      "address": "0x147e65380",
+      "code_sha256": "4b4d558d2138c3d4422d421cbcad7aa416f8ae9ca8c79f9d0c6090a232ab49e0",
+      "full_instruction_count": 28,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e65380 push rbx",
+        "0x147e65382 sub rsp, 0x30",
+        "0x147e65386 mov rbx, rcx",
+        "0x147e65389 call 0x147c7e1a0",
+        "0x147e6538e mov rcx, qword ptr [rbx + 0x1a0]",
+        "0x147e65395 lea rdx, [rbx + 0x26b0]",
+        "0x147e6539c xor r9d, r9d",
+        "0x147e6539f mov byte ptr [rsp + 0x20], 0",
+        "0x147e653a4 xor r8d, r8d",
+        "0x147e653a7 call 0x1442ba400",
+        "0x147e653ac mov rcx, rbx",
+        "0x147e653af call 0x147c56300",
+        "0x147e653b4 cvttss2si eax, dword ptr [rbx + 0x3b4]",
+        "0x147e653bc mov edx, 1",
+        "0x147e653c1 mov byte ptr [rbx + 0x2ac2], 0",
+        "0x147e653c8 mov byte ptr [rbx + 0x2d00], 2",
+        "0x147e653cf mov byte ptr [rbx + 0x2d08], 0",
+        "0x147e653d6 movd xmm1, dword ptr [rbx + 0xe68]",
+        "0x147e653de cmp eax, edx",
+        "0x147e653e0 cvtdq2ps xmm1, xmm1",
+        "0x147e653e3 cmovl edx, eax",
+        "0x147e653e6 movd xmm0, edx",
+        "0x147e653ea cvtdq2ps xmm0, xmm0",
+        "0x147e653ed movss dword ptr [rbx + 0x2d04], xmm1",
+        "0x147e653f5 movss dword ptr [rbx + 0x3b8], xmm0",
+        "0x147e653fd add rsp, 0x30",
+        "0x147e65401 pop rbx",
+        "0x147e65402 ret "
+      ]
+    },
+    "pillar_death": {
+      "address": "0x147e65410",
+      "code_sha256": "5756fabf5e55d7a0df88bc8cc25e5d458b8d46e910030f39df5ad16f86d08ebf",
+      "full_instruction_count": 15,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e65410 push rbx",
+        "0x147e65412 sub rsp, 0x20",
+        "0x147e65416 mov rbx, rcx",
+        "0x147e65419 call 0x147c80cc0",
+        "0x147e6541e mov rax, qword ptr [rbx]",
+        "0x147e65421 mov dl, 1",
+        "0x147e65423 mov rcx, rbx",
+        "0x147e65426 call qword ptr [rax + 0x480]",
+        "0x147e6542c mov rcx, rbx",
+        "0x147e6542f call 0x147c5bc70",
+        "0x147e65434 mov dl, 4",
+        "0x147e65436 mov rcx, rbx",
+        "0x147e65439 add rsp, 0x20",
+        "0x147e6543d pop rbx",
+        "0x147e6543e jmp 0x147e60a00"
+      ]
+    },
+    "pillar_marker": {
+      "address": "0x147e65610",
+      "code_sha256": "09d70bbb2576a62306bf43de498591cbb17d10b74cb3ca1f333384ec463d48ea",
+      "full_instruction_count": 72,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e65610 mov qword ptr [rsp + 8], rbx",
+        "0x147e65615 push rdi",
+        "0x147e65616 sub rsp, 0x20",
+        "0x147e6561a cmp byte ptr [rcx + 0x2ac2], 1",
+        "0x147e65621 movzx edi, dl",
+        "0x147e65624 mov rbx, rcx",
+        "0x147e65627 jne 0x147e65631",
+        "0x147e65629 test dl, dl",
+        "0x147e6562b jne 0x147e6571d",
+        "0x147e65631 mov r8d, dword ptr [rcx + 0x2aac]",
+        "0x147e65638 test r8d, r8d",
+        "0x147e6563b je 0x147e656f3",
+        "0x147e65641 mov eax, dword ptr [rcx + 0x2aa8]",
+        "0x147e65647 test eax, eax",
+        "0x147e65649 js 0x147e656f3",
+        "0x147e6564f cmp eax, dword ptr [rip + 0x5de569f]",
+        "0x147e65655 jge 0x147e656f3",
+        "0x147e6565b mov ecx, eax",
+        "0x147e6565d movzx eax, ax",
+        "0x147e65660 shr rcx, 0x10",
+        "0x147e65664 lea rdx, [rax + rax*2]",
+        "0x147e65668 mov rax, qword ptr [rip + 0x5de5671]",
+        "0x147e6566f mov rcx, qword ptr [rax + rcx*8]",
+        "0x147e65673 lea rax, [rcx + rdx*8]",
+        "0x147e65677 test rax, rax",
+        "0x147e6567a je 0x147e656f3",
+        "0x147e6567c cmp dword ptr [rax + 0x10], r8d",
+        "0x147e65680 jne 0x147e656f3",
+        "0x147e65682 mov ecx, dword ptr [rip + 0x5dcdf98]",
+        "0x147e65688 mov eax, dword ptr [rax + 8]",
+        "0x147e6568b bts ecx, 0x15",
+        "0x147e6568f test ecx, eax",
+        "0x147e65691 jne 0x147e656f3",
+        "0x147e65693 lea rcx, [rbx + 0x2aa8]",
+        "0x147e6569a call 0x141ad95e0",
+        "0x147e6569f cmp byte ptr [rax + 0xdb8], 0",
+        "0x147e656a6 je 0x147e656ac",
+        "0x147e656a8 xor eax, eax",
+        "0x147e656aa jmp 0x147e656c8",
+        "0x147e656ac movd xmm1, dword ptr [rax + 0xda8]",
+        "0x147e656b4 xorps xmm0, xmm0",
+        "0x147e656b7 cvtdq2ps xmm1, xmm1",
+        "0x147e656ba mulss xmm1, dword ptr [rip + 0x542dc5a]",
+        "0x147e656c2 comiss xmm1, xmm0",
+        "0x147e656c5 seta al",
+        "0x147e656c8 test al, al",
+        "0x147e656ca je 0x147e656f3",
+        "0x147e656cc lea rcx, [rbx + 0x2aa8]",
+        "0x147e656d3 call 0x141ad95e0",
+        "0x147e656d8 movzx edx, dil",
+        "0x147e656dc mov rcx, rax",
+        "0x147e656df mov r8, qword ptr [rax]",
+        "0x147e656e2 mov rbx, qword ptr [rsp + 0x30]",
+        "0x147e656e7 add rsp, 0x20",
+        "0x147e656eb pop rdi",
+        "0x147e656ec jmp qword ptr [r8 + 0xc98]",
+        "0x147e656f3 mov rax, qword ptr [rbx]",
+        "0x147e656f6 mov rcx, rbx",
+        "0x147e656f9 mov byte ptr [rbx + 0x10d2], dil",
+        "0x147e65700 call qword ptr [rax + 0x488]",
+        "0x147e65706 test al, al",
+        "0x147e65708 jne 0x147e6571d",
+        "0x147e6570a test dil, dil",
+        "0x147e6570d je 0x147e6571d",
+        "0x147e6570f mov rax, qword ptr [rbx]",
+        "0x147e65712 mov dl, 1",
+        "0x147e65714 mov rcx, rbx",
+        "0x147e65717 call qword ptr [rax + 0x480]",
+        "0x147e6571d mov rbx, qword ptr [rsp + 0x30]",
+        "0x147e65722 add rsp, 0x20",
+        "0x147e65726 pop rdi",
+        "0x147e65727 ret "
+      ]
+    },
+    "pillar_sleep_enter": {
+      "address": "0x147e66bf0",
+      "code_sha256": "bddac247dc05fe887c0a2efd8f7a556011dcb1d2eff64d016c62303a5c26d0fd",
+      "full_instruction_count": 41,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e66bf0 push rbx",
+        "0x147e66bf2 sub rsp, 0x20",
+        "0x147e66bf6 mov rbx, rcx",
+        "0x147e66bf9 call 0x147e36c90",
+        "0x147e66bfe mov rcx, qword ptr [rbx + 0x90]",
+        "0x147e66c05 add rcx, 8",
+        "0x147e66c09 call 0x141ad95e0",
+        "0x147e66c0e test rax, rax",
+        "0x147e66c11 je 0x147e66c3d",
+        "0x147e66c13 mov rcx, qword ptr [rax + 0xfa8]",
+        "0x147e66c1a test rcx, rcx",
+        "0x147e66c1d je 0x147e66c3d",
+        "0x147e66c1f add rcx, 0x1bd0",
+        "0x147e66c26 mov qword ptr [rsp + 0x30], rbx",
+        "0x147e66c2b lea r9, [rsp + 0x30]",
+        "0x147e66c30 mov r8, rbx",
+        "0x147e66c33 lea rdx, [rsp + 0x40]",
+        "0x147e66c38 call 0x147e4c670",
+        "0x147e66c3d mov rcx, qword ptr [rbx + 0x90]",
+        "0x147e66c44 add rcx, 8",
+        "0x147e66c48 call 0x141ad95e0",
+        "0x147e66c4d mov rbx, rax",
+        "0x147e66c50 test rax, rax",
+        "0x147e66c53 je 0x147e66c84",
+        "0x147e66c55 call 0x146d28b90",
+        "0x147e66c5a mov rcx, qword ptr [rbx + 0x10]",
+        "0x147e66c5e add rax, 0x30",
+        "0x147e66c62 movsxd rdx, dword ptr [rax + 8]",
+        "0x147e66c66 cmp edx, dword ptr [rcx + 0x38]",
+        "0x147e66c69 jg 0x147e66c84",
+        "0x147e66c6b mov rcx, qword ptr [rcx + 0x30]",
+        "0x147e66c6f cmp qword ptr [rcx + rdx*8], rax",
+        "0x147e66c73 jne 0x147e66c84",
+        "0x147e66c75 mov dl, 1",
+        "0x147e66c77 mov rcx, rbx",
+        "0x147e66c7a add rsp, 0x20",
+        "0x147e66c7e pop rbx",
+        "0x147e66c7f jmp 0x147e60a00",
+        "0x147e66c84 add rsp, 0x20",
+        "0x147e66c88 pop rbx",
+        "0x147e66c89 ret "
+      ]
+    },
+    "deck_condition_dispatch": {
+      "address": "0x147e62d60",
+      "code_sha256": "86dfa4ca01bfcc5e34e6b8d93e5686cdc77d7bbb714af8d4c5199dd774a03834",
+      "full_instruction_count": 63,
+      "excerpt_is_complete": true,
+      "instructions": [
+        "0x147e62d60 push rbp",
+        "0x147e62d62 push rdi",
+        "0x147e62d63 sub rsp, 0x28",
+        "0x147e62d67 cmp byte ptr [rcx + 0xdb8], 0",
+        "0x147e62d6e mov rbp, rdx",
+        "0x147e62d71 mov rdi, rcx",
+        "0x147e62d74 je 0x147e62d7a",
+        "0x147e62d76 xor eax, eax",
+        "0x147e62d78 jmp 0x147e62d96",
+        "0x147e62d7a movd xmm1, dword ptr [rcx + 0xda8]",
+        "0x147e62d82 xorps xmm0, xmm0",
+        "0x147e62d85 cvtdq2ps xmm1, xmm1",
+        "0x147e62d88 mulss xmm1, dword ptr [rip + 0x543058c]",
+        "0x147e62d90 comiss xmm1, xmm0",
+        "0x147e62d93 seta al",
+        "0x147e62d96 test al, al",
+        "0x147e62d98 je 0x147e62e65",
+        "0x147e62d9e cmp byte ptr [rcx + 0x2d60], 0",
+        "0x147e62da5 jne 0x147e62e65",
+        "0x147e62dab movsxd rax, dword ptr [rcx + 0x2af0]",
+        "0x147e62db2 mov qword ptr [rsp + 0x48], rbx",
+        "0x147e62db7 mov rbx, qword ptr [rcx + 0x2ae8]",
+        "0x147e62dbe mov qword ptr [rsp + 0x50], rsi",
+        "0x147e62dc3 lea rsi, [rbx + rax*8]",
+        "0x147e62dc7 cmp rbx, rsi",
+        "0x147e62dca je 0x147e62e5b",
+        "0x147e62dd0 mov qword ptr [rsp + 0x20], r14",
+        "0x147e62dd5 nop word ptr [rax + rax]",
+        "0x147e62de0 mov rcx, qword ptr [rbx]",
+        "0x147e62de3 lea rdx, [rdi + 0x2cf0]",
+        "0x147e62dea mov rax, qword ptr [rcx]",
+        "0x147e62ded call qword ptr [rax + 0x2b8]",
+        "0x147e62df3 test al, al",
+        "0x147e62df5 jne 0x147e62e02",
+        "0x147e62df7 add rbx, 8",
+        "0x147e62dfb cmp rbx, rsi",
+        "0x147e62dfe jne 0x147e62de0",
+        "0x147e62e00 jmp 0x147e62e56",
+        "0x147e62e02 mov rcx, rbp",
+        "0x147e62e05 call 0x147e5e660",
+        "0x147e62e0a cmp rax, rbp",
+        "0x147e62e0d je 0x147e62e2b",
+        "0x147e62e0f mov rcx, qword ptr [rbp + 0x2c0]",
+        "0x147e62e16 mov qword ptr [rax + 0x2c0], rcx",
+        "0x147e62e1d mov rcx, qword ptr [rbp + 0x2f8]",
+        "0x147e62e24 mov qword ptr [rax + 0x2f8], rcx",
+        "0x147e62e2b mov rdx, qword ptr [rip + 0x64a945e]",
+        "0x147e62e32 mov rcx, rdi",
+        "0x147e62e35 mov qword ptr [rsp + 0x40], rax",
+        "0x147e62e3a mov rax, qword ptr [rdi]",
+        "0x147e62e3d mov rbx, qword ptr [rax + 0x268]",
+        "0x147e62e44 call 0x141a9b730",
+        "0x147e62e49 lea r8, [rsp + 0x40]",
+        "0x147e62e4e mov rdx, rax",
+        "0x147e62e51 mov rcx, rdi",
+        "0x147e62e54 call rbx",
+        "0x147e62e56 mov r14, qword ptr [rsp + 0x20]",
+        "0x147e62e5b mov rbx, qword ptr [rsp + 0x48]",
+        "0x147e62e60 mov rsi, qword ptr [rsp + 0x50]",
+        "0x147e62e65 add rsp, 0x28",
+        "0x147e62e69 pop rdi",
+        "0x147e62e6a pop rbp",
+        "0x147e62e6b ret "
+      ]
+    },
+    "deck_condition_num": {
+      "address": "0x147e64670",
+      "code_sha256": "8a1cac80f57bdbfa2b6c50e0e8cf0d4836012eeace3fa6d3c2f057fbd29c1cca",
+      "full_instruction_count": 158,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147e64670 mov qword ptr [rsp + 0x10], rbx",
+        "0x147e64675 mov qword ptr [rsp + 0x18], rsi",
+        "0x147e6467a mov qword ptr [rsp + 0x20], rdi",
+        "0x147e6467f mov qword ptr [rsp + 8], rcx",
+        "0x147e64684 push rbp",
+        "0x147e64685 push r12",
+        "0x147e64687 push r13",
+        "0x147e64689 push r14",
+        "0x147e6468b push r15",
+        "0x147e6468d lea rbp, [rsp - 0x37]",
+        "0x147e64692 sub rsp, 0x90",
+        "0x147e64699 mov r11d, dword ptr [rdx + 0x28]",
+        "0x147e6469d lea r13, [rdx + 0x10]",
+        "0x147e646a1 xor esi, esi",
+        "0x147e646a3 mov dword ptr [rbp - 0x35], 1",
+        "0x147e646aa mov dword ptr [rbp - 0x39], esi",
+        "0x147e646ad mov r12, rdx",
+        "0x147e646b0 mov qword ptr [rbp - 0x31], r13",
+        "0x147e646b4 mov rbx, rcx",
+        "0x147e646b7 mov dword ptr [rbp - 0x29], 0xffffffff",
+        "0x147e646be mov r8d, esi",
+        "0x147e646c1 mov qword ptr [rbp - 0x25], rsi",
+        "0x147e646c5 mov r9d, esi",
+        "0x147e646c8 test r11d, r11d",
+        "0x147e646cb je 0x147e6473c",
+        "0x147e646cd mov r10, qword ptr [r13 + 0x10]",
+        "0x147e646d1 lea eax, [r11 - 1]",
+        "0x147e646d5 test r10, r10",
+        "0x147e646d8 cdq ",
+        "0x147e646d9 cmove r10, r13",
+        "0x147e646dd and edx, 0x1f",
+        "0x147e646e0 add edx, eax",
+        "0x147e646e2 sar edx, 5",
+        "0x147e646e5 mov ecx, dword ptr [r10]",
+        "0x147e646e8 test ecx, ecx",
+        "0x147e646ea jne 0x147e64716",
+        "0x147e646ec nop dword ptr [rax]",
+        "0x147e646f0 inc r8d",
+        "0x147e646f3 add r9d, 0x20",
+        "0x147e646f7 mov dword ptr [rbp - 0x39], r8d",
+        "0x147e646fb mov dword ptr [rbp - 0x21], r9d",
+        "0x147e646ff cmp r8d, edx",
+        "0x147e64702 jg 0x147e64738",
+        "0x147e64704 movsxd rax, r8d",
+        "0x147e64707 mov dword ptr [rbp - 0x29], 0xffffffff",
+        "0x147e6470e mov ecx, dword ptr [r10 + rax*4]",
+        "0x147e64712 test ecx, ecx",
+        "0x147e64714 je 0x147e646f0",
+        "0x147e64716 mov eax, ecx",
+        "0x147e64718 neg eax",
+        "0x147e6471a and eax, ecx",
+        "0x147e6471c mov dword ptr [rbp - 0x35], eax",
+        "0x147e6471f lea rax, [rax*2 + 1]",
+        "0x147e64727 bsr rax, rax",
+        "0x147e6472b dec eax",
+        "0x147e6472d add eax, r9d",
+        "0x147e64730 mov dword ptr [rbp - 0x25], eax",
+        "0x147e64733 cmp eax, r11d",
+        "0x147e64736 jle 0x147e6473c",
+        "0x147e64738 mov dword ptr [rbp - 0x25], r11d",
+        "0x147e6473c mov eax, dword ptr [r12 + 0x28]",
+        "0x147e64741 mov edi, 0xffffffff",
+        "0x147e64746 movups xmm2, xmmword ptr [rbp - 0x29]",
+        "0x147e6474a mov ecx, eax",
+        "0x147e6474c mov qword ptr [rbp + 0xf], r12",
+        "0x147e64750 movups xmm0, xmmword ptr [rbp - 0x39]",
+        "0x147e64754 and ecx, 0x1f",
+        "0x147e64757 mov r8d, eax",
+        "0x147e6475a movups xmmword ptr [rbp + 0x27], xmm2",
+        "0x147e6475e shl edi, cl",
+        "0x147e64760 mov r9d, eax",
+        "0x147e64763 movups xmmword ptr [rbp + 0x17], xmm0",
+        "0x147e64767 sar r8d, 5",
+        "0x147e6476b and r9d, 0xffffffe0",
+        "0x147e6476f unpckhpd xmm2, xmm2",
+        "0x147e64773 movsd qword ptr [rbp + 7], xmm2",
+        "0x147e64778 mov dword ptr [rbp - 0x29], edi",
+        "0x147e6477b mov dword ptr [rbp - 0x25], eax",
+        "0x147e6477e movups xmm0, xmmword ptr [rbp + 0xf]",
+        "0x147e64782 movups xmm1, xmmword ptr [rbp + 0x1f]",
+        "0x147e64786 movups xmmword ptr [rbp - 0x19], xmm0",
+        "0x147e6478a movups xmmword ptr [rbp - 9], xmm1",
+        "0x147e6478e cmp eax, r11d",
+        "0x147e64791 je 0x147e64808",
+        "0x147e64793 mov r10, qword ptr [r13 + 0x10]",
+        "0x147e64797 lea eax, [r11 - 1]",
+        "0x147e6479b test r10, r10",
+        "0x147e6479e movsxd rcx, r8d",
+        "0x147e647a1 cdq ",
+        "0x147e647a2 cmove r10, r13",
+        "0x147e647a6 and edx, 0x1f",
+        "0x147e647a9 lea ebx, [rdx + rax]",
+        "0x147e647ac mov edx, dword ptr [r10 + rcx*4]",
+        "0x147e647b0 sar ebx, 5",
+        "0x147e647b3 and edx, edi",
+        "0x147e647b5 jne 0x147e647de",
+        "0x147e647b7 nop word ptr [rax + rax]",
+        "0x147e647c0 inc r8d",
+        "0x147e647c3 add r9d, 0x20",
+        "0x147e647c7 cmp r8d, ebx",
+        "0x147e647ca jg 0x147e64800",
+        "0x147e647cc movsxd rax, r8d",
+        "0x147e647cf mov dword ptr [rbp - 0x29], 0xffffffff",
+        "0x147e647d6 mov edx, dword ptr [r10 + rax*4]",
+        "0x147e647da test edx, edx",
+        "0x147e647dc je 0x147e647c0",
+        "0x147e647de mov ecx, edx",
+        "0x147e647e0 mov eax, edx",
+        "0x147e647e2 neg ecx",
+        "0x147e647e4 and rcx, rax",
+        "0x147e647e7 lea rax, [rcx*2 + 1]",
+        "0x147e647ef bsr rax, rax",
+        "0x147e647f3 dec eax",
+        "0x147e647f5 add eax, r9d",
+        "0x147e647f8 mov dword ptr [rbp - 0x25], eax",
+        "0x147e647fb cmp eax, r11d",
+        "0x147e647fe jle 0x147e64804",
+        "0x147e64800 mov dword ptr [rbp - 0x25], r11d",
+        "0x147e64804 mov rbx, qword ptr [rbp + 0x67]",
+        "0x147e64808 mov r14, qword ptr [rbp - 0x29]",
+        "0x147e6480c shr r14, 0x20",
+        "0x147e64810 movsxd rax, dword ptr [rbp + 3]",
+        "0x147e64814 mov r15d, esi",
+        "0x147e64817 mov rcx, qword ptr [rbp - 0x19]",
+        "0x147e6481b cmp eax, r14d",
+        "0x147e6481e jne 0x147e6482b",
+        "0x147e64820 cmp qword ptr [rbp - 9], r13",
+        "0x147e64824 jne 0x147e6482b",
+        "0x147e64826 cmp rcx, r12",
+        "0x147e64829 je 0x147e64862",
+        "0x147e6482b mov rcx, qword ptr [rcx]",
+        "0x147e6482e lea rax, [rax + rax*2]",
+        "0x147e64832 movzx edi, byte ptr [rbx + 0x28]",
+        "0x147e64836 mov rdx, qword ptr [rcx + rax*8 + 8]",
+        "0x147e6483b lea rcx, [rbp - 0x11]",
+        "0x147e6483f mov eax, dword ptr [rbp - 0xd]",
+        "0x147e64842 not eax",
+        "0x147e64844 and dword ptr [rbp - 1], eax",
+        "0x147e64847 movzx ebx, byte ptr [rdx + 0x2f0]",
+        "0x147e6484e call 0x1416e0d00",
+        "0x147e64853 inc esi",
+        "0x147e64855 cmp dil, bl",
+        "0x147e64858 mov rbx, qword ptr [rbp + 0x67]",
+        "0x147e6485c cmova esi, r15d",
+        "0x147e64860 jmp 0x147e64810",
+        "0x147e64862 cmp esi, dword ptr [rbx + 0x2c]",
+        "0x147e64865 lea r11, [rsp + 0x90]",
+        "0x147e6486d mov rbx, qword ptr [r11 + 0x38]",
+        "0x147e64871 mov rsi, qword ptr [r11 + 0x40]",
+        "0x147e64875 setge al",
+        "0x147e64878 mov rdi, qword ptr [r11 + 0x48]",
+        "0x147e6487c mov rsp, r11",
+        "0x147e6487f pop r15",
+        "0x147e64881 pop r14",
+        "0x147e64883 pop r13",
+        "0x147e64885 pop r12",
+        "0x147e64887 pop rbp",
+        "0x147e64888 ret "
+      ]
+    },
+    "deck_condition_line": {
+      "address": "0x147e64890",
+      "code_sha256": "f60e880dc39a8b0c95cd8dddf543bad122d31bc77667fa5cd8efb72588ded449",
+      "full_instruction_count": 321,
+      "excerpt_is_complete": false,
+      "instructions": []
+    },
+    "deck_condition_pillar": {
+      "address": "0x147e64d00",
+      "code_sha256": "3e16f621d788264c3df9da7d55e89b995e0e2185a1d5e97895e8ddfdae070dc1",
+      "full_instruction_count": 152,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147e64e50 inc r8d",
+        "0x147e64e53 add r9d, 0x20",
+        "0x147e64e57 cmp r8d, ebx",
+        "0x147e64e5a jg 0x147e64e90",
+        "0x147e64e5c movsxd rax, r8d",
+        "0x147e64e5f mov dword ptr [rbp - 0x19], 0xffffffff",
+        "0x147e64e66 mov edx, dword ptr [r10 + rax*4]",
+        "0x147e64e6a test edx, edx",
+        "0x147e64e6c je 0x147e64e50",
+        "0x147e64e6e mov ecx, edx",
+        "0x147e64e70 mov eax, edx",
+        "0x147e64e72 neg ecx",
+        "0x147e64e74 and rcx, rax",
+        "0x147e64e77 lea rax, [rcx*2 + 1]",
+        "0x147e64e7f bsr rax, rax",
+        "0x147e64e83 dec eax",
+        "0x147e64e85 add eax, r9d",
+        "0x147e64e88 mov dword ptr [rbp - 0x15], eax",
+        "0x147e64e8b cmp eax, r11d",
+        "0x147e64e8e jle 0x147e64e94",
+        "0x147e64e90 mov dword ptr [rbp - 0x15], r11d",
+        "0x147e64e94 mov rbx, qword ptr [rbp - 0x19]",
+        "0x147e64e98 shr rbx, 0x20",
+        "0x147e64e9c nop dword ptr [rax]",
+        "0x147e64ea0 movsxd rax, dword ptr [rbp + 0x13]",
+        "0x147e64ea4 mov rdx, qword ptr [rbp - 9]",
+        "0x147e64ea8 cmp eax, ebx",
+        "0x147e64eaa jne 0x147e64eb7",
+        "0x147e64eac cmp qword ptr [rbp + 7], rsi",
+        "0x147e64eb0 jne 0x147e64eb7",
+        "0x147e64eb2 cmp rdx, r14",
+        "0x147e64eb5 je 0x147e64ee5",
+        "0x147e64eb7 lea rcx, [rax + rax*2]",
+        "0x147e64ebb mov rax, qword ptr [rdx]",
+        "0x147e64ebe movzx edx, byte ptr [r15 + 0x2c]",
+        "0x147e64ec3 mov rcx, qword ptr [rax + rcx*8 + 8]",
+        "0x147e64ec8 call 0x147e5e3c0",
+        "0x147e64ecd movzx eax, al",
+        "0x147e64ed0 lea rcx, [rbp - 1]",
+        "0x147e64ed4 add edi, eax",
+        "0x147e64ed6 mov eax, dword ptr [rbp + 3]",
+        "0x147e64ed9 not eax",
+        "0x147e64edb and dword ptr [rbp + 0xf], eax",
+        "0x147e64ede call 0x1416e0d00",
+        "0x147e64ee3 jmp 0x147e64ea0",
+        "0x147e64ee5 cmp edi, dword ptr [r15 + 0x28]",
+        "0x147e64ee9 lea r11, [rsp + 0x90]",
+        "0x147e64ef1 mov rbx, qword ptr [r11 + 0x20]",
+        "0x147e64ef5 mov rsi, qword ptr [r11 + 0x28]",
+        "0x147e64ef9 setge al",
+        "0x147e64efc mov rdi, qword ptr [r11 + 0x30]",
+        "0x147e64f00 mov r12, qword ptr [r11 + 0x38]",
+        "0x147e64f04 mov rsp, r11",
+        "0x147e64f07 pop r15",
+        "0x147e64f09 pop r14",
+        "0x147e64f0b pop rbp",
+        "0x147e64f0c ret "
+      ]
+    },
+    "deck_count_pillars": {
+      "address": "0x147e5e3c0",
+      "code_sha256": "334215bc50194bd6f8d737deff346802c34e94739d30f0b25554ab17fa6cf4dc",
+      "full_instruction_count": 173,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147e5e3c0 mov r11, rsp",
+        "0x147e5e3c3 push rbp",
+        "0x147e5e3c4 push rsi",
+        "0x147e5e3c5 push rdi",
+        "0x147e5e3c6 push r13",
+        "0x147e5e3c8 push r14",
+        "0x147e5e3ca sub rsp, 0x50",
+        "0x147e5e3ce mov rdi, qword ptr [rcx + 0x2a0]",
+        "0x147e5e3d5 xor r13d, r13d",
+        "0x147e5e3d8 movsxd rax, dword ptr [rcx + 0x2a8]",
+        "0x147e5e3df movzx r14d, dl",
+        "0x147e5e3e3 mov esi, r13d",
+        "0x147e5e3e6 lea rbp, [rdi + rax*8]",
+        "0x147e5e3ea cmp rdi, rbp",
+        "0x147e5e3ed je 0x147e5e595",
+        "0x147e5e3f3 mov qword ptr [r11 + 0x10], rbx",
+        "0x147e5e3f7 mov qword ptr [r11 - 0x30], r12",
+        "0x147e5e3fb movzx r12d, word ptr [r11 - 0x4b]",
+        "0x147e5e400 mov qword ptr [r11 - 0x38], r15",
+        "0x147e5e404 movzx r15d, byte ptr [r11 - 0x49]",
+        "0x147e5e409 mov r10d, 0x14c",
+        "0x147e5e40f nop ",
+        "0x147e5e410 mov rbx, qword ptr [rdi]",
+        "0x147e5e413 mov r9, rbx",
+        "0x147e5e416 mov qword ptr [rsp + 0x90], rbx",
+        "0x147e5e41e shr r9, 0x20",
+        "0x147e5e422 test r9d, r9d",
+        "0x147e5e425 je 0x147e5e471",
+        "0x147e5e427 test ebx, ebx",
+        "0x147e5e429 js 0x147e5e471",
+        "0x147e5e42b cmp ebx, dword ptr [rip + 0x5dec8c3]",
+        "0x147e5e431 jge 0x147e5e471",
+        "0x147e5e433 mov rax, qword ptr [rip + 0x5dec8a6]",
+        "0x147e5e43a mov ecx, ebx",
+        "0x147e5e43c shr ecx, 0x10",
+        "0x147e5e43f movzx r8d, bx",
+        "0x147e5e443 mov rdx, qword ptr [rax + rcx*8]",
+        "0x147e5e447 lea rcx, [r8 + r8*2]",
+        "0x147e5e44b lea r8, [rdx + rcx*8]",
+        "0x147e5e44f test r8, r8",
+        "0x147e5e452 je 0x147e5e471",
+        "0x147e5e454 cmp dword ptr [r8 + 0x10], r9d",
+        "0x147e5e458 jne 0x147e5e471",
+        "0x147e5e45a mov ecx, dword ptr [rip + 0x5dd51c0]",
+        "0x147e5e460 mov eax, dword ptr [r8 + 8]",
+        "0x147e5e464 bts ecx, 0x15",
+        "0x147e5e468 test ecx, eax",
+        "0x147e5e46a jne 0x147e5e471",
+        "0x147e5e46c mov rax, qword ptr [r8]",
+        "0x147e5e46f jmp 0x147e5e474",
+        "0x147e5e471 mov rax, r13",
+        "0x147e5e474 cmp byte ptr [rax + 0x2ac2], r14b",
+        "0x147e5e47b jb 0x147e5e576",
+        "0x147e5e481 mov rax, qword ptr gs:[0x58]",
+        "0x147e5e537 mov r8, qword ptr [rip + 0x67c471a]",
+        "0x147e5e53e mov qword ptr [rsp + 0x80], r13",
+        "0x147e5e546 cmp r8, r13",
+        "0x147e5e549 je 0x147e5e56e",
+        "0x147e5e54b mov rcx, qword ptr [rbx + 0x60]",
+        "0x147e5e54f movsxd rax, dword ptr [rbx + 0x68]",
+        "0x147e5e553 lea rdx, [rcx + rax*8]",
+        "0x147e5e557 cmp rcx, rdx",
+        "0x147e5e55a je 0x147e5e56e",
+        "0x147e5e55c nop dword ptr [rax]",
+        "0x147e5e560 cmp qword ptr [rcx], r8",
+        "0x147e5e563 je 0x147e5e570",
+        "0x147e5e565 add rcx, 8",
+        "0x147e5e569 cmp rcx, rdx",
+        "0x147e5e56c jne 0x147e5e560",
+        "0x147e5e56e inc esi",
+        "0x147e5e570 mov r10d, 0x14c",
+        "0x147e5e576 add rdi, 8",
+        "0x147e5e57a cmp rdi, rbp",
+        "0x147e5e57d jne 0x147e5e410",
+        "0x147e5e583 mov r15, qword ptr [rsp + 0x40]",
+        "0x147e5e588 mov r12, qword ptr [rsp + 0x48]",
+        "0x147e5e58d mov rbx, qword ptr [rsp + 0x88]",
+        "0x147e5e595 movzx eax, sil",
+        "0x147e5e599 add rsp, 0x50",
+        "0x147e5e59d pop r14",
+        "0x147e5e59f pop r13",
+        "0x147e5e5a1 pop rdi",
+        "0x147e5e5a2 pop rsi",
+        "0x147e5e5a3 pop rbp",
+        "0x147e5e5a4 ret "
+      ]
+    },
+    "deck_collapse_start": {
+      "address": "0x147e62e70",
+      "code_sha256": "041ee19a257018bb784f5d5e668a857640b806f44450e68155c753144bf48dbc",
+      "full_instruction_count": 142,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147e62e70 push rbx",
+        "0x147e62e72 sub rsp, 0x80",
+        "0x147e62e79 cmp byte ptr [rip + 0x65b8d68], 0",
+        "0x147e62e80 mov rbx, rdx",
+        "0x147e62e83 mov qword ptr [rsp + 0x98], rbp",
+        "0x147e62e8b mov rbp, rcx",
+        "0x147e62e8e mov qword ptr [rsp + 0x78], rdi",
+        "0x147e62e93 mov qword ptr [rsp + 0x70], r14",
+        "0x147e62e98 mov byte ptr [rcx + 0x2d60], 1",
+        "0x147e62e9f je 0x147e62eae",
+        "0x147e62ea1 test rdx, rdx",
+        "0x147e62ea4 je 0x147e62eae",
+        "0x147e62ea6 mov rcx, rdx",
+        "0x147e62ea9 call 0x1419ca240",
+        "0x147e62eae mov qword ptr [rbp + 0x2d68], rbx",
+        "0x147e62eb5 mov rdi, qword ptr [rbp + 0x2d40]",
+        "0x147e62ebc movsxd rax, dword ptr [rbp + 0x2d48]",
+        "0x147e62ec3 lea r14, [rdi + rax*8]",
+        "0x147e62ec7 cmp rdi, r14",
+        "0x147e62eca je 0x147e62fa5",
+        "0x147e62ed0 movaps xmmword ptr [rsp + 0x60], xmm6"
+      ]
+    },
+    "deck_propagate_damage": {
+      "address": "0x147e630d0",
+      "code_sha256": "105f63a7d05cfd27ab420259bf47a42ed9eac33191795aa0a04a7e1d8b0cb14b",
+      "full_instruction_count": 113,
+      "excerpt_is_complete": false,
+      "instructions": []
+    },
+    "shutter_setup": {
+      "address": "0x147e65d40",
+      "code_sha256": "66c51ba67f455b9f2f36fcb413092624abeda8f119a7f60a791180d81b3a2ae3",
+      "full_instruction_count": 159,
+      "excerpt_is_complete": false,
+      "instructions": [
+        "0x147e65d40 mov qword ptr [rsp + 0x20], rsi",
+        "0x147e65d45 push rbp",
+        "0x147e65d46 push rdi",
+        "0x147e65d47 push r14",
+        "0x147e65d49 lea rbp, [rsp - 0x30]",
+        "0x147e65d4e sub rsp, 0x130",
+        "0x147e65d55 mov rdi, rcx",
+        "0x147e65d58 call 0x147c5b0a0",
+        "0x147e65d5d xor r14d, r14d",
+        "0x147e65d60 lea rcx, [rdi + 0x318]",
+        "0x147e65d67 mov eax, r14d",
+        "0x147e65d6a mov qword ptr [rbp + 0x50], r14",
+        "0x147e65d6e mov qword ptr [rdi + 0x2af4], rax",
+        "0x147e65d75 mov dword ptr [rdi + 0x2afc], r14d",
+        "0x147e65d7c call 0x147c02b80",
+        "0x147e65d81 mov rsi, rax",
+        "0x147e65d84 test rax, rax",
+        "0x147e65d87 je 0x147e65fc0",
+        "0x147e65d8d mov qword ptr [rsp + 0x160], rbx",
+        "0x147e65d95 lea r9, [rip + 0x4d95964]",
+        "0x147e65d9c mov ebx, 0x53"
+      ]
+    }
+  },
+  "evidence_scope": "Current-build static analysis only. Full code is in the reproducible local report; code_sha256 hashes the complete disassembled instruction bytes, not the excerpt. hasPositiveMinHealthInSourceTables does not include runtime writes."
+}
