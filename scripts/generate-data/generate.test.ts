@@ -1,6 +1,51 @@
 import { expect, test } from 'vitest';
 import { generateMasters } from './generate';
 import { input } from './fixture';
+
+test('内部任務IDを維持し、境界とDay違いをゲーム内番号で表示する', () => {
+  // MissionNo_Name_ms*: extracted display strings, independent of the formatter.
+  for (const [missionId, label] of [
+    ['1', 'PROLOGUE'],
+    ['2', 'M1'],
+    ['15', 'M14'],
+    ['24', 'M23'],
+    ['25day1', 'M24'],
+    ['25day2', 'M25'],
+    ['26', 'M26'],
+    ['30', 'M30'],
+  ]) {
+    const result = generateMasters({
+      ...input,
+      targets: [
+        {
+          ...input.targets[0],
+          name: 'AA GUN《CARRIER (SHADOW)》 [M99]',
+          missionVariant: { missionId },
+        },
+      ],
+    });
+    expect(result.targets[0].name).toBe(`AA GUN《CARRIER (SHADOW)》 [${label}]`);
+    expect(result.targets[0].missionVariant).toEqual({ missionId });
+    expect(result.targets[0].id).toBe(input.targets[0].id);
+    expect(
+      generateMasters({ ...input, targets: [{ ...input.targets[0], ...result.targets[0] }] })
+    ).toEqual(result);
+  }
+});
+
+test('表示番号が未確認の内部任務を推測で出力しない', () => {
+  expect(() =>
+    generateMasters({
+      ...input,
+      targets: [
+        {
+          ...input.targets[0],
+          missionVariant: { missionId: '25' },
+        },
+      ],
+    })
+  ).toThrow('任務');
+});
 test('元定義からHPと倍率を解決し出典を配信データへ含めない', () => {
   expect(generateMasters(input).targets).toEqual([
     {

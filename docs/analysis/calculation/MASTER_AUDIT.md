@@ -43,20 +43,20 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 69 | V-22 | isAir, roleGroup |
 | 457 | X-40 | isAir |
 | 435 | X-40 [M28] | isAir |
-| 45 | X-40 [M4] | isAir |
+| 45 | X-40 [M3] | isAir |
 | 459 | X-40 NOSE UNIT | isAir |
 | 106 | LAND AEGIS | isAir, roleGroup |
-| 315 | LAND AEGIS [M24] | isAir, roleGroup |
+| 315 | LAND AEGIS [M23] | isAir, roleGroup |
 | 147 | LAND BATTLESHIP 1 | isAir, roleGroup |
 | 371 | LAND BATTLESHIP 1 | isAir, roleGroup |
-| 330 | LAND BATTLESHIP 1 [M25] | isAir, roleGroup |
+| 330 | LAND BATTLESHIP 1 [M24] | isAir, roleGroup |
 | 151 | SUB CATERPILLAR《LAND BATTLESHIP 1》 | isAir, roleGroup |
 | 154 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup, standardDamage |
 | 488 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup |
-| 153 | THRUSTER《LAND BATTLESHIP 1》 [M10] | isAir, roleGroup |
+| 153 | THRUSTER《LAND BATTLESHIP 1》 [M9] | isAir, roleGroup |
 | 155 | VLS《LAND BATTLESHIP 1》 | isAir, roleGroup |
 | 494 | LAND BATTLESHIP 2 | isAir, roleGroup |
-| 247 | LAND BATTLESHIP 2 [M20] | isAir, roleGroup |
+| 247 | LAND BATTLESHIP 2 [M19] | isAir, roleGroup |
 | 249 | AA GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 251 | BREACH《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 252 | CIWS《LAND BATTLESHIP 2》 | isAir, roleGroup |
@@ -111,4 +111,6 @@ NPC共通と任務の耐性IDが違う場合は任務側を解決し、共通行
 
 QUEEN 13行、PURPLE MAGIC 4行、GREEN 2行、ENDURANCE本体2行・艦砲1行をEXCLUDEDに変更。ENDURANCE対空砲は他艦と統合されていたID 124から8出典を新規ID 506へ分離し、他艦12出典をID 124へ残した。全63出典を明示指定しており、同名・同モデルの別行へ除外を広げていない。
 
-掲載326行・EXCLUDED180行。元定義1459件と既存固定IDは維持。[除外見直し記録](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。実所属の確定とは別の掲載判断である。内部任務番号とゲーム内表示番号のずれは[別記録](../ui-labels/MISSION_NUMBERS.md)に訂正し、画面ラベルは未修正。
+掲載326行・EXCLUDED180行。元定義1459件と既存固定IDは維持。[除外見直し記録](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。実所属の確定とは別の掲載判断である。内部任務番号とゲーム内表示番号のずれは[別記録](../ui-labels/MISSION_NUMBERS.md)に訂正し、画面ラベルはR006で修正済み。
+
+R006では全104任務差分を照合して92行のnameだけを更新し、内部識別子・固定ID・数値・件数は維持した。

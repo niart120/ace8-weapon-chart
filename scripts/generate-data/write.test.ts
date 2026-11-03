@@ -10,6 +10,20 @@ test('不正な入力では既存3ファイルを更新しない', async () => {
     for (const name of ['weapons', 'targets', 'modifiers'])
       await writeFile(join(directory, `${name}.json`), name);
     await expect(writeMasters({ ...input, sources: {} }, directory)).rejects.toThrow();
+    await expect(
+      writeMasters(
+        {
+          ...input,
+          targets: [
+            {
+              ...input.targets[0],
+              missionVariant: { missionId: '25' },
+            },
+          ],
+        },
+        directory
+      )
+    ).rejects.toThrow('任務');
     for (const name of ['weapons', 'targets', 'modifiers'])
       expect(await readFile(join(directory, `${name}.json`), 'utf8')).toBe(name);
     await writeMasters(input, directory);

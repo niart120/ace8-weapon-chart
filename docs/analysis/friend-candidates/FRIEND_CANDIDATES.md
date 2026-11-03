@@ -428,4 +428,4 @@ JACKPOTは13行あり、M10の1行とM27の4行はモデルHP75に任務差分-6
 
 QUEENの共通NPC出典も含め、既存22表示行をEXCLUDEDに変更。ENDURANCEの対空砲8出典は新規ID 506へ分離し、他艦の12出典は既存ID 124に残した。GREEN 1の旧呼称・敵用呼称の両定義とGREEN 2を含めて除外する方針であり、今回も実所属の確認とは区別する。
 
-[全出典と反映結果](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。内部番号をM番号として記載していた問題は[ゲーム内番号の照合](../ui-labels/MISSION_NUMBERS.md)で訂正した。既存画面の番号表示修正はR006として未対応。
+[全出典と反映結果](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。内部番号をM番号として記載していた問題は[ゲーム内番号の照合](../ui-labels/MISSION_NUMBERS.md)で訂正した。既存画面の番号表示は後続のR006修正でゲーム内番号に合わせた。内部の出典キーは維持している。

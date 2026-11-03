@@ -1,0 +1,164 @@
+{
+  "build": 25201480,
+  "sourceHashes": {
+    "CP_Cmn.dat": "dc773dbb11f1535b5b1a5809520a9b520b97b557d1c3fc54806837103237c4e6",
+    "CP_A.dat": "9e84a8c6ced711c58a36561a81f1b121120054255eeaded877310fa26000fc81"
+  },
+  "entries": [
+    {
+      "missionId": "1",
+      "sourceKey": "MissionNo_Name_ms01",
+      "text": "PROLOGUE"
+    },
+    {
+      "missionId": "2",
+      "sourceKey": "MissionNo_Name_ms02",
+      "text": "MISSION 01"
+    },
+    {
+      "missionId": "3",
+      "sourceKey": "MissionNo_Name_ms03",
+      "text": "MISSION 02"
+    },
+    {
+      "missionId": "4",
+      "sourceKey": "MissionNo_Name_ms04",
+      "text": "MISSION 03"
+    },
+    {
+      "missionId": "5",
+      "sourceKey": "MissionNo_Name_ms05",
+      "text": "MISSION 04"
+    },
+    {
+      "missionId": "6",
+      "sourceKey": "MissionNo_Name_ms06",
+      "text": "MISSION 05"
+    },
+    {
+      "missionId": "7",
+      "sourceKey": "MissionNo_Name_ms07",
+      "text": "MISSION 06"
+    },
+    {
+      "missionId": "8",
+      "sourceKey": "MissionNo_Name_ms08",
+      "text": "MISSION 07"
+    },
+    {
+      "missionId": "9",
+      "sourceKey": "MissionNo_Name_ms09",
+      "text": "MISSION 08"
+    },
+    {
+      "missionId": "10",
+      "sourceKey": "MissionNo_Name_ms10",
+      "text": "MISSION 09"
+    },
+    {
+      "missionId": "11",
+      "sourceKey": "MissionNo_Name_ms11",
+      "text": "MISSION 10"
+    },
+    {
+      "missionId": "12",
+      "sourceKey": "MissionNo_Name_ms12",
+      "text": "MISSION 11"
+    },
+    {
+      "missionId": "13",
+      "sourceKey": "MissionNo_Name_ms13",
+      "text": "MISSION 12"
+    },
+    {
+      "missionId": "14",
+      "sourceKey": "MissionNo_Name_ms14",
+      "text": "MISSION 13"
+    },
+    {
+      "missionId": "15",
+      "sourceKey": "MissionNo_Name_ms15",
+      "text": "MISSION 14"
+    },
+    {
+      "missionId": "16",
+      "sourceKey": "MissionNo_Name_ms16",
+      "text": "MISSION 15"
+    },
+    {
+      "missionId": "17",
+      "sourceKey": "MissionNo_Name_ms17",
+      "text": "MISSION 16"
+    },
+    {
+      "missionId": "18",
+      "sourceKey": "MissionNo_Name_ms18",
+      "text": "MISSION 17"
+    },
+    {
+      "missionId": "19",
+      "sourceKey": "MissionNo_Name_ms19",
+      "text": "MISSION 18"
+    },
+    {
+      "missionId": "20",
+      "sourceKey": "MissionNo_Name_ms20",
+      "text": "MISSION 19"
+    },
+    {
+      "missionId": "21",
+      "sourceKey": "MissionNo_Name_ms21",
+      "text": "MISSION 20"
+    },
+    {
+      "missionId": "22",
+      "sourceKey": "MissionNo_Name_ms22",
+      "text": "MISSION 21"
+    },
+    {
+      "missionId": "23",
+      "sourceKey": "MissionNo_Name_ms23",
+      "text": "MISSION 22"
+    },
+    {
+      "missionId": "24",
+      "sourceKey": "MissionNo_Name_ms24",
+      "text": "MISSION 23"
+    },
+    {
+      "missionId": "25day1",
+      "sourceKey": "MissionNo_Name_ms25_Day1",
+      "text": "MISSION 24"
+    },
+    {
+      "missionId": "25day2",
+      "sourceKey": "MissionNo_Name_ms25_Day2",
+      "text": "MISSION 25"
+    },
+    {
+      "missionId": "26",
+      "sourceKey": "MissionNo_Name_ms26",
+      "text": "MISSION 26"
+    },
+    {
+      "missionId": "27",
+      "sourceKey": "MissionNo_Name_ms27",
+      "text": "MISSION 27"
+    },
+    {
+      "missionId": "28",
+      "sourceKey": "MissionNo_Name_ms28",
+      "text": "MISSION 28"
+    },
+    {
+      "missionId": "29",
+      "sourceKey": "MissionNo_Name_ms29",
+      "text": "MISSION 29"
+    },
+    {
+      "missionId": "30",
+      "sourceKey": "MissionNo_Name_ms30",
+      "text": "MISSION 30"
+    }
+  ]
+}

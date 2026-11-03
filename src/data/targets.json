@@ -161,7 +161,7 @@
   },
   {
     "id": 319,
-    "name": "AIRSHIP [M25]",
+    "name": "AIRSHIP [M24]",
     "category": "AIRCRAFT",
     "order": 5,
     "partOf": null,
@@ -803,7 +803,7 @@
   },
   {
     "id": 224,
-    "name": "EXPLOSIVE UAV [M17]",
+    "name": "EXPLOSIVE UAV [M16]",
     "category": "AIRCRAFT",
     "order": 25,
     "partOf": null,
@@ -869,7 +869,7 @@
   },
   {
     "id": 266,
-    "name": "F-14D (SHADOW) [M21]",
+    "name": "F-14D (SHADOW) [M20]",
     "category": "AIRCRAFT",
     "order": 27,
     "partOf": null,
@@ -935,7 +935,7 @@
   },
   {
     "id": 134,
-    "name": "F-15E (SHADOW) [M9]",
+    "name": "F-15E (SHADOW) [M8]",
     "category": "AIRCRAFT",
     "order": 29,
     "partOf": null,
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 133,
-    "name": "F-16C (SHADOW) [M9]",
+    "name": "F-16C (SHADOW) [M8]",
     "category": "AIRCRAFT",
     "order": 33,
     "partOf": null,
@@ -1131,7 +1131,7 @@
   },
   {
     "id": 268,
-    "name": "F-22A (SHADOW) [M21]",
+    "name": "F-22A (SHADOW) [M20]",
     "category": "AIRCRAFT",
     "order": 35,
     "partOf": null,
@@ -1485,7 +1485,7 @@
   },
   {
     "id": 332,
-    "name": "GRIPEN E (SHADOW) [M25-2]",
+    "name": "GRIPEN E (SHADOW) [M25]",
     "category": "AIRCRAFT",
     "order": 46,
     "partOf": null,
@@ -1775,7 +1775,7 @@
   },
   {
     "id": 99,
-    "name": "LADON《LADON》 [M8]",
+    "name": "LADON《LADON》 [M7]",
     "category": "AIRCRAFT",
     "order": 55,
     "partOf": 98,
@@ -1873,7 +1873,7 @@
   },
   {
     "id": 103,
-    "name": "VARIABLE WING《LADON》 [M8]",
+    "name": "VARIABLE WING《LADON》 [M7]",
     "category": "AIRCRAFT",
     "order": 58,
     "partOf": 98,
@@ -1971,7 +1971,7 @@
   },
   {
     "id": 102,
-    "name": "WING SPAR《LADON》 [M8]",
+    "name": "WING SPAR《LADON》 [M7]",
     "category": "AIRCRAFT",
     "order": 61,
     "partOf": 98,
@@ -2005,7 +2005,7 @@
   },
   {
     "id": 104,
-    "name": "WING SPAR《LADON》 [M8]",
+    "name": "WING SPAR《LADON》 [M7]",
     "category": "AIRCRAFT",
     "order": 62,
     "partOf": 98,
@@ -2199,7 +2199,7 @@
   },
   {
     "id": 28,
-    "name": "MIG-29A (SHADOW) [M4]",
+    "name": "MIG-29A (SHADOW) [M3]",
     "category": "AIRCRAFT",
     "order": 68,
     "partOf": null,
@@ -2265,7 +2265,7 @@
   },
   {
     "id": 267,
-    "name": "MIG-29A (SHADOW) [M21]",
+    "name": "MIG-29A (SHADOW) [M20]",
     "category": "AIRCRAFT",
     "order": 70,
     "partOf": null,
@@ -2331,7 +2331,7 @@
   },
   {
     "id": 193,
-    "name": "MIG-31B (SHADOW) [M12]",
+    "name": "MIG-31B (SHADOW) [M11]",
     "category": "AIRCRAFT",
     "order": 72,
     "partOf": null,
@@ -2397,7 +2397,7 @@
   },
   {
     "id": 135,
-    "name": "MIRAGE 2000-5 (SHADOW) [M9]",
+    "name": "MIRAGE 2000-5 (SHADOW) [M8]",
     "category": "AIRCRAFT",
     "order": 74,
     "partOf": null,
@@ -3391,7 +3391,7 @@
   },
   {
     "id": 158,
-    "name": "QUEEN 1 [M11]",
+    "name": "QUEEN 1 [M10]",
     "category": "EXCLUDED",
     "order": 105,
     "partOf": null,
@@ -3425,7 +3425,7 @@
   },
   {
     "id": 234,
-    "name": "QUEEN 1 [M19]",
+    "name": "QUEEN 1 [M18]",
     "category": "EXCLUDED",
     "order": 106,
     "partOf": null,
@@ -3459,7 +3459,7 @@
   },
   {
     "id": 81,
-    "name": "QUEEN 1 [M7]",
+    "name": "QUEEN 1 [M6]",
     "category": "EXCLUDED",
     "order": 107,
     "partOf": null,
@@ -3525,7 +3525,7 @@
   },
   {
     "id": 159,
-    "name": "QUEEN 2 [M11]",
+    "name": "QUEEN 2 [M10]",
     "category": "EXCLUDED",
     "order": 109,
     "partOf": null,
@@ -3559,7 +3559,7 @@
   },
   {
     "id": 82,
-    "name": "QUEEN 2 [M7]",
+    "name": "QUEEN 2 [M6]",
     "category": "EXCLUDED",
     "order": 110,
     "partOf": null,
@@ -3625,7 +3625,7 @@
   },
   {
     "id": 160,
-    "name": "QUEEN 3 [M11]",
+    "name": "QUEEN 3 [M10]",
     "category": "EXCLUDED",
     "order": 112,
     "partOf": null,
@@ -3659,7 +3659,7 @@
   },
   {
     "id": 83,
-    "name": "QUEEN 3 [M7]",
+    "name": "QUEEN 3 [M6]",
     "category": "EXCLUDED",
     "order": 113,
     "partOf": null,
@@ -3725,7 +3725,7 @@
   },
   {
     "id": 161,
-    "name": "QUEEN 4 [M11]",
+    "name": "QUEEN 4 [M10]",
     "category": "EXCLUDED",
     "order": 115,
     "partOf": null,
@@ -3759,7 +3759,7 @@
   },
   {
     "id": 84,
-    "name": "QUEEN 4 [M7]",
+    "name": "QUEEN 4 [M6]",
     "category": "EXCLUDED",
     "order": 116,
     "partOf": null,
@@ -3889,7 +3889,7 @@
   },
   {
     "id": 262,
-    "name": "SHUTTLE TRANSPORT [M21]",
+    "name": "SHUTTLE TRANSPORT [M20]",
     "category": "AIRCRAFT",
     "order": 120,
     "partOf": null,
@@ -4019,7 +4019,7 @@
   },
   {
     "id": 336,
-    "name": "SU-33 (SHADOW) [M25-2]",
+    "name": "SU-33 (SHADOW) [M25]",
     "category": "AIRCRAFT",
     "order": 124,
     "partOf": null,
@@ -4117,7 +4117,7 @@
   },
   {
     "id": 305,
-    "name": "SU-35S (VENTUS) [M24]",
+    "name": "SU-35S (VENTUS) [M23]",
     "category": "AIRCRAFT",
     "order": 127,
     "partOf": null,
@@ -4151,7 +4151,7 @@
   },
   {
     "id": 194,
-    "name": "SU-35S (SHADOW) [M12]",
+    "name": "SU-35S (SHADOW) [M11]",
     "category": "AIRCRAFT",
     "order": 128,
     "partOf": null,
@@ -4185,7 +4185,7 @@
   },
   {
     "id": 269,
-    "name": "SU-35S (SHADOW) [M21]",
+    "name": "SU-35S (SHADOW) [M20]",
     "category": "AIRCRAFT",
     "order": 129,
     "partOf": null,
@@ -4251,7 +4251,7 @@
   },
   {
     "id": 236,
-    "name": "SU-47 (SHADOW) [M19]",
+    "name": "SU-47 (SHADOW) [M18]",
     "category": "AIRCRAFT",
     "order": 131,
     "partOf": null,
@@ -4511,7 +4511,7 @@
   },
   {
     "id": 333,
-    "name": "TYPHOON (SHADOW) [M25-2]",
+    "name": "TYPHOON (SHADOW) [M25]",
     "category": "AIRCRAFT",
     "order": 139,
     "partOf": null,
@@ -4807,7 +4807,7 @@
   },
   {
     "id": 45,
-    "name": "X-40 [M4]",
+    "name": "X-40 [M3]",
     "category": "AIRCRAFT",
     "order": 148,
     "partOf": null,
@@ -5163,7 +5163,7 @@
   },
   {
     "id": 199,
-    "name": "APC [M13]",
+    "name": "APC [M12]",
     "category": "GROUND",
     "order": 159,
     "partOf": null,
@@ -5325,7 +5325,7 @@
   },
   {
     "id": 259,
-    "name": "CLIMBER [M20]",
+    "name": "CLIMBER [M19]",
     "category": "GROUND",
     "order": 164,
     "partOf": null,
@@ -5647,7 +5647,7 @@
   },
   {
     "id": 145,
-    "name": "IED VEHICLE [M10]",
+    "name": "IED VEHICLE [M9]",
     "category": "GROUND",
     "order": 174,
     "partOf": null,
@@ -5745,7 +5745,7 @@
   },
   {
     "id": 315,
-    "name": "LAND AEGIS [M24]",
+    "name": "LAND AEGIS [M23]",
     "category": "GROUND",
     "order": 177,
     "partOf": null,
@@ -5971,7 +5971,7 @@
   },
   {
     "id": 330,
-    "name": "LAND BATTLESHIP 1 [M25]",
+    "name": "LAND BATTLESHIP 1 [M24]",
     "category": "GROUND",
     "order": 184,
     "partOf": null,
@@ -6261,7 +6261,7 @@
   },
   {
     "id": 153,
-    "name": "THRUSTER《LAND BATTLESHIP 1》 [M10]",
+    "name": "THRUSTER《LAND BATTLESHIP 1》 [M9]",
     "category": "GROUND",
     "order": 193,
     "partOf": 147,
@@ -6391,7 +6391,7 @@
   },
   {
     "id": 247,
-    "name": "LAND BATTLESHIP 2 [M20]",
+    "name": "LAND BATTLESHIP 2 [M19]",
     "category": "GROUND",
     "order": 197,
     "partOf": null,
@@ -6425,7 +6425,7 @@
   },
   {
     "id": 261,
-    "name": "LAND BATTLESHIP 2 [M20]",
+    "name": "LAND BATTLESHIP 2 [M19]",
     "category": "GROUND",
     "order": 198,
     "partOf": null,
@@ -7739,7 +7739,7 @@
   },
   {
     "id": 341,
-    "name": "AEGIS [M25-2]",
+    "name": "AEGIS [M25]",
     "category": "SHIP",
     "order": 239,
     "partOf": null,
@@ -7805,7 +7805,7 @@
   },
   {
     "id": 343,
-    "name": "AA GUN《AEGIS》 [M25-2]",
+    "name": "AA GUN《AEGIS》 [M25]",
     "category": "SHIP",
     "order": 241,
     "partOf": 242,
@@ -7871,7 +7871,7 @@
   },
   {
     "id": 344,
-    "name": "CIWS《AEGIS》 [M25-2]",
+    "name": "CIWS《AEGIS》 [M25]",
     "category": "SHIP",
     "order": 243,
     "partOf": 242,
@@ -7937,7 +7937,7 @@
   },
   {
     "id": 342,
-    "name": "NAVAL GUN《AEGIS》 [M25-2]",
+    "name": "NAVAL GUN《AEGIS》 [M25]",
     "category": "SHIP",
     "order": 245,
     "partOf": 242,
@@ -8003,7 +8003,7 @@
   },
   {
     "id": 345,
-    "name": "VLS《AEGIS》 [M25-2]",
+    "name": "VLS《AEGIS》 [M25]",
     "category": "SHIP",
     "order": 247,
     "partOf": 242,
@@ -8101,7 +8101,7 @@
   },
   {
     "id": 162,
-    "name": "AIRCRAFT CARRIER [M11]",
+    "name": "AIRCRAFT CARRIER [M10]",
     "category": "EXCLUDED",
     "order": 250,
     "partOf": null,
@@ -8487,7 +8487,7 @@
   },
   {
     "id": 222,
-    "name": "CONTAINER SHIP [M17]",
+    "name": "CONTAINER SHIP [M16]",
     "category": "SHIP",
     "order": 262,
     "partOf": null,
@@ -8713,7 +8713,7 @@
   },
   {
     "id": 361,
-    "name": "DESTROYER [M25-2]",
+    "name": "DESTROYER [M25]",
     "category": "SHIP",
     "order": 269,
     "partOf": null,
@@ -8779,7 +8779,7 @@
   },
   {
     "id": 362,
-    "name": "AA GUN《DESTROYER》 [M25-2]",
+    "name": "AA GUN《DESTROYER》 [M25]",
     "category": "SHIP",
     "order": 271,
     "partOf": 59,
@@ -8845,7 +8845,7 @@
   },
   {
     "id": 363,
-    "name": "NAVAL GUN《DESTROYER》 [M25-2]",
+    "name": "NAVAL GUN《DESTROYER》 [M25]",
     "category": "SHIP",
     "order": 273,
     "partOf": 59,
@@ -8911,7 +8911,7 @@
   },
   {
     "id": 364,
-    "name": "FRIGATE [M25-2]",
+    "name": "FRIGATE [M25]",
     "category": "SHIP",
     "order": 275,
     "partOf": null,
@@ -8977,7 +8977,7 @@
   },
   {
     "id": 366,
-    "name": "AA GUN《FRIGATE》 [M25-2]",
+    "name": "AA GUN《FRIGATE》 [M25]",
     "category": "SHIP",
     "order": 277,
     "partOf": 56,
@@ -9043,7 +9043,7 @@
   },
   {
     "id": 365,
-    "name": "NAVAL GUN《FRIGATE》 [M25-2]",
+    "name": "NAVAL GUN《FRIGATE》 [M25]",
     "category": "SHIP",
     "order": 279,
     "partOf": 56,
@@ -9493,7 +9493,7 @@
   },
   {
     "id": 55,
-    "name": "TRIUMPHANT [M5]",
+    "name": "TRIUMPHANT [M4]",
     "category": "SHIP",
     "order": 293,
     "partOf": null,
@@ -9655,7 +9655,7 @@
   },
   {
     "id": 204,
-    "name": "AIR BASE [M13]",
+    "name": "AIR BASE [M12]",
     "category": "STRUCTURE",
     "order": 298,
     "partOf": null,
@@ -9817,7 +9817,7 @@
   },
   {
     "id": 80,
-    "name": "BUILDING [M6]",
+    "name": "BUILDING [M5]",
     "category": "STRUCTURE",
     "order": 303,
     "partOf": null,
@@ -9851,7 +9851,7 @@
   },
   {
     "id": 136,
-    "name": "BUILDING [M9]",
+    "name": "BUILDING [M8]",
     "category": "STRUCTURE",
     "order": 304,
     "partOf": null,
@@ -11495,7 +11495,7 @@
   },
   {
     "id": 291,
-    "name": "AA GUN [M24]",
+    "name": "AA GUN [M23]",
     "category": "EXCLUDED",
     "order": 355,
     "partOf": null,
@@ -11721,7 +11721,7 @@
   },
   {
     "id": 285,
-    "name": "AH-64 [M24]",
+    "name": "AH-64 [M23]",
     "category": "EXCLUDED",
     "order": 362,
     "partOf": null,
@@ -11787,7 +11787,7 @@
   },
   {
     "id": 174,
-    "name": "AIRCRAFT CARRIER [M11]",
+    "name": "AIRCRAFT CARRIER [M10]",
     "category": "EXCLUDED",
     "order": 364,
     "partOf": null,
@@ -11885,7 +11885,7 @@
   },
   {
     "id": 295,
-    "name": "APC [M24]",
+    "name": "APC [M23]",
     "category": "EXCLUDED",
     "order": 367,
     "partOf": null,
@@ -11919,7 +11919,7 @@
   },
   {
     "id": 322,
-    "name": "APC [M25]",
+    "name": "APC [M24]",
     "category": "EXCLUDED",
     "order": 368,
     "partOf": null,
@@ -11953,7 +11953,7 @@
   },
   {
     "id": 323,
-    "name": "APC [M25]",
+    "name": "APC [M24]",
     "category": "EXCLUDED",
     "order": 369,
     "partOf": null,
@@ -12019,7 +12019,7 @@
   },
   {
     "id": 176,
-    "name": "ASSAULT SHIP [M11]",
+    "name": "ASSAULT SHIP [M10]",
     "category": "EXCLUDED",
     "order": 371,
     "partOf": null,
@@ -12053,7 +12053,7 @@
   },
   {
     "id": 290,
-    "name": "ASSAULT SHIP [M24]",
+    "name": "ASSAULT SHIP [M23]",
     "category": "EXCLUDED",
     "order": 372,
     "partOf": null,
@@ -12343,7 +12343,7 @@
   },
   {
     "id": 294,
-    "name": "BRUISER [M24]",
+    "name": "BRUISER [M23]",
     "category": "EXCLUDED",
     "order": 381,
     "partOf": null,
@@ -12377,7 +12377,7 @@
   },
   {
     "id": 296,
-    "name": "BRUISER [M24]",
+    "name": "BRUISER [M23]",
     "category": "EXCLUDED",
     "order": 382,
     "partOf": null,
@@ -12411,7 +12411,7 @@
   },
   {
     "id": 301,
-    "name": "BRUISER [M24]",
+    "name": "BRUISER [M23]",
     "category": "EXCLUDED",
     "order": 383,
     "partOf": null,
@@ -12445,7 +12445,7 @@
   },
   {
     "id": 304,
-    "name": "BRUISER [M24]",
+    "name": "BRUISER [M23]",
     "category": "EXCLUDED",
     "order": 384,
     "partOf": null,
@@ -12607,7 +12607,7 @@
   },
   {
     "id": 85,
-    "name": "CH-47 [M7]",
+    "name": "CH-47 [M6]",
     "category": "EXCLUDED",
     "order": 389,
     "partOf": null,
@@ -12897,7 +12897,7 @@
   },
   {
     "id": 9,
-    "name": "ENDURANCE [M3]",
+    "name": "ENDURANCE [M2]",
     "category": "EXCLUDED",
     "order": 398,
     "partOf": null,
@@ -13155,7 +13155,7 @@
   },
   {
     "id": 284,
-    "name": "F-14D [M24]",
+    "name": "F-14D [M23]",
     "category": "EXCLUDED",
     "order": 406,
     "partOf": null,
@@ -13319,7 +13319,7 @@
   },
   {
     "id": 143,
-    "name": "F/A-18C [M10]",
+    "name": "F/A-18C [M9]",
     "category": "EXCLUDED",
     "order": 411,
     "partOf": null,
@@ -13353,7 +13353,7 @@
   },
   {
     "id": 283,
-    "name": "F/A-18C [M24]",
+    "name": "F/A-18C [M23]",
     "category": "EXCLUDED",
     "order": 412,
     "partOf": null,
@@ -13419,7 +13419,7 @@
   },
   {
     "id": 144,
-    "name": "F/A-18E [M10]",
+    "name": "F/A-18E [M9]",
     "category": "EXCLUDED",
     "order": 414,
     "partOf": null,
@@ -13773,7 +13773,7 @@
   },
   {
     "id": 287,
-    "name": "FRIGATE [M24]",
+    "name": "FRIGATE [M23]",
     "category": "EXCLUDED",
     "order": 425,
     "partOf": null,
@@ -13839,7 +13839,7 @@
   },
   {
     "id": 289,
-    "name": "AA GUN《FRIGATE》 [M24]",
+    "name": "AA GUN《FRIGATE》 [M23]",
     "category": "EXCLUDED",
     "order": 427,
     "partOf": 46,
@@ -13905,7 +13905,7 @@
   },
   {
     "id": 288,
-    "name": "NAVAL GUN《FRIGATE》 [M24]",
+    "name": "NAVAL GUN《FRIGATE》 [M23]",
     "category": "EXCLUDED",
     "order": 429,
     "partOf": 46,
@@ -14035,7 +14035,7 @@
   },
   {
     "id": 302,
-    "name": "HMMWV [M24]",
+    "name": "HMMWV [M23]",
     "category": "EXCLUDED",
     "order": 433,
     "partOf": null,
@@ -14069,7 +14069,7 @@
   },
   {
     "id": 87,
-    "name": "HMMWV [M7]",
+    "name": "HMMWV [M6]",
     "category": "EXCLUDED",
     "order": 434,
     "partOf": null,
@@ -14199,7 +14199,7 @@
   },
   {
     "id": 297,
-    "name": "HOWITZER [M24]",
+    "name": "HOWITZER [M23]",
     "category": "EXCLUDED",
     "order": 438,
     "partOf": null,
@@ -14297,7 +14297,7 @@
   },
   {
     "id": 141,
-    "name": "JACKPOT [M10]",
+    "name": "JACKPOT [M9]",
     "category": "EXCLUDED",
     "order": 441,
     "partOf": null,
@@ -14557,7 +14557,7 @@
   },
   {
     "id": 324,
-    "name": "LCAC [M25]",
+    "name": "LCAC [M24]",
     "category": "EXCLUDED",
     "order": 449,
     "partOf": null,
@@ -14591,7 +14591,7 @@
   },
   {
     "id": 72,
-    "name": "LCAC [M6]",
+    "name": "LCAC [M5]",
     "category": "EXCLUDED",
     "order": 450,
     "partOf": null,
@@ -15617,7 +15617,7 @@
   },
   {
     "id": 298,
-    "name": "RKT LAUNCHER [M24]",
+    "name": "RKT LAUNCHER [M23]",
     "category": "EXCLUDED",
     "order": 482,
     "partOf": null,
@@ -15811,7 +15811,7 @@
   },
   {
     "id": 86,
-    "name": "SPREAD 2 [M7]",
+    "name": "SPREAD 2 [M6]",
     "category": "EXCLUDED",
     "order": 488,
     "partOf": null,
@@ -15973,7 +15973,7 @@
   },
   {
     "id": 292,
-    "name": "TANK [M24]",
+    "name": "TANK [M23]",
     "category": "EXCLUDED",
     "order": 493,
     "partOf": null,
@@ -16007,7 +16007,7 @@
   },
   {
     "id": 321,
-    "name": "TANK [M25]",
+    "name": "TANK [M24]",
     "category": "EXCLUDED",
     "order": 494,
     "partOf": null,
@@ -16041,7 +16041,7 @@
   },
   {
     "id": 299,
-    "name": "TRUCK [M24]",
+    "name": "TRUCK [M23]",
     "category": "EXCLUDED",
     "order": 495,
     "partOf": null,
@@ -16107,7 +16107,7 @@
   },
   {
     "id": 293,
-    "name": "VALENTINE [M24]",
+    "name": "VALENTINE [M23]",
     "category": "EXCLUDED",
     "order": 497,
     "partOf": null,
@@ -16141,7 +16141,7 @@
   },
   {
     "id": 300,
-    "name": "VALENTINE [M24]",
+    "name": "VALENTINE [M23]",
     "category": "EXCLUDED",
     "order": 498,
     "partOf": null,
@@ -16175,7 +16175,7 @@
   },
   {
     "id": 303,
-    "name": "VALENTINE [M24]",
+    "name": "VALENTINE [M23]",
     "category": "EXCLUDED",
     "order": 499,
     "partOf": null,

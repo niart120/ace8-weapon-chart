@@ -200,7 +200,7 @@ for (const width of [1440, 390]) {
   test(`航空機識別名: ${width}pxで検索・任務表示・選択保持を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto('/');
-    const name = 'TYPHOON (SHADOW) [M25-2]';
+    const name = 'TYPHOON (SHADOW) [M25]';
     await expect(page.getByRole('rowheader', { name: 'TYPHOON', exact: true })).toHaveCount(1);
     await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(0);
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
@@ -208,18 +208,18 @@ for (const width of [1440, 390]) {
     const variants = panel.getByRole('checkbox', { name: 'MISSION VARIANTS', exact: true });
     await variants.check();
     await panel.getByRole('searchbox').fill('typhoon (shadow)');
-    const choice = panel.getByRole('checkbox', { name: /^TYPHOON \(SHADOW\) \[M25-2\]/ });
+    const choice = panel.getByRole('checkbox', { name: /^TYPHOON \(SHADOW\) \[M25\]/ });
     await expect(choice).toBeChecked();
     await variants.uncheck();
     await expect(choice).toHaveCount(0);
     await variants.check();
     await expect(choice).toBeChecked();
     await panel.getByRole('searchbox').fill('ventus');
-    await expect(panel.getByRole('checkbox', { name: /^SU-35S \(VENTUS\) \[M24\]/ })).toBeChecked();
+    await expect(panel.getByRole('checkbox', { name: /^SU-35S \(VENTUS\) \[M23\]/ })).toBeChecked();
     await panel.getByRole('button', { name: 'Close targets' }).click();
     await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(1);
     await expect(
-      page.getByRole('rowheader', { name: 'SU-35S (VENTUS) [M24]', exact: true })
+      page.getByRole('rowheader', { name: 'SU-35S (VENTUS) [M23]', exact: true })
     ).toHaveCount(1);
     await page.reload();
     await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(1);
@@ -256,5 +256,43 @@ test('除外済み友軍の旧選択を復元せず、他艦の対空砲は保�
     await expect(panel.locator('.group-items label')).toHaveCount(0);
   }
   await panel.getByRole('searchbox').fill('AA GUN《AIRCRAFT CARRIER》');
+  await expect(panel.locator('.group-items label')).toHaveCount(1);
+});
+
+test('任務表示番号だけを更新し、旧保存ID・部位・識別名を保持する', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'ace8-weapon-guide.preferences',
+      JSON.stringify({
+        version: 1,
+        conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
+        weaponIds: [1],
+        targetIds: [319, 333, 266, 343, 412],
+        showParts: true,
+        showMissionVariants: true,
+      })
+    );
+  });
+  await page.goto('/');
+  for (const name of [
+    'AIRSHIP [M24]',
+    'TYPHOON (SHADOW) [M25]',
+    'F-14D (SHADOW) [M20]',
+    'AA GUN《AEGIS》 [M25]',
+    'SU-57 (SHADOW) [M26]',
+  ])
+    await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(1);
+  await expect(page.getByRole('rowheader')).toHaveCount(5);
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+    )
+  ).toEqual([319, 333, 266, 343, 412]);
+  await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+  const panel = page.getByRole('dialog', { name: 'TARGETS' });
+  await panel.getByRole('searchbox').fill('[M25-2]');
+  await expect(panel.locator('.group-items label')).toHaveCount(0);
+  await panel.getByRole('searchbox').fill('TYPHOON (SHADOW) [M25]');
   await expect(panel.locator('.group-items label')).toHaveCount(1);
 });

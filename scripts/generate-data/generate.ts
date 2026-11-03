@@ -1,5 +1,6 @@
 import { validateMasters } from '../../src/domain/validate.ts';
 import type { Modifiers, Target, Weapon } from '../../src/domain/types';
+import { withMissionLabel } from './mission-label.ts';
 export interface SourceRef {
   readonly table: string;
   readonly row: string;
@@ -35,7 +36,10 @@ export function generateMasters(input: GenerationInput): Masters {
       throw new Error(`統合条件が不一致: ${definition.id}`);
     }
     const { sourceRefs: _sourceRefs, ...identity } = definition;
-    return { ...identity, ...first };
+    const name = identity.missionVariant
+      ? withMissionLabel(identity.name, identity.missionVariant.missionId)
+      : identity.name;
+    return { ...identity, ...first, name };
   });
   const masters = {
     weapons: [...input.weapons].sort(byOrder),
