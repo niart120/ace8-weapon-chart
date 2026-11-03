@@ -2,6 +2,9 @@ import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { componentDamage } from '../domain/damage';
+import { roles } from '../domain/types';
+import { initialPreferences } from '../state/preferences';
+import { restorePreferences } from '../storage/preferences';
 
 // local_003: Blueprint全継承とnative初期値で確認した静的属性。
 // 配信データから期待値を生成せず、確認済みIDを列挙する。
@@ -64,11 +67,40 @@ test('CH-47をHP35・攻撃機MSL35ダメージの1命中として計算する',
   ).toEqual({ kind: 'value', value: 1 });
 });
 
-test('区分8の5行とMEGAFLOAT系12行は今回の属性反映から除外する', () => {
-  const category8Ids = [201, 264, 505, 463, 462];
+test('MEGAFLOAT系12行は今回の属性反映から除外する', () => {
   const megafloatIds = [418, 423, 430, 420, 422, 429, 500, 501, 419, 421, 503, 426];
-  for (const id of [...category8Ids, ...megafloatIds])
+  for (const id of megafloatIds)
     expect(targets.find((target) => target.id === id)?.roleGroup).toBeNull();
   for (const id of megafloatIds)
     expect(targets.find((target) => target.id === id)?.standardDamage).toBe(false);
+});
+
+test('区分8の5行は全ROLEで補正なしとなり、対空MSLパーツと旧選択は維持する', () => {
+  const ids = [201, 264, 505, 463, 462];
+  const missile = weapons.find((weapon) => weapon.id === 1)!;
+  for (const id of ids) {
+    const target = targets.find((row) => row.id === id)!;
+    expect(target).toMatchObject({ roleGroup: 'none', isAir: true, standardDamage: true });
+    for (const role of roles) {
+      const conditions = { role, parts: [], damageType: 'DIRECT' as const };
+      expect(componentDamage(target, missile.primary, conditions)).toBe(40);
+      expect(
+        componentDamage(target, missile.primary, { ...conditions, parts: ['missileAirPower'] })
+      ).toBe(44);
+      expect(
+        componentDamage(target, missile.primary, { ...conditions, parts: ['missileGroundPower'] })
+      ).toBe(40);
+      expect(calculateDefeatRequirement(target, missile, conditions)).toEqual({
+        kind: 'value',
+        value: 1,
+      });
+    }
+  }
+  const catalog = { targets, weapons };
+  const initial = initialPreferences(false, catalog);
+  expect(
+    restorePreferences({ ...initial, version: 1, targetIds: ids }, initial, catalog, []).targetIds
+  ).toEqual(ids);
+  expect(targets.find((target) => target.id === 505)?.hp).toBe(30);
+  expect(targets.find((target) => target.id === 463)?.hp).toBe(15);
 });

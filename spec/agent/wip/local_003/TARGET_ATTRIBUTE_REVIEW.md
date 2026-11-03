@@ -1,6 +1,6 @@
 # 目標属性41行の再調査
 
-状態: 調査41行のうち24行を承認後に反映済み（9節）。区分8の5行・MEGAFLOAT系12行は未反映。1〜8節の「未反映」「変更禁止」は初回調査時点の範囲を示す。
+状態: 調査41行のうち24行（9節）と区分8の5行（11節）を承認後に反映済み。MEGAFLOAT系12行は未反映。1〜8節の「未反映」「変更禁止」は初回調査時点の範囲を示す。ROLE適用範囲の横並び調査は12節。
 
 ## 1. 概要
 
@@ -54,9 +54,11 @@
 - [x] MASTER_AUDITを現行データと調査結果へ合わせる
 - [x] 検証結果と反映候補を記録する
 - [x] 24行の配信反映を合意し、実装・検証する
-- [ ] 区分8の5行とMEGAFLOAT系12行の反映方針を決める
+- [x] 区分8の5行の対応を合意し、元区分を保持して実装・検証する
+- [x] ROLEが掛からない目標・武器分類の横並び調査を行う
+- [ ] MEGAFLOAT系12行の破壊条件・被弾経路を確認し、反映方針を決める
 
-初回調査では配信反映を対象外とした。後続の承認で24行を反映し、残る17行を扱うためlocal_003はwipとして管理する。
+初回調査では配信反映を対象外とした。後続の承認で24行と区分8の5行を反映した。残るMEGAFLOAT12行を扱うためlocal_003はwipとして管理する。
 
 ## 7. 調査結果
 
@@ -89,11 +91,11 @@ OptionalProperty・InterfacePropertyの保存形式は、[UAssetAPI OptionalProp
 
 ### 7.3 全対象一覧
 
-以下は調査結果。24行は9節で反映済み、残る17行は未反映。T/FはbIsAirのtrue/false。区分はゲーム内GameObjectCategoryの値で、アプリの表示分類ではない。区分8の「中立」はROLE倍率100%を意味し、Category_None=0へ読み替えたものではない。
+以下は調査結果。24行は9節、区分8の5行は11節で反映済み。MEGAFLOAT12行は未反映。T/FはbIsAirのtrue/false。区分はゲーム内GameObjectCategoryの値で、アプリの表示分類ではない。区分8の「中立」はROLE倍率100%を意味し、Category_None=0へ読み替えたものではない。
 
 | ID | 現在の表示名 | isAir | 区分 / ROLE | 判断区分 |
 | ---: | --- | --- | --- | --- |
-| 201 | MSL PALLET《C-130》 | T | 8 / 中立100% | 区分8の対応付け候補 |
+| 201 | MSL PALLET《C-130》 | T | 8 / 中立100% | 区分8反映済み |
 | 230 | CH-47 | T | 2 / air | 反映済み（standardDamageも復元） |
 | 216 | EXPLOSIVE UAV | T | 1 / air | 属性反映済み |
 | 373 | LAND AEGIS《PODARGE》 | F | 7 / ship | 属性反映済み |
@@ -128,12 +130,12 @@ OptionalProperty・InterfacePropertyの保存形式は、[UAssetAPI OptionalProp
 | 421 | PILLAR《MEGAFLOAT》 [M27] | F | 4 / ground | イベント・被弾経路継続 |
 | 503 | SHUTTER《MEGAFLOAT》 | F | 4 / ground | イベント・被弾経路継続 |
 | 426 | SHUTTER《MEGAFLOAT》 [M27] | F | 4 / ground | イベント・被弾経路継続 |
-| 264 | BVRAAM | T | 8 / 中立100% | 区分8の対応付け候補 |
+| 264 | BVRAAM | T | 8 / 中立100% | 区分8反映済み |
 | 237 | LAUNCH VEHICLE | T | 4 / ground | 属性反映済み |
 | 238 | LAUNCH VEHICLE DEBRIS | T | 4 / ground | 属性反映済み |
-| 505 | MSL DISPENSER | T | 8 / 中立100% | 区分8の対応付け候補 |
-| 463 | MSL DISPENSER [M30] | T | 8 / 中立100% | 区分8の対応付け候補 |
-| 462 | SLCM | T | 8 / 中立100% | 区分8の対応付け候補 |
+| 505 | MSL DISPENSER | T | 8 / 中立100% | 区分8反映済み |
+| 463 | MSL DISPENSER [M30] | T | 8 / 中立100% | 区分8反映済み |
+| 462 | SLCM | T | 8 / 中立100% | 区分8反映済み |
 
 LAUNCH VEHICLEとDEBRISは表示分類がOTHERでもisAir=true・Category=4。前者はLiveAILaunchVehicle、後者はLiveAIFallingObjectのnative初期値1を継承する。LAND AEGIS・LAND DESTROYERはCategory=7、LAND BATTLESHIP 3主砲はCategory=5、DISP. RAIL GUNはCategory=0であり、名前や所属から他部位と同じ値にはしない。
 
@@ -214,3 +216,109 @@ CH-47は読取失敗でLiveAIGameObjectの継承を認識できず、standardDam
 区分8の5行は数値根拠が揃っており、先に実装側でCategory_None=0と区別した中立補正の対応付けを整理できる。追加のゲーム内知識をユーザーへ必須条件として求める段階ではない。
 
 MEGAFLOAT系12行は、静的属性と破壊条件・被弾経路の確認を分ける。まず条件オブジェクト・被弾関数・イベントを追い、実ゲーム観察が必要な条件を絞る。部位のロック可否や破壊段階に関するユーザーの知見は補助になるが、記憶だけでHP・耐性・通常被弾判定を確定しない。
+
+
+## 10. 区分8の5行への対応案（後続の承認で採用）
+
+24行の変更と調査・検証記録は、ユーザー指示により`813504e`（`fix(data): 確認済み24目標の計算属性を反映`）へコミットした。本節はその後に提示した設計案を記録する。提案時は未実装だったが、ユーザー承認後の実装結果は11節に記載する。
+
+### 10.1 ROLE100%の意味
+
+ROLEは攻撃側プレイヤー機のFIGHTER・MULTIROLE・ATTACKER・ELECTRONIC WARFAREによる威力補正を指す。100%は倍率1.0で、この補正段階ではダメージが増減しないという意味。命中率100%、敵耐性100%、武器の全補正を無効にするという意味ではない。
+
+例えば通常の航空機区分に対するROLE倍率はFIGHTERが1.25、ATTACKERが0.875だが、今回の区分8では4種類の自機ROLEすべてが1.0になる。原処理はNPC用配列の範囲外で100を保持する分岐であり、根拠は7.4節。数値が未確認なので1で埋めるものではない。
+
+具体例としてBVRAAM（ID264）はHP40・通常MSL耐性1。パーツなしのMSL基礎40はどのROLEでも40ダメージとなり、静的条件では1命中。これをisAir=trueという理由だけでROLE=airへ変換すると、ATTACKERは35ダメージ・2命中となってしまう。isAirは通常MSLの対空・対地パーツ判定であり、ROLE区分とは別に使う。
+
+### 10.2 対象と保持する値
+
+| ID | 表示名 | HP | 元GameObjectCategory | isAir | 採用前のroleGroup |
+| ---: | --- | ---: | ---: | --- | --- |
+| 201 | MSL PALLET《C-130》 | 20 | 8 | true | null |
+| 264 | BVRAAM | 40 | 8 | true | null |
+| 505 | MSL DISPENSER | 30 | 8 | true | null |
+| 463 | MSL DISPENSER [M30] | 15 | 8 | true | null |
+| 462 | SLCM | 25 | 8 | true | null |
+
+5行は6モデルに対応する。全モデルの`catalog.modelAttributes[modelId].category`は既に8で、証拠JSONの`static_attributes.gameObjectCategory`にも8を記録済み。ここでいう数値categoryは元モデルの属性であり、配信Target.categoryのAIRCRAFT・OTHERという表示分類とは異なる。両方を保持する。
+
+### 10.3 推奨案: 元区分を保持し、計算用noneを再利用
+
+元のcategory=8と出典を維持し、対象6モデルの計算用roleGroupだけをnullから`none`にする。生成結果の変更は対象5行のroleGroupだけに限定する。
+
+現在の`none`は元Category_None=0に対応する計算用キーとして記録しているが、`modifiers.roles`では全ROLEで1.0となっている。これを「確認済みのROLE補正なし」を表す計算区分として定義し直す。元区分0と8はcatalogと証拠で区別したまま、同じ計算倍率を共有する。したがって7.4節の「元区分を混同しない」を満たす。元区分8を0へ書き換える案ではない。
+
+| 層 | 区分0 | 今回の区分8 | 未確認の区分 |
+| --- | --- | --- | --- |
+| 元データ・catalog | category=0を保持 | category=8を保持 | 不明はnullを保持 |
+| 計算用roleGroup | none | none（提案） | null |
+| ROLE倍率 | 全ROLEで1.0 | 全ROLEで1.0 | 未確認として扱う |
+
+元区分の保存先をcatalogと証拠にするのは、区分1/2→air、3/4/5→ground、6/7→shipという既存の生成方針と同じ。配信データへ新しい元区分フィールドを追加する必要はない。未確認区分を一律noneにする既定動作は導入せず、今回確認済みの区分8・6モデルだけを明示的に更新する。
+
+isAir=trueとstandardDamage=trueは既存値を保持する。MSL.AIR.POW+は引き続き適用され、MSL.GND.POW+は適用されない。通常威力パーツ、兵装別耐性、HP更新は既存経路を使う。区分8は艦船区分6/7ではないため艦船専用補正は適用しない。HP・耐性・固定ID・名前・表示分類・親参照・任務差分・保存選択は維持し、MSL DISPENSERの共通行と[M30]行も統合しない。
+
+### 10.4 別案との比較
+
+| 案 | 利点 | 変更・判断 |
+| --- | --- | --- |
+| 既存noneを共有（推奨） | 元区分を失わず、計算処理・配信型・倍率表の追加が不要 | noneの意味を「確認済みのROLE補正なし」と文書化。5行のroleGroupのみ更新 |
+| 区分8専用の計算キーを追加 | 配信データだけでも元区分0と区分8の違いを表せる | 型・検証器・生成・4ROLEの倍率表・各fixtureへ同じ1.0を追加する。現状の画面・計算にこの区別は不要 |
+
+ROLE100%のために新しい画面設定を追加する案ではない。現状では既存noneの共有で目的を満たすため、専用キーは推奨しない。
+
+### 10.5 実装する場合の検証
+
+- 対象5行・6モデルだけを更新し、元category=8、固定ID、その他の配信値を保持する。Category_None=0の既存行も保持する。
+- 5行×4ROLEでMSL基礎40・耐性1・パーツなしが40ダメージになることを検証。対空パーツだけなら44、対地パーツだけなら40とする。
+- BVRAAMのHP40がパーツなし・全ROLEで1命中となることを確認。空中判定をROLE=airと誤混同した35/50へしない。
+- 残るMEGAFLOAT系12行の未確認、TLS・UAVTなど兵装側の未確認を維持する。nullを1やnoneへ暗黙補完しない。
+- 旧保存の選択保持、生成前後の対象外一致、再生成一致、型・Lint・整形・単体・ビルド・必要な画面確認を行う。
+
+提案時の検証: 未実行（対応案のみ）。後続の承認によりnoneを共有する案を採用し、11節の検証を実施した。
+
+
+## 11. 区分8の5行への反映結果
+
+2026-11-03、ユーザーが元区分8の保持、5行のroleGroup=none、検証・本書への追記・コミットを指示した。開始時HEADは`813504e`。作業ツリーには前回提示した10節の文書差分だけがあり、それを保持して実装した。
+
+### 11.1 変更
+
+| ファイル | 内容 |
+| --- | --- |
+| data/local/catalog.json | Git管理外。OP0059_rpdna、OP0053_ulraam、OP0037_mmslct、OP0037_mmslct_FirstShot、OP0036_slcm、OP0039_slcmpのroleGroupのみnull→none。全6モデルのcategory=8を維持 |
+| src/data/targets.json | `pnpm generate:data`で201・264・505・463・462のroleGroupのみnull→none |
+| src/data/target-attributes.test.ts | 全5行×4ROLEの威力、MSL対空/対地パーツ、必要命中数、旧保存ID、MSL DISPENSERのHP差を確認 |
+| MASTER_AUDIT.md / CALCULATION_EVIDENCE.md | noneの意味を確認済み補正なし（元区分0/8）と定義。未反映一覧をMEGAFLOAT12行へ更新 |
+
+全506行をHEADと比較し、差分が対象5行のroleGroupだけであることを検証した。固定ID・順序・表示分類・名前・HP・耐性・isAir・standardDamage・missionVariant・partOfは一致。catalogは変更前コピーと比較し、6モデルのroleGroup以外の全項目が一致。全sourceRefs、除外指定、兵装・パーツも維持した。
+
+掲載311・EXCLUDED195、元定義1459、除外指定284は不変。区分0の既存41行を変更せず、MEGAFLOAT12行の未確認とTLS・UAVT・8AAM・SFFSパーツの既存未確認も維持した。MSL DISPENSER共通505はHP30、[M30]463はHP15のまま別行として保持する。
+
+### 11.2 検証結果
+
+Redでは追加した1テストがID201のroleGroup=nullにより失敗し、既存100テストは成功。6モデルの反映・再生成後は単体101テストが成功した。
+
+5行×4ROLEで基礎MSL40・耐性1・パーツなしが40、対空パーツが44、対地パーツが40となる。BVRAAMのHP40を含め、全対象がパーツなしで1命中。旧保存の5 IDはそのまま復元される。実装自身から期待値を生成せず、基礎40×確認済みROLE1×条件付き1.1/1を固定値で検証した。
+
+`pnpm typecheck`・`pnpm lint`・`pnpm test`（16ファイル・101件）・`pnpm build`・`pnpm test:browser`（Chrome10シナリオ）が成功。`pnpm format:check`・`git diff --check`も成功。配信3ファイルは再生成前後のSHA-256が一致した。PC・スマートフォン相当の既存選択・保存復元・表示切替も成功。ゲーム起動・実測・ゲーム本体/設定/セーブ変更、push・PR作成は行っていない。
+
+## 12. ROLE補正の横並び調査
+
+ユーザー指示により、今回の5行以外に同様の補正なし分類がないかを調査した。対象を全934モデル・全42兵装へ広げ、詳細を[ROLE_SCOPE_AUDIT.md](../../../../docs/analysis/calculation/ROLE_SCOPE_AUDIT.md)、機械可読の抜粋を[ROLE_SCOPE_EVIDENCE.json](../../../../docs/analysis/calculation/ROLE_SCOPE_EVIDENCE.json)に保存した。
+
+| 確認対象 | 結果 |
+| --- | --- |
+| 全モデル | 874件の元区分を確認。31件は資産不足、29件は区分属性を持つLiveGameObject非継承。未解決を0へ補完しない |
+| CDO/native | 1079 CDO全件で読取境界一致。native初期値10クラスの書込命令を現行EXEと照合 |
+| 掲載311行 | 全参照モデルの区分が解決。既存区分0の41行は既にnone。今回5行以外の補正なし分類漏れなし |
+| 配信との差 | MEGAFLOAT12行だけ。区分4は確認済みだが、特殊破壊条件を確認するまで保留 |
+| 武器42件 | 34件（掲載33件）はLiveWeaponBaseまで継承を解決。8AAMと未使用7件はBlueprint定義不足 |
+| 共通ROLE処理 | 現行NPC補正関数に武器ID固有のROLE除外なし。子弾104/105の分岐はROLE後 |
+| 別の適用条件 | 配置のROLE無効フラグ、プレイヤー以外からの攻撃、コンテキスト欠落ではROLEを省略する経路あり。全配置・イベントは未網羅 |
+
+区分8は全9モデルで、そのうち6モデルが今回の5行、1モデルがEXCLUDEDのALCM203、2モデルは未登録。掲載判断や未登録モデルの追加は行わない。enumにある区分9 Heliosは874件の解決済みモデルにはなく、仮の数値や新規行は作らない。
+
+全武器の継承と共通関数を確認したことを、全命中・子兵装・継続攻撃経路の実証とは扱わない。TLS/UAVTの経路と攻撃単位、8AAMの資産不足、配置・イベントによるROLE切替、基準ビルドとの資産差は残る。実ゲーム測定は行っていない。
+
+横並び調査スクリプトの再実行で全報告のSHA-256が一致した。証拠抜粋の入力ハッシュ、Python構文、文書の相対リンクも検証済み。

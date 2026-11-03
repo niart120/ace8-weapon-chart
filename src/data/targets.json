@@ -382,7 +382,7 @@
       "lasmBlast": 1
     },
     "isAir": true,
-    "roleGroup": null,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {
@@ -11040,7 +11040,7 @@
       "lasmBlast": 1
     },
     "isAir": true,
-    "roleGroup": null,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {
@@ -11136,7 +11136,7 @@
       "lasmBlast": 1
     },
     "isAir": true,
-    "roleGroup": null,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {
@@ -11170,7 +11170,7 @@
       "lasmBlast": 1
     },
     "isAir": true,
-    "roleGroup": null,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {
@@ -11202,7 +11202,7 @@
       "lasmBlast": 1
     },
     "isAir": true,
-    "roleGroup": null,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {

@@ -1,0 +1,2388 @@
+{
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "category_counts": {
+    "1": 333,
+    "0": 176,
+    "5": 42,
+    "2": 23,
+    "8": 9,
+    "4": 27,
+    "3": 62,
+    "7": 84,
+    "6": 118,
+    "unresolved": 31,
+    "None": 29
+  },
+  "game_object_enum": {
+    "0": "Category_None",
+    "1": "Category_Plane",
+    "2": "Category_Heli",
+    "3": "Category_Vehicle",
+    "4": "Category_Building",
+    "5": "Category_Battery",
+    "6": "Category_CarrierBattery",
+    "7": "Category_Ship",
+    "8": "ObjectCategory_MSL",
+    "9": "ObjectCategory_Helios",
+    "10": "MAX"
+  },
+  "native_checks": {
+    "LiveAIAirship": {
+      "constructor": "0x15784e010",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x15784e0b2"
+        }
+      },
+      "instructions": [
+        "0x15784e028 call 0x147c55ab0",
+        "0x15784e0a3 xor eax, eax",
+        "0x15784e0b2 mov byte ptr [rbx + 0x10db], 1",
+        "0x15784e0be ret ",
+        "0x15784e0cd xor edx, ecx"
+      ]
+    },
+    "LiveAIArrangementObject": {
+      "constructor": "0x147c55ab0",
+      "writes": {
+        "0x10db": {
+          "value": 0,
+          "address": "0x147c55cbb"
+        }
+      },
+      "instructions": [
+        "0x147c55abd call 0x147c7c6c0",
+        "0x147c55ac2 xor ebp, ebp",
+        "0x147c55cbb mov byte ptr [rdi + 0x10db], bpl"
+      ]
+    },
+    "LiveAIFallingObject": {
+      "constructor": "0x147c7ab00",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c7acab"
+        }
+      },
+      "instructions": [
+        "0x147c7ab09 call 0x147c7c6c0",
+        "0x147c7ab8f call 0x146d0e8b0",
+        "0x147c7ab94 xor edx, edx",
+        "0x147c7ac05 call 0x146d0e960",
+        "0x147c7acab mov byte ptr [rbx + 0x10db], 1",
+        "0x147c7acc1 ret "
+      ]
+    },
+    "LiveAIGameObject": {
+      "constructor": "0x147c7c6c0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c7c8d6"
+        }
+      },
+      "instructions": [
+        "0x147c7c6d8 call 0x147d09b80",
+        "0x147c7c6fa xor r14d, r14d",
+        "0x147c7c8d6 mov word ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAIHeli": {
+      "constructor": "0x147c97bc0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c98017"
+        }
+      },
+      "instructions": [
+        "0x147c97bd2 call 0x147c7c6c0",
+        "0x147c97beb xor esi, esi",
+        "0x147c97f3e call 0x144d2bbc0",
+        "0x147c98017 mov byte ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAILaunchVehicle": {
+      "constructor": "0x147cb4350",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147cb4466"
+        }
+      },
+      "instructions": [
+        "0x147cb4359 call 0x147c55ab0",
+        "0x147cb4365 xor edx, edx",
+        "0x147cb43da call 0x146d0e960",
+        "0x147cb4466 mov byte ptr [rbx + 0x10db], 1",
+        "0x147cb4478 ret "
+      ]
+    },
+    "LiveAIMegafloatConstruction": {
+      "constructor": "0x147e607e0",
+      "writes": {
+        "0x3ac": {
+          "value": 4,
+          "address": "0x147e60895"
+        }
+      },
+      "instructions": [
+        "0x147e607e9 call 0x147c5ade0",
+        "0x147e60863 xor eax, eax",
+        "0x147e60895 mov byte ptr [rbx + 0x3ac], 4",
+        "0x147e608a1 ret "
+      ]
+    },
+    "LiveAIPlane": {
+      "constructor": "0x147cb9ac0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147cba023"
+        }
+      },
+      "instructions": [
+        "0x147cb9ad2 call 0x147c7c6c0",
+        "0x147cb9b0a xor esi, esi",
+        "0x147cb9d86 call 0x144d20f30",
+        "0x147cb9efd call 0x146d2f190",
+        "0x147cb9fef call 0x146d2f190",
+        "0x147cba023 mov byte ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAIUniqueObjectBase": {
+      "constructor": "0x147e5d580",
+      "writes": {
+        "0x10db": {
+          "value": 0,
+          "address": "0x147e5d78f"
+        }
+      },
+      "instructions": [
+        "0x147e5d599 xor r15d, r15d",
+        "0x147e5d60b jmp 0x147e5d635",
+        "0x147e5d611 call 0x14188cb40",
+        "0x147e5d630 call 0x14186fe70",
+        "0x147e5d63c call 0x141abea70",
+        "0x147e5d649 xor r8d, r8d",
+        "0x147e5d64c call 0x141abe920",
+        "0x147e5d6b6 jmp 0x147e5d6e3",
+        "0x147e5d6bf call 0x14188cb40",
+        "0x147e5d6de call 0x14186fe70",
+        "0x147e5d6ea call 0x141abea70",
+        "0x147e5d6f7 xor r8d, r8d",
+        "0x147e5d6fa call 0x141abe920",
+        "0x147e5d705 call 0x147c7c6c0",
+        "0x147e5d78f mov byte ptr [rdi + 0x10db], r15b",
+        "0x147e5d7a4 ret "
+      ]
+    },
+    "LiveGameObject": {
+      "constructor": "0x147d09b80",
+      "writes": {
+        "0x3ac": {
+          "value": 0,
+          "address": "0x147d09ce7"
+        }
+      },
+      "instructions": [
+        "0x147d09ba7 call 0x1448282c0",
+        "0x147d09bac xor esi, esi",
+        "0x147d09ce7 mov word ptr [rdi + 0x3ac], si"
+      ]
+    }
+  },
+  "npc_modifier": {
+    "start": "0x147c82f70",
+    "end": "0x147c83353",
+    "player_class_getter": "0x147076d60",
+    "instructions": [
+      "0x147c82f70 push rbx",
+      "0x147c82f72 push rdi",
+      "0x147c82f73 push r12",
+      "0x147c82f75 push r14",
+      "0x147c82f77 sub rsp, 0x58",
+      "0x147c82f7b mov r12, qword ptr [rsp + 0xa0]",
+      "0x147c82f83 mov rbx, r9",
+      "0x147c82f86 movaps xmmword ptr [rsp + 0x40], xmm6",
+      "0x147c82f8b mov r14, r8",
+      "0x147c82f8e movaps xmm6, xmm1",
+      "0x147c82f91 mov rdi, rcx",
+      "0x147c82f94 call 0x143fb5420",
+      "0x147c82f99 mov rcx, rax",
+      "0x147c82f9c call 0x147ec94e0",
+      "0x147c82fa1 test al, al",
+      "0x147c82fa3 je 0x147c82fe1",
+      "0x147c82fa5 test rbx, rbx",
+      "0x147c82fa8 je 0x147c82fe1",
+      "0x147c82faa mov rcx, rbx",
+      "0x147c82fad call 0x1470bdc90",
+      "0x147c82fb2 test al, al",
+      "0x147c82fb4 je 0x147c82fe1",
+      "0x147c82fb6 call 0x147276a80",
+      "0x147c82fbb mov rdx, qword ptr [rbx + 0x10]",
+      "0x147c82fbf lea r8, [rax + 0x30]",
+      "0x147c82fc3 movsxd rax, dword ptr [rax + 0x38]",
+      "0x147c82fc7 cmp eax, dword ptr [rdx + 0x38]",
+      "0x147c82fca jg 0x147c82fd9",
+      "0x147c82fcc mov rcx, rax",
+      "0x147c82fcf mov rax, qword ptr [rdx + 0x30]",
+      "0x147c82fd3 cmp qword ptr [rax + rcx*8], r8",
+      "0x147c82fd7 je 0x147c82fe1",
+      "0x147c82fd9 mulss xmm6, dword ptr [rbx + 0x1174]",
+      "0x147c82fe1 mov qword ptr [rsp + 0x50], r15",
+      "0x147c82fe6 movaps xmmword ptr [rsp + 0x30], xmm7",
+      "0x147c82feb movss dword ptr [rsp + 0x90], xmm6",
+      "0x147c82ff4 test r14, r14",
+      "0x147c82ff7 je 0x147c832b5",
+      "0x147c82ffd test rbx, rbx",
+      "0x147c83000 je 0x147c832b5",
+      "0x147c83006 call 0x147076d60",
+      "0x147c8300b mov rdx, qword ptr [rbx + 0x10]",
+      "0x147c8300f lea r8, [rax + 0x30]",
+      "0x147c83013 movsxd rax, dword ptr [rax + 0x38]",
+      "0x147c83017 cmp eax, dword ptr [rdx + 0x38]",
+      "0x147c8301a jg 0x147c832b5",
+      "0x147c83020 mov rcx, rax",
+      "0x147c83023 mov rax, qword ptr [rdx + 0x30]",
+      "0x147c83027 cmp qword ptr [rax + rcx*8], r8",
+      "0x147c8302b jne 0x147c832b5",
+      "0x147c83031 movzx eax, byte ptr [rdi + 0x3ac]",
+      "0x147c83038 mov r15, rbx",
+      "0x147c8303b movss xmm7, dword ptr [rip + 0x5610045]",
+      "0x147c83043 mov qword ptr [rsp + 0x88], rsi",
+      "0x147c8304b cmp al, 7",
+      "0x147c8304d je 0x147c8305b",
+      "0x147c8304f cmp al, 6",
+      "0x147c83051 je 0x147c8305b",
+      "0x147c83053 mov rsi, rbx",
+      "0x147c83056 jmp 0x147c831db",
+      "0x147c8305b movss xmm0, dword ptr [r14 + 0x44c]",
+      "0x147c83064 lea r9, [rip - 0x7c8306b]",
+      "0x147c8306b mov qword ptr [rsp + 0x80], rbp",
+      "0x147c83073 movzx ebp, byte ptr [r14 + 0x2b1]",
+      "0x147c8307b mov qword ptr [rsp + 0x98], r13",
+      "0x147c83083 mov r13, qword ptr [rbx + 0x1328]",
+      "0x147c8308a movss dword ptr [rsp + 0x90], xmm0",
+      "0x147c83093 cmp bpl, 0x96",
+      "0x147c83097 jb 0x147c8309d",
+      "0x147c83099 xor al, al",
+      "0x147c8309b jmp 0x147c830b1",
+      "0x147c8309d lea rcx, [rbp*2]",
+      "0x147c830a5 add rcx, rbp",
+      "0x147c830a8 movzx eax, byte ptr [r9 + rcx*2 + 0xe2509c0]",
+      "0x147c830b1 movzx eax, al",
+      "0x147c830b4 lea r8, [rsp + 0x90]",
+      "0x147c830bc imul rdx, rax, 0x1a",
+      "0x147c830c0 mov rcx, r13",
+      "0x147c830c3 movzx edx, word ptr [rdx + r9 + 0xe343718]",
+      "0x147c830cc call 0x147de2de0",
+      "0x147c830d1 mov eax, dword ptr [rip + 0x610a281]",
+      "0x147c830d7 mov rsi, rbx",
+      "0x147c830da cmp eax, dword ptr [rip + 0x610a2a4]",
+      "0x147c830e0 je 0x147c831ae",
+      "0x147c830e6 mov rax, qword ptr [rip + 0x610a2a3]",
+      "0x147c830ed lea rdx, [rip + 0x610a294]",
+      "0x147c830f4 mov ecx, dword ptr [rip + 0x610a29e]",
+      "0x147c830fa test rax, rax",
+      "0x147c830fd cmovne rdx, rax",
+      "0x147c83101 dec ecx",
+      "0x147c83103 and rcx, rbp",
+      "0x147c83106 mov eax, dword ptr [rdx + rcx*4]",
+      "0x147c83109 cmp eax, -1",
+      "0x147c8310c je 0x147c831ae",
+      "0x147c83112 mov rcx, qword ptr [rip + 0x610a237]",
+      "0x147c83119 nop dword ptr [rax]",
+      "0x147c83120 cdqe ",
+      "0x147c83122 lea rax, [rax + rax*4]",
+      "0x147c83126 cmp byte ptr [rcx + rax*4], bpl",
+      "0x147c8312a je 0x147c83137",
+      "0x147c8312c mov eax, dword ptr [rcx + rax*4 + 0xc]",
+      "0x147c83130 cmp eax, -1",
+      "0x147c83133 jne 0x147c83120",
+      "0x147c83135 jmp 0x147c831ae",
+      "0x147c83137 mov eax, dword ptr [rip + 0x610a17b]",
+      "0x147c8313d cmp eax, dword ptr [rip + 0x610a1a1]",
+      "0x147c83143 je 0x147c83198",
+      "0x147c83145 mov rax, qword ptr [rip + 0x610a1a4]",
+      "0x147c8314c lea rdx, [rip + 0x610a195]",
+      "0x147c83153 mov ecx, dword ptr [rip + 0x610a19f]",
+      "0x147c83159 test rax, rax",
+      "0x147c8315c cmovne rdx, rax",
+      "0x147c83160 dec ecx",
+      "0x147c83162 and rcx, rbp",
+      "0x147c83165 mov eax, dword ptr [rdx + rcx*4]",
+      "0x147c83168 cmp eax, -1",
+      "0x147c8316b je 0x147c83198",
+      "0x147c8316d mov r8, qword ptr [rip + 0x610a13c]",
+      "0x147c83174 nop dword ptr [rax]",
+      "0x147c83178 nop dword ptr [rax + rax]",
+      "0x147c83180 cdqe ",
+      "0x147c83182 lea rcx, [rax + rax*8]",
+      "0x147c83186 cmp byte ptr [r8 + rcx*4], bpl",
+      "0x147c8318a lea rdx, [r8 + rcx*4]",
+      "0x147c8318e je 0x147c8319a",
+      "0x147c83190 mov eax, dword ptr [rdx + 0x1c]",
+      "0x147c83193 cmp eax, -1",
+      "0x147c83196 jne 0x147c83180",
+      "0x147c83198 xor edx, edx",
+      "0x147c8319a movzx edx, word ptr [rdx + 0x1a]",
+      "0x147c8319e lea r8, [rsp + 0x90]",
+      "0x147c831a6 mov rcx, r13",
+      "0x147c831a9 call 0x147de2de0",
+      "0x147c831ae movss xmm2, dword ptr [rsp + 0x90]",
+      "0x147c831b7 mov r13, qword ptr [rsp + 0x98]",
+      "0x147c831bf mov rbp, qword ptr [rsp + 0x80]",
+      "0x147c831c7 mulss xmm2, xmm7",
+      "0x147c831cb mulss xmm2, xmm6",
+      "0x147c831cf movss dword ptr [rsp + 0x90], xmm2",
+      "0x147c831d8 movaps xmm6, xmm2",
+      "0x147c831db mov rcx, rdi",
+      "0x147c831de call 0x143fb5420",
+      "0x147c831e3 mov rcx, rax",
+      "0x147c831e6 call 0x147ece530",
+      "0x147c831eb cmp byte ptr [rdi + 0x252a], 0",
+      "0x147c831f2 je 0x147c83228",
+      "0x147c831f4 movzx ecx, byte ptr [rdi + 0x3ac]",
+      "0x147c831fb movss xmm0, dword ptr [rip + 0x561244d]",
+      "0x147c83203 cmp dword ptr [rsi + 0x1358], ecx",
+      "0x147c83209 jle 0x147c83217",
+      "0x147c8320b mov rax, qword ptr [rsi + 0x1350]",
+      "0x147c83212 movss xmm0, dword ptr [rax + rcx*4]",
+      "0x147c83217 mulss xmm0, xmm7",
+      "0x147c8321b mulss xmm6, xmm0",
+      "0x147c8321f movss dword ptr [rsp + 0x90], xmm6",
+      "0x147c83228 movzx edx, byte ptr [r14 + 0x2b1]",
+      "0x147c83230 mov rsi, qword ptr [rsp + 0x88]",
+      "0x147c83238 mov ecx, edx",
+      "0x147c8323a sub ecx, 0x68",
+      "0x147c8323d je 0x147c8329a",
+      "0x147c8323f cmp ecx, 1",
+      "0x147c83242 je 0x147c8329a",
+      "0x147c83244 cmp dl, 2",
+      "0x147c83247 jne 0x147c832b5",
+      "0x147c83249 mov rax, qword ptr [rdi]",
+      "0x147c8324c mov rcx, rdi",
+      "0x147c8324f call qword ptr [rax + 0xae8]",
+      "0x147c83255 mov rcx, qword ptr [r15 + 0x1328]",
+      "0x147c8325c lea r8, [rsp + 0x90]",
+      "0x147c83264 test al, al",
+      "0x147c83266 je 0x147c83293",
+      "0x147c83268 mov edx, 0x72",
+      "0x147c8326d call 0x14724a700",
+      "0x147c83272 movss xmm1, dword ptr [rsp + 0x90]",
+      "0x147c8327b mov rcx, rdi",
+      "0x147c8327e mov r9, rbx",
+      "0x147c83281 mov qword ptr [rsp + 0x20], r12",
+      "0x147c83286 mov r8, r14",
+      "0x147c83289 call 0x147c83360",
+      "0x147c8328e movaps xmm6, xmm0",
+      "0x147c83291 jmp 0x147c832d3",
+      "0x147c83293 mov edx, 0x73",
+      "0x147c83298 jmp 0x147c8326d",
+      "0x147c8329a mov r9, rbx",
+      "0x147c8329d mov qword ptr [rsp + 0x20], r12",
+      "0x147c832a2 mov r8, r14",
+      "0x147c832a5 movaps xmm1, xmm6",
+      "0x147c832a8 mov rcx, rdi",
+      "0x147c832ab call 0x147c83360",
+      "0x147c832b0 movaps xmm6, xmm0",
+      "0x147c832b3 jmp 0x147c832d3",
+      "0x147c832b5 mov r9, rbx",
+      "0x147c832b8 mov qword ptr [rsp + 0x20], r12",
+      "0x147c832bd mov r8, r14",
+      "0x147c832c0 movaps xmm1, xmm6",
+      "0x147c832c3 mov rcx, rdi",
+      "0x147c832c6 call 0x147c83360",
+      "0x147c832cb movaps xmm6, xmm0",
+      "0x147c832ce test rbx, rbx",
+      "0x147c832d1 je 0x147c83339",
+      "0x147c832d3 cmp byte ptr [rbx + 0x3ad], 0x18",
+      "0x147c832da jne 0x147c83336",
+      "0x147c832dc movd xmm0, dword ptr [rdi + 0xda8]",
+      "0x147c832e4 cvtdq2ps xmm0, xmm0",
+      "0x147c832e7 mulss xmm0, dword ptr [rip + 0x561002d]",
+      "0x147c832ef comiss xmm6, xmm0",
+      "0x147c832f2 jb 0x147c83326",
+      "0x147c832f4 mov rcx, rbx",
+      "0x147c832f7 call 0x1470bdc90",
+      "0x147c832fc test al, al",
+      "0x147c832fe je 0x147c83336",
+      "0x147c83300 mov rax, qword ptr [rdi]",
+      "0x147c83303 mov rcx, rdi",
+      "0x147c83306 call qword ptr [rax + 0xac0]",
+      "0x147c8330c test al, al",
+      "0x147c8330e je 0x147c83336",
+      "0x147c83310 mov rax, qword ptr [rbx]",
+      "0x147c83313 mov rcx, rbx",
+      "0x147c83316 call qword ptr [rax + 0xcb0]",
+      "0x147c8331c cmp rax, rdi",
+      "0x147c8331f je 0x147c83336",
+      "0x147c83321 xorps xmm0, xmm0",
+      "0x147c83324 jmp 0x147c83339",
+      "0x147c83326 cmp byte ptr [r12 + 0x18], 3",
+      "0x147c8332c je 0x147c83336",
+      "0x147c8332e mulss xmm6, dword ptr [rip + 0x5610412]",
+      "0x147c83336 movaps xmm0, xmm6",
+      "0x147c83339 movaps xmm7, xmmword ptr [rsp + 0x30]",
+      "0x147c8333e mov r15, qword ptr [rsp + 0x50]",
+      "0x147c83343 movaps xmm6, xmmword ptr [rsp + 0x40]",
+      "0x147c83348 add rsp, 0x58",
+      "0x147c8334c pop r14",
+      "0x147c8334e pop r12",
+      "0x147c83350 pop rdi",
+      "0x147c83351 pop rbx",
+      "0x147c83352 ret "
+    ]
+  },
+  "weapons": [
+    {
+      "id": 1,
+      "name": "MSL",
+      "category": "MSL",
+      "chain": [
+        "BP_plwp_msl_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 2,
+      "name": "MSL (Rookie)",
+      "category": "MSL",
+      "chain": [
+        "BP_plwp_msl_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 3,
+      "name": "2AAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_2aam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 4,
+      "name": "4AAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_4aam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 5,
+      "name": "6AAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_6aam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 6,
+      "name": "8AAM",
+      "category": "MSL.AIR",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 7,
+      "name": "HCAA",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_hcaa_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 8,
+      "name": "HPAA",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_hpaa_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 9,
+      "name": "HVAA",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_hvaa_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 10,
+      "name": "LAAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_laam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 11,
+      "name": "QAAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_qaam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 12,
+      "name": "SAAM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_saam_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 13,
+      "name": "SASM",
+      "category": "MSL.AIR",
+      "chain": [
+        "BP_plwp_sasm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 14,
+      "name": "4AGM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_4agm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 15,
+      "name": "6AGM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_6agm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 16,
+      "name": "8AGM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_8agm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 17,
+      "name": "LACM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_lacm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 18,
+      "name": "LAGM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_lagm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 19,
+      "name": "LASM",
+      "category": "MSL.GND",
+      "chain": [
+        "BP_plwp_lasm_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 20,
+      "name": "GPB",
+      "category": "BOMB",
+      "chain": [
+        "BP_plwp_gpb_a0_C",
+        "BP_wp_Bomb_BaseClass_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 21,
+      "name": "SFFS",
+      "category": "BOMB",
+      "chain": [
+        "BP_SFFS_Child_Bomb_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 22,
+      "name": "SOD",
+      "category": "BOMB",
+      "chain": [
+        "BP_SOD_Child_Bomb_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 23,
+      "name": "UGB",
+      "category": "BOMB",
+      "chain": [
+        "BP_plwp_ugb_a0_C",
+        "BP_wp_Bomb_BaseClass_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 24,
+      "name": "UGBL",
+      "category": "BOMB",
+      "chain": [
+        "BP_plwp_ugbl_r0_C",
+        "BP_wp_Bomb_BaseClass_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 25,
+      "name": "XSDB",
+      "category": "BOMB",
+      "chain": [
+        "BP_plwp_xsdb_a0_C",
+        "LiveBomb",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 26,
+      "name": "GUN TypeA",
+      "category": "GUN",
+      "chain": [
+        "BP_plwp_gun_x0_C",
+        "BP_wp_gun_BaseClass_C",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 27,
+      "name": "GUN TypeB",
+      "category": "GUN",
+      "chain": [
+        "BP_plwp_gun_x1_C",
+        "BP_plwp_gun_x0_C",
+        "BP_wp_gun_BaseClass_C",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 28,
+      "name": "GUN TypeC",
+      "category": "GUN",
+      "chain": [
+        "BP_plwp_gun_x2_C",
+        "BP_plwp_gun_x0_C",
+        "BP_wp_gun_BaseClass_C",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 29,
+      "name": "MGP",
+      "category": "GUN",
+      "chain": [
+        "BP_plwp_mgp_a0_C",
+        "BP_wp_gun_BaseClass_C",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 30,
+      "name": "RKT",
+      "category": "RKT",
+      "chain": [
+        "BP_plwp_rkt_a0_C",
+        "BP_wp_msl_BaseClass_C",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 31,
+      "name": "EMLB",
+      "category": "OTHER",
+      "chain": [
+        "BP_plwp_eml_x3_C",
+        "BP_plwp_eml_x0_C",
+        "LiveEMLBullet",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 32,
+      "name": "MPBM",
+      "category": "OTHER",
+      "chain": [
+        "BP_plwp_mpbm_x0_C",
+        "LiveMissile_FinallySpawnWeapon",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 33,
+      "name": "TLS [s]",
+      "category": "OTHER",
+      "chain": [
+        "BP_plwp_tls_x0_C",
+        "BP_wp_tls_BaseClass_C",
+        "LiveTLSLaserWeapon",
+        "LiveAttachedInstantWeapon",
+        "LiveAttachedWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 34,
+      "name": "UAVT",
+      "category": "OTHER",
+      "chain": [
+        "BP_plwp_4uav_x0_C",
+        "BP_wp_uav_BaseClass_C",
+        "LiveWeaponUAV",
+        "LiveMissile",
+        "LiveExplosiveWeapon",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 35,
+      "name": "EML",
+      "category": "UNUSED",
+      "chain": [
+        "BP_plwp_eml_x0_C",
+        "LiveEMLBullet",
+        "LiveBullet",
+        "LiveWeaponBase",
+        "LiveObjectPoolItem",
+        "Actor",
+        "Object"
+      ],
+      "error": null
+    },
+    {
+      "id": 36,
+      "name": "PLSL",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 37,
+      "name": "PGUN",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 38,
+      "name": "ADMM",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 39,
+      "name": "EMLT",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 40,
+      "name": "UAVG",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 41,
+      "name": "UAVP",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    },
+    {
+      "id": 42,
+      "name": "FAEB",
+      "category": "UNUSED",
+      "chain": [],
+      "error": "Missing weapon definition/parent"
+    }
+  ],
+  "full_local_report_sha256": "fc9d3bd03e83eb1dd9aa0c7d58cc0ddba5c6933784ad75f6b8525d30b33927c9",
+  "scope": {
+    "models": 934,
+    "decoded_classes": 1079,
+    "published_targets": 311
+  },
+  "neutral_published_targets": [
+    {
+      "id": 201,
+      "name": "MSL PALLET《C-130》",
+      "display_category": "AIRCRAFT",
+      "roleGroup": "none",
+      "models": ["OP0059_rpdna"],
+      "source_categories": [8]
+    },
+    {
+      "id": 202,
+      "name": "MSL PALLET《C-130》",
+      "display_category": "AIRCRAFT",
+      "roleGroup": "none",
+      "models": ["OP0059_rpdnb", "OP0059_rpdnc"],
+      "source_categories": [0]
+    },
+    {
+      "id": 380,
+      "name": "DISP. RAIL GUN《PODARGE》",
+      "display_category": "AIRCRAFT",
+      "roleGroup": "none",
+      "models": ["GR035_ldds_MainCannon"],
+      "source_categories": [0]
+    },
+    {
+      "id": 275,
+      "name": "STS SHUTTLE",
+      "display_category": "AIRCRAFT",
+      "roleGroup": "none",
+      "models": ["OP0057_sstb"],
+      "source_categories": [0]
+    },
+    {
+      "id": 460,
+      "name": "LASER DESIGNATOR《X-40 NOSE UNIT》",
+      "display_category": "AIRCRAFT",
+      "roleGroup": "none",
+      "models": ["OP0038_ep40_LaserPod"],
+      "source_categories": [0]
+    },
+    {
+      "id": 483,
+      "name": "AA GUN《TRIUMPHANT》",
+      "display_category": "SHIP",
+      "roleGroup": "none",
+      "models": ["VE022_grifn_AAGUN"],
+      "source_categories": [0]
+    },
+    {
+      "id": 318,
+      "name": "COMMAND POST",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["BPD_GreenTent02_HQ"],
+      "source_categories": [0]
+    },
+    {
+      "id": 484,
+      "name": "DISP. RAIL GUN《TRIUMPHANT》",
+      "display_category": "SHIP",
+      "roleGroup": "none",
+      "models": ["VE022_grifn_RailGun"],
+      "source_categories": [0]
+    },
+    {
+      "id": 327,
+      "name": "NAVAL GUN《LAND AEGIS》",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["GR034_ldag_MainCannon_MS25"],
+      "source_categories": [0]
+    },
+    {
+      "id": 313,
+      "name": "DISP. RAIL GUN《LAND DESTROYER》",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["GR035_ldds_MainCannon"],
+      "source_categories": [0]
+    },
+    {
+      "id": 314,
+      "name": "DISP. RAIL GUN《LAND DESTROYER》",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["GR035_ldds_MainCannon_MS24"],
+      "source_categories": [0]
+    },
+    {
+      "id": 39,
+      "name": "RADAR TOWER",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["BPD_RadarTower01", "BPD_RadarTower02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 424,
+      "name": "RAIL GUN TURRET《MEGAFLOAT》",
+      "display_category": "GROUND",
+      "roleGroup": "none",
+      "models": ["Megafloat_MainCannnon"],
+      "source_categories": [0]
+    },
+    {
+      "id": 486,
+      "name": "LAUNCH TUBE《TRIUMPHANT》",
+      "display_category": "SHIP",
+      "roleGroup": "none",
+      "models": ["VE022_grifn_SLCM"],
+      "source_categories": [0]
+    },
+    {
+      "id": 485,
+      "name": "NAVAL GUN《TRIUMPHANT》",
+      "display_category": "SHIP",
+      "roleGroup": "none",
+      "models": ["VE022_grifn_ShipGun"],
+      "source_categories": [0]
+    },
+    {
+      "id": 472,
+      "name": "VLS《TRIUMPHANT》",
+      "display_category": "SHIP",
+      "roleGroup": "none",
+      "models": [
+        "VE022_grifn_VLS_C1",
+        "VE022_grifn_VLS_C2",
+        "VE022_grifn_VLS_L1",
+        "VE022_grifn_VLS_L2",
+        "VE022_grifn_VLS_L3",
+        "VE022_grifn_VLS_R1",
+        "VE022_grifn_VLS_R2",
+        "VE022_grifn_VLS_R3"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 480,
+      "name": "AMMO BUNKER",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_MunitionsDepot01"],
+      "source_categories": [0]
+    },
+    {
+      "id": 115,
+      "name": "BARRACKS",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_Barracks01"],
+      "source_categories": [0]
+    },
+    {
+      "id": 329,
+      "name": "BREACH POINT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_OctBase02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 276,
+      "name": "CONTROL CENTER",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_ControlCenter"],
+      "source_categories": [0]
+    },
+    {
+      "id": 117,
+      "name": "CONTROL TOWER",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_ControlTower"],
+      "source_categories": [0]
+    },
+    {
+      "id": 110,
+      "name": "CSP TOWER",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_CondenserTower"],
+      "source_categories": [0]
+    },
+    {
+      "id": 17,
+      "name": "GAS TANK",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": [
+        "BPD_GasTank01",
+        "BPD_GasTank01_Megafloat",
+        "BPD_GasTank01_Smoke",
+        "BPD_GasTank02"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 339,
+      "name": "GAS TANK",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_GasTank01_Destruction", "BPD_GasTank02_Destruction"],
+      "source_categories": [0]
+    },
+    {
+      "id": 96,
+      "name": "HANGAR",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": [
+        "BPD_HangerL01",
+        "BPD_HangerL01_Scale08",
+        "BPD_HangerL01_Scale95",
+        "BPD_HangerL02",
+        "BPD_HangerM01",
+        "BPD_HangerM02",
+        "BPD_HangerM02_scale09"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 482,
+      "name": "HARDENED DEPOT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_MunitionsDeptTunnel_DamagePoint"],
+      "source_categories": [0]
+    },
+    {
+      "id": 111,
+      "name": "HELIOSTAT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_Mirror01", "BPD_Mirror02", "BPD_Mirror03"],
+      "source_categories": [0]
+    },
+    {
+      "id": 431,
+      "name": "MEGAFLOAT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["Megafloat_Center"],
+      "source_categories": [0]
+    },
+    {
+      "id": 502,
+      "name": "TURRET BASE《MEGAFLOAT》",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["Megafloat_MainCannon_Core"],
+      "source_categories": [0]
+    },
+    {
+      "id": 425,
+      "name": "TURRET BASE《MEGAFLOAT》 [M27]",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["Megafloat_MainCannon_Core"],
+      "source_categories": [0]
+    },
+    {
+      "id": 16,
+      "name": "OIL TANK",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": [
+        "BPD_OilTank01",
+        "BPD_OilTank01S",
+        "BPD_OilTank01Smoke",
+        "BPD_OilTank02",
+        "BPD_OilTank02S"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 132,
+      "name": "OIL TANK",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": [
+        "BPD_OilTank01S_Destruction",
+        "BPD_OilTank01_Destruction",
+        "BPD_OilTank02S_Destruction",
+        "BPD_OilTank02_Destruction"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 114,
+      "name": "PIPELINE",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_Plant01"],
+      "source_categories": [0]
+    },
+    {
+      "id": 113,
+      "name": "REFINERY",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_OilRefinery01", "BPD_OilRefinery02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 119,
+      "name": "SMOKESTACK",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BDF_Chimney001"],
+      "source_categories": [0]
+    },
+    {
+      "id": 112,
+      "name": "SOLAR PANEL",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_SolarPanelSet"],
+      "source_categories": [0]
+    },
+    {
+      "id": 328,
+      "name": "STRONGPOINT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_OctBase01"],
+      "source_categories": [0]
+    },
+    {
+      "id": 89,
+      "name": "TENT",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_GreenTent01", "BPD_GreenTent02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 116,
+      "name": "WAREHOUSE",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_Warehouse01", "BPD_Warehouse02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 38,
+      "name": "WATCHTOWER",
+      "display_category": "STRUCTURE",
+      "roleGroup": "none",
+      "models": ["BPD_WatchTower", "BPD_WatchTower02"],
+      "source_categories": [0]
+    },
+    {
+      "id": 264,
+      "name": "BVRAAM",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": ["OP0053_ulraam"],
+      "source_categories": [8]
+    },
+    {
+      "id": 505,
+      "name": "MSL DISPENSER",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": ["OP0037_mmslct", "OP0037_mmslct_FirstShot"],
+      "source_categories": [8]
+    },
+    {
+      "id": 463,
+      "name": "MSL DISPENSER [M30]",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": ["OP0037_mmslct", "OP0037_mmslct_FirstShot"],
+      "source_categories": [8]
+    },
+    {
+      "id": 462,
+      "name": "SLCM",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": ["OP0036_slcm", "OP0039_slcmp"],
+      "source_categories": [8]
+    },
+    {
+      "id": 156,
+      "name": "SWARM DRONES",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": [
+        "OP0026_swdr_con_MS10",
+        "OP0026_swdr_con_MS11_01",
+        "OP0026_swdr_con_MS11_02",
+        "OP0026_swdr_con_MS11_03",
+        "OP0026_swdr_con_MS11_04",
+        "OP0026_swdr_con_MS20",
+        "OP0026_swdr_sys_MS10",
+        "OP0026_swdr_sys_MS11",
+        "OP0026_swdr_sys_MS20"
+      ],
+      "source_categories": [0]
+    },
+    {
+      "id": 465,
+      "name": "SWARM DRONES",
+      "display_category": "OTHER",
+      "roleGroup": "none",
+      "models": ["OP0030_swdrx_con_MS30", "OP0030_swdrx_sys_MS30"],
+      "source_categories": [0]
+    }
+  ],
+  "category8_models": {
+    "OP0036_slcm": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0036_slcm/CP/BP_OP0036_slcm_CP",
+        "asset": "BP_OP0036_slcm_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0036_slcm_CP_C",
+        "BP_OP0036_slcm_Base_C",
+        "LiveAIGrifnMainMissile",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0037_mmslct": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0037_mmslct/CP/BP_OP0037_mmslct_CP",
+        "asset": "BP_OP0037_mmslct_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0037_mmslct_CP_C",
+        "BP_OP0037_mmslct_Base_C",
+        "LiveAIGrifnMicroMissileCanister",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0037_mmslct_FirstShot": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0037_mmslct/CP/BP_OP0037_mmslct_CP_FirstShot",
+        "asset": "BP_OP0037_mmslct_CP_FirstShot_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0037_mmslct_CP_FirstShot_C",
+        "BP_OP0037_mmslct_CP_C",
+        "BP_OP0037_mmslct_Base_C",
+        "LiveAIGrifnMicroMissileCanister",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0039_slcmp": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0039_slcmp/CP/BP_OP0039_slcmp_CP",
+        "asset": "BP_OP0039_slcmp_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0039_slcmp_CP_C",
+        "BP_OP0039_slcmp_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0047_lasm": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0047_lasm/CP/BP_OP0047_lasm_CP",
+        "asset": "BP_OP0047_lasm_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0047_lasm_CP_C",
+        "BP_OP0047_lasm_Base_C",
+        "LiveAILadonAntiShipMissile",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": null
+    },
+    "OP0053_ulraam": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0053_ulraam/CP/BP_OP0053_ulraam_CP",
+        "asset": "BP_OP0053_ulraam_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0053_ulraam_CP_C",
+        "BP_OP0053_ulraam_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0059_rpdna": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0054_c130/rpdn/Base/BP_OP0059_rpdna_Base",
+        "asset": "BP_OP0059_rpdna_Base_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0059_rpdna_Base_C",
+        "LiveAIRpdnCanister",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": "none"
+    },
+    "OP0060_lacm": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0060_lacm/CP/BP_OP0060_lacm_CP",
+        "asset": "BP_OP0060_lacm_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0060_lacm_CP_C",
+        "BP_OP0060_lacm_Base_C",
+        "LiveAIRpdnMissile",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": null
+    },
+    "OP0061_mop": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0061_mop/CP/BP_OP0061_mop_CP",
+        "asset": "BP_OP0061_mop_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0061_mop_CP_C",
+        "BP_OP0061_mop_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "errors": [],
+      "category": 8,
+      "isAir": true,
+      "catalog_category": 8,
+      "catalog_roleGroup": null
+    }
+  },
+  "unresolved_models": {
+    "GR036_ldbs1_Thruster_R1": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Gadget/G6510/Weapon/BP_TMP_GR036_ldbs1_Thruster_R1",
+        "asset": "BP_TMP_GR036_ldbs1_Thruster_R1_C",
+        "subpath": ""
+      },
+      "chain": ["BP_TMP_GR036_ldbs1_Thruster_R1_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_TMP_GR036_ldbs1_Thruster_R1_C",
+          "reason": "KeyError: 'BP_TMP_GR036_ldbs1_Thruster_R1'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_Thruster_R2": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Gadget/G6510/Weapon/BP_TMP_GR036_ldbs1_Thruster_R2",
+        "asset": "BP_TMP_GR036_ldbs1_Thruster_R2_C",
+        "subpath": ""
+      },
+      "chain": ["BP_TMP_GR036_ldbs1_Thruster_R2_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_TMP_GR036_ldbs1_Thruster_R2_C",
+          "reason": "KeyError: 'BP_TMP_GR036_ldbs1_Thruster_R2'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForLCAC_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_01",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_01_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForLCAC_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_02",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_02_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForLCAC_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForPlayer_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_01",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_01_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForPlayer_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_02",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_02_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_ForPlayer_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForGround_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_01",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_01_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForGround_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR036_ldbs1_LongRange_ForGround_02_First": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_First",
+        "asset": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_First_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_First_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_First_C",
+          "reason": "KeyError: 'BP_GR036_ldbs1_MainCannon_LongRange_ms06_Ground_02_First'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer",
+        "asset": "BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer_C",
+          "reason": "KeyError: 'BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForPlayer'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy",
+        "asset": "BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy_C",
+          "reason": "KeyError: 'BP_GR038_ldbs3_MainCannon_LongRange_ms18_ForDummy'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Weapons/LdbsMainGun/BP_GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer",
+        "asset": "BP_GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer_C",
+        "subpath": ""
+      },
+      "chain": ["BP_GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer_C",
+          "reason": "KeyError: 'BP_GR038_ldbs3_MainCannon_LongRange_ms23_ForPlayer'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BDF_WallH005P001_Replace": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/BDF/BP_BDF_WallH005P001_Replace",
+        "asset": "BP_BDF_WallH005P001_Replace_C",
+        "subpath": ""
+      },
+      "chain": ["BP_BDF_WallH005P001_Replace_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_BDF_WallH005P001_Replace_C",
+          "reason": "KeyError: 'BP_BDF_Base_Replace'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BDF_WallH007P001_Replace": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/BDF/BP_BDF_WallH007P001_Replace",
+        "asset": "BP_BDF_WallH007P001_Replace_C",
+        "subpath": ""
+      },
+      "chain": ["BP_BDF_WallH007P001_Replace_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_BDF_WallH007P001_Replace_C",
+          "reason": "KeyError: 'BP_BDF_Base_Replace'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BDF_WallH014P002_Replace": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/BDF/BP_BDF_WallH014P002_Replace",
+        "asset": "BP_BDF_WallH014P002_Replace_C",
+        "subpath": ""
+      },
+      "chain": ["BP_BDF_WallH014P002_Replace_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_BDF_WallH014P002_Replace_C",
+          "reason": "KeyError: 'BP_BDF_Base_Replace'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Plane": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/BP_AI_Dummy_Plane",
+        "asset": "BP_AI_Dummy_Plane_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Plane_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Plane_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Plane'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Ground": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/BP_AI_Dummy_Ground",
+        "asset": "BP_AI_Dummy_Ground_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Ground_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Ground_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Ground'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Ground_MS07_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS07/BP_AI_Dummy_Ground_MS07_01",
+        "asset": "BP_AI_Dummy_Ground_MS07_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Ground_MS07_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Ground_MS07_01_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Ground_MS07_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Ground_MS07_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS07/BP_AI_Dummy_Ground_MS07_02",
+        "asset": "BP_AI_Dummy_Ground_MS07_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Ground_MS07_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Ground_MS07_02_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Ground_MS07_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Ground_MS07_03": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS07/BP_AI_Dummy_Ground_MS07_03",
+        "asset": "BP_AI_Dummy_Ground_MS07_03_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Ground_MS07_03_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Ground_MS07_03_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Ground_MS07_03'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_Ground_MS20": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS20/BP_AI_Dummy_Ground_MS20",
+        "asset": "BP_AI_Dummy_Ground_MS20_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Ground_MS20_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Ground_MS20_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Ground_MS20'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_Plane": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/BP_AI_Dummy_Relative_Air",
+        "asset": "BP_AI_Dummy_Relative_Air_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Air_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Air_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Air'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_Ground": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/BP_AI_Dummy_Relative_Ground",
+        "asset": "BP_AI_Dummy_Relative_Ground_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Ground_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Ground_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Ground'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_WithRotation": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/BP_DummyRelative_WithRotation",
+        "asset": "BP_DummyRelative_WithRotation_C",
+        "subpath": ""
+      },
+      "chain": ["BP_DummyRelative_WithRotation_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_DummyRelative_WithRotation_C",
+          "reason": "KeyError: 'BP_DummyRelative_WithRotation'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_WithRotation_MS15": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS15/BP_DummyRelative_WithRotation_MS15",
+        "asset": "BP_DummyRelative_WithRotation_MS15_C",
+        "subpath": ""
+      },
+      "chain": ["BP_DummyRelative_WithRotation_MS15_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_DummyRelative_WithRotation_MS15_C",
+          "reason": "KeyError: 'BP_DummyRelative_WithRotation_MS15'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_WithRotation_MS18_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS18/BP_DummyRelative_WithRotation_MS18_01",
+        "asset": "BP_DummyRelative_WithRotation_MS18_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_DummyRelative_WithRotation_MS18_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_DummyRelative_WithRotation_MS18_01_C",
+          "reason": "KeyError: 'BP_DummyRelative_WithRotation_MS18_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "AI_Dummy_rel_WithRotation_MS18_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS18/BP_DummyRelative_WithRotation_MS18_02",
+        "asset": "BP_DummyRelative_WithRotation_MS18_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_DummyRelative_WithRotation_MS18_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_DummyRelative_WithRotation_MS18_02_C",
+          "reason": "KeyError: 'BP_DummyRelative_WithRotation_MS18_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BP_AI_Dummy_Relative_Air_MS15_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS15/BP_AI_Dummy_Relative_Air_MS15_01",
+        "asset": "BP_AI_Dummy_Relative_Air_MS15_01_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Air_MS15_01_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Air_MS15_01_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Air_MS15_01'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BP_AI_Dummy_Relative_Air_MS15_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS15/BP_AI_Dummy_Relative_Air_MS15_02",
+        "asset": "BP_AI_Dummy_Relative_Air_MS15_02_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Air_MS15_02_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Air_MS15_02_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Air_MS15_02'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BP_AI_Dummy_Relative_Air_MS15_03": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS15/BP_AI_Dummy_Relative_Air_MS15_03",
+        "asset": "BP_AI_Dummy_Relative_Air_MS15_03_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Air_MS15_03_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Air_MS15_03_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Air_MS15_03'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    },
+    "BP_AI_Dummy_Relative_Air_MS15_04": {
+      "blueprint": {
+        "package": "/Game/Blueprints/AI/Dummy/MS15/BP_AI_Dummy_Relative_Air_MS15_04",
+        "asset": "BP_AI_Dummy_Relative_Air_MS15_04_C",
+        "subpath": ""
+      },
+      "chain": ["BP_AI_Dummy_Relative_Air_MS15_04_C"],
+      "overrides": {},
+      "errors": [
+        {
+          "class": "BP_AI_Dummy_Relative_Air_MS15_04_C",
+          "reason": "KeyError: 'BP_AI_Dummy_Relative_Air_MS15_04'"
+        },
+        {
+          "reason": "Native inheritance incomplete"
+        }
+      ],
+      "category": null,
+      "isAir": null,
+      "catalog_category": null,
+      "catalog_roleGroup": null
+    }
+  },
+  "deferred_target_ids": [418, 423, 430, 420, 422, 429, 500, 501, 419, 421, 503, 426],
+  "input_sha256": {
+    "docs/analysis/calculation/audit_role_scope.py": "14596e7cd42bf730213de4024f49d00354be2e884c10eb403e870aa25e98496f",
+    "docs/analysis/calculation/investigate_target_attributes.py": "c231c6817dcfd949bbca0d532a4a61e69734913f1253a46bd668c22385620103",
+    "docs/initial/ref/tables/DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs/initial/ref/tables/DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "docs/initial/ref/tables/blueprint_weapons.json": "00c68022645ec330b91538991d5fe2e990c8bbde7409aabeacf4838b942873d0",
+    "data/local/native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data/local/current-native/indexes/native_classes.json": "bfb224a6a3c3ee5874f8e7eff6f2161638499f7f1a4ba070996c0773deedc7f6",
+    "data/local/current-native/indexes/native_enums.json": "0272870bfb51f9652cfd09a2494ab56b69f7ccb6cdb6c4793d1fcc647c4f2f37"
+  }
+}

@@ -2,7 +2,7 @@
 
 更新日: 2026-11-03。数値は同梱のbuild 25201480の抽出表。実ゲーム測定なし。
 
-全兵装42件（掲載34・UNUSED8）、全目標506行（掲載311・EXCLUDED195、固定ID・件数の基準HEAD `9342e63`、24行の属性反映後）。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
+全兵装42件（掲載34・UNUSED8）、全目標506行（掲載311・EXCLUDED195、固定ID・件数の基準HEAD `9342e63`、24行の属性および区分8の5行反映後）。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
 
 ## 掲載範囲と固定ID
 
@@ -29,11 +29,10 @@ TLSは威力40・継続18・初回遅延0.05000000074505806・間隔0.4000000059
 
 SFFS子弾（105）はグループマッピングの範囲外、SOD子弾（104）はBombPower（124）への対応を確認。SFFSの親から子へのパーツ転送経路は旧ビルドで未確認のため、BOMB.POW+選択時だけ `?`。パーツなしは子弾40を使用する。
 
-ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的なnone区分で保持する。未解決の区分をnoneや1へ補完しない。以下は**配信データで未確認扱いの17行**。local_003で41行の静的属性を確認し、承認済み24行を反映した。残る区分8の5行とMEGAFLOAT系12行は未反映。[調査結果と残件](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)を参照。isAirだけが未確認なら通常MSLの条件付きパーツを選択していない計算は継続できる。
+ROLEのnoneは確認済みの補正なしを表す。元区分0（配列添字0=100）と区分8（8要素配列の範囲外=100）をcatalog・証拠で区別したまま倍率1を共有する。未解決の区分をnoneや1へ補完しない。以下は**配信データで未確認扱いの12行**。local_003で41行の静的属性を確認し、承認済み24行と区分8の5行を反映した。MEGAFLOAT系12行は未反映。[調査結果と残件](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)を参照。isAirだけが未確認なら通常MSLの条件付きパーツを選択していない計算は継続できる。
 
 | ID | 目標 | 未確認 |
 | ---: | --- | --- |
-| 201 | MSL PALLET《C-130》 | roleGroup |
 | 418 | MEGAFLOAT | isAir, roleGroup, standardDamage |
 | 423 | MEGAFLOAT | isAir, roleGroup, standardDamage |
 | 430 | FUSION REACTOR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
@@ -46,10 +45,6 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 421 | PILLAR《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
 | 503 | SHUTTER《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
 | 426 | SHUTTER《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
-| 264 | BVRAAM | roleGroup |
-| 505 | MSL DISPENSER | roleGroup |
-| 463 | MSL DISPENSER [M30] | roleGroup |
-| 462 | SLCM | roleGroup |
 
 ### 通常・爆風耐性が未確認の共通行（Q002で非表示）
 
@@ -112,6 +107,13 @@ standardDamage=falseの全13行は、今回全てLiveAIGameObjectへの継承を
 
 ## local_003の承認済み24行の反映
 
-30モデルの確認値を生成catalogへ反映し、24行のisAir・17行のroleGroup・CH-47のstandardDamageを更新した。全固定ID・表示分類・名前・HP・耐性・任務差分・親子関係・出典は維持。掲載311行・EXCLUDED195行は変わらない。上の未確認一覧は残る17行へ更新した（isAir未確認12行、roleGroup未確認17行、standardDamage=false 12行）。
+30モデルの確認値を生成catalogへ反映し、24行のisAir・17行のroleGroup・CH-47のstandardDamageを更新した。全固定ID・表示分類・名前・HP・耐性・任務差分・親子関係・出典は維持。掲載311行・EXCLUDED195行は変わらない。この時点の未確認は17行（isAir未確認12行、roleGroup未確認17行、standardDamage=false 12行）だった。現在の一覧は後続の区分8対応を反映している。
 
 CH-47はクラス名の大小文字による読取失敗を解消したため、既存の通常目標と同じ判定基準へ戻した。区分8の5行とMEGAFLOAT系12行の配信値は変更していない。単体100テスト、Chrome10シナリオ、型検査・Lint・整形・ビルド成功。配信3ファイルの再生成一致を確認。詳細は[local_003の9節](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
+
+
+## local_003 区分8の5行反映と横並び監査（2026-11-03）
+
+201・264・505・463・462のroleGroupのみをnullからnoneへ更新した。6モデルの元category=8は保持。固定ID・HP・耐性・isAir・standardDamage・任務差分などは不変。初回41行のうち29行が反映済みで、未反映はMEGAFLOAT12行（isAir/roleGroup未確認、standardDamage=false）となった。
+
+934モデルと42兵装を横並び調査した。掲載311行では、区分0の既存41行は既にnoneで、今回5行以外の補正なし分類漏れは見つからなかった。NPC共通のROLE処理に武器ID固有の除外分岐はないが、配置での無効化・攻撃者の条件・特殊経路の未確認を区別する。[適用範囲監査](ROLE_SCOPE_AUDIT.md)に全件確認の範囲・資産不足・残件を記録した。
