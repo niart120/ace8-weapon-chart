@@ -17,11 +17,11 @@
 | 分類 | 行数 |
 | --- | ---: |
 | AIRCRAFT | 132 |
-| GROUND | 78 |
+| GROUND | 72 |
 | SHIP | 59 |
 | STRUCTURE | 43 |
 | OTHER | 8 |
-| EXCLUDED | 186 |
+| EXCLUDED | 192 |
 
 ## 未確認項目
 
@@ -47,16 +47,11 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 459 | X-40 NOSE UNIT | isAir |
 | 106 | LAND AEGIS | isAir, roleGroup |
 | 315 | LAND AEGIS [M23] | isAir, roleGroup |
-| 147 | LAND BATTLESHIP 1 | isAir, roleGroup |
-| 371 | LAND BATTLESHIP 1 | isAir, roleGroup |
-| 330 | LAND BATTLESHIP 1 [M24] | isAir, roleGroup |
 | 151 | SUB CATERPILLAR《LAND BATTLESHIP 1》 | isAir, roleGroup |
 | 154 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup, standardDamage |
 | 488 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup |
 | 153 | THRUSTER《LAND BATTLESHIP 1》 [M9] | isAir, roleGroup |
 | 155 | VLS《LAND BATTLESHIP 1》 | isAir, roleGroup |
-| 494 | LAND BATTLESHIP 2 | isAir, roleGroup |
-| 247 | LAND BATTLESHIP 2 [M19] | isAir, roleGroup |
 | 249 | AA GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 251 | BREACH《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 252 | CIWS《LAND BATTLESHIP 2》 | isAir, roleGroup |
@@ -64,7 +59,6 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 255 | MAIN GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 256 | SAM《LAND BATTLESHIP 2》 | isAir, roleGroup |
 | 258 | VLS《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 226 | LAND BATTLESHIP 3 | isAir, roleGroup |
 | 228 | MAIN GUN《LAND BATTLESHIP 3》 | isAir, roleGroup |
 | 310 | LAND DESTROYER | isAir, roleGroup |
 | 314 | DISP. RAIL GUN《LAND DESTROYER》 | isAir, roleGroup |
@@ -115,4 +109,10 @@ QUEEN 13行、PURPLE MAGIC 4行、GREEN 2行、ENDURANCE本体2行・艦砲1行�
 
 R006では全104任務差分を照合して92行のnameだけを更新し、内部識別子・固定ID・数値・件数は維持した。
 
-Q002では表示名を持つダミー用定義6行をEXCLUDEDに変更。現在は掲載320行・EXCLUDED186行、固定ID506件・元定義1459件。通常のAPC・滑走路・陸上戦艦本体と部位を維持した。[掲載判断と検証](../../../spec/agent/wip/local_002/INITIAL_IMPLEMENTATION_REVIEW.md)を参照。陸上戦艦の同名行とID372の親参照不整合は[Q003の別調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)として記録し、今回は変更していない。
+Q002では表示名を持つダミー用定義6行をEXCLUDEDに変更。この時点で掲載320行・EXCLUDED186行、固定ID506件・元定義1459件。通常のAPC・滑走路・陸上戦艦本体と部位を維持した。[掲載判断と検証](../../../spec/agent/wip/local_002/INITIAL_IMPLEMENTATION_REVIEW.md)を参照。陸上戦艦の同名行とID372の親参照不整合は[Q003の別調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)として記録し、今回は変更していない。
+
+
+Q003のうちM24のID330は、攻撃可能な対象との対応が未確認であることを踏まえたユーザーの掲載判断によりEXCLUDEDへ変更。この時点で掲載319行・EXCLUDED187行。M25の同モデル・主砲を除外せず、ID330のcategory以外を維持した。実際の攻撃不能や未使用を確定したものではない。詳細は[陸上戦艦の調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)の12節を参照。
+
+
+Q003の後続判断で、陸上戦艦の本体ID147・371・494・247・226もEXCLUDEDへ変更。現在は掲載314行・EXCLUDED192行、本体8行が非表示、部位24行は掲載を維持する。固定ID・元定義・計算値・親参照は保持。本体6行のisAir・roleGroupの未確認値も保持するが、上の「掲載対象」の属性表からは除いた。本体HP100を艦全体の撃破条件と解釈できる根拠が不足しており、部位を中心とする攻略記事とユーザー判断に基づく掲載方針である。実際の攻撃不能を確定したものではない。[陸上戦艦の調査](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)の13節を参照。

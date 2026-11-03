@@ -5908,7 +5908,7 @@
   {
     "id": 147,
     "name": "LAND BATTLESHIP 1",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 182,
     "partOf": null,
     "missionVariant": null,
@@ -5940,7 +5940,7 @@
   {
     "id": 371,
     "name": "LAND BATTLESHIP 1",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 183,
     "partOf": null,
     "missionVariant": null,
@@ -5972,7 +5972,7 @@
   {
     "id": 330,
     "name": "LAND BATTLESHIP 1 [M24]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 184,
     "partOf": null,
     "missionVariant": {
@@ -6328,7 +6328,7 @@
   {
     "id": 494,
     "name": "LAND BATTLESHIP 2",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 195,
     "partOf": null,
     "missionVariant": null,
@@ -6392,7 +6392,7 @@
   {
     "id": 247,
     "name": "LAND BATTLESHIP 2 [M19]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 197,
     "partOf": null,
     "missionVariant": {
@@ -6812,7 +6812,7 @@
   {
     "id": 226,
     "name": "LAND BATTLESHIP 3",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 210,
     "partOf": null,
     "missionVariant": null,
