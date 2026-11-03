@@ -5002,7 +5002,7 @@
   {
     "id": 504,
     "name": "AIR BASE",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 154,
     "partOf": null,
     "missionVariant": null,
@@ -5034,7 +5034,7 @@
   {
     "id": 456,
     "name": "AIR BASE [M28]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 155,
     "partOf": null,
     "missionVariant": {
@@ -5132,7 +5132,7 @@
   {
     "id": 489,
     "name": "APC",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 158,
     "partOf": null,
     "missionVariant": null,
@@ -5164,7 +5164,7 @@
   {
     "id": 199,
     "name": "APC [M12]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 159,
     "partOf": null,
     "missionVariant": {
@@ -6360,7 +6360,7 @@
   {
     "id": 496,
     "name": "LAND BATTLESHIP 2",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 196,
     "partOf": null,
     "missionVariant": null,
@@ -6426,7 +6426,7 @@
   {
     "id": 261,
     "name": "LAND BATTLESHIP 2 [M19]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 198,
     "partOf": null,
     "missionVariant": {

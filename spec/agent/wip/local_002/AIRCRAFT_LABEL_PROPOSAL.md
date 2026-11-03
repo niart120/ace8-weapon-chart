@@ -116,7 +116,7 @@
 - [x] Red/GreenとPC・スマートフォンのブラウザー検証
 - [x] 型検査・lint・整形確認・ビルド・再生成一致を確認
 
-QUEEN・GREEN等の掲載判断（Q001）は後続の承認を受けて除外反映済み。Q002のダミー用定義の掲載判断が残るため、local_002全体はwipに維持する。
+QUEEN・GREEN等の掲載判断（Q001）とダミー用定義の掲載判断（Q002）は、後続の承認を受けて除外反映済み。陸上戦艦の追加調査Q003を別途議論するため、local_002全体はwipに維持する。
 
 最終確認: `pnpm typecheck`、`pnpm lint`、`pnpm format:check`、`pnpm build`成功。再生成後の配信3ファイルはバイト単位で一致。`git diff --check`成功。
 

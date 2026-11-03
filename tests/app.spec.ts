@@ -296,3 +296,39 @@ test('任務表示番号だけを更新し、旧保存ID・部位・識別名を
   await panel.getByRole('searchbox').fill('TYPHOON (SHADOW) [M25]');
   await expect(panel.locator('.group-items label')).toHaveCount(1);
 });
+
+test('Q002の旧選択を除去し、同名の通常目標だけを結果と候補に残す', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'ace8-weapon-guide.preferences',
+      JSON.stringify({
+        version: 1,
+        conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
+        weaponIds: [1],
+        targetIds: [504, 456, 489, 199, 496, 261, 50, 490, 204, 494, 247, 248],
+        showParts: true,
+        showMissionVariants: true,
+      })
+    );
+  });
+  await page.goto('/');
+  await expect(page.getByRole('rowheader')).toHaveCount(6);
+  await expect(page.getByRole('rowheader', { name: 'AIR BASE [M28]', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('rowheader', { name: 'APC [M12]', exact: true })).toHaveCount(0);
+  await expect(
+    page.getByRole('rowheader', { name: 'LAND BATTLESHIP 2 [M19]', exact: true })
+  ).toHaveCount(1);
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+    )
+  ).toEqual([50, 490, 204, 494, 247, 248]);
+  await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+  const panel = page.getByRole('dialog', { name: 'TARGETS' });
+  for (const query of ['AIR BASE [M28]', 'APC [M12]']) {
+    await panel.getByRole('searchbox').fill(query);
+    await expect(panel.locator('.group-items label')).toHaveCount(0);
+  }
+  await panel.getByRole('searchbox').fill('LAND BATTLESHIP 2 [M19]');
+  await expect(panel.locator('.group-items label')).toHaveCount(1);
+});
