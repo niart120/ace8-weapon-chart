@@ -7717,11 +7717,13 @@
   },
   {
     "id": 341,
-    "name": "AEGIS",
+    "name": "AEGIS [M25-2]",
     "category": "SHIP",
     "order": 239,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 155,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -7781,11 +7783,13 @@
   },
   {
     "id": 343,
-    "name": "AA GUN《AEGIS》",
+    "name": "AA GUN《AEGIS》 [M25-2]",
     "category": "SHIP",
     "order": 241,
     "partOf": 242,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -7845,11 +7849,13 @@
   },
   {
     "id": 344,
-    "name": "CIWS《AEGIS》",
+    "name": "CIWS《AEGIS》 [M25-2]",
     "category": "SHIP",
     "order": 243,
     "partOf": 242,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -7909,11 +7915,13 @@
   },
   {
     "id": 342,
-    "name": "NAVAL GUN《AEGIS》",
+    "name": "NAVAL GUN《AEGIS》 [M25-2]",
     "category": "SHIP",
     "order": 245,
     "partOf": 242,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -7973,11 +7981,13 @@
   },
   {
     "id": 345,
-    "name": "VLS《AEGIS》",
+    "name": "VLS《AEGIS》 [M25-2]",
     "category": "SHIP",
     "order": 247,
     "partOf": 242,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8681,11 +8691,13 @@
   },
   {
     "id": 361,
-    "name": "DESTROYER",
+    "name": "DESTROYER [M25-2]",
     "category": "SHIP",
     "order": 269,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 115,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8745,11 +8757,13 @@
   },
   {
     "id": 362,
-    "name": "AA GUN《DESTROYER》",
+    "name": "AA GUN《DESTROYER》 [M25-2]",
     "category": "SHIP",
     "order": 271,
     "partOf": 59,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8809,11 +8823,13 @@
   },
   {
     "id": 363,
-    "name": "NAVAL GUN《DESTROYER》",
+    "name": "NAVAL GUN《DESTROYER》 [M25-2]",
     "category": "SHIP",
     "order": 273,
     "partOf": 59,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8873,11 +8889,13 @@
   },
   {
     "id": 364,
-    "name": "FRIGATE",
+    "name": "FRIGATE [M25-2]",
     "category": "SHIP",
     "order": 275,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8937,11 +8955,13 @@
   },
   {
     "id": 366,
-    "name": "AA GUN《FRIGATE》",
+    "name": "AA GUN《FRIGATE》 [M25-2]",
     "category": "SHIP",
     "order": 277,
     "partOf": 56,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -9001,11 +9021,13 @@
   },
   {
     "id": 365,
-    "name": "NAVAL GUN《FRIGATE》",
+    "name": "NAVAL GUN《FRIGATE》 [M25-2]",
     "category": "SHIP",
     "order": 279,
     "partOf": 56,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 20,
     "damageMultipliers": {
       "standardMissile": 1,
