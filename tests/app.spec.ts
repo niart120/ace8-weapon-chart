@@ -195,3 +195,36 @@ test('R004: SpaceとEnterでパネル内の操作を継続できる', async ({ p
   await expect(panel).not.toBeVisible();
   await expect(page.getByRole('button', { name: 'WEAPONS', exact: true })).toBeFocused();
 });
+
+for (const width of [1440, 390]) {
+  test(`航空機識別名: ${width}pxで検索・任務表示・選択保持を確認`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    const name = 'TYPHOON (SHADOW) [M25-2]';
+    await expect(page.getByRole('rowheader', { name: 'TYPHOON', exact: true })).toHaveCount(1);
+    await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(0);
+    await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+    const panel = page.getByRole('dialog', { name: 'TARGETS' });
+    const variants = panel.getByRole('checkbox', { name: 'MISSION VARIANTS', exact: true });
+    await variants.check();
+    await panel.getByRole('searchbox').fill('typhoon (shadow)');
+    const choice = panel.getByRole('checkbox', { name: /^TYPHOON \(SHADOW\) \[M25-2\]/ });
+    await expect(choice).toBeChecked();
+    await variants.uncheck();
+    await expect(choice).toHaveCount(0);
+    await variants.check();
+    await expect(choice).toBeChecked();
+    await panel.getByRole('searchbox').fill('ventus');
+    await expect(panel.getByRole('checkbox', { name: /^SU-35S \(VENTUS\) \[M24\]/ })).toBeChecked();
+    await panel.getByRole('button', { name: 'Close targets' }).click();
+    await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(1);
+    await expect(
+      page.getByRole('rowheader', { name: 'SU-35S (VENTUS) [M24]', exact: true })
+    ).toHaveCount(1);
+    await page.reload();
+    await expect(page.getByRole('rowheader', { name, exact: true })).toHaveCount(1);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width
+    );
+  });
+}

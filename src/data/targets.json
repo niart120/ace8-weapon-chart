@@ -869,11 +869,13 @@
   },
   {
     "id": 266,
-    "name": "F-14D",
+    "name": "F-14D (SHADOW) [M21]",
     "category": "AIRCRAFT",
     "order": 27,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "21"
+    },
     "hp": 60,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -933,11 +935,13 @@
   },
   {
     "id": 134,
-    "name": "F-15E",
+    "name": "F-15E (SHADOW) [M9]",
     "category": "AIRCRAFT",
     "order": 29,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "9"
+    },
     "hp": 88,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -1061,11 +1065,13 @@
   },
   {
     "id": 133,
-    "name": "F-16C",
+    "name": "F-16C (SHADOW) [M9]",
     "category": "AIRCRAFT",
     "order": 33,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "9"
+    },
     "hp": 55,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -1125,7 +1131,7 @@
   },
   {
     "id": 268,
-    "name": "F-22A [M21]",
+    "name": "F-22A (SHADOW) [M21]",
     "category": "AIRCRAFT",
     "order": 35,
     "partOf": null,
@@ -1479,11 +1485,13 @@
   },
   {
     "id": 332,
-    "name": "GRIPEN E",
+    "name": "GRIPEN E (SHADOW) [M25-2]",
     "category": "AIRCRAFT",
     "order": 46,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 55,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -2191,11 +2199,13 @@
   },
   {
     "id": 28,
-    "name": "MIG-29A",
+    "name": "MIG-29A (SHADOW) [M4]",
     "category": "AIRCRAFT",
     "order": 68,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "4"
+    },
     "hp": 60,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -2255,7 +2265,7 @@
   },
   {
     "id": 267,
-    "name": "MIG-29A [M21]",
+    "name": "MIG-29A (SHADOW) [M21]",
     "category": "AIRCRAFT",
     "order": 70,
     "partOf": null,
@@ -2321,11 +2331,13 @@
   },
   {
     "id": 193,
-    "name": "MIG-31B",
+    "name": "MIG-31B (SHADOW) [M12]",
     "category": "AIRCRAFT",
     "order": 72,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "12"
+    },
     "hp": 88,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -2385,11 +2397,13 @@
   },
   {
     "id": 135,
-    "name": "MIRAGE 2000-5",
+    "name": "MIRAGE 2000-5 (SHADOW) [M9]",
     "category": "AIRCRAFT",
     "order": 74,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "9"
+    },
     "hp": 55,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -4005,11 +4019,13 @@
   },
   {
     "id": 336,
-    "name": "SU-33",
+    "name": "SU-33 (SHADOW) [M25-2]",
     "category": "AIRCRAFT",
     "order": 124,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 65,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -4101,11 +4117,13 @@
   },
   {
     "id": 305,
-    "name": "SU-35S",
+    "name": "SU-35S (VENTUS) [M24]",
     "category": "AIRCRAFT",
     "order": 127,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "24"
+    },
     "hp": 65,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -4133,7 +4151,7 @@
   },
   {
     "id": 194,
-    "name": "SU-35S [M12]",
+    "name": "SU-35S (SHADOW) [M12]",
     "category": "AIRCRAFT",
     "order": 128,
     "partOf": null,
@@ -4167,7 +4185,7 @@
   },
   {
     "id": 269,
-    "name": "SU-35S [M21]",
+    "name": "SU-35S (SHADOW) [M21]",
     "category": "AIRCRAFT",
     "order": 129,
     "partOf": null,
@@ -4233,11 +4251,13 @@
   },
   {
     "id": 236,
-    "name": "SU-47",
+    "name": "SU-47 (SHADOW) [M19]",
     "category": "AIRCRAFT",
     "order": 131,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "19"
+    },
     "hp": 60,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -4265,7 +4285,7 @@
   },
   {
     "id": 235,
-    "name": "SU-57",
+    "name": "SU-57 (SHADOW)",
     "category": "AIRCRAFT",
     "order": 132,
     "partOf": null,
@@ -4329,7 +4349,7 @@
   },
   {
     "id": 412,
-    "name": "SU-57 [M26]",
+    "name": "SU-57 (SHADOW) [M26]",
     "category": "AIRCRAFT",
     "order": 134,
     "partOf": null,
@@ -4491,11 +4511,13 @@
   },
   {
     "id": 333,
-    "name": "TYPHOON",
+    "name": "TYPHOON (SHADOW) [M25-2]",
     "category": "AIRCRAFT",
     "order": 139,
     "partOf": null,
-    "missionVariant": null,
+    "missionVariant": {
+      "missionId": "25day2"
+    },
     "hp": 60,
     "damageMultipliers": {
       "standardMissile": 1,
