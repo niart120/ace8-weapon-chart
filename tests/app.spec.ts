@@ -175,3 +175,23 @@ test('スマートフォン: 初回3列・設定・同時選択・全解除と�
     totalColumns: 3,
   });
 });
+
+test('R004: SpaceとEnterでパネル内の操作を継続できる', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto('/');
+  await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
+  const panel = page.getByRole('dialog', { name: 'WEAPONS' });
+  const missile = panel.getByRole('checkbox', { name: 'MSL', exact: true });
+  await missile.focus();
+  await page.keyboard.press('Space');
+  await expect(panel).toBeVisible();
+  await expect(missile).not.toBeChecked();
+  const group = panel.getByRole('button', { name: 'MSL.AIR', exact: true });
+  await group.focus();
+  await page.keyboard.press('Enter');
+  await expect(panel).toBeVisible();
+  await expect(group).toHaveAttribute('aria-expanded', 'false');
+  await page.keyboard.press('Escape');
+  await expect(panel).not.toBeVisible();
+  await expect(page.getByRole('button', { name: 'WEAPONS', exact: true })).toBeFocused();
+});

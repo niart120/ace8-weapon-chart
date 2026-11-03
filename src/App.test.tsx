@@ -42,3 +42,28 @@ test('部位表示・個別解除・区分リセットと条件変更が即時�
     'true'
   );
 });
+
+test('R004: パネル内の座標0のclickで閉じない', () => {
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: 'WEAPONS' }));
+  const dialog = screen.getByRole('dialog', { name: 'WEAPONS' });
+  dialog.getBoundingClientRect = () => ({
+    x: 100,
+    y: 0,
+    left: 100,
+    top: 0,
+    right: 500,
+    bottom: 800,
+    width: 400,
+    height: 800,
+    toJSON: () => ({}),
+  });
+  fireEvent.click(within(dialog).getByRole('checkbox', { name: 'MSL' }), {
+    clientX: 0,
+    clientY: 0,
+    detail: 0,
+  });
+  expect(screen.getByRole('dialog', { name: 'WEAPONS' })).toBeTruthy();
+  fireEvent.click(dialog, { clientX: 50, clientY: 100, detail: 1 });
+  expect(screen.queryByRole('dialog', { name: 'WEAPONS' })).toBeNull();
+});

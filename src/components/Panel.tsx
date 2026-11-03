@@ -55,6 +55,7 @@ export function Panel({
         onClose();
       }}
       onClick={(event) => {
+        if (event.target !== event.currentTarget || event.detail === 0) return;
         const bounds = event.currentTarget.getBoundingClientRect();
         if (
           event.clientX < bounds.left ||
