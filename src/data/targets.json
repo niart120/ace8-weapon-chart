@@ -605,9 +605,9 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
-    "standardDamage": false
+    "isAir": true,
+    "roleGroup": "air",
+    "standardDamage": true
   },
   {
     "id": 274,
@@ -765,8 +765,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": true,
+    "roleGroup": "air",
     "standardDamage": true
   },
   {
@@ -2713,8 +2713,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -2745,8 +2745,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -4571,7 +4571,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -4605,7 +4605,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -4703,8 +4703,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": true,
+    "roleGroup": "air",
     "standardDamage": true
   },
   {
@@ -4767,7 +4767,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -4801,7 +4801,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -4835,7 +4835,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -4867,7 +4867,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "air",
     "standardDamage": true
   },
@@ -5739,8 +5739,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -5773,8 +5773,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6321,8 +6321,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6581,8 +6581,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6613,8 +6613,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6645,8 +6645,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6709,8 +6709,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6741,8 +6741,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -6933,8 +6933,8 @@
       "lagmBlast": 0.3499999940395355,
       "lasmBlast": 0.3499999940395355
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ground",
     "standardDamage": true
   },
   {
@@ -6965,8 +6965,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "ship",
     "standardDamage": true
   },
   {
@@ -7061,8 +7061,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": false,
+    "roleGroup": "none",
     "standardDamage": true
   },
   {
@@ -11071,7 +11071,7 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
+    "isAir": true,
     "roleGroup": "ground",
     "standardDamage": true
   },
@@ -11103,8 +11103,8 @@
       "lagmBlast": 1,
       "lasmBlast": 1
     },
-    "isAir": null,
-    "roleGroup": null,
+    "isAir": true,
+    "roleGroup": "ground",
     "standardDamage": true
   },
   {

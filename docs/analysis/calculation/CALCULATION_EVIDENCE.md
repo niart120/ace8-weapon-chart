@@ -51,3 +51,17 @@ UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimpor
 BlueprintGeneratedClassのDynamicBindingObjectsを4バイト整数として読んでいたため、一部クラスの読取位置がずれ、CDO属性を得られていなかった。現行EXEの反射情報に従って配列として読むよう`collect_npc_evidence.py`を修正した。対象13 BlueprintのCDOを定義長まで読み切り、調査結果と属性が一致することを確認。全モデルの再抽出・一括更新は行っていない。
 
 SubCat、Thruster_L1/L2、AAGun_BI、VLSMはGameObjectCategory=6、native基底クラスによるbIsAir=falseと確認し、配信ID151・153・488・249・258へ反映した。元データ・位置・ハッシュは[local_002の15・16節](../../../spec/agent/complete/local_002/LAND_BATTLESHIP_REVIEW.md)と`src/test/fixtures/land-parts-evidence.json`に保持する。ビルド差とイベント後の状態に関する上記の制約は維持する。
+
+
+## local_003の目標属性再調査（初回調査）
+
+掲載中の属性未確認41行・117出典・48モデルを調査し、72 BlueprintのCDOを全継承で末尾まで読み切った。local_002の配列読取修正に加え、調査専用スクリプトでクラス名の大小文字、Optional/Interface型、MEGAFLOATのnative親クラス記録、EP40のstruct定義を解決した。全41行の静的isAir・GameObjectCategoryを確認。今回の属性確認に必要な資産不足はない。
+
+GameObjectCategory=8の5行は、基準ビルドと現行EXEでNPC用ROLE配列が8要素、範囲外の係数が100であることを確認した。現行の該当箇所は配列作成`0x147d2c540`、参照`0x147c831f4`。Category_None=0と同じ元区分とは扱わず、アプリ上の対応付けは未実装。
+
+全13行のstandardDamage=falseは旧解析での基底クラス確認失敗によるものだった。今回LiveAIGameObject継承と非正の任務MinHealthを確認したが、特にMEGAFLOAT系12行の破壊条件・イベント後の状態は未解析であり、通常の確定数計算を無条件に有効化しない。
+
+[local_003の調査記録](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)と[証拠JSON](TARGET_ATTRIBUTE_EVIDENCE.json)を参照。既存catalog・配信3ファイル・npc-evidence・native-constructorsは変更していない。基準ビルドとの資産差・全レベル配置・実ゲーム未測定の制約は継続する。
+
+
+後続の承認により、41行のうち既存ROLE区分の24行を配信へ反映した。CH-47のstandardDamageはクラス読取失敗によるfalseから通常判定へ復元。区分8の5行・MEGAFLOAT系12行は未反映を維持する。初回証拠JSONは当時の配信値を含む調査履歴として保持し、調査スクリプトの対象を41固定IDへ固定して反映後も再現できるようにした。[反映範囲と検証](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。

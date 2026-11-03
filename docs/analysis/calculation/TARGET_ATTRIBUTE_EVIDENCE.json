@@ -1,0 +1,4815 @@
+{
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "input_sha256": {
+    "docs\\analysis\\calculation\\collect_npc_evidence.py": "79b8803a478d7b4091992d5ff01bc37e1d04b0cde2b9644fc69aa05ed0a66a15",
+    "docs\\initial\\ref\\tables\\DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs\\initial\\ref\\tables\\DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "data\\local\\current-native\\indexes\\native_classes.json": "bfb224a6a3c3ee5874f8e7eff6f2161638499f7f1a4ba070996c0773deedc7f6",
+    "data\\local\\current-native\\indexes\\native_schema.json": "8f1e1b7db9d35f1e4a96e0ee15d98884d56f7444fe97159dc19ba6d9177ada7c",
+    "docs\\initial\\ref\\scripts\\parse_blueprints.py": "2ed6289d5373363918f3a1f11592cdd808c49222a0dbcdc308030f41616d6525",
+    "docs\\initial\\ref\\scripts\\parse_tables.py": "e1b2480b8c0b3a2b37c113f38c58d9f93905a73e8b95a8745228e28efa48f01f",
+    "docs\\initial\\ref\\scripts\\inspect_weapons.py": "4dd74f4598582581c730c88f270b9a4ca0c45d450263ddfab1967597a4a55820"
+  },
+  "targets": [
+    {
+      "id": 201,
+      "name": "MSL PALLET《C-130》",
+      "current": {
+        "isAir": true,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission013",
+          "row": "rpdna_01",
+          "model": "OP0059_rpdna",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission013",
+          "row": "rpdna_02",
+          "model": "OP0059_rpdna",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 230,
+      "name": "CH-47",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "ch47_common",
+          "model": "OP0021_ch47",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 2,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 216,
+      "name": "EXPLOSIVE UAV",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission016",
+          "row": "OP0046_uavcb_01",
+          "model": "OP0046_uavcb",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 373,
+      "name": "LAND AEGIS《PODARGE》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "ldag_MS25day2",
+          "model": "GR034_ldag_MS25",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 377,
+      "name": "LAND DESTROYER《PODARGE》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "ldds_MS25day2",
+          "model": "GR035_ldds",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 498,
+      "name": "UNKNOWN",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "OP1016_x40a_MS26",
+          "model": "OP1016_x40a_Unkown",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 410,
+      "name": "UNKNOWN [M26]",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "x40a_ms26",
+          "model": "OP1016_x40a_Unkown",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 69,
+      "name": "V-22",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission005",
+          "row": "mv22_common",
+          "model": "OP0023_mv22",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "mv22_common",
+          "model": "OP0023_mv22",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "mv22_common",
+          "model": "OP0023_mv22",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP0023_mv22_Megafloat",
+          "model": "OP0023_mv22_Megafloat",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 2,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 457,
+      "name": "X-40",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission029",
+          "row": "x40a_common",
+          "model": "OP1016_x40a_Tewy",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "OP1016_x40a_01",
+          "model": "OP1016_x40a_Tewy",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 435,
+      "name": "X-40 [M28]",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "x40a_common",
+          "model": "OP1016_x40a_Tewy",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 45,
+      "name": "X-40 [M3]",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission004",
+          "row": "x40a_common",
+          "model": "OP1016_x40a_Tewy",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 459,
+      "name": "X-40 NOSE UNIT",
+      "current": {
+        "isAir": null,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission029",
+          "row": "ep40_common",
+          "model": "OP0038_ep40",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 106,
+      "name": "LAND AEGIS",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "GR034_ldag_01",
+          "model": "GR034_ldag_MS08",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "ldag_common",
+          "model": "GR034_ldag_MS10",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR034_ldag_MS20_01",
+          "model": "GR034_ldag_MS20",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "LandAegis",
+          "model": "GR034_ldag_MS25",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "ldag_MS25day1",
+          "model": "GR034_ldag_MS25",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC",
+          "row": "GR034_ldag_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "GR034_ldag_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 315,
+      "name": "LAND AEGIS [M23]",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Ciws1_CP_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Ciws2_CP_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Mudr_CP_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_VLS1_CP_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_VLS2_CP_MS24_01",
+          "model": "GR034_ldag_MS24_01",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Ciws1_CP_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Ciws2_CP_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_Mudr_CP_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_VLS1_CP_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldag_VLS2_CP_MS24_02",
+          "model": "GR034_ldag_MS24_02",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 155,
+      "name": "VLS《LAND BATTLESHIP 1》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "ldbs1_Boss_VLSM1",
+          "model": "GR036_ldbs1_VLSM",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "ldbs1_Boss_VLSM2",
+          "model": "GR036_ldbs1_VLSM2",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 251,
+      "name": "BREACH《LAND BATTLESHIP 2》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_MainCore",
+          "model": "GR037_ldbs2_MainCore",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 252,
+      "name": "CIWS《LAND BATTLESHIP 2》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_L1",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_L2",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_L3",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_L4",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_R1",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_R2",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_R3",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_CIWS_BI_R4",
+          "model": "GR037_ldbs2_CIWS_BI",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 250,
+      "name": "CORE UNIT《LAND BATTLESHIP 2》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_Bridge",
+          "model": "GR037_ldbs2_Bridge",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 255,
+      "name": "MAIN GUN《LAND BATTLESHIP 2》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_MainCannon1",
+          "model": "GR037_ldbs2_MainCannon",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_MainCannon2",
+          "model": "GR037_ldbs2_MainCannon",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_MainCannon3",
+          "model": "GR037_ldbs2_MainCannon",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 256,
+      "name": "SAM《LAND BATTLESHIP 2》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_SAM_BI_L",
+          "model": "GR037_ldbs2_SAM_BI",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "GR037_ldbs2_SAM_BI_R",
+          "model": "GR037_ldbs2_SAM_BI",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 228,
+      "name": "MAIN GUN《LAND BATTLESHIP 3》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "GR038_ldbs3_MainCannon1",
+          "model": "GR038_ldbs3_MainCannon",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "GR038_ldbs3_MainCannon2",
+          "model": "GR038_ldbs3_MainCannon",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 5,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 310,
+      "name": "LAND DESTROYER",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldds_01",
+          "model": "GR035_ldds",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldds_MS24",
+          "model": "GR035_ldds_MS24",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "LandDestroyer",
+          "model": "GR035_ldds",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "ldds_01",
+          "model": "GR035_ldds",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 314,
+      "name": "DISP. RAIL GUN《LAND DESTROYER》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldds_MainCannon1_MS24",
+          "model": "GR035_ldds_MainCannon_MS24",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "ldds_MainCannon2_MS24",
+          "model": "GR035_ldds_MainCannon_MS24",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 0,
+        "roleGroup": "none",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 418,
+      "name": "MEGAFLOAT",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_01",
+          "model": "Megafloat_Deck",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 423,
+      "name": "MEGAFLOAT",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Deck_Cannon_01",
+          "model": "Megafloat_Deck_Cannon",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 430,
+      "name": "FUSION REACTOR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_01",
+          "model": "Megafloat_Center_Core",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Core_Outer_01",
+          "model": "Megafloat_Center_Core_Outer",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 420,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_OUT",
+          "model": "MGFPillar_L_Front_OUT",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 422,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_OUT",
+          "model": "MGFPillar_L_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_OUT",
+          "model": "MGFPillar_R_EV_OUT",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 429,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_CorePillar_01",
+          "model": "Megafloat_Center_CorePillar",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 500,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 501,
+      "name": "PILLAR《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 419,
+      "name": "PILLAR《MEGAFLOAT》 [M27]",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R000_IN",
+          "model": "MGFPillar_L_Front_IN",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 421,
+      "name": "PILLAR《MEGAFLOAT》 [M27]",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L001_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L002_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L003_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L004_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_L005_IN",
+          "model": "MGFPillar_L_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R001_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R002_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R003_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R004_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "MGFPillar_R005_IN",
+          "model": "MGFPillar_R_EV_IN",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 503,
+      "name": "SHUTTER《MEGAFLOAT》",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 426,
+      "name": "SHUTTER《MEGAFLOAT》 [M27]",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Shutter_01",
+          "model": "Megafloat_Center_Shutter",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 264,
+      "name": "BVRAAM",
+      "current": {
+        "isAir": true,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission021",
+          "row": "urlaam_common",
+          "model": "OP0053_ulraam",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 237,
+      "name": "LAUNCH VEHICLE",
+      "current": {
+        "isAir": null,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket",
+          "model": "OP0058_crkt",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 238,
+      "name": "LAUNCH VEHICLE DEBRIS",
+      "current": {
+        "isAir": null,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_1_1",
+          "model": "OP0058_crkt_ABR_p1_CP",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_1",
+          "model": "OP0058_crkt_BR_p2_CP",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_2",
+          "model": "OP0058_crkt_A_p2_CP",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_1",
+          "model": "OP0058_crkt_R_p3_CP",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_2",
+          "model": "OP0058_crkt_B_p3_CP",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 505,
+      "name": "MSL DISPENSER",
+      "current": {
+        "isAir": true,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "OP0037_mmslct_01",
+          "model": "OP0037_mmslct",
+          "minHealth": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "OP0037_mmslct_FirstShot",
+          "model": "OP0037_mmslct_FirstShot",
+          "minHealth": null
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 463,
+      "name": "MSL DISPENSER [M30]",
+      "current": {
+        "isAir": true,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30",
+          "model": "OP0037_mmslct",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30_First",
+          "model": "OP0037_mmslct_FirstShot",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    },
+    {
+      "id": 462,
+      "name": "SLCM",
+      "current": {
+        "isAir": true,
+        "roleGroup": null,
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "slcm_ms30",
+          "model": "OP0036_slcm",
+          "minHealth": 0
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "slcmp_ms30",
+          "model": "OP0039_slcmp",
+          "minHealth": 0
+        }
+      ],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      },
+      "hasPositiveMinHealth": false
+    }
+  ],
+  "models": {
+    "GR034_ldag_MS08": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS08/BP_GR034_ldag_CP_MS08",
+        "asset": "BP_GR034_ldag_CP_MS08_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS08_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR034_ldag_MS10": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS10/BP_GR034_ldag_CP_MS10",
+        "asset": "BP_GR034_ldag_CP_MS10_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS10_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR034_ldag_MS20": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS20/BP_GR034_ldag_CP_MS20",
+        "asset": "BP_GR034_ldag_CP_MS20_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS20_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR034_ldag_MS24_01": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS24/01/BP_GR034_ldag_CP_MS24_01",
+        "asset": "BP_GR034_ldag_CP_MS24_01_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS24_01_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR034_ldag_MS24_02": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS24/02/BP_GR034_ldag_CP_MS24_02",
+        "asset": "BP_GR034_ldag_CP_MS24_02_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS24_02_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR034_ldag_MS25": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR034_ldag/MS25/BP_GR034_ldag_CP_MS25",
+        "asset": "BP_GR034_ldag_CP_MS25_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR034_ldag_CP_MS25_C",
+        "BP_GR034_ldag_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR035_ldds": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR035_ldds/CP/BP_GR035_ldds_CP",
+        "asset": "BP_GR035_ldds_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR035_ldds_CP_C",
+        "BP_GR035_ldds_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR035_ldds_Base_C",
+          "uexp_offset": 1638,
+          "zero_mask": false,
+          "schema_index": 96
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR035_ldds_MS24": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR035_ldds/CP/MS24/BP_GR035_ldds_CP_MS24",
+        "asset": "BP_GR035_ldds_CP_MS24_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR035_ldds_CP_MS24_C",
+        "BP_GR035_ldds_Base_C",
+        "LiveAIUniqueObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR035_ldds_Base_C",
+          "uexp_offset": 1638,
+          "zero_mask": false,
+          "schema_index": 96
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 7,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR035_ldds_MainCannon_MS24": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR035_ldds/CP/MS24/BP_GR035_ldds_MainCannon_CP_MS24",
+        "asset": "BP_GR035_ldds_MainCannon_CP_MS24_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR035_ldds_MainCannon_CP_MS24_C",
+        "BP_GR035_ldds_MainCannon_Base_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 0,
+        "roleGroup": "none",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR036_ldbs1_VLSM": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR036_ldbs1/BP_GR036_ldbs1_VLSM",
+        "asset": "BP_GR036_ldbs1_VLSM_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR036_ldbs1_VLSM_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_VLSM_C",
+          "uexp_offset": 712,
+          "zero_mask": false,
+          "schema_index": 75
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR036_ldbs1_VLSM2": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR036_ldbs1/BP_GR036_ldbs1_VLSM2",
+        "asset": "BP_GR036_ldbs1_VLSM2_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR036_ldbs1_VLSM2_C",
+        "BP_GR036_ldbs1_VLSM_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_VLSM_C",
+          "uexp_offset": 712,
+          "zero_mask": false,
+          "schema_index": 75
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR037_ldbs2_Bridge": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR037_ldbs2/BP_GR037_ldbs2_Bridge",
+        "asset": "BP_GR037_ldbs2_Bridge_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR037_ldbs2_Bridge_C",
+        "LiveAIUniquetTargetObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_Bridge_C",
+          "uexp_offset": 420,
+          "zero_mask": false,
+          "schema_index": 75
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR037_ldbs2_CIWS_BI": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR037_ldbs2/BP_GR037_ldbs2_CIWS_BI",
+        "asset": "BP_GR037_ldbs2_CIWS_BI_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR037_ldbs2_CIWS_BI_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_CIWS_BI_C",
+          "uexp_offset": 612,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR037_ldbs2_MainCannon": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR037_ldbs2/BP_GR037_ldbs2_MainCannon",
+        "asset": "BP_GR037_ldbs2_MainCannon_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR037_ldbs2_MainCannon_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_MainCannon_C",
+          "uexp_offset": 1163,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR037_ldbs2_MainCore": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR037_ldbs2/BP_GR037_ldbs2_MainCore",
+        "asset": "BP_GR037_ldbs2_MainCore_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR037_ldbs2_MainCore_C",
+        "LiveAIUniquetTargetObject",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_MainCore_C",
+          "uexp_offset": 366,
+          "zero_mask": false,
+          "schema_index": 74
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR037_ldbs2_SAM_BI": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR037_ldbs2/BP_GR037_ldbs2_SAM_BI",
+        "asset": "BP_GR037_ldbs2_SAM_BI_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR037_ldbs2_SAM_BI_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_SAM_BI_C",
+          "uexp_offset": 613,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 6,
+        "roleGroup": "ship",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "GR038_ldbs3_MainCannon": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/GroundVehicle/GR038_ldbs3/BP_GR038_ldbs3_MainCannon",
+        "asset": "BP_GR038_ldbs3_MainCannon_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_GR038_ldbs3_MainCannon_C",
+        "LiveAIUniqueObjectBase",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 5
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR038_ldbs3_MainCannon_C",
+          "uexp_offset": 971,
+          "zero_mask": false,
+          "schema_index": 81
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 5,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_L_EV_IN": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_EV_IN",
+        "asset": "BP_MGFPillar_L_EV_IN_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_L_EV_IN_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_L_EV_OUT": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_EV_OUT",
+        "asset": "BP_MGFPillar_L_EV_OUT_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_L_EV_OUT_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_L_Front_IN": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_Front_IN",
+        "asset": "BP_MGFPillar_L_Front_IN_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_L_Front_IN_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_L_Front_OUT": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_L_Front_OUT",
+        "asset": "BP_MGFPillar_L_Front_OUT_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_L_Front_OUT_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_R_EV_IN": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_R_EV_IN",
+        "asset": "BP_MGFPillar_R_EV_IN_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_R_EV_IN_C",
+        "BP_MGFPillar_L_EV_OUT_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "MGFPillar_R_EV_OUT": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_MGFPillar_R_EV_OUT",
+        "asset": "BP_MGFPillar_R_EV_OUT_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_MGFPillar_R_EV_OUT_C",
+        "BP_MGFPillar_L_EV_IN_C",
+        "BP_Megafloat_Pillar_Base_mock_C",
+        "LiveAIMegafloatPillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Center_Core": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core",
+        "asset": "BP_Megafloat_Center_Core_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Center_Core_C",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Center_CorePillar": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_CorePillar",
+        "asset": "BP_Megafloat_Center_CorePillar_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Center_CorePillar_C",
+        "LiveAIMegafloatCorePillar",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Center_Core_Outer": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Core_Outer",
+        "asset": "BP_Megafloat_Center_Core_Outer_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Center_Core_Outer_C",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Center_Shutter": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Center_Shutter",
+        "asset": "BP_Megafloat_Center_Shutter_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Center_Shutter_C",
+        "LiveAIMegafloatShutter",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Deck": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck",
+        "asset": "BP_Megafloat_Deck_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Deck_C",
+        "LiveAIMegafloatDeck",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "Megafloat_Deck_Cannon": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/MapObj/MagaFloat/BP_Megafloat_Deck_Cannon",
+        "asset": "BP_Megafloat_Deck_Cannon_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_Megafloat_Deck_Cannon_C",
+        "BP_Megafloat_Deck_C",
+        "LiveAIMegafloatDeck",
+        "LiveAIMegafloatConstruction",
+        "LiveAIBuildingObject",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {},
+      "origins": {},
+      "errors": [],
+      "static_attributes": {
+        "isAir": false,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0021_ch47": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Heli/OP0021_ch47/CP/BP_OP0021_ch47_CP",
+        "asset": "BP_OP0021_ch47_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0021_ch47_CP_C",
+        "BP_OP0021_ch47_Base_C",
+        "BP_AIHeli_Pawn_C",
+        "LiveAIHeli",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 2
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0021_ch47_Base_C",
+          "uexp_offset": 1005,
+          "zero_mask": false,
+          "schema_index": 118
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 2,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0023_mv22": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Heli/OP0023_mv22/CP/BP_OP0023_mv22_CP",
+        "asset": "BP_OP0023_mv22_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0023_mv22_CP_C",
+        "BP_OP0023_mv22_Base_C",
+        "BP_AIHeli_Pawn_C",
+        "LiveAIHeli",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 2
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0023_mv22_Base_C",
+          "uexp_offset": 991,
+          "zero_mask": false,
+          "schema_index": 117
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 2,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0023_mv22_Megafloat": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Heli/OP0023_mv22/CP/BP_OP0023_mv22_CP_MS27",
+        "asset": "BP_OP0023_mv22_CP_MS27_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0023_mv22_CP_MS27_C",
+        "BP_OP0023_mv22_CP_C",
+        "BP_OP0023_mv22_Base_C",
+        "BP_AIHeli_Pawn_C",
+        "LiveAIHeli",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 2
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0023_mv22_Base_C",
+          "uexp_offset": 991,
+          "zero_mask": false,
+          "schema_index": 117
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 2,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0036_slcm": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0036_slcm/CP/BP_OP0036_slcm_CP",
+        "asset": "BP_OP0036_slcm_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0036_slcm_CP_C",
+        "BP_OP0036_slcm_Base_C",
+        "LiveAIGrifnMainMissile",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0036_slcm_CP_C",
+          "uexp_offset": 184,
+          "zero_mask": false,
+          "schema_index": 162
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0037_mmslct": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0037_mmslct/CP/BP_OP0037_mmslct_CP",
+        "asset": "BP_OP0037_mmslct_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0037_mmslct_CP_C",
+        "BP_OP0037_mmslct_Base_C",
+        "LiveAIGrifnMicroMissileCanister",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0037_mmslct_CP_C",
+          "uexp_offset": 316,
+          "zero_mask": false,
+          "schema_index": 191
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0037_mmslct_FirstShot": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0037_mmslct/CP/BP_OP0037_mmslct_CP_FirstShot",
+        "asset": "BP_OP0037_mmslct_CP_FirstShot_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0037_mmslct_CP_FirstShot_C",
+        "BP_OP0037_mmslct_CP_C",
+        "BP_OP0037_mmslct_Base_C",
+        "LiveAIGrifnMicroMissileCanister",
+        "LiveAIGrifnProjectileObjectBase",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0037_mmslct_CP_C",
+          "uexp_offset": 316,
+          "zero_mask": false,
+          "schema_index": 191
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0038_ep40": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0038_ep40/CP/BP_OP0038_ep40_CP",
+        "asset": "BP_OP0038_ep40_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0038_ep40_CP_C",
+        "BP_OP0038_ep40_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_AIPlane_Pawn_C",
+          "uexp_offset": 468,
+          "zero_mask": false,
+          "schema_index": 148
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0039_slcmp": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0039_slcmp/CP/BP_OP0039_slcmp_CP",
+        "asset": "BP_OP0039_slcmp_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0039_slcmp_CP_C",
+        "BP_OP0039_slcmp_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0039_slcmp_CP_C",
+          "uexp_offset": 154,
+          "zero_mask": false,
+          "schema_index": 152
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0046_uavcb": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0046_uavcb/CP/BP_OP0046_uavcb_CP",
+        "asset": "BP_OP0046_uavcb_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0046_uavcb_CP_C",
+        "BP_OP0046_uavcb_Base_C",
+        "LiveAIAirExplosionUAV",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0046_uavcb_CP_C",
+          "uexp_offset": 244,
+          "zero_mask": false,
+          "schema_index": 184
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0053_ulraam": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0053_ulraam/CP/BP_OP0053_ulraam_CP",
+        "asset": "BP_OP0053_ulraam_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0053_ulraam_CP_C",
+        "BP_OP0053_ulraam_Base_C",
+        "BP_AIPlane_Pawn_C",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0053_ulraam_CP_C",
+          "uexp_offset": 168,
+          "zero_mask": false,
+          "schema_index": 151
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_CP",
+        "asset": "BP_OP0058_crkt_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_CP_C",
+        "BP_OP0058_crkt_Base_C",
+        "LiveAISotoaRocket",
+        "LiveAILaunchVehicle",
+        "LiveAIArrangementObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_CP_C",
+          "uexp_offset": 166,
+          "zero_mask": false,
+          "schema_index": 108
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt_ABR_p1_CP": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_ABR_p1_CP",
+        "asset": "BP_OP0058_crkt_ABR_p1_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_ABR_p1_CP_C",
+        "BP_OP0058_crkt_ABR_p1_Base_C",
+        "BP_OP0058_crkt_debri_Separate_Base_C",
+        "BP_OP0058_crkt_debri_Base_C",
+        "LiveAIRocketWreck",
+        "LiveAIFallingObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt_A_p2_CP": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_A_p2_CP",
+        "asset": "BP_OP0058_crkt_A_p2_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_A_p2_CP_C",
+        "BP_OP0058_crkt_A_p2_Base_C",
+        "BP_OP0058_crkt_debri_Base_C",
+        "LiveAIRocketWreck",
+        "LiveAIFallingObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt_BR_p2_CP": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_BR_p2_CP",
+        "asset": "BP_OP0058_crkt_BR_p2_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_BR_p2_CP_C",
+        "BP_OP0058_crkt_BR_p2_Base_C",
+        "BP_OP0058_crkt_debri_Separate_Base_C",
+        "BP_OP0058_crkt_debri_Base_C",
+        "LiveAIRocketWreck",
+        "LiveAIFallingObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt_B_p3_CP": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_B_p3_CP",
+        "asset": "BP_OP0058_crkt_B_p3_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_B_p3_CP_C",
+        "BP_OP0058_crkt_B_p3_Base_C",
+        "BP_OP0058_crkt_debri_Base_C",
+        "LiveAIRocketWreck",
+        "LiveAIFallingObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0058_crkt_R_p3_CP": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0058_crkt/CP/BP_OP0058_crkt_R_p3_CP",
+        "asset": "BP_OP0058_crkt_R_p3_CP_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0058_crkt_R_p3_CP_C",
+        "BP_OP0058_crkt_R_p3_Base_C",
+        "BP_OP0058_crkt_debri_Base_C",
+        "LiveAIRocketWreck",
+        "LiveAIFallingObject",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 4,
+        "roleGroup": "ground",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP0059_rpdna": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP0054_c130/rpdn/Base/BP_OP0059_rpdna_Base",
+        "asset": "BP_OP0059_rpdna_Base_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP0059_rpdna_Base_C",
+        "LiveAIRpdnCanister",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0059_rpdna_Base_C",
+          "uexp_offset": 1136,
+          "zero_mask": false,
+          "schema_index": 118
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 8,
+        "roleGroup": "category8_neutral",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP1016_x40a_Tewy": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP1016_x40a/CP/BP_OP1016_x40a_CP_Tewy",
+        "asset": "BP_OP1016_x40a_CP_Tewy_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP1016_x40a_CP_Tewy_C",
+        "BP_OP1016_x40a_CP_C",
+        "BP_OP1016_x40a_Base_C",
+        "BP_OP1016_x40a_Archetype_C",
+        "LiveAINightmarePlane",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP1016_x40a_Archetype_C",
+          "uexp_offset": 407,
+          "zero_mask": false,
+          "schema_index": 147
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    },
+    "OP1016_x40a_Unkown": {
+      "blueprint": {
+        "package": "/Game/Blueprints/Vehicle/AI/Plane/OP1016_x40a/CP/BP_OP1016_x40a_CP_Tewy",
+        "asset": "BP_OP1016_x40a_CP_Tewy_C",
+        "subpath": ""
+      },
+      "chain": [
+        "BP_OP1016_x40a_CP_Tewy_C",
+        "BP_OP1016_x40a_CP_C",
+        "BP_OP1016_x40a_Base_C",
+        "BP_OP1016_x40a_Archetype_C",
+        "LiveAINightmarePlane",
+        "LiveAIPlane",
+        "LiveAIGameObject",
+        "LiveGameObject",
+        "Pawn",
+        "Actor",
+        "Object"
+      ],
+      "overrides": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP1016_x40a_Archetype_C",
+          "uexp_offset": 407,
+          "zero_mask": false,
+          "schema_index": 147
+        }
+      },
+      "errors": [],
+      "static_attributes": {
+        "isAir": true,
+        "gameObjectCategory": 1,
+        "roleGroup": "air",
+        "inheritsLiveAIGameObject": true
+      }
+    }
+  },
+  "decoded": {
+    "BP_GR034_ldag_CP_MS08_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "e7276c936b9192bc7a7388236c6a52f1e8d1a734d144d94f1e3896783add2cb6",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\MS08\\BP_GR034_ldag_CP_MS08.uasset",
+      "uasset_sha256": "2d8eac2dd5fd76a41024404a2a66139ebb5601b0f6b95c54013506c499bf3a12",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR034_ldag_Base_C": {
+      "parent": "LiveAIUniqueObject",
+      "error": null,
+      "consumed": 251,
+      "export_bytes": 251,
+      "uexp_sha256": "9ccd162446c1e13e1af72044a427ccd5fd2bdf0c6b2390ad77e009e6cd91df20",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\Base\\BP_GR034_ldag_Base.uasset",
+      "uasset_sha256": "aa5555f756b7d6504cc982794c537056042425714a4a110efd70eb85fc2b0e0a",
+      "attributes": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR034_ldag_Base_C",
+          "uexp_offset": 1758,
+          "zero_mask": false,
+          "schema_index": 98
+        }
+      },
+      "event_properties": {
+        "MountedMinHealth": 40.0,
+        "MaxHealth": 195.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-3]
+        }
+      }
+    },
+    "BP_GR034_ldag_CP_MS10_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "db964d4f6804812324ebdc48457e51b50645a0e605c069fda951478d09b5bf12",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\MS10\\BP_GR034_ldag_CP_MS10.uasset",
+      "uasset_sha256": "4662db070e460ae4eaede6fb42daaf9faf53d2aeb726758bb9524f26b2c750da",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR034_ldag_CP_MS20_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "b392f6ef6f6f04b93ae58df080cda46d4c0675b9b35280138afb49a761923558",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\ms20\\BP_GR034_ldag_CP_MS20.uasset",
+      "uasset_sha256": "0befa0bf42a790428bbcaf6f2c90aed6aa0c80dae8ea39b57175526abd43d8ef",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR034_ldag_CP_MS24_01_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "fd66e3372a84a5c15897c737301b197fc2b7a1edaf16ff1c23fbe632a1423e5b",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\MS24\\01\\BP_GR034_ldag_CP_MS24_01.uasset",
+      "uasset_sha256": "ed53c0333c3eaa1bf8b30b3cfa141f04a8ac2194b0530c033da9b7b1d230a1eb",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR034_ldag_CP_MS24_02_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "ecc31041b4cec45d6d4e6ed5484873901cef934d9cbe41ceba80ae9b80ef8af2",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\MS24\\02\\BP_GR034_ldag_CP_MS24_02.uasset",
+      "uasset_sha256": "e62226873d911664884cbaa9097a2a43f137ba9d0679c6aa0d1b0fb27b5946ee",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR034_ldag_CP_MS25_C": {
+      "parent": "BP_GR034_ldag_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "966d65e3d2db9c8e909cb6cd0efb39ef06916e79595a9d56d6a904a8a8e64d8e",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR034_ldag\\MS25\\BP_GR034_ldag_CP_MS25.uasset",
+      "uasset_sha256": "2ca5d8dec3c42a52fa70c3d1d8f29110f4c84cb343e9d1eeabf0306d20a357f9",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR035_ldds_CP_C": {
+      "parent": "BP_GR035_ldds_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "809b913e5a8132b4b9893c9afb59d46dfb94669e5b81202468c29e8626548b1f",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR035_ldds\\CP\\BP_GR035_ldds_CP.uasset",
+      "uasset_sha256": "e59a32e8600740e2d0fba48ee9e818708c0d33ee560aa797a87c25098f9a6cf8",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR035_ldds_Base_C": {
+      "parent": "LiveAIUniqueObject",
+      "error": null,
+      "consumed": 192,
+      "export_bytes": 192,
+      "uexp_sha256": "242d252a20ab101910abcbbcba471c3b211611f318c6fb9ff63df1a96f462416",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR035_ldds\\Base\\BP_GR035_ldds_Base.uasset",
+      "uasset_sha256": "3750d596e27b56d2d5900c2d353e7a8bcdb5cfe00528b0ccf6e415c2ec4d13e7",
+      "attributes": {
+        "GameObjectCategory": 7
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR035_ldds_Base_C",
+          "uexp_offset": 1638,
+          "zero_mask": false,
+          "schema_index": 96
+        }
+      },
+      "event_properties": {
+        "MountedMinHealth": 40.0,
+        "MaxHealth": 195.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-3]
+        }
+      }
+    },
+    "BP_GR035_ldds_CP_MS24_C": {
+      "parent": "BP_GR035_ldds_Base_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "14dd3eac4ca91c9107090ef3143a0b76900506fc8dd0186a1e9d584abe9bdc43",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR035_ldds\\CP\\MS24\\BP_GR035_ldds_CP_MS24.uasset",
+      "uasset_sha256": "b92b629b47722fe9351be5b02df8edb64b51806203156838b8cd998b9af68d93",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR035_ldds_MainCannon_CP_MS24_C": {
+      "parent": "BP_GR035_ldds_MainCannon_Base_C",
+      "error": null,
+      "consumed": 54,
+      "export_bytes": 54,
+      "uexp_sha256": "6dff0c9b60212f6f662bb9bc5673bfeb81c81b2efcec49db2dec3a8d7944af6a",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR035_ldds\\CP\\MS24\\BP_GR035_ldds_MainCannon_CP_MS24.uasset",
+      "uasset_sha256": "6000768a89b5e00bd91bd32f734e97c32cb8bd8bb88503211a5074f57c2780a0",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR035_ldds_MainCannon_Base_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 147,
+      "export_bytes": 147,
+      "uexp_sha256": "8fee5ee86fb4e3e74bba812a0d51beac3ea607508cf2192e2d754869ce4d98ae",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR035_ldds\\Base\\BP_GR035_ldds_MainCannon_Base.uasset",
+      "uasset_sha256": "8d3d2dce0013e72c1f8e6b2ff8349a40197edbc8305498d7e94c708c0e016181",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "MaxHealth": 75.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-6]
+        }
+      }
+    },
+    "BP_GR036_ldbs1_VLSM_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 119,
+      "export_bytes": 119,
+      "uexp_sha256": "32990b6bff3b5d7f08efb39ea57fd0a00f6d77b07369f3b75f90f75f8507f5d5",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR036_ldbs1\\BP_GR036_ldbs1_VLSM.uasset",
+      "uasset_sha256": "6d99f6d408c1c899062b2c2d3584919c6e84f69270981aa49bcfbf296d0199db",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR036_ldbs1_VLSM_C",
+          "uexp_offset": 712,
+          "zero_mask": false,
+          "schema_index": 75
+        }
+      },
+      "event_properties": {
+        "MaxHealth": 80.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_GR036_ldbs1_VLSM2_C": {
+      "parent": "BP_GR036_ldbs1_VLSM_C",
+      "error": null,
+      "consumed": 46,
+      "export_bytes": 46,
+      "uexp_sha256": "749f9ff34870770098864db14daf6252a234f4f7085c47c4634180f79ff9c702",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR036_ldbs1\\BP_GR036_ldbs1_VLSM2.uasset",
+      "uasset_sha256": "63279ce636c047947ea126240937fd6565ece5345f27a851bb27bdae61e825aa",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {}
+    },
+    "BP_GR037_ldbs2_Bridge_C": {
+      "parent": "LiveAIUniquetTargetObject",
+      "error": null,
+      "consumed": 139,
+      "export_bytes": 139,
+      "uexp_sha256": "c552ebccc1a8dce1315c550715570e10a97e36861518d482610f92a072793388",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR037_ldbs2\\BP_GR037_ldbs2_Bridge.uasset",
+      "uasset_sha256": "beb3a0a99972c1c42334306f1ea34d5cb785d912c359c32fbbd164558ac4e873",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_Bridge_C",
+          "uexp_offset": 420,
+          "zero_mask": false,
+          "schema_index": 75
+        }
+      },
+      "event_properties": {
+        "MaxHealth": 120.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_GR037_ldbs2_CIWS_BI_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 126,
+      "export_bytes": 126,
+      "uexp_sha256": "99554e4afdd64d1819293777251939bb2d3ea99805e77dd7b62d1b9d29463d5e",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR037_ldbs2\\BP_GR037_ldbs2_CIWS_BI.uasset",
+      "uasset_sha256": "c21784454f19cab5c29a921359f50d14f5063d60a155151aeaa4c7afeeec20a9",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_CIWS_BI_C",
+          "uexp_offset": 612,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      },
+      "event_properties": {
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_GR037_ldbs2_MainCannon_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 176,
+      "export_bytes": 176,
+      "uexp_sha256": "8a1a0945ba1aabd9d8c54a75c63d6f2ec6e3781df86a10098c5d96af9e0dd077",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR037_ldbs2\\BP_GR037_ldbs2_MainCannon.uasset",
+      "uasset_sha256": "8f21f21ef329df206c6ed3a6d425eca21cb79ca7a24edb59404336a30c72d2ad",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_MainCannon_C",
+          "uexp_offset": 1163,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "event_properties": {
+        "UniqueDamageRateCategory": 1,
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-6]
+        }
+      }
+    },
+    "BP_GR037_ldbs2_MainCore_C": {
+      "parent": "LiveAIUniquetTargetObject",
+      "error": null,
+      "consumed": 118,
+      "export_bytes": 118,
+      "uexp_sha256": "6e52d83c0a4c28e23a8e258a82253ff0c53f4b3eaa49a2db6b0c9ba1aa6830d4",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR037_ldbs2\\BP_GR037_ldbs2_MainCore.uasset",
+      "uasset_sha256": "ed03100deb63590296aeea88e3de53b6d4fc34b7fdd7663582f078869edffe6f",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_MainCore_C",
+          "uexp_offset": 366,
+          "zero_mask": false,
+          "schema_index": 74
+        }
+      },
+      "event_properties": {
+        "MaxHealth": 120.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEvent": -2,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_GR037_ldbs2_SAM_BI_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 97,
+      "export_bytes": 97,
+      "uexp_sha256": "5a82fc0601cca3c5e5ba568514141d1bc648320ad660a06e69ac9a9fc32f5784",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR037_ldbs2\\BP_GR037_ldbs2_SAM_BI.uasset",
+      "uasset_sha256": "cdcf53623864b325fe12f86f2c6abe9393ddc95f03ac835dd15dc9d0481a354f",
+      "attributes": {
+        "GameObjectCategory": 6
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR037_ldbs2_SAM_BI_C",
+          "uexp_offset": 613,
+          "zero_mask": false,
+          "schema_index": 79
+        }
+      },
+      "event_properties": {
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_GR038_ldbs3_MainCannon_C": {
+      "parent": "LiveAIUniqueObjectBase",
+      "error": null,
+      "consumed": 167,
+      "export_bytes": 167,
+      "uexp_sha256": "f946aed648e343b8008e299358b6e695dd5f77ec3e03e9827ceb9c3e70b0cf39",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\GroundVehicle\\GR038_ldbs3\\BP_GR038_ldbs3_MainCannon.uasset",
+      "uasset_sha256": "547fb4ee25de845105b50745ad01ce0919f303741377b94cd1da3f2596fba2a2",
+      "attributes": {
+        "GameObjectCategory": 5
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_GR038_ldbs3_MainCannon_C",
+          "uexp_offset": 971,
+          "zero_mask": false,
+          "schema_index": 81
+        }
+      },
+      "event_properties": {
+        "UniqueDamageRateCategory": 1,
+        "MaxHealth": 80.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_MGFPillar_L_EV_IN_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "error": null,
+      "consumed": 165,
+      "export_bytes": 165,
+      "uexp_sha256": "e1443b26e2c1405cfe33f140ff4bed33ecc0f3160c8d339521d7d15ece6eb4ce",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_EV_IN.uasset",
+      "uasset_sha256": "08c6bb4b6c0a95861d06417803b71cbe87fad98ab784126c93274be3fdb0e4ee",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "DestructInfos[1]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1,
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "DestructInfos[2]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DestructInfos[3]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -2
+        },
+        "DamagedStateComponent": 5,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_Megafloat_Pillar_Base_mock_C": {
+      "parent": "LiveAIMegafloatPillar",
+      "error": null,
+      "consumed": 126,
+      "export_bytes": 126,
+      "uexp_sha256": "911b038469ae753bef70875bcfe8487f4de6b6c734a50ad3207e1e30afb52731",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Pillar_Base_mock.uasset",
+      "uasset_sha256": "8dd32724d3b080a0e57fafaa502c823d4494c5836d5ae1148e36bb5eb16f775a",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructInfos[0]": {
+          "DamagedMeshName": "SM_Damaged1"
+        },
+        "DestructInfos[1]": {
+          "DamagedMeshName": "SM_Damaged2"
+        },
+        "DestructInfos[2]": {
+          "DamagedMeshName": "SM_Damaged3"
+        },
+        "DestructInfos[3]": {
+          "DamagedMeshName": "SM_Damaged4"
+        },
+        "DestructInfos[4]": {
+          "DamagedMeshName": "SM_Damaged5"
+        },
+        "PartDestructEffect": {
+          "VFXSystem": -25,
+          "bPlayCameraShake": 1,
+          "SpawnShakeType": 30
+        },
+        "DamagedStateComponent": 4
+      }
+    },
+    "BP_MGFPillar_L_EV_OUT_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "error": null,
+      "consumed": 168,
+      "export_bytes": 168,
+      "uexp_sha256": "f65e36e5cfa94b87d99a9b31d2cc0ba61d443f009014cb8ff150298b38069d80",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_EV_OUT.uasset",
+      "uasset_sha256": "f734d2df91907f6fe8c934bf7d67a6f120fd7ea931541a9b25ab5d2588bc2c75",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "DestructInfos[1]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1,
+          "DestructVFXOffset": [-0.0, 300.0, -1940.0]
+        },
+        "DestructInfos[2]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DestructInfos[3]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -2
+        },
+        "DamagedStateComponent": 5,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_MGFPillar_L_Front_IN_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "error": null,
+      "consumed": 159,
+      "export_bytes": 159,
+      "uexp_sha256": "4278dbff23b823404ab1f5e5135df5ba2064b70abd12f5e6efac4bae2ded5b4e",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_Front_IN.uasset",
+      "uasset_sha256": "48da681f203550c55f1cd2587c35d37c5045d21b4ab87f4c3ce42809cd3c0a74",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        },
+        "DestructInfos[1]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1,
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        },
+        "DestructInfos[2]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DestructInfos[3]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_MGFPillar_L_Front_OUT_C": {
+      "parent": "BP_Megafloat_Pillar_Base_mock_C",
+      "error": null,
+      "consumed": 159,
+      "export_bytes": 159,
+      "uexp_sha256": "b3a7c99d79f4eb4b78f135075cb8cb39c314bfddf0d45b0f1baa771c89f58154",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_L_Front_OUT.uasset",
+      "uasset_sha256": "9056254af3baeaf1de8cb78e994dcf3d8f3dbf015da92501ce707069fcdc096e",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructInfos[0]": {
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        },
+        "DestructInfos[1]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1,
+          "DestructVFXOffset": [-1520.0, 0.0, -1920.0]
+        },
+        "DestructInfos[2]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DestructInfos[3]": {
+          "bHasDestructAnim": 1,
+          "DestructAnim": -1
+        },
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_MGFPillar_R_EV_IN_C": {
+      "parent": "BP_MGFPillar_L_EV_OUT_C",
+      "error": null,
+      "consumed": 52,
+      "export_bytes": 52,
+      "uexp_sha256": "929e7c8db8f330ae92cbb77d6c2d750e58f03a191719bcb616b0c93be38a81dd",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_R_EV_IN.uasset",
+      "uasset_sha256": "20143a424b78edf941747e600225a9e38be6ebf1817f88c15fd4ee95637d3a01",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_MGFPillar_R_EV_OUT_C": {
+      "parent": "BP_MGFPillar_L_EV_IN_C",
+      "error": null,
+      "consumed": 55,
+      "export_bytes": 55,
+      "uexp_sha256": "b9e23588ab7ce663f105a0eff3d35cda6a1f006c1b56ce6cb2bad15e1651a9dc",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_MGFPillar_R_EV_OUT.uasset",
+      "uasset_sha256": "7126c81b7844698b5e0b3b14bc8023096d593e08572128d812182d415c6553e3",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_Megafloat_Center_Core_C": {
+      "parent": "LiveAIMegafloatConstruction",
+      "error": null,
+      "consumed": 114,
+      "export_bytes": 114,
+      "uexp_sha256": "0b3dd3b59f742ce6c8670bc0f105c95cc795bc8dea076158373c9f2c631ff8d1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Core.uasset",
+      "uasset_sha256": "af2a4ed0b8376fb39176c2dd45e147acd2dcc2259c2c0cc14bdfe8fe5b717c77",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 14,
+        "MaxHealth": 40.0
+      }
+    },
+    "BP_Megafloat_Center_CorePillar_C": {
+      "parent": "LiveAIMegafloatCorePillar",
+      "error": null,
+      "consumed": 201,
+      "export_bytes": 201,
+      "uexp_sha256": "6d924b88c92a6e1f6fc15890770c57af5ee6b48e27588f534c1ea91060b18dd1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_CorePillar.uasset",
+      "uasset_sha256": "93883d3d8d1c7869a899cd98245822c7c2fdfdb83e11fb71b6184c3922eec3bf",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructMontageAsset": -3,
+        "SoundEventDistanceRTPC": "AKP_Ms27_PLAYER_DistanceToMegafloat",
+        "DamagedStateComponent": 19,
+        "MaxHealth": 120.0
+      }
+    },
+    "BP_Megafloat_Center_Core_Outer_C": {
+      "parent": "LiveAIMegafloatConstruction",
+      "error": null,
+      "consumed": 114,
+      "export_bytes": 114,
+      "uexp_sha256": "41fcc5502bee87ddb604a1c8baeef8a7704dedf0eafa45411f2e346dbf1a6ac7",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Core_Outer.uasset",
+      "uasset_sha256": "fd14891bba53cc1d33fdd20d67d6492b4aa5ea0f9e0bcceb259c4e8846121700",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 7,
+        "MaxHealth": 40.0
+      }
+    },
+    "BP_Megafloat_Center_Shutter_C": {
+      "parent": "LiveAIMegafloatShutter",
+      "error": null,
+      "consumed": 101,
+      "export_bytes": 101,
+      "uexp_sha256": "a904c7ef2956c885f852c9e8b511eaab56e114ba06461fd676bd85231ffe8b22",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Center_Shutter.uasset",
+      "uasset_sha256": "bad8f1cdbae77b7f614cd0973dd1d3bf726696171b6396d7209b17cc7be60e67",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "FreeFlightInitialEventName": "Open",
+        "DamagedStateComponent": 9
+      }
+    },
+    "BP_Megafloat_Deck_C": {
+      "parent": "LiveAIMegafloatDeck",
+      "error": null,
+      "consumed": 440,
+      "export_bytes": 440,
+      "uexp_sha256": "8e0356bd309d1985ab6e3f738ba00b6f2ee51f3390771881dd0c08c931fae13d",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Deck.uasset",
+      "uasset_sha256": "7a290fc13bc11824d4d52a9fdf639440ba54502e3753e79af2221c9143c03290",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructAnimPlaySpeed": 1.0,
+        "DestructAnimMontage": -5,
+        "DestructConditions": [185, 184, 186],
+        "PillarDestructDelayRange": {
+          "Min": 2.0,
+          "Max": 8.0
+        },
+        "DamagedStateComponent": 130,
+        "MaxHealth": 1000.0
+      },
+      "destruct_condition_refs": [
+        "LiveMegafloatDeckDestructConditionNum_0",
+        "LiveMegafloatDeckDestructConditionLine_0",
+        "LiveMegafloatDeckDestructConditionPillar_0"
+      ]
+    },
+    "BP_Megafloat_Deck_Cannon_C": {
+      "parent": "BP_Megafloat_Deck_C",
+      "error": null,
+      "consumed": 73,
+      "export_bytes": 73,
+      "uexp_sha256": "3f47de944de4d113687a75283138816822749d2e21537d0bcd99b802651972f5",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\MapObj\\MagaFloat\\BP_Megafloat_Deck_Cannon.uasset",
+      "uasset_sha256": "91d9d0193848bc58d751bb82e4e72d20819c9261803b7b6db6a9708db0a65372",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DestructConditions": [174, 173, 175],
+        "DamagedStateComponent": 114
+      },
+      "destruct_condition_refs": [
+        "LiveMegafloatDeckDestructConditionNum_0",
+        "LiveMegafloatDeckDestructConditionLine_0",
+        "LiveMegafloatDeckDestructConditionPillar_0"
+      ]
+    },
+    "BP_OP0021_ch47_CP_C": {
+      "parent": "BP_OP0021_ch47_Base_C",
+      "error": null,
+      "consumed": 139,
+      "export_bytes": 139,
+      "uexp_sha256": "fcbe0f5981a516a3fa8d3b6aaf0c7a4c7f1ee78d7325466f6cce9ef7e6ad2920",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Heli\\OP0021_ch47\\CP\\BP_OP0021_ch47_CP.uasset",
+      "uasset_sha256": "eb318b89244fa50aab80bef8244abc6951e5a2d05470e4fc95aa4c8f1faf0e30",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 8,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_OP0021_ch47_Base_C": {
+      "parent": "BP_AIHeli_Pawn_C",
+      "error": null,
+      "consumed": 140,
+      "export_bytes": 140,
+      "uexp_sha256": "8f6bfdef66bd35af15cdb881587d97917aec5835a36bae056b0554572c99b1d2",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Heli\\OP0021_ch47\\Base\\BP_OP0021_ch47_Base.uasset",
+      "uasset_sha256": "f9aee1634ff432d3ac24f6cb9f5dae7c91aae8c87db7ad02afd96489314cbe01",
+      "attributes": {
+        "GameObjectCategory": 2
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0021_ch47_Base_C",
+          "uexp_offset": 1005,
+          "zero_mask": false,
+          "schema_index": 118
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-9],
+          "FallingSoundPlayEvent": -6,
+          "FallingSoundStopEvent": -7,
+          "OverrideFinalExplosionInAirSoundEventList": [-8, -5],
+          "OverrideFinalExplosionInGroundSoundEventList": [-3, -5]
+        }
+      }
+    },
+    "BP_AIHeli_Pawn_C": {
+      "parent": "LiveAIHeli",
+      "error": null,
+      "consumed": 79,
+      "export_bytes": 79,
+      "uexp_sha256": "3684fa8323f57b7e602bd5f0c4f4a7618a8d3c8f8093ef427576c9bf49806a54",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\BaseAI\\BP_AIHeli_Pawn.uasset",
+      "uasset_sha256": "febd27a1a18fb07bc74e73ba7fcb07e2671940ba40d555cc5b382f0761297a15",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 7
+      }
+    },
+    "BP_OP0023_mv22_CP_C": {
+      "parent": "BP_OP0023_mv22_Base_C",
+      "error": null,
+      "consumed": 133,
+      "export_bytes": 133,
+      "uexp_sha256": "abb555e081eeb4d65060757961c03f360d22d856052f7ff5de0429a3494d7006",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Heli\\OP0023_mv22\\CP\\BP_OP0023_mv22_CP.uasset",
+      "uasset_sha256": "2f1a03b2ebe6a4c37ae28c6b6d0ee23b674d167aa8bef82226ed2bc01603b80c",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 8
+      }
+    },
+    "BP_OP0023_mv22_Base_C": {
+      "parent": "BP_AIHeli_Pawn_C",
+      "error": null,
+      "consumed": 170,
+      "export_bytes": 170,
+      "uexp_sha256": "7ed302de6ddd491ca069ab714fdf1d97882a7ec57a0aa208ff3dd6dc993b0884",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Heli\\OP0023_mv22\\Base\\BP_OP0023_mv22_Base.uasset",
+      "uasset_sha256": "95cef2749ef8e82812cd2284f15f0177b2eac3008dd03230b73edade3c70c15c",
+      "attributes": {
+        "GameObjectCategory": 2
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0023_mv22_Base_C",
+          "uexp_offset": 991,
+          "zero_mask": false,
+          "schema_index": 117
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8,
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-10],
+          "FallingSoundPlayEvent": -7,
+          "FallingSoundStopEvent": -8,
+          "OverrideSecondExplosionSoundEventList": [-11],
+          "OverrideFinalExplosionInAirSoundEventList": [-9, -6],
+          "OverrideFinalExplosionInGroundSoundEventList": [-4, -6]
+        }
+      }
+    },
+    "BP_OP0023_mv22_CP_MS27_C": {
+      "parent": "BP_OP0023_mv22_CP_C",
+      "error": null,
+      "consumed": 58,
+      "export_bytes": 58,
+      "uexp_sha256": "01a8aee5b935ca77be201769a79faf752a04ae9bfe1a7414c5747124d3ce56c6",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Heli\\OP0023_mv22\\CP\\BP_OP0023_mv22_CP_MS27.uasset",
+      "uasset_sha256": "4b1e9b7ae15f576a2cd2c641450fe66badaa7cd84a4b222817836c0444019947",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 9
+      }
+    },
+    "BP_OP0036_slcm_CP_C": {
+      "parent": "BP_OP0036_slcm_Base_C",
+      "error": null,
+      "consumed": 97,
+      "export_bytes": 97,
+      "uexp_sha256": "a500db331dad27789947e848599527274cd88958829e3e200e6f4d706abfce0a",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0036_slcm\\CP\\BP_OP0036_slcm_CP.uasset",
+      "uasset_sha256": "3f168695cadf9b099bc7c0ecc331302ab3406480880b9d8ef65ca3bdd7f686b8",
+      "attributes": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0036_slcm_CP_C",
+          "uexp_offset": 184,
+          "zero_mask": false,
+          "schema_index": 162
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8
+      }
+    },
+    "BP_OP0036_slcm_Base_C": {
+      "parent": "LiveAIGrifnMainMissile",
+      "error": null,
+      "consumed": 280,
+      "export_bytes": 280,
+      "uexp_sha256": "58aa9a7ca17d6c9ae97d5515a35654afdd19ad80bc5717f9502de5e1a2cbc80e",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0036_slcm\\Base\\BP_OP0036_slcm_Base.uasset",
+      "uasset_sha256": "fb3a4bd5ccdf1ebc33a3a2467fe07642a35526bfc6d7b9f718155ef3755d5fca",
+      "attributes": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0036_slcm_Base_C",
+          "uexp_offset": 556,
+          "zero_mask": false,
+          "schema_index": 162
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 10,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-5]
+        }
+      }
+    },
+    "BP_OP0037_mmslct_CP_C": {
+      "parent": "BP_OP0037_mmslct_Base_C",
+      "error": null,
+      "consumed": 229,
+      "export_bytes": 229,
+      "uexp_sha256": "a10e228ea6742f77f6a3ba9aed12f7c827207c2bfe7412c242773ed1e55bc308",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0037_mmslct\\CP\\BP_OP0037_mmslct_CP.uasset",
+      "uasset_sha256": "70a448d53e119c3b6976c87a8224433e98cbe900a68d1400c167d766627d6a83",
+      "attributes": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0037_mmslct_CP_C",
+          "uexp_offset": 316,
+          "zero_mask": false,
+          "schema_index": 191
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8
+      }
+    },
+    "BP_OP0037_mmslct_Base_C": {
+      "parent": "LiveAIGrifnMicroMissileCanister",
+      "error": null,
+      "consumed": 260,
+      "export_bytes": 260,
+      "uexp_sha256": "241a819e374a6580d8be0c2561d015bae9dd0089caebda87f36e0fc45668c2ac",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0037_mmslct\\Base\\BP_OP0037_mmslct_Base.uasset",
+      "uasset_sha256": "56c121c4a3add447d53dcc636217cb5df49bd799e35bb327f20dd0aff0b6a2e7",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 10,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-5]
+        }
+      }
+    },
+    "BP_OP0037_mmslct_CP_FirstShot_C": {
+      "parent": "BP_OP0037_mmslct_CP_C",
+      "error": null,
+      "consumed": 114,
+      "export_bytes": 114,
+      "uexp_sha256": "27ba000727f10d4ec1fa6e8da2bb1ae9981500c8e4095a4c31168b7ff98a31a5",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0037_mmslct\\CP\\BP_OP0037_mmslct_CP_FirstShot.uasset",
+      "uasset_sha256": "7d718b271940acd2487d1577e45914ff7d5ac2fa0a19f9afe8af1e3e07c531a1",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 8
+      }
+    },
+    "BP_OP0038_ep40_CP_C": {
+      "parent": "BP_OP0038_ep40_Base_C",
+      "error": null,
+      "consumed": 108,
+      "export_bytes": 108,
+      "uexp_sha256": "0cb315bee6eb65708c03884aefd9cb8f7d78044ddbb92dfa7ef6723ac892f84a",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0038_ep40\\CP\\BP_OP0038_ep40_CP.uasset",
+      "uasset_sha256": "f41192722b7e976550861c9f9133dab851a605d361b3e28ea2495ecc79a83c1a",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DuringFinishTimeline_DamageFinishRotation_642BD43148D17C02FBE96CAA6C5E10CF": {},
+        "DamagedTimeline_DamagedRotation_6878E2C74DB7149A4E0A77ADF2C88B07": {},
+        "DamagedStateComponent": 28,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_OP0038_ep40_Base_C": {
+      "parent": "BP_AIPlane_Pawn_C",
+      "error": null,
+      "consumed": 102,
+      "export_bytes": 102,
+      "uexp_sha256": "dea06852796bb90f084d34785678f87a2f2c4b97d0bb2050147787c0e082fce6",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0038_ep40\\Base\\BP_OP0038_ep40_Base.uasset",
+      "uasset_sha256": "1fb448792c8586e3f7ba3bf75a109c05b0b3c6e702802508d589eda3e645cca1",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 10,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3],
+          "FallingSoundPlayEvent": 0,
+          "FallingSoundStopEvent": 0
+        }
+      }
+    },
+    "BP_AIPlane_Pawn_C": {
+      "parent": "LiveAIPlane",
+      "error": null,
+      "consumed": 212,
+      "export_bytes": 212,
+      "uexp_sha256": "fce90280e993bf16f7ba25b7c7c4948972518307268ecaac1309c80f24a8e9c1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\BaseAI\\BP_AIPlane_Pawn.uasset",
+      "uasset_sha256": "f1ede13d923546ef922956b188fc03b2ba4d05230d885c59d0af5b47889aa3dc",
+      "attributes": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_AIPlane_Pawn_C",
+          "uexp_offset": 468,
+          "zero_mask": false,
+          "schema_index": 148
+        }
+      },
+      "event_properties": {
+        "Event On Death": [],
+        "DamageImbalanceAnimSettings": {
+          "EnableImbalance": 1,
+          "GunDamageAnimCurveDatas": [-34, -35],
+          "MissileDamageAnimCurveDatas": [-36, -37]
+        },
+        "DamagedStateComponent": 12,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1],
+          "FallingSoundPlayEvent": -2,
+          "FallingSoundStopEvent": -3
+        }
+      }
+    },
+    "BP_OP0039_slcmp_CP_C": {
+      "parent": "BP_OP0039_slcmp_Base_C",
+      "error": null,
+      "consumed": 67,
+      "export_bytes": 67,
+      "uexp_sha256": "cbf3610c3cb6d74f543e6c776baafbe77998aa5f0c405577bba591ca8d5816b1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0039_slcmp\\CP\\BP_OP0039_slcmp_CP.uasset",
+      "uasset_sha256": "859368b8ce3ae07bc202d2c9a7764f085c2c7285def9fd26bbc483b19626e49b",
+      "attributes": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0039_slcmp_CP_C",
+          "uexp_offset": 154,
+          "zero_mask": false,
+          "schema_index": 152
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8
+      }
+    },
+    "BP_OP0039_slcmp_Base_C": {
+      "parent": "BP_AIPlane_Pawn_C",
+      "error": null,
+      "consumed": 127,
+      "export_bytes": 127,
+      "uexp_sha256": "3261c26572496f1cd640a212f25d057dfbcbb2947f36b7aaf57a62682c2a5ddc",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0039_slcmp\\Base\\BP_OP0039_slcmp_Base.uasset",
+      "uasset_sha256": "bb41e81eb5a4f63bbb180970ac96fb8b98c43b737a01949b1073a5d3f711e062",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 12,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-4],
+          "FallingSoundPlayEvent": 0,
+          "FallingSoundStopEvent": 0
+        }
+      }
+    },
+    "BP_OP0046_uavcb_CP_C": {
+      "parent": "BP_OP0046_uavcb_Base_C",
+      "error": null,
+      "consumed": 162,
+      "export_bytes": 162,
+      "uexp_sha256": "e8f8af1c2cc73ad7584ae0de61bd7e06237a96e5b5a2bcfabf32f6989d3e0aa1",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0046_uavcb\\CP\\BP_OP0046_uavcb_CP.uasset",
+      "uasset_sha256": "a73775930110e5949d9c77a7c37431e0935d0126887451d1c1c59cfc5e700ada",
+      "attributes": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0046_uavcb_CP_C",
+          "uexp_offset": 244,
+          "zero_mask": false,
+          "schema_index": 184
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 11,
+        "MaxHealth": 5.0
+      }
+    },
+    "BP_OP0046_uavcb_Base_C": {
+      "parent": "LiveAIAirExplosionUAV",
+      "error": null,
+      "consumed": 207,
+      "export_bytes": 207,
+      "uexp_sha256": "49ff665252a9bfd756da94bf4cd8a37eb59921a6374bae8e197e2012ea0a69cd",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0046_uavcb\\Base\\BP_OP0046_uavcb_Base.uasset",
+      "uasset_sha256": "05a45cce42571282b8deceaec1967c43e53a6e69d314fc919b0b3bb3f5304758",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "Damage": 5.0,
+        "UAVShotSoundEvent": -1,
+        "DamagedStateComponent": 11
+      }
+    },
+    "BP_OP0053_ulraam_CP_C": {
+      "parent": "BP_OP0053_ulraam_Base_C",
+      "error": null,
+      "consumed": 124,
+      "export_bytes": 124,
+      "uexp_sha256": "90b706d15d295a3466bf5a0ac028c69a4529a9ac8ea8eec41942c1a1bebe130d",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0053_ulraam\\CP\\BP_OP0053_ulraam_CP.uasset",
+      "uasset_sha256": "1e3cd43612576c6a3174b89c449aa6e5baa34106f5f6f2ba731b04e4aa684f7a",
+      "attributes": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0053_ulraam_CP_C",
+          "uexp_offset": 168,
+          "zero_mask": false,
+          "schema_index": 151
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 8,
+        "MaxHealth": 40.0
+      }
+    },
+    "BP_OP0053_ulraam_Base_C": {
+      "parent": "BP_AIPlane_Pawn_C",
+      "error": null,
+      "consumed": 122,
+      "export_bytes": 122,
+      "uexp_sha256": "a0aea773810bf9574c9284126e482a5dca9a7f3f5868a1b7e7d23153f753c77c",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0053_ulraam\\Base\\BP_OP0053_ulraam_Base.uasset",
+      "uasset_sha256": "7ea9b652c5c7c3ab4c5efacc45ed1e5f6ab258b15a5e90678d8ac5d5f62e25c2",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 10,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3],
+          "FallingSoundPlayEvent": 0,
+          "FallingSoundStopEvent": 0
+        }
+      }
+    },
+    "BP_OP0058_crkt_CP_C": {
+      "parent": "BP_OP0058_crkt_Base_C",
+      "error": null,
+      "consumed": 87,
+      "export_bytes": 87,
+      "uexp_sha256": "99c41230b0405b39379f41629814514fb7b01ba522547cae81c7f485b5870e3f",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_CP.uasset",
+      "uasset_sha256": "9cb998f11da436ef576203324c812d044018b63bfef0ff9ad1224f7c487909c2",
+      "attributes": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_CP_C",
+          "uexp_offset": 166,
+          "zero_mask": false,
+          "schema_index": 108
+        }
+      },
+      "event_properties": {
+        "SoundEventDamagedSmokeInsideStart": -1,
+        "DamagedStateComponent": 5,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_OP0058_crkt_Base_C": {
+      "parent": "LiveAISotoaRocket",
+      "error": null,
+      "consumed": 359,
+      "export_bytes": 359,
+      "uexp_sha256": "3ba5384efeedc220bb0a419345cc136132c2de31964807772a9e319fad7b1e17",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_Base.uasset",
+      "uasset_sha256": "6a5381de1d780b2c2b88d0d14846918280619060f234d69f8fb972abc6946283",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "SoundEventDamagedSmokeStart": -5,
+        "SoundEventDamagedSmokeStop": -6,
+        "SoundEventDamagedSmokeInsideStart": -3,
+        "SoundEventDamagedSmokeInsideStop": -4,
+        "DamagedStateComponent": 4,
+        "MaxHealth": 150.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-7]
+        }
+      }
+    },
+    "BP_OP0058_crkt_ABR_p1_CP_C": {
+      "parent": "BP_OP0058_crkt_ABR_p1_Base_C",
+      "error": null,
+      "consumed": 450,
+      "export_bytes": 450,
+      "uexp_sha256": "d500af2f319f4fd46f81186c81742c37b2c4810f0bf16c8b1ad88d1d39e3177c",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_ABR_p1_CP.uasset",
+      "uasset_sha256": "e5d0cbd5aff367344c76a098fd8e1047dd48d178560b3ebdcc5e13cc8751e41a",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 30.0
+      }
+    },
+    "BP_OP0058_crkt_ABR_p1_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Separate_Base_C",
+      "error": null,
+      "consumed": 95,
+      "export_bytes": 95,
+      "uexp_sha256": "0de4d26f03eaa8de30f2f1bd944c8d67ee52dc2ef2272c07ab0c9900ad905b16",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_ABR_p1_Base.uasset",
+      "uasset_sha256": "b822434995b109ead22001ffe63d9fb6b5a33e92c301a4cd887d9a01c2fe4df6",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        }
+      }
+    },
+    "BP_OP0058_crkt_debri_Separate_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "error": null,
+      "consumed": 55,
+      "export_bytes": 55,
+      "uexp_sha256": "24da2efb43014dffd174824d4fa90a3903b0ea3eb333a8ac8ff4bddf72814f5c",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_debri_Separate_Base.uasset",
+      "uasset_sha256": "4e305788c1d4ad25b10bf8bfa13cf515a9c883054e1e5854ef2c802916980e03",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_OP0058_crkt_debri_Base_C": {
+      "parent": "LiveAIRocketWreck",
+      "error": null,
+      "consumed": 240,
+      "export_bytes": 240,
+      "uexp_sha256": "79e83aecb71bc243789ef579eaab5724453ab03b9246fd70930cd570c3e9ddf8",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_debri_Base.uasset",
+      "uasset_sha256": "667e1cbb136fa53e6b6d0e0841558612a8bb8acdf472579271fcb11add2ef9dd",
+      "attributes": {
+        "GameObjectCategory": 4
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0058_crkt_debri_Base_C",
+          "uexp_offset": 353,
+          "zero_mask": false,
+          "schema_index": 84
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 4,
+        "MaxHealth": 50.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        }
+      }
+    },
+    "BP_OP0058_crkt_A_p2_CP_C": {
+      "parent": "BP_OP0058_crkt_A_p2_Base_C",
+      "error": null,
+      "consumed": 431,
+      "export_bytes": 431,
+      "uexp_sha256": "c9653c39db23eb1d4881a7cb6d8fbb626978d19d90eade09ab032385ccc3b824",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_A_p2_CP.uasset",
+      "uasset_sha256": "6838bc3326c7806a8c80b8938b5f726dc99f8cd5c3203f1a8ba8c1de36d0eccc",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 20.0
+      }
+    },
+    "BP_OP0058_crkt_A_p2_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "error": null,
+      "consumed": 130,
+      "export_bytes": 130,
+      "uexp_sha256": "c3212bd31c5aaeef695aee2e5317d613bdb1ca51d50730dff66938140fa3de18",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_A_p2_Base.uasset",
+      "uasset_sha256": "d243a64481e59963c509c937c0e43f0479c983f2a0b8342720695d066ed4a827",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 25.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        }
+      }
+    },
+    "BP_OP0058_crkt_BR_p2_CP_C": {
+      "parent": "BP_OP0058_crkt_BR_p2_Base_C",
+      "error": null,
+      "consumed": 411,
+      "export_bytes": 411,
+      "uexp_sha256": "9344beb4dba70d029153dde53c97c2628f8ac88e8202e42e96e54c89f7703792",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_BR_p2_CP.uasset",
+      "uasset_sha256": "7409a6eecc08cfee2a40c0c4b6f043a56be748bd3f46687c3d3ca6478e02eccd",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 20.0
+      }
+    },
+    "BP_OP0058_crkt_BR_p2_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Separate_Base_C",
+      "error": null,
+      "consumed": 90,
+      "export_bytes": 90,
+      "uexp_sha256": "92f0c2302ec6d9c45baaf12f4f0b8afef0b8e6936fc95fb393c4ca20bd03d587",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_BR_p2_Base.uasset",
+      "uasset_sha256": "ef1e2b91f389b80cbb3bf30fda3c46c94ad61d76ff30c9f695c3fb961cd92696",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 25.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        }
+      }
+    },
+    "BP_OP0058_crkt_B_p3_CP_C": {
+      "parent": "BP_OP0058_crkt_B_p3_Base_C",
+      "error": null,
+      "consumed": 429,
+      "export_bytes": 429,
+      "uexp_sha256": "eca65f72ee90494125da32df223978d0036ad5e720e77eee5380255f08833905",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_B_p3_CP.uasset",
+      "uasset_sha256": "c521a561ae005dfd81cb88de0340784ffdbc4751285967f4a5cdb02db325f903",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_OP0058_crkt_B_p3_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "error": null,
+      "consumed": 78,
+      "export_bytes": 78,
+      "uexp_sha256": "5eed0a07cc7087bbc8ef25b7eb843cdf9b96e18f515cb194c916554527c7726f",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_B_p3_Base.uasset",
+      "uasset_sha256": "d5938dd75b48908cf0514b7ca55e265b88780be07a36bd82cc2be0880d5d2947",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 15.0
+      }
+    },
+    "BP_OP0058_crkt_R_p3_CP_C": {
+      "parent": "BP_OP0058_crkt_R_p3_Base_C",
+      "error": null,
+      "consumed": 429,
+      "export_bytes": 429,
+      "uexp_sha256": "90564b57e871ad833f9d2a156d2b55fa9081c7edaf3cf26ecd8fe902cc0da476",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\CP\\BP_OP0058_crkt_R_p3_CP.uasset",
+      "uasset_sha256": "57d6dac01485f26a001e5a3ff2928577c0693de8285c4c1e8f74400e8143c242",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5
+      }
+    },
+    "BP_OP0058_crkt_R_p3_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "error": null,
+      "consumed": 92,
+      "export_bytes": 92,
+      "uexp_sha256": "fc0be932a977a63b8d1c65ddefc3fed2b140a150e9da45c1ea38a8799c238638",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0058_crkt\\Base\\BP_OP0058_crkt_R_p3_Base.uasset",
+      "uasset_sha256": "ca04e181617f4047a06dee56a1ae6002c9d6b553a890079a4e5274f775e5d616",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 5,
+        "MaxHealth": 15.0
+      }
+    },
+    "BP_OP0059_rpdna_Base_C": {
+      "parent": "LiveAIRpdnCanister",
+      "error": null,
+      "consumed": 236,
+      "export_bytes": 236,
+      "uexp_sha256": "15a7c56afe5c19a32215e3a169eb7502a7d045365f6ab471a34237f44bdc5f2f",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP0054_c130\\rpdn\\Base\\BP_OP0059_rpdna_Base.uasset",
+      "uasset_sha256": "7b6a2a44b546d12e6abb76fc0b725a889e0dc796a2082b0c296677f96b8def80",
+      "attributes": {
+        "GameObjectCategory": 8
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP0059_rpdna_Base_C",
+          "uexp_offset": 1136,
+          "zero_mask": false,
+          "schema_index": 118
+        }
+      },
+      "event_properties": {
+        "DamagedStateComponent": 44,
+        "MaxHealth": 20.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-2]
+        }
+      }
+    },
+    "BP_OP1016_x40a_CP_Tewy_C": {
+      "parent": "BP_OP1016_x40a_CP_C",
+      "error": null,
+      "consumed": 70,
+      "export_bytes": 70,
+      "uexp_sha256": "ffe8babdf08a703c699eaf08b8695652251f83211ef81edad1796193a7bf621c",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP1016_x40a\\CP\\BP_OP1016_x40a_CP_Tewy.uasset",
+      "uasset_sha256": "d9d9f50b5273cd5e07fedb218ce1c4f08a3acdc5d1e8eaa9969ee13cf219141f",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 9
+      }
+    },
+    "BP_OP1016_x40a_CP_C": {
+      "parent": "BP_OP1016_x40a_Base_C",
+      "error": null,
+      "consumed": 126,
+      "export_bytes": 126,
+      "uexp_sha256": "e97be9dbe146aea7a5f0e4885bc1f1dbc11f2bcf0720f9e121e1fa07b6c23af4",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP1016_x40a\\CP\\BP_OP1016_x40a_CP.uasset",
+      "uasset_sha256": "2f20c1a0ef26074825820d842f2b60ae2e55028feea3b17949ec6e7ab490f311",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 22,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_OP1016_x40a_Base_C": {
+      "parent": "BP_OP1016_x40a_Archetype_C",
+      "error": null,
+      "consumed": 168,
+      "export_bytes": 168,
+      "uexp_sha256": "dfa409711dbf43285beec68780bf92d0468e660b80a357d04a5c6544f02cb214",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP1016_x40a\\Base\\BP_OP1016_x40a_Base.uasset",
+      "uasset_sha256": "8b7dd52b22ac8d22ce1d854f71ea7920131614c9605e16c588de99518eb63bcd",
+      "attributes": {},
+      "origins": {},
+      "event_properties": {
+        "DamagedStateComponent": 22,
+        "DamageSound": {
+          "ExplosionSoundEvent": 0,
+          "ExplosionSoundEventList": [-8],
+          "FallingSoundPlayEvent": -5,
+          "FallingSoundStopEvent": -6,
+          "OverrideSecondExplosionSoundEventList": [-9],
+          "OverrideFinalExplosionInAirSoundEventList": [-7],
+          "OverrideFinalExplosionInGroundSoundEventList": [-3, -4]
+        }
+      }
+    },
+    "BP_OP1016_x40a_Archetype_C": {
+      "parent": "LiveAINightmarePlane",
+      "error": null,
+      "consumed": 201,
+      "export_bytes": 201,
+      "uexp_sha256": "2bc659ceeed0eb1e20e90e7bbddcaa4f5e496e4615337ce4c2a6465a9e34cad2",
+      "source": "data\\local\\npc-raw\\Live\\Content\\Blueprints\\Vehicle\\AI\\Plane\\OP1016_x40a\\Base\\BP_OP1016_x40a_Archetype.uasset",
+      "uasset_sha256": "d956f3ba95406c54e2a6659499133920e53c9947e1975b6d57eb1b869967782b",
+      "attributes": {
+        "GameObjectCategory": 1
+      },
+      "origins": {
+        "GameObjectCategory": {
+          "blueprint": "BP_OP1016_x40a_Archetype_C",
+          "uexp_offset": 407,
+          "zero_mask": false,
+          "schema_index": 147
+        }
+      },
+      "event_properties": {
+        "Event On Death": [],
+        "DamageImbalanceAnimSettings": {
+          "EnableImbalance": 1,
+          "GunDamageAnimCurveDatas": [-27, -28],
+          "MissileDamageAnimCurveDatas": [-29, -30]
+        },
+        "DamagedStateComponent": 10,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEvent": -1,
+          "FallingSoundPlayEvent": -2,
+          "FallingSoundStopEvent": -3
+        }
+      }
+    }
+  },
+  "native_checks": {
+    "LiveAIArrangementObject": {
+      "constructor": "0x147c55ab0",
+      "writes": {
+        "0x10db": {
+          "value": 0,
+          "address": "0x147c55cbb"
+        }
+      },
+      "instructions": [
+        "0x147c55abd call 0x147c7c6c0",
+        "0x147c55ac2 xor ebp, ebp",
+        "0x147c55cbb mov byte ptr [rdi + 0x10db], bpl"
+      ]
+    },
+    "LiveAIFallingObject": {
+      "constructor": "0x147c7ab00",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c7acab"
+        }
+      },
+      "instructions": [
+        "0x147c7ab09 call 0x147c7c6c0",
+        "0x147c7ab8f call 0x146d0e8b0",
+        "0x147c7ab94 xor edx, edx",
+        "0x147c7ac05 call 0x146d0e960",
+        "0x147c7acab mov byte ptr [rbx + 0x10db], 1",
+        "0x147c7acc1 ret "
+      ]
+    },
+    "LiveAIGameObject": {
+      "constructor": "0x147c7c6c0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c7c8d6"
+        }
+      },
+      "instructions": [
+        "0x147c7c6d8 call 0x147d09b80",
+        "0x147c7c6fa xor r14d, r14d",
+        "0x147c7c8d6 mov word ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAIHeli": {
+      "constructor": "0x147c97bc0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147c98017"
+        }
+      },
+      "instructions": [
+        "0x147c97bd2 call 0x147c7c6c0",
+        "0x147c97beb xor esi, esi",
+        "0x147c97f3e call 0x144d2bbc0",
+        "0x147c98017 mov byte ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAILaunchVehicle": {
+      "constructor": "0x147cb4350",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147cb4466"
+        }
+      },
+      "instructions": [
+        "0x147cb4359 call 0x147c55ab0",
+        "0x147cb4365 xor edx, edx",
+        "0x147cb43da call 0x146d0e960",
+        "0x147cb4466 mov byte ptr [rbx + 0x10db], 1",
+        "0x147cb4478 ret "
+      ]
+    },
+    "LiveAIMegafloatConstruction": {
+      "constructor": "0x147e607e0",
+      "writes": {
+        "0x3ac": {
+          "value": 4,
+          "address": "0x147e60895"
+        }
+      },
+      "instructions": [
+        "0x147e607e9 call 0x147c5ade0",
+        "0x147e60863 xor eax, eax",
+        "0x147e60895 mov byte ptr [rbx + 0x3ac], 4",
+        "0x147e608a1 ret "
+      ]
+    },
+    "LiveAIPlane": {
+      "constructor": "0x147cb9ac0",
+      "writes": {
+        "0x10db": {
+          "value": 1,
+          "address": "0x147cba023"
+        }
+      },
+      "instructions": [
+        "0x147cb9ad2 call 0x147c7c6c0",
+        "0x147cb9b0a xor esi, esi",
+        "0x147cb9d86 call 0x144d20f30",
+        "0x147cb9efd call 0x146d2f190",
+        "0x147cb9fef call 0x146d2f190",
+        "0x147cba023 mov byte ptr [rdi + 0x10db], 1"
+      ]
+    },
+    "LiveAIUniqueObjectBase": {
+      "constructor": "0x147e5d580",
+      "writes": {
+        "0x10db": {
+          "value": 0,
+          "address": "0x147e5d78f"
+        }
+      },
+      "instructions": [
+        "0x147e5d599 xor r15d, r15d",
+        "0x147e5d60b jmp 0x147e5d635",
+        "0x147e5d611 call 0x14188cb40",
+        "0x147e5d630 call 0x14186fe70",
+        "0x147e5d63c call 0x141abea70",
+        "0x147e5d649 xor r8d, r8d",
+        "0x147e5d64c call 0x141abe920",
+        "0x147e5d6b6 jmp 0x147e5d6e3",
+        "0x147e5d6bf call 0x14188cb40",
+        "0x147e5d6de call 0x14186fe70",
+        "0x147e5d6ea call 0x141abea70",
+        "0x147e5d6f7 xor r8d, r8d",
+        "0x147e5d6fa call 0x141abe920",
+        "0x147e5d705 call 0x147c7c6c0",
+        "0x147e5d78f mov byte ptr [rdi + 0x10db], r15b",
+        "0x147e5d7a4 ret "
+      ]
+    },
+    "LiveGameObject": {
+      "constructor": "0x147d09b80",
+      "writes": {
+        "0x3ac": {
+          "value": 0,
+          "address": "0x147d09ce7"
+        }
+      },
+      "instructions": [
+        "0x147d09ba7 call 0x1448282c0",
+        "0x147d09bac xor esi, esi",
+        "0x147d09ce7 mov word ptr [rdi + 0x3ac], si"
+      ]
+    }
+  },
+  "current_role_guards": [
+    {
+      "address": "0x147c831f4",
+      "fallback": 100,
+      "instructions": [
+        "0x147c831f4 movzx ecx, byte ptr [rdi + 0x3ac]",
+        "0x147c831fb movss xmm0, dword ptr [rip + 0x561244d]",
+        "0x147c83203 cmp dword ptr [rsi + 0x1358], ecx",
+        "0x147c83209 jle 0x147c83217",
+        "0x147c8320b mov rax, qword ptr [rsi + 0x1350]",
+        "0x147c83212 movss xmm0, dword ptr [rax + rcx*4]",
+        "0x147c83217 mulss xmm0, xmm7",
+        "0x147c8321b mulss xmm6, xmm0"
+      ]
+    }
+  ],
+  "current_role_array": {
+    "address": "0x147d2c540",
+    "entries": 8,
+    "instructions": [
+      "0x147d2c540 mov rax, qword ptr [rbx]",
+      "0x147d2c543 mov dword ptr [rax + rdi*4], 0x42c80000",
+      "0x147d2c54a movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c54e lea eax, [rdi + 1]",
+      "0x147d2c551 mov dword ptr [rbx + 8], eax",
+      "0x147d2c554 cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c557 jbe 0x147d2c563",
+      "0x147d2c559 mov edx, edi",
+      "0x147d2c55b mov rcx, rbx",
+      "0x147d2c55e call 0x1416dba60",
+      "0x147d2c563 mov eax, dword ptr [rsi + 0x1c]",
+      "0x147d2c566 mov rcx, qword ptr [rbx]",
+      "0x147d2c569 mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c56c movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c570 lea eax, [rdi + 1]",
+      "0x147d2c573 mov dword ptr [rbx + 8], eax",
+      "0x147d2c576 cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c579 jbe 0x147d2c585",
+      "0x147d2c57b mov edx, edi",
+      "0x147d2c57d mov rcx, rbx",
+      "0x147d2c580 call 0x1416dba60",
+      "0x147d2c585 mov eax, dword ptr [rsi + 0x20]",
+      "0x147d2c588 mov rcx, qword ptr [rbx]",
+      "0x147d2c58b mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c58e movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c592 lea eax, [rdi + 1]",
+      "0x147d2c595 mov dword ptr [rbx + 8], eax",
+      "0x147d2c598 cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c59b jbe 0x147d2c5a7",
+      "0x147d2c59d mov edx, edi",
+      "0x147d2c59f mov rcx, rbx",
+      "0x147d2c5a2 call 0x1416dba60",
+      "0x147d2c5a7 mov eax, dword ptr [rsi + 0x24]",
+      "0x147d2c5aa mov rcx, qword ptr [rbx]",
+      "0x147d2c5ad mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c5b0 movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c5b4 lea eax, [rdi + 1]",
+      "0x147d2c5b7 mov dword ptr [rbx + 8], eax",
+      "0x147d2c5ba cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c5bd jbe 0x147d2c5c9",
+      "0x147d2c5bf mov edx, edi",
+      "0x147d2c5c1 mov rcx, rbx",
+      "0x147d2c5c4 call 0x1416dba60",
+      "0x147d2c5c9 mov eax, dword ptr [rsi + 0x28]",
+      "0x147d2c5cc mov rcx, qword ptr [rbx]",
+      "0x147d2c5cf mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c5d2 movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c5d6 lea eax, [rdi + 1]",
+      "0x147d2c5d9 mov dword ptr [rbx + 8], eax",
+      "0x147d2c5dc cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c5df jbe 0x147d2c5eb",
+      "0x147d2c5e1 mov edx, edi",
+      "0x147d2c5e3 mov rcx, rbx",
+      "0x147d2c5e6 call 0x1416dba60",
+      "0x147d2c5eb mov eax, dword ptr [rsi + 0x2c]",
+      "0x147d2c5ee mov rcx, qword ptr [rbx]",
+      "0x147d2c5f1 mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c5f4 movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c5f8 lea eax, [rdi + 1]",
+      "0x147d2c5fb mov dword ptr [rbx + 8], eax",
+      "0x147d2c5fe cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c601 jbe 0x147d2c60d",
+      "0x147d2c603 mov edx, edi",
+      "0x147d2c605 mov rcx, rbx",
+      "0x147d2c608 call 0x1416dba60",
+      "0x147d2c60d mov eax, dword ptr [rsi + 0x30]",
+      "0x147d2c610 mov rcx, qword ptr [rbx]",
+      "0x147d2c613 mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c616 movsxd rdi, dword ptr [rbx + 8]",
+      "0x147d2c61a lea eax, [rdi + 1]",
+      "0x147d2c61d mov dword ptr [rbx + 8], eax",
+      "0x147d2c620 cmp eax, dword ptr [rbx + 0xc]",
+      "0x147d2c623 jbe 0x147d2c62f",
+      "0x147d2c625 mov edx, edi",
+      "0x147d2c627 mov rcx, rbx",
+      "0x147d2c62a call 0x1416dba60",
+      "0x147d2c62f mov rcx, qword ptr [rbx]",
+      "0x147d2c632 mov eax, dword ptr [rsi + 0x34]",
+      "0x147d2c635 mov rbx, qword ptr [rsp + 0x30]",
+      "0x147d2c63a mov rbp, qword ptr [rsp + 0x38]",
+      "0x147d2c63f mov dword ptr [rcx + rdi*4], eax",
+      "0x147d2c642 lea rax, [rip + 0x39ed85f]",
+      "0x147d2c649 mov qword ptr [rsi], rax",
+      "0x147d2c64c mov rsi, qword ptr [rsp + 0x40]",
+      "0x147d2c651 add rsp, 0x20",
+      "0x147d2c655 pop rdi",
+      "0x147d2c656 ret "
+    ]
+  },
+  "baseline": "9342e63",
+  "scope": "41 published targets; static initial attributes only; not applied to catalog or delivery data"
+}

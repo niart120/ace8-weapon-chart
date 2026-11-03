@@ -2,7 +2,7 @@
 
 更新日: 2026-11-03。数値は同梱のbuild 25201480の抽出表。実ゲーム測定なし。
 
-全兵装42件（掲載34・UNUSED8）、全目標506行。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
+全兵装42件（掲載34・UNUSED8）、全目標506行（掲載311・EXCLUDED195、固定ID・件数の基準HEAD `9342e63`、24行の属性反映後）。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
 
 ## 掲載範囲と固定ID
 
@@ -17,11 +17,11 @@
 | 分類 | 行数 |
 | --- | ---: |
 | AIRCRAFT | 132 |
-| GROUND | 70 |
+| GROUND | 69 |
 | SHIP | 59 |
 | STRUCTURE | 43 |
 | OTHER | 8 |
-| EXCLUDED | 194 |
+| EXCLUDED | 195 |
 
 ## 未確認項目
 
@@ -29,34 +29,11 @@ TLSは威力40・継続18・初回遅延0.05000000074505806・間隔0.4000000059
 
 SFFS子弾（105）はグループマッピングの範囲外、SOD子弾（104）はBombPower（124）への対応を確認。SFFSの親から子へのパーツ転送経路は旧ビルドで未確認のため、BOMB.POW+選択時だけ `?`。パーツなしは子弾40を使用する。
 
-ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的なnone区分で保持する。未解決の区分をnoneや1へ補完しない。以下は掲載対象で未確認の属性を含む行。isAirだけが未確認なら通常MSLの条件付きパーツを選択していない計算は継続できる。
+ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的なnone区分で保持する。未解決の区分をnoneや1へ補完しない。以下は**配信データで未確認扱いの17行**。local_003で41行の静的属性を確認し、承認済み24行を反映した。残る区分8の5行とMEGAFLOAT系12行は未反映。[調査結果と残件](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)を参照。isAirだけが未確認なら通常MSLの条件付きパーツを選択していない計算は継続できる。
 
 | ID | 目標 | 未確認 |
 | ---: | --- | --- |
 | 201 | MSL PALLET《C-130》 | roleGroup |
-| 230 | CH-47 | isAir, roleGroup, standardDamage |
-| 216 | EXPLOSIVE UAV | isAir, roleGroup |
-| 373 | LAND AEGIS《PODARGE》 | isAir, roleGroup |
-| 377 | LAND DESTROYER《PODARGE》 | isAir, roleGroup |
-| 498 | UNKNOWN | isAir |
-| 410 | UNKNOWN [M26] | isAir |
-| 69 | V-22 | isAir, roleGroup |
-| 457 | X-40 | isAir |
-| 435 | X-40 [M28] | isAir |
-| 45 | X-40 [M3] | isAir |
-| 459 | X-40 NOSE UNIT | isAir |
-| 106 | LAND AEGIS | isAir, roleGroup |
-| 315 | LAND AEGIS [M23] | isAir, roleGroup |
-| 154 | THRUSTER《LAND BATTLESHIP 1》 | isAir, roleGroup, standardDamage |
-| 155 | VLS《LAND BATTLESHIP 1》 | isAir, roleGroup |
-| 251 | BREACH《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 252 | CIWS《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 250 | CORE UNIT《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 255 | MAIN GUN《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 256 | SAM《LAND BATTLESHIP 2》 | isAir, roleGroup |
-| 228 | MAIN GUN《LAND BATTLESHIP 3》 | isAir, roleGroup |
-| 310 | LAND DESTROYER | isAir, roleGroup |
-| 314 | DISP. RAIL GUN《LAND DESTROYER》 | isAir, roleGroup |
 | 418 | MEGAFLOAT | isAir, roleGroup, standardDamage |
 | 423 | MEGAFLOAT | isAir, roleGroup, standardDamage |
 | 430 | FUSION REACTOR《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
@@ -70,8 +47,6 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 503 | SHUTTER《MEGAFLOAT》 | isAir, roleGroup, standardDamage |
 | 426 | SHUTTER《MEGAFLOAT》 [M27] | isAir, roleGroup, standardDamage |
 | 264 | BVRAAM | roleGroup |
-| 237 | LAUNCH VEHICLE | isAir |
-| 238 | LAUNCH VEHICLE DEBRIS | isAir, roleGroup |
 | 505 | MSL DISPENSER | roleGroup |
 | 463 | MSL DISPENSER [M30] | roleGroup |
 | 462 | SLCM | roleGroup |
@@ -115,4 +90,28 @@ Q003の後続判断で、陸上戦艦の本体ID147・371・494・247・226もEX
 
 Q003の確認済み部位属性を反映し、151・153・488・249・258をisAir=false・ROLE=shipへ更新した。249→248、258→254を同条件として統合し、旧IDはEXCLUDEDとして保持、旧保存の選択は代表IDへ移す。旧出典は履歴用IDにも残し、代表IDにも追加して生成時に同条件を照合する。これら9出典は掲載を続けるため、元定義の除外指定282件には追加しない。
 
-現在は固定ID506件、掲載312行・EXCLUDED194行。陸上戦艦部位は固定ID24件のうち22行を掲載。SUB CATERPILLAR 151・152の所属ラベルを省略して152へ(CORE)を付け、M25主砲372をROCKY ISLAND表記・partOf=371へ修正した。HP・耐性・任務差分・並び順、THRUSTERの名前と右側154の全設定は維持。根拠・検証は[陸上戦艦の調査16節](../../../spec/agent/complete/local_002/LAND_BATTLESHIP_REVIEW.md#16-合意した部位変更の実装と検証)を参照。現行の静的属性を確認したもので、基準ビルドとの同一性や実ゲーム測定を確認した意味ではない。
+local_002の16節時点では固定ID506件、掲載312行・EXCLUDED194行。陸上戦艦部位は固定ID24件のうち22行を掲載。SUB CATERPILLAR 151・152の所属ラベルを省略して152へ(CORE)を付け、M25主砲372をROCKY ISLAND表記・partOf=371へ修正した。HP・耐性・任務差分・並び順、THRUSTERの名前と右側154の全設定は維持。根拠・検証は[陸上戦艦の調査16節](../../../spec/agent/complete/local_002/LAND_BATTLESHIP_REVIEW.md#16-合意した部位変更の実装と検証)を参照。現行の静的属性を確認したもので、基準ビルドとの同一性や実ゲーム測定を確認した意味ではない。
+
+
+## local_002完了時点とlocal_003の再調査
+
+local_002の最終承認でTHRUSTER154をEXCLUDEDへ変更した。現行は固定ID506件、掲載311行・EXCLUDED195行、GROUND69行、陸上戦艦掲載部位21行。元定義1459件・除外指定284件。153・488は左右修飾なしで、共通／M9の耐性差を維持する。154は上の掲載中の属性一覧から除いた。過去各節の件数は履歴であり、現在値ではない。
+
+local_003では、掲載中の属性未確認41行（isAir 36行、roleGroup 34行）の117出典・48モデルを再照合した。既存抽出資産と現行EXEを使用し、72 Blueprintの全CDO読取とnative初期値から全41行のisAir・GameObjectCategoryを確認した。対象の静的属性確認に必要な資産不足は0件。配信JSON・生成catalog・既存属性証拠は未変更。
+
+| 調査結果 | 行数・扱い |
+| --- | --- |
+| 既存ROLE区分へ対応する反映候補 | 24行。CH-47のstandardDamage=falseはクラス名の大小文字による読取失敗が原因であり、特殊被弾の確認結果ではない |
+| GameObjectCategory=8 | 201・264・505・463・462の5行。ROLE配列の範囲外は100%となる静的処理を確認。Category_None=0と元定義を混同しない対応が必要 |
+| MEGAFLOAT系 | 12行のisAir=false・Category=4を確認。破壊条件・イベント後の状態・被弾経路は未確定で、standardDamageを一律trueにしない |
+
+standardDamage=falseの全13行は、今回全てLiveAIGameObjectへの継承を確認した。全出典のMinHealthは0または共通NPCの設定なし。この再読取結果だけで全局面の撃破数を保証しない。全レベル配置のROLE無効化、任務イベントによる値変更、基準build 25201480との資産同一性は残る制約である。
+
+対象一覧・読取不具合の原因・反映候補は[local_003](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md)、出典・ハッシュ・命令は[TARGET_ATTRIBUTE_EVIDENCE.json](TARGET_ATTRIBUTE_EVIDENCE.json)へ記録した。
+
+
+## local_003の承認済み24行の反映
+
+30モデルの確認値を生成catalogへ反映し、24行のisAir・17行のroleGroup・CH-47のstandardDamageを更新した。全固定ID・表示分類・名前・HP・耐性・任務差分・親子関係・出典は維持。掲載311行・EXCLUDED195行は変わらない。上の未確認一覧は残る17行へ更新した（isAir未確認12行、roleGroup未確認17行、standardDamage=false 12行）。
+
+CH-47はクラス名の大小文字による読取失敗を解消したため、既存の通常目標と同じ判定基準へ戻した。区分8の5行とMEGAFLOAT系12行の配信値は変更していない。単体100テスト、Chrome10シナリオ、型検査・Lint・整形・ビルド成功。配信3ファイルの再生成一致を確認。詳細は[local_003の9節](../../../spec/agent/wip/local_003/TARGET_ATTRIBUTE_REVIEW.md#9-承認済み24行の属性反映)を参照。
