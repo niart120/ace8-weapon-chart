@@ -362,7 +362,7 @@ for (const width of [1440, 390]) {
     });
     await page.goto('/');
     await expect(page.getByRole('rowheader')).toHaveCount(0);
-    const selectedIds = [248, 254, 151, 152, 372, 153, 488, 154];
+    const selectedIds = [248, 254, 151, 152, 372, 153, 488];
     for (const showParts of [false, true])
       for (const showVariants of [false, true]) {
         await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
@@ -383,10 +383,14 @@ for (const width of [1440, 390]) {
             await panel.getByRole('searchbox').fill(query);
             await expect(panel.locator('.group-items label')).toHaveCount(count);
           }
+          await panel.getByRole('searchbox').fill('THRUSTER');
+          await expect(panel.locator('.group-items label')).toHaveCount(showVariants ? 2 : 1);
+          await expect(panel).not.toContainText('(左側)');
+          await expect(panel).not.toContainText('(右側)');
         }
         await panel.getByRole('button', { name: 'Close targets', exact: true }).click();
         await expect(page.getByRole('rowheader')).toHaveCount(
-          showParts ? (showVariants ? 8 : 7) : 0
+          showParts ? (showVariants ? 7 : 6) : 0
         );
         if (showParts) {
           await expect(
@@ -409,6 +413,6 @@ for (const width of [1440, 390]) {
           .toEqual(selectedIds);
       }
     await page.reload();
-    await expect(page.getByRole('rowheader')).toHaveCount(8);
+    await expect(page.getByRole('rowheader')).toHaveCount(7);
   });
 }

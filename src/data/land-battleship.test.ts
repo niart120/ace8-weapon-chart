@@ -28,11 +28,11 @@ test('M24・M25の本体の旧選択を除去し、M25の主砲を保持する',
   ]);
 });
 
-test('陸上戦艦の本体8行を除外し、親が非表示でも統合後の部位22行を掲載する', () => {
+test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象の部位21行を表示する', () => {
   const bodyIds = [147, 226, 247, 261, 330, 371, 494, 496];
   const partIds = [
-    148, 149, 150, 151, 152, 153, 154, 155, 227, 228, 229, 248, 250, 251, 252, 253, 254, 255, 256,
-    257, 372, 488,
+    148, 149, 150, 151, 152, 153, 155, 227, 228, 229, 248, 250, 251, 252, 253, 254, 255, 256, 257,
+    372, 488,
   ];
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
@@ -51,6 +51,49 @@ test('陸上戦艦の本体8行を除外し、親が非表示でも統合後の�
     []
   );
   for (const id of partIds) expect(initial.targetIds).toContain(id);
+});
+
+test('THRUSTER154を除外し、153と488の名前・任務耐性差・保存選択を保持する', () => {
+  const catalog = { targets, weapons };
+  const initial = initialPreferences(false, catalog);
+  const right = targets.find((t) => t.id === 154)!;
+  const common = targets.find((t) => t.id === 488)!;
+  const mission = targets.find((t) => t.id === 153)!;
+  expect(right).toMatchObject({ category: 'EXCLUDED', hp: 40, partOf: 147 });
+  expect(initial.targetIds).not.toContain(154);
+  expect(mergedTargetIds.has(154)).toBe(false);
+  expect(common).toMatchObject({
+    name: 'THRUSTER《LAND BATTLESHIP 1》',
+    hp: 160,
+    missionVariant: null,
+  });
+  expect(mission).toMatchObject({
+    name: 'THRUSTER《LAND BATTLESHIP 1》 [M9]',
+    hp: 160,
+    missionVariant: { missionId: '10' },
+  });
+  expect(common.damageMultipliers.groundMissile).toBe(0.5999999642372131);
+  expect(common.damageMultipliers.antiShipMissile).toBe(0.5);
+  expect(mission.damageMultipliers.groundMissile).toBe(1);
+  expect(mission.damageMultipliers.antiShipMissile).toBe(1);
+  for (const showParts of [false, true])
+    for (const showMissionVariants of [false, true]) {
+      const saved = {
+        ...initial,
+        version: 1,
+        targetIds: [154, 153, 488],
+        showParts,
+        showMissionVariants,
+      };
+      const restored = restorePreferences(saved, initial, catalog, []);
+      expect(restored.targetIds).toEqual([153, 488]);
+      const visible = showParts ? (showMissionVariants ? [488, 153] : [488]) : [];
+      expect(targetCandidates(restored, targets, 'THRUSTER').map((t) => t.id)).toEqual(visible);
+      expect(selectedTargets(restored, targets).map((t) => t.id)).toEqual(visible);
+    }
+  expect(
+    restorePreferences({ ...initial, version: 1, targetIds: [154] }, initial, catalog, []).targetIds
+  ).toEqual([]);
 });
 
 test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件でも選択を保持する', () => {

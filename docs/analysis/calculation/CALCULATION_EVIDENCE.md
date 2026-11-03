@@ -50,4 +50,4 @@ UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimpor
 
 BlueprintGeneratedClassのDynamicBindingObjectsを4バイト整数として読んでいたため、一部クラスの読取位置がずれ、CDO属性を得られていなかった。現行EXEの反射情報に従って配列として読むよう`collect_npc_evidence.py`を修正した。対象13 BlueprintのCDOを定義長まで読み切り、調査結果と属性が一致することを確認。全モデルの再抽出・一括更新は行っていない。
 
-SubCat、Thruster_L1/L2、AAGun_BI、VLSMはGameObjectCategory=6、native基底クラスによるbIsAir=falseと確認し、配信ID151・153・488・249・258へ反映した。元データ・位置・ハッシュは[local_002の15・16節](../../../spec/agent/wip/local_002/LAND_BATTLESHIP_REVIEW.md)と`src/test/fixtures/land-parts-evidence.json`に保持する。ビルド差とイベント後の状態に関する上記の制約は維持する。
+SubCat、Thruster_L1/L2、AAGun_BI、VLSMはGameObjectCategory=6、native基底クラスによるbIsAir=falseと確認し、配信ID151・153・488・249・258へ反映した。元データ・位置・ハッシュは[local_002の15・16節](../../../spec/agent/complete/local_002/LAND_BATTLESHIP_REVIEW.md)と`src/test/fixtures/land-parts-evidence.json`に保持する。ビルド差とイベント後の状態に関する上記の制約は維持する。

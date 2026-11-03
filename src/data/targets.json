@@ -6198,7 +6198,7 @@
   {
     "id": 154,
     "name": "THRUSTER《LAND BATTLESHIP 1》",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 191,
     "partOf": 147,
     "missionVariant": null,
