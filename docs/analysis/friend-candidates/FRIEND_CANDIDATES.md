@@ -421,3 +421,11 @@ JACKPOTは13行あり、M10の1行とM27の4行はモデルHP75に任務差分-6
 両行のNPCのHP差分は0。任務行・NPC・モデル・Blueprint名にAllyはなく、HP500という値の一致だけで味方用定義と同じ所属・同一表示行とは判定しない。同じNPCを使う他任務の通常TANK・APCには、この除外を適用しない。
 
 根拠: `docs/initial/ref/tables/DT_NPC_Mission025day1.json`、`DT_NPC.json`、`DT_NPC_Model.json`。静的設定とユーザーによる掲載範囲の判断であり、実際の出現・所属は未検証。
+
+## local_002で承認された追加除外
+
+2026-11-03、ユーザーがQUEEN・PURPLE MAGIC・ENDURANCE本体と対応部位、および内部Mission015（ゲーム内M14）のGREEN 1・2をEXCLUDEDにすることを承認した。既存の203元定義とは別の63出典を追加指定した。元の候補199行の抽出件数を書き換えるものではない。
+
+QUEENの共通NPC出典も含め、既存22表示行をEXCLUDEDに変更。ENDURANCEの対空砲8出典は新規ID 506へ分離し、他艦の12出典は既存ID 124に残した。GREEN 1の旧呼称・敵用呼称の両定義とGREEN 2を含めて除外する方針であり、今回も実所属の確認とは区別する。
+
+[全出典と反映結果](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。内部番号をM番号として記載していた問題は[ゲーム内番号の照合](../ui-labels/MISSION_NUMBERS.md)で訂正した。既存画面の番号表示修正はR006として未対応。

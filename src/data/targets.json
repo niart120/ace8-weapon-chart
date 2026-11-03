@@ -1390,7 +1390,7 @@
   {
     "id": 209,
     "name": "GREEN 1",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 43,
     "partOf": null,
     "missionVariant": null,
@@ -1422,7 +1422,7 @@
   {
     "id": 211,
     "name": "GREEN 2",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 44,
     "partOf": null,
     "missionVariant": null,
@@ -3168,7 +3168,7 @@
   {
     "id": 22,
     "name": "PURPLE MAGIC 1",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 98,
     "partOf": null,
     "missionVariant": null,
@@ -3200,7 +3200,7 @@
   {
     "id": 23,
     "name": "PURPLE MAGIC 2",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 99,
     "partOf": null,
     "missionVariant": null,
@@ -3232,7 +3232,7 @@
   {
     "id": 24,
     "name": "PURPLE MAGIC 3",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 100,
     "partOf": null,
     "missionVariant": null,
@@ -3264,7 +3264,7 @@
   {
     "id": 25,
     "name": "PURPLE MAGIC 4",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 101,
     "partOf": null,
     "missionVariant": null,
@@ -3360,7 +3360,7 @@
   {
     "id": 18,
     "name": "QUEEN 1",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 104,
     "partOf": null,
     "missionVariant": null,
@@ -3392,7 +3392,7 @@
   {
     "id": 158,
     "name": "QUEEN 1 [M11]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 105,
     "partOf": null,
     "missionVariant": {
@@ -3426,7 +3426,7 @@
   {
     "id": 234,
     "name": "QUEEN 1 [M19]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 106,
     "partOf": null,
     "missionVariant": {
@@ -3460,7 +3460,7 @@
   {
     "id": 81,
     "name": "QUEEN 1 [M7]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 107,
     "partOf": null,
     "missionVariant": {
@@ -3494,7 +3494,7 @@
   {
     "id": 19,
     "name": "QUEEN 2",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 108,
     "partOf": null,
     "missionVariant": null,
@@ -3526,7 +3526,7 @@
   {
     "id": 159,
     "name": "QUEEN 2 [M11]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 109,
     "partOf": null,
     "missionVariant": {
@@ -3560,7 +3560,7 @@
   {
     "id": 82,
     "name": "QUEEN 2 [M7]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 110,
     "partOf": null,
     "missionVariant": {
@@ -3594,7 +3594,7 @@
   {
     "id": 20,
     "name": "QUEEN 3",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 111,
     "partOf": null,
     "missionVariant": null,
@@ -3626,7 +3626,7 @@
   {
     "id": 160,
     "name": "QUEEN 3 [M11]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 112,
     "partOf": null,
     "missionVariant": {
@@ -3660,7 +3660,7 @@
   {
     "id": 83,
     "name": "QUEEN 3 [M7]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 113,
     "partOf": null,
     "missionVariant": {
@@ -3694,7 +3694,7 @@
   {
     "id": 21,
     "name": "QUEEN 4",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 114,
     "partOf": null,
     "missionVariant": null,
@@ -3726,7 +3726,7 @@
   {
     "id": 161,
     "name": "QUEEN 4 [M11]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 115,
     "partOf": null,
     "missionVariant": {
@@ -3760,7 +3760,7 @@
   {
     "id": 84,
     "name": "QUEEN 4 [M7]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 116,
     "partOf": null,
     "missionVariant": {
@@ -8070,7 +8070,7 @@
   {
     "id": 461,
     "name": "AIRCRAFT CARRIER",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 249,
     "partOf": null,
     "missionVariant": null,
@@ -8102,7 +8102,7 @@
   {
     "id": 162,
     "name": "AIRCRAFT CARRIER [M11]",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 250,
     "partOf": null,
     "missionVariant": {
@@ -8168,9 +8168,9 @@
   {
     "id": 163,
     "name": "NAVAL GUN《AIRCRAFT CARRIER》",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 252,
-    "partOf": 123,
+    "partOf": 461,
     "missionVariant": null,
     "hp": 20,
     "damageMultipliers": {
@@ -16341,6 +16341,38 @@
     "category": "EXCLUDED",
     "order": 504,
     "partOf": 351,
+    "missionVariant": null,
+    "hp": 20,
+    "damageMultipliers": {
+      "standardMissile": 1,
+      "airMissile": 1,
+      "groundMissile": 1,
+      "antiShipMissile": 1,
+      "guidedBomb": 1,
+      "bomb": 1,
+      "gun": 1,
+      "rocket": 1,
+      "railgun": 1,
+      "mpbm": 1,
+      "laser": 1,
+      "uavt": 1,
+      "uavg": 1,
+      "uavp": 1,
+      "fuelAirBomb": 1,
+      "lacmBlast": 1,
+      "lagmBlast": 1,
+      "lasmBlast": 1
+    },
+    "isAir": false,
+    "roleGroup": "ship",
+    "standardDamage": true
+  },
+  {
+    "id": 506,
+    "name": "AA GUN《AIRCRAFT CARRIER》",
+    "category": "EXCLUDED",
+    "order": 505,
+    "partOf": 461,
     "missionVariant": null,
     "hp": 20,
     "damageMultipliers": {

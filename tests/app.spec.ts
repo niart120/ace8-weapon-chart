@@ -228,3 +228,33 @@ for (const width of [1440, 390]) {
     );
   });
 }
+
+test('除外済み友軍の旧選択を復元せず、他艦の対空砲は保持する', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'ace8-weapon-guide.preferences',
+      JSON.stringify({
+        version: 1,
+        conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
+        weaponIds: [1],
+        targetIds: [18, 22, 209, 211, 162, 461, 163, 123, 124],
+        showParts: true,
+        showMissionVariants: true,
+      })
+    );
+  });
+  await page.goto('/');
+  await expect(page.getByRole('rowheader')).toHaveCount(2);
+  await expect(
+    page.getByRole('rowheader', { name: 'AA GUN《AIRCRAFT CARRIER》', exact: true })
+  ).toHaveCount(1);
+  await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+  const panel = page.getByRole('dialog', { name: 'TARGETS' });
+  for (const query of ['QUEEN', 'PURPLE MAGIC', 'GREEN', 'NAVAL GUN《AIRCRAFT CARRIER》']) {
+    await panel.getByRole('searchbox').fill(query);
+    await expect(panel.locator('.group-items label')).toHaveCount(0);
+  }
+  await panel.getByRole('searchbox').fill('AA GUN《AIRCRAFT CARRIER》');
+  await expect(panel.locator('.group-items label')).toHaveCount(1);
+});

@@ -2,7 +2,7 @@
 
 更新日: 2026-11-03。数値は同梱のbuild 25201480の抽出表。実ゲーム測定なし。
 
-全兵装42件（掲載34・UNUSED8）、全目標505行。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
+全兵装42件（掲載34・UNUSED8）、全目標506行。キャンペーン任務元行1662件、対応付け済み元定義は1459件（NPC共通行・不足部位の子NPCも含む）。
 
 ## 掲載範囲と固定ID
 
@@ -16,12 +16,12 @@
 
 | 分類 | 行数 |
 | --- | ---: |
-| AIRCRAFT | 151 |
-| GROUND | 86 |
-| SHIP | 60 |
+| AIRCRAFT | 132 |
+| GROUND | 84 |
+| SHIP | 59 |
 | STRUCTURE | 43 |
 | OTHER | 8 |
-| EXCLUDED | 157 |
+| EXCLUDED | 180 |
 
 ## 未確認項目
 
@@ -38,14 +38,6 @@ ROLEは3区分に加えて、元のCategory_Noneの配列添字0=100を明示的
 | 216 | EXPLOSIVE UAV | isAir, roleGroup |
 | 373 | LAND AEGIS《PODARGE》 | isAir, roleGroup |
 | 377 | LAND DESTROYER《PODARGE》 | isAir, roleGroup |
-| 158 | QUEEN 1 [M11] | standardDamage |
-| 81 | QUEEN 1 [M7] | standardDamage |
-| 159 | QUEEN 2 [M11] | standardDamage |
-| 82 | QUEEN 2 [M7] | standardDamage |
-| 160 | QUEEN 3 [M11] | standardDamage |
-| 83 | QUEEN 3 [M7] | standardDamage |
-| 161 | QUEEN 4 [M11] | standardDamage |
-| 84 | QUEEN 4 [M7] | standardDamage |
 | 498 | UNKNOWN | isAir |
 | 410 | UNKNOWN [M26] | isAir |
 | 69 | V-22 | isAir, roleGroup |
@@ -114,3 +106,9 @@ NPC共通と任務の耐性IDが違う場合は任務側を解決し、共通行
 難易度5行のMaxHealth=1を再照合した。全1662キャンペーン任務行のMaxHealthDifference/MinHealth、NPCとModelとの合成を確認したが、全レベル配置・イベントでのHP上書きやROLE無効化は網羅していない。アプリは静的初期設定・ROLE有効の条件であり、ゲーム内全局面の保証ではない。
 
 整理済みガイドが識別する239モデルのうち238モデルを直接参照している。汎用 `OP1016_x40a` はNPCから直接参照されておらず、同じHP300・X-40表示の実参照モデル `OP1016_x40a_Tewy` を使う通常行で表現する。この対応は他のモデルを表示名だけで統合する規則にはしない。
+
+## local_002で承認された追加除外
+
+QUEEN 13行、PURPLE MAGIC 4行、GREEN 2行、ENDURANCE本体2行・艦砲1行をEXCLUDEDに変更。ENDURANCE対空砲は他艦と統合されていたID 124から8出典を新規ID 506へ分離し、他艦12出典をID 124へ残した。全63出典を明示指定しており、同名・同モデルの別行へ除外を広げていない。
+
+掲載326行・EXCLUDED180行。元定義1459件と既存固定IDは維持。[除外見直し記録](../../../spec/agent/wip/local_002/FRIEND_EXCLUSION_REVIEW.md)を参照。実所属の確定とは別の掲載判断である。内部任務番号とゲーム内表示番号のずれは[別記録](../ui-labels/MISSION_NUMBERS.md)に訂正し、画面ラベルは未修正。
