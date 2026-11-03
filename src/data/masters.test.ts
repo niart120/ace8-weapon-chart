@@ -108,3 +108,18 @@ test('R002: M25後半の艦船固有設定は任務差分になる', () => {
     expect(targets.find((t) => t.id === id)?.missionVariant).toEqual({ missionId: '25day2' });
   }
 });
+
+test('R003: CELAENOとTRIUMPHANTの部位は本体に所属する', () => {
+  for (const [parentName, ids] of [
+    ['CELAENO', [473, 474, 475, 476]],
+    ['TRIUMPHANT', [483, 484, 485, 486]],
+  ] as const) {
+    const parent = targets.find((t) => t.name === parentName && t.category !== 'EXCLUDED')!;
+    for (const id of ids) {
+      const part = targets.find((t) => t.id === id)!;
+      expect(part.partOf).toBe(parent.id);
+      expect(part.category).toBe(parent.category);
+      expect(part.name.endsWith(`《${parentName}》`)).toBe(true);
+    }
+  }
+});

@@ -2031,10 +2031,10 @@
   },
   {
     "id": 473,
-    "name": "MAIN ENGINE",
+    "name": "MAIN ENGINE《CELAENO》",
     "category": "AIRCRAFT",
     "order": 63,
-    "partOf": null,
+    "partOf": 277,
     "missionVariant": null,
     "hp": 120,
     "damageMultipliers": {
@@ -2063,10 +2063,10 @@
   },
   {
     "id": 474,
-    "name": "MAIN PROPELLER",
+    "name": "MAIN PROPELLER《CELAENO》",
     "category": "AIRCRAFT",
     "order": 64,
-    "partOf": null,
+    "partOf": 277,
     "missionVariant": null,
     "hp": 80,
     "damageMultipliers": {
@@ -4363,10 +4363,10 @@
   },
   {
     "id": 475,
-    "name": "SUB PROPELLER",
+    "name": "SUB PROPELLER《CELAENO》",
     "category": "AIRCRAFT",
     "order": 135,
-    "partOf": null,
+    "partOf": 277,
     "missionVariant": null,
     "hp": 80,
     "damageMultipliers": {
@@ -4687,10 +4687,10 @@
   },
   {
     "id": 476,
-    "name": "WING SPAR",
+    "name": "WING SPAR《CELAENO》",
     "category": "AIRCRAFT",
     "order": 145,
-    "partOf": null,
+    "partOf": 277,
     "missionVariant": null,
     "hp": 40,
     "damageMultipliers": {
@@ -4915,10 +4915,10 @@
   },
   {
     "id": 483,
-    "name": "AA GUN",
-    "category": "GROUND",
+    "name": "AA GUN《TRIUMPHANT》",
+    "category": "SHIP",
     "order": 152,
-    "partOf": null,
+    "partOf": 471,
     "missionVariant": null,
     "hp": 35,
     "damageMultipliers": {
@@ -5401,10 +5401,10 @@
   },
   {
     "id": 484,
-    "name": "DISP. RAIL GUN",
-    "category": "GROUND",
+    "name": "DISP. RAIL GUN《TRIUMPHANT》",
+    "category": "SHIP",
     "order": 167,
-    "partOf": null,
+    "partOf": 471,
     "missionVariant": null,
     "hp": 60,
     "damageMultipliers": {
@@ -9183,10 +9183,10 @@
   },
   {
     "id": 486,
-    "name": "LAUNCH TUBE",
+    "name": "LAUNCH TUBE《TRIUMPHANT》",
     "category": "SHIP",
     "order": 284,
-    "partOf": null,
+    "partOf": 471,
     "missionVariant": null,
     "hp": 75,
     "damageMultipliers": {
@@ -9311,10 +9311,10 @@
   },
   {
     "id": 485,
-    "name": "NAVAL GUN",
+    "name": "NAVAL GUN《TRIUMPHANT》",
     "category": "SHIP",
     "order": 288,
-    "partOf": null,
+    "partOf": 471,
     "missionVariant": null,
     "hp": 60,
     "damageMultipliers": {
