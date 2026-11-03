@@ -43,7 +43,11 @@ def main():
         if wid==2:powers.update(missileAirPower=f32(part_values['missileAirPower'][114]),missileGroundPower=f32(part_values['missileGroundPower'][115]))
         component={'baseDamage':damage,'partMultipliers':powers,'targetMultiplierKey':definition['multiplierKey']}
         if 'AntiShipDamageRate' in props:component['antiShipMultiplier']=rate(props['AntiShipDamageRate'])
-        multiplier_columns[definition['multiplierKey']]='Category'+str(weapons_table[wid]['WeaponDurabilityCategory']).zfill(2)
+        column='Category'+str(weapons_table[wid]['WeaponDurabilityCategory']).zfill(2)
+        key=definition['multiplierKey']
+        if key in multiplier_columns and multiplier_columns[key]!=column:
+            raise ValueError(f'Conflicting durability columns for {key}')
+        multiplier_columns[key]=column
         identity['primary']=component
         if wid in [17,18,19,24,33]:
             area=50.0 if wid==33 else props['AreaOfEffectDamage']

@@ -94,3 +94,11 @@ test('既知の免疫・未収録の8AAM・SFFSのパーツ不明を区別する
     })
   ).toEqual({ kind: 'unknown' });
 });
+
+test('R001: X-40のMSLはCategory01を使い6発になる', () => {
+  const target = targets.find((t) => t.id === 457)!;
+  const weapon = weapons.find((w) => w.id === 1)!;
+  expect(
+    calculateDefeatRequirement(target, weapon, { role: 'FIGHTER', parts: [], damageType: 'DIRECT' })
+  ).toEqual({ kind: 'value', value: 6 });
+});
