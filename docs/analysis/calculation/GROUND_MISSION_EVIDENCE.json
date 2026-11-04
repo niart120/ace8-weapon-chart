@@ -1,0 +1,589 @@
+{
+  "date": "2026-11-05",
+  "headAtReview": "bc18190",
+  "method": "Existing audits and cached community pages, additional community search, table resolution and fully consumed Blueprint CDOs; no runtime measurement or mission event trace",
+  "targets": [
+    {
+      "target": {
+        "id": 481,
+        "name": "CANISTER",
+        "category": "GROUND",
+        "order": 161,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "OTHER",
+        "missionIds": [19],
+        "hp": 160,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 0.5,
+          "bomb": 0.25,
+          "gun": 1,
+          "rocket": 0.5,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ship",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "GR037_ldbs2_Container",
+          "npcId": "GR037_ldbs2_Container",
+          "modelId": "GR037_ldbs2_Container",
+          "blueprint": "BP_GR037_ldbs2_Container_C",
+          "modelHp": 160.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "minimumHp": null
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": 318,
+        "name": "COMMAND POST",
+        "category": "GROUND",
+        "order": 165,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "COMMAND & RADAR",
+        "missionIds": [23],
+        "hp": 30,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "none",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "GreenTent02_HQ",
+          "npcId": "BPD_GreenTent02_HQ",
+          "modelId": "BPD_GreenTent02_HQ",
+          "blueprint": "BP_BPD_GreenTent02_C",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": 90,
+        "name": "PILLBOX",
+        "category": "GROUND",
+        "order": 223,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "FORTIFICATION",
+        "missionIds": [6, 24],
+        "hp": 120,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "PillboxM_common",
+          "npcId": "BPD_PillboxM_01",
+          "modelId": "BPD_PillboxM",
+          "blueprint": "BP_BPD_PillboxM_CP_C",
+          "modelHp": 120.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "PillboxM_common",
+          "npcId": "BPD_PillboxM_01",
+          "modelId": "BPD_PillboxM",
+          "blueprint": "BP_BPD_PillboxM_CP_C",
+          "modelHp": 120.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": 325,
+        "name": "PILLBOX",
+        "category": "GROUND",
+        "order": 224,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "FORTIFICATION",
+        "missionIds": [24],
+        "hp": 160,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "PillboxL_common",
+          "npcId": "BPD_PillboxL_01",
+          "modelId": "BPD_PillboxL",
+          "blueprint": "BP_BPD_PillboxL_CP_C",
+          "modelHp": 160.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": 326,
+        "name": "PILLBOX",
+        "category": "GROUND",
+        "order": 225,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "FORTIFICATION",
+        "missionIds": [24, 25],
+        "hp": 30,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "SeaPillbox_common",
+          "npcId": "BPD_SeaPillbox_01",
+          "modelId": "BPD_SeaPillbox",
+          "blueprint": "BP_BPD_SeaPillbox_C",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        },
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "SeaPillbox_01_common",
+          "npcId": "BPD_SeaPillbox_01",
+          "modelId": "BPD_SeaPillbox",
+          "blueprint": "BP_BPD_SeaPillbox_C",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": 340,
+        "name": "PILLBOX",
+        "category": "GROUND",
+        "order": 226,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "FORTIFICATION",
+        "missionIds": [25],
+        "hp": 10000,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "SeaPillbox_01_Destruction_01_common",
+          "npcId": "BPD_SeaPillbox_01_Destruction_01",
+          "modelId": "BPD_SeaPillbox_Destruction",
+          "blueprint": "BP_BPD_SeaPillbox_Destruction_C",
+          "modelHp": 10000.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0
+        }
+      ]
+    }
+  ],
+  "blueprints": {
+    "BP_BPD_SeaPillbox_Destruction_C": {
+      "parent": "BP_BPD_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "bShowHUDBox": false,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 14,
+        "GameObjectCategory": 5,
+        "MaxHealth": 30.0,
+        "ObjNameID": "ContainerGround_Name_Watchtower",
+        "HitCenterOffset": [0.0, 0.0, 2800.0],
+        "bDrowHUDMessage": false,
+        "PlugHolder": 9,
+        "BaseScore": 90,
+        "RootComponent": 11,
+        "OnEndPlay": [
+          {
+            "object": 9,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 136,
+      "export_bytes": 136,
+      "functions": [],
+      "names": [
+        "DestroyMesh",
+        "DamagedStateComponent",
+        "LiveDefaultDestroySystemChangeMesh",
+        "LiveDefaultDestroySystemExtraEffect",
+        "DestroyMesh_GEN_VARIABLE",
+        "LiveDamagedStateComponent"
+      ],
+      "sha256": "bd9ce7e2a677a181ed24ab07d399ed9a8a09695874cc6f36c503cc115f9f5726"
+    },
+    "BP_BPD_Base_C": {
+      "parent": "LiveAIBuildingObject",
+      "properties": {
+        "Hardness": 1,
+        "FireControlSystemComponent": 3,
+        "DamagedStateComponent": 4,
+        "OverlapCollision": 15,
+        "BriDebriIconType": 6,
+        "bIsDeathCameraShake": false,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 64,
+      "export_bytes": 64,
+      "functions": [],
+      "names": [
+        "DestroyMesh",
+        "DamagedStateComponent",
+        "LiveDefaultDestroySystemChangeMesh",
+        "LiveDefaultDestroySystemExtraEffect",
+        "DestroyMesh_GEN_VARIABLE",
+        "LiveDamagedStateComponent",
+        "Default__LiveDefaultDestroySystemChangeMesh",
+        "Default__LiveDefaultDestroySystemExtraEffect"
+      ],
+      "sha256": "c0dc340ae0cc09c43a5de7bd2ca60a5ebeadf906820ebfd4feb0b3cc2913a194"
+    },
+    "BP_BPD_SeaPillbox_C": {
+      "parent": "BP_BPD_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 6,
+        "DamagedStateComponent": 9,
+        "OverlapCollision": 39,
+        "GameObjectCategory": 5,
+        "GameObjectSubCategory": 14,
+        "MaxHealth": 30.0,
+        "ObjNameID": "ContainerGround_Name_Watchtower",
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        },
+        "HitCenterOffset": [0.0, 0.0, 2800.0],
+        "PlugHolder": 27,
+        "BaseScore": 90,
+        "RootComponent": 31,
+        "OnEndPlay": [
+          {
+            "object": 27,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 147,
+      "export_bytes": 147,
+      "functions": [],
+      "names": [
+        "DamageCollision",
+        "DestroyMesh",
+        "DamagedStateComponent",
+        "LiveDefaultDestroySystemChangeMesh",
+        "LiveDefaultDestroySystemExtraEffect",
+        "LiveDefaultDestroySystemSpawnDecal",
+        "DamageCollision_GEN_VARIABLE",
+        "DestroyMesh_GEN_VARIABLE",
+        "/Game/WwiseAssets/Events/CS_AceLive_SE/Events_General/EXP/SEA/SE_GEN_EXP_SEA_SeaPillBox/AKE_GEN_EXP_SEA_SeaPillBox_Body_Killed_Play",
+        "AKE_GEN_EXP_SEA_SeaPillBox_Body_Killed_Play",
+        "LiveDamagedStateComponent",
+        "DamagedCollision_GEN_VARIABLE",
+        "DamagedStaticMesh_GEN_VARIABLE"
+      ],
+      "sha256": "a31e08dd1bf073230a422fed0d7b98e1f278c4c2bc8f10d5c5e3508e7fb01816"
+    },
+    "BP_BPD_GreenTent02_C": {
+      "parent": "BP_BPD_GreenTent_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 15,
+        "GameObjectSubCategory": 14,
+        "PlugHolder": 10,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 55,
+      "export_bytes": 55,
+      "functions": [],
+      "names": [
+        "DamagedStateComponent",
+        "LiveDefaultDestroySystemChangeMesh",
+        "LiveDefaultDestroySystemExtraEffect",
+        "LiveDefaultDestroySystemSpawnDecal",
+        "LiveDamagedStateComponent",
+        "DestroyMesh_GEN_VARIABLE"
+      ],
+      "sha256": "f9546fbff5d5940c5d746aec5f2feaca03e6f6f0d3685e9589b225de192de779"
+    },
+    "BP_BPD_GreenTent_Base_C": {
+      "parent": "BP_BPD_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 15,
+        "GameObjectId": 2018,
+        "MaxHealth": 30.0,
+        "ObjNameID": "ContainerGround_Name_Tent",
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        },
+        "PlugHolder": 10,
+        "BaseScore": 90,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 117,
+      "export_bytes": 117,
+      "functions": [],
+      "names": [
+        "DestroyMesh",
+        "DamagedStateComponent",
+        "LiveDefaultDestroySystemChangeMesh",
+        "LiveDefaultDestroySystemExtraEffect",
+        "LiveDefaultDestroySystemSpawnDecal",
+        "DestroyMesh_GEN_VARIABLE",
+        "/Game/WwiseAssets/Events/CS_AceLive_SE/Events_General/EXP/GND/SE_GEN_EXP_GND_GreenTent/AKE_GEN_EXP_GND_GreenTent_Killed_Play",
+        "AKE_GEN_EXP_GND_GreenTent_Killed_Play",
+        "LiveDamagedStateComponent",
+        "Default__LiveDefaultDestroySystemSpawnDecal",
+        "/Game/VFX/Environment/Common/Explosion/DamageDecal/DamageDecalGround/MI_DamageDecalSoil002",
+        "MI_DamageDecalSoil002"
+      ],
+      "sha256": "a1bea1b2353f2547dd185c1b5d05c3ed9c4f32a3a1383852d99fe186815ee898"
+    },
+    "BP_GR037_ldbs2_Container_C": {
+      "parent": "LiveAIUniquetTargetObject",
+      "properties": {
+        "UberGraphFrame": {},
+        "bShowHUDBox": false,
+        "OverlapCollision": 16,
+        "GameObjectId": 2004,
+        "GameObjectSubId": 100,
+        "GameObjectCategory": 6,
+        "GameObjectBossCategory": 2,
+        "MaxHealth": 160.0,
+        "ObjNameID": "ContainerGround_Name_Canister",
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        },
+        "HitCenterOffset": [1000.0, 0.0, 750.0],
+        "PlugHolder": 9,
+        "RootComponent": 11,
+        "OnEndPlay": [
+          {
+            "object": 9,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "error": null,
+      "consumed": 144,
+      "export_bytes": 144,
+      "functions": ["ExecuteUbergraph_BP_GR037_ldbs2_Container", "ReceiveBeginPlay"],
+      "names": [
+        "/Game/Base/Material/PhysicalMaterial/PM_LIVE_28_BossDamage",
+        "LiveUniqueStateMachine_StateDamagedByEvent",
+        "/Game/WwiseAssets/Events/Online_SFX/EXP_TARGET_GROUND_NORMAL",
+        "EXP_TARGET_GROUND_NORMAL",
+        "LiveAIUniquetTargetObject",
+        "Default__LiveAIUniquetTargetObject",
+        "Default__LiveUniqueStateMachine_StateDamagedByEvent",
+        "PM_LIVE_28_BossDamage"
+      ],
+      "sha256": "885de8f8c3b141a7bdb0ed78de86cf58449b810f1942cff8ae945d9c60343169"
+    }
+  },
+  "inputSha256": {
+    "data/local/catalog.json": "2b678c9166f5946673d0f13293d107351d1040e20966c8d450411b43dffff18e",
+    "src/data/targets.json": "2ff0b6e9953d86e6b1161fec89ad52a8fb80a51d7651f510533fa8033b408a73",
+    "docs/initial/ref/tables/DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "docs/initial/ref/tables/DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs/initial/ref/tables/DT_NPC_Mission024.json": "15fb9b1c2eba360baeaa9358c9cf8bbcfc56d8b6485f1e66c456bd534d9b40e9",
+    "docs/initial/ref/tables/DT_NPC_Mission007.json": "2e370d5aa843e357ba02b795c358b6d4f3b56c1ff0bf15c38addd5c5454706d0",
+    "docs/initial/ref/tables/DT_NPC_Mission025day1.json": "cbefbf906b92a38d3d1da10a303e6e0ae2d84cb693a1809c30b4082c08d79999",
+    "docs/initial/ref/tables/DT_NPC_Mission025day2.json": "b867952634cb9279423dff21614e0be42212b8b0a4fc8e4e441a47d7021da09e",
+    "data/local/ground-followup-blueprints.json": "99af3a188f10e82ccb7d883387dfe248089afaf25d3b647b67e580f6faa0bd6c",
+    "data/local/mission-community-audit/M19.json": "702336bfb47404d651b84e8e3ec41d18870e2508495ddc97c1ca4a0bbfff7a5f",
+    "data/local/mission-community-audit/M23.json": "6cd94fcf4de0ebbe27fb9a4331ff6a0443c94d12686d3233b2457937e500bc35",
+    "data/local/mission-community-audit/M25.json": "95dd71b58368269f948b9605ff1e7717d93b23e1c52fdb8d05f4fddf766cc160"
+  },
+  "exeSha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "tableBaselineBuild": 25201480,
+  "currentExecutableMatchesBaseline": false,
+  "pillboxExportComparison": {
+    "method": "Compared export names and classes in the two extracted assets",
+    "BP_BPD_SeaPillbox_C": {
+      "vads_GEN_VARIABLE": "LiveChildActorComponent",
+      "LiveFireControlSystemArms_0": "LiveFireControlSystemArms",
+      "DamageCollision_GEN_VARIABLE": "SphereComponent"
+    },
+    "BP_BPD_SeaPillbox_Destruction_C": {
+      "missingComparedExports": [
+        "vads_GEN_VARIABLE",
+        "LiveFireControlSystemArms_0",
+        "DamageCollision_GEN_VARIABLE"
+      ]
+    }
+  }
+}

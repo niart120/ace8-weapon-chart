@@ -25,4 +25,6 @@
 
 ## 残る調査範囲
 
+2026-11-05 の後続確認では、[任務付き目標の追加確認](GROUND_MISSION_REVIEW.md)で COMMAND POST・破壊後 PILLBOX・CANISTER を扱った。前回の確定済み 4 行を再調査せず、未確認点から継続している。
+
 任務付き GROUND の実出現、味方・支援用途、陸上戦艦の部位や破壊後モデルの扱いは引き続き個別確認が必要。今回の表の 4 行だけで GROUND 全体を調査済みとはしない。AIR BASE と AMMO BUNKER は GROUND ではなく STRUCTURE の調査時に扱う。

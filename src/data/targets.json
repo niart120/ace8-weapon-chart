@@ -7776,11 +7776,11 @@
   {
     "id": 340,
     "name": "PILLBOX",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 226,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "FORTIFICATION",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 10000,
     "damageMultipliers": {
