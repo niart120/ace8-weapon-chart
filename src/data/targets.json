@@ -9643,7 +9643,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "TRANSPORT",
-    "missionIds": [26, 27],
+    "missionIds": [27],
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -9813,7 +9813,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "TRANSPORT",
-    "missionIds": [12, 23],
+    "missionIds": [12],
     "hp": 55,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -9949,7 +9949,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "TRANSPORT",
-    "missionIds": [4, 23, 26],
+    "missionIds": [4, 26],
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,

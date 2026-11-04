@@ -60,6 +60,6 @@ M3 の地上目標、M4 の潜水艦、M6 の BUNKER、M21 の地上対空兵器
 
 倍率 0.2 は表示用の丸め値であり、配信値は `0.19999998807907104`。比較では配信値そのものを使用した。
 
-任務が付いている支援目標・輸送艦の側では、CONTAINER SHIP の M23/M27 は [直近の調査](../calculation/CONTAINER_SHIP_REVIEW.md)でも未裏付け。LCAC、OIL TANKER、GAS CARRIER なども、旧全体監査では実際の敵出現を網羅確認していないため、その後の調査候補とする。
+任務が付いている支援目標・輸送艦の側では、CONTAINER SHIP の M23/M27 は [直近の調査](../calculation/CONTAINER_SHIP_REVIEW.md)でも未裏付け。LCAC、OIL TANKER、GAS CARRIER は [2026-11-05 の追加調査](../calculation/SHIP_TRANSPORT_REVIEW.md)で 3 行・7 任務対応を確認した。各種の行全体は維持。後続のユーザー確認で M23 LCAC を味方として除外し、ユーザーの記憶と資料の未裏付けに基づいて M23 OIL TANKER／M26 GAS CARRIER を暫定除外した。M26 OIL TANKER は維持する。
 
 2026-11-05 の[任務付き GROUND 調査](../calculation/GROUND_MISSION_REVIEW.md)では、HP 10000 の PILLBOX（340）だけを除外した。COMMAND POST（318）はユーザーによる M23 出現確認に基づいて維持し、再調査候補から外す。通常の PILLBOX と CANISTER も維持する。

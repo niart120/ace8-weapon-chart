@@ -38,5 +38,20 @@
     "missionId": 20,
     "targetIds": [67],
     "reason": "通常MIG-29AのM20出典はPV定義のみ。ユーザー確認によりM20だけ除外し、通常定義があるM11は維持する。"
+  },
+  {
+    "missionId": 23,
+    "targetIds": [198],
+    "reason": "ユーザー確認：M23のLCACは味方。敵として裏付けのあるM12は維持する。"
+  },
+  {
+    "missionId": 23,
+    "targetIds": [54],
+    "reason": "ユーザーの非出現の記憶と資料での未裏付けに基づき、M23のOIL TANKERを暫定除外。M4/M26は維持する。"
+  },
+  {
+    "missionId": 26,
+    "targetIds": [413],
+    "reason": "ユーザーはM26の船をOIL TANKERと記憶し、GAS CARRIERの個別裏付けは得られていないため暫定除外。M27は維持する。"
   }
 ]

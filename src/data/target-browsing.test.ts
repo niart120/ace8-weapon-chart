@@ -4,6 +4,37 @@ import { validateMasters } from '../domain/validate';
 import { missions } from '../domain/catalog';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
 
+test('輸送船の味方・未裏付け任務だけを除外し、確認済み任務とTYPE掲載を維持する', () => {
+  const state = initialPreferences(false, { targets, weapons });
+  for (const [id, hp, missionIds] of [
+    [198, 55, [12]],
+    [54, 75, [4, 26]],
+    [413, 75, [27]],
+  ] as const) {
+    expect(targets.find((t) => t.id === id)).toMatchObject({ category: 'SHIP', hp, missionIds });
+    expect(selectedTargets({ ...state, targetIds: [id] }, targets).map((t) => t.id)).toEqual([id]);
+    for (const mission of missionIds) {
+      expect(
+        selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [mission] }, targets).map(
+          (t) => t.id
+        )
+      ).toContain(id);
+    }
+  }
+  for (const [id, mission] of [
+    [198, 23],
+    [54, 23],
+    [413, 26],
+  ]) {
+    expect(
+      selectedTargets(
+        { ...state, targetMode: 'MISSION', missionIds: [mission], targetIds: [id] },
+        targets
+      ).map((t) => t.id)
+    ).not.toContain(id);
+  }
+});
+
 test('確認済みの非敵・撃破対象外・PV機体を掲載から除外する', () => {
   for (const id of [45, 55, 145, 194, 204, 210, 262, 267, 269, 275, 276, 412]) {
     expect(targets.find((t) => t.id === id)?.category).toBe('EXCLUDED');
