@@ -1,7 +1,7 @@
 import type { DefeatRequirementResult, Target, Weapon, Conditions } from '../domain/types';
 import { useMemo, useState } from 'react';
 import { calculateDefeatRequirement } from '../domain/calculate';
-import { compareTargetNames, compareTargets } from '../state/preferences';
+import { compareTargetHealth, compareTargetNames, compareTargets } from '../state/preferences';
 
 type Sort = { key: 'target' | 'hp' | number; direction: 'ascending' | 'descending' } | null;
 const resultRank = (result: DefeatRequirementResult) =>
@@ -54,7 +54,8 @@ export function ResultsTable({
     let comparison = 0;
     if (activeSort.key === 'target')
       comparison = compareTargetNames(a.target.name, b.target.name) * direction;
-    else if (activeSort.key === 'hp') comparison = (a.target.hp - b.target.hp) * direction;
+    else if (activeSort.key === 'hp')
+      comparison = compareTargetHealth(a.target, b.target, direction);
     else {
       const left = a.results.get(activeSort.key);
       const right = b.results.get(activeSort.key);
@@ -107,7 +108,7 @@ export function ResultsTable({
           {ordered.map(({ target, results }) => (
             <tr key={target.id} data-target-id={target.id}>
               <th scope="row">{target.name}</th>
-              <td className="hp">{target.hp}</td>
+              <td className="hp">{target.hp ?? '-'}</td>
               {weapons.map((weapon) => {
                 const result = results.get(weapon.id);
                 if (!result) return null;

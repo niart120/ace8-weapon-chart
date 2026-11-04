@@ -77,4 +77,6 @@ MEGAFLOATのFront／EV支柱は元HP100／200、原子炉は各HP40で計算す�
 
 出現任務は対象自身の任務定義と実際の子NPC参照を根拠にし、`partOf`だけでは親の任務を継承しない。確認済みの非敵対象・撃破対象外と任務限定の除外を反映する。PROLOGUEは非表示、非武装任務M14は選択不可。最新の掲載判断は[出現対応監査](docs/analysis/mission-appearances/MISSION_APPEARANCE_AUDIT.md)を参照。掲載294行のうち15行は出現任務が未特定で、TYPEおよび任務未指定では掲載し、特定任務へは推測で割り当てない。分類と対応範囲は[対象データ調査](spec/agent/complete/local_007/TARGET_DATA_AUDIT.md)、操作仕様と検証結果は[対象選択・比較表・書体の改善](spec/agent/complete/local_007/TARGET_BROWSING_AND_TYPOGRAPHY.md)を参照。
 
+SWARM DRONESの2行は掲載を維持するが、専用の個体破壊処理を使うため、必要命中数は`?`、HPは`-`とする。選択候補でもHPを`-`で表示し、HP順では昇順・降順とも数値のある対象の後に置く。元定義のHP1／20と計算に適用するHPを区別する。[調査記録](docs/analysis/calculation/SWARM_DRONES_REVIEW.md)を参照。
+
 公開前は後方互換性を保証せず、変更により以前の選択が失われたり設定が初期化されたりすることを許容する。保存の復元では現行の掲載対象との照合を行い、廃止IDを別のIDへ変換しない。

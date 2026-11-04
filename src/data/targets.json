@@ -11906,7 +11906,7 @@
     "missionVariant": null,
     "subcategory": "UAV",
     "missionIds": [9, 10, 19],
-    "hp": 1,
+    "hp": null,
     "damageMultipliers": {
       "standardMissile": 1,
       "airMissile": 1,
@@ -11929,7 +11929,7 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": false
   },
   {
     "id": 465,
@@ -11940,7 +11940,7 @@
     "missionVariant": null,
     "subcategory": "UAV",
     "missionIds": [30],
-    "hp": 20,
+    "hp": null,
     "damageMultipliers": {
       "standardMissile": 1,
       "airMissile": 1,
@@ -11963,7 +11963,7 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": false
   },
   {
     "id": 443,

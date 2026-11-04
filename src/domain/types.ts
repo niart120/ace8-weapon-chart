@@ -38,7 +38,8 @@ export interface Target {
   readonly order: number;
   readonly partOf: number | null;
   readonly missionVariant: { readonly missionId: number } | null;
-  readonly hp: number;
+  // null means HP is not applicable to this target's defeat calculation.
+  readonly hp: number | null;
   readonly damageMultipliers: Readonly<Record<string, number | null>>;
   readonly isAir: boolean | null;
   readonly roleGroup: RoleGroup | null;

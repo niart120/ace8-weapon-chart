@@ -234,7 +234,7 @@ export function SelectionPanel({
                               }
                             />
                             <span>{item.name}</span>
-                            {'hp' in item && <span className="option-hp">{item.hp}</span>}
+                            {'hp' in item && <span className="option-hp">{item.hp ?? '-'}</span>}
                           </label>
                         ))}
                       </div>

@@ -79,7 +79,7 @@ test('全目標を分類し、部位・任務差分・同名の異なるHPを保
     targets
       .filter((t) => t.name === 'WING SPAR《LADON》')
       .map((t) => t.hp)
-      .sort((a, b) => a - b)
+      .sort((a, b) => (a ?? Infinity) - (b ?? Infinity))
   ).toEqual([150, 200]);
   for (const t of targets.filter(
     (t) => t.name.includes('《MEGAFLOAT》') && t.category !== 'EXCLUDED'

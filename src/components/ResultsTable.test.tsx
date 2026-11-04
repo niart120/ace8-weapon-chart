@@ -1,9 +1,34 @@
 // @vitest-environment happy-dom
 import { afterEach, expect, test } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { ResultsTable } from './ResultsTable';
 import { target, missile } from '../test/fixtures/combat';
 afterEach(cleanup);
+
+test('HP非適用はHPをハイフン、命中数を疑問符とし、HP順の両方向で末尾に置く', () => {
+  render(
+    <ResultsTable
+      targets={[
+        { ...target, id: 1, name: 'SWARM', hp: null, standardDamage: false },
+        { ...target, id: 2, name: 'LOW', hp: 40 },
+        { ...target, id: 3, name: 'HIGH', hp: 80 },
+      ]}
+      weapons={[missile]}
+      conditions={{ role: 'MULTIROLE', parts: [], damageType: 'DIRECT' }}
+    />
+  );
+  const names = () => screen.getAllByRole('rowheader').map((e) => e.textContent);
+  expect(names()).toEqual(['LOW', 'HIGH', 'SWARM']);
+  expect(
+    within(screen.getByRole('row', { name: 'SWARM - ?' }))
+      .getAllByRole('cell')
+      .map((e) => e.textContent)
+  ).toEqual(['-', '?']);
+  fireEvent.click(screen.getByRole('button', { name: 'HP' }));
+  expect(names()).toEqual(['HIGH', 'LOW', 'SWARM']);
+  fireEvent.click(screen.getByRole('button', { name: 'HP' }));
+  expect(names()).toEqual(['LOW', 'HIGH', 'SWARM']);
+});
 
 test('列見出しで数値を昇順・降順・初期HP順へ切り替え、非数値を末尾に保つ', () => {
   const targets = [

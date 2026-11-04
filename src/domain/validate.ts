@@ -97,7 +97,12 @@ export function validateMasters(
       isRecord(target) && [...targetCategories, 'EXCLUDED'].includes(String(target.category)),
       '目標分類不備'
     );
-    requireValue(finite(target.hp) && Number.isSafeInteger(target.hp), 'HP不備');
+    requireValue(
+      target.hp === null
+        ? target.standardDamage === false
+        : finite(target.hp) && Number.isSafeInteger(target.hp),
+      'HP不備'
+    );
     requireValue(
       Object.entries(targetSubcategories).some(
         ([category, groups]) =>

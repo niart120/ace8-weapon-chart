@@ -115,5 +115,10 @@ export function compareTargetNames(a: string, b: string): number {
   return targetNameOrder.compare(a, b);
 }
 export function compareTargets(a: Target, b: Target): number {
-  return a.hp - b.hp || compareTargetNames(a.name, b.name) || a.id - b.id;
+  return compareTargetHealth(a, b) || compareTargetNames(a.name, b.name) || a.id - b.id;
+}
+export function compareTargetHealth(a: Target, b: Target, direction = 1): number {
+  if (a.hp === null) return b.hp === null ? 0 : 1;
+  if (b.hp === null) return -1;
+  return (a.hp - b.hp) * direction;
 }

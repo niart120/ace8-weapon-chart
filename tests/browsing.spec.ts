@@ -1,5 +1,44 @@
 import { expect, test } from '@playwright/test';
 
+for (const width of [1440, 390]) {
+  test(`SWARM DRONES両行のHPと命中数・選択候補: ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.addInitScript(() =>
+      localStorage.setItem(
+        'ace8-weapon-guide.preferences',
+        JSON.stringify({
+          version: 3,
+          targetMode: 'TYPE',
+          missionIds: [],
+          weaponIds: [1],
+          targetIds: [26, 156, 465],
+          conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
+          showParts: false,
+          showMissionVariants: false,
+        })
+      )
+    );
+    await page.goto('/');
+    for (const id of [156, 465]) {
+      await expect(page.locator(`tr[data-target-id="${id}"] td`)).toHaveText(['-', '?']);
+    }
+    const rowIds = () =>
+      page
+        .locator('tbody tr')
+        .evaluateAll((rows) => rows.map((r) => r.getAttribute('data-target-id')));
+    expect(await rowIds()).toEqual(['26', '156', '465']);
+    await page.getByRole('columnheader', { name: 'HP', exact: true }).getByRole('button').click();
+    expect(await rowIds()).toEqual(['26', '156', '465']);
+    await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
+    const panel = page.getByRole('dialog', { name: 'TARGETS' });
+    await panel.getByRole('searchbox').fill('SWARM');
+    await expect(panel.locator('.option-hp')).toHaveText(['-', '-']);
+    await expect(panel.getByRole('checkbox', { name: 'SWARM DRONES -', exact: true })).toHaveCount(
+      2
+    );
+  });
+}
+
 for (const width of [1440, 390, 320]) {
   test(`対象方式・ソート・Rajdhani・明暗配色: ${width}px`, async ({ page }, info) => {
     await page.setViewportSize({ width, height: 900 });

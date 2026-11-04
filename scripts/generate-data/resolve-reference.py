@@ -76,11 +76,19 @@ def main():
             values[name]=rate(explosion[column]) if explosion else values[normal]
         attributes=catalog['modelAttributes'][npc['ModelId']]
         return {'hp':hp,'damageMultipliers':values,'isAir':attributes['isAir'],'roleGroup':attributes['roleGroup'],'standardDamage':attributes['standardDamage'] and (not mission or mission['MinHealth']==0)}
+    non_hp_ids=set(read(Path(__file__).with_name('non-hp-targets.json'))['targetIds'])
+    if non_hp_ids - {d['id'] for d in catalog['targets']}:
+        raise ValueError('Unknown non-HP target')
     sources={}
     for definition in catalog['targets']:
         for source in definition['sourceRefs']:
             key=source['table']+'/'+source['row']
-            sources[key]=resolve(source)
+            resolved=resolve(source)
+            if definition['id'] in non_hp_ids:
+                resolved={**resolved,'hp':None,'standardDamage':False}
+            if key in sources and sources[key]!=resolved:
+                raise ValueError(f'Conflicting calculation policy for source: {key}')
+            sources[key]=resolved
     index_spec=importlib.util.spec_from_file_location('target_index',Path(__file__).with_name('target-index.py'))
     index_module=importlib.util.module_from_spec(index_spec);index_spec.loader.exec_module(index_module)
     all_missions={p.stem:table(p.stem) for p in (ref/'tables').glob('DT_NPC_Mission*.json') if index_module.mission_id(p.stem) is not None}
