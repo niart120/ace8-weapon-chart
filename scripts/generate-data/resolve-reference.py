@@ -2,6 +2,7 @@
 No game installation or source extraction is needed to run tests/build.
 """
 import json, struct, sys
+import importlib.util
 from pathlib import Path
 root=Path(__file__).resolve().parents[2]
 ref=Path(sys.argv[1]) if len(sys.argv)>1 else root/'docs/initial/ref'
@@ -80,7 +81,12 @@ def main():
         for source in definition['sourceRefs']:
             key=source['table']+'/'+source['row']
             sources[key]=resolve(source)
-    result={'weapons':weapons,'targets':catalog['targets'],'sources':sources,'modifiers':modifiers}
+    index_spec=importlib.util.spec_from_file_location('target_index',Path(__file__).with_name('target-index.py'))
+    index_module=importlib.util.module_from_spec(index_spec);index_spec.loader.exec_module(index_module)
+    all_missions={p.stem:table(p.stem) for p in (ref/'tables').glob('DT_NPC_Mission*.json') if index_module.mission_id(p.stem)}
+    indexed,evidence=index_module.build_index(catalog['targets'],npcs,models,table('DT_LiveAircraft'),all_missions)
+    (local/'target-browsing-evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    result={'weapons':weapons,'targets':indexed,'sources':sources,'modifiers':modifiers}
     (local/'generation-input.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Resolved {len(sources)} source definitions')
 

@@ -62,18 +62,23 @@ test('親3行の除外後も子部位12行を掲載し、非表示中の選択�
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 1,
+        version: 2,
         targetIds: parts,
         showParts,
         showMissionVariants,
       };
       const visible = showParts ? (showMissionVariants ? parts : common) : [];
-      expect(selectedTargets(saved, targets).map((row) => row.id)).toEqual(visible);
+      expect(
+        selectedTargets(saved, targets)
+          .map((row) => row.id)
+          .sort((a, b) => a - b)
+      ).toEqual([...visible].sort((a, b) => a - b));
       expect(
         targetCandidates(saved, targets, 'MEGAFLOAT')
           .filter((row) => row.partOf === 418 || excluded.includes(row.id))
           .map((row) => row.id)
-      ).toEqual(visible);
+          .sort((a, b) => a - b)
+      ).toEqual([...visible].sort((a, b) => a - b));
     }
 });
 

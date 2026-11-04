@@ -4,6 +4,8 @@ export interface Catalog {
   readonly targets: readonly Target[];
 }
 export interface Preferences {
+  readonly targetMode: 'TYPE' | 'MISSION';
+  readonly missionIds: readonly string[];
   readonly conditions: Conditions;
   readonly weaponIds: readonly number[];
   readonly targetIds: readonly number[];
@@ -12,6 +14,8 @@ export interface Preferences {
 }
 export function initialPreferences(mobile: boolean, catalog: Catalog): Preferences {
   return {
+    targetMode: 'TYPE',
+    missionIds: [],
     conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
     weaponIds: catalog.weapons
       .filter((w) => w.category !== 'UNUSED' && (!mobile || w.id === 1))
@@ -55,7 +59,7 @@ export function targetCandidates(
         (!t.missionVariant || state.showMissionVariants) &&
         t.name.toLowerCase().includes(search)
     )
-    .toSorted((a, b) => a.order - b.order);
+    .toSorted(compareTargets);
 }
 export function weaponCandidates(weapons: readonly Weapon[], query = ''): Weapon[] {
   const search = query.trim().toLowerCase();
@@ -64,6 +68,16 @@ export function weaponCandidates(weapons: readonly Weapon[], query = ''): Weapon
     .toSorted((a, b) => a.order - b.order);
 }
 export function selectedTargets(state: Preferences, targets: readonly Target[]): Target[] {
+  if (state.targetMode === 'MISSION') {
+    return targets
+      .filter(
+        (t) =>
+          t.category !== 'EXCLUDED' &&
+          (state.missionIds.length === 0 ||
+            t.missionIds.some((id) => state.missionIds.includes(id)))
+      )
+      .toSorted(compareTargets);
+  }
   const selected = new Set(state.targetIds);
   return targetCandidates(state, targets).filter((t) => selected.has(t.id));
 }
@@ -86,6 +100,8 @@ export function resetPreferences(
     case 'targets':
       return {
         ...state,
+        targetMode: 'TYPE',
+        missionIds: [],
         targetIds: initial.targetIds,
         showMissionVariants: false,
         showParts: false,
@@ -93,4 +109,11 @@ export function resetPreferences(
     case 'all':
       return initial;
   }
+}
+const targetNameOrder = new Intl.Collator('en', { numeric: true });
+export function compareTargetNames(a: string, b: string): number {
+  return targetNameOrder.compare(a, b);
+}
+export function compareTargets(a: Target, b: Target): number {
+  return a.hp - b.hp || compareTargetNames(a.name, b.name) || a.id - b.id;
 }

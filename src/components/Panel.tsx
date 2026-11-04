@@ -18,7 +18,9 @@ export function Panel({
     const opener = document.activeElement;
     if (element && !element.open) {
       element.showModal();
-      element.querySelector<HTMLInputElement>('input[type="search"]')?.focus();
+      const search = element.querySelector<HTMLInputElement>('input[type="search"]');
+      if (search && !search.closest('[hidden]')) search.focus();
+      else element.querySelector<HTMLElement>('[role="tab"][aria-selected="true"]')?.focus();
     }
     return () => {
       element?.close();
@@ -38,7 +40,9 @@ export function Panel({
           ),
         ].filter(
           (element): element is HTMLElement =>
-            element instanceof HTMLElement && element.getClientRects().length > 0
+            element instanceof HTMLElement &&
+            element.tabIndex !== -1 &&
+            element.getClientRects().length > 0
         );
         const first = focusable[0];
         const last = focusable.at(-1);

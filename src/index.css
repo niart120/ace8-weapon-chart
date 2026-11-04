@@ -1,5 +1,29 @@
+@font-face {
+  font-family: Rajdhani;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Rajdhani-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Rajdhani;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Rajdhani-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: Rajdhani;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Rajdhani-SemiBold.ttf') format('truetype');
+}
 :root {
-  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+  font-family: Rajdhani, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
   color: #1d2b3b;
   background: #f6f8fb;
   font-synthesis: none;
@@ -9,12 +33,17 @@
   --page: #f6f8fb;
   --surface: #fff;
   --text: #1d2b3b;
-  --muted: #667588;
+  --muted: #58697a;
   --line: #d7dfe8;
   --selected: #243d59;
   --selected-text: #fff;
   --hover: #edf2f7;
   --stripe: #fafbfd;
+  --hits-1: #126444;
+  --hits-2: #245b98;
+  --hits-3: #875800;
+  --hits-4: #9c3d15;
+  --hits-5: #a52f51;
 }
 * {
   box-sizing: border-box;
@@ -63,9 +92,9 @@ fieldset {
   min-width: 0;
 }
 legend {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.04em;
   color: var(--muted);
   padding: 0;
   margin-bottom: 9px;
@@ -94,5 +123,10 @@ h2 {
     --selected-text: #172537;
     --hover: #273545;
     --stripe: #202c3a;
+    --hits-1: #7fd9b2;
+    --hits-2: #8fbeff;
+    --hits-3: #e5c26f;
+    --hits-4: #ffb183;
+    --hits-5: #ff9caf;
   }
 }

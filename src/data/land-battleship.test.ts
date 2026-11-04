@@ -74,7 +74,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 1,
+        version: 2,
         targetIds: [153, 488],
         showParts,
         showMissionVariants,

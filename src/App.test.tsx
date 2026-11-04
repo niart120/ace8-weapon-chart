@@ -6,9 +6,27 @@ import { storageKey } from './storage/preferences';
 afterEach(cleanup);
 beforeEach(() => window.localStorage.clear());
 
+test('TARGETSのTYPE/MISSIONを切り替え、非アクティブ方式を適用しない', () => {
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
+  const panel = within(screen.getByRole('dialog', { name: 'TARGETS' }));
+  fireEvent.click(panel.getByRole('checkbox', { name: 'AIRCRAFT all' }));
+  fireEvent.click(panel.getByRole('tab', { name: 'MISSION' }));
+  fireEvent.click(panel.getByRole('checkbox', { name: 'M3' }));
+  expect(screen.getByRole('rowheader', { name: 'MIG-29A (SHADOW) [M3]' })).toBeTruthy();
+  expect(panel.queryByRole('checkbox', { name: 'MISSION VARIANTS' })).toBeNull();
+  fireEvent.click(panel.getByRole('tab', { name: 'TYPE' }));
+  expect(screen.queryByRole('rowheader', { name: 'MIG-29A (SHADOW) [M3]' })).toBeNull();
+  expect(panel.getByRole('checkbox', { name: 'AIRCRAFT all' })).toHaveProperty('checked', false);
+  fireEvent.click(panel.getByRole('tab', { name: 'MISSION' }));
+  expect(panel.getByRole('checkbox', { name: 'M3' })).toHaveProperty('checked', true);
+});
+
 test('掲載パーツを表示し、現在の選択と条件を保存・復元する', () => {
   const saved = {
-    version: 1,
+    version: 2,
+    targetMode: 'TYPE',
+    missionIds: [],
     weaponIds: [1],
     targetIds: [26],
     showParts: true,
@@ -30,6 +48,16 @@ test('主画面から兵装と目標を選択できる', () => {
   render(<App />);
   expect(screen.getByRole('button', { name: 'WEAPONS' })).toBeTruthy();
   expect(screen.getByRole('button', { name: 'TARGETS' })).toBeTruthy();
+});
+
+test('機体細分類の一括選択は別分類の機体を変更しない', () => {
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
+  fireEvent.click(screen.getByRole('checkbox', { name: 'AIRCRAFT FIGHTER all' }));
+  expect(screen.queryByRole('rowheader', { name: 'F-16C' })).toBeNull();
+  expect(screen.getByRole('rowheader', { name: 'A-10C' })).toBeTruthy();
+  fireEvent.click(screen.getByRole('checkbox', { name: 'AIRCRAFT FIGHTER all' }));
+  expect(screen.getByRole('rowheader', { name: 'F-16C' })).toBeTruthy();
 });
 
 test('兵装検索だけでは列を変えず、検索中の分類解除は全分類に作用する', () => {

@@ -1,5 +1,6 @@
 import { isRecord } from '../domain/validate';
 import { roles } from '../domain/types';
+import { missions } from '../domain/catalog';
 import type { DamageType, Role } from '../domain/types';
 import type { Catalog, Preferences } from '../state/preferences';
 export const storageKey = 'ace8-weapon-guide.preferences';
@@ -30,7 +31,10 @@ export function restorePreferences(
 ): Preferences {
   if (
     !isRecord(value) ||
-    value.version !== 1 ||
+    value.version !== 2 ||
+    (value.targetMode !== 'TYPE' && value.targetMode !== 'MISSION') ||
+    !Array.isArray(value.missionIds) ||
+    !value.missionIds.every((id) => typeof id === 'string') ||
     !isRecord(value.conditions) ||
     !numbers(value.weaponIds) ||
     !numbers(value.targetIds) ||
@@ -49,6 +53,10 @@ export function restorePreferences(
     catalog.targets.filter((t) => t.category !== 'EXCLUDED').map((t) => t.id)
   );
   return {
+    targetMode: value.targetMode,
+    missionIds: [
+      ...new Set(value.missionIds.filter((id) => missions.some((mission) => mission.id === id))),
+    ],
     conditions: {
       role: value.conditions.role,
       damageType: value.conditions.damageType,
@@ -78,7 +86,9 @@ export function writePreferences(storage: StorageLike | null, state: Preferences
     storage?.setItem(
       storageKey,
       JSON.stringify({
-        version: 1,
+        version: 2,
+        targetMode: state.targetMode,
+        missionIds: state.missionIds,
         conditions: state.conditions,
         weaponIds: state.weaponIds,
         targetIds: state.targetIds,

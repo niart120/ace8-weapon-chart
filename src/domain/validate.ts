@@ -1,4 +1,5 @@
 import { roles, targetCategories, weaponCategories } from './types.ts';
+import { missions, targetSubcategories } from './catalog.ts';
 import type { Modifiers, Target, Weapon } from './types.ts';
 export function isRecord(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -97,6 +98,19 @@ export function validateMasters(
       '目標分類不備'
     );
     requireValue(finite(target.hp) && Number.isSafeInteger(target.hp), 'HP不備');
+    requireValue(
+      Object.entries(targetSubcategories).some(
+        ([category, groups]) =>
+          category === target.category && groups.some((group) => group === target.subcategory)
+      ),
+      '細分類不備'
+    );
+    requireValue(
+      Array.isArray(target.missionIds) &&
+        target.missionIds.every((id) => missions.some((mission) => mission.id === id)) &&
+        new Set(target.missionIds).size === target.missionIds.length,
+      '出現任務不備'
+    );
     requireValue(
       target.partOf === null ||
         (typeof target.partOf === 'number' &&

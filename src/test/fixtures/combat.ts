@@ -36,6 +36,8 @@ export const target: Target = {
   id: 1,
   name: 'F-16C',
   category: 'AIRCRAFT',
+  subcategory: 'FIGHTER',
+  missionIds: [],
   order: 0,
   partOf: null,
   missionVariant: null,

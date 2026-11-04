@@ -38,10 +38,10 @@ test('識別名と任務ラベルを確認済み17行へ対応させる', () => 
 test('任務差分を隠しても選択を保持し、識別名で検索できる', () => {
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
-  const saved = { ...initial, version: 1, targetIds: [95, 333, 235, 412, 305] };
-  expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual([235, 95]);
+  const saved = { ...initial, version: 2, targetIds: [95, 333, 235, 412, 305] };
+  expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual([95, 235]);
   const shown = { ...saved, showMissionVariants: true };
   expect(targetCandidates(shown, targets, 'typhoon (shadow)').map((t) => t.id)).toEqual([333]);
   expect(targetCandidates(shown, targets, 'ventus').map((t) => t.id)).toEqual([305]);
-  expect(selectedTargets(shown, targets).map((t) => t.id)).toEqual([305, 235, 412, 95, 333]);
+  expect(selectedTargets(shown, targets).map((t) => t.id)).toEqual([95, 333, 305, 235, 412]);
 });

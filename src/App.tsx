@@ -35,9 +35,12 @@ export default function App() {
     )
   );
   const [panel, setPanel] = useState<'weapons' | 'targets' | 'settings' | null>(null);
+  const [tableRevision, setTableRevision] = useState(0);
   useEffect(() => writePreferences(browserStorage(), state), [state]);
-  const reset = (section: 'conditions' | 'weapons' | 'targets' | 'all') =>
+  const reset = (section: 'conditions' | 'weapons' | 'targets' | 'all') => {
     setState((current) => resetPreferences(current, section, mobile, catalog));
+    if (section === 'all') setTableRevision((value) => value + 1);
+  };
   const controls = (
     <CalculationControls
       value={state.conditions}
@@ -71,6 +74,7 @@ export default function App() {
         </div>
       </nav>
       <ResultsTable
+        key={tableRevision}
         targets={selectedTargets(state, targets)}
         weapons={selectedWeapons(state, weapons)}
         conditions={state.conditions}

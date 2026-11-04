@@ -10,7 +10,9 @@ for (const mobile of [false, true]) {
       mobile ? { width: 390, height: 844 } : { width: 1440, height: 1000 }
     );
     const saved = {
-      version: 1,
+      version: 2,
+      targetMode: 'TYPE',
+      missionIds: [],
       weaponIds: [],
       targetIds: [],
       showParts: true,
@@ -279,7 +281,9 @@ test('友軍を候補から除外し、他艦の対空砲を表示する', async
     localStorage.setItem(
       'ace8-weapon-guide.preferences',
       JSON.stringify({
-        version: 1,
+        version: 2,
+        targetMode: 'TYPE',
+        missionIds: [],
         conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
         weaponIds: [1],
         targetIds: [123, 124],
@@ -309,7 +313,9 @@ test('任務番号・部位・識別名を表示して検索できる', async ({
     localStorage.setItem(
       'ace8-weapon-guide.preferences',
       JSON.stringify({
-        version: 1,
+        version: 2,
+        targetMode: 'TYPE',
+        missionIds: [],
         conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
         weaponIds: [1],
         targetIds: [319, 333, 266, 343, 412],
@@ -346,7 +352,9 @@ test('ダミーと陸上戦艦本体を候補から除外し、通常目標と�
     localStorage.setItem(
       'ace8-weapon-guide.preferences',
       JSON.stringify({
-        version: 1,
+        version: 2,
+        targetMode: 'TYPE',
+        missionIds: [],
         conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
         weaponIds: [1],
         targetIds: [50, 490, 204, 248, 372],
@@ -393,7 +401,9 @@ for (const width of [1440, 390]) {
       localStorage.setItem(
         'ace8-weapon-guide.preferences',
         JSON.stringify({
-          version: 1,
+          version: 2,
+          targetMode: 'TYPE',
+          missionIds: [],
           conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
           weaponIds: [1, 5, 7, 21],
           targetIds: [26, 430, 500],
@@ -408,7 +418,9 @@ for (const width of [1440, 390]) {
     await expect(page.getByRole('columnheader')).toHaveCount(6);
     await expect(page.getByRole('columnheader', { name: '8AAM', exact: true })).toHaveCount(0);
     await expect.poll(saved).toEqual({
-      version: 1,
+      version: 2,
+      targetMode: 'TYPE',
+      missionIds: [],
       conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
       weaponIds: [1, 5, 7, 21],
       targetIds: [26, 430, 500],
@@ -453,7 +465,9 @@ for (const width of [1440, 390]) {
       localStorage.setItem(
         'ace8-weapon-guide.preferences',
         JSON.stringify({
-          version: 1,
+          version: 2,
+          targetMode: 'TYPE',
+          missionIds: [],
           conditions: { role: 'FIGHTER', parts: ['bombPower'], damageType: 'DIRECT' },
           weaponIds: [21],
           targetIds: [26],
@@ -507,7 +521,9 @@ for (const width of [1440, 390]) {
       localStorage.setItem(
         'ace8-weapon-guide.preferences',
         JSON.stringify({
-          version: 1,
+          version: 2,
+          targetMode: 'TYPE',
+          missionIds: [],
           conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
           weaponIds: [1],
           targetIds: [424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425],
@@ -583,7 +599,9 @@ for (const width of [1440, 390]) {
       localStorage.setItem(
         'ace8-weapon-guide.preferences',
         JSON.stringify({
-          version: 1,
+          version: 2,
+          targetMode: 'TYPE',
+          missionIds: [],
           conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
           weaponIds: [1],
           targetIds: [248, 254, 151, 152, 372, 153, 488],

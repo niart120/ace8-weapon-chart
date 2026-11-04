@@ -33,6 +33,8 @@ export interface Target {
   readonly id: number;
   readonly name: string;
   readonly category: TargetCategory;
+  readonly subcategory: string;
+  readonly missionIds: readonly string[];
   readonly order: number;
   readonly partOf: number | null;
   readonly missionVariant: { readonly missionId: string } | null;

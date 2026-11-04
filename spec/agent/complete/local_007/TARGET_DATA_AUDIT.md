@@ -1,0 +1,384 @@
+# 対象の出現任務と細分類の調査記録
+
+## 1. 確認範囲
+
+2026-11-04。既存の抽出資料と固定ID対応を使った静的調査。ゲーム本体の変更・起動・実機での出現確認は行っていない。
+
+| 元資料 | 用途 |
+| --- | --- |
+| `data/local/catalog.json` | 固定ID、公開区分、任務差分、親部位、元定義への対応 |
+| `docs/initial/ref/tables/DT_NPC_Mission*.json` | キャンペーン任務別の敵定義 |
+| `docs/initial/ref/tables/DT_NPC.json` | NPC→モデルと`ChildNPCId`の対応 |
+| `docs/initial/ref/tables/DT_NPC_Model.json` | 表示名キーと機体モデルの対応 |
+| `docs/initial/ref/tables/DT_LiveAircraft.json` | 機体の`Category`と`PlaneNameTextID` |
+| `src/test/fixtures/mission-numbers.json` | ゲーム内の全31任務表示番号 |
+
+## 2. 出現任務の対応方法
+
+1. 掲載対象の`sourceRefs`が任務別テーブルを指す場合、その任務を登録する。
+2. 各任務のNPCから`ChildNPCId`を再帰的に辿り、対応する子NPCの出現任務を登録する。
+3. 共通部位は固定IDの`partOf`から親の任務を引き継ぐ。任務差分を持つ部位はその任務に限定する。
+4. 単に同じNPC名・同じ機種であるという理由では任務を引き継がない。異なるHP・耐性の任務差分を通常行へ混入させない。
+
+元の任務IDを保持し、表示名だけを変換する。例えば内部ID`4`はM3、`25day1`はM24、`25day2`はM25。訓練用の`Mission_Tr*`は対象外。
+
+確認できたのは「任務定義との対応」であり、全オブジェクトの配置・スポーン条件・イベント発火の網羅確認ではない。任務テーブル内の未使用定義やイベント条件による出現差は、実ゲーム未検証として残る。既存の掲載/除外判断を維持し、今回それらを推測で変更していない。
+
+掲載308行のうち294行に1件以上の任務を対応させた。14行は元の通常NPC定義しか確認できず、任務は空配列のままとした。TYPEとMISSIONの任務未指定時には掲載し、任務指定時には含めない。PROLOGUEは今回の掲載対象に対応がないため、選択肢を無効表示する。
+
+## 3. 細分類の方針
+
+機体モデルの`GameObjectDisplayName01`とプレイヤー機体の`PlaneNameTextID`を共通キーで対応させる。`Category`は0=FIGHTER、1=MULTIROLE、2=ATTACKER、3=ELECTRONIC WARFAREとして扱う。51掲載行はこのゲーム内の分類値を使用した。例としてF-15EはATTACKER、SU-35S・SU-47はMULTIROLEになる。敵AIの攻撃行動をこの分類から推定してはいない。
+
+対応を持たない135行は、ユーザーの委任に基づく表示上の編集分類。122部位は親の大分類を維持してPARTSにまとめる。分類は計算の`roleGroup`や`isAir`を変更しない。
+
+| 大分類 | 編集上の整理 |
+| --- | --- |
+| AIRCRAFT | ゲーム内4分類を優先し、爆撃機をBOMBER、早期警戒・輸送・給油機をSUPPORT、ヘリ/ティルトローターをROTORCRAFT、無人機をUAV、特殊機などをOTHER |
+| GROUND | 防空兵器をAIR DEFENSE、戦車/APCをARMOR、榴弾砲/ロケット砲をARTILLERY、トーチカをFORTIFICATION、指揮/レーダーをCOMMAND & RADAR、支援車両をSUPPORT、陸上艦をLAND WARSHIP |
+| SHIP | 主力戦闘艦をWARSHIP、小型艇をSMALL CRAFT、貨物船/タンカー/揚陸輸送をTRANSPORT |
+| STRUCTURE | 軍事・管制施設をMILITARY、燃料・発電・産業施設をINDUSTRIAL |
+| OTHER | ミサイル系をMISSILE、群体ドローンをUAV |
+
+該当しないものは各大分類のOTHERとする。分類ルールは`scripts/generate-data/target-index.py`、表示順は`src/domain/catalog.ts`で管理する。除外済み対象もデータ形式を揃えるが、UIへ再掲載しない。
+
+## 4. 再生成と検証
+
+`pnpm generate:data`で1459出典を解決し、42兵装・506対象を再生成した。対象に`subcategory`・`missionIds`を追加した以外の属性は、作業開始時のGit HEADとJSONの値として全件一致。兵装・共通補正の値も変更していない。
+
+元資料を使わないテストでは、通常NPCへの任務差分の誤流用を防ぎ、子NPC・親部位からの引き継ぎを検証する。生成データ側では既知の通常機・任務差分・部位を固定値で検証し、不正な分類・任務ID・重複任務を拒否する。
+
+全掲載行の対応は以下に記録する。任務未特定は「未特定」と記す。これはUI表示用の説明文ではなく、開発上の監査記録である。
+
+## 5. 出現任務が未特定の対象
+
+| ID | 対象 |
+| --- | --- |
+| 493 | EXPLOSIVE UAV |
+| 497 | SHUTTLE TRANSPORT |
+| 498 | UNKNOWN |
+| 499 | UNKNOWN UAV |
+| 477 | AD TANK |
+| 495 | CLIMBER |
+| 487 | IED VEHICLE |
+| 479 | PUSHBACK TRUCK |
+| 478 | XSAM |
+| 491 | CONTAINER SHIP |
+| 492 | CONTAINER SHIP |
+| 490 | AIR BASE |
+| 480 | AMMO BUNKER |
+| 505 | MSL DISPENSER |
+
+## 6. 全掲載対象の分類と対応
+
+| ID | 対象 | 大分類 / 細分類 | 分類根拠 | 対応任務 |
+| --- | --- | --- | --- | --- |
+| 273 | A-10C | AIRCRAFT / ATTACKER | 機体マスタ | M21, M23 |
+| 2 | A-50 | AIRCRAFT / SUPPORT | 編集分類 | M1, M11 |
+| 5 | A-6E | AIRCRAFT / ATTACKER | 機体マスタ | M2, M3 |
+| 121 | AH-64 | AIRCRAFT / ROTORCRAFT | 編集分類 | M8 |
+| 177 | AIRSHIP | AIRCRAFT / OTHER | 編集分類 | M10, M18 |
+| 319 | AIRSHIP [M24] | AIRCRAFT / OTHER | 編集分類 | M24 |
+| 178 | VLS《AIRSHIP》 | AIRCRAFT / PARTS | 部位 | M10, M18, M24 |
+| 122 | AV-8B | AIRCRAFT / ATTACKER | 編集分類 | M8, M13, M25, M26 |
+| 434 | B-1 | AIRCRAFT / BOMBER | 編集分類 | M28 |
+| 263 | B-2 | AIRCRAFT / BOMBER | 編集分類 | M20 |
+| 200 | C-130 | AIRCRAFT / SUPPORT | 編集分類 | M12 |
+| 201 | MSL PALLET《C-130》 | AIRCRAFT / PARTS | 部位 | M12 |
+| 202 | MSL PALLET《C-130》 | AIRCRAFT / PARTS | 部位 | M12 |
+| 277 | CELAENO | AIRCRAFT / OTHER | 編集分類 | M22 |
+| 278 | AA GUN《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 280 | GENERATOR《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 279 | RADOME《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 281 | VLS《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 230 | CH-47 | AIRCRAFT / ROTORCRAFT | 編集分類 | M17 |
+| 274 | EA-18G | AIRCRAFT / ELECTRONIC WARFARE | 機体マスタ | M21, M25 |
+| 334 | EA-36 | AIRCRAFT / ELECTRONIC WARFARE | 機体マスタ | M25 |
+| 120 | EA-6B | AIRCRAFT / ELECTRONIC WARFARE | 機体マスタ | M7 |
+| 458 | ESCORT UAV | AIRCRAFT / UAV | 編集分類 | M29 |
+| 216 | EXPLOSIVE UAV | AIRCRAFT / UAV | 編集分類 | M15 |
+| 493 | EXPLOSIVE UAV | AIRCRAFT / UAV | 編集分類 | 未特定 |
+| 224 | EXPLOSIVE UAV [M16] | AIRCRAFT / UAV | 編集分類 | M16 |
+| 6 | F-14D | AIRCRAFT / FIGHTER | 機体マスタ | M2, M4, M8, M10, M11, M13, M21 |
+| 266 | F-14D (SHADOW) [M20] | AIRCRAFT / FIGHTER | 機体マスタ | M20 |
+| 66 | F-15C | AIRCRAFT / FIGHTER | 機体マスタ | M4, M10, M25 |
+| 134 | F-15E (SHADOW) [M8] | AIRCRAFT / ATTACKER | 機体マスタ | M8 |
+| 272 | F-15E | AIRCRAFT / ATTACKER | 機体マスタ | M21, M24, M25 |
+| 233 | F-15J | AIRCRAFT / FIGHTER | 機体マスタ | M18, M25 |
+| 26 | F-16C | AIRCRAFT / FIGHTER | 機体マスタ | M3, M14, M16, M21 |
+| 133 | F-16C (SHADOW) [M8] | AIRCRAFT / FIGHTER | 機体マスタ | M8 |
+| 307 | F-22A | AIRCRAFT / FIGHTER | 機体マスタ | M23, M28, M30 |
+| 268 | F-22A (SHADOW) [M20] | AIRCRAFT / FIGHTER | 機体マスタ | M20 |
+| 74 | F-2A | AIRCRAFT / ATTACKER | 機体マスタ | M5, M10, M24, M26 |
+| 409 | F-35C | AIRCRAFT / MULTIROLE | 機体マスタ | M26, M28 |
+| 7 | F-4E | AIRCRAFT / MULTIROLE | 機体マスタ | M2, M13, M17 |
+| 30 | F/A-18C | AIRCRAFT / MULTIROLE | 機体マスタ | M3, M8, M14, M25 |
+| 241 | F/A-18E | AIRCRAFT / MULTIROLE | 機体マスタ | M19, M20, M25 |
+| 197 | F/A-18F | AIRCRAFT / MULTIROLE | 機体マスタ | M12, M25 |
+| 306 | FA-36 | AIRCRAFT / FIGHTER | 機体マスタ | M23, M25 |
+| 70 | GRIPEN E | AIRCRAFT / MULTIROLE | 機体マスタ | M4, M21, M23, M25, M27, M28 |
+| 332 | GRIPEN E (SHADOW) [M25] | AIRCRAFT / MULTIROLE | 機体マスタ | M25 |
+| 93 | IL-76 | AIRCRAFT / SUPPORT | 編集分類 | M6, M7, M23 |
+| 118 | IL-78 | AIRCRAFT / SUPPORT | 編集分類 | M7, M11, M23 |
+| 146 | INTERCEPTOR UAV | AIRCRAFT / UAV | 編集分類 | M9, M15, M17, M19, M22, M30 |
+| 417 | KC-10 | AIRCRAFT / SUPPORT | 編集分類 | M27 |
+| 98 | LADON | AIRCRAFT / OTHER | 編集分類 | M7, M15 |
+| 105 | AAM《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 101 | CIWS《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 212 | LADON《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 99 | LADON《LADON》 [M7] | AIRCRAFT / PARTS | 部位 | M7 |
+| 100 | MAIN ENGINE《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 214 | VARIABLE WING《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 103 | VARIABLE WING《LADON》 [M7] | AIRCRAFT / PARTS | 部位 | M7 |
+| 213 | WING SPAR《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 215 | WING SPAR《LADON》 | AIRCRAFT / PARTS | 部位 | M7, M15 |
+| 102 | WING SPAR《LADON》 [M7] | AIRCRAFT / PARTS | 部位 | M7 |
+| 104 | WING SPAR《LADON》 [M7] | AIRCRAFT / PARTS | 部位 | M7 |
+| 473 | MAIN ENGINE《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 474 | MAIN PROPELLER《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 464 | MARKER UAV | AIRCRAFT / UAV | 編集分類 | M30 |
+| 29 | MI-24 | AIRCRAFT / ROTORCRAFT | 編集分類 | M3, M5, M6, M7, M8, M12, M13, M17, M23, M24, M25 |
+| 1 | MIG-21BIS | AIRCRAFT / FIGHTER | 機体マスタ | M1, M3, M7, M8, M21, M25 |
+| 28 | MIG-29A (SHADOW) [M3] | AIRCRAFT / FIGHTER | 機体マスタ | M3 |
+| 67 | MIG-29A | AIRCRAFT / FIGHTER | 機体マスタ | M4, M6, M7, M8, M9, M11, M14, M19, M20, M21, M23, M25, M26, M28 |
+| 267 | MIG-29A (SHADOW) [M20] | AIRCRAFT / FIGHTER | 機体マスタ | M20 |
+| 73 | MIG-31B | AIRCRAFT / FIGHTER | 機体マスタ | M5, M6, M18, M20, M21, M25 |
+| 193 | MIG-31B (SHADOW) [M11] | AIRCRAFT / FIGHTER | 機体マスタ | M11 |
+| 4 | MIRAGE 2000-5 | AIRCRAFT / MULTIROLE | 機体マスタ | M1, M3, M5, M6, M7, M8, M10, M11, M20, M25, M28 |
+| 135 | MIRAGE 2000-5 (SHADOW) [M8] | AIRCRAFT / MULTIROLE | 機体マスタ | M8 |
+| 3 | MQ-19 | AIRCRAFT / UAV | 編集分類 | M1 |
+| 179 | PODARGE | AIRCRAFT / OTHER | 編集分類 | M11, M25 |
+| 183 | AA GUN《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 378 | AA GUN《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 180 | CARGO MODULE《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 192 | CARGO MODULE《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 374 | CIWS《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 380 | DISP. RAIL GUN《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 373 | LAND AEGIS《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 377 | LAND DESTROYER《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 182 | MAIN PROPELLER《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 375 | SHUTTER《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 379 | SSM LAUNCHER《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 187 | SUB PROPELLER《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 184 | VLS《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 376 | VLS《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 181 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 185 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 186 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 188 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 189 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 190 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 191 | WING SPAR《PODARGE》 | AIRCRAFT / PARTS | 部位 | M11, M25 |
+| 94 | QUADCOPTER | AIRCRAFT / UAV | 編集分類 | M6, M7, M9, M17, M19, M23 |
+| 210 | QUADCOPTER | AIRCRAFT / UAV | 編集分類 | M14 |
+| 232 | RAFALE M | AIRCRAFT / MULTIROLE | 機体マスタ | M18, M22, M24, M25, M26 |
+| 282 | SHIELD UAV | AIRCRAFT / UAV | 編集分類 | M22 |
+| 497 | SHUTTLE TRANSPORT | AIRCRAFT / OTHER | 編集分類 | 未特定 |
+| 262 | SHUTTLE TRANSPORT [M20] | AIRCRAFT / OTHER | 編集分類 | M20 |
+| 275 | STS SHUTTLE | AIRCRAFT / OTHER | 編集分類 | M21 |
+| 27 | SU-25SM | AIRCRAFT / ATTACKER | 機体マスタ | M3, M5, M6, M8, M12, M13 |
+| 68 | SU-33 | AIRCRAFT / MULTIROLE | 機体マスタ | M4, M8, M12, M15, M17, M21, M25, M26, M27, M28 |
+| 336 | SU-33 (SHADOW) [M25] | AIRCRAFT / MULTIROLE | 機体マスタ | M25 |
+| 75 | SU-34 | AIRCRAFT / ATTACKER | 機体マスタ | M5, M8, M21, M24, M25 |
+| 265 | SU-35S | AIRCRAFT / MULTIROLE | 機体マスタ | M20, M22, M25, M28 |
+| 305 | SU-35S (VENTUS) [M23] | AIRCRAFT / MULTIROLE | 機体マスタ | M23 |
+| 194 | SU-35S (SHADOW) [M11] | AIRCRAFT / MULTIROLE | 機体マスタ | M11 |
+| 269 | SU-35S (SHADOW) [M20] | AIRCRAFT / MULTIROLE | 機体マスタ | M20 |
+| 207 | SU-47 | AIRCRAFT / MULTIROLE | 機体マスタ | M13, M19, M20, M22, M23, M25 |
+| 236 | SU-47 (SHADOW) [M18] | AIRCRAFT / MULTIROLE | 機体マスタ | M18 |
+| 235 | SU-57 (SHADOW) | AIRCRAFT / FIGHTER | 機体マスタ | M18, M28 |
+| 335 | SU-57 | AIRCRAFT / FIGHTER | 機体マスタ | M25, M27, M29 |
+| 412 | SU-57 (SHADOW) [M26] | AIRCRAFT / FIGHTER | 機体マスタ | M26 |
+| 475 | SUB PROPELLER《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 31 | TU-160 | AIRCRAFT / BOMBER | 編集分類 | M3, M8, M12, M26, M28 |
+| 8 | TU-95 | AIRCRAFT / BOMBER | 編集分類 | M2, M3, M8, M23, M28 |
+| 95 | TYPHOON | AIRCRAFT / FIGHTER | 機体マスタ | M6, M23, M24, M25, M26, M27, M28 |
+| 333 | TYPHOON (SHADOW) [M25] | AIRCRAFT / FIGHTER | 機体マスタ | M25 |
+| 498 | UNKNOWN | AIRCRAFT / OTHER | 編集分類 | 未特定 |
+| 410 | UNKNOWN [M26] | AIRCRAFT / OTHER | 編集分類 | M26 |
+| 499 | UNKNOWN UAV | AIRCRAFT / UAV | 編集分類 | 未特定 |
+| 411 | UNKNOWN UAV [M26] | AIRCRAFT / UAV | 編集分類 | M26 |
+| 69 | V-22 | AIRCRAFT / ROTORCRAFT | 編集分類 | M4, M23, M25, M27 |
+| 476 | WING SPAR《CELAENO》 | AIRCRAFT / PARTS | 部位 | M22 |
+| 457 | X-40 | AIRCRAFT / MULTIROLE | 機体マスタ | M29 |
+| 435 | X-40 [M28] | AIRCRAFT / MULTIROLE | 機体マスタ | M28 |
+| 45 | X-40 [M3] | AIRCRAFT / MULTIROLE | 機体マスタ | M3 |
+| 459 | X-40 NOSE UNIT | AIRCRAFT / OTHER | 編集分類 | M29 |
+| 460 | LASER DESIGNATOR《X-40 NOSE UNIT》 | AIRCRAFT / PARTS | 部位 | M29 |
+| 32 | AA GUN | GROUND / AIR DEFENSE | 編集分類 | M3, M4, M5, M6, M7, M8, M9, M13, M14, M15, M17, M21, M22, M23, M24, M25, M26, M27 |
+| 483 | AA GUN《TRIUMPHANT》 | SHIP / PARTS | 部位 | M30 |
+| 477 | AD TANK | GROUND / AIR DEFENSE | 編集分類 | 未特定 |
+| 79 | AIRBURST GUN | GROUND / AIR DEFENSE | 編集分類 | M5, M23, M25 |
+| 50 | APC | GROUND / ARMOR | 編集分類 | M4, M5, M6, M7, M8, M9, M12, M17, M23, M24, M25, M26 |
+| 416 | BATTLECRUISER | GROUND / LAND WARSHIP | 編集分類 | M27 |
+| 481 | CANISTER | GROUND / OTHER | 編集分類 | M19 |
+| 414 | CIWS | GROUND / AIR DEFENSE | 編集分類 | M27 |
+| 495 | CLIMBER | GROUND / OTHER | 編集分類 | 未特定 |
+| 259 | CLIMBER [M19] | GROUND / OTHER | 編集分類 | M19 |
+| 318 | COMMAND POST | GROUND / COMMAND & RADAR | 編集分類 | M23 |
+| 316 | COMMAND VEHICLE | GROUND / COMMAND & RADAR | 編集分類 | M23 |
+| 484 | DISP. RAIL GUN《TRIUMPHANT》 | SHIP / PARTS | 部位 | M30 |
+| 317 | EPP VEHICLE | GROUND / COMMAND & RADAR | 編集分類 | M23, M24 |
+| 225 | EX-SAM | GROUND / AIR DEFENSE | 編集分類 | M17, M23 |
+| 34 | FUEL TRUCK | GROUND / SUPPORT | 編集分類 | M3, M4, M5, M6, M7, M8, M17, M23, M26 |
+| 415 | FUEL TRUCK | GROUND / SUPPORT | 編集分類 | M27 |
+| 76 | HOWITZER | GROUND / ARTILLERY | 編集分類 | M5, M8, M9, M23, M24, M25, M26 |
+| 487 | IED VEHICLE | GROUND / SUPPORT | 編集分類 | 未特定 |
+| 145 | IED VEHICLE [M9] | GROUND / SUPPORT | 編集分類 | M9 |
+| 320 | JTAC | GROUND / COMMAND & RADAR | 編集分類 | M24, M27 |
+| 106 | LAND AEGIS | GROUND / AIR DEFENSE | 編集分類 | M7, M9, M19, M23, M24, M25 |
+| 315 | LAND AEGIS [M23] | GROUND / AIR DEFENSE | 編集分類 | M23 |
+| 107 | CIWS《LAND AEGIS》 | GROUND / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 327 | NAVAL GUN《LAND AEGIS》 | GROUND / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 108 | SHUTTER《LAND AEGIS》 | GROUND / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 109 | VLS《LAND AEGIS》 | GROUND / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 148 | AA GUN《LAND BATTLESHIP 1》 | GROUND / PARTS | 部位 | M9 |
+| 150 | AIRBURST GUN《LAND BATTLESHIP 1》 | GROUND / PARTS | 部位 | M9 |
+| 149 | CASEMATE GUN《LAND BATTLESHIP 1》 | GROUND / PARTS | 部位 | M9 |
+| 372 | MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》 | GROUND / PARTS | 部位 | M25 |
+| 151 | SUB CATERPILLAR | GROUND / PARTS | 部位 | M9 |
+| 152 | SUB CATERPILLAR (CORE) | GROUND / PARTS | 部位 | M9 |
+| 488 | THRUSTER《LAND BATTLESHIP 1》 | GROUND / PARTS | 部位 | M9 |
+| 153 | THRUSTER《LAND BATTLESHIP 1》 [M9] | GROUND / PARTS | 部位 | M9 |
+| 155 | VLS《LAND BATTLESHIP 1》 | GROUND / PARTS | 部位 | M9 |
+| 248 | AA GUN《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 257 | AIRBURST GUN《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 251 | BREACH《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 252 | CIWS《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 250 | CORE UNIT《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 253 | HEAT VENT《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 255 | MAIN GUN《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 256 | SAM《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 254 | VLS《LAND BATTLESHIP 2》 | GROUND / PARTS | 部位 | M19 |
+| 227 | AA GUN《LAND BATTLESHIP 3》 | GROUND / PARTS | 部位 | M17 |
+| 229 | AIRBURST GUN《LAND BATTLESHIP 3》 | GROUND / PARTS | 部位 | M17 |
+| 228 | MAIN GUN《LAND BATTLESHIP 3》 | GROUND / PARTS | 部位 | M17 |
+| 310 | LAND DESTROYER | GROUND / LAND WARSHIP | 編集分類 | M23, M24, M25 |
+| 311 | AA GUN《LAND DESTROYER》 | GROUND / PARTS | 部位 | M23, M24, M25 |
+| 313 | DISP. RAIL GUN《LAND DESTROYER》 | GROUND / PARTS | 部位 | M23, M24, M25 |
+| 314 | DISP. RAIL GUN《LAND DESTROYER》 | GROUND / PARTS | 部位 | M23, M24, M25 |
+| 312 | SSM LAUNCHER《LAND DESTROYER》 | GROUND / PARTS | 部位 | M23, M24, M25 |
+| 78 | LINKED SAM | GROUND / AIR DEFENSE | 編集分類 | M5 |
+| 432 | LONG-RANGE SAM | GROUND / AIR DEFENSE | 編集分類 | M27 |
+| 208 | MANPADS | GROUND / AIR DEFENSE | 編集分類 | M13, M27 |
+| 77 | MSL CMD POST | GROUND / COMMAND & RADAR | 編集分類 | M5, M17, M23 |
+| 90 | PILLBOX | GROUND / FORTIFICATION | 編集分類 | M6, M24 |
+| 325 | PILLBOX | GROUND / FORTIFICATION | 編集分類 | M24 |
+| 326 | PILLBOX | GROUND / FORTIFICATION | 編集分類 | M24, M25 |
+| 340 | PILLBOX | GROUND / FORTIFICATION | 編集分類 | M25 |
+| 479 | PUSHBACK TRUCK | GROUND / SUPPORT | 編集分類 | 未特定 |
+| 88 | RADAR SITE | GROUND / COMMAND & RADAR | 編集分類 | M6 |
+| 39 | RADAR TOWER | GROUND / COMMAND & RADAR | 編集分類 | M3, M7, M13, M23 |
+| 36 | RADAR VEHICLE | GROUND / COMMAND & RADAR | 編集分類 | M3, M17 |
+| 424 | RAIL GUN TURRET《MEGAFLOAT》 | GROUND / PARTS | 部位 | M27 |
+| 131 | RKT LAUNCHER | GROUND / ARTILLERY | 編集分類 | M8, M23 |
+| 33 | SAM | GROUND / AIR DEFENSE | 編集分類 | M3, M4, M5, M6, M7, M8, M13, M17, M18, M21, M22, M23, M24, M25, M26, M27 |
+| 51 | TANK | GROUND / ARMOR | 編集分類 | M4, M5, M6, M8, M9, M23, M24, M25 |
+| 35 | TRUCK | GROUND / SUPPORT | 編集分類 | M3, M4, M7, M17, M23, M24, M26, M27 |
+| 478 | XSAM | GROUND / AIR DEFENSE | 編集分類 | 未特定 |
+| 382 | AA GUN《PODARGE》 | SHIP / PARTS | 部位 | M11, M25 |
+| 242 | AEGIS | SHIP / WARSHIP | 編集分類 | M19, M21, M26 |
+| 341 | AEGIS [M25] | SHIP / WARSHIP | 編集分類 | M25 |
+| 244 | AA GUN《AEGIS》 | SHIP / PARTS | 部位 | M19, M21, M26 |
+| 343 | AA GUN《AEGIS》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 245 | CIWS《AEGIS》 | SHIP / PARTS | 部位 | M19, M21, M26 |
+| 344 | CIWS《AEGIS》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 243 | NAVAL GUN《AEGIS》 | SHIP / PARTS | 部位 | M19, M21, M26 |
+| 342 | NAVAL GUN《AEGIS》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 246 | VLS《AEGIS》 | SHIP / PARTS | 部位 | M19, M21, M26 |
+| 345 | VLS《AEGIS》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 123 | AIRCRAFT CARRIER | SHIP / WARSHIP | 編集分類 | M8, M25, M26 |
+| 124 | AA GUN《AIRCRAFT CARRIER》 | SHIP / PARTS | 部位 | M8, M25, M26 |
+| 125 | BATTLECRUISER | SHIP / WARSHIP | 編集分類 | M8, M21, M26, M27 |
+| 126 | AA GUN《BATTLECRUISER》 | SHIP / PARTS | 部位 | M8, M21, M26, M27 |
+| 127 | NAVAL GUN《BATTLECRUISER》 | SHIP / PARTS | 部位 | M8, M21, M26, M27 |
+| 128 | SAM《BATTLECRUISER》 | SHIP / PARTS | 部位 | M8, M21, M26, M27 |
+| 129 | VLS《BATTLECRUISER》 | SHIP / PARTS | 部位 | M8, M21, M26, M27 |
+| 368 | CIWS《LAND AEGIS》 | SHIP / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 12 | CONTAINER SHIP | SHIP / TRANSPORT | 編集分類 | M2, M3, M23, M27 |
+| 491 | CONTAINER SHIP | SHIP / TRANSPORT | 編集分類 | 未特定 |
+| 492 | CONTAINER SHIP | SHIP / TRANSPORT | 編集分類 | 未特定 |
+| 222 | CONTAINER SHIP [M16] | SHIP / TRANSPORT | 編集分類 | M16 |
+| 223 | MANPADS《CONTAINER SHIP》 | SHIP / PARTS | 部位 | M2, M3, M16, M23, M27 |
+| 62 | CRUISER | SHIP / WARSHIP | 編集分類 | M4, M8, M12, M23, M26 |
+| 64 | AA GUN《CRUISER》 | SHIP / PARTS | 部位 | M4, M8, M12, M23, M26 |
+| 63 | NAVAL GUN《CRUISER》 | SHIP / PARTS | 部位 | M4, M8, M12, M23, M26 |
+| 65 | SAM《CRUISER》 | SHIP / PARTS | 部位 | M4, M8, M12, M23, M26 |
+| 59 | DESTROYER | SHIP / WARSHIP | 編集分類 | M4, M8, M10, M12, M19, M21, M23, M26 |
+| 361 | DESTROYER [M25] | SHIP / WARSHIP | 編集分類 | M25 |
+| 60 | AA GUN《DESTROYER》 | SHIP / PARTS | 部位 | M4, M8, M10, M12, M19, M21, M23, M26 |
+| 362 | AA GUN《DESTROYER》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 61 | NAVAL GUN《DESTROYER》 | SHIP / PARTS | 部位 | M4, M8, M10, M12, M19, M21, M23, M26 |
+| 363 | NAVAL GUN《DESTROYER》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 56 | FRIGATE | SHIP / WARSHIP | 編集分類 | M4, M21, M23, M26 |
+| 364 | FRIGATE [M25] | SHIP / WARSHIP | 編集分類 | M25 |
+| 58 | AA GUN《FRIGATE》 | SHIP / PARTS | 部位 | M4, M21, M23, M26 |
+| 366 | AA GUN《FRIGATE》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 57 | NAVAL GUN《FRIGATE》 | SHIP / PARTS | 部位 | M4, M21, M23, M26 |
+| 365 | NAVAL GUN《FRIGATE》 [M25] | SHIP / PARTS | 部位 | M25 |
+| 413 | GAS CARRIER | SHIP / TRANSPORT | 編集分類 | M26, M27 |
+| 52 | GUNBOAT | SHIP / SMALL CRAFT | 編集分類 | M4, M7, M16, M23, M25, M26 |
+| 53 | AA GUN《GUNBOAT》 | SHIP / PARTS | 部位 | M4, M7, M16, M23, M25, M26 |
+| 367 | LAND AEGIS | SHIP / OTHER | 編集分類 | M25 |
+| 486 | LAUNCH TUBE《TRIUMPHANT》 | SHIP / PARTS | 部位 | M30 |
+| 198 | LCAC | SHIP / TRANSPORT | 編集分類 | M12, M23 |
+| 308 | MSL BOAT | SHIP / SMALL CRAFT | 編集分類 | M23 |
+| 309 | SAM《MSL BOAT》 | SHIP / PARTS | 部位 | M23 |
+| 485 | NAVAL GUN《TRIUMPHANT》 | SHIP / PARTS | 部位 | M30 |
+| 54 | OIL TANKER | SHIP / TRANSPORT | 編集分類 | M4, M23, M26 |
+| 381 | PODARGE | SHIP / OTHER | 編集分類 | M25 |
+| 369 | SHUTTER《LAND AEGIS》 | SHIP / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 471 | TRIUMPHANT | SHIP / OTHER | 編集分類 | M30 |
+| 55 | TRIUMPHANT [M4] | SHIP / OTHER | 編集分類 | M4 |
+| 472 | VLS《TRIUMPHANT》 | SHIP / PARTS | 部位 | M4, M30 |
+| 370 | VLS《LAND AEGIS》 | SHIP / PARTS | 部位 | M7, M9, M19, M23, M24, M25 |
+| 383 | VLS《PODARGE》 | SHIP / PARTS | 部位 | M11, M25 |
+| 490 | AIR BASE | STRUCTURE / MILITARY | 編集分類 | 未特定 |
+| 204 | AIR BASE [M12] | STRUCTURE / MILITARY | 編集分類 | M12 |
+| 480 | AMMO BUNKER | STRUCTURE / MILITARY | 編集分類 | 未特定 |
+| 115 | BARRACKS | STRUCTURE / MILITARY | 編集分類 | M7 |
+| 329 | BREACH POINT | STRUCTURE / OTHER | 編集分類 | M24, M25 |
+| 157 | BUILDING | STRUCTURE / OTHER | 編集分類 | M9 |
+| 80 | BUILDING [M5] | STRUCTURE / OTHER | 編集分類 | M5 |
+| 136 | BUILDING [M8] | STRUCTURE / OTHER | 編集分類 | M8 |
+| 91 | BUNKER | STRUCTURE / MILITARY | 編集分類 | M6, M24 |
+| 92 | BUNKER | STRUCTURE / MILITARY | 編集分類 | M6, M24, M25 |
+| 276 | CONTROL CENTER | STRUCTURE / MILITARY | 編集分類 | M21 |
+| 117 | CONTROL TOWER | STRUCTURE / MILITARY | 編集分類 | M7 |
+| 110 | CSP TOWER | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 17 | GAS TANK | STRUCTURE / INDUSTRIAL | 編集分類 | M2, M7, M8, M27 |
+| 339 | GAS TANK | STRUCTURE / INDUSTRIAL | 編集分類 | M25, M28 |
+| 96 | HANGAR | STRUCTURE / MILITARY | 編集分類 | M6, M7, M23 |
+| 482 | HARDENED DEPOT | STRUCTURE / MILITARY | 編集分類 | M7 |
+| 111 | HELIOSTAT | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 431 | MEGAFLOAT | STRUCTURE / OTHER | 編集分類 | M27 |
+| 430 | FUSION REACTOR《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 420 | PILLAR (Front)《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 422 | PILLAR (EV)《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 500 | PILLAR (Front)《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 501 | PILLAR (EV)《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 419 | PILLAR (Front)《MEGAFLOAT》 [M27] | STRUCTURE / PARTS | 部位 | M27 |
+| 421 | PILLAR (EV)《MEGAFLOAT》 [M27] | STRUCTURE / PARTS | 部位 | M27 |
+| 503 | SHUTTER《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 426 | SHUTTER《MEGAFLOAT》 [M27] | STRUCTURE / PARTS | 部位 | M27 |
+| 502 | TURRET BASE《MEGAFLOAT》 | STRUCTURE / PARTS | 部位 | M27 |
+| 425 | TURRET BASE《MEGAFLOAT》 [M27] | STRUCTURE / PARTS | 部位 | M27 |
+| 16 | OIL TANK | STRUCTURE / INDUSTRIAL | 編集分類 | M2, M7, M23 |
+| 132 | OIL TANK | STRUCTURE / INDUSTRIAL | 編集分類 | M8, M9, M25, M28, M29 |
+| 114 | PIPELINE | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 113 | REFINERY | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 119 | SMOKESTACK | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 112 | SOLAR PANEL | STRUCTURE / INDUSTRIAL | 編集分類 | M7 |
+| 328 | STRONGPOINT | STRUCTURE / MILITARY | 編集分類 | M24, M25 |
+| 89 | TENT | STRUCTURE / OTHER | 編集分類 | M6, M17, M23, M25 |
+| 116 | WAREHOUSE | STRUCTURE / OTHER | 編集分類 | M7 |
+| 38 | WATCHTOWER | STRUCTURE / MILITARY | 編集分類 | M3, M6, M7, M13, M23 |
+| 264 | BVRAAM | OTHER / MISSILE | 編集分類 | M20 |
+| 237 | LAUNCH VEHICLE | OTHER / OTHER | 編集分類 | M18 |
+| 238 | LAUNCH VEHICLE DEBRIS | OTHER / OTHER | 編集分類 | M18 |
+| 505 | MSL DISPENSER | OTHER / MISSILE | 編集分類 | 未特定 |
+| 463 | MSL DISPENSER [M30] | OTHER / MISSILE | 編集分類 | M30 |
+| 462 | SLCM | OTHER / MISSILE | 編集分類 | M30 |
+| 156 | SWARM DRONES | OTHER / UAV | 編集分類 | M9, M10, M19 |
+| 465 | SWARM DRONES | OTHER / UAV | 編集分類 | M30 |
+

@@ -49,6 +49,8 @@ test('元定義からHPと倍率を解決し出典を配信データへ含めな
       id: 1,
       name: 'TANK',
       category: 'GROUND',
+      subcategory: 'ARMOR',
+      missionIds: ['6'],
       order: 0,
       partOf: null,
       missionVariant: null,
