@@ -5276,11 +5276,11 @@
   {
     "id": 477,
     "name": "AD TANK",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 153,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "AIR DEFENSE",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 55,
     "damageMultipliers": {
@@ -5620,7 +5620,7 @@
   {
     "id": 495,
     "name": "CLIMBER",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 163,
     "partOf": null,
     "missionVariant": null,
@@ -7810,11 +7810,11 @@
   {
     "id": 479,
     "name": "PUSHBACK TRUCK",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 227,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "SUPPORT",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 15,
     "damageMultipliers": {
@@ -8116,11 +8116,11 @@
   {
     "id": 478,
     "name": "XSAM",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 236,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "AIR DEFENSE",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 20,
     "damageMultipliers": {

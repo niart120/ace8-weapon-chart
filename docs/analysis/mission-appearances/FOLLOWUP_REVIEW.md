@@ -2,7 +2,7 @@
 
 確認日: 2026-11-04。基準 HEAD は `17e73cc`。その後の VEHICLE 3 行の除外と SWARM DRONES の統合を含む作業ツリーを確認した。今回は既存資料と現在の元定義の照合であり、新たなゲーム実測や全配置調査ではない。
 
-後続の AIRCRAFT 確認で SHUTTLE TRANSPORT 基本行（497）も除外した。以下の候補表と任務未特定 12 行という集計はその除外前の記録であり、2026-11-05 に UAV 基本行（493/499）も除外し、現在は 9 行。M26 UNKNOWN（410）は必要命中数 `?` で再掲載した。M15 の EXPLOSIVE UAV と M26 の UNKNOWN 系の追加確認は [AIRCRAFT 調査](../calculation/AIRCRAFT_SCOPE_REVIEW.md) を参照。
+後続の AIRCRAFT 確認で SHUTTLE TRANSPORT 基本行（497）も除外した。以下の候補表と任務未特定 12 行という集計はその除外前の記録であり、2026-11-05 に UAV 基本行（493/499）も除外し、その時点で 9 行。その後 GROUND 基本行（477/478/479/495）を除外し、現在は 5 行（[GROUND 調査](../calculation/GROUND_SCOPE_REVIEW.md)）。M26 UNKNOWN（410）は必要命中数 `?` で再掲載した。M15 の EXPLOSIVE UAV と M26 の UNKNOWN 系の追加確認は [AIRCRAFT 調査](../calculation/AIRCRAFT_SCOPE_REVIEW.md) を参照。
 
 ## 以前どこまで調べたか
 
