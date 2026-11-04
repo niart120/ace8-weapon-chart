@@ -4761,7 +4761,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "FIGHTER",
-    "missionIds": [6, 23, 24, 25, 26, 27, 28],
+    "missionIds": [23, 24, 25, 26, 27, 28],
     "hp": 60,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -10501,7 +10501,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "MILITARY",
-    "missionIds": [24],
+    "missionIds": [6, 24],
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -10739,7 +10739,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "MILITARY",
-    "missionIds": [6, 7, 23],
+    "missionIds": [7, 23],
     "hp": 35,
     "damageMultipliers": {
       "standardMissile": 1,

@@ -54,7 +54,7 @@ test('任務限定の除外は他任務・通常機・艦載部位へ波及さ�
   ).toBe(true);
   expect(ids(2)).not.toContain(12);
   expect(ids(2)).not.toContain(223);
-  expect(ids(6)).not.toContain(91);
+  expect(ids(6)).toContain(91);
   expect(ids(6)).not.toContain(92);
   expect(ids(24)).toEqual(expect.arrayContaining([91, 92, 320]));
   expect(ids(11)).toContain(67);

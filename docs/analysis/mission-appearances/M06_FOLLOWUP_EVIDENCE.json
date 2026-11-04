@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-05",
+  "baseCommit": "898f419",
+  "missionId": 6,
+  "method": "Existing extracted table references and community sources; no runtime or map/faction verification",
+  "inputs": [
+    {
+      "path": "docs/initial/ref/tables/DT_NPC.json",
+      "sha256": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Model.json",
+      "sha256": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission007.json",
+      "sha256": "2e370d5aa843e357ba02b795c358b6d4f3b56c1ff0bf15c38addd5c5454706d0"
+    }
+  ],
+  "targets": [
+    {
+      "id": 93,
+      "name": "IL-76",
+      "hp": 150,
+      "missionIds": [6, 7, 23],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "il76_forMS07",
+          "npcId": "OP0006_il76_MS07",
+          "modelId": "OP0006_il76_MS07",
+          "blueprint": "BP_OP0006_il76_CP_MS07_C",
+          "modelHp": 150.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "MI-24",
+      "hp": 35,
+      "missionIds": [3, 5, 6, 7, 8, 12, 13, 17, 23, 24, 25],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "mi24_common",
+          "npcId": "OP0013_mi24_01",
+          "modelId": "OP0013_mi24",
+          "blueprint": "BP_OP0013_mi24_CP_C",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "MIG-29A",
+      "hp": 60,
+      "missionIds": [4, 6, 7, 8, 9, 11, 19, 21, 23, 25, 26, 28],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "m29a_common",
+          "npcId": "OP1020_m29a_MS07",
+          "modelId": "OP1020_m29a",
+          "blueprint": "BP_OP1020_m29a_CP_C",
+          "modelHp": 60.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "MIRAGE 2000-5",
+      "hp": 55,
+      "missionIds": [1, 3, 5, 6, 7, 8, 10, 11, 20, 25, 28],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "mr2k_common",
+          "npcId": "OP1017_mr2k_01",
+          "modelId": "OP1017_mr2k",
+          "blueprint": "BP_OP1017_mr2k_CP_C",
+          "modelHp": 55.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "TYPHOON",
+      "hp": 60,
+      "missionIds": [6, 23, 24, 25, 26, 27, 28],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "typn_common",
+          "npcId": "OP1011_typn_01",
+          "modelId": "OP1011_typn",
+          "blueprint": "BP_OP1011_typn_CP_C",
+          "modelHp": 60.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "HANGAR",
+      "hp": 35,
+      "missionIds": [6, 7, 23],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "HangerL01_Scale08",
+          "npcId": "BPD_HangerL01_Scale08",
+          "modelId": "BPD_HangerL01_Scale08",
+          "blueprint": "BP_BPD_HangerL01_Scale08_C",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "HangerL01_Scale95",
+          "npcId": "BPD_HangerL01_Scale95",
+          "modelId": "BPD_HangerL01_Scale95",
+          "blueprint": "BP_BPD_HangerL01_Scale095_C",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "HangerM01",
+          "npcId": "BPD_HangerM01_01",
+          "modelId": "BPD_HangerM01",
+          "blueprint": "BP_BPD_HangerM01_C",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "HangerM02_scale09",
+          "npcId": "BPD_HangerM02_scale09_01",
+          "modelId": "BPD_HangerM02_scale09",
+          "blueprint": "BP_BPD_HangerM02_scale09_C",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "missionMinHealth": 0,
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "BUNKER",
+      "hp": 75,
+      "missionIds": [24],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "BunkerS02_common",
+          "npcId": "BPD_BunkerS02_01",
+          "modelId": "BPD_BunkerS02",
+          "modelHp": 75.0,
+          "npcBaseScore": 205,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "BUNKER",
+      "hp": 150,
+      "missionIds": [24, 25],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission007",
+          "row": "BunkerM01_common",
+          "npcId": "BPD_BunkerM_01",
+          "modelId": "BPD_BunkerM",
+          "modelHp": 150.0,
+          "npcBaseScore": 410,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    }
+  ],
+  "communitySources": [
+    {
+      "url": "https://acecombat.wiki.gg/wiki/Attack_on_the_Drinwich_Airfield",
+      "method": "Search engine retained page text",
+      "findings": [
+        "IL-76, MI-24, MIG-29A and MIRAGE 2000-5 explicitly listed",
+        "HANGAR listed with destruction-causes-mission-failure footnote",
+        "List is explicitly partial; absent TYPHOON is not proven absent",
+        "IL-76 includes both a protected aircraft and two transports attackable after takeoff",
+        "BUNKER listed as one standard unit worth 205 points; local ID 91 has matching BaseScore, while ID 92 has 410"
+      ]
+    },
+    {
+      "url": "https://gamerch.com/acecombat8/1017952",
+      "method": "Previously saved page body reused",
+      "findings": [
+        "Two departing transports can be shot down for score",
+        "Helicopter and SU-25SM reinforcements",
+        "Attack-prohibited base objects mentioned without hangar-specific name"
+      ]
+    }
+  ]
+}

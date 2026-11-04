@@ -16,8 +16,18 @@
   },
   {
     "missionId": 6,
-    "targetIds": [91, 92],
-    "reason": "ユーザーの記憶に基づく暫定除外：M6のBUNKER。別任務では維持。"
+    "targetIds": [92],
+    "reason": "M6の大型BUNKERは未裏付けのため暫定除外を維持。205点の敵一覧と一致する小型91はユーザー承認で復帰。別任務では両方維持。"
+  },
+  {
+    "missionId": 6,
+    "targetIds": [95],
+    "reason": "M6のTYPHOONは任務定義以外の出現裏付けが得られず、ユーザー承認で暫定除外。他任務は維持。"
+  },
+  {
+    "missionId": 6,
+    "targetIds": [96],
+    "reason": "M6のHANGARは攻略資料で破壊すると任務失敗になる保護対象として記載され、ユーザー承認で除外。M7/M23は維持。"
   },
   {
     "missionId": 14,
