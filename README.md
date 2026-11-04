@@ -1,6 +1,6 @@
 # ACE COMBAT 8 Weapon Chart
 
-ACE COMBAT 8 のキャンペーンモードにおける各目標に対する確定数を一覧表示するWebツールです。
+ACE COMBAT 8（キャンペーンモード）の各目標毎の確定数を武器別に一覧表示するWebツールです。
 
 - 公開URL: https://niart120.github.io/ace8-weapon-chart/
 - 動作環境: PC・スマートフォン
