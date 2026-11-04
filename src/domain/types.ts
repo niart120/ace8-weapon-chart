@@ -27,13 +27,7 @@ export interface Weapon {
   readonly order: number;
   readonly primary: DamageComponent;
   readonly additional?: DamageComponent;
-  readonly unverifiedParts?: readonly string[];
   readonly calculation: 'hits' | 'tls' | 'unresolved';
-  readonly continuous?: {
-    readonly damage: number;
-    readonly startDelay: number;
-    readonly interval: number;
-  };
 }
 export interface Target {
   readonly id: number;

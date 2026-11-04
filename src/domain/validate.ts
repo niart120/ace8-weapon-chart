@@ -90,22 +90,6 @@ export function validateMasters(
       );
       multiplierKeys.add(component.targetMultiplierKey);
     }
-    if (weapon.unverifiedParts !== undefined)
-      requireValue(
-        Array.isArray(weapon.unverifiedParts) &&
-          weapon.unverifiedParts.every((key) => typeof key === 'string' && keys.has(key)),
-        '未確認パーツ参照不備'
-      );
-    if (weapon.continuous !== undefined)
-      requireValue(
-        isRecord(weapon.continuous) &&
-          ['damage', 'startDelay', 'interval'].every((key) =>
-            finite(
-              weapon.continuous && isRecord(weapon.continuous) ? weapon.continuous[key] : undefined
-            )
-          ),
-        '継続値不備'
-      );
   }
   for (const target of targets) {
     requireValue(

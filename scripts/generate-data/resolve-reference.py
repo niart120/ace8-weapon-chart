@@ -56,8 +56,6 @@ def main():
             key={17:'lacmBlast',18:'lagmBlast',19:'lasmBlast'}.get(wid,definition['multiplierKey'])
             identity['additional']={'baseDamage':area,'partMultipliers':{},'targetMultiplierKey':key}
             if 'antiShipMultiplier' in component:identity['additional']['antiShipMultiplier']=component['antiShipMultiplier']
-        if wid==28:identity['continuous']={'damage':props['SlipDamage'],'startDelay':props['DamageStartDelay'],'interval':props['DamageInterval']}
-        if definition.get('unverifiedParts'):identity['unverifiedParts']=definition['unverifiedParts']
         weapons.append(identity)
     mission_tables={}
     def resolve(source):

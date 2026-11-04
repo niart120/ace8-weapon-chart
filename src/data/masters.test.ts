@@ -50,8 +50,8 @@ test('合意済み31兵装と11件のUNUSEDを別の固定IDで保持する', ()
     order: 32,
     calculation: 'tls',
     primary: { baseDamage: 40 },
-    continuous: { damage: 18 },
   });
+  expect(weapons.find((w) => w.id === 33)).not.toHaveProperty('continuous');
   expect(weapons.find((w) => w.id === 34)).toMatchObject({
     name: 'UAVT',
     category: 'UNUSED',

@@ -494,11 +494,6 @@
         "laserPower": 1.149999976158142
       },
       "targetMultiplierKey": "laser"
-    },
-    "continuous": {
-      "damage": 18,
-      "startDelay": 0.05000000074505806,
-      "interval": 0.4000000059604645
     }
   },
   {

@@ -8,8 +8,6 @@ export function calculateDefeatRequirement(
   conditions: Conditions
 ): DefeatRequirementResult {
   if (!target.standardDamage || weapon.calculation !== 'hits') return { kind: 'unknown' };
-  if (weapon.unverifiedParts?.some((key) => conditions.parts.includes(key)))
-    return { kind: 'unknown' };
   const damages = selectComponents(weapon, conditions.damageType).map((component) =>
     componentDamage(target, component, conditions)
   );
