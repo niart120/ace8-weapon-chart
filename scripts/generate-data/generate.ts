@@ -9,6 +9,7 @@ export type ResolvedTarget = Pick<
   Target,
   'hp' | 'damageMultipliers' | 'isAir' | 'roleGroup' | 'standardDamage'
 >;
+// name is the base display name; mission labels are added only when generating output.
 export type TargetDefinition = Omit<Target, keyof ResolvedTarget> & {
   readonly sourceRefs: readonly SourceRef[];
 };

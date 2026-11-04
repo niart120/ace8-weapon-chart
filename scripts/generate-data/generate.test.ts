@@ -19,7 +19,7 @@ test('内部任務IDを維持し、境界とDay違いをゲーム内番号で表
       targets: [
         {
           ...input.targets[0],
-          name: 'AA GUN《CARRIER (SHADOW)》 [M99]',
+          name: 'AA GUN《CARRIER (SHADOW)》',
           missionVariant: { missionId },
         },
       ],
@@ -27,9 +27,6 @@ test('内部任務IDを維持し、境界とDay違いをゲーム内番号で表
     expect(result.targets[0].name).toBe(`AA GUN《CARRIER (SHADOW)》 [${label}]`);
     expect(result.targets[0].missionVariant).toEqual({ missionId });
     expect(result.targets[0].id).toBe(input.targets[0].id);
-    expect(
-      generateMasters({ ...input, targets: [{ ...input.targets[0], ...result.targets[0] }] })
-    ).toEqual(result);
   }
 });
 
@@ -105,4 +102,15 @@ test('明示nullは許容し、同じ入力は同じ結果・固定IDとなる',
 test('生成専用の出典情報を兵装出力へ持ち込まない', () => {
   const withSource = { ...input.weapons[0], sourceRefs: [{ table: 'private', row: 'weapon' }] };
   expect(() => generateMasters({ ...input, weapons: [withSource] })).toThrow('出典');
+});
+
+test('生成元の名称に任務ラベルが含まれていたら拒否する', () => {
+  for (const name of ['TANK [M99]', 'TANK [M24]', 'TANK [PROLOGUE]']) {
+    expect(() =>
+      generateMasters({
+        ...input,
+        targets: [{ ...input.targets[0], name, missionVariant: { missionId: '25day1' } }],
+      })
+    ).toThrow('任務ラベル');
+  }
 });

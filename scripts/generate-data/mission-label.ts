@@ -37,6 +37,7 @@ const labels = new Map<string, string>([
 export function withMissionLabel(name: string, missionId: string): string {
   const label = labels.get(missionId);
   if (!label) throw new Error(`表示番号が未確認の任務: ${missionId}`);
-  const baseName = name.replace(/ \[(?:M[^\]]+|PROLOGUE)\]$/, '');
-  return `${baseName} [${label}]`;
+  if (/ \[(?:M[^\]]+|PROLOGUE)\]$/.test(name))
+    throw new Error(`生成元の名称に任務ラベルを含めない: ${name}`);
+  return `${name} [${label}]`;
 }
