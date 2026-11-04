@@ -32,7 +32,7 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
   const start = Date.now();
   await page.goto('/');
   await expect(page.getByRole('table')).toBeVisible();
-  await expect(page.getByRole('columnheader')).toHaveCount(35);
+  await expect(page.getByRole('columnheader')).toHaveCount(33);
   const initialMs = Date.now() - start;
   const f16 = page
     .getByRole('row')
@@ -62,14 +62,14 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
   await panel.getByRole('button', { name: 'MSL.AIR', exact: true }).click();
   await expect(panel.getByRole('checkbox', { name: 'QAAM', exact: true })).toBeVisible();
 
-  await expect(page.getByRole('columnheader')).toHaveCount(35);
+  await expect(page.getByRole('columnheader')).toHaveCount(33);
   await panel.getByRole('checkbox', { name: 'MSL.AIR all' }).uncheck();
   await page.keyboard.press('Escape');
   await expect(panel).not.toBeVisible();
   await expect(page.getByRole('button', { name: 'WEAPONS', exact: true })).toBeFocused();
-  await expect(page.getByRole('columnheader')).toHaveCount(25);
+  await expect(page.getByRole('columnheader')).toHaveCount(23);
   await page.reload();
-  await expect(page.getByRole('columnheader')).toHaveCount(25);
+  await expect(page.getByRole('columnheader')).toHaveCount(23);
   await page.getByRole('button', { name: 'RESET', exact: true }).click();
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
   const targetPanel = page.getByRole('dialog', { name: 'TARGETS' });
@@ -115,8 +115,8 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
     searchMs,
     scrollMs,
     rows,
-    weaponColumns: 33,
-    totalColumns: 35,
+    weaponColumns: 31,
+    totalColumns: 33,
   });
 });
 test('スマートフォン: 初回3列・設定・同時選択・全解除と復元・リセット', async ({ page }, info) => {
@@ -344,7 +344,9 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
 });
 
 for (const width of [1440, 390]) {
-  test(`8AAM: ${width}pxで非掲載・旧保存・検索・分類選択・リセットを確認`, async ({ page }) => {
+  test(`8AAM・TLS・UAVT: ${width}pxで非掲載・旧保存・検索・分類選択・リセットを確認`, async ({
+    page,
+  }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
@@ -353,7 +355,7 @@ for (const width of [1440, 390]) {
         JSON.stringify({
           version: 1,
           conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
-          weaponIds: [1, 5, 6, 7, 21],
+          weaponIds: [1, 5, 6, 7, 21, 33, 34],
           targetIds: [26, 430, 500],
           showParts: false,
           showMissionVariants: false,
@@ -378,23 +380,35 @@ for (const width of [1440, 390]) {
     await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
     const panel = page.getByRole('dialog', { name: 'WEAPONS' });
     await expect(panel.getByRole('checkbox', { name: '6AAM', exact: true })).toBeChecked();
-    await panel.getByRole('searchbox').fill('8AAM');
-    await expect(panel.locator('.group-items label')).toHaveCount(0);
+    for (const name of ['8AAM', 'TLS', 'UAVT']) {
+      await panel.getByRole('searchbox').fill(name);
+      await expect(panel.locator('.group-items label')).toHaveCount(0);
+      await expect(
+        page.getByRole('columnheader', { name: name === 'TLS' ? 'TLS [s]' : name, exact: true })
+      ).toHaveCount(0);
+    }
     await panel.getByRole('checkbox', { name: 'MSL.AIR all', exact: true }).check();
     await expect
       .poll(async () => (await saved()).weaponIds)
       .toEqual([1, 5, 7, 21, 3, 4, 8, 9, 10, 11, 12, 13]);
+    await panel.getByRole('checkbox', { name: 'OTHER all', exact: true }).check();
+    await expect
+      .poll(async () => (await saved()).weaponIds)
+      .toEqual([1, 5, 7, 21, 3, 4, 8, 9, 10, 11, 12, 13, 31, 32]);
     await panel.getByRole('searchbox').fill('');
-    await expect(panel.getByRole('checkbox', { name: '8AAM', exact: true })).toHaveCount(0);
+    for (const name of ['8AAM', 'TLS [s]', 'UAVT'])
+      await expect(panel.getByRole('checkbox', { name, exact: true })).toHaveCount(0);
     await panel.getByRole('button', { name: 'Reset weapons', exact: true }).click();
     await panel.getByRole('button', { name: 'Close weapons', exact: true }).click();
-    await expect(page.getByRole('columnheader')).toHaveCount(width === 390 ? 3 : 35);
-    await expect.poll(async () => (await saved()).weaponIds.includes(6)).toBe(false);
-    // 8AAMだけを選択した旧保存も全選択へ戻さず、空の選択として再保存する。
+    await expect(page.getByRole('columnheader')).toHaveCount(width === 390 ? 3 : 33);
+    await expect
+      .poll(async () => (await saved()).weaponIds.some((id: number) => [6, 33, 34].includes(id)))
+      .toBe(false);
+    // 非掲載兵装だけを選択した旧保存も全選択へ戻さず、空の選択として再保存する。
     await page.evaluate(() => {
       const key = 'ace8-weapon-guide.preferences';
       const state = JSON.parse(localStorage.getItem(key)!);
-      localStorage.setItem(key, JSON.stringify({ ...state, weaponIds: [6] }));
+      localStorage.setItem(key, JSON.stringify({ ...state, weaponIds: [6, 33, 34] }));
     });
     for (let reload = 0; reload < 2; reload++) {
       await page.reload();

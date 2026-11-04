@@ -21,9 +21,13 @@
 
 ## TLS・UAVT・子弾の調査
 
-TLSの `BP_plwp_tls_x0_C` はDamage40、SlipDamage18、DamageStartDelay約0.05秒、DamageInterval約0.4秒、LifeTime8秒。これらの既知値を保持した。初撃を時刻0とする式や一定DPSへの換算は採用していない。
+TLSの `BP_plwp_tls_x0_C` はDamage40、SlipDamage18、DamageStartDelay約0.05秒、DamageInterval約0.4秒、WeaponWarmUpTime約0.95秒、LifeTime8秒。配信上の既知値を保持し、初撃を時刻0とする式や一定DPSへの換算は採用していない。
 
-追加の現行EXE調査でLiveAttachedInstantWeaponのタイマー・継続判定候補と親子関係を確認したが、旧ビルドの全命中イベント、初回・継続・再接触時刻を対応付けていない。フレーム時間の入力条件も確定していない。基準ビルドの時間計算を確定できる実行コードが不足するため、TLSは `calculation: tls` のまま `unknown` を返す。威力そのものをnullにはしない。
+2026-11-04の[local_005調査](../../../spec/agent/complete/local_005/TLS_DAMAGE_REVIEW.md)で、現行の生成・再利用時の初期化、準備時間、初回遅延、継続、同一目標への再接触を接続した。TLS.POW+はLaserPower(213)だけを持ち、初回40を46にする。SlipDamageはLaserSlipPower(218)とTLSSlipPower(221)を参照する別経路なので18のまま。パーツ表・TLS本体と基底の6資産ファイルは基準資料とハッシュ一致。
+
+通常目標の履歴は同一照射中に維持し、再接触時は約0.05秒の遅延を経て継続18を使う。新しい照射では履歴を消す。時刻比較は閾値を超えた場合のみ、超過分はfloat32で持ち越すが1更新で通知は最大1回。通常NPCの被弾処理へ接続し、初回・継続を個別にROLE・耐性・HP更新へ渡す。バリアは別経路。命令・ラベル・条件付きトレースは[TLS_DAMAGE_EVIDENCE.json](TLS_DAMAGE_EVIDENCE.json)へ保存した。
+
+現行EXEでの静的確認と実ゲーム測定を区別する。dtの供給・寿命終了と更新順、実際の照射切断、旧EXEとのコード同一性は未確認。TLSの評価単位・時間の起点は調査後に判断するため、今回は配信・計算を変更せず `calculation: tls` と `unknown` を維持する。威力そのものをnullにはしない。
 
 UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimportへ解決し、`BP_uavwp_tls_C` を指すことを確認した。展開側はAttackTime約7.7秒、LifeTime11秒、MaxLoadedCount4、ShotIntervalTime1秒。搭載側はDamage20、SlipDamage20、初回遅延約0.45秒、継続間隔約0.65秒、LifeTime約6.8秒。装填数や活動時間だけから同一目標への全攻撃回数を確定していない。分散・展開・活動時間と攻撃の単位が未決なので、最大ダメージや必要展開数は採用せず `unknown`。
 
@@ -98,3 +102,10 @@ GameObjectCategory=8の5行は、基準ビルドと現行EXEでNPC用ROLE配列�
 計算は被弾可能な各1個の元HPを使い、最低HP1、露出・無敵解除・崩壊待ちを命中数へ組み込まない。FrontはHP100、EVはHP200で、MULTIROLE・通常MSLなら40×5=200の各1命中。MGPは5×0.35=1.75から整数HP更新により56/112命中。原子炉は内外各HP40として計算し、総HP80や中央柱のHP120へ読み替えない。SHUTTERの共通/M27耐性差も保持した。
 
 固定期待値・保存復元・画面を含む105テストとChrome12シナリオ、型・Lint・整形・ビルド・再生成一致を検証した。[local_003の14節](../../../spec/agent/complete/local_003/TARGET_ATTRIBUTE_REVIEW.md#14-megafloatの承認済み変更と検証)に変更範囲と残る制約を記録。兵装側の既存未確認、ビルド差・配置・イベントの未確認は維持し、実ゲーム測定済みとは扱わない。
+
+
+## local_005 掲載判断の反映
+
+初回調査後、計算仕様が複雑化しすぎることへの懸念から、ユーザー承認によりTLS固定ID33・UAVT固定ID34をUNUSEDへ変更した。キャンペーンでの使用不能を意味しない。category以外の値・固定IDと計算処理は保持し、全42兵装のうち掲載31・UNUSED11となった。
+
+TLS強化パーツのオフライン未解禁はユーザー提供情報として記録した。上記の40→46はパーツ資産・補正経路の条件付き解析で、オフラインの装備可能性を保証しない。独立した解禁調査・実ゲーム測定は未実施。オフライン条件では初回40・継続18を前提とする。[変更と検証結果](../../../spec/agent/complete/local_005/TLS_DAMAGE_REVIEW.md#12-承認済みtlsuavtのunused化)を参照。

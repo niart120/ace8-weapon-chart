@@ -3,7 +3,7 @@ import { weapons, targets, modifiers } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { componentDamage } from '../domain/damage';
 import { weaponCategories, targetCategories } from '../domain/types';
-test('合意済み33兵装と9件のUNUSEDを別の固定IDで保持する', () => {
+test('合意済み31兵装と11件のUNUSEDを別の固定IDで保持する', () => {
   expect(weapons.filter((w) => w.category !== 'UNUSED').map((w) => w.name)).toEqual([
     'MSL',
     'MSL (Rookie)',
@@ -36,14 +36,27 @@ test('合意済み33兵装と9件のUNUSEDを別の固定IDで保持する', () 
     'RKT',
     'EMLB',
     'MPBM',
-    'TLS [s]',
-    'UAVT',
   ]);
-  expect(weapons.filter((w) => w.category === 'UNUSED')).toHaveLength(9);
+  expect(weapons.filter((w) => w.category === 'UNUSED')).toHaveLength(11);
   expect(weapons.find((w) => w.id === 6)).toMatchObject({
     name: '8AAM',
     category: 'UNUSED',
     order: 5,
+    primary: { baseDamage: null },
+  });
+  expect(weapons.find((w) => w.id === 33)).toMatchObject({
+    name: 'TLS [s]',
+    category: 'UNUSED',
+    order: 32,
+    calculation: 'tls',
+    primary: { baseDamage: 40 },
+    continuous: { damage: 18 },
+  });
+  expect(weapons.find((w) => w.id === 34)).toMatchObject({
+    name: 'UAVT',
+    category: 'UNUSED',
+    order: 33,
+    calculation: 'unresolved',
     primary: { baseDamage: null },
   });
   expect(weapons[0].primary.baseDamage).toBe(40);

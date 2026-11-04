@@ -485,7 +485,7 @@
   {
     "id": 33,
     "name": "TLS [s]",
-    "category": "OTHER",
+    "category": "UNUSED",
     "order": 32,
     "calculation": "tls",
     "primary": {
@@ -504,7 +504,7 @@
   {
     "id": 34,
     "name": "UAVT",
-    "category": "OTHER",
+    "category": "UNUSED",
     "order": 33,
     "calculation": "unresolved",
     "primary": {

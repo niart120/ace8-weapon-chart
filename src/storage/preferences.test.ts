@@ -5,13 +5,16 @@ import { weapons, targets, modifiers } from '../data/masters';
 const catalog = { weapons, targets };
 const initial = initialPreferences(false, catalog);
 const parts = modifiers.parts.map((p) => p.key);
-test('8AAMの旧選択だけを除き、他の選択・条件・全解除を再保存後も保持する', () => {
+test('8AAM・TLS・UAVTの旧選択だけを除き、他の選択・条件・全解除を再保存後も保持する', () => {
   for (const [savedIds, expected] of [
     [
-      [1, 5, 6, 7, 21],
+      [1, 5, 6, 7, 21, 33, 34],
       [1, 5, 7, 21],
     ],
     [[6], []],
+    [[33], []],
+    [[34], []],
+    [[33, 34], []],
     [[], []],
   ]) {
     const saved = {

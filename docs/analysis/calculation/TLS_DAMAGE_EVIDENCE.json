@@ -1,0 +1,471 @@
+{
+  "investigation": "local_005",
+  "date": "2026-11-04",
+  "runtime_measurement": false,
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "exe_bytes": 551201904,
+  "blueprints": [
+    {
+      "name": "BP_plwp_tls_x0",
+      "parent": "BP_wp_tls_BaseClass_C",
+      "cdo_bytes": 912,
+      "function_exports": [],
+      "properties": {
+        "WeaponID": 28,
+        "Damage": 40.0,
+        "SlipDamage": 18.0,
+        "DamageStartDelay": 0.05000000074505806,
+        "DamageInterval": 0.4000000059604645,
+        "WeaponWarmUpTime": 0.949999988079071,
+        "LifeTime": 8.0,
+        "DamageDistance": 620000.0,
+        "DamageRadiusCampaign": 1800.0
+      }
+    },
+    {
+      "name": "BP_wp_tls_BaseClass",
+      "parent": "LiveTLSLaserWeapon",
+      "cdo_bytes": 454,
+      "function_exports": [],
+      "properties": {}
+    }
+  ],
+  "native_field_offsets": {
+    "DamageDistance": "0x750",
+    "DamageRadiusCampaign": "0x758",
+    "SlipDamage": "0x760",
+    "DamageStartDelay": "0x764",
+    "DamageInterval": "0x768",
+    "WeaponWarmUpTime": "0x76c",
+    "WeaponID": "0x2b1",
+    "Damage": "0x41c",
+    "LifeTime": "0x420"
+  },
+  "parts": [
+    {
+      "row": "RAW_00002040",
+      "PartsID": 2040802,
+      "PartsData": [
+        {
+          "ParameterLabel": 213,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.149999976158142
+        }
+      ],
+      "Category": 8,
+      "PartsPosition": 1,
+      "WearableRoleCategory": 0,
+      "WearableAircraftID": 0,
+      "PartsEnableSpecial": 0,
+      "PartsIconKinds": 0,
+      "PartsCost": 0,
+      "GraphAirToAir": 0,
+      "GraphAirToGround": 0,
+      "GraphSpeed": 0,
+      "GraphMobility": 0,
+      "GraphStability": 0,
+      "GraphDefense": 0,
+      "GraphAirToAirWeapon": 5,
+      "GraphAirToGroundWeapon": 5,
+      "GraphHoming": 0,
+      "GraphReload": 0,
+      "GraphLongRange": 0,
+      "GraphDamageRange": 0,
+      "SortNumber": 801,
+      "Filter": ["EPartsFilter::LaserWeapon"],
+      "WeaponFilterConditions": [
+        {
+          "WeaponCategory": 9,
+          "WeaponSubCategories": [],
+          "WeaponIDs": ["ELiveWeaponID::WID_tls"]
+        }
+      ],
+      "PartsNameTextID": "Parts_Name_45",
+      "PartsShortNameTextID": "PartsShort_Name_45",
+      "PartsDescriptionTextID": "Parts_Description_45",
+      "DLCID": "Live"
+    }
+  ],
+  "part_binding": {
+    "weapon_id": 28,
+    "group": 11,
+    "switch": "0x147dcf8f6",
+    "damage_label": 213,
+    "damage_label_store": "0x15c7b872e",
+    "slip_group_label": 218,
+    "slip_group_label_store": "0x147dcf12c",
+    "slip_individual_label": 221,
+    "slip_individual_label_store": "0x147dcf1d8",
+    "part_labels": [213],
+    "damage_with_part": 46.0,
+    "slip_with_part": 18
+  },
+  "vtable": "0x14ca89a90",
+  "vtable_slots": {
+    "0x720": "0x147ef8f70",
+    "0x730": "0x147ef9910",
+    "0x748": "0x147ee8cc0",
+    "0x750": "0x147eea8c0",
+    "0x780": "0x147f61c20",
+    "0x800": "0x147ee8f00",
+    "0x810": "0x147f60cf0",
+    "0x840": "0x147ee91b0",
+    "0x850": "0x147ee91f0"
+  },
+  "npc_damage_entry": {
+    "vtable": "0x14c4eaaf0",
+    "slot": "0xa38",
+    "function": "0x147c82df0",
+    "shared_damage": "0x147d0fde0",
+    "modifier_slot": "0xa40",
+    "modifier_function": "0x147c82f70"
+  },
+  "separate_barrier_class": "LivePulseBarrier",
+  "instruction_evidence": [
+    "0x147394ce1 call qword ptr [rax + 0x730]",
+    "0x147394e21 call qword ptr [rax + 0x730]",
+    "0x147ee8a54 movss dword ptr [rdi + 0x808], xmm0",
+    "0x147ee8a8d lea rbx, [rdi + 0x978]",
+    "0x147ee88a3 call 0x147ee9840",
+    "0x147ee88b6 ja 0x147ee88d2",
+    "0x147ee88c1 addss xmm1, xmm6",
+    "0x147ee88d8 call 0x147eea4b0",
+    "0x147eea1e7 mov dword ptr [rbx + 0x804], esi",
+    "0x147eea1ed mov byte ptr [rbx + 0x80c], al",
+    "0x147eea51d jbe 0x147eea60f",
+    "0x147eea577 jbe 0x147eea60f",
+    "0x147eea55f subss xmm0, dword ptr [rdi + 0x764]",
+    "0x147eea5b9 subss xmm0, dword ptr [rdi + 0x768]",
+    "0x147f61cb2 call qword ptr [rax + 0x750]",
+    "0x147eea959 movss xmm6, dword ptr [rdi + 0x41c]",
+    "0x147eea98a call 0x141a46060",
+    "0x147eea991 movss xmm6, dword ptr [rdi + 0x760]",
+    "0x147eea9f2 call qword ptr [rax + 0xa38]",
+    "0x147f602f5 call 0x147f5fe70",
+    "0x147f600a9 call 0x144b97630",
+    "0x147f601ab jmp 0x147f601b0"
+  ],
+  "conditional_traces": {
+    "assumptions": "Normal living target, no immunity/events, supplied dt, no lifetime cutoff or engine scheduling; damage before target modifiers/HP update.",
+    "constant_fps": {
+      "30": {
+        "events": [
+          {
+            "frame": 31,
+            "time_sum_of_input_dt": 1.0333333872258663,
+            "target": "A",
+            "damage": 40.0
+          },
+          {
+            "frame": 43,
+            "time_sum_of_input_dt": 1.433333408087492,
+            "target": "A",
+            "damage": 18.0
+          },
+          {
+            "frame": 55,
+            "time_sum_of_input_dt": 1.8333334289491177,
+            "target": "A",
+            "damage": 18.0
+          }
+        ],
+        "remaining_timer": 0.18333332240581512,
+        "warmup_counter": 0.016667019575834274
+      },
+      "60": {
+        "events": [
+          {
+            "frame": 61,
+            "time_sum_of_input_dt": 1.0166667196899652,
+            "target": "A",
+            "damage": 40.0
+          },
+          {
+            "frame": 85,
+            "time_sum_of_input_dt": 1.416666740551591,
+            "target": "A",
+            "damage": 18.0
+          },
+          {
+            "frame": 109,
+            "time_sum_of_input_dt": 1.8166667614132166,
+            "target": "A",
+            "damage": 18.0
+          }
+        ],
+        "remaining_timer": 0.18333357572555542,
+        "warmup_counter": 0.01666644774377346
+      },
+      "120": {
+        "events": [
+          {
+            "frame": 122,
+            "time_sum_of_input_dt": 1.0166667196899652,
+            "target": "A",
+            "damage": 40.0
+          },
+          {
+            "frame": 170,
+            "time_sum_of_input_dt": 1.416666740551591,
+            "target": "A",
+            "damage": 18.0
+          },
+          {
+            "frame": 218,
+            "time_sum_of_input_dt": 1.8166667614132166,
+            "target": "A",
+            "damage": 18.0
+          }
+        ],
+        "remaining_timer": 0.1916665881872177,
+        "warmup_counter": 0.008332776837050915
+      }
+    },
+    "recontact_and_switch_with_part": {
+      "events": [
+        {
+          "frame": 3,
+          "time_sum_of_input_dt": 0.05000000260770321,
+          "target": "A",
+          "damage": 46.0
+        },
+        {
+          "frame": 9,
+          "time_sum_of_input_dt": 0.15000000782310963,
+          "target": "A",
+          "damage": 18.0
+        },
+        {
+          "frame": 13,
+          "time_sum_of_input_dt": 0.2166666779667139,
+          "target": "B",
+          "damage": 46.0
+        },
+        {
+          "frame": 17,
+          "time_sum_of_input_dt": 0.2833333481103182,
+          "target": "A",
+          "damage": 18.0
+        }
+      ],
+      "remaining_timer": 0.016666671261191368,
+      "warmup_counter": 1.0
+    },
+    "exact_delay_boundary": {
+      "events": [
+        {
+          "frame": 2,
+          "time_sum_of_input_dt": 0.050001000745055535,
+          "target": "A",
+          "damage": 40.0
+        }
+      ],
+      "remaining_timer": 9.98377799987793e-7,
+      "warmup_counter": 1.0
+    },
+    "large_dt": {
+      "events": [
+        {
+          "frame": 1,
+          "time_sum_of_input_dt": 1.0,
+          "target": "A",
+          "damage": 40.0
+        },
+        {
+          "frame": 2,
+          "time_sum_of_input_dt": 1.0099999997764826,
+          "target": "A",
+          "damage": 18.0
+        }
+      ],
+      "remaining_timer": 0.559999942779541,
+      "warmup_counter": 1.0
+    },
+    "fresh_activation_with_part": {
+      "events": [
+        {
+          "frame": 3,
+          "time_sum_of_input_dt": 0.05000000260770321,
+          "target": "A",
+          "damage": 46.0
+        }
+      ],
+      "remaining_timer": 0.016666671261191368,
+      "warmup_counter": 1.0
+    }
+  },
+  "asset_hashes": [
+    {
+      "path": "Live/Content/Blueprints/Weapons/Laser/Tls/Player/BP_plwp_tls_x0.uasset",
+      "sha256": "c5532ecb3925cf0388707f6f480c4741ac94dc7068ff6872c8d24c9dbd003238",
+      "reference_sha256": "c5532ecb3925cf0388707f6f480c4741ac94dc7068ff6872c8d24c9dbd003238",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/Laser/Tls/Player/BP_plwp_tls_x0.uexp",
+      "sha256": "f86a1a0d40a70ddd9d225866562fb728ce7c2ac2465c71d6e6035948a1e718aa",
+      "reference_sha256": "f86a1a0d40a70ddd9d225866562fb728ce7c2ac2465c71d6e6035948a1e718aa",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/Laser/Tls/BP_wp_tls_BaseClass.uasset",
+      "sha256": "fbe7b339613e0d6e087da532de07e798dadb3439c8707ed9d200dc2164ff4f49",
+      "reference_sha256": "fbe7b339613e0d6e087da532de07e798dadb3439c8707ed9d200dc2164ff4f49",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/Laser/Tls/BP_wp_tls_BaseClass.uexp",
+      "sha256": "b694a38ee7534761907b4c1f36eb9c629ea5b866dfbe9b2b6ea026dc63c54dea",
+      "reference_sha256": "b694a38ee7534761907b4c1f36eb9c629ea5b866dfbe9b2b6ea026dc63c54dea",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveParts.uasset",
+      "sha256": "9dd876e43febdba3f7c94f41f40ea0995d4b8c83fe343f8d247cd4dc6d6492af",
+      "reference_sha256": "9dd876e43febdba3f7c94f41f40ea0995d4b8c83fe343f8d247cd4dc6d6492af",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveParts.uexp",
+      "sha256": "8cb62ebb2ca98c701048fafa6fdce9e15148cd2066820359d468ed77a148c1a4",
+      "reference_sha256": "8cb62ebb2ca98c701048fafa6fdce9e15148cd2066820359d468ed77a148c1a4",
+      "matches_reference": true
+    }
+  ],
+  "native_function_hashes": {
+    "0x147dc3eb0": {
+      "sha256_instruction_bytes": "f7d176c54b790f67acdb1ed4682711b8fb0300c91510d8ae2cf04e01ee2103ec",
+      "instruction_count": 266
+    },
+    "0x147dc5d10": {
+      "sha256_instruction_bytes": "6bfac82c45f8571405321db62ca119a2dba28ea82ae53468ab12038b3f6bb55c",
+      "instruction_count": 209
+    },
+    "0x147dc7f40": {
+      "sha256_instruction_bytes": "229f61110b74f04cd020c11bd2b74d4e3829fa46fa8bd7ad64f6398d3d442e38",
+      "instruction_count": 572
+    },
+    "0x147dcf100": {
+      "sha256_instruction_bytes": "fe1e8be1da4e2e2226ae8ec9e068c6c917968d40fb5efae5b2af3842a2616dd9",
+      "instruction_count": 90
+    },
+    "0x147dcf680": {
+      "sha256_instruction_bytes": "ead428006fa46e4e46225ac48dbc9b5f7c327a83273b368b048d2bab31b7bcc7",
+      "instruction_count": 128
+    },
+    "0x147de2de0": {
+      "sha256_instruction_bytes": "d4edd8da8019fcb4c3bd8e7a89cd6c12aa76b85806a7ca5db54bfdc33a06ca36",
+      "instruction_count": 74
+    },
+    "0x147394b10": {
+      "sha256_instruction_bytes": "a1f2d322b2fa20ca0c2b534efe7c9c10592dd6e29ed8418a7a98de033a4d3688",
+      "instruction_count": 237
+    },
+    "0x147ee8870": {
+      "sha256_instruction_bytes": "864b23a3addd577461bb565cf19db5470705ade01508e6685afab711c6f383ee",
+      "instruction_count": 59
+    },
+    "0x147ee8990": {
+      "sha256_instruction_bytes": "40d2f38a5f63fc2bee816405bffb47e2a5cf6435513216ec08208fec0df584ed",
+      "instruction_count": 189
+    },
+    "0x147ee8cc0": {
+      "sha256_instruction_bytes": "a3ccdcd7df165c88ada4c26f761b51001167e83952bdfc8876d1ceb06ece3663",
+      "instruction_count": 131
+    },
+    "0x147ee8f00": {
+      "sha256_instruction_bytes": "086ed440cb1a85dec036e68147206567ba397fe69db30fe6d9b678f2e523cb88",
+      "instruction_count": 34
+    },
+    "0x147ee91b0": {
+      "sha256_instruction_bytes": "85231669fa87b74c54a6603ff4c6545cd7b4257686ee28a7fc6a4c1519e654b7",
+      "instruction_count": 17
+    },
+    "0x147ee91f0": {
+      "sha256_instruction_bytes": "575b5c2b0edc6c30fd23a3a0869ecae6a948c7fa58e3536c4d3e3610fabe8a3d",
+      "instruction_count": 30
+    },
+    "0x147ee9410": {
+      "sha256_instruction_bytes": "5ed5049b06e8670fcc4ba74774ac67219a4fda99953ca6938de4d92a5c4374cf",
+      "instruction_count": 226
+    },
+    "0x147ee9840": {
+      "sha256_instruction_bytes": "b0474adcdaac4b28894f6e3ab4c41a57097dd985c5ae8eb5f6f79c3871ab0ed9",
+      "instruction_count": 649
+    },
+    "0x147eea4b0": {
+      "sha256_instruction_bytes": "c8e862b3cab0e21527ce47faf9c985c05c5223e8a6192c60fa3ea6b93223c6c3",
+      "instruction_count": 79
+    },
+    "0x147eea620": {
+      "sha256_instruction_bytes": "b18daeb134615d3ffdcd40e87f2bcbe2f19980db54d98ea4e614ce0be9864c45",
+      "instruction_count": 98
+    },
+    "0x147eea8c0": {
+      "sha256_instruction_bytes": "389b68db22d763097bd44103d518f8732ea963003a32beeb71251636e0bf71e8",
+      "instruction_count": 103
+    },
+    "0x147ef8f70": {
+      "sha256_instruction_bytes": "7fb35fa597a7be4a7b24db60742057a89c8c8f32136fefb39b45b1740c85131f",
+      "instruction_count": 533
+    },
+    "0x147ef9910": {
+      "sha256_instruction_bytes": "9fb6347c5d4727fe1a3ea91a79bb4a8cecbcc807cae2a5927694a73f21333f2a",
+      "instruction_count": 35
+    },
+    "0x147eee640": {
+      "sha256_instruction_bytes": "c548cdecd462585737d23e3fb8046a1c1f72f16ba2b33c61c354e60db0e495e9",
+      "instruction_count": 72
+    },
+    "0x147f5fe70": {
+      "sha256_instruction_bytes": "a1d2668b5454d8df0e5d001bd9635c37a1c1b90fda391a6804996a84179a2fbe",
+      "instruction_count": 182
+    },
+    "0x147f601a0": {
+      "sha256_instruction_bytes": "f3950177c1fc7daf24866e0dda342c54d649c85245c3b8b41661ce79d03f411b",
+      "instruction_count": 2
+    },
+    "0x147f601b0": {
+      "sha256_instruction_bytes": "60f42d394e1b8760fdc349a91a38f2f9af3e39e6f1eed649dbb96cfc024492a1",
+      "instruction_count": 74
+    },
+    "0x147f602e0": {
+      "sha256_instruction_bytes": "1f1c0a4bd50ff7071d99bacfc41f284b606b3ae21d58f07739549a6645db084a",
+      "instruction_count": 31
+    },
+    "0x147f60360": {
+      "sha256_instruction_bytes": "6206e42b6e29a35ef96b9db0659562874582c3a7580a2b9b1416804a0e471e98",
+      "instruction_count": 100
+    },
+    "0x147f61c20": {
+      "sha256_instruction_bytes": "322ebd8651947d48258e6be7f3e535626fa4352fa684a62474500df1f63c5f4e",
+      "instruction_count": 96
+    },
+    "0x147f69ae0": {
+      "sha256_instruction_bytes": "d7298fca343a47f3e0939bb2efa883a44615b3f7860891f96b0f8d52caad827c",
+      "instruction_count": 169
+    },
+    "0x147c82df0": {
+      "sha256_instruction_bytes": "f8fbb0ef1a62e214017eff73a55fb8f79a6d04b55712c33743404d765705e033",
+      "instruction_count": 104
+    },
+    "0x147d0fde0": {
+      "sha256_instruction_bytes": "e4a541d473f32c0af0d283d817340b7a98bc096cb52fd1c17c0afb8d6b3520b9",
+      "instruction_count": 420
+    },
+    "0x147c82f70": {
+      "sha256_instruction_bytes": "fed24a06cdb7ee6af765f806a30751deb54e5b86617dc5fa7f5bb57dcced8128",
+      "instruction_count": 236
+    }
+  },
+  "protected_sha256": {
+    "src/data/targets.json": "d1a0da7bea252dd1bec668f8910bfc50a2331c465c78e786e7aea219b1c3d033",
+    "src/data/weapons.json": "2c6cfdae4c1220308df81d15c91a7822412872002cdec89c2a2b65dc091c0885",
+    "src/data/modifiers.json": "6379b8025cffa7ff3e48fc81520ae83ef83dcc29292ec32287fe109e6a9f83a0",
+    "data/local/catalog.json": "f67b608e513c57ec22ff31493d1b4b535e2285e0bd9e55a1f99200fe423bdac7",
+    "data/local/npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data/local/native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data/local/generation-input.json": "c27f1825b7a891344164b7d9b5c21f66cf226841951d6f90de9850ae490b4eb7"
+  }
+}
