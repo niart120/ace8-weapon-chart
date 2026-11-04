@@ -1,0 +1,337 @@
+{
+  "reviewDate": "2026-11-04",
+  "statusLabels": {
+    "corroborated": "敵出現の裏付けあり",
+    "incorrect": "出現対応の誤り",
+    "non_enemy": "非敵対象の混入",
+    "strong_suspicion": "強い疑義",
+    "suspicion": "要確認",
+    "encounter_review": "イベント・撃破用途の確認待ち",
+    "unverified": "未裏付け"
+  },
+  "missionSources": {
+    "1": [
+      "https://gamerch.com/acecombat8/1017947",
+      "https://gl.ali213.net/html/2026-10/1814135.html"
+    ],
+    "2": [
+      "https://gamerch.com/acecombat8/1017948",
+      "https://gl.ali213.net/html/2026-10/1814135.html"
+    ],
+    "3": [
+      "https://gamerch.com/acecombat8/1017949",
+      "https://gl.ali213.net/html/2026-10/1814135.html"
+    ],
+    "4": [
+      "https://gamerch.com/acecombat8/1017950",
+      "https://gl.ali213.net/html/2026-10/1814135.html"
+    ],
+    "5": [
+      "https://gamerch.com/acecombat8/1017951",
+      "https://gl.ali213.net/html/2026-10/1814135.html"
+    ],
+    "6": ["https://gamerch.com/acecombat8/1017952"],
+    "7": ["https://gamerch.com/acecombat8/1017955"],
+    "8": ["https://gamerch.com/acecombat8/1017956"],
+    "9": ["https://gamerch.com/acecombat8/1017957"],
+    "10": ["https://gamerch.com/acecombat8/1017958"],
+    "11": [
+      "https://gamerch.com/acecombat8/1017959",
+      "https://redfreshet.com/ace-combat-8-named-aces/"
+    ],
+    "12": ["https://gamerch.com/acecombat8/1017960"],
+    "13": ["https://gamerch.com/acecombat8/1017961"],
+    "14": ["https://gamerch.com/acecombat8/1017962"],
+    "15": ["https://gamerch.com/acecombat8/1017963"],
+    "16": ["https://gamerch.com/acecombat8/1017964"],
+    "17": [
+      "https://gamerch.com/acecombat8/1017965",
+      "https://redfreshet.com/ace-combat-8-named-aces/"
+    ],
+    "18": ["https://gamerch.com/acecombat8/1017966"],
+    "19": ["https://gamerch.com/acecombat8/1017967"],
+    "20": [
+      "https://gamerch.com/acecombat8/1017968",
+      "https://redfreshet.com/ace-combat-8-named-aces/"
+    ],
+    "21": ["https://gamerch.com/acecombat8/1019035"],
+    "22": ["https://gamerch.com/acecombat8/1019037"],
+    "23": ["https://gamerch.com/acecombat8/1019038"],
+    "24": ["https://gamerch.com/acecombat8/1019039"],
+    "25": [
+      "https://gamerch.com/acecombat8/1019041",
+      "https://redfreshet.com/ace-combat-8-named-aces/"
+    ],
+    "26": [
+      "https://gamerch.com/acecombat8/1019042",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/"
+    ],
+    "27": ["https://gamerch.com/acecombat8/1019044"],
+    "28": [
+      "https://gamerch.com/acecombat8/1019045",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+      "https://acecombat.wiki.gg/wiki/X40"
+    ],
+    "29": [
+      "https://gamerch.com/acecombat8/1019046",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/"
+    ],
+    "30": [
+      "https://gamerch.com/acecombat8/1019047",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/"
+    ]
+  },
+  "corroboratedAircraft": {
+    "1": [2, 1, 4, 3],
+    "2": [5, 6, 7, 8],
+    "3": [5, 30, 29, 1, 28, 4, 27, 31],
+    "4": [6, 66, 70, 67, 68, 69],
+    "5": [74, 29, 73, 4, 27, 75],
+    "6": [73, 94, 27],
+    "7": [120, 98],
+    "8": [29, 1, 133, 134, 135, 27],
+    "9": [67, 94],
+    "10": [177, 66],
+    "11": [6, 193, 179],
+    "12": [200, 197, 27, 68],
+    "13": [207],
+    "14": [],
+    "15": [98, 68],
+    "16": [224, 26],
+    "17": [7],
+    "18": [177, 233, 236, 235],
+    "19": [241, 207],
+    "20": [263, 266, 268, 241, 265],
+    "21": [274],
+    "22": [277, 232, 282],
+    "23": [273, 306, 305],
+    "24": [319, 272, 74, 75],
+    "25": [334, 272, 332, 179, 232, 336, 333, 306, 69],
+    "26": [74, 232, 95, 410],
+    "27": [95],
+    "28": [307, 409, 235],
+    "29": [458, 335, 457, 459],
+    "30": [307, 464]
+  },
+  "findings": [
+    {
+      "mission": 3,
+      "targetIds": [45],
+      "status": "incorrect",
+      "reason": "ユーザーによる未出現の指摘。攻略進行・通常敵一覧とも不整合。直接の混入元はDT_NPC_Mission004/x40a_common。任務番号の変換誤りではない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017949",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 2,
+      "targetIds": [12],
+      "status": "non_enemy",
+      "reason": "資料はコンテナ貨物船を友軍編成に挙げる。敵撃破対象としての掲載と不整合。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017948",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 3,
+      "targetIds": [39],
+      "status": "non_enemy",
+      "reason": "レーダーサイトは本任務の防衛対象。RADAR TOWERを敵目標として扱う根拠はなく、他任務の同IDとは分離する必要がある。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017949",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 9,
+      "targetIds": [145],
+      "status": "non_enemy",
+      "reason": "突入を支援する自爆車両。敵の撃破対象としての掲載と不整合。",
+      "sources": ["https://gamerch.com/acecombat8/1017957"]
+    },
+    {
+      "mission": 12,
+      "targetIds": [204],
+      "status": "non_enemy",
+      "reason": "基地防衛任務の滑走路RunwayをAIR BASEとして掲載している。護衛対象の混入。",
+      "sources": ["https://gamerch.com/acecombat8/1017960"]
+    },
+    {
+      "mission": 20,
+      "targetIds": [262],
+      "status": "non_enemy",
+      "reason": "シャトル輸送機は任務の護衛対象。ssca_commonにAllyの文字がないため、従来の名称ベース除外から漏れている。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/"
+      ]
+    },
+    {
+      "mission": 21,
+      "targetIds": [275, 276],
+      "status": "non_enemy",
+      "reason": "シャトルと管制センターは明示された防衛対象。敵目標一覧から任務単位で分離すべき対象。",
+      "sources": ["https://gamerch.com/acecombat8/1019035"]
+    },
+    {
+      "mission": 11,
+      "targetIds": [194],
+      "status": "strong_suspicion",
+      "reason": "特殊部隊はMiG-31Bの55th Unit。SU-35S行はPV_su35_m31b_Shadowsだけに由来し、攻略上の編成と合わない。PVの用途・未使用は未確定。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/"
+      ]
+    },
+    {
+      "mission": 20,
+      "targetIds": [267, 269],
+      "status": "strong_suspicion",
+      "reason": "攻略はF-14D 6機とF-22A 4機の特殊部隊を記録。該当行はそれぞれPV_m29a_f14d_Ace/PV_su35_f22a_Aceだけに由来する。製品版での実使用を確認できない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/"
+      ]
+    },
+    {
+      "mission": 3,
+      "targetIds": [26],
+      "status": "suspicion",
+      "reason": "F-16Cはf16c_WTMだけが出典。通常敵一覧と進行に見当たらない。WTMの用途は未解明で、未出現の断定はしない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017949",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 3,
+      "targetIds": [8],
+      "status": "suspicion",
+      "reason": "攻略と通常敵一覧の爆撃機はTu-160。Tu-95定義もテーブルにあるが、本任務での実出現を裏付けられない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017949",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 3,
+      "targetIds": [32, 33, 34, 35, 36, 38, 12],
+      "status": "suspicion",
+      "reason": "基地・レーダーサイトを防衛する任務。防空兵器は友軍として記録される。各地上行・貨物船を敵として掲載してよいか、配置と所属を要確認。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017949",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 6,
+      "targetIds": [91, 92],
+      "status": "suspicion",
+      "reason": "本任務には攻撃禁止の基地物資がある。BUNKERの各行が禁止対象か通常敵かを公開資料だけでは対応できない。",
+      "sources": ["https://gamerch.com/acecombat8/1017952"]
+    },
+    {
+      "mission": 11,
+      "targetIds": [67],
+      "status": "suspicion",
+      "reason": "PV_m29a_mr2k_commonを含む。ただしm29a_commonも存在するため、PV行を除いてもMiG-29Aの任務対応が残る。通常機まで一括削除する根拠はない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/"
+      ]
+    },
+    {
+      "mission": 20,
+      "targetIds": [67],
+      "status": "suspicion",
+      "reason": "本任務の3出典はPV_m29a_su47/PV_m29a_m31b/PV_m29a_mr2k。通常機も別機種に差し替えた定義を拾った可能性がある。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/"
+      ]
+    },
+    {
+      "mission": 21,
+      "targetIds": [32, 33],
+      "status": "suspicion",
+      "reason": "発射施設防衛任務にある通常防空兵器。敵航空機・艦艇と同じ側とは限らず、所属確認が必要。",
+      "sources": ["https://gamerch.com/acecombat8/1019035"]
+    },
+    {
+      "mission": 27,
+      "targetIds": [320],
+      "status": "suspicion",
+      "reason": "M24攻略にはJTACは当該任務限定との記述があるが、M27にもlass_common定義がある。攻略記事側の見落としもあり得るため未使用とは断定しない。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://gamerch.com/acecombat8/1019039"
+      ]
+    },
+    {
+      "mission": 4,
+      "targetIds": [55],
+      "status": "encounter_review",
+      "reason": "攻略記事は後のM30潜水艦がドックに停泊していると記録。存在は裏付けられるが、このHP行で撃破可能な敵か未確認。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1017950",
+        "https://gl.ali213.net/html/2026-10/1814135.html"
+      ]
+    },
+    {
+      "mission": 14,
+      "targetIds": [26, 30, 67, 210, 32],
+      "status": "encounter_review",
+      "reason": "非武装A-6固定の脱出任務。敵が存在してもプレイヤーによる撃破計算の用途がない。個々の機種の実配置は未確認。",
+      "sources": ["https://gamerch.com/acecombat8/1017962"]
+    },
+    {
+      "mission": 26,
+      "targetIds": [412],
+      "status": "encounter_review",
+      "reason": "資料にShadow 22の登場・撤退の記述がある。SU-57を未出現扱いにはできないが、各Shadow行の交戦・ロック・撃破可否は未確認。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/"
+      ]
+    },
+    {
+      "mission": 28,
+      "targetIds": [435],
+      "status": "encounter_review",
+      "reason": "X-40はMoon 11の短時間の登場と離脱が別資料に記録される。未登場ではない。任務テーブルのHP300を通常の撃破対象として見せられるかは未確認。",
+      "sources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40"
+      ]
+    }
+  ],
+  "sourceNotes": {
+    "gamerch": "全30ページの攻略本文・ネームド欄を確認。ターゲット情報表は空欄が多く、敵一覧の網羅性はない。",
+    "ali213": "M1～5の通常敵と友軍編成。条件付きネームドは省略される。英語acecombat8.helpに類似内容があるが独立した裏付けとは数えない。",
+    "redfreshet": "31ネームドと特殊部隊の機種を補助照合。条件の厳密な閾値は今回の判定対象外。",
+    "intoindiegames": "M26～30のイベント出現を補完。X-40/M28とShadow 22/M26を未出現と誤判定しないために使用。",
+    "acecombatWiki": "直接openは403。検索インデックスからX40のHistory節のM26・M28・M29登場記述を確認。検索抜粋による確認であることを留保。"
+  },
+  "subsequentDecisions": [
+    {
+      "date": "2026-11-04",
+      "targetId": 435,
+      "mission": "M28",
+      "decision": "EXCLUDED",
+      "basis": "ユーザー確認：X-40は登場するが、明確に撃破対象外。"
+    },
+    {
+      "date": "2026-11-04",
+      "targetId": 410,
+      "mission": "M26",
+      "decision": "EXCLUDED",
+      "basis": "ユーザー指示：UNKNOWN（X-40）も今回の掲載対象外とする。"
+    }
+  ]
+}

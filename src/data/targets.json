@@ -4875,7 +4875,7 @@
   {
     "id": 410,
     "name": "UNKNOWN [M26]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 141,
     "partOf": null,
     "missionVariant": {
@@ -5083,13 +5083,13 @@
   {
     "id": 435,
     "name": "X-40 [M28]",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 147,
     "partOf": null,
     "missionVariant": {
       "missionId": "28"
     },
-    "subcategory": "MULTIROLE",
+    "subcategory": "OTHER",
     "missionIds": ["28"],
     "hp": 300,
     "damageMultipliers": {

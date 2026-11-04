@@ -2,6 +2,37 @@ import { expect, test } from 'vitest';
 import { targets, weapons, modifiers } from './masters';
 import { validateMasters } from '../domain/validate';
 import { missions } from '../domain/catalog';
+import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
+
+test('撃破対象外のM26 UNKNOWNとM28 X-40を除外し、M29の戦闘対象は維持する', () => {
+  const state = {
+    ...initialPreferences(false, { targets, weapons }),
+    targetIds: targets.map((t) => t.id),
+    showParts: true,
+    showMissionVariants: true,
+  };
+  for (const [id, missionId] of [
+    [410, '26'],
+    [435, '28'],
+  ] as const) {
+    expect(targets.find((t) => t.id === id)).toMatchObject({
+      category: 'EXCLUDED',
+      missionIds: [missionId],
+    });
+    expect(targetCandidates(state, targets).map((t) => t.id)).not.toContain(id);
+    expect(selectedTargets(state, targets).map((t) => t.id)).not.toContain(id);
+    for (const missionIds of [[], [missionId]]) {
+      expect(
+        selectedTargets({ ...state, targetMode: 'MISSION', missionIds }, targets).map((t) => t.id)
+      ).not.toContain(id);
+    }
+  }
+  const finalBattle = selectedTargets(
+    { ...state, targetMode: 'MISSION', missionIds: ['29'] },
+    targets
+  );
+  expect(finalBattle.map((t) => t.id)).toEqual(expect.arrayContaining([457, 458, 459, 460]));
+});
 
 test('機体マスタの区分を優先し、用途・部位で細分類する', () => {
   for (const [id, group] of [
