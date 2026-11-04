@@ -4826,7 +4826,7 @@
   {
     "id": 498,
     "name": "UNKNOWN",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 140,
     "partOf": null,
     "missionVariant": null,
@@ -11214,7 +11214,7 @@
   {
     "id": 503,
     "name": "SHUTTER《MEGAFLOAT》",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 326,
     "partOf": 418,
     "missionVariant": null,
@@ -11796,11 +11796,11 @@
   {
     "id": 505,
     "name": "MSL DISPENSER",
-    "category": "OTHER",
+    "category": "EXCLUDED",
     "order": 343,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "MISSILE",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 30,
     "damageMultipliers": {

@@ -1,0 +1,975 @@
+{
+  "date": "2026-11-05",
+  "baseCommit": "de41ebb",
+  "scope": "Existing extracted tables; no runtime or map/event spawn verification",
+  "tables": [
+    {
+      "path": "docs/initial/ref/tables/DT_NPC.json",
+      "sha256": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Model.json",
+      "sha256": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission002.json",
+      "sha256": "7fa9ab45557d450d31bcb3d8274e965ef62fbf3ec24354349f794a3fdd08d74b"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission003.json",
+      "sha256": "c4e0bc861b5547838610e446c4d3abf8473532e483bf6e66abafeac99b7ed714"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission004.json",
+      "sha256": "f6de423c0ac810a01b18a6b060898a89fffa21e92a9cd079b85cf03f4880aa58"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission005.json",
+      "sha256": "8e01a2dfb0f2d820b1ab0e80e42bde707077207984af2930130fc1c6ec740ce7"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission006.json",
+      "sha256": "93c080b56af2c66c05e5926f8f5086754d30f9a2b0349a71b5f7321aebc68f05"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission007.json",
+      "sha256": "2e370d5aa843e357ba02b795c358b6d4f3b56c1ff0bf15c38addd5c5454706d0"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission008.json",
+      "sha256": "ad939fdaf88e230223eaf84a9203ae3f32b87a56ac81d29983ad11cec5dec073"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission009.json",
+      "sha256": "606c572af04ad14a80aab458be211a09aae82afe92a7634f91d2da80c5e77b07"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission010.json",
+      "sha256": "e96b8487e429d12946ab91b0cca2d2ca2cca163f9e7f27ea06fbf79cafcfe935"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission011.json",
+      "sha256": "c26990f3a37c40662eb5fdf0d723a2d1f43aaa605ae6e3a0ccdedd911cdeb176"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission012.json",
+      "sha256": "90b9feea2af06a3eb3819bc1901eadecd4d8c36c48668bb967d78502fef4bdb1"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission013.json",
+      "sha256": "599615e2d4a88acf9ce6aadc97fe0fe0bd80221ea9c2cce42e49851f2d0ccc17"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission014.json",
+      "sha256": "75d6e21333f4eb93dc60834769e4f419ca47f0345214778784dec4d2d7899add"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission015.json",
+      "sha256": "746995151223907d3be933fa1376a394c3b773b05896ccde7f6fa9101a07e8ad"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission016.json",
+      "sha256": "0c83ec530ede8fa2b90df6a1320fde2b3a3218d03ddcc8e3a370735e24a22fe6"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission017.json",
+      "sha256": "62b188d912712abfbc5439ba3ced1dbd9772d23380978bbca2020322a845fa21"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission018.json",
+      "sha256": "476e09dba72fb5533dbc7c57ee5134915d66950995c195085a8cec4dfc81d4d2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission019.json",
+      "sha256": "8ac2fcc37622f9c80dda1afbebd4fadd7a9e4fe9abc7d8b5ad58acde6c074943"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission020.json",
+      "sha256": "e78aca7be4a1013478284fe440e8c89960e74dc35a2fa3f2a98082f52d457a59"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission021.json",
+      "sha256": "c7905124140489ba6b5385a00480e2c715e5956ae6dae2ff6a33600acb92604a"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission022.json",
+      "sha256": "ebd5b1380342d33764c9a2f407993145874897476a4d2c5ac1c40ac17bf55873"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission023.json",
+      "sha256": "d74b4446780b4546d3c20228d25eb8366cbdd2b3a56c12782a9229054c3f2ce0"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission024.json",
+      "sha256": "15fb9b1c2eba360baeaa9358c9cf8bbcfc56d8b6485f1e66c456bd534d9b40e9"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission025day1.json",
+      "sha256": "cbefbf906b92a38d3d1da10a303e6e0ae2d84cb693a1809c30b4082c08d79999"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission025day2.json",
+      "sha256": "b867952634cb9279423dff21614e0be42212b8b0a4fc8e4e441a47d7021da09e"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission026.json",
+      "sha256": "d2b9b62f1d90a27f7d780ae515f82a933f5492e0ded364da61cf24e43ec431ec"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission027.json",
+      "sha256": "052035a5e995c5e587c70a3a37e4c4c15944bed9660f2070291dc3069144d2d2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission028.json",
+      "sha256": "b97a307815d788bf0a2a5f8f95af9cdc29ea450598efb277fbe8530116cd4ddb"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission029.json",
+      "sha256": "dc5d46ae119601f58c927e1357d9b1b8c19a46bf9c41572e9de9e13a5b10dacd"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission030.json",
+      "sha256": "631ecdc94944a968a1a2250888d84c668bb32290d526f8ffc17b312881f75e2e"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr003.json",
+      "sha256": "80858ba0e29334a480b53b037e1d7e3936b06d94221ac385ca07a14f7be9c7d6"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr004.json",
+      "sha256": "0d9be89582eb9c46ee9a0db80219ad6fa6fae9131562da04fb550cec9b5cc159"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr005.json",
+      "sha256": "d6a936474aa1846849eb9528a74a9e7d91d173b86ead8c2c082eff52dadbf69f"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr006.json",
+      "sha256": "855f26a179e672f42adb72b9fde887aab4551b1f05d0bfce860d99094a6e508d"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr007.json",
+      "sha256": "2a2f00473540815d7a482243b60fef6d48fb50fe362bbf1ea49c112fcf9e9653"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr008.json",
+      "sha256": "6de31bb1f804f37f41f7ee907cf4f724a870868516d2f0eb8c08ed08bb188a58"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr009.json",
+      "sha256": "fb183979b9cb7243de68702cd2e2aaa37f5caa22156840a6831fceafc113db42"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr010.json",
+      "sha256": "6f92d6b74647254ea7a5e76464038fd5c7aa40ef71f780185ea800ab0ad9803d"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr011.json",
+      "sha256": "4692ab34468f3db46b486b92545bfdc24beaa081211dff13273d81d4932f0ac2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr012.json",
+      "sha256": "8ae2f8fac1779d585a04f5fbc8f793753441888cf2aa8c0909a0a8d5fa9f1905"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr013.json",
+      "sha256": "6b3c5b63a8684b8306d656b6e9347f2dfc39316abce0dbbf4b6dd090f02594b4"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr014.json",
+      "sha256": "3a965c3a3341a2805047184efc1f7cd860bd41cfdd702b5295273a713e9d29ba"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission_Tr015.json",
+      "sha256": "dfc9f92c10b5dd3281ec393c199d47e66381e2f305fd9f01aa4b6ce081020427"
+    }
+  ],
+  "targets": [
+    {
+      "current": {
+        "id": 264,
+        "name": "BVRAAM",
+        "category": "OTHER",
+        "order": 340,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "MISSILE",
+        "missionIds": [20],
+        "hp": 40,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "none",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission021",
+          "row": "urlaam_common",
+          "npcId": "OP0053_ulraam_01",
+          "modelId": "OP0053_ulraam",
+          "modelHp": 40.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 237,
+        "name": "LAUNCH VEHICLE",
+        "category": "OTHER",
+        "order": 341,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "OTHER",
+        "missionIds": [18],
+        "hp": 160,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket",
+          "npcId": "OP0058_crkt_01",
+          "modelId": "OP0058_crkt",
+          "modelHp": 160.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 238,
+        "name": "LAUNCH VEHICLE DEBRIS",
+        "category": "OTHER",
+        "order": 342,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "OTHER",
+        "missionIds": [18],
+        "hp": 20,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_1_1",
+          "npcId": "OP0058_crkt_ABR_p1_CP_01",
+          "modelId": "OP0058_crkt_ABR_p1_CP",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_1",
+          "npcId": "OP0058_crkt_BR_p2_CP_01",
+          "modelId": "OP0058_crkt_BR_p2_CP",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_2",
+          "npcId": "OP0058_crkt_A_p2_CP_01",
+          "modelId": "OP0058_crkt_A_p2_CP",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_1",
+          "npcId": "OP0058_crkt_R_p3_CP_01",
+          "modelId": "OP0058_crkt_R_p3_CP",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_2",
+          "npcId": "OP0058_crkt_B_p3_CP_01",
+          "modelId": "OP0058_crkt_B_p3_CP",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 505,
+        "name": "MSL DISPENSER",
+        "category": "OTHER",
+        "order": 343,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "MISSILE",
+        "missionIds": [],
+        "hp": 30,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "none",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "OP0037_mmslct_01",
+          "npcId": "OP0037_mmslct_01",
+          "modelId": "OP0037_mmslct",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": null
+        },
+        {
+          "table": "DT_NPC",
+          "row": "OP0037_mmslct_FirstShot",
+          "npcId": "OP0037_mmslct_FirstShot",
+          "modelId": "OP0037_mmslct_FirstShot",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": null
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 463,
+        "name": "MSL DISPENSER [M30]",
+        "category": "OTHER",
+        "order": 344,
+        "partOf": null,
+        "missionVariant": {
+          "missionId": 30
+        },
+        "subcategory": "MISSILE",
+        "missionIds": [30],
+        "hp": 15,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "none",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30",
+          "npcId": "OP0037_mmslct_01",
+          "modelId": "OP0037_mmslct",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": -15.0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30_First",
+          "npcId": "OP0037_mmslct_FirstShot",
+          "modelId": "OP0037_mmslct_FirstShot",
+          "modelHp": 30.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": -15.0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 462,
+        "name": "SLCM",
+        "category": "OTHER",
+        "order": 345,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "MISSILE",
+        "missionIds": [30],
+        "hp": 25,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "none",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "slcm_ms30",
+          "npcId": "OP0036_slcm_01",
+          "modelId": "OP0036_slcm",
+          "modelHp": 25.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "slcmp_ms30",
+          "npcId": "OP0039_slcmp_01",
+          "modelId": "OP0039_slcmp",
+          "modelHp": 25.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 156,
+        "name": "SWARM DRONES",
+        "category": "OTHER",
+        "order": 346,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "UAV",
+        "missionIds": [9, 10, 19, 30],
+        "hp": null,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "none",
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "swdr_con_MS10",
+          "npcId": "OP0026_swdr_con_MS10",
+          "modelId": "OP0026_swdr_con_MS10",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "swdr_sys_MS10",
+          "npcId": "OP0026_swdr_sys_MS10",
+          "modelId": "OP0026_swdr_sys_MS10",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "swdr_con_MS11_01",
+          "npcId": "OP0026_swdr_con_MS11_01",
+          "modelId": "OP0026_swdr_con_MS11_01",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "swdr_con_MS11_02",
+          "npcId": "OP0026_swdr_con_MS11_02",
+          "modelId": "OP0026_swdr_con_MS11_02",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "swdr_con_MS11_03",
+          "npcId": "OP0026_swdr_con_MS11_03",
+          "modelId": "OP0026_swdr_con_MS11_03",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "swdr_con_MS11_04",
+          "npcId": "OP0026_swdr_con_MS11_04",
+          "modelId": "OP0026_swdr_con_MS11_04",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "swdr_sys_MS11",
+          "npcId": "OP0026_swdr_sys_MS11",
+          "modelId": "OP0026_swdr_sys_MS11",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "swdr_con_ms20",
+          "npcId": "OP0026_swdr_con_MS20",
+          "modelId": "OP0026_swdr_con_MS20",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "swdr_sys_ms20",
+          "npcId": "OP0026_swdr_sys_MS20",
+          "modelId": "OP0026_swdr_sys_MS20",
+          "modelHp": 1.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "swdrx_con_ms30",
+          "npcId": "OP0030_swdrx_con_MS30",
+          "modelId": "OP0030_swdrx_con_MS30",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "swdrx_sys_ms30",
+          "npcId": "OP0030_swdrx_sys_MS30",
+          "modelId": "OP0030_swdrx_sys_MS30",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 498,
+        "name": "UNKNOWN",
+        "category": "AIRCRAFT",
+        "order": 140,
+        "partOf": null,
+        "missionVariant": null,
+        "subcategory": "OTHER",
+        "missionIds": [],
+        "hp": 300,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 0.5,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 0.19999998807907104,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 0.5,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "air",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "OP1016_x40a_MS26",
+          "npcId": "OP1016_x40a_MS26",
+          "modelId": "OP1016_x40a_Unkown",
+          "modelHp": 300.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "npcDurabilityId": "x40a_WPDur_000",
+          "missionDurabilityId": null
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 410,
+        "name": "UNKNOWN [M26]",
+        "category": "AIRCRAFT",
+        "order": 141,
+        "partOf": null,
+        "missionVariant": {
+          "missionId": 26
+        },
+        "subcategory": "OTHER",
+        "missionIds": [26],
+        "hp": 300,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": true,
+        "roleGroup": "air",
+        "standardDamage": false
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "x40a_ms26",
+          "npcId": "OP1016_x40a_MS26",
+          "modelId": "OP1016_x40a_Unkown",
+          "modelHp": 300.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "x40a_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000"
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 503,
+        "name": "SHUTTER《MEGAFLOAT》",
+        "category": "STRUCTURE",
+        "order": 326,
+        "partOf": 418,
+        "missionVariant": null,
+        "subcategory": "PARTS",
+        "missionIds": [],
+        "hp": 100,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 1,
+          "bomb": 1,
+          "gun": 1,
+          "rocket": 1,
+          "railgun": 1,
+          "mpbm": 1,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "Megafloat_Center_Shutter_01",
+          "npcId": "Megafloat_Center_Shutter_01",
+          "modelId": "Megafloat_Center_Shutter",
+          "modelHp": 100.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": null
+        }
+      ]
+    },
+    {
+      "current": {
+        "id": 426,
+        "name": "SHUTTER《MEGAFLOAT》 [M27]",
+        "category": "STRUCTURE",
+        "order": 327,
+        "partOf": 418,
+        "missionVariant": {
+          "missionId": 27
+        },
+        "subcategory": "PARTS",
+        "missionIds": [27],
+        "hp": 100,
+        "damageMultipliers": {
+          "standardMissile": 1,
+          "airMissile": 1,
+          "groundMissile": 1,
+          "antiShipMissile": 1,
+          "guidedBomb": 0,
+          "bomb": 0,
+          "gun": 1,
+          "rocket": 0,
+          "railgun": 1,
+          "mpbm": 0,
+          "laser": 1,
+          "uavt": 1,
+          "uavg": 1,
+          "uavp": 1,
+          "fuelAirBomb": 1,
+          "lacmBlast": 1,
+          "lagmBlast": 1,
+          "lasmBlast": 1
+        },
+        "isAir": false,
+        "roleGroup": "ground",
+        "standardDamage": true
+      },
+      "sources": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Shutter_01",
+          "npcId": "Megafloat_Center_Shutter_01",
+          "modelId": "Megafloat_Center_Shutter",
+          "modelHp": 100.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "npcDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "MGFMainCannon_Core_WPDur_000"
+        }
+      ]
+    }
+  ],
+  "basicRowReferences": [
+    {
+      "id": 498,
+      "modelIds": ["OP1016_x40a_Unkown"],
+      "npcAliases": ["OP1016_x40a_MS26"],
+      "directParents": [],
+      "missionHits": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "x40a_ms26",
+          "npcId": "OP1016_x40a_MS26",
+          "viaChild": false,
+          "hpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 503,
+      "modelIds": ["Megafloat_Center_Shutter"],
+      "npcAliases": ["Megafloat_Center_Shutter_01"],
+      "directParents": [],
+      "missionHits": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "Megafloat_Center_Shutter_01",
+          "npcId": "Megafloat_Center_Shutter_01",
+          "viaChild": false,
+          "hpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 505,
+      "modelIds": ["OP0037_mmslct", "OP0037_mmslct_FirstShot"],
+      "npcAliases": ["OP0037_mmslct_01", "OP0037_mmslct_FirstShot"],
+      "directParents": [],
+      "missionHits": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30",
+          "npcId": "OP0037_mmslct_01",
+          "viaChild": false,
+          "hpDifference": -15.0
+        },
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "mmslct_ms30_First",
+          "npcId": "OP0037_mmslct_FirstShot",
+          "viaChild": false,
+          "hpDifference": -15.0
+        }
+      ]
+    }
+  ]
+}

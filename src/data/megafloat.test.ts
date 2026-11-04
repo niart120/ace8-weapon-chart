@@ -46,10 +46,10 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
   }
 });
 
-test('親3行の除外後も子部位12行を掲載し、非表示中の選択を保持する', () => {
-  const excluded = [418, 423, 429];
-  const parts = [424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425];
-  const common = [424, 430, 420, 422, 500, 501, 503, 502];
+test('親3行と未裏付けシャッター基本行を除外し、子部位11行の選択を保持する', () => {
+  const excluded = [418, 423, 429, 503];
+  const parts = [424, 430, 420, 422, 500, 501, 419, 421, 426, 502, 425];
+  const common = [424, 430, 420, 422, 500, 501, 502];
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   for (const id of excluded) expect(initial.targetIds).not.toContain(id);

@@ -66,7 +66,7 @@ test('CH-47をHP35・攻撃機MSL35ダメージの1命中として計算する',
   ).toEqual({ kind: 'value', value: 1 });
 });
 
-test('MEGAFLOATの属性を反映し、親構造物3行を除外して部位9行を計算対象にする', () => {
+test('MEGAFLOATの属性を保持し、親構造物3行とシャッター基本行を掲載から除外する', () => {
   const megafloatIds = [418, 423, 430, 420, 422, 429, 500, 501, 419, 421, 503, 426];
   for (const id of megafloatIds) {
     const excluded = [418, 423, 429].includes(id);
@@ -74,7 +74,7 @@ test('MEGAFLOATの属性を反映し、親構造物3行を除外して部位9行
       targets.find((target) => target.id === id),
       `ID${id}`
     ).toMatchObject({
-      category: excluded ? 'EXCLUDED' : 'STRUCTURE',
+      category: excluded || id === 503 ? 'EXCLUDED' : 'STRUCTURE',
       isAir: false,
       roleGroup: 'ground',
       standardDamage: !excluded,

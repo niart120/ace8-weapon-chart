@@ -35,7 +35,7 @@ M3 の地上目標、M4 の潜水艦、M6 の BUNKER、M21 の地上対空兵器
 
 ## 任務未特定の車両・施設
 
-2026-11-05、GROUND の 477/478/479 は除外済み。残る AMMO BUNKER 480 と AIR BASE 490 は [STRUCTURE の追加調査](../calculation/STRUCTURE_SCOPE_REVIEW.md)へ引き継いだ。同調査後、ユーザー承認により AIR BASE 490、AMMO BUNKER 480、HP 10000 の GAS TANK 339／OIL TANK 132 を除外済み。HP 30 の通常タンクと HARDENED DEPOT は維持する。現在の任務未特定掲載行は 3 行。以下の表は初回棚卸し時点の記録。
+2026-11-05、GROUND の 477/478/479 は除外済み。残る AMMO BUNKER 480 と AIR BASE 490 は [STRUCTURE の追加調査](../calculation/STRUCTURE_SCOPE_REVIEW.md)へ引き継いだ。同調査後、ユーザー承認により AIR BASE 490、AMMO BUNKER 480、HP 10000 の GAS TANK 339／OIL TANK 132 を除外済み。HP 30 の通常タンクと HARDENED DEPOT は維持する。その時点の任務未特定掲載行は 3 行（後続の OTHER 調査で除外済み）。以下の表は初回棚卸し時点の記録。
 
 | ID | 対象 | 元 NPC |
 | ---: | --- | --- |
@@ -65,3 +65,5 @@ M3 の地上目標、M4 の潜水艦、M6 の BUNKER、M21 の地上対空兵器
 任務が付いている支援目標・輸送艦の側では、CONTAINER SHIP の M23/M27 は [直近の調査](../calculation/CONTAINER_SHIP_REVIEW.md)でも未裏付け。LCAC、OIL TANKER、GAS CARRIER は [2026-11-05 の追加調査](../calculation/SHIP_TRANSPORT_REVIEW.md)で 3 行・7 任務対応を確認した。各種の行全体は維持。後続のユーザー確認で M23 LCAC を味方として除外し、ユーザーの記憶と資料の未裏付けに基づいて M23 OIL TANKER／M26 GAS CARRIER を暫定除外した。M26 OIL TANKER は維持する。
 
 2026-11-05 の[任務付き GROUND 調査](../calculation/GROUND_MISSION_REVIEW.md)では、HP 10000 の PILLBOX（340）だけを除外した。COMMAND POST（318）はユーザーによる M23 出現確認に基づいて維持し、再調査候補から外す。通常の PILLBOX と CANISTER も維持する。
+
+同日の [OTHER と残る基本行の調査](../calculation/OTHER_SCOPE_REVIEW.md)で、OTHER の任務付き行を維持する根拠を確認した。最後の任務未指定 3 行（UNKNOWN 498、SHUTTER 503、MSL DISPENSER 505）は基本値での別出現が未裏付けのため、ユーザー承認後に暫定除外を反映した。503/505 は過去の数値差を維持する判断とは別の掲載範囲変更である。現在、任務未指定の掲載行は 0 だが、任務付き対象すべての実出現確認が済んだ意味ではない。
