@@ -56,7 +56,8 @@ test('任務限定の除外は他任務・通常機・艦載部位へ波及さ�
   expect(ids(2)).not.toContain(223);
   expect(ids(6)).toContain(91);
   expect(ids(6)).not.toContain(92);
-  expect(ids(24)).toEqual(expect.arrayContaining([91, 92, 320]));
+  expect(ids(24)).toEqual(expect.arrayContaining([91, 92]));
+  expect(ids(24)).not.toContain(320);
   expect(ids(11)).toContain(67);
   expect(ids(20)).not.toContain(67);
   expect(ids(20)).toContain(265);
@@ -103,7 +104,7 @@ test('機体マスタの区分を優先し、用途・部位で細分類する',
     [66, 'FIGHTER'],
     [265, 'MULTIROLE'],
     [274, 'ELECTRONIC WARFARE'],
-    [121, 'ROTORCRAFT'],
+    [230, 'ROTORCRAFT'],
     [33, 'AIR DEFENSE'],
     [208, 'AIR DEFENSE'],
     [90, 'FORTIFICATION'],

@@ -12,7 +12,7 @@ test('M6は小型BUNKERを復帰し、TYPHOON・HANGARと大型BUNKERを除く',
   for (const [id, hp, missionIds] of [
     [91, 75, [6, 24]],
     [92, 150, [24, 25]],
-    [95, 60, [23, 24, 25, 26, 27, 28]],
+    [95, 60, [23, 24, 26, 27, 28]],
     [96, 35, [7, 23]],
   ] as const) {
     expect(targets.find((t) => t.id === id)).toMatchObject({ hp, missionIds });

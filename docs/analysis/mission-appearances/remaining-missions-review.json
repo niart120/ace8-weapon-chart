@@ -1,0 +1,2887 @@
+{
+  "reviewDate": "2026-11-05",
+  "applicationCommit": "f1d3afb",
+  "targetsSha256": "f85fe64d6cc58f642998623f21ea3bad1695399f395dfac8a21c6d93ac036eca",
+  "scope": "M8–M30 の旧未解消・部位を除く航空機対応と、現行データ・既存調査・攻略から見つかった横断的な疑義。全目標の配置実証ではない。",
+  "counts": {
+    "unresolved": 51,
+    "additional_corroboration": 54,
+    "prior_decision_keep": 2
+  },
+  "records": [
+    {
+      "missionId": 8,
+      "targetId": 121,
+      "name": "AH-64",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "ah64_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 122,
+      "name": "AV-8B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "av8b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 6,
+      "name": "F-14D",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "f14d_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 30,
+      "name": "F/A-18C",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "f18c_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 75,
+      "name": "SU-34",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "su34_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 31,
+      "name": "TU-160",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "t160_common"
+        }
+      ]
+    },
+    {
+      "missionId": 8,
+      "targetId": 8,
+      "name": "TU-95",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017956",
+        "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission009",
+          "row": "tu95_common"
+        }
+      ]
+    },
+    {
+      "missionId": 9,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017957",
+        "https://acecombat.wiki.gg/wiki/The_Land_Battleship_Blockade"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "sv11_common"
+        }
+      ]
+    },
+    {
+      "missionId": 10,
+      "targetId": 6,
+      "name": "F-14D",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Over_the_Rainband"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017958",
+        "https://acecombat.wiki.gg/wiki/Over_the_Rainband"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "f14d_common"
+        },
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "f14d_MS11"
+        }
+      ]
+    },
+    {
+      "missionId": 10,
+      "targetId": 74,
+      "name": "F-2A",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Over_the_Rainband"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017958",
+        "https://acecombat.wiki.gg/wiki/Over_the_Rainband"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "f02a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 10,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Over_the_Rainband"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017958",
+        "https://acecombat.wiki.gg/wiki/Over_the_Rainband"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission011",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 11,
+      "targetId": 2,
+      "name": "A-50",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Maximum_Payload"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Maximum_Payload"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission012",
+          "row": "a50u_common"
+        }
+      ]
+    },
+    {
+      "missionId": 11,
+      "targetId": 118,
+      "name": "IL-78",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Maximum_Payload"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Maximum_Payload"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission012",
+          "row": "il78_common"
+        }
+      ]
+    },
+    {
+      "missionId": 11,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "suspicion",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。 M11 MIG-29A はユーザーが既に維持を確認済み。今回初めて維持判断した件ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Maximum_Payload"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Maximum_Payload"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission012",
+          "row": "m29a_common"
+        },
+        {
+          "table": "DT_NPC_Mission012",
+          "row": "PV_m29a_mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 11,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017959",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Maximum_Payload"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission012",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 12,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/An_Island_in_Darkness"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017960",
+        "https://acecombat.wiki.gg/wiki/An_Island_in_Darkness"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission013",
+          "row": "mi24_common"
+        },
+        {
+          "table": "DT_NPC_Mission013",
+          "row": "mi24_High_Explosion"
+        }
+      ]
+    },
+    {
+      "missionId": 12,
+      "targetId": 31,
+      "name": "TU-160",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/An_Island_in_Darkness"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017960",
+        "https://acecombat.wiki.gg/wiki/An_Island_in_Darkness"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission013",
+          "row": "t160_ms13_common"
+        }
+      ]
+    },
+    {
+      "missionId": 13,
+      "targetId": 122,
+      "name": "AV-8B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017961",
+        "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "av8b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 13,
+      "targetId": 6,
+      "name": "F-14D",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017961",
+        "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "f14d_common"
+        },
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "f14d_common_B"
+        },
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "f14d_common_W"
+        }
+      ]
+    },
+    {
+      "missionId": 13,
+      "targetId": 7,
+      "name": "F-4E",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017961",
+        "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "f04e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 13,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017961",
+        "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "mi24_common"
+        }
+      ]
+    },
+    {
+      "missionId": 13,
+      "targetId": 27,
+      "name": "SU-25SM",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017961",
+        "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission014",
+          "row": "su25_common"
+        }
+      ]
+    },
+    {
+      "missionId": 15,
+      "targetId": 216,
+      "name": "EXPLOSIVE UAV",
+      "previousAuditStatus": "unverified",
+      "status": "prior_decision_keep",
+      "note": "AIRCRAFT_SCOPE_REVIEW.md の調査と後続のユーザー判断を引き継ぐ。新たな除外候補ではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017963",
+        "https://acecombat.wiki.gg/wiki/Wings_of_Wax"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission016",
+          "row": "OP0046_uavcb_01"
+        }
+      ]
+    },
+    {
+      "missionId": 15,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Wings_of_Wax"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017963",
+        "https://acecombat.wiki.gg/wiki/Wings_of_Wax"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission016",
+          "row": "OP0018_uavc_MS16"
+        }
+      ]
+    },
+    {
+      "missionId": 17,
+      "targetId": 230,
+      "name": "CH-47",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017965",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "ch47_common"
+        }
+      ]
+    },
+    {
+      "missionId": 17,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017965",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "sv11_ms18"
+        }
+      ]
+    },
+    {
+      "missionId": 17,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017965",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "mi24_common"
+        }
+      ]
+    },
+    {
+      "missionId": 17,
+      "targetId": 94,
+      "name": "QUADCOPTER",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017965",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "mudr_common"
+        },
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "mudr_ms18"
+        }
+      ]
+    },
+    {
+      "missionId": 17,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017965",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 18,
+      "targetId": 73,
+      "name": "MIG-31B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017966",
+        "https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "m31b_01"
+        }
+      ]
+    },
+    {
+      "missionId": 18,
+      "targetId": 232,
+      "name": "RAFALE M",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017966",
+        "https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "rflm_01"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "rflm_02"
+        }
+      ]
+    },
+    {
+      "missionId": 19,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017967",
+        "https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "sv11_common"
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "sv11_DB"
+        }
+      ]
+    },
+    {
+      "missionId": 19,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017967",
+        "https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 19,
+      "targetId": 94,
+      "name": "QUADCOPTER",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017967",
+        "https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "mudr_common"
+        },
+        {
+          "table": "DT_NPC_Mission020",
+          "row": "mudr_ms20"
+        }
+      ]
+    },
+    {
+      "missionId": 20,
+      "targetId": 73,
+      "name": "MIG-31B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Escort_Orbiter"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Escort_Orbiter"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission021",
+          "row": "m31b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 20,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Escort_Orbiter"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Escort_Orbiter"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission021",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 20,
+      "targetId": 207,
+      "name": "SU-47",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Escort_Orbiter"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1017968",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://acecombat.wiki.gg/wiki/Escort_Orbiter"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission021",
+          "row": "su47_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 273,
+      "name": "A-10C",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "a10c_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 6,
+      "name": "F-14D",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "f14d_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 272,
+      "name": "F-15E",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "f15e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 26,
+      "name": "F-16C",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "f16c_common"
+        },
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "f16c_orange"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 70,
+      "name": "GRIPEN E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "j39e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 1,
+      "name": "MIG-21BIS",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "m21b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 73,
+      "name": "MIG-31B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "m31b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 21,
+      "targetId": 75,
+      "name": "SU-34",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019035",
+        "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission022",
+          "row": "su34_common"
+        }
+      ]
+    },
+    {
+      "missionId": 22,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": [
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019037",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_22%3A_Pursuing_the_HSCA",
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission023",
+          "row": "sv11_common"
+        }
+      ]
+    },
+    {
+      "missionId": 22,
+      "targetId": 265,
+      "name": "SU-35S",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": [
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019037",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_22%3A_Pursuing_the_HSCA",
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission023",
+          "row": "su35_common"
+        }
+      ]
+    },
+    {
+      "missionId": 22,
+      "targetId": 207,
+      "name": "SU-47",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": [
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019037",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_22%3A_Pursuing_the_HSCA",
+        "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission023",
+          "row": "su47_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 307,
+      "name": "F-22A",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "f22a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 70,
+      "name": "GRIPEN E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "j39e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 93,
+      "name": "IL-76",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "il76_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 118,
+      "name": "IL-78",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "il78_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "Neoseeker は敵ヘリを記載するが MI-24 の機種名まではない。間接根拠として区別し、維持を推奨。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "mi24_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 94,
+      "name": "QUADCOPTER",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "mudr_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 207,
+      "name": "SU-47",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": [
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "su47_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 8,
+      "name": "TU-95",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "tu95_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 95,
+      "name": "TYPHOON",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "typn_common"
+        }
+      ]
+    },
+    {
+      "missionId": 23,
+      "targetId": 69,
+      "name": "V-22",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019038",
+        "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "mv22_common"
+        }
+      ]
+    },
+    {
+      "missionId": 24,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019039",
+        "https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "mi24_common"
+        }
+      ]
+    },
+    {
+      "missionId": 24,
+      "targetId": 232,
+      "name": "RAFALE M",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019039",
+        "https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "rflm_common"
+        },
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "rflm_Savia"
+        }
+      ]
+    },
+    {
+      "missionId": 24,
+      "targetId": 95,
+      "name": "TYPHOON",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019039",
+        "https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "typn_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 122,
+      "name": "AV-8B",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "av8b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 274,
+      "name": "EA-18G",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "e18g_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 66,
+      "name": "F-15C",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "f15c_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 233,
+      "name": "F-15J",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "f15j_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 30,
+      "name": "F/A-18C",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "f18c_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 241,
+      "name": "F/A-18E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "f18e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 197,
+      "name": "F/A-18F",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "f18f_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 70,
+      "name": "GRIPEN E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "j39e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 29,
+      "name": "MI-24",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "mi24_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 1,
+      "name": "MIG-21BIS",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "m21b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 73,
+      "name": "MIG-31B",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "m31b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 75,
+      "name": "SU-34",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "su34_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 265,
+      "name": "SU-35S",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "su35_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 207,
+      "name": "SU-47",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "su47_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 335,
+      "name": "SU-57",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "su57_common"
+        }
+      ]
+    },
+    {
+      "missionId": 25,
+      "targetId": 95,
+      "name": "TYPHOON",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019041",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission025day2",
+          "row": "typn_common"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 122,
+      "name": "AV-8B",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Crossing_Fleets"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "av8b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 409,
+      "name": "F-35C",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "Wiki は F-35A と記載するが元定義は f35c_common。F-35 の出現記述はある。表記差を未解決とし、除外・改名は保留を推奨。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "f35c_common"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 31,
+      "name": "TU-160",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Crossing_Fleets"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "t160_ms26"
+        }
+      ]
+    },
+    {
+      "missionId": 26,
+      "targetId": 411,
+      "name": "UNKNOWN UAV [M26]",
+      "previousAuditStatus": "unverified",
+      "status": "prior_decision_keep",
+      "note": "AIRCRAFT_SCOPE_REVIEW.md の調査と後続のユーザー判断を引き継ぐ。新たな除外候補ではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019042",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission026",
+          "row": "uavn_ms26"
+        }
+      ]
+    },
+    {
+      "missionId": 27,
+      "targetId": 70,
+      "name": "GRIPEN E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP1008_j39e"
+        }
+      ]
+    },
+    {
+      "missionId": 27,
+      "targetId": 417,
+      "name": "KC-10",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP0007_kc10_01"
+        }
+      ]
+    },
+    {
+      "missionId": 27,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP1030_su33_Megafloat"
+        }
+      ]
+    },
+    {
+      "missionId": 27,
+      "targetId": 335,
+      "name": "SU-57",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP1021_su57_01"
+        }
+      ]
+    },
+    {
+      "missionId": 27,
+      "targetId": 69,
+      "name": "V-22",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019044",
+        "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "OP0023_mv22_Megafloat"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 434,
+      "name": "B-1",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "b01b_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 70,
+      "name": "GRIPEN E",
+      "previousAuditStatus": "unverified",
+      "status": "unresolved",
+      "note": "資料で敵機種を個別に特定できず。非出現を証明したものではない。",
+      "supportingSources": [],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "j39e_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 67,
+      "name": "MIG-29A",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "m29a_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 4,
+      "name": "MIRAGE 2000-5",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "mr2k_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 68,
+      "name": "SU-33",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "su33_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 265,
+      "name": "SU-35S",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "su35_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 31,
+      "name": "TU-160",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "t160_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 8,
+      "name": "TU-95",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "tu95_common"
+        }
+      ]
+    },
+    {
+      "missionId": 28,
+      "targetId": 95,
+      "name": "TYPHOON",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019045",
+        "https://redfreshet.com/ace-combat-8-named-aces/",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/X40",
+        "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission028",
+          "row": "typn_common"
+        }
+      ]
+    },
+    {
+      "missionId": 30,
+      "targetId": 146,
+      "name": "INTERCEPTOR UAV",
+      "previousAuditStatus": "unverified",
+      "status": "additional_corroboration",
+      "note": "敵としての機種名を追加資料に確認。内部 NPC 行の配置・HP・耐性の実測ではない。",
+      "supportingSources": ["https://acecombat.wiki.gg/wiki/Song_of_Wings_%28mission%29"],
+      "consultedMissionSources": [
+        "https://gamerch.com/acecombat8/1019047",
+        "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+        "https://acecombat.wiki.gg/wiki/Song_of_Wings_%28mission%29"
+      ],
+      "directMissionSourceRefs": [
+        {
+          "table": "DT_NPC_Mission030",
+          "row": "uavs_ms30"
+        }
+      ]
+    }
+  ],
+  "additionalCandidates": [
+    {
+      "missionId": 24,
+      "targetIds": [320],
+      "status": "calculation_change_candidate",
+      "proposal": "掲載・元 HP 20 は維持し、必要命中数を ? にする案。無敵の実測確認は未実施。",
+      "basis": "Gamerch は JTAC の出現を明記。Wiki は飛行船撃墜後に現れる地上照準役を apparently invulnerable と記載。任務表の MinHealth=0 は任務イベントによる無敵の否定にはならない。",
+      "sources": [
+        "https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1",
+        "https://gamerch.com/acecombat8/1019039"
+      ]
+    },
+    {
+      "missionId": 18,
+      "targetIds": [235],
+      "status": "source_scope_change_candidate",
+      "proposal": "M18 の計算対象出典を Shadow 24 に限定する。Shadow 22/DFM を同じ通常計算の対象として説明しない。行の掲載・M18/M28・HP 115 は維持。",
+      "basis": "Wiki は Shadow 22 を撃墜不能、Shadow 24 を撃墜可能と区別。現行 ID 235 は両者の sourceRefs を束ねている。",
+      "sources": ["https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"]
+    },
+    {
+      "missionId": 10,
+      "targetIds": [59, 60, 61],
+      "status": "provisional_exclusion_candidate",
+      "proposal": "DESTROYER の M10 対応と、その艦の AA GUN/NAVAL GUN の M10 対応を暫定除外する案。",
+      "basis": "攻略は味方艦隊防衛と航空敵への攻撃を記載。Bravery は防衛側だが、udal_common と Bravery の同一性は未確認。敵駆逐艦の個別裏付けがない。",
+      "sources": [
+        "https://acecombat.wiki.gg/wiki/Over_the_Rainband",
+        "https://gamerch.com/acecombat8/1017958"
+      ]
+    },
+    {
+      "missionId": 12,
+      "targetIds": [59, 60, 61, 62, 63, 64, 65],
+      "status": "provisional_exclusion_candidate",
+      "proposal": "DESTROYER/CRUISER と各艦載部位の M12 対応だけを暫定除外する案。LCAC と APC は維持。",
+      "basis": "敵上陸艇は LCAC として明記されるが、巡洋艦・駆逐艦の敵出現は特定できない。Wiki の敵一覧は部分一覧であり、非出現は未確定。",
+      "sources": [
+        "https://acecombat.wiki.gg/wiki/An_Island_in_Darkness",
+        "https://gamerch.com/acecombat8/1017960"
+      ]
+    },
+    {
+      "missionId": 22,
+      "targetIds": [32, 33],
+      "status": "provisional_exclusion_candidate",
+      "proposal": "地上型 AA GUN/SAM の M22 対応だけを暫定除外する案。CELAENO の AA GUN/VLS は維持。",
+      "basis": "攻略は航空目標の迎撃と防衛圏からの撤退を記載。地上型 vads_common / GR009_rams_01 を撃破できる敵として確認できない。Fatsia からの砲撃の存在だけでは地上目標への攻撃可否を裏付けない。",
+      "sources": [
+        "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_22%3A_Pursuing_the_HSCA",
+        "https://gamerch.com/acecombat8/1019037"
+      ]
+    }
+  ],
+  "candidateSourceRefs": {
+    "32": [
+      {
+        "table": "DT_NPC_Mission004",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission004",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission006",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission006",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission007",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission007",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission008",
+        "row": "GR001_vads"
+      },
+      {
+        "table": "DT_NPC_Mission008",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission010",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission014",
+        "row": "vads_MS14"
+      },
+      {
+        "table": "DT_NPC_Mission014",
+        "row": "shil_MS14"
+      },
+      {
+        "table": "DT_NPC_Mission015",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission016",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission018",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission018",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission022",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission023",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "shil_MS16"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "gepa_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day2",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "vads_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "shil_common"
+      },
+      {
+        "table": "DT_NPC_Mission027",
+        "row": "GR001_vads_01"
+      }
+    ],
+    "33": [
+      {
+        "table": "DT_NPC_Mission004",
+        "row": "avng_common"
+      },
+      {
+        "table": "DT_NPC_Mission004",
+        "row": "hawk_common"
+      },
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "hawk_common"
+      },
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "avng_common"
+      },
+      {
+        "table": "DT_NPC_Mission006",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission006",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission007",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission007",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission008",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission008",
+        "row": "hawk_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission014",
+        "row": "rams_MS14"
+      },
+      {
+        "table": "DT_NPC_Mission014",
+        "row": "geck_MS14"
+      },
+      {
+        "table": "DT_NPC_Mission018",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission018",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission019",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission022",
+        "row": "avng_common"
+      },
+      {
+        "table": "DT_NPC_Mission023",
+        "row": "GR009_rams_01"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "avng_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "hawk_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "rams_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day2",
+        "row": "avng_common"
+      },
+      {
+        "table": "DT_NPC_Mission025day2",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "geck_common"
+      },
+      {
+        "table": "DT_NPC_Mission027",
+        "row": "GR009_rams_01"
+      }
+    ],
+    "59": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission011",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission020",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission022",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "udal_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "udal_ms26"
+      }
+    ],
+    "60": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission011",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission020",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission022",
+        "row": "udal_ak130"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "udal_ak130_aagun_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "udal_ak130_aagun_ms26"
+      }
+    ],
+    "61": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission011",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission020",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission022",
+        "row": "udal_ak130_artillery"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "udal_ak130_artillery_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "udal_ak130_artillery_ms26"
+      }
+    ],
+    "62": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "slav_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "slav_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "slav_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "slav_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "slav_ms26"
+      }
+    ],
+    "63": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "slav_ak130_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "slav_ak130_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "slav_ak130_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "slav_ak130_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "slav_ak130_ms26"
+      }
+    ],
+    "64": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "slav_ak630_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "slav_ak630_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "slav_ak630_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "slav_ak630_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "slav_ak630_ms26"
+      }
+    ],
+    "65": [
+      {
+        "table": "DT_NPC_Mission005",
+        "row": "slav_kashtan_common"
+      },
+      {
+        "table": "DT_NPC_Mission009",
+        "row": "slav_kashtan_common"
+      },
+      {
+        "table": "DT_NPC_Mission013",
+        "row": "slav_kashtan_common"
+      },
+      {
+        "table": "DT_NPC_Mission024",
+        "row": "slav_kashtan_common"
+      },
+      {
+        "table": "DT_NPC_Mission026",
+        "row": "slav_kashtan_ms26"
+      }
+    ],
+    "235": [
+      {
+        "table": "DT_NPC_Mission019",
+        "row": "su57_Shadow22"
+      },
+      {
+        "table": "DT_NPC_Mission019",
+        "row": "su57_Shadow22_DFM"
+      },
+      {
+        "table": "DT_NPC_Mission019",
+        "row": "su57_Shadow24"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Toplak"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Shadow24"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Shadow25"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Shadow26"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Shadow28"
+      },
+      {
+        "table": "DT_NPC_Mission028",
+        "row": "su57_Shadows"
+      },
+      {
+        "table": "DT_NPC",
+        "row": "OP1021_su57_02"
+      },
+      {
+        "table": "DT_NPC",
+        "row": "OP1021_su57_Shadow_MS28"
+      }
+    ],
+    "320": [
+      {
+        "table": "DT_NPC_Mission025day1",
+        "row": "lass_common"
+      },
+      {
+        "table": "DT_NPC_Mission027",
+        "row": "lass_common"
+      }
+    ]
+  },
+  "missionSources": {
+    "8": [
+      "https://gamerch.com/acecombat8/1017956",
+      "https://acecombat.wiki.gg/wiki/Retaking_of_Theve_II"
+    ],
+    "9": [
+      "https://gamerch.com/acecombat8/1017957",
+      "https://acecombat.wiki.gg/wiki/The_Land_Battleship_Blockade"
+    ],
+    "10": [
+      "https://gamerch.com/acecombat8/1017958",
+      "https://acecombat.wiki.gg/wiki/Over_the_Rainband"
+    ],
+    "11": [
+      "https://gamerch.com/acecombat8/1017959",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://acecombat.wiki.gg/wiki/Maximum_Payload"
+    ],
+    "12": [
+      "https://gamerch.com/acecombat8/1017960",
+      "https://acecombat.wiki.gg/wiki/An_Island_in_Darkness"
+    ],
+    "13": [
+      "https://gamerch.com/acecombat8/1017961",
+      "https://acecombat.wiki.gg/wiki/The_People_of_the_Lost_Country"
+    ],
+    "14": ["https://gamerch.com/acecombat8/1017962"],
+    "15": ["https://gamerch.com/acecombat8/1017963", "https://acecombat.wiki.gg/wiki/Wings_of_Wax"],
+    "16": ["https://gamerch.com/acecombat8/1017964", "https://acecombat.wiki.gg/wiki/Singer"],
+    "17": [
+      "https://gamerch.com/acecombat8/1017965",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://acecombat.wiki.gg/wiki/Land_Battleship_No._3_%28mission%29",
+      "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_17%3A_Land_Battleship_No._3"
+    ],
+    "18": [
+      "https://gamerch.com/acecombat8/1017966",
+      "https://acecombat.wiki.gg/wiki/Moonlight_and_Shadows"
+    ],
+    "19": [
+      "https://gamerch.com/acecombat8/1017967",
+      "https://acecombat.wiki.gg/wiki/Clearing_the_Lighthouse"
+    ],
+    "20": [
+      "https://gamerch.com/acecombat8/1017968",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://acecombat.wiki.gg/wiki/Escort_Orbiter"
+    ],
+    "21": [
+      "https://gamerch.com/acecombat8/1019035",
+      "https://acecombat.wiki.gg/wiki/The_Star-Bound_Bird"
+    ],
+    "22": [
+      "https://gamerch.com/acecombat8/1019037",
+      "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_22%3A_Pursuing_the_HSCA",
+      "https://forums.spacebattles.com/threads/ace-combat-general-discussion-thread.366416/page-368"
+    ],
+    "23": [
+      "https://gamerch.com/acecombat8/1019038",
+      "https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City",
+      "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City"
+    ],
+    "24": [
+      "https://gamerch.com/acecombat8/1019039",
+      "https://acecombat.wiki.gg/wiki/The_Battle_of_Rocky_Island%2C_Day_1"
+    ],
+    "25": [
+      "https://gamerch.com/acecombat8/1019041",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_25%3A_The_Battle_of_Rocky_Island%2C_Day_2"
+    ],
+    "26": [
+      "https://gamerch.com/acecombat8/1019042",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+      "https://acecombat.wiki.gg/wiki/Crossing_Fleets"
+    ],
+    "27": [
+      "https://gamerch.com/acecombat8/1019044",
+      "https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress",
+      "https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress"
+    ],
+    "28": [
+      "https://gamerch.com/acecombat8/1019045",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+      "https://acecombat.wiki.gg/wiki/X40",
+      "https://acecombat.wiki.gg/wiki/A_Thousand_Points_of_Light"
+    ],
+    "29": [
+      "https://gamerch.com/acecombat8/1019046",
+      "https://redfreshet.com/ace-combat-8-named-aces/",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/"
+    ],
+    "30": [
+      "https://gamerch.com/acecombat8/1019047",
+      "https://intoindiegames.com/walkthroughs/ace-combat-8-wings-of-theve-missions-26-30-walkthrough/",
+      "https://acecombat.wiki.gg/wiki/Song_of_Wings_%28mission%29"
+    ]
+  },
+  "limitations": [
+    "Wiki/Neoseeker は直接取得が 403 のページがあり、検索エンジンが保持する本文を確認した。",
+    "Gamerch は既存の保存本文を再利用した。",
+    "攻略の敵一覧は部分一覧を含む。掲載がないだけで非出現とは判定しない。",
+    "ゲーム実行、動画のコマ送り検証、全マップ配置・イベント解析は行っていない。",
+    "任務表の参照・HP・耐性と敵としての実出現は別の根拠として扱う。",
+    "部位の無条件任務継承や既決の除外判断は再提案しない。"
+  ],
+  "subsequentDecision": {
+    "date": "2026-11-05",
+    "status": "implemented",
+    "excludedMissions": {
+      "8": [121, 6, 30, 4, 75, 8],
+      "10": [59],
+      "11": [4],
+      "12": [59, 62],
+      "17": [29],
+      "21": [70],
+      "22": [32, 33],
+      "23": [307, 93, 118, 94, 69],
+      "24": [320],
+      "25": [122, 274, 66, 233, 30, 241, 197, 1, 67, 73, 4, 68, 75, 265, 207, 335, 95],
+      "27": [417]
+    },
+    "excludedTargetIds": [121, 320, 417],
+    "removedCalculationSources": {
+      "235": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "su57_Shadow22"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "su57_Shadow22_DFM"
+        },
+        {
+          "table": "DT_NPC",
+          "row": "OP1021_su57_02"
+        }
+      ]
+    },
+    "retainedAircraft": {
+      "8": [68],
+      "9": [146],
+      "17": [230],
+      "23": [70, 29, 67, 8, 95],
+      "24": [29],
+      "25": [70, 29, 332, 336, 333],
+      "26": [67, 68, 409],
+      "27": [70, 68, 335, 69],
+      "28": [70]
+    },
+    "notes": [
+      "元の107対応とcountsは変更前の調査記録として保持する。",
+      "M22 SAMは追加のユーザー指示で除外。CELAENO部位は維持。",
+      "M18 SU-57はShadow 22/DFMと同NPC基本出典を計算用sourceRefsから除き、Shadow 24とM28の計算を維持。除外した出典はこの記録に保存。",
+      "M23の個別除外に指定されない候補は維持。M25の除外は未裏付け一覧の通常機に限定し、確認済みの別機種・SHADOWは維持。"
+    ]
+  }
+}
