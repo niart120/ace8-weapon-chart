@@ -1,10 +1,12 @@
 export const missions = [
-  { id: '1', name: 'PROLOGUE' },
-  ...Array.from({ length: 23 }, (_, i) => ({ id: String(i + 2), name: `M${i + 1}` })),
-  { id: '25day1', name: 'M24' },
-  { id: '25day2', name: 'M25' },
-  ...Array.from({ length: 5 }, (_, i) => ({ id: String(i + 26), name: `M${i + 26}` })),
+  { id: 0, name: 'PROLOGUE' },
+  ...Array.from({ length: 30 }, (_, i) => ({ id: i + 1, name: `M${i + 1}` })),
 ] as const;
+
+export const visibleMissions = missions.filter((mission) => mission.id !== 0);
+export function isSelectableMission(id: number): boolean {
+  return id !== 14 && visibleMissions.some((mission) => mission.id === id);
+}
 
 export const targetSubcategories = {
   AIRCRAFT: [

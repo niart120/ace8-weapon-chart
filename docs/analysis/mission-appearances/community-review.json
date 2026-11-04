@@ -332,6 +332,95 @@
       "mission": "M26",
       "decision": "EXCLUDED",
       "basis": "ユーザー指示：UNKNOWN（X-40）も今回の掲載対象外とする。"
+    },
+    {
+      "date": "2026-11-04",
+      "targetIds": [45, 145, 204, 262, 275, 276],
+      "decision": "EXCLUDED",
+      "basis": "先行調査の出現誤対応・非敵対象。"
+    },
+    {
+      "date": "2026-11-04",
+      "targetIds": [55, 194, 210, 267, 269, 412],
+      "decision": "EXCLUDED",
+      "basis": "ユーザー判断：M4潜水艦、非武装M14、M26 SU-57、資料の編成を採用するPV特殊部隊3対応を除外。"
+    },
+    {
+      "date": "2026-11-04",
+      "decision": "mission-exclusions",
+      "rules": [
+        {
+          "missionId": "3",
+          "targetIds": [12],
+          "reason": "M2のコンテナ船は友軍。部位も計算対象外。"
+        },
+        {
+          "missionId": "4",
+          "targetIds": [12, 32, 33, 34, 35, 36, 38, 39],
+          "reason": "ユーザー確認に基づき、M3の地上・施設・水上目標を除外。航空機は維持。"
+        },
+        {
+          "missionId": "5",
+          "targetIds": [55],
+          "reason": "ユーザー確認：M4のTRIUMPHANTは攻撃対象外。部位のM4への継承も禁止。"
+        },
+        {
+          "missionId": "7",
+          "targetIds": [91, 92],
+          "reason": "ユーザーの記憶に基づく暫定除外：M6のBUNKER。別任務では維持。"
+        },
+        {
+          "missionId": "15",
+          "targetIds": [26, 30, 32, 67, 210],
+          "reason": "ユーザー指示：非武装任務M14は計算対象外。"
+        },
+        {
+          "missionId": "22",
+          "targetIds": [32, 33],
+          "reason": "M21の地上AA GUN（gepa_common）とSAM（avng_common）を暫定除外。別IDの艦載部位は維持。"
+        },
+        {
+          "missionId": "27",
+          "targetIds": [320],
+          "reason": "ユーザー指示：M27のJTACを暫定除外。M24では維持。"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "mission": "M3",
+      "targetIds": [26, 8],
+      "decision": "retain",
+      "basis": "ユーザーの記憶に基づきF-16CとTU-95を維持。追加の実機検証は行っていない。"
+    },
+    {
+      "date": "2026-11-04",
+      "mission": "M11",
+      "targetId": 67,
+      "decision": "retain",
+      "basis": "ユーザー確認：MIG-29Aは出現する。"
+    },
+    {
+      "date": "2026-11-04",
+      "decision": "mission-visibility",
+      "hidden": ["PROLOGUE"],
+      "disabled": ["M14"],
+      "basis": "ユーザー指示。保存済み選択からも取り除く。"
+    },
+    {
+      "date": "2026-11-04",
+      "decision": "canonical-mission-numbers-and-part-evidence",
+      "missionNumberFormat": "game display number (integer); PROLOGUE=0",
+      "excludedMissionPairs": [
+        {
+          "targetId": 67,
+          "missionId": 20
+        }
+      ],
+      "removedPublishedPartPairs": 36,
+      "removedExcludedPartPairs": 1,
+      "retainedInitialAuditPartPairsByChildNpcReference": 15,
+      "basis": "ユーザー指示によりpartOfからの無条件継承を削除。各部位の任務定義と実際の子NPC参照を使用。M20の通常MIG-29Aだけ除外し、M11とM20のSU-35Sは維持。旧調査のmissionId文字列は内部識別子の履歴として保持。"
     }
   ]
 }

@@ -6,7 +6,7 @@ test('MISSIONではTYPEの全解除に影響されず、M3の敵と任務差分�
   const state = {
     ...initialPreferences(false, { targets, weapons }),
     targetMode: 'MISSION' as const,
-    missionIds: ['4'],
+    missionIds: [3],
     targetIds: [],
   };
   const selected = selectedTargets(state, targets);
@@ -20,12 +20,12 @@ test('複数任務は和集合、空選択は全対象、TYPEへ戻ると個別�
   const state = {
     ...initial,
     targetMode: 'MISSION' as const,
-    missionIds: ['4', '21'],
+    missionIds: [3, 20],
     targetIds: [26],
   };
-  const ids = (missionIds: string[]) =>
+  const ids = (missionIds: number[]) =>
     selectedTargets({ ...state, missionIds }, targets).map((t) => t.id);
-  expect(new Set(ids(['4', '21']))).toEqual(new Set([...ids(['4']), ...ids(['21'])]));
+  expect(new Set(ids([3, 20]))).toEqual(new Set([...ids([3]), ...ids([20])]));
   expect(ids([])).toHaveLength(targets.filter((t) => t.category !== 'EXCLUDED').length);
   expect(selectedTargets({ ...state, targetMode: 'TYPE' }, targets).map((t) => t.id)).toEqual([26]);
   expect(resetPreferences(state, 'targets', false, catalog)).toEqual(initial);

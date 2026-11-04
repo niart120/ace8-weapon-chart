@@ -24,7 +24,7 @@ test('TARGETSのTYPE/MISSIONを切り替え、非アクティブ方式を適用�
 
 test('掲載パーツを表示し、現在の選択と条件を保存・復元する', () => {
   const saved = {
-    version: 2,
+    version: 3,
     targetMode: 'TYPE',
     missionIds: [],
     weaponIds: [1],
@@ -44,6 +44,15 @@ test('掲載パーツを表示し、現在の選択と条件を保存・復元�
   expect(screen.getByRole('checkbox', { name: 'MSL.POW+' }).hasAttribute('checked')).toBe(true);
   expect(JSON.parse(window.localStorage.getItem(storageKey)!)).toEqual(saved);
 });
+test('PROLOGUEを表示せず、M14を無効な任務として表示する', () => {
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
+  fireEvent.click(screen.getByRole('tab', { name: 'MISSION' }));
+  expect(screen.queryByRole('checkbox', { name: 'PROLOGUE' })).toBeNull();
+  expect(screen.getByRole('checkbox', { name: 'M14' }).hasAttribute('disabled')).toBe(true);
+  expect(screen.getByRole('checkbox', { name: 'M13' }).hasAttribute('disabled')).toBe(false);
+});
+
 test('主画面から兵装と目標を選択できる', () => {
   render(<App />);
   expect(screen.getByRole('button', { name: 'WEAPONS' })).toBeTruthy();

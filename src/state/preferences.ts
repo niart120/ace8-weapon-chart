@@ -5,7 +5,7 @@ export interface Catalog {
 }
 export interface Preferences {
   readonly targetMode: 'TYPE' | 'MISSION';
-  readonly missionIds: readonly string[];
+  readonly missionIds: readonly number[];
   readonly conditions: Conditions;
   readonly weaponIds: readonly number[];
   readonly targetIds: readonly number[];

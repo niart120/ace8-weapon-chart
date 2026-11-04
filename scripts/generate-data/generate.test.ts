@@ -2,18 +2,18 @@ import { expect, test } from 'vitest';
 import { generateMasters } from './generate';
 import { input } from './fixture';
 
-test('内部任務IDを維持し、境界とDay違いをゲーム内番号で表示する', () => {
+test('ゲーム内番号をそのまま任務属性と表示ラベルへ使用する', () => {
   // MissionNo_Name_ms*: extracted display strings, independent of the formatter.
   for (const [missionId, label] of [
-    ['1', 'PROLOGUE'],
-    ['2', 'M1'],
-    ['15', 'M14'],
-    ['24', 'M23'],
-    ['25day1', 'M24'],
-    ['25day2', 'M25'],
-    ['26', 'M26'],
-    ['30', 'M30'],
-  ]) {
+    [0, 'PROLOGUE'],
+    [1, 'M1'],
+    [14, 'M14'],
+    [23, 'M23'],
+    [24, 'M24'],
+    [25, 'M25'],
+    [26, 'M26'],
+    [30, 'M30'],
+  ] as const) {
     const result = generateMasters({
       ...input,
       targets: [
@@ -37,7 +37,7 @@ test('表示番号が未確認の内部任務を推測で出力しない', () =>
       targets: [
         {
           ...input.targets[0],
-          missionVariant: { missionId: '25' },
+          missionVariant: { missionId: 31 },
         },
       ],
     })
@@ -50,7 +50,7 @@ test('元定義からHPと倍率を解決し出典を配信データへ含めな
       name: 'TANK',
       category: 'GROUND',
       subcategory: 'ARMOR',
-      missionIds: ['6'],
+      missionIds: [5],
       order: 0,
       partOf: null,
       missionVariant: null,
@@ -111,7 +111,7 @@ test('生成元の名称に任務ラベルが含まれていたら拒否する',
     expect(() =>
       generateMasters({
         ...input,
-        targets: [{ ...input.targets[0], name, missionVariant: { missionId: '25day1' } }],
+        targets: [{ ...input.targets[0], name, missionVariant: { missionId: 24 } }],
       })
     ).toThrow('任務ラベル');
   }

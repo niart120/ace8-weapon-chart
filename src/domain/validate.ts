@@ -118,9 +118,10 @@ export function validateMasters(
           targetIds.has(target.partOf)),
       '本体参照不備'
     );
+    const variant = target.missionVariant;
     requireValue(
-      target.missionVariant === null ||
-        (isRecord(target.missionVariant) && typeof target.missionVariant.missionId === 'string'),
+      variant === null ||
+        (isRecord(variant) && missions.some((mission) => mission.id === variant.missionId)),
       '任務属性欠落'
     );
     requireValue(target.isAir === null || typeof target.isAir === 'boolean', 'isAir欠落');

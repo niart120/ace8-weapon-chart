@@ -151,7 +151,7 @@ test('R001: X-40のMSLはCategory01を使い6発になる', () => {
 
 test('R002: M25後半の艦船固有設定は任務差分になる', () => {
   for (const id of [341, 342, 343, 344, 345, 361, 362, 363, 364, 365, 366]) {
-    expect(targets.find((t) => t.id === id)?.missionVariant).toEqual({ missionId: '25day2' });
+    expect(targets.find((t) => t.id === id)?.missionVariant).toEqual({ missionId: 25 });
   }
 });
 

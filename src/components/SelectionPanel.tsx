@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Dispatch, SetStateAction } from 'react';
 import { targets, weapons } from '../data/masters';
 import { targetCategories, weaponCategories } from '../domain/types';
-import { missions, targetSubcategories } from '../domain/catalog';
+import { visibleMissions, isSelectableMission, targetSubcategories } from '../domain/catalog';
 import {
   groupSelection,
   targetCandidates,
@@ -254,12 +254,13 @@ export function SelectionPanel({
           hidden={!missionMode}
         >
           <div className="mission-options">
-            {missions.map((mission) => (
+            {visibleMissions.map((mission) => (
               <label key={mission.id}>
                 <input
                   type="checkbox"
                   checked={state.missionIds.includes(mission.id)}
                   disabled={
+                    !isSelectableMission(mission.id) ||
                     !targets.some(
                       (target) =>
                         target.category !== 'EXCLUDED' && target.missionIds.includes(mission.id)

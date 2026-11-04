@@ -1,0 +1,42 @@
+[
+  {
+    "missionId": 2,
+    "targetIds": [12],
+    "reason": "M2のコンテナ船は友軍。部位も計算対象外。"
+  },
+  {
+    "missionId": 3,
+    "targetIds": [12, 32, 33, 34, 35, 36, 38, 39],
+    "reason": "ユーザー確認に基づき、M3の地上・施設・水上目標を除外。航空機は維持。"
+  },
+  {
+    "missionId": 4,
+    "targetIds": [55],
+    "reason": "ユーザー確認：M4のTRIUMPHANTは攻撃対象外。部位のM4への継承も禁止。"
+  },
+  {
+    "missionId": 6,
+    "targetIds": [91, 92],
+    "reason": "ユーザーの記憶に基づく暫定除外：M6のBUNKER。別任務では維持。"
+  },
+  {
+    "missionId": 14,
+    "targetIds": [26, 30, 32, 67, 210],
+    "reason": "ユーザー指示：非武装任務M14は計算対象外。"
+  },
+  {
+    "missionId": 21,
+    "targetIds": [32, 33],
+    "reason": "M21の地上AA GUN（gepa_common）とSAM（avng_common）を暫定除外。別IDの艦載部位は維持。"
+  },
+  {
+    "missionId": 27,
+    "targetIds": [320],
+    "reason": "ユーザー指示：M27のJTACを暫定除外。M24では維持。"
+  },
+  {
+    "missionId": 20,
+    "targetIds": [67],
+    "reason": "通常MIG-29AのM20出典はPV定義のみ。ユーザー確認によりM20だけ除外し、通常定義があるM11は維持する。"
+  }
+]

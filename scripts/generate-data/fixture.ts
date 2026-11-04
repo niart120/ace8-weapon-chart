@@ -16,7 +16,7 @@ export const input: GenerationInput = {
       name: 'TANK',
       category: 'GROUND',
       subcategory: 'ARMOR',
-      missionIds: ['6'],
+      missionIds: [5],
       order: 0,
       partOf: null,
       missionVariant: null,

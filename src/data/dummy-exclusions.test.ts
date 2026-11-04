@@ -4,7 +4,7 @@ import { initialPreferences, selectedTargets, targetCandidates } from '../state/
 
 test('Q002のダミー6行を非表示にし、掲載対象の同名目標と部位を保持する', () => {
   const excludedIds = [504, 456, 489, 199, 496, 261];
-  const retainedIds = [50, 490, 204, 248];
+  const retainedIds = [50, 490, 248];
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   const expanded = { ...initial, showParts: true, showMissionVariants: true };
@@ -19,7 +19,7 @@ test('Q002のダミー6行を非表示にし、掲載対象の同名目標と部
       .sort((a, b) => a - b)
   ).toEqual([...retainedIds].sort((a, b) => a - b));
   for (const [query, ids] of [
-    ['AIR BASE', [490, 204]],
+    ['AIR BASE', [490]],
     ['APC', [50]],
     ['LAND BATTLESHIP 2 [M19]', []],
   ] as const) {

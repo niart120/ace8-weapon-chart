@@ -18,6 +18,8 @@ for (const width of [1440, 390, 320]) {
     await panel.getByRole('tab', { name: 'TYPE', exact: true }).focus();
     await page.keyboard.press('ArrowRight');
     await expect(panel.getByRole('tab', { name: 'MISSION', exact: true })).toBeFocused();
+    await expect(panel.getByRole('checkbox', { name: 'PROLOGUE', exact: true })).toHaveCount(0);
+    await expect(panel.getByRole('checkbox', { name: 'M14', exact: true })).toBeDisabled();
     await panel.getByRole('checkbox', { name: 'M3', exact: true }).check();
     await panel.getByRole('checkbox', { name: 'M20', exact: true }).check();
     await page.screenshot({ path: info.outputPath('mission.png') });
@@ -31,6 +33,13 @@ for (const width of [1440, 390, 320]) {
     await expect(
       page.getByRole('rowheader', { name: 'SU-35S (VENTUS) [M23]', exact: true })
     ).toHaveCount(0);
+    await expect(page.getByRole('rowheader', { name: 'MIG-29A', exact: true })).toHaveCount(0);
+    await expect(page.getByRole('rowheader', { name: 'SU-35S', exact: true })).toBeAttached();
+    expect(
+      await page.evaluate(
+        () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).missionIds
+      )
+    ).toEqual([3, 20]);
     await page.reload();
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
     await expect(panel.getByRole('tab', { name: 'MISSION', exact: true })).toBeFocused();

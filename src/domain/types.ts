@@ -34,10 +34,10 @@ export interface Target {
   readonly name: string;
   readonly category: TargetCategory;
   readonly subcategory: string;
-  readonly missionIds: readonly string[];
+  readonly missionIds: readonly number[];
   readonly order: number;
   readonly partOf: number | null;
-  readonly missionVariant: { readonly missionId: string } | null;
+  readonly missionVariant: { readonly missionId: number } | null;
   readonly hp: number;
   readonly damageMultipliers: Readonly<Record<string, number | null>>;
   readonly isAir: boolean | null;

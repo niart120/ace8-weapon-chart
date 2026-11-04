@@ -73,8 +73,8 @@ MEGAFLOATのFront／EV支柱は元HP100／200、原子炉は各HP40で計算す�
 - [全体検証](docs/analysis/calculation/VALIDATION.md)
 - [未対応課題](spec/agent/complete/local_001/ISSUES.md)
 
-選択方式・各方式の選択と計算条件は同じブラウザーのlocalStorageに自動保存する。検索・パネル開閉・ソート・計算結果は保存しない。保存できない環境でも画面操作を続けられる。今回の保存形式はversion 2とし、version 1の保存は初期化する。
+選択方式・各方式の選択と計算条件は同じブラウザーのlocalStorageに自動保存する。検索・パネル開閉・ソート・計算結果は保存しない。保存できない環境でも画面操作を続けられる。保存形式はversion 3。ミッション番号はゲーム内番号と同じ数値とし、文字列の内部識別子を使っていたversion 2以前の保存設定は初期化する。
 
-出現任務は静的定義と親子関係から取得する。掲載308行のうち14行は出現任務が未特定で、TYPEおよび任務未指定では掲載し、特定任務へは推測で割り当てない。分類と対応範囲は[対象データ調査](spec/agent/complete/local_007/TARGET_DATA_AUDIT.md)、操作仕様と検証結果は[対象選択・比較表・書体の改善](spec/agent/complete/local_007/TARGET_BROWSING_AND_TYPOGRAPHY.md)を参照。
+出現任務は対象自身の任務定義と実際の子NPC参照を根拠にし、`partOf`だけでは親の任務を継承しない。確認済みの非敵対象・撃破対象外と任務限定の除外を反映する。PROLOGUEは非表示、非武装任務M14は選択不可。最新の掲載判断は[出現対応監査](docs/analysis/mission-appearances/MISSION_APPEARANCE_AUDIT.md)を参照。掲載294行のうち15行は出現任務が未特定で、TYPEおよび任務未指定では掲載し、特定任務へは推測で割り当てない。分類と対応範囲は[対象データ調査](spec/agent/complete/local_007/TARGET_DATA_AUDIT.md)、操作仕様と検証結果は[対象選択・比較表・書体の改善](spec/agent/complete/local_007/TARGET_BROWSING_AND_TYPOGRAPHY.md)を参照。
 
 公開前は後方互換性を保証せず、変更により以前の選択が失われたり設定が初期化されたりすることを許容する。保存の復元では現行の掲載対象との照合を行い、廃止IDを別のIDへ変換しない。

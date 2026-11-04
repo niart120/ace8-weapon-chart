@@ -17,7 +17,7 @@ test('不正な入力では既存3ファイルを更新しない', async () => {
           targets: [
             {
               ...input.targets[0],
-              missionVariant: { missionId: '25' },
+              missionVariant: { missionId: 31 },
             },
           ],
         },

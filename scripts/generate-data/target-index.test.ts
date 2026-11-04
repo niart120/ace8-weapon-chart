@@ -1,8 +1,37 @@
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { expect, test } from 'vitest';
+import fixture from '../../src/test/fixtures/mission-numbers.json';
 
-test('元定義だけの通常NPCへ任務差分を流用せず、子NPCと部位に任務を引き継ぐ', () => {
+test('全31内部識別子を同梱文字列の番号へ変換し、不明な内部25は拒否する', () => {
+  const path = fileURLToPath(new URL('./target-index.py', import.meta.url));
+  const code = `import importlib.util,json,sys
+s=importlib.util.spec_from_file_location('index',${JSON.stringify(path)})
+m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+entries=json.load(sys.stdin)
+numbers=[m.mission_id('DT_NPC_Mission'+entry['missionId'].zfill(3)) for entry in entries]
+try:
+    m.mission_id('DT_NPC_Mission025')
+except ValueError:
+    pass
+else:
+    raise AssertionError('Ambiguous source ID accepted')
+assert m.mission_id('DT_NPC_Training') is None
+print(json.dumps(numbers))`;
+  const actual = JSON.parse(
+    execFileSync('python', ['-B', '-c', code], {
+      encoding: 'utf8',
+      input: JSON.stringify(fixture.entries),
+    })
+  );
+  expect(actual).toEqual(
+    fixture.entries.map(({ text }) =>
+      text === 'PROLOGUE' ? 0 : Number(text.replace('MISSION ', ''))
+    )
+  );
+});
+
+test('実際の子NPC参照だけから任務番号を取得し、partOfだけでは任務を継承しない', () => {
   const path = fileURLToPath(new URL('./target-index.py', import.meta.url));
   const code = `import importlib.util,json
 s=importlib.util.spec_from_file_location('index',${JSON.stringify(path)})
@@ -16,8 +45,8 @@ rows,evidence=m.build_index(definitions,npcs,models,aircraft,{'DT_NPC_Mission004
 print(json.dumps([[r['id'],r['missionIds'],r['subcategory']] for r in rows]))`;
   expect(JSON.parse(execFileSync('python', ['-B', '-c', code], { encoding: 'utf8' }))).toEqual([
     [1, [], 'FIGHTER'],
-    [2, ['4'], 'FIGHTER'],
-    [3, ['4'], 'FIGHTER'],
-    [4, ['4'], 'PARTS'],
+    [2, [3], 'FIGHTER'],
+    [3, [3], 'FIGHTER'],
+    [4, [], 'PARTS'],
   ]);
 });

@@ -5,8 +5,8 @@ import { withMissionLabel } from './mission-label';
 
 // Expected numbers come from localized text, not internal-ID arithmetic.
 const suffixes = new Map(
-  fixture.entries.map(({ missionId, text }) => [
-    missionId,
+  fixture.entries.map(({ text }) => [
+    text === 'PROLOGUE' ? 0 : Number(text.replace('MISSION ', '')),
     text === 'PROLOGUE' ? '[PROLOGUE]' : `[M${Number(text.replace('MISSION ', ''))}]`,
   ])
 );

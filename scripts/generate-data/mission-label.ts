@@ -2,7 +2,7 @@ import { missions } from '../../src/domain/catalog.ts';
 
 const labels = new Map(missions.map((mission) => [mission.id, mission.name]));
 
-export function withMissionLabel(name: string, missionId: string): string {
+export function withMissionLabel(name: string, missionId: number): string {
   const label = labels.get(missionId);
   if (!label) throw new Error(`表示番号が未確認の任務: ${missionId}`);
   if (/ \[(?:M[^\]]+|PROLOGUE)\]$/.test(name))

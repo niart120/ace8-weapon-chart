@@ -4,6 +4,40 @@ import { validateMasters } from '../domain/validate';
 import { missions } from '../domain/catalog';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
 
+test('確認済みの非敵・撃破対象外・PV機体を掲載から除外する', () => {
+  for (const id of [45, 55, 145, 194, 204, 210, 262, 267, 269, 275, 276, 412]) {
+    expect(targets.find((t) => t.id === id)?.category).toBe('EXCLUDED');
+  }
+});
+
+test('任務限定の除外は他任務・通常機・艦載部位へ波及させない', () => {
+  const state = {
+    ...initialPreferences(false, { targets, weapons }),
+    targetMode: 'MISSION' as const,
+  };
+  const ids = (missionId: number) =>
+    selectedTargets({ ...state, missionIds: [missionId] }, targets).map((t) => t.id);
+  expect(ids(3)).toEqual(expect.arrayContaining([26, 8]));
+  expect(
+    selectedTargets({ ...state, missionIds: [3] }, targets).every((t) => t.category === 'AIRCRAFT')
+  ).toBe(true);
+  expect(ids(2)).not.toContain(12);
+  expect(ids(2)).not.toContain(223);
+  expect(ids(6)).not.toContain(91);
+  expect(ids(6)).not.toContain(92);
+  expect(ids(24)).toEqual(expect.arrayContaining([91, 92, 320]));
+  expect(ids(11)).toContain(67);
+  expect(ids(20)).not.toContain(67);
+  expect(ids(20)).toContain(265);
+  expect(ids(21)).not.toContain(32);
+  expect(ids(21)).not.toContain(33);
+  expect(ids(21)).toEqual(expect.arrayContaining([244, 126, 128, 60, 58]));
+  expect(ids(27)).not.toContain(320);
+  expect(ids(4)).not.toContain(472);
+  expect(ids(30)).toContain(472);
+  expect(ids(14)).toEqual([]);
+});
+
 test('撃破対象外のM26 UNKNOWNとM28 X-40を除外し、M29の戦闘対象は維持する', () => {
   const state = {
     ...initialPreferences(false, { targets, weapons }),
@@ -12,8 +46,8 @@ test('撃破対象外のM26 UNKNOWNとM28 X-40を除外し、M29の戦闘対象�
     showMissionVariants: true,
   };
   for (const [id, missionId] of [
-    [410, '26'],
-    [435, '28'],
+    [410, 26],
+    [435, 28],
   ] as const) {
     expect(targets.find((t) => t.id === id)).toMatchObject({
       category: 'EXCLUDED',
@@ -28,7 +62,7 @@ test('撃破対象外のM26 UNKNOWNとM28 X-40を除外し、M29の戦闘対象�
     }
   }
   const finalBattle = selectedTargets(
-    { ...state, targetMode: 'MISSION', missionIds: ['29'] },
+    { ...state, targetMode: 'MISSION', missionIds: [29] },
     targets
   );
   expect(finalBattle.map((t) => t.id)).toEqual(expect.arrayContaining([457, 458, 459, 460]));
@@ -53,21 +87,25 @@ test('機体マスタの区分を優先し、用途・部位で細分類する',
 });
 
 test('通常機・任務差分・子部位の出現任務を区別し、未知の出現先を補わない', () => {
-  expect(targets.find((t) => t.id === 273)?.missionIds).toEqual(['22', '24']);
-  expect(targets.find((t) => t.id === 28)?.missionIds).toEqual(['4']);
-  expect(targets.find((t) => t.id === 267)?.missionIds).toEqual(['21']);
-  expect(targets.find((t) => t.id === 430)?.missionIds).toEqual(['27']);
-  expect(targets.find((t) => t.id === 178)?.missionIds).toEqual(['11', '19', '25day1']);
+  expect(targets.find((t) => t.id === 273)?.missionIds).toEqual([21, 23]);
+  expect(targets.find((t) => t.id === 28)?.missionIds).toEqual([3]);
+  expect(targets.find((t) => t.id === 268)?.missionIds).toEqual([20]);
+  expect(targets.find((t) => t.id === 430)?.missionIds).toEqual([27]);
+  expect(targets.find((t) => t.id === 178)?.missionIds).toEqual([10, 18, 24]);
   expect(targets.find((t) => t.id === 493)?.missionIds).toEqual([]);
-  expect(missions.find((m) => m.id === '25day1')?.name).toBe('M24');
-  expect(missions.find((m) => m.id === '25day2')?.name).toBe('M25');
+  expect(missions.find((m) => m.id === 24)?.name).toBe('M24');
+  expect(missions.find((m) => m.id === 25)?.name).toBe('M25');
 });
 
 test('未知の細分類・出現任務・任務重複を拒否する', () => {
   for (const change of [
     { subcategory: 'INVALID' },
     { missionIds: ['25'] },
-    { missionIds: ['4', '4'] },
+    { missionIds: [31] },
+    { missionIds: [2.5] },
+    { missionVariant: { missionId: '25day2' } },
+    { missionVariant: { missionId: 31 } },
+    { missionIds: [3, 3] },
   ]) {
     expect(() =>
       validateMasters({
@@ -76,5 +114,18 @@ test('未知の細分類・出現任務・任務重複を拒否する', () => {
         targets: targets.map((t, i) => (i === 0 ? { ...t, ...change } : t)),
       })
     ).toThrow();
+  }
+});
+
+test('部位は固有の任務と子NPC参照に限定し、親の別任務へ広げない', () => {
+  for (const [id, missionIds] of [
+    [377, [25]],
+    [180, [11]],
+    [368, [25]],
+    [223, [16]],
+    [503, []],
+    [460, [29]],
+  ] as const) {
+    expect(targets.find((t) => t.id === id)?.missionIds).toEqual(missionIds);
   }
 });

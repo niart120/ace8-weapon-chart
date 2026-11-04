@@ -83,8 +83,9 @@ def main():
             sources[key]=resolve(source)
     index_spec=importlib.util.spec_from_file_location('target_index',Path(__file__).with_name('target-index.py'))
     index_module=importlib.util.module_from_spec(index_spec);index_spec.loader.exec_module(index_module)
-    all_missions={p.stem:table(p.stem) for p in (ref/'tables').glob('DT_NPC_Mission*.json') if index_module.mission_id(p.stem)}
-    indexed,evidence=index_module.build_index(catalog['targets'],npcs,models,table('DT_LiveAircraft'),all_missions)
+    all_missions={p.stem:table(p.stem) for p in (ref/'tables').glob('DT_NPC_Mission*.json') if index_module.mission_id(p.stem) is not None}
+    mission_exclusions=read(Path(__file__).with_name('target-mission-exclusions.json'))
+    indexed,evidence=index_module.build_index(catalog['targets'],npcs,models,table('DT_LiveAircraft'),all_missions,mission_exclusions)
     (local/'target-browsing-evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     result={'weapons':weapons,'targets':indexed,'sources':sources,'modifiers':modifiers}
     (local/'generation-input.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

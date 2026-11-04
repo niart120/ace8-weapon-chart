@@ -14,10 +14,10 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
   for (const [id, type, hp, missionVariant] of [
     [420, 'Front', 100, null],
     [500, 'Front', 100, null],
-    [419, 'Front', 100, { missionId: '27' }],
+    [419, 'Front', 100, { missionId: 27 }],
     [422, 'EV', 200, null],
     [501, 'EV', 200, null],
-    [421, 'EV', 200, { missionId: '27' }],
+    [421, 'EV', 200, { missionId: 27 }],
   ] as const) {
     expect(target(id)).toMatchObject({
       name: `PILLAR (${type})《MEGAFLOAT》${missionVariant ? ' [M27]' : ''}`,
@@ -62,7 +62,7 @@ test('親3行の除外後も子部位12行を掲載し、非表示中の選択�
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 2,
+        version: 3,
         targetIds: parts,
         showParts,
         showMissionVariants,

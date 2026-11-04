@@ -2,14 +2,21 @@
 import re
 
 ROLE_NAMES = {0: 'FIGHTER', 1: 'MULTIROLE', 2: 'ATTACKER', 3: 'ELECTRONIC WARFARE'}
+SOURCE_MISSIONS = ['1'] + [str(n) for n in range(2, 25)] + ['25day1', '25day2'] + [str(n) for n in range(26, 31)]
+
+
+def mission_number(source_id):
+    if source_id not in SOURCE_MISSIONS:
+        raise ValueError(f'Unknown source mission: {source_id}')
+    return SOURCE_MISSIONS.index(source_id)
 
 
 def mission_id(table):
     match = re.fullmatch(r'DT_NPC_Mission(\d+)(day[12])?', table)
-    return str(int(match[1])) + (match[2] or '') if match else None
+    return mission_number(str(int(match[1])) + (match[2] or '')) if match else None
 
 
-def build_index(definitions, npcs, models, aircraft, mission_tables):
+def build_index(definitions, npcs, models, aircraft, mission_tables, mission_exclusions=()):
     roles = {}
     for row in aircraft.values():
         key = row['PlaneNameTextID'].removeprefix('Aircraft_Name_').lower()
@@ -21,7 +28,7 @@ def build_index(definitions, npcs, models, aircraft, mission_tables):
     child_occurrences = {}
     for table_name, rows in mission_tables.items():
         mid = mission_id(table_name)
-        if not mid:
+        if mid is None:
             continue
         for row in rows.values():
             # Only descendants: a base NPC must not absorb a distinct mission variant.
@@ -44,14 +51,15 @@ def build_index(definitions, npcs, models, aircraft, mission_tables):
         for source in d['sourceRefs']:
             table_name, row = source['table'], source['row']
             mid = mission_id(table_name)
-            if mid:
+            if mid is not None:
                 mids.add(mid)
                 npc_ids.append(mission_tables[table_name][row]['NpcId'])
             elif table_name == 'DT_NPC':
                 npc_ids.append(row)
                 mids.update(child_occurrences.get(row, set()))
-        if d['missionVariant']:
-            mids.intersection_update({d['missionVariant']['missionId']})
+        variant = {'missionId': mission_number(d['missionVariant']['missionId'])} if d['missionVariant'] else None
+        if variant:
+            mids.intersection_update({variant['missionId']})
         model_keys = {
             models[npcs[npc]['ModelId']]['GameObjectDisplayName01']
             .removeprefix('ContainerAircraft_Name_').lower()
@@ -66,27 +74,38 @@ def build_index(definitions, npcs, models, aircraft, mission_tables):
             group, basis = next(iter(matched)), 'DT_LiveAircraft.Category'
         else:
             group, basis = editorial_group(d), 'editorial'
-        output.append({**d, 'subcategory': group, 'missionIds': []})
+        output.append({**d, 'missionVariant': variant, 'subcategory': group, 'missionIds': []})
         evidence.append({'id': d['id'], 'name': d['name'], 'category': d['category'], 'subcategory': group, 'basis': basis})
-    # Parent references also cover separately defined breakable parts. Explicit
-    # mission variants remain confined to their own mission.
+    # partOf describes ownership, not evidence of occurrence in a mission.
+    order = list(range(31))
+    excluded = {d['id']: set() for d in definitions}
+    for rule in mission_exclusions:
+        if rule['missionId'] not in order:
+            raise ValueError(f'Unknown excluded mission: {rule["missionId"]}')
+        for target_id in rule['targetIds']:
+            if target_id not in excluded:
+                raise ValueError(f'Unknown excluded target: {target_id}')
+            excluded[target_id].add(rule['missionId'])
+    # A non-target parent cannot contribute attackable parts in that mission.
+    # Exclusion still applies to parts with their own occurrence evidence.
     for _ in definitions:
         changed = False
         for d in definitions:
-            if not d['partOf'] or d['missionVariant']:
-                continue
-            mids = memberships[d['id']]
-            before = len(mids)
-            mids.update(memberships[d['partOf']])
-            changed |= len(mids) != before
+            if d['partOf']:
+                blocked = excluded[d['id']]
+                before = len(blocked)
+                blocked.update(excluded[d['partOf']])
+                changed |= before != len(blocked)
         if not changed:
             break
-    order = ['1'] + [str(n) for n in range(2, 25)] + ['25day1', '25day2'] + [str(n) for n in range(26, 31)]
     for row in output:
         unknown = memberships[row['id']] - set(order)
         if unknown:
             raise ValueError(f'Unknown mission IDs: {unknown}')
-        row['missionIds'] = sorted(memberships[row['id']], key=order.index)
+        mids = memberships[row['id']]
+        if row['category'] != 'EXCLUDED':
+            mids = mids - excluded[row['id']]
+        row['missionIds'] = sorted(mids, key=order.index)
     return output, evidence
 
 

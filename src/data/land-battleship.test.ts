@@ -10,7 +10,7 @@ test('M24・M25の本体を非掲載とし、M25の主砲を表示する', () =>
   expect(targets.find((t) => t.id === 330)).toMatchObject({
     category: 'EXCLUDED',
     hp: 100,
-    missionVariant: { missionId: '25day1' },
+    missionVariant: { missionId: 24 },
   });
   expect(initial.targetIds).not.toContain(330);
   const saved = {
@@ -64,7 +64,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
   expect(mission).toMatchObject({
     name: 'THRUSTER《LAND BATTLESHIP 1》 [M9]',
     hp: 160,
-    missionVariant: { missionId: '10' },
+    missionVariant: { missionId: 9 },
   });
   expect(common.damageMultipliers.groundMissile).toBe(0.5999999642372131);
   expect(common.damageMultipliers.antiShipMissile).toBe(0.5);
@@ -74,7 +74,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 2,
+        version: 3,
         targetIds: [153, 488],
         showParts,
         showMissionVariants,
