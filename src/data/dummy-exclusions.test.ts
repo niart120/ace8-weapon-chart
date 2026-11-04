@@ -1,7 +1,6 @@
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
 
 test('Q002のダミー6行を非表示にし、掲載対象の同名目標と部位を保持する', () => {
   const excludedIds = [504, 456, 489, 199, 496, 261];
@@ -13,9 +12,9 @@ test('Q002のダミー6行を非表示にし、掲載対象の同名目標と部
     expect(targets.find((t) => t.id === id)?.category).toBe('EXCLUDED');
     expect(initial.targetIds).not.toContain(id);
   }
-  const oldSelection = { ...expanded, targetIds: [...excludedIds, ...retainedIds] };
+  const selection = { ...expanded, targetIds: retainedIds };
   expect(
-    selectedTargets(oldSelection, targets)
+    selectedTargets(selection, targets)
       .map((t) => t.id)
       .sort((a, b) => a - b)
   ).toEqual([...retainedIds].sort((a, b) => a - b));
@@ -26,7 +25,4 @@ test('Q002のダミー6行を非表示にし、掲載対象の同名目標と部
   ] as const) {
     expect(targetCandidates(expanded, targets, query).map((t) => t.id)).toEqual(ids);
   }
-  expect(
-    restorePreferences({ ...oldSelection, version: 1 }, initial, catalog, []).targetIds
-  ).toEqual(retainedIds);
 });

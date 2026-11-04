@@ -3,8 +3,6 @@ import { targets, weapons } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { componentDamage } from '../domain/damage';
 import { roles } from '../domain/types';
-import { initialPreferences } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
 
 // local_003: Blueprint全継承とnative初期値で確認した静的属性。
 // 配信データから期待値を生成せず、確認済みIDを列挙する。
@@ -83,7 +81,7 @@ test('MEGAFLOATの属性を反映し、親構造物3行を除外して部位9行
   }
 });
 
-test('区分8の5行は全ROLEで補正なしとなり、対空MSLパーツと旧選択は維持する', () => {
+test('区分8の5行は全ROLEで補正なしとなり、対空MSLパーツを適用する', () => {
   const ids = [201, 264, 505, 463, 462];
   const missile = weapons.find((weapon) => weapon.id === 1)!;
   for (const id of ids) {
@@ -104,11 +102,6 @@ test('区分8の5行は全ROLEで補正なしとなり、対空MSLパーツと�
       });
     }
   }
-  const catalog = { targets, weapons };
-  const initial = initialPreferences(false, catalog);
-  expect(
-    restorePreferences({ ...initial, version: 1, targetIds: ids }, initial, catalog, []).targetIds
-  ).toEqual(ids);
   expect(targets.find((target) => target.id === 505)?.hp).toBe(30);
   expect(targets.find((target) => target.id === 463)?.hp).toBe(15);
 });

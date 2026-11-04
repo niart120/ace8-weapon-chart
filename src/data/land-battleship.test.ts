@@ -1,12 +1,10 @@
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
-import { mergedTargetIds } from './target-merges';
 import evidence from '../test/fixtures/land-parts-evidence.json';
 import { calculateDefeatRequirement } from '../domain/calculate';
 
-test('M24・M25の本体の旧選択を除去し、M25の主砲を保持する', () => {
+test('M24・M25の本体を非掲載とし、M25の主砲を表示する', () => {
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   expect(targets.find((t) => t.id === 330)).toMatchObject({
@@ -23,9 +21,6 @@ test('M24・M25の本体の旧選択を除去し、M25の主砲を保持する',
   };
   expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual([372]);
   expect(targetCandidates(saved, targets, 'LAND BATTLESHIP 1 [M24]')).toEqual([]);
-  expect(restorePreferences({ ...saved, version: 1 }, initial, catalog, []).targetIds).toEqual([
-    372,
-  ]);
 });
 
 test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象の部位21行を表示する', () => {
@@ -53,7 +48,7 @@ test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象�
   for (const id of partIds) expect(initial.targetIds).toContain(id);
 });
 
-test('THRUSTER154を除外し、153と488の名前・任務耐性差・保存選択を保持する', () => {
+test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条件を保持する', () => {
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   const right = targets.find((t) => t.id === 154)!;
@@ -61,7 +56,6 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・保存選
   const mission = targets.find((t) => t.id === 153)!;
   expect(right).toMatchObject({ category: 'EXCLUDED', hp: 40, partOf: 147 });
   expect(initial.targetIds).not.toContain(154);
-  expect(mergedTargetIds.has(154)).toBe(false);
   expect(common).toMatchObject({
     name: 'THRUSTER《LAND BATTLESHIP 1》',
     hp: 160,
@@ -81,19 +75,14 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・保存選
       const saved = {
         ...initial,
         version: 1,
-        targetIds: [154, 153, 488],
+        targetIds: [153, 488],
         showParts,
         showMissionVariants,
       };
-      const restored = restorePreferences(saved, initial, catalog, []);
-      expect(restored.targetIds).toEqual([153, 488]);
       const visible = showParts ? (showMissionVariants ? [488, 153] : [488]) : [];
-      expect(targetCandidates(restored, targets, 'THRUSTER').map((t) => t.id)).toEqual(visible);
-      expect(selectedTargets(restored, targets).map((t) => t.id)).toEqual(visible);
+      expect(targetCandidates(saved, targets, 'THRUSTER').map((t) => t.id)).toEqual(visible);
+      expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual(visible);
     }
-  expect(
-    restorePreferences({ ...initial, version: 1, targetIds: [154] }, initial, catalog, []).targetIds
-  ).toEqual([]);
 });
 
 test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件でも選択を保持する', () => {
@@ -155,7 +144,10 @@ test('確認済み属性・簡略名・元NPCの親関係を反映し、統合�
     hp: 80,
     missionVariant: null,
   });
-  for (const [oldId, representativeId] of mergedTargetIds) {
+  for (const [oldId, representativeId] of [
+    [249, 248],
+    [258, 254],
+  ]) {
     const old = targets.find((t) => t.id === oldId)!;
     const representative = targets.find((t) => t.id === representativeId)!;
     expect(old.category).toBe('EXCLUDED');

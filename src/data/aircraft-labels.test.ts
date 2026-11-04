@@ -1,7 +1,6 @@
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
 
 // Reviewed mission/NPC mappings; these expectations do not derive labels from the master.
 const labels = [
@@ -36,14 +35,12 @@ test('識別名と任務ラベルを確認済み17行へ対応させる', () => 
   expect(targets.some((t) => t.name.includes('(NAMED'))).toBe(false);
 });
 
-test('任務差分を隠しても保存済みIDの選択を保持し、識別名で検索できる', () => {
+test('任務差分を隠しても選択を保持し、識別名で検索できる', () => {
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   const saved = { ...initial, version: 1, targetIds: [95, 333, 235, 412, 305] };
-  const restored = restorePreferences(saved, initial, catalog, []);
-  expect(restored.targetIds).toEqual(saved.targetIds);
-  expect(selectedTargets(restored, targets).map((t) => t.id)).toEqual([235, 95]);
-  const shown = { ...restored, showMissionVariants: true };
+  expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual([235, 95]);
+  const shown = { ...saved, showMissionVariants: true };
   expect(targetCandidates(shown, targets, 'typhoon (shadow)').map((t) => t.id)).toEqual([333]);
   expect(targetCandidates(shown, targets, 'ventus').map((t) => t.id)).toEqual([305]);
   expect(selectedTargets(shown, targets).map((t) => t.id)).toEqual([305, 235, 412, 95, 333]);

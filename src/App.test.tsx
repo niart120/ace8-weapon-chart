@@ -6,7 +6,7 @@ import { storageKey } from './storage/preferences';
 afterEach(cleanup);
 beforeEach(() => window.localStorage.clear());
 
-test('非掲載TLSパーツを旧保存から除き、他の選択と条件を維持する', () => {
+test('掲載パーツを表示し、現在の選択と条件を保存・復元する', () => {
   const saved = {
     version: 1,
     weaponIds: [1],
@@ -15,7 +15,7 @@ test('非掲載TLSパーツを旧保存から除き、他の選択と条件を�
     showMissionVariants: true,
     conditions: {
       role: 'MULTIROLE',
-      parts: ['laserPower', 'missilePower'],
+      parts: ['missilePower'],
       damageType: 'BLAST',
     },
   };
@@ -24,10 +24,7 @@ test('非掲載TLSパーツを旧保存から除き、他の選択と条件を�
   expect(screen.queryByRole('checkbox', { name: 'TLS.POW+' })).toBeNull();
   expect(screen.getAllByRole('checkbox')).toHaveLength(9);
   expect(screen.getByRole('checkbox', { name: 'MSL.POW+' }).hasAttribute('checked')).toBe(true);
-  expect(JSON.parse(window.localStorage.getItem(storageKey)!)).toEqual({
-    ...saved,
-    conditions: { ...saved.conditions, parts: ['missilePower'] },
-  });
+  expect(JSON.parse(window.localStorage.getItem(storageKey)!)).toEqual(saved);
 });
 test('主画面から兵装と目標を選択できる', () => {
   render(<App />);

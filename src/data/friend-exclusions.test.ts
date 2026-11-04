@@ -1,7 +1,6 @@
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
 
 const excludedIds = [
   18, 19, 20, 21, 81, 82, 83, 84, 158, 159, 160, 161, 234, 22, 23, 24, 25, 209, 211, 162, 461, 163,
@@ -25,16 +24,4 @@ test('承認された友軍候補を保持したまま選択・検索・初期�
   expect(
     targetCandidates(expanded, targets, 'AA GUN《AIRCRAFT CARRIER》').map((t) => t.id)
   ).toEqual([124]);
-});
-
-test('以前選択した除外対象を復元時に外し、他艦本体・部位のIDを維持する', () => {
-  const catalog = { targets, weapons };
-  const initial = initialPreferences(false, catalog);
-  const restored = restorePreferences(
-    { ...initial, version: 1, targetIds: [209, 211, 18, 162, 461, 123, 124, 163] },
-    initial,
-    catalog,
-    []
-  );
-  expect(restored.targetIds).toEqual([123, 124]);
 });

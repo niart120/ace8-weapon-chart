@@ -3,7 +3,9 @@ import { writeFile } from 'node:fs/promises';
 import type { Page, TestInfo } from '@playwright/test';
 
 for (const mobile of [false, true]) {
-  test(`${mobile ? 'スマートフォン' : 'PC'}: TLS.POW+非掲載と旧保存の復元`, async ({ page }) => {
+  test(`${mobile ? 'スマートフォン' : 'PC'}: 掲載パーツと現在の条件の保存・復元`, async ({
+    page,
+  }) => {
     await page.setViewportSize(
       mobile ? { width: 390, height: 844 } : { width: 1440, height: 1000 }
     );
@@ -15,7 +17,7 @@ for (const mobile of [false, true]) {
       showMissionVariants: true,
       conditions: {
         role: 'MULTIROLE',
-        parts: mobile ? ['laserPower'] : ['laserPower', 'missilePower'],
+        parts: mobile ? [] : ['missilePower'],
         damageType: 'BLAST',
       },
     };
@@ -271,7 +273,7 @@ for (const width of [1440, 390]) {
   });
 }
 
-test('除外済み友軍の旧選択を復元せず、他艦の対空砲は保持する', async ({ page }) => {
+test('友軍を候補から除外し、他艦の対空砲を表示する', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.addInitScript(() => {
     localStorage.setItem(
@@ -280,7 +282,7 @@ test('除外済み友軍の旧選択を復元せず、他艦の対空砲は保�
         version: 1,
         conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
         weaponIds: [1],
-        targetIds: [18, 22, 209, 211, 162, 461, 163, 123, 124],
+        targetIds: [123, 124],
         showParts: true,
         showMissionVariants: true,
       })
@@ -301,7 +303,7 @@ test('除外済み友軍の旧選択を復元せず、他艦の対空砲は保�
   await expect(panel.locator('.group-items label')).toHaveCount(1);
 });
 
-test('任務表示番号だけを更新し、旧保存ID・部位・識別名を保持する', async ({ page }) => {
+test('任務番号・部位・識別名を表示して検索できる', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.addInitScript(() => {
     localStorage.setItem(
@@ -339,7 +341,7 @@ test('任務表示番号だけを更新し、旧保存ID・部位・識別名を
   await expect(panel.locator('.group-items label')).toHaveCount(1);
 });
 
-test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と部位を結果と候補に残す', async ({ page }) => {
+test('ダミーと陸上戦艦本体を候補から除外し、通常目標と部位を表示する', async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem(
       'ace8-weapon-guide.preferences',
@@ -347,9 +349,7 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
         version: 1,
         conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
         weaponIds: [1],
-        targetIds: [
-          504, 456, 489, 199, 496, 261, 50, 490, 204, 494, 247, 248, 147, 226, 330, 371, 372,
-        ],
+        targetIds: [50, 490, 204, 248, 372],
         showParts: true,
         showMissionVariants: true,
       })
@@ -386,9 +386,7 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
 });
 
 for (const width of [1440, 390]) {
-  test(`8AAM・TLS・UAVT: ${width}pxで非掲載・旧保存・検索・分類選択・リセットを確認`, async ({
-    page,
-  }) => {
+  test(`8AAM・TLS・UAVT: ${width}pxで非掲載・検索・分類選択・リセットを確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
@@ -397,7 +395,7 @@ for (const width of [1440, 390]) {
         JSON.stringify({
           version: 1,
           conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
-          weaponIds: [1, 5, 6, 7, 21, 33, 34],
+          weaponIds: [1, 5, 7, 21],
           targetIds: [26, 430, 500],
           showParts: false,
           showMissionVariants: false,
@@ -446,21 +444,9 @@ for (const width of [1440, 390]) {
     await expect
       .poll(async () => (await saved()).weaponIds.some((id: number) => [6, 33, 34].includes(id)))
       .toBe(false);
-    // 非掲載兵装だけを選択した旧保存も全選択へ戻さず、空の選択として再保存する。
-    await page.evaluate(() => {
-      const key = 'ace8-weapon-guide.preferences';
-      const state = JSON.parse(localStorage.getItem(key)!);
-      localStorage.setItem(key, JSON.stringify({ ...state, weaponIds: [6, 33, 34] }));
-    });
-    for (let reload = 0; reload < 2; reload++) {
-      await page.reload();
-      await expect(page.getByRole('columnheader')).toHaveCount(2);
-      await expect.poll(async () => (await saved()).weaponIds).toEqual([]);
-    }
-    await expect.poll(async () => (await saved()).targetIds).toEqual([26, 430, 500]);
   });
 
-  test(`SFFS: ${width}pxでBOMB.POW+の即時反映と旧保存を確認`, async ({ page }) => {
+  test(`SFFS: ${width}pxでBOMB.POW+の即時反映と保存・復元を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
@@ -514,7 +500,7 @@ for (const width of [1440, 390]) {
     await expect(bombPower).toBeChecked();
   });
 
-  test(`MEGAFLOAT: ${width}pxで親除外・旧選択・Front/EVと任務名を確認`, async ({ page }) => {
+  test(`MEGAFLOAT: ${width}pxで親除外・Front/EVと任務名を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
@@ -524,7 +510,7 @@ for (const width of [1440, 390]) {
           version: 1,
           conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
           weaponIds: [1],
-          targetIds: [418, 423, 429, 424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425],
+          targetIds: [424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425],
           showParts: false,
           showMissionVariants: false,
         })
@@ -590,7 +576,7 @@ for (const width of [1440, 390]) {
     await expect(page.getByRole('rowheader')).toHaveCount(12);
   });
 
-  test(`陸上戦艦部位: ${width}pxで旧ID移行・新名検索・表示切替を確認`, async ({ page }) => {
+  test(`陸上戦艦部位: ${width}pxで名称検索・表示切替を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
@@ -600,7 +586,7 @@ for (const width of [1440, 390]) {
           version: 1,
           conditions: { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' },
           weaponIds: [1],
-          targetIds: [249, 258, 151, 152, 372, 153, 488, 154],
+          targetIds: [248, 254, 151, 152, 372, 153, 488],
           showParts: false,
           showMissionVariants: false,
         })

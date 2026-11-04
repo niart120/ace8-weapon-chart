@@ -3,7 +3,6 @@ import { targets, weapons } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { componentDamage } from '../domain/damage';
 import { initialPreferences, selectedTargets, targetCandidates } from '../state/preferences';
-import { restorePreferences } from '../storage/preferences';
 
 const target = (id: number) => targets.find((row) => row.id === id)!;
 const weapon = (name: string) => weapons.find((row) => row.name === name)!;
@@ -47,7 +46,7 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
   }
 });
 
-test('親3行の除外後も子部位12行を掲載し、旧保存と非表示中の選択を保持する', () => {
+test('親3行の除外後も子部位12行を掲載し、非表示中の選択を保持する', () => {
   const excluded = [418, 423, 429];
   const parts = [424, 430, 420, 422, 500, 501, 419, 421, 503, 426, 502, 425];
   const common = [424, 430, 420, 422, 500, 501, 503, 502];
@@ -64,32 +63,18 @@ test('親3行の除外後も子部位12行を掲載し、旧保存と非表示�
       const saved = {
         ...initial,
         version: 1,
-        targetIds: [...excluded, ...parts],
+        targetIds: parts,
         showParts,
         showMissionVariants,
       };
-      const restored = restorePreferences(saved, initial, catalog, []);
-      expect(restored.targetIds).toEqual(parts);
       const visible = showParts ? (showMissionVariants ? parts : common) : [];
-      expect(selectedTargets(restored, targets).map((row) => row.id)).toEqual(visible);
+      expect(selectedTargets(saved, targets).map((row) => row.id)).toEqual(visible);
       expect(
-        targetCandidates(restored, targets, 'MEGAFLOAT')
+        targetCandidates(saved, targets, 'MEGAFLOAT')
           .filter((row) => row.partOf === 418 || excluded.includes(row.id))
           .map((row) => row.id)
       ).toEqual(visible);
     }
-  const subset = restorePreferences(
-    { ...initial, version: 1, targetIds: [418, 429, 430, 419] },
-    initial,
-    catalog,
-    []
-  );
-  expect(subset.targetIds).toEqual([430, 419]);
-  expect(selectedTargets(subset, targets)).toEqual([]);
-  expect(
-    restorePreferences({ ...initial, version: 1, targetIds: excluded }, initial, catalog, [])
-      .targetIds
-  ).toEqual([]);
 });
 
 test('支柱は元HP100/200を使い、MSLの地上補正と機銃の整数HP更新で計算する', () => {
