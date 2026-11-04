@@ -8915,7 +8915,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "TRANSPORT",
-    "missionIds": [23, 27],
+    "missionIds": [16, 23, 27],
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -8944,11 +8944,11 @@
   {
     "id": 491,
     "name": "CONTAINER SHIP",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 260,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "TRANSPORT",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 75,
     "damageMultipliers": {
@@ -8978,11 +8978,11 @@
   {
     "id": 492,
     "name": "CONTAINER SHIP",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 261,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "TRANSPORT",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 75,
     "damageMultipliers": {
@@ -9012,13 +9012,13 @@
   {
     "id": 222,
     "name": "CONTAINER SHIP [M16]",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 262,
     "partOf": null,
     "missionVariant": {
       "missionId": 16
     },
-    "subcategory": "TRANSPORT",
+    "subcategory": "OTHER",
     "missionIds": [16],
     "hp": 75,
     "damageMultipliers": {
@@ -9048,7 +9048,7 @@
   {
     "id": 223,
     "name": "MANPADS《CONTAINER SHIP》",
-    "category": "SHIP",
+    "category": "EXCLUDED",
     "order": 263,
     "partOf": 12,
     "missionVariant": null,

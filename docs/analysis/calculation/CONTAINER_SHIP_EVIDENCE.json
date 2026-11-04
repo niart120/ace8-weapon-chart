@@ -1,0 +1,1085 @@
+{
+  "date": "2026-11-04",
+  "headAtReview": "ccb3fdd",
+  "method": "Static table and Blueprint inspection; no runtime spawn/faction/damage measurement",
+  "tableBaselineBuild": 25201480,
+  "currentExecutableMatchesBaseline": false,
+  "exeSha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "currentTargets": [
+    {
+      "id": 12,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 259,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "TRANSPORT",
+      "missionIds": [23, 27],
+      "hp": 75,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ship",
+      "standardDamage": true
+    },
+    {
+      "id": 491,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 260,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "TRANSPORT",
+      "missionIds": [],
+      "hp": 75,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 5,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ship",
+      "standardDamage": true
+    },
+    {
+      "id": 492,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 261,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "TRANSPORT",
+      "missionIds": [],
+      "hp": 75,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 10,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ship",
+      "standardDamage": true
+    },
+    {
+      "id": 222,
+      "name": "CONTAINER SHIP [M16]",
+      "category": "SHIP",
+      "order": 262,
+      "partOf": null,
+      "missionVariant": {
+        "missionId": 16
+      },
+      "subcategory": "TRANSPORT",
+      "missionIds": [16],
+      "hp": 75,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ship",
+      "standardDamage": true
+    },
+    {
+      "id": 223,
+      "name": "MANPADS《CONTAINER SHIP》",
+      "category": "SHIP",
+      "order": 263,
+      "partOf": 12,
+      "missionVariant": null,
+      "subcategory": "PARTS",
+      "missionIds": [16],
+      "hp": 15,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    }
+  ],
+  "catalogDefinitions": [
+    {
+      "id": 12,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 259,
+      "partOf": null,
+      "missionVariant": null,
+      "sourceRefs": [
+        {
+          "table": "DT_NPC_Mission003",
+          "row": "cont_common"
+        },
+        {
+          "table": "DT_NPC_Mission004",
+          "row": "cont_common"
+        },
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "cont_common"
+        },
+        {
+          "table": "DT_NPC_Mission027",
+          "row": "VE025_cont_MS27"
+        }
+      ]
+    },
+    {
+      "id": 491,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 260,
+      "partOf": null,
+      "missionVariant": null,
+      "sourceRefs": [
+        {
+          "table": "DT_NPC",
+          "row": "VE020_ctsl_01"
+        }
+      ]
+    },
+    {
+      "id": 492,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 261,
+      "partOf": null,
+      "missionVariant": null,
+      "sourceRefs": [
+        {
+          "table": "DT_NPC",
+          "row": "VE021_ctslf_01"
+        },
+        {
+          "table": "DT_NPC",
+          "row": "VE021_ctslf_02"
+        },
+        {
+          "table": "DT_NPC",
+          "row": "VE021_ctslf_03"
+        }
+      ]
+    },
+    {
+      "id": 222,
+      "name": "CONTAINER SHIP",
+      "category": "SHIP",
+      "order": 262,
+      "partOf": null,
+      "missionVariant": {
+        "missionId": "17"
+      },
+      "sourceRefs": [
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "VE020_ctsl_01"
+        },
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "VE021_ctslf_01"
+        },
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "VE021_ctslf_02"
+        },
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "VE021_ctslf_03"
+        }
+      ]
+    },
+    {
+      "id": 223,
+      "name": "MANPADS《CONTAINER SHIP》",
+      "category": "SHIP",
+      "order": 263,
+      "partOf": 12,
+      "missionVariant": null,
+      "sourceRefs": [
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "GR032_ctslf_01_stgr"
+        },
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "GR032_ctslf_02_stgr"
+        },
+        {
+          "table": "DT_NPC_Mission017",
+          "row": "GR032_ctslf_03_stgr"
+        }
+      ]
+    }
+  ],
+  "missionReferences": [
+    {
+      "table": "DT_NPC_Mission003",
+      "row": "cont_common",
+      "npcId": "VE025_cont_01",
+      "modelId": "VE025_cont",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission004",
+      "row": "cont_common",
+      "npcId": "VE025_cont_01",
+      "modelId": "VE025_cont",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "VE020_ctsl_01",
+      "npcId": "VE020_ctsl_01",
+      "modelId": "VE020_ctsl",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "ctsl_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 500.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "VE021_ctslf_01",
+      "npcId": "VE021_ctslf_01",
+      "modelId": "VE021_ctslf_01",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "ctslf_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 1000.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": ["GR032_ctslf_01_stgr"],
+      "childComponentNames": ["BP_VE021_stgr_Base"]
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "VE021_ctslf_02",
+      "npcId": "VE021_ctslf_02",
+      "modelId": "VE021_ctslf_02",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "ctslf_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 1000.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": ["GR032_ctslf_02_stgr"],
+      "childComponentNames": ["BP_VE021_stgr_Base"]
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "VE021_ctslf_03",
+      "npcId": "VE021_ctslf_03",
+      "modelId": "VE021_ctslf_03",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "ctslf_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 1000.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": ["GR032_ctslf_03_stgr"],
+      "childComponentNames": ["BP_VE021_stgr_Base"]
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "GR032_ctslf_01_stgr",
+      "npcId": "GR032_ctslf_01_stgr",
+      "modelId": "GR032_stgr",
+      "modelHp": 15.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "GR032_ctslf_02_stgr",
+      "npcId": "GR032_ctslf_02_stgr",
+      "modelId": "GR032_stgr",
+      "modelHp": 15.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission017",
+      "row": "GR032_ctslf_03_stgr",
+      "npcId": "GR032_ctslf_03_stgr",
+      "modelId": "GR032_stgr",
+      "modelHp": 15.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission024",
+      "row": "cont_common",
+      "npcId": "VE025_cont_01",
+      "modelId": "VE025_cont",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    },
+    {
+      "table": "DT_NPC_Mission027",
+      "row": "VE025_cont_MS27",
+      "npcId": "VE025_cont_MS27",
+      "modelId": "VE025_cont_MS27",
+      "modelHp": 75.0,
+      "npcHpDifference": 0,
+      "missionHpDifference": 0,
+      "minimumHp": 0,
+      "baseDurabilityId": "NPC_WPDur_000",
+      "missionDurabilityId": "NPC_WPDur_000",
+      "baseGunPercent": 100.0,
+      "effectiveGunPercent": 100.0,
+      "childNpcIds": [],
+      "childComponentNames": []
+    }
+  ],
+  "blueprints": {
+    "BP_VE020_ctsl_Base_C": {
+      "parent": "BP_AIShip_Pawn_C",
+      "properties": {
+        "MaximumSpeed": 5000.0,
+        "Acceleration": 2000.0,
+        "FireControlSystemComponent": 8,
+        "AISound": {
+          "NPCEngineSoundRowHandle": {
+            "DataTable": 0,
+            "RowName": "None"
+          },
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 9,
+        "OverlapCollision": 30,
+        "GameObjectId": 3008,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3],
+          "FallingSoundPlayEvent": -5,
+          "FallingSoundStopEvent": -6
+        },
+        "HitCenterOffset": [0.0, 0.0, 1400.0],
+        "bIsDeathCameraShake": false,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 16,
+        "RootComponent": 18,
+        "OnEndPlay": [
+          {
+            "object": 16,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 134,
+      "exportBytes": 134,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "5f8eadcf7fd84b84e0a19ef631804f752154e7a902b00f40376c426635ff2c5a",
+      "uexpSha256": "e72afe07277b8c4ba655f13af5c0c35be8d5cd7337d48158b9e2b7f46d07f9e9"
+    },
+    "BP_AIShip_Pawn_C": {
+      "parent": "LiveAIVessels",
+      "properties": {
+        "MaxGroundRotateAngle": 15.0,
+        "MaximumSpeed": 500.0,
+        "Acceleration": 200.0,
+        "RotationSpeed": 15.0,
+        "FireControlSystemComponent": 6,
+        "AISound": {
+          "NPCEngineSoundRowHandle": {
+            "DataTable": -18,
+            "RowName": "NPC_VESSEL_LARGE_RUN"
+          }
+        },
+        "bIsSea": 1,
+        "DamagedStateComponent": 7,
+        "OverlapCollision": 14,
+        "GameObjectCategory": 7,
+        "BriDebriIconType": 3,
+        "DamageSound": {
+          "bEnableDamageSound": 1
+        },
+        "PursuitPointOffset": [0.0, 0.0, 45000.0],
+        "TimeToDeactivateAfterDeath": 80.0,
+        "PlugHolder": 9,
+        "RootComponent": 11,
+        "OnEndPlay": [
+          {
+            "object": 9,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 136,
+      "exportBytes": 136,
+      "functions": ["GetDisplayHealthRate", "GetTakeoffPoint", "GetWorldUILocation"],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "49e4fdf125deec3a744281f35cb334442e99e6edb1bae494cf205abaec82c7fe",
+      "uexpSha256": "c81611a3648e89861cb330f9936569dfc968bb7f64fabbf7a92f553660bf5a7d"
+    },
+    "BP_VE020_ctsl_CP_C": {
+      "parent": "BP_VE020_ctsl_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 9,
+        "UnidentifiedType": 2,
+        "DamagedStateComponent": 10,
+        "OverlapCollision": 23,
+        "MaxHealth": 150.0,
+        "ObjNameID": "ContainerGround_Name_Cargoship",
+        "bCanBeDamagedByAlly": 1,
+        "PlugHolder": 18,
+        "BaseScore": 610,
+        "RootComponent": 20,
+        "OnEndPlay": [
+          {
+            "object": 18,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 107,
+      "exportBytes": 107,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "9955804fa84573b537b7657591db985f3942e00339c6829cf815fed08f6edd6f",
+      "uexpSha256": "b4e71c1867c9737736d4a534dea9a697e108cd77e04eb2998271b276016d9b2c"
+    },
+    "BP_VE021_ctslf_01_CP_C": {
+      "parent": "BP_VE021_ctslf_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 9,
+        "UnidentifiedType": 2,
+        "DamagedStateComponent": 15,
+        "OverlapCollision": 77,
+        "ObjNameID": "ContainerGround_Name_Cargoship",
+        "PlugHolder": 66,
+        "BaseScore": 610,
+        "RootComponent": 70,
+        "OnEndPlay": [
+          {
+            "object": 66,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 98,
+      "exportBytes": 98,
+      "functions": [],
+      "chainDamageSubobjects": [
+        {
+          "name": "LiveChainDamagedState_0",
+          "properties": {},
+          "bytes": 10
+        }
+      ],
+      "uassetSha256": "f0a075b8f4b832f0531a28042db87aca422816de414ebad20057f6b95167d511",
+      "uexpSha256": "d2903946a742906e79fd06a84305f39bed2f2d75cc2effdad2bd80cba8a5627d"
+    },
+    "BP_VE021_ctslf_Base_C": {
+      "parent": "BP_AIShip_Pawn_C",
+      "properties": {
+        "FireControlSystemComponent": 6,
+        "AISound": {
+          "NPCEngineSoundRowHandle": {
+            "DataTable": 0,
+            "RowName": "None"
+          },
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 10,
+        "OverlapCollision": 33,
+        "GameObjectId": 3008,
+        "MaxHealth": 80.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3],
+          "FallingSoundPlayEvent": -5,
+          "FallingSoundStopEvent": -6
+        },
+        "HitCenterOffset": [0.0, 0.0, 1400.0],
+        "bIsDeathCameraShake": false,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 23,
+        "RootComponent": 26,
+        "OnEndPlay": [
+          {
+            "object": 23,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 130,
+      "exportBytes": 130,
+      "functions": [],
+      "chainDamageSubobjects": [
+        {
+          "name": "LiveChainDamagedState_0",
+          "properties": {},
+          "bytes": 10
+        }
+      ],
+      "uassetSha256": "f469930e0b19b87edbece7c930b5253ba71235af5a84c4e15289adf5e7cb1651",
+      "uexpSha256": "7afc7bb316bb8e9855aef0c0df9c47c95e2e533b20c8aebe4c5715766f5db038"
+    },
+    "BP_VE021_ctslf_02_CP_C": {
+      "parent": "BP_VE021_ctslf_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 9,
+        "UnidentifiedType": 2,
+        "DamagedStateComponent": 15,
+        "OverlapCollision": 77,
+        "ObjNameID": "ContainerGround_Name_Cargoship",
+        "PlugHolder": 66,
+        "BaseScore": 610,
+        "RootComponent": 70,
+        "OnEndPlay": [
+          {
+            "object": 66,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 98,
+      "exportBytes": 98,
+      "functions": [],
+      "chainDamageSubobjects": [
+        {
+          "name": "LiveChainDamagedState_0",
+          "properties": {},
+          "bytes": 10
+        }
+      ],
+      "uassetSha256": "4a36fb4a8318dfe9794fba02b78168022f32e857d5d9ac1f0b9d50bf7ab1fa05",
+      "uexpSha256": "5c454fbcb0602dc1e371ca2eeb89a37c3a3225772f622d5fb4eb265dadaeb4fe"
+    },
+    "BP_VE021_ctslf_03_CP_C": {
+      "parent": "BP_VE021_ctslf_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 9,
+        "UnidentifiedType": 2,
+        "DamagedStateComponent": 15,
+        "OverlapCollision": 77,
+        "ObjNameID": "ContainerGround_Name_Cargoship",
+        "PlugHolder": 66,
+        "BaseScore": 610,
+        "RootComponent": 70,
+        "OnEndPlay": [
+          {
+            "object": 66,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 98,
+      "exportBytes": 98,
+      "functions": [],
+      "chainDamageSubobjects": [
+        {
+          "name": "LiveChainDamagedState_0",
+          "properties": {},
+          "bytes": 10
+        }
+      ],
+      "uassetSha256": "fc9e9cb7780c153584d6d61bb6182752e4f75e6ce5cb86ecdc028c47f9e95b9c",
+      "uexpSha256": "5524ae88721af18ae12e6f67f82ea1fb27ce1cabfcf2acde1fde72d347277e8d"
+    },
+    "BP_VE021_ctslf_cntus_01_CP_C": {
+      "parent": "BP_VE021_ctslf_cntus_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 7,
+        "DamagedStateComponent": 8,
+        "OverlapCollision": 35,
+        "PlugHolder": 30,
+        "RootComponent": 32,
+        "OnEndPlay": [
+          {
+            "object": 30,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 52,
+      "exportBytes": 52,
+      "functions": ["GetDisplayFaction", "GetDisplayName", "GetWorldUILocation"],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "c1130496641d93256889d811d4f2b976ea2a8286f9db8ed565a84fea14cdb7b0",
+      "uexpSha256": "ec761d362ccfe2a76fdcdd054f555b2d9e38b4bd9b83ffaf85697fcf29a7ef5e"
+    },
+    "BP_VE021_ctslf_cntus_Base_C": {
+      "parent": "BP_AITurret_Pawn_C",
+      "properties": {
+        "UberGraphFrame": {},
+        "FireSoundEvent": -4,
+        "FireControlSystemComponent": 6,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "bShowHUDBox": false,
+        "bIsIgnoreScoreBoard": 1,
+        "bIsSea": 1,
+        "DamagedStateComponent": 7,
+        "OverlapCollision": 32,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-5],
+          "FallingSoundPlayEvent": -7,
+          "FallingSoundStopEvent": -8,
+          "OverrideSecondExplosionSoundEvent": -6,
+          "OverrideFinalExplosionInAirSoundEvent": -6,
+          "OverrideFinalExplosionInGroundSoundEvent": -6
+        },
+        "PlugHolder": 16,
+        "RootComponent": 18,
+        "OnEndPlay": [
+          {
+            "object": 16,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 117,
+      "exportBytes": 117,
+      "functions": [
+        "BndEvt__BP_VE021_ctslf_cntus_Base_FireControlSystemComponent_K2Node_ComponentBoundEvent_0_LiveFCSNotifyFiredSignature__DelegateSignature",
+        "ExecuteUbergraph_BP_VE021_ctslf_cntus_Base"
+      ],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "a47d5d49acce115095ab20aff9568d222351ac54c295912c2e2d812c069a1c53",
+      "uexpSha256": "02306bb45869aadf29b726ce6d84682ee7d6e131e9de0b20b145753359936aa8"
+    },
+    "BP_AITurret_Pawn_C": {
+      "parent": "LiveAIGroundVehicleObject",
+      "properties": {
+        "Event On Death": [],
+        "bKeepOnGround": false,
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 15,
+        "BriDebriIconType": 9,
+        "DeathVFX_Niagara": -29,
+        "DamageSound": {
+          "bEnableDamageSound": 1
+        },
+        "PursuitPointOffset": [0.0, 0.0, 45000.0],
+        "PlugHolder": 10,
+        "AutoPossessAI": 3,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 104,
+      "exportBytes": 104,
+      "functions": ["Event On Death__DelegateSignature"],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "02360157f6ee23db672fc324d02da7104bc766c673a8ab1675993a685cff0564",
+      "uexpSha256": "385b7b32ecbd071b2adbbc0eed614be6cc537e771ea16431013f8cf2aa2d0348"
+    },
+    "BP_VE021_ctslf_cntus_02_CP_C": {
+      "parent": "BP_VE021_ctslf_cntus_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 32,
+        "PlugHolder": 27,
+        "RootComponent": 29,
+        "OnEndPlay": [
+          {
+            "object": 27,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 52,
+      "exportBytes": 52,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "4e235ed87ec32df60779fec9b4506c58baf089d87a8f5f55a437b16000b15f80",
+      "uexpSha256": "35475cb8d1aefe32c370bf3a9e402151395710c133e55b93451ce3004c320ff0"
+    },
+    "BP_VE021_ctslf_cntus_03_CP_C": {
+      "parent": "BP_VE021_ctslf_cntus_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 32,
+        "PlugHolder": 27,
+        "RootComponent": 29,
+        "OnEndPlay": [
+          {
+            "object": 27,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 52,
+      "exportBytes": 52,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "efdbac5054bd6572b0289d578d028e1dbc0c68fa94b4e820eef2ac9f4e4006d7",
+      "uexpSha256": "3c057b95b85429defed5c8be17c8c8e2ee21636f4f9973c82c834611e2bc803d"
+    },
+    "BP_VE021_stgr_Base_C": {
+      "parent": "BP_GR032_stgr_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "bShowHUDBox": false,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 21,
+        "ObjNameID": "ContainerGround_Name_SPC",
+        "PlugHolder": 15,
+        "BaseScore": 100,
+        "RootComponent": 17,
+        "OnEndPlay": [
+          {
+            "object": 15,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 92,
+      "exportBytes": 92,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "96fd985c96c80de6e7c3cb2f60e6732c77a378e37f805520e73f201525660346",
+      "uexpSha256": "3ca963d506d35254534b3a7b35fa58315dfec5cac20cad7306cfa3ef65fdd956"
+    },
+    "BP_GR032_stgr_Base_C": {
+      "parent": "BP_AITurret_Pawn_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 19,
+        "GameObjectCategory": 5,
+        "MaxHealth": 20.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-1]
+        },
+        "PursuitPointOffset": [0.0, 0.0, 5000.0],
+        "PlugHolder": 10,
+        "RootComponent": 13,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 99,
+      "exportBytes": 99,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "45d3c6d83fbbf14e398142aa39751862b69dc1df0a7fcafd9bcebba08fdcc75a",
+      "uexpSha256": "f55c3b1ae8793f0dc4bb4ff14cc17f72aa9b866bc0c551b5e05d5f0aa7b23f75"
+    },
+    "BP_VE025_cont_Base_C": {
+      "parent": "BP_AIShip_Pawn_C",
+      "properties": {
+        "FireControlSystemComponent": 8,
+        "AISound": {
+          "NPCEngineSoundRowHandle": {
+            "DataTable": 0,
+            "RowName": "None"
+          },
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 9,
+        "OverlapCollision": 23,
+        "GameObjectId": 3008,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3],
+          "FallingSoundPlayEvent": -5,
+          "FallingSoundStopEvent": -6
+        },
+        "HitCenterOffset": [0.0, 0.0, 1400.0],
+        "bIsDeathCameraShake": false,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 13,
+        "BaseScore": 610,
+        "RootComponent": 15,
+        "OnEndPlay": [
+          {
+            "object": 13,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 130,
+      "exportBytes": 130,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "0b32fd339e46d4ea8357ad4340d92cd4a98e5f07ef6e84bbd93c49568eb87107",
+      "uexpSha256": "d76188ef51ba73c7c8d76c3c9ec88a12ce0b8700bfa703115221c959cdc6df39"
+    },
+    "BP_VE025_cont_CP_C": {
+      "parent": "BP_VE025_cont_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 7,
+        "DamagedStateComponent": 8,
+        "OverlapCollision": 18,
+        "MaxHealth": 75.0,
+        "ObjNameID": "ContainerGround_Name_Cargoship",
+        "PlugHolder": 13,
+        "RootComponent": 15,
+        "OnEndPlay": [
+          {
+            "object": 13,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 95,
+      "exportBytes": 95,
+      "functions": [],
+      "chainDamageSubobjects": [],
+      "uassetSha256": "6e74eb6887517fe35d13cdb92be4abfb03983a7440a6636d92890c56715169c2",
+      "uexpSha256": "5a31679fe39e552934e5f98fc01751d25a42fd2a20477d35521922ae3dea0006"
+    },
+    "BP_VE025_cont_CP_MS27_C": {
+      "parent": "BP_VE025_cont_CP_C",
+      "properties": {
+        "FireControlSystemComponent": 5,
+        "DamagedStateComponent": 7,
+        "OverlapCollision": 17,
+        "PlugHolder": 12,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 52,
+      "exportBytes": 52,
+      "functions": [],
+      "chainDamageSubobjects": [
+        {
+          "name": "LiveChainDamagedState_0",
+          "properties": {},
+          "bytes": 10
+        }
+      ],
+      "uassetSha256": "09df8fab90cfb2d7e0a64bbc7e00b8461c014e108a988d5bc52e483eeaabc026",
+      "uexpSha256": "7e8621cb13193ce65f5d27c932906cd990e0ad96b40c12bb718636e4507383f9"
+    }
+  },
+  "communitySources": [
+    {
+      "url": "https://gamerch.com/acecombat8/1017964",
+      "finding": "M16 has three hostile disguised ships among civilian traffic."
+    },
+    {
+      "url": "https://acecombat.wiki.gg/wiki/Singer",
+      "access": "Search index; direct open returned HTTP 403",
+      "finding": "Three MANPADS on the hostile ships; cannot be targeted independently."
+    },
+    {
+      "url": "https://gamerch.com/acecombat8/1019038",
+      "finding": "M23 naval combat is described, but container ships are not individually identified."
+    },
+    {
+      "url": "https://gamerch.com/acecombat8/1019044",
+      "finding": "M27 container ships are not individually identified."
+    }
+  ],
+  "inputSha256": {
+    "docs/initial/ref/tables/DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "docs/initial/ref/tables/DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs/initial/ref/tables/DT_NPC_WeaponDurability.json": "25cb9445a9c07f81b2dd3ed5d6fc07276b0cdd645e4c1f936fc464a055604a59",
+    "docs/initial/ref/tables/DT_NPC_Mission002.json": "7fa9ab45557d450d31bcb3d8274e965ef62fbf3ec24354349f794a3fdd08d74b",
+    "docs/initial/ref/tables/DT_NPC_Mission003.json": "c4e0bc861b5547838610e446c4d3abf8473532e483bf6e66abafeac99b7ed714",
+    "docs/initial/ref/tables/DT_NPC_Mission004.json": "f6de423c0ac810a01b18a6b060898a89fffa21e92a9cd079b85cf03f4880aa58",
+    "docs/initial/ref/tables/DT_NPC_Mission005.json": "8e01a2dfb0f2d820b1ab0e80e42bde707077207984af2930130fc1c6ec740ce7",
+    "docs/initial/ref/tables/DT_NPC_Mission006.json": "93c080b56af2c66c05e5926f8f5086754d30f9a2b0349a71b5f7321aebc68f05",
+    "docs/initial/ref/tables/DT_NPC_Mission007.json": "2e370d5aa843e357ba02b795c358b6d4f3b56c1ff0bf15c38addd5c5454706d0",
+    "docs/initial/ref/tables/DT_NPC_Mission008.json": "ad939fdaf88e230223eaf84a9203ae3f32b87a56ac81d29983ad11cec5dec073",
+    "docs/initial/ref/tables/DT_NPC_Mission009.json": "606c572af04ad14a80aab458be211a09aae82afe92a7634f91d2da80c5e77b07",
+    "docs/initial/ref/tables/DT_NPC_Mission010.json": "e96b8487e429d12946ab91b0cca2d2ca2cca163f9e7f27ea06fbf79cafcfe935",
+    "docs/initial/ref/tables/DT_NPC_Mission011.json": "c26990f3a37c40662eb5fdf0d723a2d1f43aaa605ae6e3a0ccdedd911cdeb176",
+    "docs/initial/ref/tables/DT_NPC_Mission012.json": "90b9feea2af06a3eb3819bc1901eadecd4d8c36c48668bb967d78502fef4bdb1",
+    "docs/initial/ref/tables/DT_NPC_Mission013.json": "599615e2d4a88acf9ce6aadc97fe0fe0bd80221ea9c2cce42e49851f2d0ccc17",
+    "docs/initial/ref/tables/DT_NPC_Mission014.json": "75d6e21333f4eb93dc60834769e4f419ca47f0345214778784dec4d2d7899add",
+    "docs/initial/ref/tables/DT_NPC_Mission015.json": "746995151223907d3be933fa1376a394c3b773b05896ccde7f6fa9101a07e8ad",
+    "docs/initial/ref/tables/DT_NPC_Mission016.json": "0c83ec530ede8fa2b90df6a1320fde2b3a3218d03ddcc8e3a370735e24a22fe6",
+    "docs/initial/ref/tables/DT_NPC_Mission017.json": "62b188d912712abfbc5439ba3ced1dbd9772d23380978bbca2020322a845fa21",
+    "docs/initial/ref/tables/DT_NPC_Mission018.json": "476e09dba72fb5533dbc7c57ee5134915d66950995c195085a8cec4dfc81d4d2",
+    "docs/initial/ref/tables/DT_NPC_Mission019.json": "8ac2fcc37622f9c80dda1afbebd4fadd7a9e4fe9abc7d8b5ad58acde6c074943",
+    "docs/initial/ref/tables/DT_NPC_Mission020.json": "e78aca7be4a1013478284fe440e8c89960e74dc35a2fa3f2a98082f52d457a59",
+    "docs/initial/ref/tables/DT_NPC_Mission021.json": "c7905124140489ba6b5385a00480e2c715e5956ae6dae2ff6a33600acb92604a",
+    "docs/initial/ref/tables/DT_NPC_Mission022.json": "ebd5b1380342d33764c9a2f407993145874897476a4d2c5ac1c40ac17bf55873",
+    "docs/initial/ref/tables/DT_NPC_Mission023.json": "d74b4446780b4546d3c20228d25eb8366cbdd2b3a56c12782a9229054c3f2ce0",
+    "docs/initial/ref/tables/DT_NPC_Mission024.json": "15fb9b1c2eba360baeaa9358c9cf8bbcfc56d8b6485f1e66c456bd534d9b40e9",
+    "docs/initial/ref/tables/DT_NPC_Mission025day1.json": "cbefbf906b92a38d3d1da10a303e6e0ae2d84cb693a1809c30b4082c08d79999",
+    "docs/initial/ref/tables/DT_NPC_Mission025day2.json": "b867952634cb9279423dff21614e0be42212b8b0a4fc8e4e441a47d7021da09e",
+    "docs/initial/ref/tables/DT_NPC_Mission026.json": "d2b9b62f1d90a27f7d780ae515f82a933f5492e0ded364da61cf24e43ec431ec",
+    "docs/initial/ref/tables/DT_NPC_Mission027.json": "052035a5e995c5e587c70a3a37e4c4c15944bed9660f2070291dc3069144d2d2",
+    "docs/initial/ref/tables/DT_NPC_Mission028.json": "b97a307815d788bf0a2a5f8f95af9cdc29ea450598efb277fbe8530116cd4ddb",
+    "docs/initial/ref/tables/DT_NPC_Mission029.json": "dc5d46ae119601f58c927e1357d9b1b8c19a46bf9c41572e9de9e13a5b10dacd",
+    "docs/initial/ref/tables/DT_NPC_Mission030.json": "631ecdc94944a968a1a2250888d84c668bb32290d526f8ffc17b312881f75e2e",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr003.json": "80858ba0e29334a480b53b037e1d7e3936b06d94221ac385ca07a14f7be9c7d6",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr004.json": "0d9be89582eb9c46ee9a0db80219ad6fa6fae9131562da04fb550cec9b5cc159",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr005.json": "d6a936474aa1846849eb9528a74a9e7d91d173b86ead8c2c082eff52dadbf69f",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr006.json": "855f26a179e672f42adb72b9fde887aab4551b1f05d0bfce860d99094a6e508d",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr007.json": "2a2f00473540815d7a482243b60fef6d48fb50fe362bbf1ea49c112fcf9e9653",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr008.json": "6de31bb1f804f37f41f7ee907cf4f724a870868516d2f0eb8c08ed08bb188a58",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr009.json": "fb183979b9cb7243de68702cd2e2aaa37f5caa22156840a6831fceafc113db42",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr010.json": "6f92d6b74647254ea7a5e76464038fd5c7aa40ef71f780185ea800ab0ad9803d",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr011.json": "4692ab34468f3db46b486b92545bfdc24beaa081211dff13273d81d4932f0ac2",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr012.json": "8ae2f8fac1779d585a04f5fbc8f793753441888cf2aa8c0909a0a8d5fa9f1905",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr013.json": "6b3c5b63a8684b8306d656b6e9347f2dfc39316abce0dbbf4b6dd090f02594b4",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr014.json": "3a965c3a3341a2805047184efc1f7cd860bd41cfdd702b5295273a713e9d29ba",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr015.json": "dfc9f92c10b5dd3281ec393c199d47e66381e2f305fd9f01aa4b6ce081020427",
+    "data/local/catalog.json": "92b9c167d1c21161d60889262e786753b9171e2105b4cfd37d6f9355955e9ea2",
+    "src/data/targets.json": "47f4e9903b9269537a1c75e28edc429d7744b9c25cfd7e3f0390b9f14cd399ae"
+  },
+  "protectedFilesUnchanged": {
+    "src\\data\\targets.json": "47f4e9903b9269537a1c75e28edc429d7744b9c25cfd7e3f0390b9f14cd399ae",
+    "src\\data\\weapons.json": "700022c0c6453ffb35efb2b88ae04070aacdaf05d514f9bbd732f552af062d72",
+    "src\\data\\modifiers.json": "22f7650aac4aec283fdae34ddb74e451d2bc70bbeb4fb553dc4d1eb2ac2962a0",
+    "data\\local\\catalog.json": "92b9c167d1c21161d60889262e786753b9171e2105b4cfd37d6f9355955e9ea2",
+    "data\\local\\npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data\\local\\native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data\\local\\generation-input.json": "84f5c89e4d0a6d293158bdc775e22370153019c594caa5b84906a3b0276054fc"
+  }
+}
