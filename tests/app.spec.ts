@@ -32,7 +32,7 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
   const start = Date.now();
   await page.goto('/');
   await expect(page.getByRole('table')).toBeVisible();
-  await expect(page.getByRole('columnheader')).toHaveCount(36);
+  await expect(page.getByRole('columnheader')).toHaveCount(35);
   const initialMs = Date.now() - start;
   const f16 = page
     .getByRole('row')
@@ -62,7 +62,7 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
   await panel.getByRole('button', { name: 'MSL.AIR', exact: true }).click();
   await expect(panel.getByRole('checkbox', { name: 'QAAM', exact: true })).toBeVisible();
 
-  await expect(page.getByRole('columnheader')).toHaveCount(36);
+  await expect(page.getByRole('columnheader')).toHaveCount(35);
   await panel.getByRole('checkbox', { name: 'MSL.AIR all' }).uncheck();
   await page.keyboard.press('Escape');
   await expect(panel).not.toBeVisible();
@@ -115,8 +115,8 @@ test('PC: 全列・即時計算・検索・分類操作・固定表示・保存'
     searchMs,
     scrollMs,
     rows,
-    weaponColumns: 34,
-    totalColumns: 36,
+    weaponColumns: 33,
+    totalColumns: 35,
   });
 });
 test('スマートフォン: 初回3列・設定・同時選択・全解除と復元・リセット', async ({ page }, info) => {
@@ -344,6 +344,66 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
 });
 
 for (const width of [1440, 390]) {
+  test(`8AAM: ${width}pxで非掲載・旧保存・検索・分類選択・リセットを確認`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.addInitScript(() => {
+      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      localStorage.setItem(
+        'ace8-weapon-guide.preferences',
+        JSON.stringify({
+          version: 1,
+          conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
+          weaponIds: [1, 5, 6, 7, 21],
+          targetIds: [26, 430, 500],
+          showParts: false,
+          showMissionVariants: false,
+        })
+      );
+    });
+    const saved = () =>
+      page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!));
+    await page.goto('/');
+    await expect(page.getByRole('columnheader')).toHaveCount(6);
+    await expect(page.getByRole('columnheader', { name: '8AAM', exact: true })).toHaveCount(0);
+    await expect.poll(saved).toEqual({
+      version: 1,
+      conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' },
+      weaponIds: [1, 5, 7, 21],
+      targetIds: [26, 430, 500],
+      showParts: false,
+      showMissionVariants: false,
+    });
+    await page.reload();
+    await expect(page.getByRole('columnheader')).toHaveCount(6);
+    await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
+    const panel = page.getByRole('dialog', { name: 'WEAPONS' });
+    await expect(panel.getByRole('checkbox', { name: '6AAM', exact: true })).toBeChecked();
+    await panel.getByRole('searchbox').fill('8AAM');
+    await expect(panel.locator('.group-items label')).toHaveCount(0);
+    await panel.getByRole('checkbox', { name: 'MSL.AIR all', exact: true }).check();
+    await expect
+      .poll(async () => (await saved()).weaponIds)
+      .toEqual([1, 5, 7, 21, 3, 4, 8, 9, 10, 11, 12, 13]);
+    await panel.getByRole('searchbox').fill('');
+    await expect(panel.getByRole('checkbox', { name: '8AAM', exact: true })).toHaveCount(0);
+    await panel.getByRole('button', { name: 'Reset weapons', exact: true }).click();
+    await panel.getByRole('button', { name: 'Close weapons', exact: true }).click();
+    await expect(page.getByRole('columnheader')).toHaveCount(width === 390 ? 3 : 35);
+    await expect.poll(async () => (await saved()).weaponIds.includes(6)).toBe(false);
+    // 8AAMだけを選択した旧保存も全選択へ戻さず、空の選択として再保存する。
+    await page.evaluate(() => {
+      const key = 'ace8-weapon-guide.preferences';
+      const state = JSON.parse(localStorage.getItem(key)!);
+      localStorage.setItem(key, JSON.stringify({ ...state, weaponIds: [6] }));
+    });
+    for (let reload = 0; reload < 2; reload++) {
+      await page.reload();
+      await expect(page.getByRole('columnheader')).toHaveCount(2);
+      await expect.poll(async () => (await saved()).weaponIds).toEqual([]);
+    }
+    await expect.poll(async () => (await saved()).targetIds).toEqual([26, 430, 500]);
+  });
+
   test(`SFFS: ${width}pxでBOMB.POW+の即時反映と旧保存を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {

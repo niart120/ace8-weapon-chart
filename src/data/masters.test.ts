@@ -3,14 +3,13 @@ import { weapons, targets, modifiers } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { componentDamage } from '../domain/damage';
 import { weaponCategories, targetCategories } from '../domain/types';
-test('合意済み34兵装と8件のUNUSEDを別の固定IDで保持する', () => {
+test('合意済み33兵装と9件のUNUSEDを別の固定IDで保持する', () => {
   expect(weapons.filter((w) => w.category !== 'UNUSED').map((w) => w.name)).toEqual([
     'MSL',
     'MSL (Rookie)',
     '2AAM',
     '4AAM',
     '6AAM',
-    '8AAM',
     'HCAA',
     'HPAA',
     'HVAA',
@@ -40,7 +39,13 @@ test('合意済み34兵装と8件のUNUSEDを別の固定IDで保持する', () 
     'TLS [s]',
     'UAVT',
   ]);
-  expect(weapons.filter((w) => w.category === 'UNUSED')).toHaveLength(8);
+  expect(weapons.filter((w) => w.category === 'UNUSED')).toHaveLength(9);
+  expect(weapons.find((w) => w.id === 6)).toMatchObject({
+    name: '8AAM',
+    category: 'UNUSED',
+    order: 5,
+    primary: { baseDamage: null },
+  });
   expect(weapons[0].primary.baseDamage).toBe(40);
   expect(weapons[1].primary.baseDamage).toBe(56);
   expect(weapons.filter((w) => w.name.startsWith('GUN')).map((w) => w.primary.baseDamage)).toEqual([
@@ -106,7 +111,7 @@ test('SFFSは親からのBOMB.POW+を子弾1発へ一度適用し40と48の境�
   }
 });
 
-test('既知の免疫・未収録の8AAM・確認済みSFFSのパーツ補正を区別する', () => {
+test('既知の免疫・非掲載8AAMの未確認値・確認済みSFFSのパーツ補正を区別する', () => {
   const depot = targets.find((t) => t.name === 'HARDENED DEPOT')!;
   const bomb = weapons.find((w) => w.name === 'UGB')!;
   const condition = { role: 'FIGHTER', parts: [], damageType: 'DIRECT' } as const;

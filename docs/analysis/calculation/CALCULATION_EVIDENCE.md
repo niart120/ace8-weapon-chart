@@ -31,9 +31,9 @@ UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimpor
 
 8AAMはDT_LiveWeaponに定義があるが、同梱のプレイヤー兵装Blueprintに基礎威力がない。隣接する6AAMやBot用定義から補完せずnullを保持する。
 
-2026-11-04の[local_004追加調査](../../../spec/agent/wip/local_004/WEAPON_UNCERTAINTY_REVIEW.md)で、SFFSは現行EXEの親弾へのBOMB.POW+適用→子弾パラメータ→子弾Damage上書きまで接続を確認した。基礎40ならfloat32で48となり、この生成経路では二重適用されない。SFFS親・子とパーツ表は同梱資産とハッシュ一致。ただし旧EXEの全経路の同一性は未検証。承認後、子弾の基礎40を保持して親26のパーツ対応を参照する生成設定を追加し、未確認指定を解除した。HP45/48/49の固定期待値と全DAMAGE TYPE、実データと画面操作で検証した。
+2026-11-04の[local_004追加調査](../../../spec/agent/complete/local_004/WEAPON_UNCERTAINTY_REVIEW.md)で、SFFSは現行EXEの親弾へのBOMB.POW+適用→子弾パラメータ→子弾Damage上書きまで接続を確認した。基礎40ならfloat32で48となり、この生成経路では二重適用されない。SFFS親・子とパーツ表は同梱資産とハッシュ一致。ただし旧EXEの全経路の同一性は未検証。承認後、子弾の基礎40を保持して親26のパーツ対応を参照する生成設定を追加し、未確認指定を解除した。HP45/48/49の固定期待値と全DAMAGE TYPE、実データと画面操作で検証した。
 
-同調査で8AAMのNPC用Damage80・オンライン用Damage60の資産を発見したが、キャンペーン機体一覧36行の装備IDとプレイヤー機37 Blueprintに8AAMの参照は見つからなかった。威力を補完する段階の前に、キャンペーンの掲載対象かを再判断する必要がある。所在・命令・ハッシュは[WEAPON_UNCERTAINTY_EVIDENCE.json](WEAPON_UNCERTAINTY_EVIDENCE.json)へ記録した。
+同調査で8AAMのNPC用Damage80・オンライン用Damage60の資産を発見したが、キャンペーン機体一覧36行の装備IDとプレイヤー機37 Blueprintに8AAMの参照は見つからなかった。機体ツリー32機種・追加2機種・任務専用2行の再確認後、ユーザー承認により固定ID6を保持してUNUSEDへ変更した。基礎威力nullは保持し、別モードの値を補完しない。所在・命令・ハッシュは[WEAPON_UNCERTAINTY_EVIDENCE.json](WEAPON_UNCERTAINTY_EVIDENCE.json)、追加の装備照合は[EIGHT_AAM_AVAILABILITY.json](EIGHT_AAM_AVAILABILITY.json)へ記録した。
 
 ## 追加抽出とビルド差
 

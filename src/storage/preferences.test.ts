@@ -5,6 +5,44 @@ import { weapons, targets, modifiers } from '../data/masters';
 const catalog = { weapons, targets };
 const initial = initialPreferences(false, catalog);
 const parts = modifiers.parts.map((p) => p.key);
+test('8AAMの旧選択だけを除き、他の選択・条件・全解除を再保存後も保持する', () => {
+  for (const [savedIds, expected] of [
+    [
+      [1, 5, 6, 7, 21],
+      [1, 5, 7, 21],
+    ],
+    [[6], []],
+    [[], []],
+  ]) {
+    const saved = {
+      ...initial,
+      version: 1,
+      weaponIds: savedIds,
+      targetIds: [26, 430, 500],
+      conditions: { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'BLAST' } as const,
+      showParts: false,
+      showMissionVariants: false,
+    };
+    const restored = restorePreferences(saved, initial, catalog, parts);
+    expect(restored).toEqual({
+      conditions: saved.conditions,
+      weaponIds: expected,
+      targetIds: saved.targetIds,
+      showParts: false,
+      showMissionVariants: false,
+    });
+    const values = new Map<string, string>();
+    const storage = {
+      getItem: (key: string) => values.get(key) ?? null,
+      setItem: (key: string, value: string) => {
+        values.set(key, value);
+      },
+    };
+    writePreferences(storage, restored);
+    expect(readPreferences(storage, initial, catalog, parts)).toEqual(restored);
+  }
+});
+
 test('全解除を保存・復元し、検索・パネル・結果は保存しない', () => {
   const values = new Map<string, string>();
   const storage = {

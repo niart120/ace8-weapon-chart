@@ -76,7 +76,7 @@
   {
     "id": 6,
     "name": "8AAM",
-    "category": "MSL.AIR",
+    "category": "UNUSED",
     "order": 5,
     "calculation": "hits",
     "primary": {

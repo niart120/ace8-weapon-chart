@@ -58,6 +58,8 @@
 
 ユーザーからの未解禁情報に基づき、単発EML（WeaponID 10）・PLSL（25）・ADMM（42）は `UNUSED` として現時点の表示対象から外すことを合意した。PGUN（35・内部名 `pgun`、収録略号は `PLSL`）・EMLT（44）・UAVG（102）・UAVP（101）・FAEB（32）も、ユーザー指定により `UNUSED` とする。これらは名称の抽出結果とは別の設計判断。`blueprint_weapons.json` の `BP_plwp_eml_x0_C` はWeaponID 10・基礎威力140、`BP_plwp_eml_x3_C` はWeaponID 45・基礎威力80であり、単発EMLとEMLBを同じ略号だけで一括除外しない。EMLB（45）とUAVT（103）は表示対象として合意済み。同系統の定義の除外に巻き込まない。UAVTの評価方法・計算単位は引き続き未確定。
 
+2026-11-04、現行キャンペーンの搭載機がないことを追加調査し、ユーザー承認により8AAM（WeaponID8）もUNUSEDへ変更した。アプリ固定ID6・名前・順序は保持する。NPC用・オンライン用資産の不存在を意味しない。根拠は[local_004](../../../spec/agent/complete/local_004/WEAPON_UNCERTAINTY_REVIEW.md)を参照。
+
 アプリ独自の絞り込み分類名は初期設計仕様書の3.8に記載する。命中条件や操作欄の見出しは未確定。`TypeA`・`TypeB`・`TypeC` と `TLS [s]` は合意済みのアプリ表記を維持する。
 
 ## 再現・検証

@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 import { weapons, targets } from '../data/masters';
 const catalog = { weapons, targets };
 test('PC初回は全兵装、スマートフォン初回は通常MSL、目標は全選択', () => {
-  expect(initialPreferences(false, catalog).weaponIds).toHaveLength(34);
+  expect(initialPreferences(false, catalog).weaponIds).toHaveLength(33);
   expect(initialPreferences(true, catalog).weaponIds).toEqual([1]);
   expect(initialPreferences(false, catalog).targetIds).toHaveLength(
     targets.filter((t) => t.category !== 'EXCLUDED').length
@@ -28,7 +28,7 @@ test('検索と開閉に依存せず分類全体を一括操作し、一部選�
   expect(toggleGroup([1, ...group], group)).toEqual([1]);
   expect(weaponCandidates(weapons, 'qAa')).toHaveLength(1);
   const initial = initialPreferences(false, catalog);
-  expect(selectedWeapons(initial, weapons)).toHaveLength(34);
+  expect(selectedWeapons(initial, weapons)).toHaveLength(33);
   expect(selectedWeapons({ ...initial, weaponIds: [] }, weapons)).toEqual([]);
 });
 test('部位と任務差分を両方要求する行を隠しても個別選択を保持する', () => {

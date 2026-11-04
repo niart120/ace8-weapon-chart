@@ -1,0 +1,218 @@
+{
+  "investigation_date": "2026-11-04",
+  "basis_head": "64744e3",
+  "runtime_measurement": false,
+  "production_data_changed": false,
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "previous_evidence": "docs/analysis/calculation/WEAPON_UNCERTAINTY_EVIDENCE.json",
+  "previous_evidence_sha256": "42d16a857c983da3b17aaa17219065c36e08b81af22e9d741acee6b02087b608",
+  "full_local_report": "data/local/local004-8aam-availability.json",
+  "full_local_report_sha256": "895d9c19d8c4f0ab75287974635db53a3aa5f1d37ac7f164a19555357054815b",
+  "aircraft_rows": 36,
+  "parameter_tables": 35,
+  "campaign_8aam_assignments": [],
+  "tree_aircraft_count": 34,
+  "tree_parts_count": 58,
+  "tree_aircraft_ids": [
+    27010, 7010, 23010, 31010, 15010, 2010, 17010, 20010, 29010, 22010, 1010, 30010, 26010, 12010,
+    4010, 24010, 32010, 8010, 9010, 10010, 25010, 11010, 14010, 28010, 5010, 6010, 21010, 19010,
+    18010, 16010, 13010, 3010
+  ],
+  "extra_aircraft": [
+    {
+      "row": "Row_0034_1",
+      "plane_id": 10034010,
+      "plane": "PP0034_f14a",
+      "parameter": "DT_PlayerParameter_PP0034_f14a",
+      "weapon_ids": [15, 23, 30, 0],
+      "weapons": ["hvaa", "saam", "ugb"]
+    },
+    {
+      "row": "Row_0038",
+      "plane_id": 38010,
+      "plane": "PP0038_adfx02_L001",
+      "parameter": "DT_PlayerParameter_PP0038_adfx02_L001",
+      "weapon_ids": [33, 28, 40, 0],
+      "weapons": ["mpbm", "tls", "ecm"]
+    }
+  ],
+  "mission_variants_outside_tree": [
+    {
+      "row": "Row_0013_2",
+      "plane_id": 10013010,
+      "plane": "PP0013_a06e_ms15",
+      "parameter": "DT_PlayerParameter_PP0013_a06e_ms15",
+      "weapon_ids": [18, 19, 30, 0],
+      "weapons": ["lagm", "lasm", "ugb"]
+    },
+    {
+      "row": "Row_0024_2",
+      "plane_id": 10024010,
+      "plane": "PP0024_f18f_ms01",
+      "parameter": "DT_PlayerParameter_PP0024_f18f",
+      "weapon_ids": [19, 4, 11, 0],
+      "weapons": ["lasm", "4aam", "gpb"]
+    }
+  ],
+  "examples": [
+    {
+      "row": "Row_0005",
+      "plane_id": 5010,
+      "plane": "PP0005_f22a",
+      "parameter": "DT_PlayerParameter_PP0005_f22a",
+      "weapon_ids": [21, 4, 31, 0],
+      "weapons": ["qaam", "4aam", "xsdb"]
+    },
+    {
+      "row": "Row_0011",
+      "plane_id": 11010,
+      "plane": "PP0011_typn",
+      "parameter": "DT_PlayerParameter_PP0011_typn",
+      "weapon_ids": [4, 16, 9, 0],
+      "weapons": ["4aam", "laam", "8agm"]
+    },
+    {
+      "row": "Row_0021",
+      "plane_id": 21010,
+      "plane": "PP0021_su57",
+      "parameter": "DT_PlayerParameter_PP0021_su57",
+      "weapon_ids": [21, 13, 17, 0],
+      "weapons": ["qaam", "hcaa", "lacm"]
+    },
+    {
+      "row": "Row_0023",
+      "plane_id": 23010,
+      "plane": "PP0023_f14d",
+      "parameter": "DT_PlayerParameter_PP0023_f14d",
+      "weapon_ids": [16, 23, 11, 0],
+      "weapons": ["laam", "saam", "gpb"]
+    }
+  ],
+  "table_checks": {
+    "DT_LiveWeapon": {
+      "row_struct": "PlayerWeaponDataTable",
+      "row_count": 49,
+      "consumed_bytes": 10982,
+      "export_bytes": 10986
+    },
+    "DT_LiveAircraft": {
+      "row_struct": "PlayerPlaneDataTable",
+      "row_count": 36,
+      "consumed_bytes": 14632,
+      "export_bytes": 14636
+    },
+    "DT_LiveMenuAircraftTreeNodeDataTable": {
+      "row_struct": "LiveMenuAircraftTreeNodeDataTable",
+      "row_count": 90,
+      "consumed_bytes": 4672,
+      "export_bytes": 4676
+    },
+    "DT_LiveMenuAircraftTreeExNodeDataTable": {
+      "row_struct": "LiveMenuAircraftTreeExNodeDataTable",
+      "row_count": 2,
+      "consumed_bytes": 50,
+      "export_bytes": 54
+    },
+    "DT_LiveMenuAircraftTreeLineDataTable": {
+      "row_struct": "LiveMenuAircraftTreeLineDataTable",
+      "row_count": 137,
+      "consumed_bytes": 16211,
+      "export_bytes": 16215
+    },
+    "DT_LiveParts": {
+      "row_struct": "LivePartsDataTable",
+      "row_count": 60,
+      "consumed_bytes": 10021,
+      "export_bytes": 10025
+    },
+    "DT_WingmanAircraft": {
+      "row_struct": "LiveWingmanAircraftListTable",
+      "row_count": 34,
+      "consumed_bytes": 2094,
+      "export_bytes": 2098
+    },
+    "DT_OnlineAircraftParam": {
+      "row_struct": "LiveOnlinePlaneDataTable",
+      "row_count": 41,
+      "consumed_bytes": 2068,
+      "export_bytes": 2072
+    },
+    "DT_Mission027_Weapons": {
+      "row_struct": "LiveChainDamageRelevant_MGFPillar",
+      "row_count": 5,
+      "consumed_bytes": 228,
+      "export_bytes": 232
+    }
+  },
+  "settings_checks": {
+    "DA_LiveMenuAircraftSettings": {
+      "consumed": 343,
+      "export_bytes": 343
+    },
+    "DA_LiveMenuAircraftTreePageSettings": {
+      "consumed": 76,
+      "export_bytes": 76
+    }
+  },
+  "wingman_8aam_assignments": [],
+  "followup_asset_sha256": {
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftSettings.uasset": "1353e3fd04cf9c37acb9675554d94524af2a23e95e0b01d73e17ed335072d49e",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftSettings.uexp": "d1d19867847a43d4351cad8541447a952fbb812d008a5ace83789fc1733c902b",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftTreePageSettings.uasset": "6e72ee4f867f42ea88ebf0691632ac625fb6eba1f62b2ffe1512aaacf2e5c580",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftTreePageSettings.uexp": "88bc0235047536ffac4741a0d5dcef16b822e28f98f8f480407232130b7615e7",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeExNodeDataTable.uasset": "b1b22f411082d769e979613564aa0c351cf696c86f4811f5bf9037f71541aeca",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeExNodeDataTable.uexp": "bbc339d6c668209e6b6ee3d826bbd2899ed6df459a3da81cd08e8f11d9cb0c0e",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeLineDataTable.uasset": "193b091137b42c953acdd889777bd0459f873d20498bd85ab7ce117afd216870",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeLineDataTable.uexp": "27616a8452010cf5e32605242b7177be8e09c50315bc8f93a6bfddfa0d767256",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeNodeDataTable.uasset": "4f3d9b984bf6d1d64bbd8bc1f41f7d08437e9b89597559da4c25aeea9261f4e8",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeNodeDataTable.uexp": "809570a7fceeb1a764aaacab5f80c6b9b91e60f9b9f2a2f5eaf888bac44e606f",
+    "data/local/local004-8aam-followup-raw/Live/Content/Maps/Ingame/Mission027/DAtoDT/DT_Mission027_Weapons.uasset": "1eb22c99d5c7b7fe4f74c3351316f1af3621b1e17a496c238ef00ffd115e4e9f",
+    "data/local/local004-8aam-followup-raw/Live/Content/Maps/Ingame/Mission027/DAtoDT/DT_Mission027_Weapons.uexp": "a5d534027527982c7dc4343a947e9fc00b0fadcfd710adf6f7e63cb8573325ca",
+    "data/local/local004-8aam-followup-raw/Live/Content/OnlineMode/DataTables/Information/DT_OnlineAircraftParam.uasset": "a908cfb5c7102f14ed890d8cc1fc7fa4789a0491fa1b0bfa8d8fd28bcaf62a9d",
+    "data/local/local004-8aam-followup-raw/Live/Content/OnlineMode/DataTables/Information/DT_OnlineAircraftParam.uexp": "cdadc8a9ee749c9eed7fa3b3156d6e9d2d0d4377daf8e9574b32a2047831bcf4",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/AI/DataInstance/DT_WingmanAircraft.uasset": "3156e6f00d835411d4ea76f0c30ea98867951ffb50e4e1e583b5d73ab5b1b9d4",
+    "data/local/local004-8aam-followup-raw/Live/Content/Datatables/AI/DataInstance/DT_WingmanAircraft.uexp": "bb88f79f8d49261cdd847d2fe0957141109d42f40c34dab5cdbc202d46ed6cf7"
+  },
+  "extraction": [
+    {
+      "filter": "Datatables/UI/Menu/HangerMenu/AircraftTree/",
+      "returncode": 0,
+      "extracted": 5,
+      "failed": 0
+    },
+    {
+      "filter": "Datatables/AI/DataInstance/DT_WingmanAircraft",
+      "returncode": 0,
+      "extracted": 1,
+      "failed": 0
+    },
+    {
+      "filter": "OnlineMode/DataTables/Information/DT_OnlineAircraftParam",
+      "returncode": 0,
+      "extracted": 1,
+      "failed": 0
+    },
+    {
+      "filter": "Maps/Ingame/Mission027/DAtoDT/DT_Mission027_Weapons",
+      "returncode": 0,
+      "extracted": 1,
+      "failed": 0
+    }
+  ],
+  "protected_sha256": {
+    "src/data/targets.json": "d1a0da7bea252dd1bec668f8910bfc50a2331c465c78e786e7aea219b1c3d033",
+    "src/data/weapons.json": "e87c265d097b1ba639e18fa33160bf7142ba243f66aea2bdbb0880efe52b7e7b",
+    "src/data/modifiers.json": "6379b8025cffa7ff3e48fc81520ae83ef83dcc29292ec32287fe109e6a9f83a0",
+    "data/local/catalog.json": "a9fd0e9537d4069797b0a05c6069cfd3224b5ac6ce3555d44d51e037ac30343b",
+    "data/local/npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data/local/native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data/local/generation-input.json": "cc0aa50af93e352e0a7559ef74190a5f842375da40be25884db7e5123b936793"
+  },
+  "limits": [
+    "No game execution, equipment-screen observation or runtime damage measurement.",
+    "OnlineAircraftParam contains ability IDs; it does not establish online 8AAM availability.",
+    "Mission027_Weapons contains chain damage configuration, not player equipment.",
+    "Global mission-event weapon replacement and online equipment selection are not exhaustively traced.",
+    "Current installed assets only; later content additions are outside this conclusion."
+  ]
+}

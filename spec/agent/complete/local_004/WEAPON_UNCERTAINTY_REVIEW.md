@@ -1,6 +1,6 @@
 # 兵装側の未確認経路の調査
 
-状態: SFFSの承認済み対応・検証を完了。8AAMの掲載判断は保留。
+状態: 完了。SFFSのBOMB.POW+対応と8AAMの固定ID6を保持したUNUSED化を実装・検証済み。TLS・UAVTと実ゲーム測定は後続課題。
 
 ## 1. 概要
 
@@ -193,3 +193,112 @@ Pythonスクリプト2本の構文解析、公開証拠と完全版のハッシ�
 | 調査記録 | 反映後に調査スクリプトを再実行し、保護対象ハッシュ以外の全解析結果が初回報告と一致。公開証拠が参照する初回報告のSHA-256も維持。Python構文・リンク・`git diff --check`を確認 |
 
 制限環境内の`pnpm test`は作業ディレクトリ正規化のアクセス拒否で起動できなかった。許可された制限外実行でRed/Greenと上記pnpm検証を実施した。参照資料なしの別コピー検証と実ゲーム測定は再実施していない。8AAMの掲載状態・基礎威力nullは維持し、次の議論対象として残す。
+
+## 12. 8AAMのキャンペーン装備可否の再調査
+
+2026-11-04、ユーザーの「キャンペーンで装備できたはず」という記憶を受け、搭載機・機体ツリーの追加枠・コミュニティ資料を照合した。開始時HEADは`64744e3`、ブランチは`codex/initial-implementation`、作業ツリーはクリーン。今回は調査・記録だけを行い、掲載変更・コミットは行わない。
+
+**判断: 調査対象の現行ビルドでは、キャンペーンの自機に8AAMを割り当てた機体はないと判断する。** 通常32機種と追加2機種、任務専用2行の装備設定にWeaponID8はない。8AAMの資産そのものは存在するため、「ゲーム全体で未使用」「基礎威力を読めない」という意味ではない。
+
+### 12.1 元データで確認した範囲
+
+| 対象 | 静的確認の結果 |
+| --- | --- |
+| `DT_LiveAircraft`と参照先35パラメータ表 | 全36行の装備4枠を再読取。初回証拠と全装備IDが一致し、8は0件 |
+| `DT_LiveMenuAircraftTreeNodeDataTable` | 全90行を末尾まで読取。機体32行は全て上記装備表へ対応。他58行は全て`DT_LiveParts`のPartsIDへ対応 |
+| `DT_LiveMenuAircraftTreeExNodeDataTable` | 追加2行はF-14A（PlaneID10034010）とADFX-02（38010）。それぞれHVAA/SAAM/UGB、MPBM/TLS/ECMであり、追加枠にも8AAMなし |
+| 機体ツリー外の2行 | A-6E任務用`PP0013_a06e_ms15`はLAGM/LASM/UGB。F/A-18F任務用`PP0024_f18f_ms01`はLASM/4AAM/GPB。内部名のms番号を画面の任務番号とは扱わない |
+| ツリーの接続表・設定2資産 | 接続137行と表示設定を末尾まで読取。設定は配置・色・スクロール等とページ背景で、別の兵装解放リストではない |
+| `DT_WingmanAircraft` | 全34行の`EquipSpWeapon1st/2nd`にも8は0件。NPC用8AAM資産があることと、通常の僚機がそれを装備することは別 |
+
+代表的な機体のキャンペーン装備は以下。IDはゲーム側のWeaponIDであり、アプリ固定IDとは異なる。
+
+| 機体 | 特殊兵装1 / 2 / 3 | WeaponID |
+| --- | --- | --- |
+| F-22A | QAAM / 4AAM / XSDB | 21 / 4 / 31 |
+| F-14D | LAAM / SAAM / GPB | 16 / 23 / 11 |
+| Su-57 | QAAM / HCAA / LACM | 21 / 13 / 17 |
+| TYPHOON | 4AAM / LAAM / 8AGM | 4 / 16 / 9 |
+
+F-22Aのツリーノードは機体550,000 MRP、特殊兵装2・3が各55,000 MRP。購入費が設定された第2枠も4AAMであり、初期装備だけを調べて8AAMを見落とした結果ではない。
+
+探索した`DT_OnlineAircraftParam`41行はAbilityIdLists、`DT_Mission027_Weapons`5行は甲板支柱の連動ダメージ設定だった。ファイル名から装備一覧と誤認しない。これらを根拠にオンライン装備可否や全任務の装備差し替えを確認済みとはしない。
+
+### 12.2 外部資料との照合
+
+参照日はいずれも2026-11-04。コミュニティの記載は元データの静的確認・実ゲーム測定と区別する。
+
+| 資料 | 記載と今回の扱い |
+| --- | --- |
+| [r/acecombatの全機体装備表](https://www.reddit.com/r/acecombat/comments/1wq6t3v/minor_spoilers_full_aircraft_roster_confirmed_so/) | 上記4機の装備が一致し、表の34機種に8AAM搭載機はない。投稿には発売前の議論も含まれるため、現行全解放状態の実測証明には使わない |
+| [Ace Combat WikiのF-22A](https://acecombat.wiki.gg/wiki/F-22A_Raptor) | AC8節はQAAM/4AAM/XSDBと記載。機体・特殊兵装の購入費も元表と一致 |
+| [Ace Combat Wikiの8AAM](https://acecombat.wiki.gg/wiki/8AAM) | AC7ではF-14DとF-22Aが装備。前作の搭載実績は確認できるが、ユーザーの記憶がどの作品・モードかを断定しない |
+| [AC8 Custom Wingman Weaponsの作者説明](https://www.nexusmods.com/acecombat8wingsoftheve/mods/104?tab=description) | 8AAMをAI版資産のある兵装として挙げる。改造用の選択肢であり、無改造のキャンペーン自機で装備できる根拠にはしない。ダウンロード・導入は行っていない |
+
+Wikiは本文の直接取得が403となったため、検索サービスが返した各ページ本文の該当節を参照した。一部攻略記事（[gameranbu](https://gameranbu.jp/acecombat8/57133525cb62b3bdcaa1)、[acecombat8.org](https://acecombat8.org/ja/aircraft/)）にはF-22A等が8AAMを搭載する記載もあるが、今回の現行装備表と一致しない。掲載維持や威力値の採用根拠にはしない。
+
+### 12.3 掲載案・制約・記録
+
+**提案:** アプリはキャンペーン自機の兵装を対象としているため、8AAMは固定ID6を保持して`UNUSED`へ移す。理由は「現行キャンペーン装備への割当なし」とし、NPC用80・オンライン用60を代入して掲載を続けない。今回は分類・null値・保存処理を変更していない。
+
+今回の判断は現行の機体一覧・購入ツリー・追加枠と装備表に基づく。全任務イベントによる装備差し替えの網羅、オンラインの全装備経路、ゲーム内装備画面の操作、実ゲーム測定、今後の追加機体は未確認。これらを「全モードに8AAM搭載機なし」という結論へ拡張しない。
+
+| 記録 | 内容 |
+| --- | --- |
+| [EIGHT_AAM_AVAILABILITY.json](../../../../docs/analysis/calculation/EIGHT_AAM_AVAILABILITY.json) | 追加調査の要約、機体ツリーの対応、読取境界、資産と保護対象のハッシュ、初回証拠との対応 |
+| [investigate_8aam_availability.py](../../../../docs/analysis/calculation/investigate_8aam_availability.py) | 現行EXEと抽出済み資産を使う読取専用の再実行。座標のIntVector2は反射情報のint32×2・offset0/4を検証して読み、元パーサーは変更しない |
+| `data/local/local004-8aam-availability.json` | 44表・表示設定2資産の完全な読取結果。Git対象外 |
+| `data/local/local004-8aam-availability-latest.json` | 承認済み反映後の再実行先。公開証拠が参照する上の初回記録を上書きしない |
+| `data/local/local004-8aam-followup-raw/` | 追加抽出8資産。Git対象外。既存の`local004-raw/`は保持 |
+
+追加抽出は既存retocの`to-legacy --no-shaders --no-script-objects`を使い、既存の鍵をログへ出さず、次の4フィルターを指定した。出力先は上表のfollowup専用ディレクトリとし、ゲーム側は読取のみ。
+
+```text
+Datatables/UI/Menu/HangerMenu/AircraftTree/
+Datatables/AI/DataInstance/DT_WingmanAircraft
+OnlineMode/DataTables/Information/DT_OnlineAircraftParam
+Maps/Ingame/Mission027/DAtoDT/DT_Mission027_Weapons
+```
+
+```powershell
+python -B -X utf8 docs/analysis/calculation/investigate_8aam_availability.py 'D:\Steam\steamapps\common\ACE COMBAT 8\Game\Binaries\Win64\AceCombat8.exe'
+```
+
+追加抽出は8資産・失敗0。解析は44表と設定2資産の読取境界・機体34種への対応・36行の初回装備IDとの一致を確認した。配信3ファイル・catalog・generation-input・既存属性証拠2ファイルの計7件は今回の開始時ハッシュと一致。Python構文、記録のハッシュ・リンク、`git diff --check`、既存Oxfmtによる整形確認を実施。アプリのテスト・ビルドは未実行（アプリ・配信・生成入力の変更なし）。掲載判断が残るためlocal_004はwipに保持する。
+
+## 13. 承認済み8AAMのUNUSED化
+
+2026-11-04、ユーザーが固定ID6を保持したUNUSED化・実装検証・記録・コミットを承認。開始時HEADは`64744e3`、ブランチは`codex/initial-implementation`。12節の調査記録・証拠・再実行スクリプトが未コミットであり、内容を保持して今回の根拠として含める。
+
+### 13.1 変更仕様と検証計画
+
+| 対象 | 変更・保持する内容 |
+| --- | --- |
+| `data/local/catalog.json`と生成済み`src/data/weapons.json` | 8AAMのcategoryだけをMSL.AIRからUNUSEDへ変更。固定ID6・名前・順序5・元WeaponID8・基礎威力null・パーツ倍率を保持 |
+| 掲載件数 | 全42兵装のまま掲載34→33、UNUSED8→9。他41兵装・全506目標・補正マスタは不変 |
+| 画面・保存 | 既存のUNUSED処理で初期選択・検索・分類操作・結果列から除外。旧保存の選択ID6だけを取り除き、他の選択・条件を保持。ID6だけの旧選択は空を維持 |
+| 計算・生成・状態処理 | 既存実装を維持。8AAMを削除・別IDへ統合せず、NPC用80・オンライン用60を補完しない |
+| 記録 | README・マスタ照合・計算根拠・検証記録を現状に更新し、検証後にlocal_004をcompleteへ移す。TLS・UAVTは後続課題として残す |
+
+- [x] Red: 変更後の掲載件数・旧保存の期待値で`pnpm test`を実行し、8AAMがまだ掲載されているため5件が失敗、他102件が成功することを確認
+- [x] Green: catalogの分類変更・再生成後に全テストを成功させる
+- [x] PC・スマートフォンの旧保存・検索・分類操作・リセット・再読込を確認する
+- [x] 型検査・Lint・整形・ビルド、再生成一致と変更範囲を確認する
+- [x] 結果を追記してlocal_004を完了扱いへ移し、コミットする
+
+### 13.2 実装と検証結果
+
+配信の変更は8AAM固定ID6の`category: MSL.AIR → UNUSED`だけ。全42兵装を保持し、掲載33・UNUSED9となった。catalogと生成入力も同じ分類だけを変更した。名前・順序・元WeaponID8・基礎威力null・パーツ倍率を維持し、計算・保存・画面・生成処理の実装は変更していない。
+
+| 検証 | 結果 |
+| --- | --- |
+| `pnpm test` | 17ファイル・107件成功。旧保存の混在選択からID6だけを除去し、ID6のみ／全解除は空を維持。他の兵装・非表示中の目標・ROLE・パーツ・DAMAGE TYPEを再保存後も保持 |
+| `pnpm test:browser` | Chrome16シナリオ成功。追加2件は1440×900と390×900。8AAMの候補・結果列への非掲載、旧保存・再読込、検索中の分類全選択、兵装リセット、ID6のみの旧保存から空への復元を確認 |
+| `pnpm typecheck`・`pnpm lint`・`pnpm format:check`・`pnpm build` | 全て成功。既存PCテストの掲載列期待値を34→33、見出し総数を36→35、MSL.AIR分類を11→10へ更新 |
+| 再生成 | `pnpm generate:data`を2回実行し、配信3ファイルのSHA-256が一致。1459出典・42兵装・506目標を保持 |
+| 変更範囲 | 開始時7ファイルの構造・ハッシュ比較で、weapons/catalog/generation-inputのID6分類以外は不変。他41兵装、全目標・固定ID・耐性・補正マスタ、既存属性証拠2ファイルを保持 |
+| 調査記録 | 反映後の8AAM調査再実行で、保護対象ハッシュ以外の全読取結果が初回と一致。公開証拠2件と初回完全版のハッシュを維持。再実行先をlatestへ分離。Python構文・文書リンク・`git diff --check`を確認 |
+
+制限環境内のpnpmは作業ディレクトリ正規化のアクセス拒否で起動できず、許可された制限外実行で上記検証を行った。実機スマートフォン・実ゲーム測定・参照資料なしの別コピー検証は再実施していない。ゲーム本体・設定・セーブは変更していない。
+
+SFFS対応と8AAM掲載判断を完了したため、本書を`spec/agent/complete/local_004/`へ移した。TLSのヒット時刻、UAVTの評価単位・全攻撃回数、全任務イベント・オンライン装備経路の網羅、基準EXEとの処理差は後続調査として残す。

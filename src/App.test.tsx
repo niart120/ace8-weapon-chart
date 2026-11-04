@@ -19,7 +19,7 @@ test('兵装検索だけでは列を変えず、検索中の分類解除は全�
   expect(screen.getAllByRole('columnheader').length).toBe(count);
   fireEvent.click(panel.getByRole('checkbox', { name: 'MSL.AIR all' }));
   fireEvent.click(panel.getByRole('button', { name: 'Close weapons' }));
-  expect(screen.getAllByRole('columnheader').length).toBe(count - 11);
+  expect(screen.getAllByRole('columnheader').length).toBe(count - 10);
 });
 test('部位表示・個別解除・区分リセットと条件変更が即時反映する', () => {
   render(<App />);
