@@ -53,5 +53,15 @@
     "missionId": 26,
     "targetIds": [413],
     "reason": "ユーザーはM26の船をOIL TANKERと記憶し、GAS CARRIERの個別裏付けは得られていないため暫定除外。M27は維持する。"
+  },
+  {
+    "missionId": 23,
+    "targetIds": [12],
+    "reason": "ユーザーに出現の記憶がなく、資料でもCONTAINER SHIPの個別出現を裏付けられないためM23を暫定除外。M16と船体の掲載は維持する。"
+  },
+  {
+    "missionId": 27,
+    "targetIds": [12],
+    "reason": "M27専用定義はあるが、ユーザー・資料ともCONTAINER SHIPの実出現を確認できていないため暫定除外。非出現と断定せず、M16と船体の掲載は維持する。"
   }
 ]

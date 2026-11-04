@@ -11,7 +11,7 @@ test('コンテナ船を任務接尾辞のない1行に統合し、部位・基�
     id: 12,
     name: 'CONTAINER SHIP',
     missionVariant: null,
-    missionIds: [16, 23, 27],
+    missionIds: [16],
     hp: 75,
     standardDamage: true,
     damageMultipliers: { gun: 1 },
@@ -28,13 +28,13 @@ test('コンテナ船を任務接尾辞のない1行に統合し、部位・基�
   expect(visible.filter((t) => [12, 222, 223, 491, 492].includes(t.id)).map((t) => t.id)).toEqual([
     12,
   ]);
-  for (const missionId of [16, 23, 27]) {
+  for (const missionId of [2, 3, 16, 23, 27]) {
     const missionTargets = selectedTargets(
       { ...initial, targetMode: 'MISSION', missionIds: [missionId] },
       targets
     );
     expect(
       missionTargets.filter((t) => t.name.startsWith('CONTAINER SHIP')).map((t) => t.id)
-    ).toEqual([12]);
+    ).toEqual(missionId === 16 ? [12] : []);
   }
 });

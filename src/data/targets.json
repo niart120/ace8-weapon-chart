@@ -8915,7 +8915,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "TRANSPORT",
-    "missionIds": [16, 23, 27],
+    "missionIds": [16],
     "hp": 75,
     "damageMultipliers": {
       "standardMissile": 1,

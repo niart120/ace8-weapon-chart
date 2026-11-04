@@ -67,3 +67,5 @@ M3 の地上目標、M4 の潜水艦、M6 の BUNKER、M21 の地上対空兵器
 2026-11-05 の[任務付き GROUND 調査](../calculation/GROUND_MISSION_REVIEW.md)では、HP 10000 の PILLBOX（340）だけを除外した。COMMAND POST（318）はユーザーによる M23 出現確認に基づいて維持し、再調査候補から外す。通常の PILLBOX と CANISTER も維持する。
 
 同日の [OTHER と残る基本行の調査](../calculation/OTHER_SCOPE_REVIEW.md)で、OTHER の任務付き行を維持する根拠を確認した。最後の任務未指定 3 行（UNKNOWN 498、SHUTTER 503、MSL DISPENSER 505）は基本値での別出現が未裏付けのため、ユーザー承認後に暫定除外を反映した。503/505 は過去の数値差を維持する判断とは別の掲載範囲変更である。現在、任務未指定の掲載行は 0 だが、任務付き対象すべての実出現確認が済んだ意味ではない。
+
+続けて [CONTAINER SHIP の M23/M27](../calculation/CONTAINER_SHIP_REVIEW.md)を Neoseeker と Ace Combat Wiki で追加確認した。船種を個別に特定できる新証拠は得られず、ユーザー承認により両任務対応の暫定除外を反映した。M27 専用の内部定義があることは区別して記録し、非出現とは断定しない。M16 と船体の掲載・数値は維持する。ユーザーは M27 の出現を確認できておらず、M23 も出現の記憶がないとして除外を承認した。同じ Web 検索の反復は区切りとし、実出現の確定と掲載判断の完了を区別する。

@@ -2,7 +2,7 @@
 
 調査日: 2026-11-04。調査開始時 HEAD: `ccb3fdd`。元テーブル、抽出済み Blueprint、コミュニティの攻略資料を照合した。ゲーム起動・配置の実測・被弾測定は行っていない。以下の調査結果と証拠 JSON は変更前の記録。後続のユーザー判断による反映内容は次節に記載する。
 
-## 承認後の反映
+## 初回承認後の反映（履歴）
 
 MANPADS（ID 223）と任務表示のない基本定義（ID 491/492）を `EXCLUDED` にした。固定 ID と元 HP・耐性は保持する。
 
@@ -71,3 +71,22 @@ python -B -X utf8 docs/analysis/calculation/investigate_container_ships.py 'D:/S
 ```
 
 元テーブルは既存の解析基準ビルド `25201480`。現在の EXE はその基準とは異なるため、テーブル値と現行ゲームでの挙動を同一視しない。入力と資産のハッシュ、参照した EXE のハッシュ、アプリデータの非変更検証を証拠 JSON に保存した。
+
+## 2026-11-05: M23/M27 の暫定除外
+
+基準 HEAD は `7d53018`。基本行の整理が完了したため、残件の M23/M27 だけを追加確認した。M16 偽装船・MANPADS・船体 HP の解析は繰り返していない。元定義と Blueprint については上記証拠 JSON を再利用した。
+
+[Neoseeker の M23 攻略](https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_23%3A_The_Destruction_of_Expo_City)を追加確認した。半島付近の海上目標の撃破は記載されているが、CONTAINER SHIP の個別名称・用途は得られなかった。[Ace Combat Wiki の M23](https://acecombat.wiki.gg/wiki/The_Destruction_of_Expo_City)も港の艦隊を挙げるだけで、船種を特定できない。一般的な艦隊の記述をコンテナ船の実出現根拠にはしない。
+
+[Neoseeker の M27 攻略](https://www.neoseeker.com/ace-combat-8-wings-of-theve/walkthrough/Mission_27%3A_Fatsia%2C_the_Ocean_Fortress)は甲板下の停泊船が甲板崩壊で破壊されることと、甲板脇の GAS CARRIER の誘爆を記載する。直接取得は HTTP 403 のため検索エンジン保持本文を確認した。CONTAINER SHIP の個別名称は見つからなかった。[Ace Combat Wiki の M27](https://acecombat.wiki.gg/wiki/Fatsia%2C_The_Ocean_Fortress)も各種施設と誘爆手順を説明するが、対象船種を裏付けない。
+
+| 任務 | 残る根拠と限界 | 反映内容 |
+| --- | --- | --- |
+| M23 | `DT_NPC_Mission024/cont_common` → `VE025_cont_01`。汎用の船体定義は存在するが、攻略でコンテナ船を特定できない | ID 12 の M23 対応を暫定除外 |
+| M27 | `DT_NPC_Mission027/VE025_cont_MS27` → M27 専用 Blueprint。専用の連鎖損傷部品と停泊船の攻略記述はあるが、その船種・敵味方・配置との対応は未確認 | ID 12 の M27 対応も、裏付けが得られるまで暫定除外 |
+
+M27 は専用定義がある分、M23 より出現を支持する内部資料がある。この差を残したうえで、実出現の個別裏付けがない対応を一旦掲載から外すという、今回までの整理方針に合わせ、ユーザー承認により暫定除外した。いずれも非出現・非敵対象と確定したわけではない。ID 12 の `missionIds` を `[16]` とし、船体の掲載・HP 75・耐性・元出典を維持する。任務単位の除外規則で処理し、基本行除外や船体全体の除外と混同しない。
+
+今回、新たな個別出現の証拠は得られていない。Web の同じ検索を繰り返す調査はここで区切り、確定にはゲーム画面での識別記録、またはマップ／任務イベントからの配置・陣営設定の追跡が必要な残件とする。ユーザーは M27 の出現を確認できておらず、M23 も出現の記憶がないとして除外を承認した。`target-mission-exclusions.json` に理由を記録し、両任務対応の暫定除外を反映した。
+
+`container-ships.test.ts` で M16 の掲載と M2/M3/M23/M27 の非掲載を確認する。変更前の失敗、変更後の全 137 テスト成功を確認した。船体の HP・耐性・固定 ID・元出典・TYPE での掲載は維持する。

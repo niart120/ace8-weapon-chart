@@ -33,7 +33,7 @@ UNKNOWN の M26 再掲載は [AIRCRAFT 調査](AIRCRAFT_SCOPE_REVIEW.md)で反�
 
 [OTHER_SCOPE_EVIDENCE.json](OTHER_SCOPE_EVIDENCE.json)に対象 11 行の現在値と元出典、基本 3 行の同一モデル参照検索、全 45 元テーブルの SHA-256 を保存した。抽出済みテーブルの基準ビルドと現行ゲームの同一性は保証しない。
 
-3 行の除外後、公開対象は 272 行、除外は 234 行、任務未指定の公開行は 0 行となった。ただし、任務番号が付いていること自体は実出現の証明ではない。これで全対象の出現監査が完了したとは扱わず、残る CONTAINER SHIP の M23/M27 等は [追跡記録](../mission-appearances/FOLLOWUP_REVIEW.md)に残す。
+3 行の除外後、公開対象は 272 行、除外は 234 行、任務未指定の公開行は 0 行となった。ただし、任務番号が付いていること自体は実出現の証明ではない。これで全対象の出現監査が完了したとは扱わず、任務付き対象の残件は [追跡記録](../mission-appearances/FOLLOWUP_REVIEW.md)に記録する。CONTAINER SHIP の M23/M27 は後続のユーザー承認で暫定除外済み。
 
 ## 反映の検証
 
