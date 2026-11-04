@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-05",
+  "baseCommit": "2047540",
+  "missionId": 7,
+  "method": "Existing extracted table references and community text; no runtime, footage or map/faction verification",
+  "inputs": [
+    {
+      "path": "docs/initial/ref/tables/DT_NPC.json",
+      "sha256": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Model.json",
+      "sha256": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02"
+    },
+    {
+      "path": "docs/initial/ref/tables/DT_NPC_Mission008.json",
+      "sha256": "ad939fdaf88e230223eaf84a9203ae3f32b87a56ac81d29983ad11cec5dec073"
+    }
+  ],
+  "targets": [
+    {
+      "id": 93,
+      "name": "IL-76",
+      "hp": 150,
+      "missionIds": [6, 7, 23],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "il76_common",
+          "npcId": "OP0006_il76_01",
+          "modelId": "OP0006_il76",
+          "modelHp": 150.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "name": "IL-78",
+      "hp": 115,
+      "missionIds": [7, 11, 23],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "OP0055_il78_01",
+          "npcId": "OP0055_il78_01",
+          "modelId": "OP0055_il78",
+          "modelHp": 115.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        },
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "OP0055_il78_Ground",
+          "npcId": "OP0055_il78_Ground",
+          "modelId": "OP0055_il78_Ground",
+          "modelHp": 115.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "MI-24",
+      "hp": 35,
+      "missionIds": [3, 5, 6, 7, 8, 12, 13, 17, 23, 24, 25],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "OP0013_mi24_MS08",
+          "npcId": "OP0013_mi24_MS08",
+          "modelId": "OP0013_mi24_MS08",
+          "modelHp": 35.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "MIG-21BIS",
+      "hp": 46,
+      "missionIds": [1, 3, 7, 8, 21, 25],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "m21b_MS08",
+          "npcId": "OP1027_m21b_02",
+          "modelId": "OP1027_m21b",
+          "modelHp": 46.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "MIG-29A",
+      "hp": 60,
+      "missionIds": [4, 6, 7, 8, 9, 11, 19, 21, 23, 25, 26, 28],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "m29a_common",
+          "npcId": "OP1020_m29a_02",
+          "modelId": "OP1020_m29a",
+          "modelHp": 60.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "MIRAGE 2000-5",
+      "hp": 55,
+      "missionIds": [1, 3, 5, 6, 7, 8, 10, 11, 20, 25, 28],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "mr2k_common",
+          "npcId": "OP1017_mr2k_02",
+          "modelId": "OP1017_mr2k",
+          "modelHp": 55.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "QUADCOPTER",
+      "hp": 15,
+      "missionIds": [6, 7, 9, 17, 19, 23],
+      "sources": [
+        {
+          "table": "DT_NPC_Mission008",
+          "row": "mudr_common",
+          "npcId": "OP0027_mudr_01",
+          "modelId": "OP0027_mudr",
+          "modelHp": 15.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0
+        }
+      ]
+    }
+  ]
+}

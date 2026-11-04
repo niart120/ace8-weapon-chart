@@ -1619,7 +1619,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "SUPPORT",
-    "missionIds": [6, 7, 23],
+    "missionIds": [6, 23],
     "hp": 150,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -1653,7 +1653,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "SUPPORT",
-    "missionIds": [7, 11, 23],
+    "missionIds": [11, 23],
     "hp": 115,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -2307,7 +2307,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "FIGHTER",
-    "missionIds": [1, 3, 7, 8, 21, 25],
+    "missionIds": [1, 3, 8, 21, 25],
     "hp": 46,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -2517,7 +2517,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "MULTIROLE",
-    "missionIds": [1, 3, 5, 6, 7, 8, 10, 11, 20, 25, 28],
+    "missionIds": [1, 3, 5, 6, 8, 10, 11, 20, 25, 28],
     "hp": 55,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -3505,7 +3505,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "UAV",
-    "missionIds": [6, 7, 9, 17, 19, 23],
+    "missionIds": [6, 9, 17, 19, 23],
     "hp": 15,
     "damageMultipliers": {
       "standardMissile": 1,
