@@ -27,7 +27,8 @@ test('確認済み24行へ対象属性を反映し、CH-47の通常被弾判定�
       ).toMatchObject({
         isAir,
         roleGroup,
-        standardDamage: true,
+        // M26 UNKNOWN は静的属性を保持し、イベント対象として通常撃破計算を止める。
+        standardDamage: id !== 410,
       });
 });
 

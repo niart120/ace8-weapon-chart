@@ -1,0 +1,5 @@
+{
+  "targetIds": [410],
+  "reason": "M26 UNKNOWN は命中によるイベント進行対象であり、通常の HP を削り切る撃破計算との一致が未確認。元 HP と耐性を保持し、必要命中数を未確定とする。",
+  "evidence": "docs/analysis/calculation/AIRCRAFT_SCOPE_REVIEW.md"
+}

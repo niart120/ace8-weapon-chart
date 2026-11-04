@@ -77,13 +77,18 @@ def main():
         attributes=catalog['modelAttributes'][npc['ModelId']]
         return {'hp':hp,'damageMultipliers':values,'isAir':attributes['isAir'],'roleGroup':attributes['roleGroup'],'standardDamage':attributes['standardDamage'] and (not mission or mission['MinHealth']==0)}
     non_hp_ids=set(read(Path(__file__).with_name('non-hp-targets.json'))['targetIds'])
+    event_ids=set(read(Path(__file__).with_name('event-targets.json'))['targetIds'])
     if non_hp_ids - {d['id'] for d in catalog['targets']}:
         raise ValueError('Unknown non-HP target')
+    if event_ids - {d['id'] for d in catalog['targets']}:
+        raise ValueError('Unknown event target')
     sources={}
     for definition in catalog['targets']:
         for source in definition['sourceRefs']:
             key=source['table']+'/'+source['row']
             resolved=resolve(source)
+            if definition['id'] in event_ids:
+                resolved={**resolved,'standardDamage':False}
             if definition['id'] in non_hp_ids:
                 resolved={**resolved,'hp':None,'standardDamage':False}
             if key in sources and sources[key]!=resolved:

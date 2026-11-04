@@ -38,17 +38,14 @@ test('任務限定の除外は他任務・通常機・艦載部位へ波及さ�
   expect(ids(14)).toEqual([]);
 });
 
-test('撃破対象外のM26 UNKNOWNとM28 X-40を除外し、M29の戦闘対象は維持する', () => {
+test('撃破対象外のM28 X-40を除外し、M29の戦闘対象は維持する', () => {
   const state = {
     ...initialPreferences(false, { targets, weapons }),
     targetIds: targets.map((t) => t.id),
     showParts: true,
     showMissionVariants: true,
   };
-  for (const [id, missionId] of [
-    [410, 26],
-    [435, 28],
-  ] as const) {
+  for (const [id, missionId] of [[435, 28]] as const) {
     expect(targets.find((t) => t.id === id)).toMatchObject({
       category: 'EXCLUDED',
       missionIds: [missionId],

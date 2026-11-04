@@ -820,11 +820,11 @@
   {
     "id": 493,
     "name": "EXPLOSIVE UAV",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 24,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "UAV",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 6,
     "damageMultipliers": {
@@ -4096,7 +4096,7 @@
   {
     "id": 497,
     "name": "SHUTTLE TRANSPORT",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 119,
     "partOf": null,
     "missionVariant": null,
@@ -4860,7 +4860,7 @@
   {
     "id": 410,
     "name": "UNKNOWN [M26]",
-    "category": "EXCLUDED",
+    "category": "AIRCRAFT",
     "order": 141,
     "partOf": null,
     "missionVariant": {
@@ -4891,16 +4891,16 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": false
   },
   {
     "id": 499,
     "name": "UNKNOWN UAV",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 142,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "UAV",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 60,
     "damageMultipliers": {

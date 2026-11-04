@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-04",
+  "method": "Static Blueprint CDO inspection, no mission-event or runtime verification",
+  "head": "5ca832a",
+  "blueprints": {
+    "BP_OP1016_x40a_CP_Tewy_C": {
+      "parent": "BP_OP1016_x40a_CP_C",
+      "consumed": 70,
+      "export_bytes": 70,
+      "uexp_sha256": "ffe8babdf08a703c699eaf08b8695652251f83211ef81edad1796193a7bf621c",
+      "properties": {
+        "bIgnoreVisibleDistance": 1,
+        "bIsInvincibleInducedExplosion": 1
+      }
+    },
+    "BP_OP1016_x40a_CP_C": {
+      "parent": "BP_OP1016_x40a_Base_C",
+      "consumed": 126,
+      "export_bytes": 126,
+      "uexp_sha256": "e97be9dbe146aea7a5f0e4885bc1f1dbc11f2bcf0720f9e121e1fa07b6c23af4",
+      "properties": {
+        "bIsIgnoreScoreBoard": false,
+        "MaxHealth": 200.0
+      }
+    },
+    "BP_OP1016_x40a_Base_C": {
+      "parent": "BP_OP1016_x40a_Archetype_C",
+      "consumed": 168,
+      "export_bytes": 168,
+      "uexp_sha256": "dfa409711dbf43285beec68780bf92d0468e660b80a357d04a5c6544f02cb214",
+      "properties": {}
+    },
+    "BP_OP1016_x40a_Archetype_C": {
+      "parent": "LiveAINightmarePlane",
+      "consumed": 201,
+      "export_bytes": 201,
+      "uexp_sha256": "2bc659ceeed0eb1e20e90e7bbddcaa4f5e496e4615337ce4c2a6465a9e34cad2",
+      "properties": {
+        "bIsIgnoreScoreBoard": 1
+      }
+    },
+    "BP_OP0024_uavn_CP_C": {
+      "parent": "BP_OP0024_uavn_Base_C",
+      "consumed": 124,
+      "export_bytes": 124,
+      "uexp_sha256": "a7bfbbfa5516502099ab5fedf2ef89a6a33179509e353aeb98872671bb82d927",
+      "properties": {
+        "MaxHealth": 80.0,
+        "bIsInvincibleInducedExplosion": 1
+      }
+    },
+    "BP_OP0024_uavn_Base_C": {
+      "parent": "BP_Nightmare_UAV_Archetype_C",
+      "consumed": 194,
+      "export_bytes": 194,
+      "uexp_sha256": "16ec5c372e611343e407049ca5a16aa0c3a08a9f7502542d581a2d76ecfa0ad7",
+      "properties": {
+        "BarrierFullChargeTime": 30.0,
+        "BarrierWeaponNumber": 4,
+        "bIsIgnoreScoreBoard": false
+      }
+    },
+    "BP_Nightmare_UAV_Archetype_C": {
+      "parent": "LiveAINightmareUAV",
+      "consumed": 204,
+      "export_bytes": 204,
+      "uexp_sha256": "93ffd676e02ccf1e4966ab97e3847675e41ba6a0fc84ebcea79c57a003fd985e",
+      "properties": {
+        "bIsIgnoreScoreBoard": 1
+      }
+    }
+  },
+  "sources": [
+    "https://acecombat.wiki.gg/wiki/Transcript%3AWings_of_Wax",
+    "https://acecombat.wiki.gg/wiki/Crossing_Fleets",
+    "https://gamerch.com/acecombat8/1019042",
+    "https://www.powerpyx.com/ace-combat-8-all-ace-s-ranks-walkthrough/"
+  ],
+  "scopeNotes": [
+    "bIsInvincibleInducedExplosion was present on both CP classes; no general bIsInvincible CDO override was found.",
+    "No proof of permanent invulnerability or an exact event-transition damage threshold."
+  ]
+}
