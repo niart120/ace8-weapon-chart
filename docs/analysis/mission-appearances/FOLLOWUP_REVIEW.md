@@ -2,7 +2,7 @@
 
 確認日: 2026-11-04。基準 HEAD は `17e73cc`。その後の VEHICLE 3 行の除外と SWARM DRONES の統合を含む作業ツリーを確認した。今回は既存資料と現在の元定義の照合であり、新たなゲーム実測や全配置調査ではない。
 
-後続の AIRCRAFT 確認で SHUTTLE TRANSPORT 基本行（497）も除外した。以下の候補表と任務未特定 12 行という集計はその除外前の記録であり、2026-11-05 に UAV 基本行（493/499）も除外し、その時点で 9 行。その後 GROUND 基本行（477/478/479/495）を除外し、現在は 5 行（[GROUND 調査](../calculation/GROUND_SCOPE_REVIEW.md)）。M26 UNKNOWN（410）は必要命中数 `?` で再掲載した。M15 の EXPLOSIVE UAV と M26 の UNKNOWN 系の追加確認は [AIRCRAFT 調査](../calculation/AIRCRAFT_SCOPE_REVIEW.md) を参照。
+後続の AIRCRAFT 確認で SHUTTLE TRANSPORT 基本行（497）も除外した。以下の候補表と任務未特定 12 行という集計はその除外前の記録であり、2026-11-05 に UAV 基本行（493/499）も除外し、その時点で 9 行。その後 GROUND 基本行（477/478/479/495）を除外し、その時点で 5 行（[GROUND 調査](../calculation/GROUND_SCOPE_REVIEW.md)）。M26 UNKNOWN（410）は必要命中数 `?` で再掲載した。M15 の EXPLOSIVE UAV と M26 の UNKNOWN 系の追加確認は [AIRCRAFT 調査](../calculation/AIRCRAFT_SCOPE_REVIEW.md) を参照。
 
 ## 以前どこまで調べたか
 
@@ -34,6 +34,8 @@ M3 の地上目標、M4 の潜水艦、M6 の BUNKER、M21 の地上対空兵器
 この一致は今回確認済み。基本行の全生成経路が未使用だという証明ではないため、ここでは追加調査候補として記録し、掲載は変更していない。
 
 ## 任務未特定の車両・施設
+
+2026-11-05、GROUND の 477/478/479 は除外済み。残る AMMO BUNKER 480 と AIR BASE 490 は [STRUCTURE の追加調査](../calculation/STRUCTURE_SCOPE_REVIEW.md)へ引き継いだ。同調査後、ユーザー承認により AIR BASE 490、AMMO BUNKER 480、HP 10000 の GAS TANK 339／OIL TANK 132 を除外済み。HP 30 の通常タンクと HARDENED DEPOT は維持する。現在の任務未特定掲載行は 3 行。以下の表は初回棚卸し時点の記録。
 
 | ID | 対象 | 元 NPC |
 | ---: | --- | --- |

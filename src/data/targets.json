@@ -10218,11 +10218,11 @@
   {
     "id": 490,
     "name": "AIR BASE",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 297,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "MILITARY",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 2200,
     "damageMultipliers": {
@@ -10288,11 +10288,11 @@
   {
     "id": 480,
     "name": "AMMO BUNKER",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 299,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "MILITARY",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 75,
     "damageMultipliers": {
@@ -10700,11 +10700,11 @@
   {
     "id": 339,
     "name": "GAS TANK",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 311,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "INDUSTRIAL",
+    "subcategory": "OTHER",
     "missionIds": [25, 28],
     "hp": 10000,
     "damageMultipliers": {
@@ -11388,11 +11388,11 @@
   {
     "id": 132,
     "name": "OIL TANK",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 331,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "INDUSTRIAL",
+    "subcategory": "OTHER",
     "missionIds": [8, 9, 25, 28, 29],
     "hp": 10000,
     "damageMultipliers": {
