@@ -5724,11 +5724,11 @@
   {
     "id": 316,
     "name": "COMMAND VEHICLE",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 166,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "COMMAND & RADAR",
+    "subcategory": "OTHER",
     "missionIds": [23],
     "hp": 15,
     "damageMultipliers": {
@@ -5792,11 +5792,11 @@
   {
     "id": 317,
     "name": "EPP VEHICLE",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 168,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "COMMAND & RADAR",
+    "subcategory": "OTHER",
     "missionIds": [23, 24],
     "hp": 15,
     "damageMultipliers": {
@@ -5962,11 +5962,11 @@
   {
     "id": 487,
     "name": "IED VEHICLE",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 173,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "SUPPORT",
+    "subcategory": "OTHER",
     "missionIds": [],
     "hp": 120,
     "damageMultipliers": {
@@ -11905,7 +11905,7 @@
     "partOf": null,
     "missionVariant": null,
     "subcategory": "UAV",
-    "missionIds": [9, 10, 19],
+    "missionIds": [9, 10, 19, 30],
     "hp": null,
     "damageMultipliers": {
       "standardMissile": 1,
@@ -11934,11 +11934,11 @@
   {
     "id": 465,
     "name": "SWARM DRONES",
-    "category": "OTHER",
+    "category": "EXCLUDED",
     "order": 347,
     "partOf": null,
     "missionVariant": null,
-    "subcategory": "UAV",
+    "subcategory": "OTHER",
     "missionIds": [30],
     "hp": null,
     "damageMultipliers": {

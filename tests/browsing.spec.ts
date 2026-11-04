@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 for (const width of [1440, 390]) {
-  test(`SWARM DRONES両行のHPと命中数・選択候補: ${width}px`, async ({ page }) => {
+  test(`SWARM DRONES統合後のHPと命中数・選択候補: ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() =>
       localStorage.setItem(
@@ -19,22 +19,21 @@ for (const width of [1440, 390]) {
       )
     );
     await page.goto('/');
-    for (const id of [156, 465]) {
-      await expect(page.locator(`tr[data-target-id="${id}"] td`)).toHaveText(['-', '?']);
-    }
+    await expect(page.locator('tr[data-target-id="156"] td')).toHaveText(['-', '?']);
+    await expect(page.locator('tr[data-target-id="465"]')).toHaveCount(0);
     const rowIds = () =>
       page
         .locator('tbody tr')
         .evaluateAll((rows) => rows.map((r) => r.getAttribute('data-target-id')));
-    expect(await rowIds()).toEqual(['26', '156', '465']);
+    expect(await rowIds()).toEqual(['26', '156']);
     await page.getByRole('columnheader', { name: 'HP', exact: true }).getByRole('button').click();
-    expect(await rowIds()).toEqual(['26', '156', '465']);
+    expect(await rowIds()).toEqual(['26', '156']);
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
     const panel = page.getByRole('dialog', { name: 'TARGETS' });
     await panel.getByRole('searchbox').fill('SWARM');
-    await expect(panel.locator('.option-hp')).toHaveText(['-', '-']);
+    await expect(panel.locator('.option-hp')).toHaveText(['-']);
     await expect(panel.getByRole('checkbox', { name: 'SWARM DRONES -', exact: true })).toHaveCount(
-      2
+      1
     );
   });
 }

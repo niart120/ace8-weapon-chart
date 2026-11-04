@@ -4,24 +4,27 @@ import { calculateDefeatRequirement } from '../domain/calculate';
 import { initialPreferences, selectedTargets } from '../state/preferences';
 import { validateMasters } from '../domain/validate';
 
-test('SWARM DRONES両行は掲載を維持し、HPを適用せず全兵装の必要命中数を未確定にする', () => {
+test('SWARM DRONESを1行に統合し、全出現任務でHP非適用・必要命中数未確定を維持する', () => {
   const state = initialPreferences(false, { targets, weapons });
-  for (const [id, missionIds] of [
-    [156, [9, 10, 19]],
-    [465, [30]],
-  ] as const) {
-    const target = targets.find((t) => t.id === id)!;
+  const published = targets.filter((t) => t.name === 'SWARM DRONES' && t.category !== 'EXCLUDED');
+  expect(published).toHaveLength(1);
+  expect(targets.find((t) => t.id === 465)).toMatchObject({ category: 'EXCLUDED', hp: null });
+  expect(selectedTargets({ ...state, targetIds: [156, 465] }, targets)).toEqual(published);
+  for (const target of published) {
+    const missionIds = [9, 10, 19, 30];
     expect(target).toMatchObject({
+      id: 156,
       category: 'OTHER',
       hp: null,
       standardDamage: false,
       missionIds,
     });
-    expect(selectedTargets({ ...state, targetIds: [id] }, targets)).toEqual([target]);
     for (const mission of missionIds) {
-      expect(
-        selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [mission] }, targets)
-      ).toContain(target);
+      const selected = selectedTargets(
+        { ...state, targetMode: 'MISSION', missionIds: [mission] },
+        targets
+      );
+      expect(selected.filter((t) => t.name === 'SWARM DRONES')).toEqual([target]);
     }
     for (const weapon of weapons.filter((w) => w.category !== 'UNUSED')) {
       for (const damageType of ['DIRECT', 'BLAST', 'DIRECT+BLAST'] as const) {

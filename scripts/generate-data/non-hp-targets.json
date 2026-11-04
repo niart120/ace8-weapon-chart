@@ -1,5 +1,5 @@
 {
   "targetIds": [156, 465],
-  "reason": "SWARM DRONESは専用の個体判定と除去・連鎖破壊を使う。制御・システム用NPCのMaxHealthを群れの耐久値として計算しない。掲載と出現任務は維持する。",
+  "reason": "SWARM DRONESは専用の個体判定と除去・連鎖破壊を使う。制御・システム用NPCのMaxHealthを群れの耐久値として計算しない。掲載は156へ統合し、除外した465にも同じHP非適用規則を維持する。",
   "evidence": "docs/analysis/calculation/SWARM_DRONES_REVIEW.md"
 }

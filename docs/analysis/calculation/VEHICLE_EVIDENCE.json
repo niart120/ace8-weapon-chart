@@ -1,0 +1,1700 @@
+{
+  "date": "2026-11-04",
+  "headAtReview": "17e73cc",
+  "method": "Static tables and Blueprint CDOs; community mission descriptions; no runtime measurement",
+  "tableBaselineBuild": 25201480,
+  "currentExecutableMatchesBaseline": false,
+  "exeSha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "currentTargets": [
+    {
+      "id": 316,
+      "name": "COMMAND VEHICLE",
+      "category": "GROUND",
+      "order": 166,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "COMMAND & RADAR",
+      "missionIds": [23],
+      "hp": 15,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 317,
+      "name": "EPP VEHICLE",
+      "category": "GROUND",
+      "order": 168,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "COMMAND & RADAR",
+      "missionIds": [23, 24],
+      "hp": 15,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 487,
+      "name": "IED VEHICLE",
+      "category": "GROUND",
+      "order": 173,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "SUPPORT",
+      "missionIds": [],
+      "hp": 120,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 145,
+      "name": "IED VEHICLE [M9]",
+      "category": "EXCLUDED",
+      "order": 174,
+      "partOf": null,
+      "missionVariant": {
+        "missionId": 9
+      },
+      "subcategory": "OTHER",
+      "missionIds": [9],
+      "hp": 3,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 36,
+      "name": "RADAR VEHICLE",
+      "category": "GROUND",
+      "order": 230,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "COMMAND & RADAR",
+      "missionIds": [17],
+      "hp": 20,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": false,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 237,
+      "name": "LAUNCH VEHICLE",
+      "category": "OTHER",
+      "order": 341,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "OTHER",
+      "missionIds": [18],
+      "hp": 160,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": true,
+      "roleGroup": "ground",
+      "standardDamage": true
+    },
+    {
+      "id": 238,
+      "name": "LAUNCH VEHICLE DEBRIS",
+      "category": "OTHER",
+      "order": 342,
+      "partOf": null,
+      "missionVariant": null,
+      "subcategory": "OTHER",
+      "missionIds": [18],
+      "hp": 20,
+      "damageMultipliers": {
+        "standardMissile": 1,
+        "airMissile": 1,
+        "groundMissile": 1,
+        "antiShipMissile": 1,
+        "guidedBomb": 1,
+        "bomb": 1,
+        "gun": 1,
+        "rocket": 1,
+        "railgun": 1,
+        "mpbm": 1,
+        "laser": 1,
+        "uavt": 1,
+        "uavg": 1,
+        "uavp": 1,
+        "fuelAirBomb": 1,
+        "lacmBlast": 1,
+        "lagmBlast": 1,
+        "lasmBlast": 1
+      },
+      "isAir": true,
+      "roleGroup": "ground",
+      "standardDamage": true
+    }
+  ],
+  "sourceResolution": [
+    {
+      "id": 316,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "cccv_common",
+          "npcId": "GR007_cccv_01",
+          "modelId": "GR007_cccv",
+          "displayNameKey": "ContainerGround_Name_cccv",
+          "modelHp": 15.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR007_cccv_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 317,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission024",
+          "row": "trka_common",
+          "npcId": "GR026_trka_01",
+          "modelId": "GR026_trka",
+          "displayNameKey": "ContainerGround_Name_epp",
+          "modelHp": 15.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR026_trka_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission025day1",
+          "row": "trka_common",
+          "npcId": "GR026_trka_01",
+          "modelId": "GR026_trka",
+          "displayNameKey": "ContainerGround_Name_epp",
+          "modelHp": 15.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR026_trka_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 487,
+      "sources": [
+        {
+          "table": "DT_NPC",
+          "row": "GR025_trkb_01",
+          "npcId": "GR025_trkb_01",
+          "modelId": "GR025_trkb",
+          "displayNameKey": "ContainerGround_Name_BombTruck",
+          "modelHp": 120.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": null,
+          "minimumHp": null,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": null,
+          "childNpcIds": [],
+          "blueprint": "BP_GR025_trkb_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission010",
+          "row": "trkb_common",
+          "npcId": "GR025_trkb_01",
+          "modelId": "GR025_trkb",
+          "displayNameKey": "ContainerGround_Name_BombTruck",
+          "modelHp": 120.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": -117.0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR025_trkb_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission004",
+          "row": "radv_common",
+          "npcId": "GR027_radv_01",
+          "modelId": "GR027_radv",
+          "displayNameKey": "ContainerGround_Name_Radartruck",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR027_radv_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission018",
+          "row": "radv_common",
+          "npcId": "GR027_radv_01",
+          "modelId": "GR027_radv",
+          "displayNameKey": "ContainerGround_Name_Radartruck",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_GR027_radv_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 237,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket",
+          "npcId": "OP0058_crkt_01",
+          "modelId": "OP0058_crkt",
+          "displayNameKey": "ContainerAircraft_Name_crkt",
+          "modelHp": 160.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_CP_C"
+        }
+      ]
+    },
+    {
+      "id": 238,
+      "sources": [
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_1_1",
+          "npcId": "OP0058_crkt_ABR_p1_CP_01",
+          "modelId": "OP0058_crkt_ABR_p1_CP",
+          "displayNameKey": "ContainerAircraft_Name_crktdebris",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_ABR_p1_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_1",
+          "npcId": "OP0058_crkt_BR_p2_CP_01",
+          "modelId": "OP0058_crkt_BR_p2_CP",
+          "displayNameKey": "ContainerAircraft_Name_crktdebris",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_BR_p2_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_2_2",
+          "npcId": "OP0058_crkt_A_p2_CP_01",
+          "modelId": "OP0058_crkt_A_p2_CP",
+          "displayNameKey": "ContainerAircraft_Name_crktdebris",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_A_p2_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_1",
+          "npcId": "OP0058_crkt_R_p3_CP_01",
+          "modelId": "OP0058_crkt_R_p3_CP",
+          "displayNameKey": "ContainerAircraft_Name_crktdebris",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_R_p3_CP_C"
+        },
+        {
+          "table": "DT_NPC_Mission019",
+          "row": "Rocket_Debri_3_2",
+          "npcId": "OP0058_crkt_B_p3_CP_01",
+          "modelId": "OP0058_crkt_B_p3_CP",
+          "displayNameKey": "ContainerAircraft_Name_crktdebris",
+          "modelHp": 20.0,
+          "npcHpDifference": 0,
+          "missionHpDifference": 0,
+          "minimumHp": 0,
+          "baseDurabilityId": "NPC_WPDur_000",
+          "missionDurabilityId": "NPC_WPDur_000",
+          "childNpcIds": [],
+          "blueprint": "BP_OP0058_crkt_B_p3_CP_C"
+        }
+      ]
+    }
+  ],
+  "allMatchingMissionReferences": [
+    {
+      "table": "DT_NPC_Mission004",
+      "row": "radv_common",
+      "npcId": "GR027_radv_01"
+    },
+    {
+      "table": "DT_NPC_Mission010",
+      "row": "trkb_common",
+      "npcId": "GR025_trkb_01"
+    },
+    {
+      "table": "DT_NPC_Mission018",
+      "row": "radv_common",
+      "npcId": "GR027_radv_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket",
+      "npcId": "OP0058_crkt_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket_Debri_1_1",
+      "npcId": "OP0058_crkt_ABR_p1_CP_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket_Debri_2_1",
+      "npcId": "OP0058_crkt_BR_p2_CP_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket_Debri_2_2",
+      "npcId": "OP0058_crkt_A_p2_CP_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket_Debri_3_1",
+      "npcId": "OP0058_crkt_R_p3_CP_01"
+    },
+    {
+      "table": "DT_NPC_Mission019",
+      "row": "Rocket_Debri_3_2",
+      "npcId": "OP0058_crkt_B_p3_CP_01"
+    },
+    {
+      "table": "DT_NPC_Mission024",
+      "row": "cccv_common",
+      "npcId": "GR007_cccv_01"
+    },
+    {
+      "table": "DT_NPC_Mission024",
+      "row": "trka_common",
+      "npcId": "GR026_trka_01"
+    },
+    {
+      "table": "DT_NPC_Mission025day1",
+      "row": "trka_common",
+      "npcId": "GR026_trka_01"
+    }
+  ],
+  "blueprints": {
+    "BP_GR007_cccv_CP_C": {
+      "parent": "BP_GR007_cccv_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 21,
+        "ObjNameID": "ContainerGround_Name_cccv",
+        "PlugHolder": 15,
+        "BaseScore": 50,
+        "RootComponent": 17,
+        "OnEndPlay": [
+          {
+            "object": 15,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 90,
+      "exportBytes": 90,
+      "functions": [],
+      "uassetSha256": "ce4aa5fd89c6670c3ce03cdc7189284fbdbe266c0839798d404aa5aaff684edf",
+      "uexpSha256": "0f36303f650f12ec22c615ccbcc535496f0a5589386cd0b27e876d99992d6f40"
+    },
+    "BP_GR007_cccv_Base_C": {
+      "parent": "BP_AIGroundVehicle_Pawn_C",
+      "properties": {
+        "TrailVFXMap": [
+          {
+            "key": "ELivePhysicalMaterialType::Default",
+            "value": -39
+          },
+          {
+            "key": "ELivePhysicalMaterialType::Soil",
+            "value": -40
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 26,
+        "GameObjectId": 1003,
+        "MaxHealth": 40.0,
+        "DeathVFX_Niagara": -38,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 17,
+        "RootComponent": 19,
+        "OnEndPlay": [
+          {
+            "object": 17,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 128,
+      "exportBytes": 128,
+      "functions": [],
+      "uassetSha256": "f4fee83a5f360a0ce66b46e26e7ae8ab246fcee9081f5b888984f70475dbfd24",
+      "uexpSha256": "ee7df25315799aa7710fd3ab49b31c8ff56c62dd7008e30200aa8c844151e290"
+    },
+    "BP_AIGroundVehicle_Pawn_C": {
+      "parent": "LiveAIGroundVehicleObject",
+      "properties": {
+        "Event On Death": [],
+        "MaxGroundRotateAngle": 30.0,
+        "MaximumSpeed": 333.3333740234375,
+        "Acceleration": 300.0,
+        "RotationSpeed": 45.0,
+        "TrailVFXMap": [
+          {
+            "key": "ELivePhysicalMaterialType::Default",
+            "value": -33
+          },
+          {
+            "key": "ELivePhysicalMaterialType::Soil",
+            "value": -34
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "NPCEngineSoundRowHandle": {
+            "DataTable": -22,
+            "RowName": "NPC_VEHICLE_TANK_RUN"
+          }
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 19,
+        "GameObjectCategory": 3,
+        "BriDebriIconType": 5,
+        "DamageSound": {
+          "bEnableDamageSound": 1
+        },
+        "PursuitPointOffset": [0.0, 0.0, 45000.0],
+        "TimeToDeactivateAfterDeath": 10.0,
+        "DeathCameraShakeType": 29,
+        "PlugHolder": 12,
+        "AutoPossessAI": 3,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 179,
+      "exportBytes": 179,
+      "functions": ["Event On Death__DelegateSignature"],
+      "uassetSha256": "ec1bfc41a13d23e158cb55ff4c1d416c9923d8a3a43c3a0e7bdebef7c141a495",
+      "uexpSha256": "977bfb388034714923ce7d6122713d5a45f85bec855837fa002789fd10545c86"
+    },
+    "BP_GR026_trka_CP_C": {
+      "parent": "BP_GR026_trka_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 17,
+        "ObjNameID": "ContainerGround_Name_epp",
+        "PlugHolder": 12,
+        "BaseScore": 50,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 89,
+      "exportBytes": 89,
+      "functions": [],
+      "uassetSha256": "b1d8c25ea7a86e393978447aaf27670056469e8891f54d6d01457b6a23b881df",
+      "uexpSha256": "c77aee4cd7a68d856ca2f85ac89315e0ad7c986ee73c445dd276f94b87945ec1"
+    },
+    "BP_GR026_trka_Base_C": {
+      "parent": "BP_AIGroundVehicle_Pawn_C",
+      "properties": {
+        "TrailVFXMap": [
+          {
+            "key": "ELivePhysicalMaterialType::Default",
+            "value": -37
+          },
+          {
+            "key": "ELivePhysicalMaterialType::Soil",
+            "value": -38
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 23,
+        "GameObjectId": 1002,
+        "DeathVFX_Niagara": -36,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 14,
+        "RootComponent": 16,
+        "OnEndPlay": [
+          {
+            "object": 14,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 122,
+      "exportBytes": 122,
+      "functions": [],
+      "uassetSha256": "21cc049ca98aa669a80f95a3cdb8733b55df08494abac78ee1a93a5a5acac123",
+      "uexpSha256": "9b96c4cf06ffd328a6205d9f0b6ac655e13a9b8f563f439a8a771e2828b8eda8"
+    },
+    "BP_GR025_trkb_CP_C": {
+      "parent": "BP_GR025_trkb_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 17,
+        "ObjNameID": "ContainerGround_Name_Truck",
+        "DeathVFX_Niagara": -43,
+        "DeathCameraShakeType": 31,
+        "PlugHolder": 12,
+        "BaseScore": 50,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 100,
+      "exportBytes": 100,
+      "functions": [],
+      "uassetSha256": "d45f0a0ab35cfd61066a759640c5f5532ac5c9112884c362196597cc16df44cc",
+      "uexpSha256": "57e113f99169e5a02435bf5ceee1e84c80e3a640a75db53263c65e04a5260a77"
+    },
+    "BP_GR025_trkb_Base_C": {
+      "parent": "BP_AIGroundVehicle_Pawn_C",
+      "properties": {
+        "TrailVFXMap": [
+          {
+            "key": "ELivePhysicalMaterialType::Default",
+            "value": -39
+          },
+          {
+            "key": "ELivePhysicalMaterialType::Soil",
+            "value": -40
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 23,
+        "GameObjectId": 1012,
+        "MaxHealth": 20.0,
+        "DeathVFX_Niagara": -37,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "TimeToDeactivateAfterDeath": 120.0,
+        "PlugHolder": 14,
+        "RootComponent": 16,
+        "OnEndPlay": [
+          {
+            "object": 14,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 134,
+      "exportBytes": 134,
+      "functions": [],
+      "uassetSha256": "1da03e1782f0face9513887ee2e126bcd0d09abac38e86c146df804b50143e7e",
+      "uexpSha256": "3b5d04beeee4982be91d711d4b54da7aaadb029331433e195918a63eac9d8080"
+    },
+    "BP_GR027_radv_CP_C": {
+      "parent": "BP_GR027_radv_Base_C",
+      "properties": {
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 18,
+        "MaxHealth": 35.0,
+        "ObjNameID": "ContainerGround_Name_Radartruck",
+        "PlugHolder": 12,
+        "BaseScore": 430,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 102,
+      "exportBytes": 102,
+      "functions": [],
+      "uassetSha256": "f5b4b736a804648a8e3104a06f654c9367539e3dfab9522990ce992234a5705f",
+      "uexpSha256": "7ab941744fe00303c1f79bd746d718f3b05bfb9f392146f577f6c048ecaf89e7"
+    },
+    "BP_GR027_radv_Base_C": {
+      "parent": "BP_AIGroundVehicle_Pawn_C",
+      "properties": {
+        "TrailVFXMap": [
+          {
+            "key": "ELivePhysicalMaterialType::Default",
+            "value": -38
+          },
+          {
+            "key": "ELivePhysicalMaterialType::Soil",
+            "value": -39
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 25,
+        "GameObjectSubCategory": 35,
+        "DeathVFX_Niagara": -37,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 14,
+        "RootComponent": 17,
+        "OnEndPlay": [
+          {
+            "object": 14,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 119,
+      "exportBytes": 119,
+      "functions": [],
+      "uassetSha256": "d99dc5da3cdd59c818517a1924404c3b1680a2e9a98518fcc43250e1a423bcfd",
+      "uexpSha256": "24ae41ff823ec07e559604604a37cc184ebd209da834879146d020250afa3476"
+    },
+    "BP_OP0058_crkt_CP_C": {
+      "parent": "BP_OP0058_crkt_Base_C",
+      "properties": {
+        "SoundEventDamagedSmokeInsideStart": -1,
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "NotVisibleOptimizationSceneComponentNames": ["SM_MainBody"],
+        "OverlapCollision": 17,
+        "GameObjectCategory": 4,
+        "MaxHealth": 200.0,
+        "PlugHolder": 12,
+        "BaseScore": 1000,
+        "RootComponent": 14,
+        "OnEndPlay": [
+          {
+            "object": 12,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 87,
+      "exportBytes": 87,
+      "functions": [],
+      "uassetSha256": "9cb998f11da436ef576203324c812d044018b63bfef0ff9ad1224f7c487909c2",
+      "uexpSha256": "99c41230b0405b39379f41629814514fb7b01ba522547cae81c7f485b5870e3f"
+    },
+    "BP_OP0058_crkt_Base_C": {
+      "parent": "LiveAISotoaRocket",
+      "properties": {
+        "AttachTargetOnSeparate": {
+          "Name_WD": "E_Obj_Rocket_Debri_Phase1_0"
+        },
+        "SoundEventDamagedSmokeStart": -5,
+        "SoundEventDamagedSmokeStop": -6,
+        "SoundEventDamagedSmokeInsideStart": -3,
+        "SoundEventDamagedSmokeInsideStop": -4,
+        "BoosterEffectRootName": "SM_MainBody",
+        "MainBoosterEffect": {
+          "EffectData": -38,
+          "AttachSocketName": "SOC_VFX_Center",
+          "EffectDestroyDuration": 300.0
+        },
+        "BoosterEffects": [
+          {
+            "EffectData_Cascade": 0,
+            "EffectData": -39,
+            "AttachSocketName": "SOC_VFX_Booster_R",
+            "bIsUseRandomSocketName": false,
+            "RandomSocketNameList": [],
+            "bIsWorldSpace": false,
+            "OffsetTransform": {
+              "Rotation": [0.0, 0.0, 0.0, 1.0],
+              "Translation": {},
+              "Scale3D": [1.0, 1.0, 1.0]
+            },
+            "bIsAffectedByWind": false,
+            "bIsRotationForMoving": false,
+            "bIgnoreSocketRotation": false,
+            "bLockHeight": false,
+            "SpawnEffectStartDelay": 0,
+            "bAddSpawnEffectStartDelayRandom": false,
+            "DelayMinRandom": 0,
+            "DelayMaxRandom": 1.0,
+            "EffectEndDuration": 0,
+            "bIsSwitchActiveSpawnEffect": false,
+            "bPlaySoundEvent": false,
+            "SoundEvent": 0,
+            "DeactivateSoundEvent": 0,
+            "bPlayCameraShake": false,
+            "SpawnShakeType": 24,
+            "EffectDestroyDuration": 7.0
+          },
+          {
+            "EffectData_Cascade": 0,
+            "EffectData": -39,
+            "AttachSocketName": "SOC_VFX_Booster_L",
+            "bIsUseRandomSocketName": false,
+            "RandomSocketNameList": [],
+            "bIsWorldSpace": false,
+            "OffsetTransform": {
+              "Rotation": [0.0, 0.0, 0.0, 1.0],
+              "Translation": {},
+              "Scale3D": [1.0, 1.0, 1.0]
+            },
+            "bIsAffectedByWind": false,
+            "bIsRotationForMoving": false,
+            "bIgnoreSocketRotation": false,
+            "bLockHeight": false,
+            "SpawnEffectStartDelay": 0,
+            "bAddSpawnEffectStartDelayRandom": false,
+            "DelayMinRandom": 0,
+            "DelayMaxRandom": 1.0,
+            "EffectEndDuration": 0,
+            "bIsSwitchActiveSpawnEffect": false,
+            "bPlaySoundEvent": false,
+            "SoundEvent": 0,
+            "DeactivateSoundEvent": 0,
+            "bPlayCameraShake": false,
+            "SpawnShakeType": 24,
+            "EffectDestroyDuration": 7.0
+          }
+        ],
+        "LaunchEffectStopAltitude": 500.0,
+        "FireControlSystemComponent": 3,
+        "AISound": {
+          "AkDriveSoundPlayEvent": -1,
+          "AkDriveSoundStopEvent": -2
+        },
+        "SoundIdentificationTag": "SND_OP0058_crkt",
+        "DamagedStateComponent": 4,
+        "OverlapCollision": 18,
+        "BriDebriIconType": 14,
+        "MaxHealth": 150.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-7]
+        },
+        "TimeToDeactivateAfterDeath": 100.0,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 10,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 359,
+      "exportBytes": 359,
+      "functions": [],
+      "uassetSha256": "6a5381de1d780b2c2b88d0d14846918280619060f234d69f8fb972abc6946283",
+      "uexpSha256": "3ba5384efeedc220bb0a419345cc136132c2de31964807772a9e319fad7b1e17"
+    },
+    "BP_OP0058_crkt_ABR_p1_CP_C": {
+      "parent": "BP_OP0058_crkt_ABR_p1_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 11.399999618530273,
+          "FallSpeedTime": 15.0,
+          "RollTime": 25.0,
+          "PitchTime": 4.0,
+          "YawTime": 4.0,
+          "MaxAngleSpeed": [-1.0, 3.0, 1.5],
+          "MaxAngleSpeedAddRandom": [-1.0, 1.0, 0.0],
+          "AngleDamping": [0.6, 0.6, 0.6],
+          "FallAtractMaxSpeed": 20.0,
+          "FallAtractTransitionTime": 5.0
+        },
+        "InitialPushSpeedRange": {
+          "Min": 30.0,
+          "Max": 30.0
+        },
+        "FallTargetMarkerName": {
+          "Name_WD": "RocketDebri_FirstMark_0_0"
+        },
+        "FallTargetRadius": 8.0,
+        "OverrideFallingParam": [
+          {
+            "key": "ELiveDifficulty::Easy",
+            "value": {
+              "FallSpeed": 10.399999618530273,
+              "FallSpeedTime": 15.0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 25.0,
+              "PitchTime": 4.0,
+              "YawTime": 4.0,
+              "MaxAngleSpeed": [-1.0, 3.0, 1.5],
+              "MaxAngleSpeedAddRandom": [-1.0, 1.0, 0.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 20.0,
+              "FallAtractTransitionTime": 5.0
+            }
+          },
+          {
+            "key": "ELiveDifficulty::Casual",
+            "value": {
+              "FallSpeed": 10.399999618530273,
+              "FallSpeedTime": 15.0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 25.0,
+              "PitchTime": 4.0,
+              "YawTime": 4.0,
+              "MaxAngleSpeed": [-1.0, 3.0, 1.5],
+              "MaxAngleSpeedAddRandom": [-1.0, 1.0, 0.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 20.0,
+              "FallAtractTransitionTime": 5.0
+            }
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 15,
+        "BriDebriIconType": 22,
+        "MaxHealth": 30.0,
+        "bIsInvincibleInducedExplosion": 1,
+        "PlugHolder": 10,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 450,
+      "exportBytes": 450,
+      "functions": [],
+      "uassetSha256": "e5d0cbd5aff367344c76a098fd8e1047dd48d178560b3ebdcc5e13cc8751e41a",
+      "uexpSha256": "d500af2f319f4fd46f81186c81742c37b2c4810f0bf16c8b1ad88d1d39e3177c"
+    },
+    "BP_OP0058_crkt_ABR_p1_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Separate_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 8.0
+        },
+        "FallTrailEffect": {
+          "bIgnoreSocketRotation": 1
+        },
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkEnginePlayEvent": -1,
+          "AkEngineStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 18,
+        "MaxHealth": 40.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 10,
+        "RootComponent": 12,
+        "OnEndPlay": [
+          {
+            "object": 10,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 95,
+      "exportBytes": 95,
+      "functions": [],
+      "uassetSha256": "b822434995b109ead22001ffe63d9fb6b5a33e92c301a4cd887d9a01c2fe4df6",
+      "uexpSha256": "0de4d26f03eaa8de30f2f1bd944c8d67ee52dc2ef2272c07ab0c9900ad905b16"
+    },
+    "BP_OP0058_crkt_debri_Separate_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "properties": {
+        "bHideTrailEffectRootOnDeath": false,
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 13,
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 55,
+      "exportBytes": 55,
+      "functions": [],
+      "uassetSha256": "4e305788c1d4ad25b10bf8bfa13cf515a9c883054e1e5854ef2c802916980e03",
+      "uexpSha256": "24da2efb43014dffd174824d4fa90a3903b0ea3eb333a8ac8ff4bddf72814f5c"
+    },
+    "BP_OP0058_crkt_debri_Base_C": {
+      "parent": "LiveAIRocketWreck",
+      "properties": {
+        "FallingParam": {
+          "RollTime": 10.0,
+          "PitchTime": 5.0,
+          "MaxAngleSpeed": [-10.0, -10.0, -3.0],
+          "MaxAngleSpeedAddRandom": [20.0, 20.0, 6.0],
+          "AngleDamping": [0.8, 0.8, 0.95]
+        },
+        "FallTargetMarkerName": {
+          "Name_WD": "DefaultMarkActor0"
+        },
+        "FallTargetRadius": 100.0,
+        "TrailEffectRootName": "SM_MainBody",
+        "FallTrailEffect": {
+          "EffectData": -21,
+          "AttachSocketName": "SOC_VFX_Trail",
+          "bPlayCameraShake": 1,
+          "SpawnShakeType": 25,
+          "EffectDestroyDuration": 30.0
+        },
+        "bHideTrailEffectRootOnDeath": 1,
+        "FinalExplosionTime": 0.20000000298023224,
+        "FireControlSystemComponent": 3,
+        "SoundIdentificationTag": "SND_OP0058_crkt",
+        "DamagedStateComponent": 4,
+        "OverlapCollision": 12,
+        "GameObjectCategory": 4,
+        "MaxHealth": 50.0,
+        "DamageSound": {
+          "bEnableDamageSound": 1,
+          "ExplosionSoundEventList": [-1]
+        },
+        "TimeToDeactivateAfterDeath": 10.0,
+        "DeathCameraShakeType": 0,
+        "PlugHolder": 6,
+        "RootComponent": 8,
+        "OnEndPlay": [
+          {
+            "object": 6,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 240,
+      "exportBytes": 240,
+      "functions": [],
+      "uassetSha256": "667e1cbb136fa53e6b6d0e0841558612a8bb8acdf472579271fcb11add2ef9dd",
+      "uexpSha256": "79e83aecb71bc243789ef579eaab5724453ab03b9246fd70930cd570c3e9ddf8"
+    },
+    "BP_OP0058_crkt_BR_p2_CP_C": {
+      "parent": "BP_OP0058_crkt_BR_p2_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 13.0,
+          "FallSpeedTime": 0,
+          "YawTime": 60.0,
+          "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+          "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+          "FallAtractMaxSpeed": 50.0,
+          "FallAtractTransitionTime": 4.0
+        },
+        "InitialPushSpeedRange": {
+          "Min": 10.0,
+          "Max": 10.0
+        },
+        "InitialPushAngleRange": 15.0,
+        "FallTargetMarkerName": {
+          "Name_WD": "RocketDebri_LastMark_0_0"
+        },
+        "FallTargetRadius": 8.0,
+        "OverrideFallingParam": [
+          {
+            "key": "ELiveDifficulty::Easy",
+            "value": {
+              "FallSpeed": 12.0,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 60.0,
+              "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+              "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 30.0,
+              "FallAtractTransitionTime": 4.0
+            }
+          },
+          {
+            "key": "ELiveDifficulty::Casual",
+            "value": {
+              "FallSpeed": 12.0,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 60.0,
+              "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+              "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 30.0,
+              "FallAtractTransitionTime": 4.0
+            }
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 14,
+        "BriDebriIconType": 22,
+        "MaxHealth": 20.0,
+        "bIsInvincibleInducedExplosion": 1,
+        "PlugHolder": 9,
+        "RootComponent": 11,
+        "OnEndPlay": [
+          {
+            "object": 9,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 411,
+      "exportBytes": 411,
+      "functions": [],
+      "uassetSha256": "7409a6eecc08cfee2a40c0c4b6f043a56be748bd3f46687c3d3ca6478e02eccd",
+      "uexpSha256": "9344beb4dba70d029153dde53c97c2628f8ac88e8202e42e96e54c89f7703792"
+    },
+    "BP_OP0058_crkt_BR_p2_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Separate_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 8.0
+        },
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkEnginePlayEvent": -1,
+          "AkEngineStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 14,
+        "MaxHealth": 25.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 90,
+      "exportBytes": 90,
+      "functions": [],
+      "uassetSha256": "ef1e2b91f389b80cbb3bf30fda3c46c94ad61d76ff30c9f695c3fb961cd92696",
+      "uexpSha256": "92f0c2302ec6d9c45baaf12f4f0b8afef0b8e6936fc95fb393c4ca20bd03d587"
+    },
+    "BP_OP0058_crkt_A_p2_CP_C": {
+      "parent": "BP_OP0058_crkt_A_p2_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 13.399999618530273,
+          "FallSpeedTime": 0,
+          "YawTime": 60.0,
+          "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+          "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+          "AngleDamping": [0.6, 0.6, 0.6],
+          "FallAtractMaxSpeed": 60.0,
+          "FallAtractTransitionTime": 3.0
+        },
+        "InitialPushSpeedRange": {
+          "Min": 20.0
+        },
+        "InitialPushAngleRange": 30.0,
+        "FallTargetMarkerName": {
+          "Name_WD": "RocketDebri_LastMark_1_0"
+        },
+        "FallTargetRadius": 8.0,
+        "OverrideFallingParam": [
+          {
+            "key": "ELiveDifficulty::Easy",
+            "value": {
+              "FallSpeed": 12.399999618530273,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 60.0,
+              "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+              "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 40.0,
+              "FallAtractTransitionTime": 3.0
+            }
+          },
+          {
+            "key": "ELiveDifficulty::Casual",
+            "value": {
+              "FallSpeed": 12.399999618530273,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 60.0,
+              "MaxAngleSpeed": [-2.0, -2.0, -3.0],
+              "MaxAngleSpeedAddRandom": [1.0, -1.0, 6.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 40.0,
+              "FallAtractTransitionTime": 3.0
+            }
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 13,
+        "BriDebriIconType": 22,
+        "MaxHealth": 20.0,
+        "bIsInvincibleInducedExplosion": 1,
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 431,
+      "exportBytes": 431,
+      "functions": [],
+      "uassetSha256": "6838bc3326c7806a8c80b8938b5f726dc99f8cd5c3203f1a8ba8c1de36d0eccc",
+      "uexpSha256": "c9653c39db23eb1d4881a7cb6d8fbb626978d19d90eade09ab032385ccc3b824"
+    },
+    "BP_OP0058_crkt_A_p2_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 8.0,
+          "AngleDamping": [0.699999988079071, 0.699999988079071, 0.95]
+        },
+        "InitialPushSpeedRange": {
+          "Min": 10.0,
+          "Max": 20.0
+        },
+        "InitialPushAngleRange": 80.0,
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkEnginePlayEvent": -1,
+          "AkEngineStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 12,
+        "MaxHealth": 25.0,
+        "DamageSound": {
+          "ExplosionSoundEventList": [-3]
+        },
+        "PlugHolder": 7,
+        "RootComponent": 9,
+        "OnEndPlay": [
+          {
+            "object": 7,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 130,
+      "exportBytes": 130,
+      "functions": [],
+      "uassetSha256": "d243a64481e59963c509c937c0e43f0479c983f2a0b8342720695d066ed4a827",
+      "uexpSha256": "c3212bd31c5aaeef695aee2e5317d613bdb1ca51d50730dff66938140fa3de18"
+    },
+    "BP_OP0058_crkt_R_p3_CP_C": {
+      "parent": "BP_OP0058_crkt_R_p3_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 15.0,
+          "FallSpeedTime": 0,
+          "PitchTime": 3.0,
+          "YawTime": 30.0,
+          "MaxAngleSpeed": [0.0, 1.0, -3.0],
+          "MaxAngleSpeedAddRandom": [-2.0, 2.0, -3.0],
+          "AngleDamping": [0.6, 0.6, 0.6],
+          "FallAtractMaxSpeed": 50.0,
+          "FallAtractTransitionTime": 4.0
+        },
+        "InitialPushSpeedRange": {
+          "Max": 10.0
+        },
+        "InitialPushAngleRange": 10.0,
+        "FallTargetMarkerName": {
+          "Name_WD": "RocketDebri_LastMark_0_1"
+        },
+        "FallTargetRadius": 8.0,
+        "OverrideFallingParam": [
+          {
+            "key": "ELiveDifficulty::Easy",
+            "value": {
+              "FallSpeed": 14.0,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 3.0,
+              "YawTime": 30.0,
+              "MaxAngleSpeed": [0.0, 1.0, -3.0],
+              "MaxAngleSpeedAddRandom": [-2.0, 2.0, -3.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 30.0,
+              "FallAtractTransitionTime": 4.0
+            }
+          },
+          {
+            "key": "ELiveDifficulty::Casual",
+            "value": {
+              "FallSpeed": 14.0,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 3.0,
+              "YawTime": 30.0,
+              "MaxAngleSpeed": [0.0, 1.0, -3.0],
+              "MaxAngleSpeedAddRandom": [-2.0, 2.0, -3.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 30.0,
+              "FallAtractTransitionTime": 4.0
+            }
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 13,
+        "BriDebriIconType": 22,
+        "bIsInvincibleInducedExplosion": 1,
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 429,
+      "exportBytes": 429,
+      "functions": [],
+      "uassetSha256": "57d6dac01485f26a001e5a3ff2928577c0693de8285c4c1e8f74400e8143c242",
+      "uexpSha256": "90564b57e871ad833f9d2a156d2b55fa9081c7edaf3cf26ecd8fe902cc0da476"
+    },
+    "BP_OP0058_crkt_R_p3_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 8.0
+        },
+        "InitialPushSpeedRange": {
+          "Min": 10.0,
+          "Max": 20.0
+        },
+        "InitialPushAngleRange": 15.0,
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkEnginePlayEvent": -1,
+          "AkEngineStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 12,
+        "MaxHealth": 15.0,
+        "PlugHolder": 7,
+        "RootComponent": 9,
+        "OnEndPlay": [
+          {
+            "object": 7,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 92,
+      "exportBytes": 92,
+      "functions": [],
+      "uassetSha256": "ca04e181617f4047a06dee56a1ae6002c9d6b553a890079a4e5274f775e5d616",
+      "uexpSha256": "fc0be932a977a63b8d1c65ddefc3fed2b140a150e9da45c1ea38a8799c238638"
+    },
+    "BP_OP0058_crkt_B_p3_CP_C": {
+      "parent": "BP_OP0058_crkt_B_p3_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 15.399999618530273,
+          "FallSpeedTime": 0,
+          "YawTime": 30.0,
+          "MaxAngleSpeed": [-2.0, -1.0, 0.0],
+          "MaxAngleSpeedAddRandom": [0.0, -2.0, 3.0],
+          "AngleDamping": [0.6, 0.6, 0.6],
+          "FallAtractMaxSpeed": 60.0,
+          "FallAtractTransitionTime": 3.0
+        },
+        "InitialPushSpeedRange": {
+          "Min": 20.0,
+          "Max": 20.0
+        },
+        "InitialPushAngleRange": 20.0,
+        "FallTargetMarkerName": {
+          "Name_WD": "RocketDebri_LastMark_1_1"
+        },
+        "FallTargetRadius": 8.0,
+        "OverrideFallingParam": [
+          {
+            "key": "ELiveDifficulty::Easy",
+            "value": {
+              "FallSpeed": 14.399999618530273,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 30.0,
+              "MaxAngleSpeed": [-2.0, -1.0, 0.0],
+              "MaxAngleSpeedAddRandom": [0.0, -2.0, 3.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 40.0,
+              "FallAtractTransitionTime": 3.0
+            }
+          },
+          {
+            "key": "ELiveDifficulty::Casual",
+            "value": {
+              "FallSpeed": 14.399999618530273,
+              "FallSpeedTime": 0,
+              "AirResistance": 0.949999988079071,
+              "WaterResistance": 0.009999999776482582,
+              "bFacingDown": false,
+              "RollTime": 10.0,
+              "PitchTime": 5.0,
+              "YawTime": 30.0,
+              "MaxAngleSpeed": [-2.0, -1.0, 0.0],
+              "MaxAngleSpeedAddRandom": [0.0, -2.0, 3.0],
+              "AngleDamping": [0.6, 0.6, 0.6],
+              "bMoveForward": false,
+              "FallAtractMaxSpeed": 40.0,
+              "FallAtractTransitionTime": 3.0
+            }
+          }
+        ],
+        "FireControlSystemComponent": 4,
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 13,
+        "BriDebriIconType": 22,
+        "bIsInvincibleInducedExplosion": 1,
+        "PlugHolder": 8,
+        "RootComponent": 10,
+        "OnEndPlay": [
+          {
+            "object": 8,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 429,
+      "exportBytes": 429,
+      "functions": [],
+      "uassetSha256": "c521a561ae005dfd81cb88de0340784ffdbc4751285967f4a5cdb02db325f903",
+      "uexpSha256": "eca65f72ee90494125da32df223978d0036ad5e720e77eee5380255f08833905"
+    },
+    "BP_OP0058_crkt_B_p3_Base_C": {
+      "parent": "BP_OP0058_crkt_debri_Base_C",
+      "properties": {
+        "FallingParam": {
+          "FallSpeed": 8.0
+        },
+        "FireControlSystemComponent": 4,
+        "AISound": {
+          "AkEnginePlayEvent": -1,
+          "AkEngineStopEvent": -2
+        },
+        "DamagedStateComponent": 5,
+        "OverlapCollision": 12,
+        "MaxHealth": 15.0,
+        "PlugHolder": 7,
+        "RootComponent": 9,
+        "OnEndPlay": [
+          {
+            "object": 7,
+            "function": "OnOwnerActorEndPlay"
+          }
+        ]
+      },
+      "consumedBytes": 78,
+      "exportBytes": 78,
+      "functions": [],
+      "uassetSha256": "d5938dd75b48908cf0514b7ca55e265b88780be07a36bd82cc2be0880d5d2947",
+      "uexpSha256": "5eed0a07cc7087bbc8ef25b7eb843cdf9b96e18f515cb194c916554527c7726f"
+    }
+  },
+  "inputSha256": {
+    "data/local/catalog.json": "b9cf20f0afac99ce6f98f939364961718661480d04b1323da03b91c590bc39fa",
+    "src/data/targets.json": "f957db6d67d15cc1dc49716c1b5acf1840451add5348d78a29030db10e58d96c",
+    "docs/initial/ref/tables/DT_NPC.json": "142ca3091b011b4fc448cea5fd8c41a0b1f6e634d439c9f0d99e49dc31f68ab2",
+    "docs/initial/ref/tables/DT_NPC_Model.json": "764717c702fe57b6b0fe7528bfc423b6faff22baab8db25150628394812a2c02",
+    "docs/initial/ref/tables/DT_NPC_Mission024.json": "15fb9b1c2eba360baeaa9358c9cf8bbcfc56d8b6485f1e66c456bd534d9b40e9",
+    "docs/initial/ref/tables/DT_NPC_Mission025day1.json": "cbefbf906b92a38d3d1da10a303e6e0ae2d84cb693a1809c30b4082c08d79999",
+    "docs/initial/ref/tables/DT_NPC_Mission010.json": "e96b8487e429d12946ab91b0cca2d2ca2cca163f9e7f27ea06fbf79cafcfe935",
+    "docs/initial/ref/tables/DT_NPC_Mission004.json": "f6de423c0ac810a01b18a6b060898a89fffa21e92a9cd079b85cf03f4880aa58",
+    "docs/initial/ref/tables/DT_NPC_Mission018.json": "476e09dba72fb5533dbc7c57ee5134915d66950995c195085a8cec4dfc81d4d2",
+    "docs/initial/ref/tables/DT_NPC_Mission019.json": "8ac2fcc37622f9c80dda1afbebd4fadd7a9e4fe9abc7d8b5ad58acde6c074943",
+    "docs/initial/ref/tables/DT_NPC_Mission002.json": "7fa9ab45557d450d31bcb3d8274e965ef62fbf3ec24354349f794a3fdd08d74b",
+    "docs/initial/ref/tables/DT_NPC_Mission003.json": "c4e0bc861b5547838610e446c4d3abf8473532e483bf6e66abafeac99b7ed714",
+    "docs/initial/ref/tables/DT_NPC_Mission005.json": "8e01a2dfb0f2d820b1ab0e80e42bde707077207984af2930130fc1c6ec740ce7",
+    "docs/initial/ref/tables/DT_NPC_Mission006.json": "93c080b56af2c66c05e5926f8f5086754d30f9a2b0349a71b5f7321aebc68f05",
+    "docs/initial/ref/tables/DT_NPC_Mission007.json": "2e370d5aa843e357ba02b795c358b6d4f3b56c1ff0bf15c38addd5c5454706d0",
+    "docs/initial/ref/tables/DT_NPC_Mission008.json": "ad939fdaf88e230223eaf84a9203ae3f32b87a56ac81d29983ad11cec5dec073",
+    "docs/initial/ref/tables/DT_NPC_Mission009.json": "606c572af04ad14a80aab458be211a09aae82afe92a7634f91d2da80c5e77b07",
+    "docs/initial/ref/tables/DT_NPC_Mission011.json": "c26990f3a37c40662eb5fdf0d723a2d1f43aaa605ae6e3a0ccdedd911cdeb176",
+    "docs/initial/ref/tables/DT_NPC_Mission012.json": "90b9feea2af06a3eb3819bc1901eadecd4d8c36c48668bb967d78502fef4bdb1",
+    "docs/initial/ref/tables/DT_NPC_Mission013.json": "599615e2d4a88acf9ce6aadc97fe0fe0bd80221ea9c2cce42e49851f2d0ccc17",
+    "docs/initial/ref/tables/DT_NPC_Mission014.json": "75d6e21333f4eb93dc60834769e4f419ca47f0345214778784dec4d2d7899add",
+    "docs/initial/ref/tables/DT_NPC_Mission015.json": "746995151223907d3be933fa1376a394c3b773b05896ccde7f6fa9101a07e8ad",
+    "docs/initial/ref/tables/DT_NPC_Mission016.json": "0c83ec530ede8fa2b90df6a1320fde2b3a3218d03ddcc8e3a370735e24a22fe6",
+    "docs/initial/ref/tables/DT_NPC_Mission017.json": "62b188d912712abfbc5439ba3ced1dbd9772d23380978bbca2020322a845fa21",
+    "docs/initial/ref/tables/DT_NPC_Mission020.json": "e78aca7be4a1013478284fe440e8c89960e74dc35a2fa3f2a98082f52d457a59",
+    "docs/initial/ref/tables/DT_NPC_Mission021.json": "c7905124140489ba6b5385a00480e2c715e5956ae6dae2ff6a33600acb92604a",
+    "docs/initial/ref/tables/DT_NPC_Mission022.json": "ebd5b1380342d33764c9a2f407993145874897476a4d2c5ac1c40ac17bf55873",
+    "docs/initial/ref/tables/DT_NPC_Mission023.json": "d74b4446780b4546d3c20228d25eb8366cbdd2b3a56c12782a9229054c3f2ce0",
+    "docs/initial/ref/tables/DT_NPC_Mission025day2.json": "b867952634cb9279423dff21614e0be42212b8b0a4fc8e4e441a47d7021da09e",
+    "docs/initial/ref/tables/DT_NPC_Mission026.json": "d2b9b62f1d90a27f7d780ae515f82a933f5492e0ded364da61cf24e43ec431ec",
+    "docs/initial/ref/tables/DT_NPC_Mission027.json": "052035a5e995c5e587c70a3a37e4c4c15944bed9660f2070291dc3069144d2d2",
+    "docs/initial/ref/tables/DT_NPC_Mission028.json": "b97a307815d788bf0a2a5f8f95af9cdc29ea450598efb277fbe8530116cd4ddb",
+    "docs/initial/ref/tables/DT_NPC_Mission029.json": "dc5d46ae119601f58c927e1357d9b1b8c19a46bf9c41572e9de9e13a5b10dacd",
+    "docs/initial/ref/tables/DT_NPC_Mission030.json": "631ecdc94944a968a1a2250888d84c668bb32290d526f8ffc17b312881f75e2e",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr003.json": "80858ba0e29334a480b53b037e1d7e3936b06d94221ac385ca07a14f7be9c7d6",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr004.json": "0d9be89582eb9c46ee9a0db80219ad6fa6fae9131562da04fb550cec9b5cc159",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr005.json": "d6a936474aa1846849eb9528a74a9e7d91d173b86ead8c2c082eff52dadbf69f",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr006.json": "855f26a179e672f42adb72b9fde887aab4551b1f05d0bfce860d99094a6e508d",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr007.json": "2a2f00473540815d7a482243b60fef6d48fb50fe362bbf1ea49c112fcf9e9653",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr008.json": "6de31bb1f804f37f41f7ee907cf4f724a870868516d2f0eb8c08ed08bb188a58",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr009.json": "fb183979b9cb7243de68702cd2e2aaa37f5caa22156840a6831fceafc113db42",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr010.json": "6f92d6b74647254ea7a5e76464038fd5c7aa40ef71f780185ea800ab0ad9803d",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr011.json": "4692ab34468f3db46b486b92545bfdc24beaa081211dff13273d81d4932f0ac2",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr012.json": "8ae2f8fac1779d585a04f5fbc8f793753441888cf2aa8c0909a0a8d5fa9f1905",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr013.json": "6b3c5b63a8684b8306d656b6e9347f2dfc39316abce0dbbf4b6dd090f02594b4",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr014.json": "3a965c3a3341a2805047184efc1f7cd860bd41cfdd702b5295273a713e9d29ba",
+    "docs/initial/ref/tables/DT_NPC_Mission_Tr015.json": "dfc9f92c10b5dd3281ec393c199d47e66381e2f305fd9f01aa4b6ce081020427"
+  },
+  "protectedFilesUnchanged": {
+    "src\\data\\targets.json": "f957db6d67d15cc1dc49716c1b5acf1840451add5348d78a29030db10e58d96c",
+    "src\\data\\weapons.json": "700022c0c6453ffb35efb2b88ae04070aacdaf05d514f9bbd732f552af062d72",
+    "src\\data\\modifiers.json": "22f7650aac4aec283fdae34ddb74e451d2bc70bbeb4fb553dc4d1eb2ac2962a0",
+    "data\\local\\catalog.json": "b9cf20f0afac99ce6f98f939364961718661480d04b1323da03b91c590bc39fa",
+    "data\\local\\npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data\\local\\native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data\\local\\generation-input.json": "3c53014e68328f23573920e6574e4d69866dbbcd14ffa0ac647b523a21d27bd3"
+  }
+}
