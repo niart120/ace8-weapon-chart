@@ -2,8 +2,33 @@
 import { cleanup, render, screen, fireEvent, within } from '@testing-library/react';
 import { afterEach, beforeEach, expect, test } from 'vitest';
 import App from './App';
+import { storageKey } from './storage/preferences';
 afterEach(cleanup);
 beforeEach(() => window.localStorage.clear());
+
+test('非掲載TLSパーツを旧保存から除き、他の選択と条件を維持する', () => {
+  const saved = {
+    version: 1,
+    weaponIds: [1],
+    targetIds: [26],
+    showParts: true,
+    showMissionVariants: true,
+    conditions: {
+      role: 'MULTIROLE',
+      parts: ['laserPower', 'missilePower'],
+      damageType: 'BLAST',
+    },
+  };
+  window.localStorage.setItem(storageKey, JSON.stringify(saved));
+  render(<App />);
+  expect(screen.queryByRole('checkbox', { name: 'TLS.POW+' })).toBeNull();
+  expect(screen.getAllByRole('checkbox')).toHaveLength(9);
+  expect(screen.getByRole('checkbox', { name: 'MSL.POW+' }).hasAttribute('checked')).toBe(true);
+  expect(JSON.parse(window.localStorage.getItem(storageKey)!)).toEqual({
+    ...saved,
+    conditions: { ...saved.conditions, parts: ['missilePower'] },
+  });
+});
 test('主画面から兵装と目標を選択できる', () => {
   render(<App />);
   expect(screen.getByRole('button', { name: 'WEAPONS' })).toBeTruthy();

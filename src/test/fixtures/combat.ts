@@ -7,11 +7,29 @@ export const modifiers: Modifiers = {
     'ELECTRONIC WARFARE': { air: 1, ground: 1, none: 1, ship: 1 },
   },
   parts: [
-    { key: 'missilePower', name: 'MSL.POW+', condition: 'all', stage: 'base' },
-    { key: 'missileAirPower', name: 'MSL.AIR.POW+', condition: 'air', stage: 'afterRole' },
-    { key: 'missileGroundPower', name: 'MSL.GND.POW+', condition: 'surface', stage: 'afterRole' },
-    { key: 'specialAirPower', name: 'AIR.POW+', condition: 'all', stage: 'base' },
-    { key: 'specialGroundPower', name: 'GND.POW+', condition: 'all', stage: 'base' },
+    { key: 'missilePower', name: 'MSL.POW+', published: true, condition: 'all', stage: 'base' },
+    {
+      key: 'missileAirPower',
+      name: 'MSL.AIR.POW+',
+      published: true,
+      condition: 'air',
+      stage: 'afterRole',
+    },
+    {
+      key: 'missileGroundPower',
+      name: 'MSL.GND.POW+',
+      published: true,
+      condition: 'surface',
+      stage: 'afterRole',
+    },
+    { key: 'specialAirPower', name: 'AIR.POW+', published: true, condition: 'all', stage: 'base' },
+    {
+      key: 'specialGroundPower',
+      name: 'GND.POW+',
+      published: true,
+      condition: 'all',
+      stage: 'base',
+    },
   ],
 };
 export const target: Target = {

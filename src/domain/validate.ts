@@ -45,6 +45,7 @@ export function validateMasters(
       isRecord(part) &&
         typeof part.key === 'string' &&
         typeof part.name === 'string' &&
+        typeof part.published === 'boolean' &&
         !keys.has(part.key),
       'パーツID不備'
     );

@@ -1,6 +1,48 @@
 import { expect, test } from '@playwright/test';
 import { writeFile } from 'node:fs/promises';
 import type { Page, TestInfo } from '@playwright/test';
+
+for (const mobile of [false, true]) {
+  test(`${mobile ? 'スマートフォン' : 'PC'}: TLS.POW+非掲載と旧保存の復元`, async ({ page }) => {
+    await page.setViewportSize(
+      mobile ? { width: 390, height: 844 } : { width: 1440, height: 1000 }
+    );
+    const saved = {
+      version: 1,
+      weaponIds: [],
+      targetIds: [],
+      showParts: true,
+      showMissionVariants: true,
+      conditions: {
+        role: 'MULTIROLE',
+        parts: mobile ? ['laserPower'] : ['laserPower', 'missilePower'],
+        damageType: 'BLAST',
+      },
+    };
+    await page.addInitScript((value) => {
+      const key = 'ace8-weapon-guide.preferences';
+      if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(value));
+    }, saved);
+    await page.goto('/');
+    for (let visit = 0; visit < 2; visit++) {
+      if (mobile) await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
+      await expect(page.getByRole('checkbox', { name: 'TLS.POW+' })).toHaveCount(0);
+      await expect(page.getByRole('checkbox')).toHaveCount(9);
+      await expect(page.getByRole('checkbox', { name: 'MSL.POW+', exact: true })).toBeChecked({
+        checked: !mobile,
+      });
+      await expect
+        .poll(() =>
+          page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!))
+        )
+        .toEqual({
+          ...saved,
+          conditions: { ...saved.conditions, parts: mobile ? [] : ['missilePower'] },
+        });
+      if (visit === 0) await page.reload();
+    }
+  });
+}
 async function record(page: Page, info: TestInfo, values: Record<string, unknown>) {
   await writeFile(
     info.outputPath('metrics.json'),

@@ -51,6 +51,7 @@ export interface Target {
 export interface Part {
   readonly key: string;
   readonly name: string;
+  readonly published: boolean;
   readonly condition: 'all' | 'air' | 'surface';
   readonly stage: 'base' | 'afterRole';
 }

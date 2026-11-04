@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { modifiers, targets, weapons } from './data/masters';
+import { publishedParts, targets, weapons } from './data/masters';
 import {
   initialPreferences,
   resetPreferences,
@@ -31,7 +31,7 @@ export default function App() {
       browserStorage(),
       initialPreferences(mobile, catalog),
       catalog,
-      modifiers.parts.map((p) => p.key)
+      publishedParts.map((p) => p.key)
     )
   );
   const [panel, setPanel] = useState<'weapons' | 'targets' | 'settings' | null>(null);

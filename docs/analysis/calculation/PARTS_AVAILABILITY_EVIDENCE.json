@@ -1,0 +1,2018 @@
+{
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "enum_sha256": "0272870bfb51f9652cfd09a2494ab56b69f7ccb6cdb6c4793d1fcc647c4f2f37",
+  "asset_sha256": {
+    "data/local/local006-raw/Live/Content/Unlock/DA_Unlock_AircraftTree.uasset": "b87184c86b1e65568a66b9c88530b7e463f826ab40a92682759e7fbb2e0bc1b0",
+    "data/local/local006-raw/Live/Content/Unlock/DA_Unlock_AircraftTree.uexp": "fe8ca33d30fdb2260197c423e177d027f8c125917c118dc6645830fee7bc48ed",
+    "data/local/local006-raw/Live/Content/Unlock/DA_Unlock_Feature.uasset": "20869546af041d70d4ae6162d771c36a543319e864f8cd4087f9a6a2d65aad82",
+    "data/local/local006-raw/Live/Content/Unlock/DA_Unlock_Feature.uexp": "8b26e1c6ce437d9418b7805d2b0b5c8c740c4f9f9fdebea5f1ddacfe566d215f",
+    "data/local/local006-raw/Live/Content/Datatables/Information/DT_LiveParts.uasset": "9dd876e43febdba3f7c94f41f40ea0995d4b8c83fe343f8d247cd4dc6d6492af",
+    "data/local/local006-raw/Live/Content/Datatables/Information/DT_LiveParts.uexp": "8cb62ebb2ca98c701048fafa6fdce9e15148cd2066820359d468ed77a148c1a4",
+    "data/local/local006-raw/Live/Content/Datatables/Information/DT_LivePartsSlotSettings.uasset": "126d454af66467e66ec86bdf2d4b5faf781fa05cf54564cb89c761c18ec421b0",
+    "data/local/local006-raw/Live/Content/Datatables/Information/DT_LivePartsSlotSettings.uexp": "551421088d9f6031230222834650299d96bee61f5d5c3563e649a93b2a91bded",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftSettings.uasset": "1353e3fd04cf9c37acb9675554d94524af2a23e95e0b01d73e17ed335072d49e",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftSettings.uexp": "d1d19867847a43d4351cad8541447a952fbb812d008a5ace83789fc1733c902b",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftTreePageSettings.uasset": "6e72ee4f867f42ea88ebf0691632ac625fb6eba1f62b2ffe1512aaacf2e5c580",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DA_LiveMenuAircraftTreePageSettings.uexp": "88bc0235047536ffac4741a0d5dcef16b822e28f98f8f480407232130b7615e7",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeExNodeDataTable.uasset": "b1b22f411082d769e979613564aa0c351cf696c86f4811f5bf9037f71541aeca",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeExNodeDataTable.uexp": "bbc339d6c668209e6b6ee3d826bbd2899ed6df459a3da81cd08e8f11d9cb0c0e",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeLineDataTable.uasset": "193b091137b42c953acdd889777bd0459f873d20498bd85ab7ce117afd216870",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeLineDataTable.uexp": "27616a8452010cf5e32605242b7177be8e09c50315bc8f93a6bfddfa0d767256",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeNodeDataTable.uasset": "4f3d9b984bf6d1d64bbd8bc1f41f7d08437e9b89597559da4c25aeea9261f4e8",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/AircraftTree/DT_LiveMenuAircraftTreeNodeDataTable.uexp": "809570a7fceeb1a764aaacab5f80c6b9b91e60f9b9f2a2f5eaf888bac44e606f",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DA_HangerMenuPartsSelectPageSettings.uasset": "f5c20b8e244b6f0065c6113b86162db73fd54138ed78c5fd7b0085ca99053d42",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DA_HangerMenuPartsSelectPageSettings.uexp": "9bcdb639f0f60d06a2ceb51b3693990da1de5717fa4423ae9d94ae35a4b8ac74",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DA_HangerMenuPartsSelectPageSettings2.uasset": "16a338e840676ae336064305ed08abd7135983fabdbb4a10e80c4dff1040432d",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DA_HangerMenuPartsSelectPageSettings2.uexp": "b8625104a788105d2a4cac099953c10730b5ed819ce27f93e0df3a88ba37d297",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DT_LiveMenuHangarPartsSelectCommandsData.uasset": "b74c271b5539cdede290ee74ba0533dfad2000263496ca03e2a5da7db8d29f87",
+    "data/local/local006-raw/Live/Content/Datatables/UI/Menu/HangerMenu/PartsSettings/DT_LiveMenuHangarPartsSelectCommandsData.uexp": "0018917e2d076e5ac51d5405a3d3bd32f34881d1a3a0978d96de774976790e98"
+  },
+  "protected_sha256": {
+    "src/data/targets.json": "d1a0da7bea252dd1bec668f8910bfc50a2331c465c78e786e7aea219b1c3d033",
+    "src/data/weapons.json": "541bbf934753ecf37a5ef91db86829c0c15c4f903dd05841b7c9d5ea869b0695",
+    "src/data/modifiers.json": "6379b8025cffa7ff3e48fc81520ae83ef83dcc29292ec32287fe109e6a9f83a0",
+    "data/local/catalog.json": "5d5349187a2dc90f7dc382f380d639b604ea3a5ef80a03046c82390c2ba84e8d",
+    "data/local/npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data/local/native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data/local/generation-input.json": "bfb3ebf18015185e0a301be3b5a828f549496180ec0dee90fee255a70ea016e6"
+  },
+  "runtime_measurement": false,
+  "parts_rows_equal_baseline": true,
+  "audit": [
+    {
+      "key": "gunPower",
+      "name": "GUN.POW+",
+      "sourceId": 2011802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002011",
+      "source_values": {
+        "PartsID": 2011802,
+        "PartsData": [
+          {
+            "ParameterLabel": 83,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          },
+          {
+            "ParameterLabel": 117,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          }
+        ],
+        "Category": 4,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 2,
+        "GraphAirToGround": 2,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 2,
+        "GraphAirToGroundWeapon": 2,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 201,
+        "Filter": ["EPartsFilter::MachineGun"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 0,
+            "WeaponSubCategories": [],
+            "WeaponIDs": []
+          },
+          {
+            "WeaponCategory": 3,
+            "WeaponSubCategories": [],
+            "WeaponIDs": ["ELiveWeaponID::WID_mgp"]
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_12",
+        "PartsShortNameTextID": "PartsShort_Name_12",
+        "PartsDescriptionTextID": "Parts_Description_12",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 83,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "GunPower"
+        },
+        {
+          "ParameterLabel": 117,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "MGPPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2011802,
+          "NodePosition": [45, 13],
+          "CostBase1": 15000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 90,
+          "SrcReferenceNodeIDs": [11],
+          "DstReferenceNodeIDs": [43, 74, 89, 33],
+          "unlock_name": "Free",
+          "root_path": [0, 2, 95, 94, 93, 11, 90]
+        }
+      ],
+      "published_beneficiaries": ["GUN TypeA", "GUN TypeB", "GUN TypeC", "MGP"]
+    },
+    {
+      "key": "missilePower",
+      "name": "MSL.POW+",
+      "sourceId": 2014802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002014",
+      "source_values": {
+        "PartsID": 2014802,
+        "PartsData": [
+          {
+            "ParameterLabel": 95,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          }
+        ],
+        "Category": 5,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 5,
+        "GraphAirToGround": 5,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 0,
+        "GraphAirToGroundWeapon": 0,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 301,
+        "Filter": ["EPartsFilter::NormalMissile"],
+        "WeaponFilterConditions": [],
+        "PartsNameTextID": "Parts_Name_15",
+        "PartsShortNameTextID": "PartsShort_Name_15",
+        "PartsDescriptionTextID": "Parts_Description_15",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 95,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "MslPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2014802,
+          "NodePosition": [104, 5],
+          "CostBase1": 50000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 77,
+          "SrcReferenceNodeIDs": [35, 36, 37, 38],
+          "DstReferenceNodeIDs": [78],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 81, 82, 10, 74, 68, 36, 77]
+        }
+      ],
+      "published_beneficiaries": ["MSL", "MSL (Rookie)"]
+    },
+    {
+      "key": "missileAirPower",
+      "name": "MSL.AIR.POW+",
+      "sourceId": 2058802,
+      "condition": "air",
+      "stage": "afterRole",
+      "source_row": "RAW_00002058",
+      "source_values": {
+        "PartsID": 2058802,
+        "PartsData": [
+          {
+            "ParameterLabel": 114,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.100000023841858
+          }
+        ],
+        "Category": 5,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 3,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 0,
+        "GraphAirToGroundWeapon": 0,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 302,
+        "Filter": ["EPartsFilter::NormalMissile"],
+        "WeaponFilterConditions": [],
+        "PartsNameTextID": "Parts_Name_58",
+        "PartsShortNameTextID": "PartsShort_Name_58",
+        "PartsDescriptionTextID": "Parts_Description_58",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 114,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858,
+          "label_name": "MslAirPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2058802,
+          "NodePosition": [16, 5],
+          "CostBase1": 10000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 72,
+          "SrcReferenceNodeIDs": [5],
+          "DstReferenceNodeIDs": [3],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 72]
+        }
+      ],
+      "published_beneficiaries": ["MSL", "MSL (Rookie)"]
+    },
+    {
+      "key": "missileGroundPower",
+      "name": "MSL.GND.POW+",
+      "sourceId": 2059802,
+      "condition": "surface",
+      "stage": "afterRole",
+      "source_row": "RAW_00002059",
+      "source_values": {
+        "PartsID": 2059802,
+        "PartsData": [
+          {
+            "ParameterLabel": 115,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.100000023841858
+          }
+        ],
+        "Category": 5,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 3,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 0,
+        "GraphAirToGroundWeapon": 0,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 303,
+        "Filter": ["EPartsFilter::NormalMissile"],
+        "WeaponFilterConditions": [],
+        "PartsNameTextID": "Parts_Name_59",
+        "PartsShortNameTextID": "PartsShort_Name_59",
+        "PartsDescriptionTextID": "Parts_Description_59",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 115,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858,
+          "label_name": "MslGrdPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2059802,
+          "NodePosition": [16, 8],
+          "CostBase1": 10000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 81,
+          "SrcReferenceNodeIDs": [5],
+          "DstReferenceNodeIDs": [82],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 81]
+        }
+      ],
+      "published_beneficiaries": ["MSL", "MSL (Rookie)"]
+    },
+    {
+      "key": "specialAirPower",
+      "name": "AIR.POW+",
+      "sourceId": 2021802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002021",
+      "source_values": {
+        "PartsID": 2021802,
+        "PartsData": [
+          {
+            "ParameterLabel": 235,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          },
+          {
+            "ParameterLabel": 665,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.1200000047683716
+          },
+          {
+            "ParameterLabel": 688,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.1200000047683716
+          }
+        ],
+        "Category": 6,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 5,
+        "GraphAirToGroundWeapon": 0,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 401,
+        "Filter": ["EPartsFilter::SpecialMissile"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 2,
+            "WeaponSubCategories": [
+              {
+                "Category": 1,
+                "bNeedHasCategory": false
+              }
+            ],
+            "WeaponIDs": []
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_22",
+        "PartsShortNameTextID": "PartsShort_Name_22",
+        "PartsDescriptionTextID": "Parts_Description_22",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 235,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "SpMslAirPower"
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslMPBMPower"
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslADMMPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2021802,
+          "NodePosition": [120, 24],
+          "CostBase1": 50000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 104,
+          "SrcReferenceNodeIDs": [103, 49],
+          "DstReferenceNodeIDs": [53],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 81, 82, 10, 74, 75, 86, 39, 102, 49, 104]
+        }
+      ],
+      "published_beneficiaries": [
+        "2AAM",
+        "4AAM",
+        "6AAM",
+        "HCAA",
+        "HPAA",
+        "HVAA",
+        "LAAM",
+        "QAAM",
+        "SAAM",
+        "SASM",
+        "MPBM"
+      ]
+    },
+    {
+      "key": "specialGroundPower",
+      "name": "GND.POW+",
+      "sourceId": 2022802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002022",
+      "source_values": {
+        "PartsID": 2022802,
+        "PartsData": [
+          {
+            "ParameterLabel": 253,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          },
+          {
+            "ParameterLabel": 665,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.1200000047683716
+          },
+          {
+            "ParameterLabel": 688,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.1200000047683716
+          }
+        ],
+        "Category": 6,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 0,
+        "GraphAirToGroundWeapon": 5,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 501,
+        "Filter": ["EPartsFilter::SpecialMissile"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 2,
+            "WeaponSubCategories": [
+              {
+                "Category": 2,
+                "bNeedHasCategory": false
+              }
+            ],
+            "WeaponIDs": []
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_23",
+        "PartsShortNameTextID": "PartsShort_Name_23",
+        "PartsDescriptionTextID": "Parts_Description_23",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 253,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "SpMslGrdPower"
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslMPBMPower"
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslADMMPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2022802,
+          "NodePosition": [104, 24],
+          "CostBase1": 50000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 102,
+          "SrcReferenceNodeIDs": [88, 39, 100],
+          "DstReferenceNodeIDs": [49, 103],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 81, 82, 10, 74, 75, 86, 39, 102]
+        }
+      ],
+      "published_beneficiaries": ["4AGM", "6AGM", "8AGM", "LACM", "LAGM", "LASM", "MPBM"]
+    },
+    {
+      "key": "bombPower",
+      "name": "BOMB.POW+",
+      "sourceId": 2032802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002032",
+      "source_values": {
+        "PartsID": 2032802,
+        "PartsData": [
+          {
+            "ParameterLabel": 124,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          },
+          {
+            "ParameterLabel": 0,
+            "SpecialConditionLabel": 0,
+            "OperationType": 0,
+            "ParameterValue": 0
+          }
+        ],
+        "Category": 7,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 0,
+        "GraphAirToGroundWeapon": 5,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 601,
+        "Filter": ["EPartsFilter::Bomb"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 4,
+            "WeaponSubCategories": [],
+            "WeaponIDs": [
+              "ELiveWeaponID::WID_ugb",
+              "ELiveWeaponID::WID_ugbl",
+              "ELiveWeaponID::WID_gpb",
+              "ELiveWeaponID::WID_xsdb",
+              "ELiveWeaponID::WID_sffs",
+              "ELiveWeaponID::WID_sod"
+            ]
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_37",
+        "PartsShortNameTextID": "PartsShort_Name_37",
+        "PartsDescriptionTextID": "Parts_Description_37",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 124,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "BombPower"
+        },
+        {
+          "ParameterLabel": 0,
+          "SpecialConditionLabel": 0,
+          "OperationType": 0,
+          "ParameterValue": 0,
+          "label_name": "None"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2032802,
+          "NodePosition": [52, -4],
+          "CostBase1": 20000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 64,
+          "SrcReferenceNodeIDs": [21],
+          "DstReferenceNodeIDs": [66, 20],
+          "unlock_name": "Free",
+          "root_path": [0, 62, 13, 28, 41, 21, 64]
+        }
+      ],
+      "published_beneficiaries": ["GPB", "SFFS", "SOD", "UGB", "UGBL", "XSDB"]
+    },
+    {
+      "key": "rocketPower",
+      "name": "RKT.POW+",
+      "sourceId": 2038802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002038",
+      "source_values": {
+        "PartsID": 2038802,
+        "PartsData": [
+          {
+            "ParameterLabel": 180,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.2000000476837158
+          }
+        ],
+        "Category": 10,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 2,
+        "GraphAirToGroundWeapon": 4,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 701,
+        "Filter": ["EPartsFilter::OthersWeapon"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 6,
+            "WeaponSubCategories": [],
+            "WeaponIDs": ["ELiveWeaponID::WID_rkt"]
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_43",
+        "PartsShortNameTextID": "PartsShort_Name_43",
+        "PartsDescriptionTextID": "Parts_Description_43",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 180,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "RktPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2038802,
+          "NodePosition": [59, 2],
+          "CostBase1": 15000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 0,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 43,
+          "SrcReferenceNodeIDs": [10, 73, 90],
+          "DstReferenceNodeIDs": [25],
+          "unlock_name": "Free",
+          "root_path": [0, 5, 81, 82, 10, 43]
+        }
+      ],
+      "published_beneficiaries": ["RKT"]
+    },
+    {
+      "key": "laserPower",
+      "name": "TLS.POW+",
+      "sourceId": 2040802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002040",
+      "source_values": {
+        "PartsID": 2040802,
+        "PartsData": [
+          {
+            "ParameterLabel": 213,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.149999976158142
+          }
+        ],
+        "Category": 8,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 5,
+        "GraphAirToGroundWeapon": 5,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 801,
+        "Filter": ["EPartsFilter::LaserWeapon"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 9,
+            "WeaponSubCategories": [],
+            "WeaponIDs": ["ELiveWeaponID::WID_tls"]
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_45",
+        "PartsShortNameTextID": "PartsShort_Name_45",
+        "PartsDescriptionTextID": "Parts_Description_45",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 213,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.149999976158142,
+          "label_name": "LaserPower"
+        }
+      ],
+      "nodes": [],
+      "published_beneficiaries": []
+    },
+    {
+      "key": "railgunPower",
+      "name": "EML.POW+",
+      "sourceId": 2042802,
+      "condition": "all",
+      "stage": "base",
+      "source_row": "RAW_00002042",
+      "source_values": {
+        "PartsID": 2042802,
+        "PartsData": [
+          {
+            "ParameterLabel": 192,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.25
+          },
+          {
+            "ParameterLabel": 206,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.25
+          },
+          {
+            "ParameterLabel": 199,
+            "SpecialConditionLabel": 0,
+            "OperationType": 1,
+            "ParameterValue": 1.25
+          }
+        ],
+        "Category": 9,
+        "PartsPosition": 1,
+        "WearableRoleCategory": 0,
+        "WearableAircraftID": 0,
+        "PartsEnableSpecial": 0,
+        "PartsIconKinds": 0,
+        "PartsCost": 0,
+        "GraphAirToAir": 0,
+        "GraphAirToGround": 0,
+        "GraphSpeed": 0,
+        "GraphMobility": 0,
+        "GraphStability": 0,
+        "GraphDefense": 0,
+        "GraphAirToAirWeapon": 5,
+        "GraphAirToGroundWeapon": 5,
+        "GraphHoming": 0,
+        "GraphReload": 0,
+        "GraphLongRange": 0,
+        "GraphDamageRange": 0,
+        "SortNumber": 901,
+        "Filter": ["EPartsFilter::OthersWeapon"],
+        "WeaponFilterConditions": [
+          {
+            "WeaponCategory": 5,
+            "WeaponSubCategories": [],
+            "WeaponIDs": [
+              "ELiveWeaponID::WID_eml",
+              "ELiveWeaponID::WID_emlb",
+              "ELiveWeaponID::WID_emlt"
+            ]
+          }
+        ],
+        "PartsNameTextID": "Parts_Name_47",
+        "PartsShortNameTextID": "PartsShort_Name_47",
+        "PartsDescriptionTextID": "Parts_Description_47",
+        "DLCID": "Live"
+      },
+      "effects": [
+        {
+          "ParameterLabel": 192,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLPower"
+        },
+        {
+          "ParameterLabel": 206,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLBPower"
+        },
+        {
+          "ParameterLabel": 199,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLTPower"
+        }
+      ],
+      "nodes": [
+        {
+          "NodeType": 1,
+          "ReferenceID": 2042802,
+          "NodePosition": [158, 8],
+          "CostBase1": 150000,
+          "CostBase2": 0,
+          "CostBase3": 0,
+          "CostBase4": 0,
+          "UnlockTrigger": 1,
+          "bWithFirstUnlockEvent": false,
+          "LockAppearance": 0,
+          "CostSpWeapon2": 0,
+          "CostSpWeapon3": 0,
+          "NodeID": 106,
+          "SrcReferenceNodeIDs": [105],
+          "DstReferenceNodeIDs": [107],
+          "unlock_name": "ClearAllMission",
+          "root_path": [0, 5, 81, 82, 10, 74, 68, 36, 69, 70, 71, 50, 105, 106]
+        }
+      ],
+      "published_beneficiaries": ["EMLB"]
+    }
+  ],
+  "power_rows": [
+    {
+      "id": 2011802,
+      "row": "RAW_00002011",
+      "effects": [
+        {
+          "ParameterLabel": 83,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "GunPower"
+        },
+        {
+          "ParameterLabel": 117,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "MGPPower"
+        }
+      ]
+    },
+    {
+      "id": 2014802,
+      "row": "RAW_00002014",
+      "effects": [
+        {
+          "ParameterLabel": 95,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "MslPower"
+        }
+      ]
+    },
+    {
+      "id": 2021802,
+      "row": "RAW_00002021",
+      "effects": [
+        {
+          "ParameterLabel": 235,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "SpMslAirPower"
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslMPBMPower"
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslADMMPower"
+        }
+      ]
+    },
+    {
+      "id": 2022802,
+      "row": "RAW_00002022",
+      "effects": [
+        {
+          "ParameterLabel": 253,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "SpMslGrdPower"
+        },
+        {
+          "ParameterLabel": 665,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslMPBMPower"
+        },
+        {
+          "ParameterLabel": 688,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.1200000047683716,
+          "label_name": "SpMslADMMPower"
+        }
+      ]
+    },
+    {
+      "id": 2032802,
+      "row": "RAW_00002032",
+      "effects": [
+        {
+          "ParameterLabel": 124,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "BombPower"
+        },
+        {
+          "ParameterLabel": 0,
+          "SpecialConditionLabel": 0,
+          "OperationType": 0,
+          "ParameterValue": 0,
+          "label_name": "None"
+        }
+      ]
+    },
+    {
+      "id": 2038802,
+      "row": "RAW_00002038",
+      "effects": [
+        {
+          "ParameterLabel": 180,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158,
+          "label_name": "RktPower"
+        }
+      ]
+    },
+    {
+      "id": 2040802,
+      "row": "RAW_00002040",
+      "effects": [
+        {
+          "ParameterLabel": 213,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.149999976158142,
+          "label_name": "LaserPower"
+        }
+      ]
+    },
+    {
+      "id": 2042802,
+      "row": "RAW_00002042",
+      "effects": [
+        {
+          "ParameterLabel": 192,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLPower"
+        },
+        {
+          "ParameterLabel": 206,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLBPower"
+        },
+        {
+          "ParameterLabel": 199,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.25,
+          "label_name": "EMLTPower"
+        }
+      ]
+    },
+    {
+      "id": 2058802,
+      "row": "RAW_00002058",
+      "effects": [
+        {
+          "ParameterLabel": 114,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858,
+          "label_name": "MslAirPower"
+        }
+      ]
+    },
+    {
+      "id": 2059802,
+      "row": "RAW_00002059",
+      "effects": [
+        {
+          "ParameterLabel": 115,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.100000023841858,
+          "label_name": "MslGrdPower"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "DA_HangerMenuPartsSelectPageSettings": {
+      "class": "LiveMenuPageSettingsData",
+      "values": {
+        "TitleTextID": "HangarPartsTitle_Name_PartsMenu",
+        "TabSettings": [
+          {
+            "TabTitleTextID": "HangarPartsCaption_Name_Parts",
+            "CommandSettings": {
+              "package": "/Game/Datatables/UI/Menu/HangerMenu/PartsSettings/DT_LiveMenuHangarPartsSelectCommandsData",
+              "asset": "DT_LiveMenuHangarPartsSelectCommandsData",
+              "subpath": ""
+            },
+            "BackGroundID": "",
+            "DefaultHelpTextID": "HangarParts_Description_PartsMenu"
+          }
+        ]
+      },
+      "consumed": 148,
+      "export_bytes": 148
+    },
+    "DA_HangerMenuPartsSelectPageSettings2": {
+      "class": "LiveMenuPageSettingsData",
+      "values": {
+        "TitleTextID": "HangarAircraftdockTitle_Name_SelectParts",
+        "TabSettings": [
+          {
+            "TabTitleTextID": "",
+            "CommandSettings": {
+              "package": "None",
+              "asset": "None",
+              "subpath": ""
+            },
+            "BackGroundID": "",
+            "DefaultHelpTextID": "HangarParts_Description_Parts"
+          }
+        ]
+      },
+      "consumed": 123,
+      "export_bytes": 123
+    },
+    "DA_LiveMenuAircraftSettings": {
+      "class": "LiveMenuAircraftTreeSettingsDataAsset",
+      "values": {
+        "NodeSpaceBetween": [100, 200],
+        "LineColorID": "AircraftTree_UnlockLine",
+        "LockLineColorID": "AircraftTree_LockLine",
+        "DashedLineColorID": "AircraftTree_LockLine",
+        "LineThickness": 6.0,
+        "LockLineThickness": 4.0,
+        "DashedLineThickness": 4.0,
+        "ExNodeFirstPosition": [-12, 0],
+        "ExNodePositionSpaceBetween": [-8, 8],
+        "ExNodeHorizontalMax": 4,
+        "EasingScrollPresets": [
+          {
+            "key": "ELiveMenuAircraftTreeScrollType::Default",
+            "value": {
+              "PerSecond": 1800.0,
+              "MinSecond": 0.05000000074505806,
+              "MaxSecond": 0.4000000059604645,
+              "EasingCurve": -2
+            }
+          },
+          {
+            "key": "ELiveMenuAircraftTreeScrollType::WeaponOpen",
+            "value": {
+              "PerSecond": 1000.0,
+              "MinSecond": 1.0,
+              "MaxSecond": 10.0,
+              "EasingCurve": -2
+            }
+          },
+          {
+            "key": "ELiveMenuAircraftTreeScrollType::DstNodeOpen",
+            "value": {
+              "PerSecond": 3600.0,
+              "MinSecond": 1.0,
+              "MaxSecond": 10.0,
+              "EasingCurve": -2
+            }
+          },
+          {
+            "key": "ELiveMenuAircraftTreeScrollType::ShowNewNode",
+            "value": {
+              "PerSecond": 1800.0,
+              "MinSecond": 0.5,
+              "MaxSecond": 1.0,
+              "EasingCurve": -2
+            }
+          }
+        ],
+        "ZoomScalePresets": [
+          {
+            "key": "ELiveMenuHangarAircraftTreeZoomType::Default",
+            "value": 1.0
+          },
+          {
+            "key": "ELiveMenuHangarAircraftTreeZoomType::ZoomInFromBuy",
+            "value": 1.5
+          },
+          {
+            "key": "ELiveMenuHangarAircraftTreeZoomType::ZoomOut",
+            "value": 0.5199999809265137
+          }
+        ],
+        "EasingZoomTime": 0.20000000298023224,
+        "MainNodeLineAnimParSecond": 3000.0,
+        "SubNodeLineAnimParSecond": 600.0,
+        "WaitChangeStateSecondMapping": [
+          {
+            "key": "ELiveMenuAircraftTreeState::Default",
+            "value": 0.10000000149011612
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::BuyCheck",
+            "value": 0.10000000149011612
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::BuySequence",
+            "value": 0.10000000149011612
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::UnlockAnimation",
+            "value": 0.10000000149011612
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::WeaponOpenAnimation",
+            "value": 0.10000000149011612
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::DstOpenAnimation",
+            "value": 0.20000000298023224
+          },
+          {
+            "key": "ELiveMenuAircraftTreeState::WeaponUnlockAnimation",
+            "value": 0.10000000149011612
+          }
+        ],
+        "WaitOpenWeaponNodeSecond": 0.05000000074505806,
+        "WaitOpenDstNodeScrollSecond": 0
+      },
+      "consumed": 343,
+      "export_bytes": 343
+    },
+    "DA_LiveMenuAircraftTreePageSettings": {
+      "class": "LiveMenuPageSettingsData",
+      "values": {
+        "TabSettings": [
+          {
+            "TabTitleTextID": "Root",
+            "CommandSettings": {
+              "package": "None",
+              "asset": "None",
+              "subpath": ""
+            },
+            "BackGroundID": "",
+            "DefaultHelpTextID": ""
+          }
+        ],
+        "BackGroundID": "HangarAircraftTree"
+      },
+      "consumed": 76,
+      "export_bytes": 76
+    },
+    "DA_Unlock_AircraftTree": {
+      "class": "LiveConditionActionDataAsset",
+      "values": {
+        "MinId": 1300000,
+        "MaxId": 1309999,
+        "ConfigurationEntryList": [
+          {
+            "ID": 1300001,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionID:15,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 6,
+                "Parameters": "Id:PP0013_a06e,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          }
+        ]
+      },
+      "consumed": 110,
+      "export_bytes": 110
+    },
+    "DA_Unlock_Feature": {
+      "class": "LiveConditionActionDataAsset",
+      "values": {
+        "MinId": 1800000,
+        "MaxId": 1809999,
+        "ConfigurationEntryList": [
+          {
+            "ID": 1800001,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionId:AllBase,Mode:Campaign,Difficulty:>=Hard"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:AceDifficulty,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800002,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionId:AllBase,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:AircraftSet,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800003,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionId:AllBase,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:Skin,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800004,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionId:AllBase,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:Emblem,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800005,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionId:AllBase,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:Weathering,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800006,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionID:4,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:AircraftTree,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800007,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionID:4,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:Part,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800008,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionID:7,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:SpWeapon2ndSlot,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800009,
+            "ConditionEntryList": [
+              {
+                "ConditionType": 2,
+                "Parameters": "MissionID:3,Mode:Campaign"
+              }
+            ],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:Training,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          },
+          {
+            "ID": 1800010,
+            "ConditionEntryList": [],
+            "ActionEntryList": [
+              {
+                "ActionType": 10,
+                "Parameters": "Id:MusicPlayer,Mode:Campaign"
+              }
+            ],
+            "Meta": ""
+          }
+        ]
+      },
+      "consumed": 891,
+      "export_bytes": 891
+    }
+  },
+  "enums": {
+    "ELiveMenuAircraftTreeNodeUnlockTriggers": {
+      "0": "Free",
+      "1": "ClearAllMission",
+      "2": "ReleasedByStory",
+      "3": "MAX"
+    },
+    "EPartsEnableSpecial": {
+      "0": "AllEnable",
+      "1": "BeginnerSupport"
+    },
+    "ERoleCategory": {
+      "0": "Normal",
+      "1": "UniqueAll",
+      "2": "UniqueFighter",
+      "3": "UniqueAttacker",
+      "4": "UniqueMultiroll",
+      "5": "UniqueElectronic"
+    },
+    "EParameterOperationType": {
+      "0": "POT_OFFSET",
+      "1": "POT_RATE",
+      "2": "POT_MAX"
+    },
+    "EPartsPosition": {
+      "0": "BODY",
+      "1": "ARMS",
+      "2": "MISC"
+    }
+  },
+  "table_read_checks": {
+    "DT_LiveMenuAircraftTreeExNodeDataTable": {
+      "row_count": 2,
+      "consumed_bytes": 50,
+      "export_bytes": 54
+    },
+    "DT_LiveMenuAircraftTreeLineDataTable": {
+      "row_count": 137,
+      "consumed_bytes": 16211,
+      "export_bytes": 16215
+    },
+    "DT_LiveMenuAircraftTreeNodeDataTable": {
+      "row_count": 90,
+      "consumed_bytes": 4672,
+      "export_bytes": 4676
+    },
+    "DT_LiveMenuHangarPartsSelectCommandsData": {
+      "row_count": 2,
+      "consumed_bytes": 353,
+      "export_bytes": 357
+    },
+    "DT_LiveParts": {
+      "row_count": 60,
+      "consumed_bytes": 10021,
+      "export_bytes": 10025
+    },
+    "DT_LivePartsSlotSettings": {
+      "row_count": 44,
+      "consumed_bytes": 1162,
+      "export_bytes": 1166
+    }
+  },
+  "slots": [
+    {
+      "row": "NewRow",
+      "offset": 18,
+      "values": {
+        "PlaneID": 1010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_0",
+      "offset": 44,
+      "values": {
+        "PlaneID": 2010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_1",
+      "offset": 70,
+      "values": {
+        "PlaneID": 3010,
+        "BodySlotNum": 2,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_2",
+      "offset": 96,
+      "values": {
+        "PlaneID": 4010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_3",
+      "offset": 122,
+      "values": {
+        "PlaneID": 5010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_4",
+      "offset": 148,
+      "values": {
+        "PlaneID": 6010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_5",
+      "offset": 174,
+      "values": {
+        "PlaneID": 7010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_6",
+      "offset": 200,
+      "values": {
+        "PlaneID": 8010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_7",
+      "offset": 226,
+      "values": {
+        "PlaneID": 9010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_8",
+      "offset": 252,
+      "values": {
+        "PlaneID": 10010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_9",
+      "offset": 278,
+      "values": {
+        "PlaneID": 11010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_10",
+      "offset": 304,
+      "values": {
+        "PlaneID": 12010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_11",
+      "offset": 330,
+      "values": {
+        "PlaneID": 13010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 3,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_12",
+      "offset": 356,
+      "values": {
+        "PlaneID": 10013010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 3,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_13",
+      "offset": 382,
+      "values": {
+        "PlaneID": 14010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_14",
+      "offset": 408,
+      "values": {
+        "PlaneID": 15010,
+        "BodySlotNum": 2,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_15",
+      "offset": 434,
+      "values": {
+        "PlaneID": 16010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_16",
+      "offset": 460,
+      "values": {
+        "PlaneID": 17010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_17",
+      "offset": 486,
+      "values": {
+        "PlaneID": 18010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_18",
+      "offset": 512,
+      "values": {
+        "PlaneID": 19010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_19",
+      "offset": 538,
+      "values": {
+        "PlaneID": 20010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_20",
+      "offset": 564,
+      "values": {
+        "PlaneID": 21010,
+        "BodySlotNum": 6,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_21",
+      "offset": 590,
+      "values": {
+        "PlaneID": 22010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_22",
+      "offset": 616,
+      "values": {
+        "PlaneID": 23010,
+        "BodySlotNum": 2,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_23",
+      "offset": 642,
+      "values": {
+        "PlaneID": 24010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_24",
+      "offset": 668,
+      "values": {
+        "PlaneID": 10024010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_25",
+      "offset": 694,
+      "values": {
+        "PlaneID": 25010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_26",
+      "offset": 720,
+      "values": {
+        "PlaneID": 26010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_27",
+      "offset": 746,
+      "values": {
+        "PlaneID": 27010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_28",
+      "offset": 772,
+      "values": {
+        "PlaneID": 28010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_29",
+      "offset": 798,
+      "values": {
+        "PlaneID": 29010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_30",
+      "offset": 824,
+      "values": {
+        "PlaneID": 30010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 6,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_31",
+      "offset": 850,
+      "values": {
+        "PlaneID": 31010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_32",
+      "offset": 876,
+      "values": {
+        "PlaneID": 32010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_33",
+      "offset": 902,
+      "values": {
+        "PlaneID": 33010,
+        "BodySlotNum": 4,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_34",
+      "offset": 928,
+      "values": {
+        "PlaneID": 10034010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_35",
+      "offset": 954,
+      "values": {
+        "PlaneID": 34010,
+        "BodySlotNum": 6,
+        "ArmsSlotNum": 3,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_36",
+      "offset": 980,
+      "values": {
+        "PlaneID": 35010,
+        "BodySlotNum": 6,
+        "ArmsSlotNum": 4,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_37",
+      "offset": 1006,
+      "values": {
+        "PlaneID": 36010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 5,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_38",
+      "offset": 1032,
+      "values": {
+        "PlaneID": 37010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_39",
+      "offset": 1058,
+      "values": {
+        "PlaneID": 38010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_40",
+      "offset": 1084,
+      "values": {
+        "PlaneID": 39010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_41",
+      "offset": 1110,
+      "values": {
+        "PlaneID": 40010,
+        "BodySlotNum": 5,
+        "ArmsSlotNum": 7,
+        "MiscSlotNum": 3
+      }
+    },
+    {
+      "row": "NewRow_42",
+      "offset": 1136,
+      "values": {
+        "PlaneID": 9999010,
+        "BodySlotNum": 3,
+        "ArmsSlotNum": 3,
+        "MiscSlotNum": 3
+      }
+    }
+  ]
+}

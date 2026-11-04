@@ -30,61 +30,71 @@
       "key": "gunPower",
       "name": "GUN.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "missilePower",
       "name": "MSL.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "missileAirPower",
       "name": "MSL.AIR.POW+",
       "condition": "air",
-      "stage": "afterRole"
+      "stage": "afterRole",
+      "published": true
     },
     {
       "key": "missileGroundPower",
       "name": "MSL.GND.POW+",
       "condition": "surface",
-      "stage": "afterRole"
+      "stage": "afterRole",
+      "published": true
     },
     {
       "key": "specialAirPower",
       "name": "AIR.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "specialGroundPower",
       "name": "GND.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "bombPower",
       "name": "BOMB.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "rocketPower",
       "name": "RKT.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     },
     {
       "key": "laserPower",
       "name": "TLS.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": false
     },
     {
       "key": "railgunPower",
       "name": "EML.POW+",
       "condition": "all",
-      "stage": "base"
+      "stage": "base",
+      "published": true
     }
   ]
 }

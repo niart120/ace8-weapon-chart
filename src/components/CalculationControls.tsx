@@ -1,4 +1,4 @@
-import { modifiers } from '../data/masters';
+import { publishedParts } from '../data/masters';
 import { roles } from '../domain/types';
 import type { Conditions, DamageType } from '../domain/types';
 import { IconButton, ResetIcon } from './IconButton';
@@ -38,7 +38,7 @@ export function CalculationControls({
         <fieldset className="parts">
           <legend>PARTS</legend>
           <div className="part-options">
-            {modifiers.parts.map((part) => (
+            {publishedParts.map((part) => (
               <label key={part.key}>
                 <input
                   type="checkbox"

@@ -5,3 +5,4 @@ import { validateMasters } from '../domain/validate';
 const data: unknown = { weapons: weaponsData, targets: targetsData, modifiers: modifiersData };
 validateMasters(data);
 export const { weapons, targets, modifiers } = data;
+export const publishedParts = modifiers.parts.filter((part) => part.published);
