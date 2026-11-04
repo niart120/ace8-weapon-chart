@@ -1,6 +1,6 @@
 # 計算調査の根拠と限界
 
-調査日: 2026-11-03。ゲームの起動・本体・設定・セーブの変更なし。実ゲーム測定なし。
+調査日: 2026-11-04。ゲームの起動・本体・設定・セーブの変更なし。実ゲーム測定なし。
 
 ## 同梱資料から確認した数値と処理
 
@@ -27,9 +27,13 @@ TLSの `BP_plwp_tls_x0_C` はDamage40、SlipDamage18、DamageStartDelay約0.05�
 
 UAVT（WeaponID103）の `WeaponData.SpawnWeaponClass = -8` を元uassetのimportへ解決し、`BP_uavwp_tls_C` を指すことを確認した。展開側はAttackTime約7.7秒、LifeTime11秒、MaxLoadedCount4、ShotIntervalTime1秒。搭載側はDamage20、SlipDamage20、初回遅延約0.45秒、継続間隔約0.65秒、LifeTime約6.8秒。装填数や活動時間だけから同一目標への全攻撃回数を確定していない。分散・展開・活動時間と攻撃の単位が未決なので、最大ダメージや必要展開数は採用せず `unknown`。
 
-`npc_damage_after_role.asm.txt` の0x147c93bdc〜0x147c93c10と0x147c93d4b〜0x147c93d64で、耐性参照時に子弾104→SOD（27）、105→SFFS（26）へ置き換える処理を確認した。両者のCategory07を使うことは、子弾に親の威力を流用することとは別である。SOD子弾（104）はBombPowerグループに対応する。SFFS子弾（105）は同梱マッピングの1〜104の範囲外。子弾40は確認済みだが、親のBombPowerを転送する全経路が不足するため、SFFSはBOMB.POW+選択時だけ未確認とする。SODやパーツなしの子弾計算まで一律に止めない。
+`npc_damage_after_role.asm.txt` の0x147c93bdc〜0x147c93c10と0x147c93d4b〜0x147c93d64で、耐性参照時に子弾104→SOD（27）、105→SFFS（26）へ置き換える処理を確認した。両者のCategory07を使うことは、子弾へのパーツ伝達とは別の処理である。SOD子弾（104）はBombPowerグループに対応する。SFFS子弾（105）は同梱マッピングの1〜104の範囲外。初期実装では親のBombPowerを転送する経路が不足していたため、SFFSのBOMB.POW+選択時だけ未確認としていた。
 
 8AAMはDT_LiveWeaponに定義があるが、同梱のプレイヤー兵装Blueprintに基礎威力がない。隣接する6AAMやBot用定義から補完せずnullを保持する。
+
+2026-11-04の[local_004追加調査](../../../spec/agent/wip/local_004/WEAPON_UNCERTAINTY_REVIEW.md)で、SFFSは現行EXEの親弾へのBOMB.POW+適用→子弾パラメータ→子弾Damage上書きまで接続を確認した。基礎40ならfloat32で48となり、この生成経路では二重適用されない。SFFS親・子とパーツ表は同梱資産とハッシュ一致。ただし旧EXEの全経路の同一性は未検証。承認後、子弾の基礎40を保持して親26のパーツ対応を参照する生成設定を追加し、未確認指定を解除した。HP45/48/49の固定期待値と全DAMAGE TYPE、実データと画面操作で検証した。
+
+同調査で8AAMのNPC用Damage80・オンライン用Damage60の資産を発見したが、キャンペーン機体一覧36行の装備IDとプレイヤー機37 Blueprintに8AAMの参照は見つからなかった。威力を補完する段階の前に、キャンペーンの掲載対象かを再判断する必要がある。所在・命令・ハッシュは[WEAPON_UNCERTAINTY_EVIDENCE.json](WEAPON_UNCERTAINTY_EVIDENCE.json)へ記録した。
 
 ## 追加抽出とビルド差
 

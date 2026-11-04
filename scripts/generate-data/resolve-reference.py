@@ -36,7 +36,9 @@ def main():
         wid=definition['weaponId'];record=blueprints.get(definition['blueprint']);props=record['effective_properties'] if record else {}
         damage=props.get('Damage')
         if definition.get('rookie'):damage=table('DT_WeaponSettings')['C.STORY']['Damage']
-        binding=bindings.get(definition.get('damageWeaponId',wid),{})
+        # SFFS copies the parent's adjusted Damage into child 105 after initialization.
+        # Keep the child base damage and durability source separate from its parts source.
+        binding=bindings.get(definition.get('partsWeaponId',definition.get('damageWeaponId',wid)),{})
         labels=[v['power_label'] for field in ['group_power','individual_power'] if (v:=binding.get(field))]
         powers={p['key']:f32(__import__('functools').reduce(lambda a,b:f32(a*b),[part_values[p['key']][label] for label in labels if label in part_values[p['key']]],1)) for p in parts}
         powers={k:v for k,v in powers.items() if v!=1}

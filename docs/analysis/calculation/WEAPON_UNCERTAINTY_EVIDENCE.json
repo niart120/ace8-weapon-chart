@@ -1,0 +1,1165 @@
+{
+  "investigation_date": "2026-11-04",
+  "basis_head": "203e1ff",
+  "runtime_measurement": false,
+  "production_data_changed": false,
+  "exe_sha256": "3e47fd42858d1f2b81e59d7f57394a014c0eb6aaf4c02ee3da351b6a42936be2",
+  "full_local_report": "data/local/local004-weapon-evidence.json",
+  "full_local_report_sha256": "0817a4f921732762750017112b7585af64765d019a6976cf04a1993d6522eb34",
+  "mapping": [
+    {
+      "weapon_id": 8,
+      "group": 3,
+      "case": "0x147dcf8c1",
+      "power_label": 235,
+      "group_label_store": "0x15c7b8799",
+      "individual": {
+        "power_label": 335,
+        "store": "0x147dccec3"
+      }
+    },
+    {
+      "weapon_id": 26,
+      "group": 6,
+      "case": "0x147dcf8d1",
+      "power_label": 124,
+      "group_label_store": "0x15c7b86e0",
+      "individual": {
+        "power_label": 167,
+        "store": "0x147dcdc37"
+      }
+    },
+    {
+      "weapon_id": 104,
+      "group": 6,
+      "case": "0x147dcf8d1",
+      "power_label": 124,
+      "group_label_store": "0x15c7b86e0",
+      "individual": null
+    },
+    {
+      "weapon_id": 105,
+      "group": 0,
+      "case": null,
+      "power_label": 0,
+      "group_label_store": null,
+      "individual": null
+    }
+  ],
+  "parts": [
+    {
+      "row": "RAW_00002032",
+      "id": 2032802,
+      "effects": [
+        {
+          "ParameterLabel": 124,
+          "SpecialConditionLabel": 0,
+          "OperationType": 1,
+          "ParameterValue": 1.2000000476837158
+        },
+        {
+          "ParameterLabel": 0,
+          "SpecialConditionLabel": 0,
+          "OperationType": 0,
+          "ParameterValue": 0
+        }
+      ]
+    }
+  ],
+  "sffs_numeric_example": {
+    "base": 40,
+    "rate_f32": 1.2000000476837158,
+    "child_damage_f32": 48.0
+  },
+  "blueprints": [
+    {
+      "name": "BP_plwp_sffs_a0",
+      "parent": "LiveSFFSBomb",
+      "bytes": 878,
+      "properties": {
+        "WeaponID": 26,
+        "Damage": 40.0,
+        "ChildClass": -5,
+        "ChildSpawner": 3
+      },
+      "child_class": "BP_SFFS_Child_Bomb_C",
+      "function_exports": []
+    },
+    {
+      "name": "BP_plwp_sffs_r0",
+      "parent": "BP_plwp_sffs_a0_C",
+      "bytes": 133,
+      "properties": {
+        "ChildSpawner": 4
+      },
+      "child_class": null,
+      "function_exports": []
+    },
+    {
+      "name": "BP_SFFS_Child_Bomb",
+      "parent": "LiveBomb",
+      "bytes": 809,
+      "properties": {
+        "WeaponID": 105,
+        "Damage": 40.0
+      },
+      "child_class": null,
+      "function_exports": []
+    },
+    {
+      "name": "BP_wp_8aam_a0",
+      "parent": "BP_wp_msl_BaseClass_C",
+      "bytes": 314,
+      "properties": {
+        "WeaponID": 8,
+        "Damage": 80.0
+      },
+      "child_class": null,
+      "function_exports": []
+    },
+    {
+      "name": "BP_wp_8aam_r0",
+      "parent": "BP_wp_8aam_a0_C",
+      "bytes": 48,
+      "properties": {},
+      "child_class": null,
+      "function_exports": []
+    },
+    {
+      "name": "BP_wp_8aam",
+      "parent": "BP_wp_8aam_r0_C",
+      "bytes": 215,
+      "properties": {
+        "Damage": 60.0
+      },
+      "child_class": null,
+      "function_exports": []
+    },
+    {
+      "name": "BP_wp_msl_BaseClass",
+      "parent": "LiveMissile",
+      "bytes": 973,
+      "properties": {},
+      "child_class": null,
+      "function_exports": [
+        "ExecuteUbergraph_BP_wp_msl_BaseClass",
+        "OnTargetMiss",
+        "OnTargetWithinProximity",
+        "ReceiveBeginPlay"
+      ]
+    }
+  ],
+  "vtable_slots": {
+    "LiveSFFSBomb": {
+      "0x810": "0x147f2c3a0",
+      "0x820": "0x147f1b780",
+      "0x840": "0x147f2cd00",
+      "0x850": "0x147f602e0",
+      "0x890": "0x147f2cd80"
+    },
+    "LiveBomb": {
+      "0x810": "0x147f1ef20",
+      "0x820": "0x147f1b780",
+      "0x840": "0x147f1f8d0",
+      "0x850": "0x147f602e0",
+      "0x890": "0x1416b1b70"
+    },
+    "LiveChildSpawnerComponent": {
+      "0x4a8": "0x147f10220",
+      "0x4b8": "0x147f10710"
+    }
+  },
+  "native_functions": {
+    "0x147f69ae0": {
+      "sha256_instruction_bytes": "d7298fca343a47f3e0939bb2efa883a44615b3f7860891f96b0f8d52caad827c",
+      "instruction_count": 169,
+      "excerpt": [
+        "0x147f69bc6 call 0x147f60360",
+        "0x147f69bcb mov rax, qword ptr [rdi]",
+        "0x147f69bce mov rcx, rdi",
+        "0x147f69bd1 call qword ptr [rax + 0x850]"
+      ]
+    },
+    "0x147f60360": {
+      "sha256_instruction_bytes": "6206e42b6e29a35ef96b9db0659562874582c3a7580a2b9b1416804a0e471e98",
+      "instruction_count": 100,
+      "excerpt": [
+        "0x147f603cc mov rax, qword ptr [rdi]",
+        "0x147f603cf mov rcx, rdi",
+        "0x147f603d2 call qword ptr [rax + 0x800]",
+        "0x147f603d8 mov rcx, rdi",
+        "0x147f603db call 0x143fb5420",
+        "0x147f603e0 mov rdx, rax",
+        "0x147f603e3 mov rcx, rdi",
+        "0x147f603e6 call 0x147f604e0",
+        "0x147f603eb test rax, rax",
+        "0x147f603ee je 0x147f60406",
+        "0x147f603f0 cmp byte ptr [rax + 8], 0",
+        "0x147f603f4 je 0x147f60406",
+        "0x147f603f6 mov r8, qword ptr [rdi]",
+        "0x147f603f9 mov rdx, rax",
+        "0x147f603fc mov rcx, rdi",
+        "0x147f603ff call qword ptr [r8 + 0x808]",
+        "0x147f60406 mov rax, qword ptr [rdi]",
+        "0x147f60409 mov edx, ebx",
+        "0x147f6040b mov rcx, rdi",
+        "0x147f6040e call qword ptr [rax + 0x810]",
+        "0x147f60414 mov rax, qword ptr [rdi]",
+        "0x147f60417 mov r9, rbp",
+        "0x147f6041a mov r8d, ebx",
+        "0x147f6041d movzx edx, r14b",
+        "0x147f60421 mov rcx, rdi",
+        "0x147f60424 call qword ptr [rax + 0x818]",
+        "0x147f6042a test rsi, rsi",
+        "0x147f6042d je 0x147f6049c",
+        "0x147f6042f mov rax, qword ptr [rdi]",
+        "0x147f60432 mov rcx, rdi",
+        "0x147f60435 mov rdx, qword ptr [rsi + 0x1328]",
+        "0x147f6043c call qword ptr [rax + 0x840]"
+      ]
+    },
+    "0x147f602e0": {
+      "sha256_instruction_bytes": "1f1c0a4bd50ff7071d99bacfc41f284b606b3ae21d58f07739549a6645db084a",
+      "instruction_count": 31,
+      "excerpt": [
+        "0x147f602fa mov rax, qword ptr [rdi]",
+        "0x147f602fd xor r8d, r8d",
+        "0x147f60300 mov dl, 1",
+        "0x147f60302 mov dword ptr [rdi + 0x6ac], 0",
+        "0x147f6030c mov rcx, rdi",
+        "0x147f6030f call qword ptr [rax + 0x860]",
+        "0x147f60315 mov rax, qword ptr [rdi]",
+        "0x147f60318 mov rcx, rdi",
+        "0x147f6031b call qword ptr [rax + 0x888]",
+        "0x147f60321 mov rax, qword ptr [rdi]",
+        "0x147f60324 mov rcx, rdi",
+        "0x147f60327 call qword ptr [rax + 0x890]"
+      ]
+    },
+    "0x147f2cd00": {
+      "sha256_instruction_bytes": "ef02e38ecb571b94df844a463a9f650ed2be81e3b766639d5a6ac28bc8fa4b35",
+      "instruction_count": 21,
+      "excerpt": [
+        "0x147f2cd15 mov rdx, rcx",
+        "0x147f2cd18 mov rcx, rbx",
+        "0x147f2cd1b call 0x147dc5d10",
+        "0x147f2cd20 mov rdx, rdi",
+        "0x147f2cd23 mov rcx, rbx",
+        "0x147f2cd26 call 0x147dc7960",
+        "0x147f2cd2b lea r8, [rdi + 0x914]",
+        "0x147f2cd32 mov edx, 0xb2",
+        "0x147f2cd37 mov rcx, rbx",
+        "0x147f2cd3a call 0x147de2d30"
+      ]
+    },
+    "0x147dc5d10": {
+      "sha256_instruction_bytes": "6bfac82c45f8571405321db62ca119a2dba28ea82ae53468ab12038b3f6bb55c",
+      "instruction_count": 209,
+      "excerpt": [
+        "0x147dc5e02 cmp al, 0x96",
+        "0x147dc5e04 jae 0x147dc600e",
+        "0x147dc5e0a mov qword ptr [rsp + 0x30], rbp",
+        "0x147dc5e0f movzx eax, al",
+        "0x147dc5e12 mov qword ptr [rsp + 0x40], r14",
+        "0x147dc5e17 lea r14, [rip - 0x7dc5e1e]",
+        "0x147dc5e1e lea rcx, [rax + rax*2]",
+        "0x147dc5e22 movzx ebp, byte ptr [r14 + rcx*2 + 0xe2509c0]",
+        "0x147dc5e2b test bpl, bpl",
+        "0x147dc5e2e je 0x147dc6004",
+        "0x147dc5f17 lea r8, [rax + 0x41c]",
+        "0x147dc5f1e jmp 0x147dc5f4d",
+        "0x147dc5f4d movzx edx, word ptr [r14 + rbp + 0xe343702]",
+        "0x147dc5f56 mov rcx, rsi",
+        "0x147dc5f59 call 0x147de2de0"
+      ]
+    },
+    "0x147de2de0": {
+      "sha256_instruction_bytes": "d4edd8da8019fcb4c3bd8e7a89cd6c12aa76b85806a7ca5db54bfdc33a06ca36",
+      "instruction_count": 74,
+      "excerpt": [
+        "0x147de2e47 movss xmm1, dword ptr [r8]",
+        "0x147de2e4c lea r8, [r10 + 0x58]",
+        "0x147de2e50 mov qword ptr [rsp + 0x30], rsi",
+        "0x147de2e55 lea rsi, [r9 + r10]",
+        "0x147de2e59 mov qword ptr [rsp + 0x38], rdi",
+        "0x147de2e5e xor dil, dil",
+        "0x147de2e61 cmp byte ptr [rsi + 0x58], dil",
+        "0x147de2e65 je 0x147de2e7d",
+        "0x147de2e67 movzx edx, r11w",
+        "0x147de2e6b mov rcx, r8",
+        "0x147de2e6e mov dil, 1",
+        "0x147de2e71 call 0x14724c550",
+        "0x147de2e76 addss xmm1, xmm0",
+        "0x147de2e7a mov r9, r11",
+        "0x147de2e7d cmp byte ptr [rsi + 0x6a3c], 0",
+        "0x147de2e84 mov rsi, qword ptr [rsp + 0x30]",
+        "0x147de2e89 je 0x147de2ea1",
+        "0x147de2e8b lea rcx, [r10 + 0x6a3c]",
+        "0x147de2e92 movzx edx, r11w",
+        "0x147de2e96 call 0x14724c550",
+        "0x147de2e9b mulss xmm1, xmm0",
+        "0x147de2e9f jmp 0x147de2ea6",
+        "0x147de2ea1 test dil, dil",
+        "0x147de2ea4 je 0x147de2f1f",
+        "0x147de2ea6 cmp byte ptr [r9 + r8], 0",
+        "0x147de2f1b movss dword ptr [rbx], xmm1"
+      ]
+    },
+    "0x147dcf680": {
+      "sha256_instruction_bytes": "ead428006fa46e4e46225ac48dbc9b5f7c327a83273b368b048d2bab31b7bcc7",
+      "instruction_count": 128,
+      "excerpt": [
+        "0x147dcf870 movzx ecx, r8b",
+        "0x147dcf874 dec ecx",
+        "0x147dcf876 mov dword ptr [rax - 2], 0",
+        "0x147dcf87d mov word ptr [rax + 2], 0",
+        "0x147dcf883 cmp ecx, 0x67",
+        "0x147dcf886 ja 0x147dcf926",
+        "0x147dcf88c movsxd rcx, ecx",
+        "0x147dcf88f movzx ecx, byte ptr [r9 + rcx + 0x7dcf97c]",
+        "0x147dcf898 mov edx, dword ptr [r9 + rcx*4 + 0x7dcf940]",
+        "0x147dcf8a0 add rdx, r9",
+        "0x147dcf8a3 jmp rdx",
+        "0x147dcf8a5 mov byte ptr [rax - 2], 1",
+        "0x147dcf8a9 mov byte ptr [rax + 2], 1",
+        "0x147dcf8ad jmp 0x147dcf926",
+        "0x147dcf8af mov word ptr [rax - 2], 0x202",
+        "0x147dcf8b5 jmp 0x147dcf926",
+        "0x147dcf8b7 mov byte ptr [rax - 2], 5",
+        "0x147dcf8bb mov byte ptr [rax + 2], 5",
+        "0x147dcf8bf jmp 0x147dcf926",
+        "0x147dcf8c1 mov word ptr [rax - 2], 0x303",
+        "0x147dcf8c7 jmp 0x147dcf926",
+        "0x147dcf8c9 mov word ptr [rax - 2], 0x404",
+        "0x147dcf8cf jmp 0x147dcf926",
+        "0x147dcf8d1 mov byte ptr [rax - 2], 6",
+        "0x147dcf8d5 mov byte ptr [rax], 6",
+        "0x147dcf8d8 jmp 0x147dcf926",
+        "0x147dcf926 inc r8d",
+        "0x147dcf929 add rax, 6",
+        "0x147dcf92d cmp r8d, 0x96",
+        "0x147dcf934 jb 0x147dcf870"
+      ]
+    },
+    "0x147f2cd80": {
+      "sha256_instruction_bytes": "70b0a713c8db141bcd255ec7daaca1ff1405b8526399b5bb909eab1cc3527add",
+      "instruction_count": 57,
+      "excerpt": [
+        "0x147f2cdb4 mov edx, dword ptr [rbx + 0x41c]",
+        "0x147f2cdba mov dword ptr [rax + 0x3c], edx",
+        "0x147f2ce0c mov byte ptr [rsi + 0xc0], 1",
+        "0x147f2ce13 mov byte ptr [rsi + 0x38], 1",
+        "0x147f2ce71 mov qword ptr [rdi + 0x50], rsi",
+        "0x147f2ce75 mov rcx, qword ptr [rbx + 0x8f8]",
+        "0x147f2ce7c mov rax, qword ptr [rcx]",
+        "0x147f2ce7f mov rbx, qword ptr [rsp + 0x30]",
+        "0x147f2ce84 mov rsi, qword ptr [rsp + 0x38]",
+        "0x147f2ce89 add rsp, 0x20",
+        "0x147f2ce8d pop rdi",
+        "0x147f2ce8e jmp qword ptr [rax + 0x4a8]"
+      ]
+    },
+    "0x147f10220": {
+      "sha256_instruction_bytes": "035f78bc9de2a8527b831522f679fbb7b1ee3fdb28d2de2d7576cbe2b60ef803",
+      "instruction_count": 117,
+      "excerpt": [
+        "0x147f102ea mov rdi, qword ptr [rdi + 0x50]",
+        "0x147f102ee je 0x147f102fd",
+        "0x147f102f0 test rdi, rdi",
+        "0x147f102f3 je 0x147f102fd",
+        "0x147f102f5 mov rcx, rdi",
+        "0x147f102f8 call 0x1419ca240",
+        "0x147f102fd mov qword ptr [rbx + 0xd0], rdi"
+      ]
+    },
+    "0x147f10710": {
+      "sha256_instruction_bytes": "48a2b9ff1435c5240a709e74a9bd2f599b29f70c919a808a4029959d05892efc",
+      "instruction_count": 384,
+      "excerpt": [
+        "0x147f10b61 mov r14, qword ptr [rbx + 0xd0]",
+        "0x147f10b68 movsd qword ptr [rbp - 0x30], xmm4",
+        "0x147f10b6d test r14, r14",
+        "0x147f10b70 je 0x147f10ba9",
+        "0x147f10b72 mov dword ptr [rdi + 0x3b0], r15d",
+        "0x147f10b79 mov rcx, rdi",
+        "0x147f10b7c mov r9, qword ptr [r14 + 0x30]",
+        "0x147f10b80 mov r8d, dword ptr [r14 + 0x2c]",
+        "0x147f10b84 movzx edx, byte ptr [r14 + 0x29]",
+        "0x147f10b89 call 0x147f60360",
+        "0x147f10b8e mov rax, qword ptr [rdi]",
+        "0x147f10b91 mov rdx, r14",
+        "0x147f10b94 mov rcx, rdi",
+        "0x147f10b97 call qword ptr [rax + 0x820]",
+        "0x147f10b9d mov rax, qword ptr [rdi]",
+        "0x147f10ba0 mov rcx, rdi",
+        "0x147f10ba3 call qword ptr [rax + 0x850]",
+        "0x147f10ba9 mov rcx, rdi"
+      ]
+    },
+    "0x147f1b780": {
+      "sha256_instruction_bytes": "2b65db2b95edaed7226c6ec02809b0d7e92b1976b24eac167ddd986c95815722",
+      "instruction_count": 5,
+      "excerpt": [
+        "0x147f1b780 test rdx, rdx",
+        "0x147f1b783 je 0x147f1b78f",
+        "0x147f1b785 cmp byte ptr [rdx + 0x38], 0",
+        "0x147f1b789 jne 0x147f25990",
+        "0x147f1b78f ret "
+      ]
+    },
+    "0x147f25990": {
+      "sha256_instruction_bytes": "103f5e3ae13c568d657d5c56379e9ed1d0cf45c7cb17182c671e26538cce4535",
+      "instruction_count": 55,
+      "excerpt": [
+        "0x147f25990 test rdx, rdx",
+        "0x147f25993 je 0x147f25aac",
+        "0x147f25999 mov qword ptr [rsp + 8], rbx",
+        "0x147f2599e push rdi",
+        "0x147f2599f sub rsp, 0x20",
+        "0x147f259a3 cmp byte ptr [rdx + 0x38], 0",
+        "0x147f259a7 mov rbx, rdx",
+        "0x147f259aa mov rdi, rcx",
+        "0x147f259ad je 0x147f25aa2",
+        "0x147f259b3 mov eax, dword ptr [rdx + 0x3c]",
+        "0x147f259b6 mov dword ptr [rcx + 0x41c], eax",
+        "0x147f259bc movzx eax, byte ptr [rdx + 0xc0]",
+        "0x147f259c3 mov byte ptr [rcx + 0x676], al"
+      ]
+    },
+    "0x147f1f8d0": {
+      "sha256_instruction_bytes": "f094272c1d763c54c2097c134152c3728dca2b42835da0d298d19b1ffdd812d5",
+      "instruction_count": 17,
+      "excerpt": [
+        "0x147f1f8d0 test rdx, rdx",
+        "0x147f1f8d3 je 0x147f1f905",
+        "0x147f1f8d5 mov qword ptr [rsp + 8], rbx",
+        "0x147f1f8da push rdi",
+        "0x147f1f8db sub rsp, 0x20",
+        "0x147f1f8df mov rbx, rdx",
+        "0x147f1f8e2 mov rdi, rcx",
+        "0x147f1f8e5 mov rdx, rcx",
+        "0x147f1f8e8 mov rcx, rbx",
+        "0x147f1f8eb call 0x147dc5d10",
+        "0x147f1f8f0 mov rdx, rdi",
+        "0x147f1f8f3 mov rcx, rbx",
+        "0x147f1f8f6 call 0x147dc7960",
+        "0x147f1f8fb mov rbx, qword ptr [rsp + 0x30]",
+        "0x147f1f900 add rsp, 0x20",
+        "0x147f1f904 pop rdi",
+        "0x147f1f905 ret "
+      ]
+    }
+  },
+  "aircraft": [
+    {
+      "row": "Row_0001",
+      "plane": "PP0001_a10c",
+      "class": "BP_PlayerPlane_PP0001_a10c_C",
+      "parameter": "DT_PlayerParameter_PP0001_a10c",
+      "weapons": {
+        "SpWeaponID1": 5,
+        "SpWeaponID2": 30,
+        "SpWeaponID3": 22,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0002",
+      "plane": "PP0002_f02a",
+      "class": "BP_PlayerPlane_PP0002_f02a_C",
+      "parameter": "DT_PlayerParameter_PP0002_f02a",
+      "weapons": {
+        "SpWeaponID1": 19,
+        "SpWeaponID2": 30,
+        "SpWeaponID3": 15,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0003",
+      "plane": "PP0003_f04e",
+      "class": "BP_PlayerPlane_PP0003_f04e_C",
+      "parameter": "DT_PlayerParameter_PP0003_f04e",
+      "weapons": {
+        "SpWeaponID1": 15,
+        "SpWeaponID2": 30,
+        "SpWeaponID3": 20,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0004",
+      "plane": "PP0004_f15c",
+      "class": "BP_PlayerPlane_PP0004_f15c_C",
+      "parameter": "DT_PlayerParameter_PP0004_f15c",
+      "weapons": {
+        "SpWeaponID1": 4,
+        "SpWeaponID2": 13,
+        "SpWeaponID3": 24,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0005",
+      "plane": "PP0005_f22a",
+      "class": "BP_PlayerPlane_PP0005_f22a_C",
+      "parameter": "DT_PlayerParameter_PP0005_f22a",
+      "weapons": {
+        "SpWeaponID1": 21,
+        "SpWeaponID2": 4,
+        "SpWeaponID3": 31,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0006",
+      "plane": "PP0006_f35c",
+      "class": "BP_PlayerPlane_PP0006_f35c_C",
+      "parameter": "DT_PlayerParameter_PP0006_f35c",
+      "weapons": {
+        "SpWeaponID1": 17,
+        "SpWeaponID2": 13,
+        "SpWeaponID3": 9,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0007",
+      "plane": "PP0007_f18c",
+      "class": "BP_PlayerPlane_PP0007_f18c_C",
+      "parameter": "DT_PlayerParameter_PP0007_f18c",
+      "weapons": {
+        "SpWeaponID1": 4,
+        "SpWeaponID2": 30,
+        "SpWeaponID3": 19,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0008",
+      "plane": "PP0008_j39e",
+      "class": "BP_PlayerPlane_PP0008_j39e_C",
+      "parameter": "DT_PlayerParameter_PP0008_j39e",
+      "weapons": {
+        "SpWeaponID1": 24,
+        "SpWeaponID2": 7,
+        "SpWeaponID3": 16,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0009",
+      "plane": "PP0009_su34",
+      "class": "BP_PlayerPlane_PP0009_su34_C",
+      "parameter": "DT_PlayerParameter_PP0009_su34",
+      "weapons": {
+        "SpWeaponID1": 5,
+        "SpWeaponID2": 43,
+        "SpWeaponID3": 13,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0010",
+      "plane": "PP0010_e18g",
+      "class": "BP_PlayerPlane_PP0010_e18g_C",
+      "parameter": "DT_PlayerParameter_PP0010_e18g",
+      "weapons": {
+        "SpWeaponID1": 34,
+        "SpWeaponID2": 3,
+        "SpWeaponID3": 40,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0011",
+      "plane": "PP0011_typn",
+      "class": "BP_PlayerPlane_PP0011_typn_C",
+      "parameter": "DT_PlayerParameter_PP0011_typn",
+      "weapons": {
+        "SpWeaponID1": 4,
+        "SpWeaponID2": 16,
+        "SpWeaponID3": 9,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0012",
+      "plane": "PP0012_f15j",
+      "class": "BP_PlayerPlane_PP0012_f15j_C",
+      "parameter": "DT_PlayerParameter_PP0012_f15j",
+      "weapons": {
+        "SpWeaponID1": 14,
+        "SpWeaponID2": 13,
+        "SpWeaponID3": 30,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0013_1",
+      "plane": "PP0013_a06e",
+      "class": "BP_PlayerPlane_PP0013_a06e_C",
+      "parameter": "DT_PlayerParameter_PP0013_a06e",
+      "weapons": {
+        "SpWeaponID1": 18,
+        "SpWeaponID2": 19,
+        "SpWeaponID3": 30,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0013_2",
+      "plane": "PP0013_a06e_ms15",
+      "class": "BP_PlayerPlane_PP0013_a06e_ms15_C",
+      "parameter": "DT_PlayerParameter_PP0013_a06e_ms15",
+      "weapons": {
+        "SpWeaponID1": 18,
+        "SpWeaponID2": 19,
+        "SpWeaponID3": 30,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0014",
+      "plane": "PP0014_rflm",
+      "class": "BP_PlayerPlane_PP0014_rflm_C",
+      "parameter": "DT_PlayerParameter_PP0014_rflm",
+      "weapons": {
+        "SpWeaponID1": 13,
+        "SpWeaponID2": 17,
+        "SpWeaponID3": 16,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0015",
+      "plane": "PP0015_su25",
+      "class": "BP_PlayerPlane_PP0015_su25_C",
+      "parameter": "DT_PlayerParameter_PP0015_su25",
+      "weapons": {
+        "SpWeaponID1": 5,
+        "SpWeaponID2": 26,
+        "SpWeaponID3": 20,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0016",
+      "plane": "PP0016_x40a",
+      "class": "BP_PlayerPlane_PP0016_x40a_C",
+      "parameter": "DT_PlayerParameter_PP0016_x40a",
+      "weapons": {
+        "SpWeaponID1": 103,
+        "SpWeaponID2": 45,
+        "SpWeaponID3": 21,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0017",
+      "plane": "PP0017_mr2k",
+      "class": "BP_PlayerPlane_PP0017_mr2k_C",
+      "parameter": "DT_PlayerParameter_PP0017_mr2k",
+      "weapons": {
+        "SpWeaponID1": 30,
+        "SpWeaponID2": 4,
+        "SpWeaponID3": 19,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0018",
+      "plane": "PP0018_fa36",
+      "class": "BP_PlayerPlane_PP0018_fa36_C",
+      "parameter": "DT_PlayerParameter_PP0018_fa36",
+      "weapons": {
+        "SpWeaponID1": 24,
+        "SpWeaponID2": 14,
+        "SpWeaponID3": 27,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0019",
+      "plane": "PP0019_ea36",
+      "class": "BP_PlayerPlane_PP0019_ea36_C",
+      "parameter": "DT_PlayerParameter_PP0019_ea36",
+      "weapons": {
+        "SpWeaponID1": 41,
+        "SpWeaponID2": 4,
+        "SpWeaponID3": 31,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0020",
+      "plane": "PP0020_m29a",
+      "class": "BP_PlayerPlane_PP0020_m29a_C",
+      "parameter": "DT_PlayerParameter_PP0020_m29a",
+      "weapons": {
+        "SpWeaponID1": 13,
+        "SpWeaponID2": 14,
+        "SpWeaponID3": 18,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0021",
+      "plane": "PP0021_su57",
+      "class": "BP_PlayerPlane_PP0021_su57_C",
+      "parameter": "DT_PlayerParameter_PP0021_su57",
+      "weapons": {
+        "SpWeaponID1": 21,
+        "SpWeaponID2": 13,
+        "SpWeaponID3": 17,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0022",
+      "plane": "PP0022_f16c",
+      "class": "BP_PlayerPlane_PP0022_f16c_C",
+      "parameter": "DT_PlayerParameter_PP0022_f16c",
+      "weapons": {
+        "SpWeaponID1": 3,
+        "SpWeaponID2": 21,
+        "SpWeaponID3": 18,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0023",
+      "plane": "PP0023_f14d",
+      "class": "BP_PlayerPlane_PP0023_f14d_C",
+      "parameter": "DT_PlayerParameter_PP0023_f14d",
+      "weapons": {
+        "SpWeaponID1": 16,
+        "SpWeaponID2": 23,
+        "SpWeaponID3": 11,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0024_1",
+      "plane": "PP0024_f18f",
+      "class": "BP_PlayerPlane_PP0024_f18f_C",
+      "parameter": "DT_PlayerParameter_PP0024_f18f",
+      "weapons": {
+        "SpWeaponID1": 19,
+        "SpWeaponID2": 4,
+        "SpWeaponID3": 11,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0024_2",
+      "plane": "PP0024_f18f_ms01",
+      "class": "BP_PlayerPlane_PP0024_f18f_ms01_C",
+      "parameter": "DT_PlayerParameter_PP0024_f18f",
+      "weapons": {
+        "SpWeaponID1": 19,
+        "SpWeaponID2": 4,
+        "SpWeaponID3": 11,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0025",
+      "plane": "PP0025_f15e",
+      "class": "BP_PlayerPlane_PP0025_f15e_C",
+      "parameter": "DT_PlayerParameter_PP0025_f15e",
+      "weapons": {
+        "SpWeaponID1": 31,
+        "SpWeaponID2": 26,
+        "SpWeaponID3": 13,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0026",
+      "plane": "PP0026_su47",
+      "class": "BP_PlayerPlane_PP0026_su47_C",
+      "parameter": "DT_PlayerParameter_PP0026_su47",
+      "weapons": {
+        "SpWeaponID1": 23,
+        "SpWeaponID2": 30,
+        "SpWeaponID3": 14,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0027",
+      "plane": "PP0027_m21b",
+      "class": "BP_PlayerPlane_PP0027_m21b_C",
+      "parameter": "DT_PlayerParameter_PP0027_m21b",
+      "weapons": {
+        "SpWeaponID1": 24,
+        "SpWeaponID2": 21,
+        "SpWeaponID3": 20,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0028",
+      "plane": "PP0028_su35",
+      "class": "BP_PlayerPlane_PP0028_su35_C",
+      "parameter": "DT_PlayerParameter_PP0028_su35",
+      "weapons": {
+        "SpWeaponID1": 6,
+        "SpWeaponID2": 18,
+        "SpWeaponID3": 15,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0029",
+      "plane": "PP0029_m31b",
+      "class": "BP_PlayerPlane_PP0029_m31b_C",
+      "parameter": "DT_PlayerParameter_PP0029_m31b",
+      "weapons": {
+        "SpWeaponID1": 16,
+        "SpWeaponID2": 23,
+        "SpWeaponID3": 21,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0030",
+      "plane": "PP0030_su33",
+      "class": "BP_PlayerPlane_PP0030_su33_C",
+      "parameter": "DT_PlayerParameter_PP0030_su33",
+      "weapons": {
+        "SpWeaponID1": 21,
+        "SpWeaponID2": 22,
+        "SpWeaponID3": 15,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0031",
+      "plane": "PP0031_e06b",
+      "class": "BP_PlayerPlane_PP0031_e06b_C",
+      "parameter": "DT_PlayerParameter_PP0031_e06b",
+      "weapons": {
+        "SpWeaponID1": 40,
+        "SpWeaponID2": 18,
+        "SpWeaponID3": 34,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0032",
+      "plane": "PP0032_f18e",
+      "class": "BP_PlayerPlane_PP0032_f18e_C",
+      "parameter": "DT_PlayerParameter_PP0032_f18e",
+      "weapons": {
+        "SpWeaponID1": 6,
+        "SpWeaponID2": 27,
+        "SpWeaponID3": 21,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0034_1",
+      "plane": "PP0034_f14a",
+      "class": "BP_PlayerPlane_PP0034_f14a_C",
+      "parameter": "DT_PlayerParameter_PP0034_f14a",
+      "weapons": {
+        "SpWeaponID1": 15,
+        "SpWeaponID2": 23,
+        "SpWeaponID3": 30,
+        "SpWeaponID4": 0
+      }
+    },
+    {
+      "row": "Row_0038",
+      "plane": "PP0038_adfx02_L001",
+      "class": "BP_PlayerPlane_PP0038_adfx02_L001_C",
+      "parameter": "DT_PlayerParameter_PP0038_adfx02_L001",
+      "weapons": {
+        "SpWeaponID1": 33,
+        "SpWeaponID2": 28,
+        "SpWeaponID3": 40,
+        "SpWeaponID4": 0
+      }
+    }
+  ],
+  "player_class_count": 37,
+  "player_classes_with_8aam_name": [],
+  "player_classes_scanned": [
+    "BP_PlayerPlane_Base_C",
+    "BP_PlayerPlane_PP0001_a10c_C",
+    "BP_PlayerPlane_PP0002_f02a_C",
+    "BP_PlayerPlane_PP0003_f04e_C",
+    "BP_PlayerPlane_PP0004_f15c_C",
+    "BP_PlayerPlane_PP0005_f22a_C",
+    "BP_PlayerPlane_PP0006_f35c_C",
+    "BP_PlayerPlane_PP0007_f18c_C",
+    "BP_PlayerPlane_PP0008_j39e_C",
+    "BP_PlayerPlane_PP0009_su34_C",
+    "BP_PlayerPlane_PP0010_e18g_C",
+    "BP_PlayerPlane_PP0011_typn_C",
+    "BP_PlayerPlane_PP0012_f15j_C",
+    "BP_PlayerPlane_PP0013_a06e_C",
+    "BP_PlayerPlane_PP0013_a06e_ms15_C",
+    "BP_PlayerPlane_PP0014_rflm_C",
+    "BP_PlayerPlane_PP0015_su25_C",
+    "BP_PlayerPlane_PP0016_x40a_C",
+    "BP_PlayerPlane_PP0017_mr2k_C",
+    "BP_PlayerPlane_PP0018_fa36_C",
+    "BP_PlayerPlane_PP0019_ea36_C",
+    "BP_PlayerPlane_PP0020_m29a_C",
+    "BP_PlayerPlane_PP0021_su57_C",
+    "BP_PlayerPlane_PP0022_f16c_C",
+    "BP_PlayerPlane_PP0023_f14d_C",
+    "BP_PlayerPlane_PP0024_f18f_C",
+    "BP_PlayerPlane_PP0024_f18f_ms01_C",
+    "BP_PlayerPlane_PP0025_f15e_C",
+    "BP_PlayerPlane_PP0026_su47_C",
+    "BP_PlayerPlane_PP0027_m21b_C",
+    "BP_PlayerPlane_PP0028_su35_C",
+    "BP_PlayerPlane_PP0029_m31b_C",
+    "BP_PlayerPlane_PP0030_su33_C",
+    "BP_PlayerPlane_PP0031_e06b_C",
+    "BP_PlayerPlane_PP0032_f18e_C",
+    "BP_PlayerPlane_PP0034_f14a_C",
+    "BP_PlayerPlane_PP0038_adfx02_L001_C"
+  ],
+  "weapon_settings": [
+    {
+      "row": "C.STORY",
+      "weapon_id": 2
+    },
+    {
+      "row": "EASY",
+      "weapon_id": 2
+    },
+    {
+      "row": "qaam_ON",
+      "weapon_id": 21
+    },
+    {
+      "row": "DA_ECM_ON",
+      "weapon_id": 40
+    },
+    {
+      "row": "DA_ESM_ON",
+      "weapon_id": 34
+    },
+    {
+      "row": "DA_IEWS_ON",
+      "weapon_id": 41
+    }
+  ],
+  "online_fcs_imports": [
+    "BP_wp_8aam_C",
+    "Default__BP_wp_8aam_C",
+    "/Game/OnlineMode/Blueprint/Weapons/BP_wp_8aam"
+  ],
+  "container_search": [
+    {
+      "container": "pakchunk0-Windows.utoc",
+      "utoc_sha256": "c502c18539866e9c3853b31f89c3d61212ffa3ecd9b493ebfe19e2aa0b067e0d",
+      "listed_lines": 112299,
+      "weapon_blueprints_8aam": [
+        "../../../Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_a0.uasset",
+        "../../../Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_r0.uasset"
+      ]
+    },
+    {
+      "container": "pakchunk0optional-Windows.utoc",
+      "utoc_sha256": "bb79b8726c7472842ca6098335e10a7a31311ef706aef323ab4ba9dd53924db6",
+      "listed_lines": 31,
+      "weapon_blueprints_8aam": []
+    },
+    {
+      "container": "pakchunk10-Windows.utoc",
+      "utoc_sha256": "88ca9a91b44886b03ce216f90a79def251e3e1c3a24963ae0e17b7d6026ad3f0",
+      "listed_lines": 43153,
+      "weapon_blueprints_8aam": []
+    },
+    {
+      "container": "pakchunk10optional-Windows.utoc",
+      "utoc_sha256": "3c191da37d86ffd2e83b37bed9ad3318fb110d699fb069b78e901851add50af0",
+      "listed_lines": 38,
+      "weapon_blueprints_8aam": []
+    },
+    {
+      "container": "pakchunk20-Windows.utoc",
+      "utoc_sha256": "9aab18c7b63c1ce13ac1c4c004e42097fd50100b387d32876de2c2cf2602c4f6",
+      "listed_lines": 33350,
+      "weapon_blueprints_8aam": [
+        "../../../Live/Content/OnlineMode/Blueprint/Weapons/BP_wp_8aam.uasset",
+        "../../../Live/Content/OnlineMode/Blueprint/Weapons/BP_FCS/BP_FCS_8AAM_r0_00.uasset"
+      ]
+    },
+    {
+      "container": "pakchunk20optional-Windows.utoc",
+      "utoc_sha256": "b58e61c7c4108222c09db4cf6fbf5d4efd420b498802a359a5c924c616f770d5",
+      "listed_lines": 290,
+      "weapon_blueprints_8aam": []
+    }
+  ],
+  "critical_asset_hashes": [
+    {
+      "path": "Live/Content/OnlineMode/Blueprint/Weapons/BP_FCS/BP_FCS_8AAM_r0_00.uasset",
+      "sha256": "55e5d47003a4c72895c0d751d1b7f61dc3092654569a6d0d422d5ffaf493a660",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/OnlineMode/Blueprint/Weapons/BP_FCS/BP_FCS_8AAM_r0_00.uexp",
+      "sha256": "b6f0906399cc9ed083d022de5d4b3f53d7962f73b8e6603c6c19f7c2bd1bb9c4",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/ChildBomb/BP_SFFS_Child_Bomb.uasset",
+      "sha256": "0b4c14f9008ad2690355632478faab0de725a33948abf86306631f4fe1fe8763",
+      "reference_sha256": "0b4c14f9008ad2690355632478faab0de725a33948abf86306631f4fe1fe8763",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/ChildBomb/BP_SFFS_Child_Bomb.uexp",
+      "sha256": "3386206249b0813cae91a899878deace87f22e16187033877df552417f939c90",
+      "reference_sha256": "3386206249b0813cae91a899878deace87f22e16187033877df552417f939c90",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/Player/BP_plwp_sffs_a0.uasset",
+      "sha256": "b2fa90a5e20a7a750c101a5cdf4434d6241286beac130a15b5adba0f3e7250fa",
+      "reference_sha256": "b2fa90a5e20a7a750c101a5cdf4434d6241286beac130a15b5adba0f3e7250fa",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/Player/BP_plwp_sffs_a0.uexp",
+      "sha256": "eb9c05a5238021176d3bf49fc4e013aad55a9d8e692eeb804501e47f6caeaa5c",
+      "reference_sha256": "eb9c05a5238021176d3bf49fc4e013aad55a9d8e692eeb804501e47f6caeaa5c",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/Player/BP_plwp_sffs_r0.uasset",
+      "sha256": "609b45b62808a1d49cb0b09b008bf438da1f511ce463aa6698ed94bf9146bd6d",
+      "reference_sha256": "609b45b62808a1d49cb0b09b008bf438da1f511ce463aa6698ed94bf9146bd6d",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/BOMB/SFFS/Player/BP_plwp_sffs_r0.uexp",
+      "sha256": "64552c8874b3e1f84b3818691a95ac1e2e4dc1583f2b3cdf07ab7bf5add87fd3",
+      "reference_sha256": "64552c8874b3e1f84b3818691a95ac1e2e4dc1583f2b3cdf07ab7bf5add87fd3",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/OnlineMode/Blueprint/Weapons/BP_wp_8aam.uasset",
+      "sha256": "b5568c7299945f5aceb715b01789c1351c29c230f99db7321bbea1399ccf5e9a",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/OnlineMode/Blueprint/Weapons/BP_wp_8aam.uexp",
+      "sha256": "278d242ce9a4d563ebdcadc3428a4f49dc835631db27ce3c718bdfb1c1d795bb",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_a0.uasset",
+      "sha256": "5c822ffa5196b6bf448dcf61236ca1135fb53b32a43f777210991f1fdfc2d52c",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_a0.uexp",
+      "sha256": "4133f6d8cccfac76d4b06c9ffb86623117d3c8e9e807818a3bcb69a708e8590c",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_r0.uasset",
+      "sha256": "e563598e2ba3031e5af6762f55b63f3f195afd35bfc7a42376a8e9e490d15218",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_r0.uexp",
+      "sha256": "a58d4b449a5ca024971797f9b5f43b7013a737048622f288d0943ec4e4b4d64d",
+      "reference_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/BP_wp_msl_BaseClass.uasset",
+      "sha256": "0be2b8beae2c4095cf4fe74297a650f11ced55699ac90d56f2b1667c7340ddf9",
+      "reference_sha256": "0be2b8beae2c4095cf4fe74297a650f11ced55699ac90d56f2b1667c7340ddf9",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Blueprints/Weapons/MSL/BP_wp_msl_BaseClass.uexp",
+      "sha256": "1e7d6e9f5e84c9f47dc2ed722645d37d5f8058fda4fa6593183d63c4c5b66ede",
+      "reference_sha256": "1e7d6e9f5e84c9f47dc2ed722645d37d5f8058fda4fa6593183d63c4c5b66ede",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Player/DT_LiveAircraft.uasset",
+      "sha256": "de64185307b3d9110d9be2d091e11be2c4d479f3fa767352b58c355d09876f3f",
+      "reference_sha256": "6d6086b1325114f0a6684b8c4cd9f50d538933509889650a365c855953000b97",
+      "matches_reference": false
+    },
+    {
+      "path": "Live/Content/Datatables/Player/DT_LiveAircraft.uexp",
+      "sha256": "fe9fffb94e3bc20f5df72c9eadd6029135c9f256d06626b7b4b85e5b6498bb16",
+      "reference_sha256": "09f3d9ba1f085853834820c0c215e9efe12861a8f75168be956604bfeba9f9c3",
+      "matches_reference": false
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveParts.uasset",
+      "sha256": "9dd876e43febdba3f7c94f41f40ea0995d4b8c83fe343f8d247cd4dc6d6492af",
+      "reference_sha256": "9dd876e43febdba3f7c94f41f40ea0995d4b8c83fe343f8d247cd4dc6d6492af",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveParts.uexp",
+      "sha256": "8cb62ebb2ca98c701048fafa6fdce9e15148cd2066820359d468ed77a148c1a4",
+      "reference_sha256": "8cb62ebb2ca98c701048fafa6fdce9e15148cd2066820359d468ed77a148c1a4",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveWeapon.uasset",
+      "sha256": "fd48b25b05f0b45ad12aa95267e460d1c6c7a5643a1470838115b2d816e856b2",
+      "reference_sha256": "fd48b25b05f0b45ad12aa95267e460d1c6c7a5643a1470838115b2d816e856b2",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Information/DT_LiveWeapon.uexp",
+      "sha256": "a263560df61ee26dbd2673ed3cefb1932b430657b9dfd7fd7c573b5b23f21198",
+      "reference_sha256": "a263560df61ee26dbd2673ed3cefb1932b430657b9dfd7fd7c573b5b23f21198",
+      "matches_reference": true
+    },
+    {
+      "path": "Live/Content/Datatables/Player/DT_WeaponSettings.uasset",
+      "sha256": "f930b1c51c343c6a0328ea24a3fea98e448df176a8c88fdbb395ab156a77c0ff",
+      "reference_sha256": "f34ad570b9265a156baf0e9a34d2254501db4df55a0e88b7f595237a6d965334",
+      "matches_reference": false
+    },
+    {
+      "path": "Live/Content/Datatables/Player/DT_WeaponSettings.uexp",
+      "sha256": "da7049de2e59aa02514b812d88162d3596e1f842283de7a6fd774040c028d8b0",
+      "reference_sha256": "2146dae419aad1e2ea57f29abf334deff9d39ffa8cf43a0153910069382f002b",
+      "matches_reference": false
+    }
+  ],
+  "protected_sha256": {
+    "src/data/targets.json": "d1a0da7bea252dd1bec668f8910bfc50a2331c465c78e786e7aea219b1c3d033",
+    "src/data/weapons.json": "2e3f2ddebf20f342325ec4c5eabd5aceeb524ae8b2838aa59ad42004a9ea0091",
+    "src/data/modifiers.json": "6379b8025cffa7ff3e48fc81520ae83ef83dcc29292ec32287fe109e6a9f83a0",
+    "data/local/catalog.json": "1837e4545cd51242dd106eb0755eefb2d32663053aa353a33bdc02e00dbc2398",
+    "data/local/npc-evidence.json": "a37ecfe0e9b9662e79627ff7e4582a23c9229f658c8a9f09ee2c2291b1d0a1a8",
+    "data/local/native-constructors.json": "7da27ba0a524f89c198b54e76ba69a9285f4662316575534f1495e1e9d4be41d",
+    "data/local/generation-input.json": "6d343a8a5fb950b98ac00bfe80ff7d82ed3332154d62d7139ad7b45484e2d07f"
+  },
+  "counts": {
+    "extracted_assets": 87,
+    "decoded_tables": 40,
+    "aircraft_rows": 36,
+    "unique_referenced_parameter_tables": 35,
+    "all_player_parameter_tables": 36
+  }
+}

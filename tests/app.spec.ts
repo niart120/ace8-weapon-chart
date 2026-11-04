@@ -344,6 +344,60 @@ test('ダミーと陸上戦艦本体の旧選択を除去し、通常目標と�
 });
 
 for (const width of [1440, 390]) {
+  test(`SFFS: ${width}pxでBOMB.POW+の即時反映と旧保存を確認`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.addInitScript(() => {
+      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      localStorage.setItem(
+        'ace8-weapon-guide.preferences',
+        JSON.stringify({
+          version: 1,
+          conditions: { role: 'FIGHTER', parts: ['bombPower'], damageType: 'DIRECT' },
+          weaponIds: [21],
+          targetIds: [26],
+          showParts: false,
+          showMissionVariants: false,
+        })
+      );
+    });
+    await page.goto('/');
+    await expect(page.getByRole('columnheader', { name: 'SFFS', exact: true })).toHaveCount(1);
+    const f16 = page.getByRole('row').filter({
+      has: page.getByRole('rowheader', { name: 'F-16C', exact: true }),
+    });
+    const result = f16.locator('td').nth(1);
+    const bombPower = page.getByRole('checkbox', { name: 'BOMB.POW+', exact: true });
+    // HP55。FIGHTERは子弾40×1.25=50、BOMB.POW+ありは48×1.25=60。
+    await expect(result).toHaveText('1');
+    if (width === 390) await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
+    await expect(bombPower).toBeChecked();
+    await bombPower.uncheck();
+    if (width === 390)
+      await page.getByRole('button', { name: 'Close settings', exact: true }).click();
+    await expect(result).toHaveText('2');
+    if (width === 390) await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
+    await bombPower.check();
+    if (width === 390)
+      await page.getByRole('button', { name: 'Close settings', exact: true }).click();
+    await expect(result).toHaveText('1');
+    await expect
+      .poll(() =>
+        page.evaluate(() => {
+          const saved = JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!);
+          return {
+            weaponIds: saved.weaponIds,
+            targetIds: saved.targetIds,
+            parts: saved.conditions.parts,
+          };
+        })
+      )
+      .toEqual({ weaponIds: [21], targetIds: [26], parts: ['bombPower'] });
+    await page.reload();
+    await expect(result).toHaveText('1');
+    if (width === 390) await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
+    await expect(bombPower).toBeChecked();
+  });
+
   test(`MEGAFLOAT: ${width}pxで親除外・旧選択・Front/EVと任務名を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {

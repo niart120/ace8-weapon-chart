@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
 import { weapons, targets, modifiers } from './masters';
 import { calculateDefeatRequirement } from '../domain/calculate';
+import { componentDamage } from '../domain/damage';
 import { weaponCategories, targetCategories } from '../domain/types';
 test('合意済み34兵装と8件のUNUSEDを別の固定IDで保持する', () => {
   expect(weapons.filter((w) => w.category !== 'UNUSED').map((w) => w.name)).toEqual([
@@ -80,7 +81,32 @@ test('全目標を分類し、部位・任務差分・同名の異なるHPを保
     /sourceRefs|DT_NPC|BlueprintClass/
   );
 });
-test('既知の免疫・未収録の8AAM・SFFSのパーツ不明を区別する', () => {
+test('SFFSは親からのBOMB.POW+を子弾1発へ一度適用し40と48の境界を保つ', () => {
+  const sffs = weapons.find((w) => w.id === 21)!;
+  const target = { ...targets.find((t) => t.id === 26)!, hp: 45 };
+  const conditions = { role: 'MULTIROLE', parts: ['bombPower'], damageType: 'DIRECT' } as const;
+  // local_004の元処理: 親Damage40×float32(1.2)を子弾へ代入する。総散布量ではない。
+  expect(calculateDefeatRequirement(target, sffs, conditions)).toEqual({ kind: 'value', value: 1 });
+  expect(componentDamage(target, sffs.primary, conditions)).toBe(48);
+  expect(componentDamage(target, sffs.primary, { ...conditions, parts: [] })).toBe(40);
+  for (const damageType of ['DIRECT', 'BLAST', 'DIRECT+BLAST'] as const) {
+    const selected = { ...conditions, damageType };
+    expect(calculateDefeatRequirement(target, sffs, { ...selected, parts: [] })).toEqual({
+      kind: 'value',
+      value: 2,
+    });
+    expect(calculateDefeatRequirement({ ...target, hp: 48 }, sffs, selected)).toEqual({
+      kind: 'value',
+      value: 1,
+    });
+    expect(calculateDefeatRequirement({ ...target, hp: 49 }, sffs, selected)).toEqual({
+      kind: 'value',
+      value: 2,
+    });
+  }
+});
+
+test('既知の免疫・未収録の8AAM・確認済みSFFSのパーツ補正を区別する', () => {
   const depot = targets.find((t) => t.name === 'HARDENED DEPOT')!;
   const bomb = weapons.find((w) => w.name === 'UGB')!;
   const condition = { role: 'FIGHTER', parts: [], damageType: 'DIRECT' } as const;
@@ -94,7 +120,7 @@ test('既知の免疫・未収録の8AAM・SFFSのパーツ不明を区別する
       ...condition,
       parts: ['bombPower'],
     })
-  ).toEqual({ kind: 'unknown' });
+  ).toEqual({ kind: 'value', value: 1 });
 });
 
 test('R001: X-40のMSLはCategory01を使い6発になる', () => {

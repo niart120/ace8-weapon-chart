@@ -158,5 +158,5 @@ test('原子炉は各HP40で計算し、シャッターの任務免疫と兵装�
       ...conditions,
       parts: ['bombPower'],
     })
-  ).toEqual({ kind: 'unknown' });
+  ).toEqual({ kind: 'value', value: 1 });
 });
