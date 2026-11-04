@@ -24,7 +24,7 @@ for (const mobile of [false, true]) {
       },
     };
     await page.addInitScript((value) => {
-      const key = 'ace8-weapon-guide.preferences';
+      const key = 'ace8-weapon-chart.preferences';
       if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(value));
     }, saved);
     await page.goto('/');
@@ -37,7 +37,7 @@ for (const mobile of [false, true]) {
       });
       await expect
         .poll(() =>
-          page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!))
+          page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!))
         )
         .toEqual({
           ...saved,
@@ -279,7 +279,7 @@ test('友軍を候補から除外し、他艦の対空砲を表示する', async
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.addInitScript(() => {
     localStorage.setItem(
-      'ace8-weapon-guide.preferences',
+      'ace8-weapon-chart.preferences',
       JSON.stringify({
         version: 3,
         targetMode: 'TYPE',
@@ -311,7 +311,7 @@ test('任務番号・部位・識別名を表示して検索できる', async ({
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.addInitScript(() => {
     localStorage.setItem(
-      'ace8-weapon-guide.preferences',
+      'ace8-weapon-chart.preferences',
       JSON.stringify({
         version: 3,
         targetMode: 'TYPE',
@@ -338,7 +338,7 @@ test('任務番号・部位・識別名を表示して検索できる', async ({
   await expect(page.getByRole('rowheader')).toHaveCount(4);
   expect(
     await page.evaluate(
-      () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+      () => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!).targetIds
     )
   ).toEqual([319, 333, 266, 343]);
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
@@ -352,7 +352,7 @@ test('任務番号・部位・識別名を表示して検索できる', async ({
 test('ダミーと陸上戦艦本体を候補から除外し、通常目標と部位を表示する', async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem(
-      'ace8-weapon-guide.preferences',
+      'ace8-weapon-chart.preferences',
       JSON.stringify({
         version: 3,
         targetMode: 'TYPE',
@@ -381,7 +381,7 @@ test('ダミーと陸上戦艦本体を候補から除外し、通常目標と�
   ).toHaveCount(1);
   expect(
     await page.evaluate(
-      () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+      () => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!).targetIds
     )
   ).toEqual([50, 490, 248, 372]);
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
@@ -400,9 +400,9 @@ for (const width of [1440, 390]) {
   test(`8AAM・TLS・UAVT: ${width}pxで非掲載・検索・分類選択・リセットを確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
-      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      if (localStorage.getItem('ace8-weapon-chart.preferences')) return;
       localStorage.setItem(
-        'ace8-weapon-guide.preferences',
+        'ace8-weapon-chart.preferences',
         JSON.stringify({
           version: 3,
           targetMode: 'TYPE',
@@ -416,7 +416,7 @@ for (const width of [1440, 390]) {
       );
     });
     const saved = () =>
-      page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!));
+      page.evaluate(() => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!));
     await page.goto('/');
     await expect(page.getByRole('columnheader')).toHaveCount(6);
     await expect(page.getByRole('columnheader', { name: '8AAM', exact: true })).toHaveCount(0);
@@ -464,9 +464,9 @@ for (const width of [1440, 390]) {
   test(`SFFS: ${width}pxでBOMB.POW+の即時反映と保存・復元を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
-      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      if (localStorage.getItem('ace8-weapon-chart.preferences')) return;
       localStorage.setItem(
-        'ace8-weapon-guide.preferences',
+        'ace8-weapon-chart.preferences',
         JSON.stringify({
           version: 3,
           targetMode: 'TYPE',
@@ -502,7 +502,7 @@ for (const width of [1440, 390]) {
     await expect
       .poll(() =>
         page.evaluate(() => {
-          const saved = JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!);
+          const saved = JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!);
           return {
             weaponIds: saved.weaponIds,
             targetIds: saved.targetIds,
@@ -520,9 +520,9 @@ for (const width of [1440, 390]) {
   test(`MEGAFLOAT: ${width}pxで親除外・Front/EVと任務名を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
-      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      if (localStorage.getItem('ace8-weapon-chart.preferences')) return;
       localStorage.setItem(
-        'ace8-weapon-guide.preferences',
+        'ace8-weapon-chart.preferences',
         JSON.stringify({
           version: 3,
           targetMode: 'TYPE',
@@ -586,7 +586,7 @@ for (const width of [1440, 390]) {
         await expect
           .poll(() =>
             page.evaluate(
-              () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+              () => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!).targetIds
             )
           )
           .toEqual(selectedIds);
@@ -598,9 +598,9 @@ for (const width of [1440, 390]) {
   test(`陸上戦艦部位: ${width}pxで名称検索・表示切替を確認`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
-      if (localStorage.getItem('ace8-weapon-guide.preferences')) return;
+      if (localStorage.getItem('ace8-weapon-chart.preferences')) return;
       localStorage.setItem(
-        'ace8-weapon-guide.preferences',
+        'ace8-weapon-chart.preferences',
         JSON.stringify({
           version: 3,
           targetMode: 'TYPE',
@@ -660,7 +660,7 @@ for (const width of [1440, 390]) {
         await expect
           .poll(() =>
             page.evaluate(
-              () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).targetIds
+              () => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!).targetIds
             )
           )
           .toEqual(selectedIds);

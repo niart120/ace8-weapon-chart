@@ -5,7 +5,7 @@ for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() =>
       localStorage.setItem(
-        'ace8-weapon-guide.preferences',
+        'ace8-weapon-chart.preferences',
         JSON.stringify({
           version: 3,
           targetMode: 'TYPE',
@@ -75,7 +75,7 @@ for (const width of [1440, 390, 320]) {
     await expect(page.getByRole('rowheader', { name: 'SU-35S', exact: true })).toBeAttached();
     expect(
       await page.evaluate(
-        () => JSON.parse(localStorage.getItem('ace8-weapon-guide.preferences')!).missionIds
+        () => JSON.parse(localStorage.getItem('ace8-weapon-chart.preferences')!).missionIds
       )
     ).toEqual([3, 20]);
     await page.reload();

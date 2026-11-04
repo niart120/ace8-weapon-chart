@@ -1,4 +1,4 @@
-# ace8-weapon-guide 開発ガイド
+# ace8-weapon-chart 開発ガイド
 
 ## 対話・文書
 

@@ -3,7 +3,7 @@ import { roles } from '../domain/types';
 import { isSelectableMission } from '../domain/catalog';
 import type { DamageType, Role } from '../domain/types';
 import type { Catalog, Preferences } from '../state/preferences';
-export const storageKey = 'ace8-weapon-guide.preferences';
+export const storageKey = 'ace8-weapon-chart.preferences';
 interface StorageLike {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
