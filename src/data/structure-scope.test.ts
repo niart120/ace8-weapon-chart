@@ -16,10 +16,10 @@ test('施設4行だけを除外し、HP30の通常タンクとHARDENED DEPOTを�
       false
     );
   }
-  for (const missionIds of [[], [8], [9], [12], [25], [28], [29]]) {
+  for (const missionId of [null, 8, 9, 12, 25, 28, 29]) {
     expect(
       targetCandidates(
-        { ...saved, showParts: true, showMissionVariants: true, missionIds },
+        { ...saved, showParts: true, showMissionVariants: true, missionId },
         targets
       ).some((t) => excluded.includes(t.id))
     ).toBe(false);
@@ -40,7 +40,7 @@ test('施設4行だけを除外し、HP30の通常タンクとHARDENED DEPOTを�
     for (const mission of missionIds) {
       expect(
         targetCandidates(
-          { ...saved, showParts: true, showMissionVariants: true, missionIds: [mission] },
+          { ...saved, showParts: true, showMissionVariants: true, missionId: mission },
           targets
         ).map((t) => t.id)
       ).toContain(id);

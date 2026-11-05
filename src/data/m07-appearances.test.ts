@@ -6,7 +6,7 @@ import { targets, weapons } from './masters';
 test('M7はMI-24とMIG-29Aを維持し、未裏付け5機種の任務対応だけを除く', () => {
   const initial = initialPreferences(false, { targets, weapons });
   const selected = targetCandidates(
-    { ...initial, showParts: true, showMissionVariants: true, missionIds: [7] },
+    { ...initial, showParts: true, showMissionVariants: true, missionId: 7 },
     targets
   );
   const ids = selected.map((t) => t.id);

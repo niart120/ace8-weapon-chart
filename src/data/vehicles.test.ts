@@ -21,7 +21,12 @@ test('未裏付けの車両とIED基本行を除外し、確認済みのレー�
     for (const missions of [[], [9], [23], [24]]) {
       expect(
         targetCandidates(
-          { ...expanded, showParts: true, showMissionVariants: true, missionIds: missions },
+          {
+            ...expanded,
+            showParts: true,
+            showMissionVariants: true,
+            missionId: missions[0] ?? null,
+          },
           targets
         ).map((t) => t.id)
       ).not.toContain(id);

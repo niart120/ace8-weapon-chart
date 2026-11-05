@@ -23,7 +23,7 @@ test('SWARM DRONESを1行に統合し、全出現任務でHP非適用・必要�
     });
     for (const mission of missionIds) {
       const selected = targetCandidates(
-        { ...state, showParts: true, showMissionVariants: true, missionIds: [mission] },
+        { ...state, showParts: true, showMissionVariants: true, missionId: mission },
         targets
       );
       expect(selected.filter((t) => t.name === 'SWARM DRONES')).toEqual([target]);

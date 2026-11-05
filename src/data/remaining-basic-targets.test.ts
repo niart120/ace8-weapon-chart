@@ -27,7 +27,7 @@ test('最後の任務未指定基本3行を除外し、対応する任務行を�
       missionIds: [mission],
     });
     const selected = targetCandidates(
-      { ...saved, showParts: true, showMissionVariants: true, missionIds: [mission] },
+      { ...saved, showParts: true, showMissionVariants: true, missionId: mission },
       targets
     );
     expect(selected.map((t) => t.id)).toContain(id);

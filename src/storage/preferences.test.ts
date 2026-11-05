@@ -8,7 +8,7 @@ const parts = publishedParts.map((p) => p.key);
 test('現行の掲載対象だけを復元し、未知・非掲載・重複の選択を除く', () => {
   const saved = {
     ...initial,
-    version: 4,
+    version: 5,
     weaponIds: [1, 1, 999, ...weapons.filter((w) => w.category === 'UNUSED').map((w) => w.id)],
     targetIds: [26, 26, 999, ...targets.filter((t) => t.category === 'EXCLUDED').map((t) => t.id)],
     conditions: {
@@ -20,7 +20,7 @@ test('現行の掲載対象だけを復元し、未知・非掲載・重複の�
     showMissionVariants: true,
   };
   expect(restorePreferences(saved, initial, catalog, parts)).toEqual({
-    missionIds: [],
+    missionId: null,
     weaponIds: [1],
     targetIds: [26],
     conditions: { role: 'MULTIROLE', parts: ['missilePower'], damageType: 'BLAST' },
@@ -39,11 +39,11 @@ test('全解除を保存・復元し、検索・パネル・結果は保存し�
   };
   const state = { ...initial, weaponIds: [], targetIds: [], showParts: true };
   writePreferences(storage, state);
-  expect(JSON.parse(values.get(storageKey)!).version).toBe(4);
+  expect(JSON.parse(values.get(storageKey)!).version).toBe(5);
   expect(readPreferences(storage, initial, catalog, parts)).toEqual(state);
   expect(Object.keys(JSON.parse(values.get(storageKey)!))).toEqual([
     'version',
-    'missionIds',
+    'missionId',
     'conditions',
     'weaponIds',
     'targetIds',
@@ -53,7 +53,7 @@ test('全解除を保存・復元し、検索・パネル・結果は保存し�
 });
 
 test('破損・未知バージョン・保存禁止・容量不足でも操作用初期値を返す', () => {
-  for (const value of [null, {}, { version: 9 }, { ...initial, version: 4, showParts: 'yes' }])
+  for (const value of [null, {}, { version: 9 }, { ...initial, version: 5, showParts: 'yes' }])
     expect(restorePreferences(value, initial, catalog, parts)).toEqual(initial);
   expect(
     readPreferences({ getItem: () => '{broken', setItem: () => {} }, initial, catalog, parts)
@@ -70,23 +70,15 @@ test('破損・未知バージョン・保存禁止・容量不足でも操作�
   expect(() => writePreferences(denied, initial)).not.toThrow();
 });
 
-test('候補条件と選択を独立して保存し、未知任務を除き、旧形式を変換しない', () => {
-  const saved = {
-    ...initial,
-    version: 4,
-    missionIds: [3, 3, 25, 99, 14],
-    targetIds: [26],
-  };
+test('単一任務を復元し、範囲外の選択を除き、旧形式や不正任務は初期化する', () => {
+  const saved = { ...initial, version: 5, missionId: 3, targetIds: [26, 430] };
   expect(restorePreferences(saved, initial, catalog, parts)).toEqual({
     ...initial,
-    missionIds: [3, 25],
+    missionId: 3,
     targetIds: [26],
   });
-  for (const invalid of [
-    { ...saved, version: 2, missionIds: ['4', '25day2'] },
-    { ...saved, version: 3 },
-    { ...saved, missionIds: ['4'] },
-  ]) {
-    expect(restorePreferences(invalid, initial, catalog, parts)).toEqual(initial);
+  for (const missionId of [undefined, 0, 14, 31, 2.5, '3', [3, 20]]) {
+    expect(restorePreferences({ ...saved, missionId }, initial, catalog, parts)).toEqual(initial);
   }
+  expect(restorePreferences({ ...saved, version: 4 }, initial, catalog, parts)).toEqual(initial);
 });

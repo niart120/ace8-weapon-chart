@@ -29,7 +29,7 @@ test('渡された候補を一括操作し、一部選択から全選択する',
   expect(selectedWeapons(initial, weapons)).toHaveLength(31);
   expect(selectedWeapons({ ...initial, weaponIds: [] }, weapons)).toEqual([]);
 });
-test('INCLUDEとミッションは候補のみ絞り、選択は独立する', () => {
+test('範囲外の対象は選択IDに残っていても表に出さない', () => {
   const initial = initialPreferences(false, catalog);
   const part = targets.find((t) => t.partOf && t.missionVariant && t.category !== 'EXCLUDED')!;
   expect(initial.targetIds).not.toContain(part.id);
@@ -39,13 +39,11 @@ test('INCLUDEとミッションは候補のみ絞り、選択は独立する', (
   const selected = { ...expanded, targetIds: [part.id] };
   expect(
     selectedTargets(
-      { ...selected, showParts: false, showMissionVariants: false, missionIds: [1] },
+      { ...selected, showParts: false, showMissionVariants: false, missionId: 1 },
       targets
     ).map((t) => t.id)
-  ).toEqual([part.id]);
+  ).toEqual([]);
   expect(
-    targetCandidates({ ...expanded, missionIds: [1] }, targets).every((t) =>
-      t.missionIds.includes(1)
-    )
+    targetCandidates({ ...expanded, missionId: 1 }, targets).every((t) => t.missionIds.includes(1))
   ).toBe(true);
 });

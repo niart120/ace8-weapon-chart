@@ -8,6 +8,30 @@ beforeEach(() => window.localStorage.clear());
 
 afterEach(cleanup);
 
+test('MISSIONはALLを含む排他選択で、選んだ任務の対象を表に自動選択する', () => {
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Filter targets' }));
+  expect(screen.getByRole('radio', { name: 'ALL' })).toHaveProperty('checked', true);
+  fireEvent.click(screen.getByRole('radio', { name: 'M1' }));
+  expect(screen.getAllByRole('rowheader')).toHaveLength(4);
+  expect(screen.getByRole('radio', { name: 'ALL' })).toHaveProperty('checked', false);
+  fireEvent.click(screen.getByRole('radio', { name: 'ALL' }));
+  expect(screen.getAllByRole('rowheader')).toHaveLength(125);
+});
+
+test('操作列にフォーカスしてもEscapeは検索を先に閉じる', () => {
+  render(<App />);
+  const weapons = screen.getByRole('button', { name: 'WEAPONS' });
+  fireEvent.click(weapons);
+  fireEvent.click(screen.getByRole('button', { name: 'Search weapons' }));
+  fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'QAAM' } });
+  weapons.focus();
+  fireEvent.keyDown(weapons, { key: 'Escape' });
+  expect(screen.queryByRole('searchbox')).toBeNull();
+  expect(screen.getByRole('complementary', { name: 'WEAPONS' })).toBeTruthy();
+});
+
 test('左端の操作で開閉・切り替えでき、Escapeで閉じて操作元に戻る', () => {
   render(<App />);
   const weapons = screen.getByRole('button', { name: 'WEAPONS' });
@@ -67,17 +91,18 @@ test('対象表示フィルターを全体リセットで戻す', () => {
   expect(screen.getByRole('heading', { name: 'SETTINGS' })).toBeTruthy();
 });
 
-test('検索は展開式で、ミッション絞り込みは表の選択を変えない', () => {
+test('検索は候補だけを絞り、任務選択は表に反映される', () => {
   render(<App />);
   fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
   expect(screen.queryByRole('tablist')).toBeNull();
   expect(screen.queryByRole('searchbox')).toBeNull();
   fireEvent.click(screen.getByRole('button', { name: 'Search targets' }));
   expect(screen.getByRole('searchbox')).toBe(document.activeElement);
-  const rows = screen.getAllByRole('row').length;
+  fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'NO MATCH' } });
+  expect(screen.getAllByRole('rowheader')).toHaveLength(125);
   fireEvent.click(screen.getByRole('button', { name: 'Filter targets' }));
-  fireEvent.click(screen.getByRole('checkbox', { name: /^M1$/ }));
-  expect(screen.getAllByRole('row').length).toBe(rows);
+  fireEvent.click(screen.getByRole('radio', { name: /^M1$/ }));
+  expect(screen.getAllByRole('rowheader')).toHaveLength(4);
   expect(screen.getByRole('button', { name: 'Remove M1 filter' })).toBeTruthy();
 });
 
@@ -113,7 +138,7 @@ test('ミッションのチップはTARGETSだけに表示する', () => {
   render(<App />);
   fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
   fireEvent.click(screen.getByRole('button', { name: 'Filter targets' }));
-  fireEvent.click(screen.getByRole('checkbox', { name: 'M1' }));
+  fireEvent.click(screen.getByRole('radio', { name: 'M1' }));
   fireEvent.click(screen.getByRole('button', { name: 'WEAPONS' }));
   expect(screen.queryByRole('button', { name: 'Remove M1 filter' })).toBeNull();
   fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));

@@ -7,7 +7,7 @@ test('一括確認の除外だけを任務選択へ反映し、残置指定と�
   const state = initialPreferences(false, { targets, weapons });
   const ids = (missionId: number) =>
     targetCandidates(
-      { ...state, showParts: true, showMissionVariants: true, missionIds: [missionId] },
+      { ...state, showParts: true, showMissionVariants: true, missionId },
       targets
     ).map((target) => target.id);
   for (const [mission, removed] of [

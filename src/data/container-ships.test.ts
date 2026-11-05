@@ -31,7 +31,7 @@ test('コンテナ船を任務接尾辞のない1行に統合し、部位・基�
   ]);
   for (const missionId of [2, 3, 16, 23, 27]) {
     const missionTargets = targetCandidates(
-      { ...initial, showParts: true, showMissionVariants: true, missionIds: [missionId] },
+      { ...initial, showParts: true, showMissionVariants: true, missionId },
       targets
     );
     expect(

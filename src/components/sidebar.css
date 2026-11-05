@@ -169,12 +169,18 @@
 .sidebar-mission-filter .mission-options label {
   min-height: 36px;
 }
+.sidebar-filter-divider {
+  border-top: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+.mission-all {
+  grid-column: 1 / -1;
+}
 .sidebar-include-filter {
   padding: 12px 16px 18px;
-  border-top: 1px solid var(--line);
 }
 .sidebar-include-filter legend {
-  padding-top: 12px;
+  padding-top: 0;
 }
 .sidebar-filter-popover .target-flags {
   display: flex;
@@ -221,7 +227,10 @@
   .sidebar-panel {
     transition:
       transform 200ms ease,
-      visibility 200ms;
+      visibility 0s linear 200ms;
+  }
+  .sidebar-open .sidebar-panel {
+    transition-delay: 0s;
   }
   .sidebar-main {
     transition: margin-left 200ms ease;

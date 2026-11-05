@@ -15,7 +15,7 @@ test('M26のUNKNOWNは命中数未確定で掲載し、UAVの未裏付け基本�
   if (!unknown) throw new Error('UNKNOWNが見つからない');
   expect(
     targetCandidates(
-      { ...state, showParts: true, showMissionVariants: true, missionIds: [26] },
+      { ...state, showParts: true, showMissionVariants: true, missionId: 26 },
       targets
     )
   ).toContain(unknown);
@@ -56,10 +56,10 @@ test('護衛対象のSHUTTLE TRANSPORTは基本行とM20行をともに掲載し
   const state = { ...initial, targetIds: [497, 262], showMissionVariants: true };
   expect(targetCandidates(state, targets, 'SHUTTLE TRANSPORT')).toEqual([]);
   expect(selectedTargets(state, targets)).toEqual([]);
-  for (const missionIds of [[], [20]]) {
+  for (const missionId of [null, 20]) {
     expect(
       targetCandidates(
-        { ...state, showParts: true, showMissionVariants: true, missionIds },
+        { ...state, showParts: true, showMissionVariants: true, missionId },
         targets
       ).filter((t) => t.name.startsWith('SHUTTLE TRANSPORT'))
     ).toEqual([]);

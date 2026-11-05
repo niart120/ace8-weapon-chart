@@ -74,18 +74,17 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 4,
         targetIds: [153, 488],
         showParts,
         showMissionVariants,
       };
       const visible = showParts ? (showMissionVariants ? [488, 153] : [488]) : [];
       expect(targetCandidates(saved, targets, 'THRUSTER').map((t) => t.id)).toEqual(visible);
-      expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual([488, 153]);
+      expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual(visible);
     }
 });
 
-test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件でも選択を保持する', () => {
+test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件を表へ適用する', () => {
   const initial = initialPreferences(false, { targets, weapons });
   const sub = targets.find((t) => t.id === 151)!;
   // HP40、MSL40、MULTIROLEの艦船倍率1、通常MSL耐性1から1発。
@@ -107,7 +106,9 @@ test('確認した艦船区分でMSLを計算し、部位・任務表示の4条�
       const ids = selectedTargets(state, targets)
         .map((t) => t.id)
         .sort((a, b) => a - b);
-      expect(ids).toEqual([151, 152, 153, 372, 488]);
+      expect(ids).toEqual(
+        showParts ? (showMissionVariants ? [151, 152, 153, 372, 488] : [151, 152, 372, 488]) : []
+      );
       expect(state.targetIds).toEqual([151, 152, 153, 372, 488]);
     }
 });

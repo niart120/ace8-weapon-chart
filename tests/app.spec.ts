@@ -78,7 +78,7 @@ for (const width of [390, 1440]) {
     await page.getByRole('button', { name: 'Search targets' }).click();
     expect((await page.getByRole('searchbox').boundingBox())?.y).toBe(weaponSearchY);
     await expect(page.getByRole('searchbox')).toBeFocused();
-    const tableBefore = await page.getByRole('table').textContent();
+    const tableBefore = await page.locator('table').textContent();
     const beforeY = (
       await page.getByRole('button', { name: 'AIRCRAFT', exact: true }).boundingBox()
     )?.y;
@@ -87,8 +87,8 @@ for (const width of [390, 1440]) {
       (await page.getByRole('button', { name: 'AIRCRAFT', exact: true }).boundingBox())?.y
     ).toBe(beforeY);
     await expect(page.getByRole('checkbox', { name: 'TARGET PARTS' })).toBeAttached();
-    await page.getByRole('checkbox', { name: 'M1', exact: true }).check();
-    expect(await page.getByRole('table').textContent()).toBe(tableBefore);
+    await page.getByRole('radio', { name: 'M1', exact: true }).check();
+    await expect(page.locator('tbody tr')).toHaveCount(4);
     await page.getByRole('button', { name: 'Filter targets' }).click();
     await page.getByRole('searchbox').fill('NO_MATCH_123');
     await expect(page.getByText('NO RESULTS', { exact: true })).toBeVisible();
@@ -105,7 +105,7 @@ for (const width of [390, 1440]) {
     await expect(page.getByRole('dialog')).toHaveCount(0);
     await expect(page.getByRole('complementary')).toBeVisible();
     await page.getByRole('button', { name: 'Remove M1 filter' }).click();
-    expect(await page.getByRole('table').textContent()).toBe(tableBefore);
+    expect(await page.locator('table').textContent()).toBe(tableBefore);
   });
 }
 
@@ -149,15 +149,15 @@ test('候補0件の狭い画面でもフィルターを操作し、外側クリ�
 });
 
 for (const width of [390, 1440]) {
-  test(`候補と表の独立・保存・数値・全体リセット ${width}`, async ({ page }) => {
+  test(`任務・INCLUDE自動選択と保存・数値・全体リセット ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.addInitScript(() => {
       if (!localStorage.getItem('ace8-weapon-chart.preferences'))
         localStorage.setItem(
           'ace8-weapon-chart.preferences',
           JSON.stringify({
-            version: 4,
-            missionIds: [],
+            version: 5,
+            missionId: null,
             weaponIds: [21],
             targetIds: [26, 156, 465, 430, 153],
             showParts: false,
@@ -169,38 +169,41 @@ for (const width of [390, 1440]) {
     await page.goto('/');
     const f16 = page.locator('tr[data-target-id="26"]');
     await expect(f16.locator('td').nth(1)).toHaveText('1');
-    await expect(page.locator('tr[data-target-id="465"]')).toHaveCount(0);
+    await expect(page.locator('tbody tr')).toHaveCount(2);
     await expect(page.locator('tr[data-target-id="156"] td')).toHaveText(['-', '?']);
-    await expect(page.locator('tr[data-target-id="430"]')).toHaveCount(1);
-    await expect(page.locator('tr[data-target-id="153"]')).toHaveCount(1);
     await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
     await page.getByRole('checkbox', { name: 'BOMB.POW+', exact: true }).uncheck();
     await expect(f16.locator('td').nth(1)).toHaveText('2');
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
-    await page.getByRole('button', { name: 'Filter targets' }).click();
-    await page.getByRole('checkbox', { name: 'TARGET PARTS', exact: true }).check();
-    await page.getByRole('checkbox', { name: 'MISSION VARIANTS', exact: true }).check();
-    await page.getByRole('checkbox', { name: 'M3', exact: true }).check();
-    await page.keyboard.press('Escape');
-    await expect(page.locator('tbody tr')).toHaveCount(4);
     await page.getByRole('button', { name: 'Search targets' }).click();
     await page.getByRole('searchbox').fill('F-16C');
+    await page.getByRole('button', { name: 'Filter targets' }).click();
+    await page.getByRole('radio', { name: 'M3', exact: true }).check();
+    await expect(page.locator('tbody tr')).toHaveCount(9);
+    await page.getByRole('checkbox', { name: 'MISSION VARIANTS' }).check();
+    await expect(page.locator('tbody tr')).toHaveCount(10);
+    await page.keyboard.press('Escape');
     await page.getByRole('checkbox', { name: 'AIRCRAFT all', exact: true }).uncheck();
     await expect(f16).toHaveCount(0);
-    await expect(page.locator('tbody tr')).toHaveCount(3);
-    await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
-    await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
-    await expect(page.getByRole('searchbox')).toHaveValue('F-16C');
+    await expect(page.locator('tbody tr')).toHaveCount(9);
+    await page.getByRole('button', { name: 'Filter targets' }).click();
+    await page.getByRole('checkbox', { name: 'TARGET PARTS' }).check();
+    await expect(f16).toHaveCount(0);
+    await page.getByRole('radio', { name: 'M3', exact: true }).check();
+    await expect(page.locator('tbody tr')).toHaveCount(9);
     await page.reload();
-    await expect(page.locator('tbody tr')).toHaveCount(3);
+    await expect(page.locator('tbody tr')).toHaveCount(9);
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
     await expect(page.getByRole('searchbox')).toHaveCount(0);
     await page.getByRole('button', { name: 'Filter targets' }).click();
-    await expect(page.getByRole('checkbox', { name: 'M3', exact: true })).toBeChecked();
-    await expect(page.getByRole('checkbox', { name: 'TARGET PARTS', exact: true })).toBeChecked();
+    await expect(page.getByRole('radio', { name: 'M3', exact: true })).toBeChecked();
+    await expect(page.getByRole('checkbox', { name: 'TARGET PARTS' })).toBeChecked();
+    await page.getByRole('radio', { name: 'M1', exact: true }).check();
+    await expect(page.locator('tbody tr')).toHaveCount(4);
+    await expect(page.getByRole('radio', { name: 'M3', exact: true })).not.toBeChecked();
     await page.getByRole('button', { name: 'Reset all' }).click();
     await expect(page.getByRole('dialog')).toHaveCount(0);
-    await expect(page.getByRole('columnheader')).toHaveCount(width === 390 ? 3 : 33);
+    await expect(page.locator('thead th')).toHaveCount(width === 390 ? 3 : 33);
     await expect(page.locator('tbody tr')).toHaveCount(125);
   });
 }

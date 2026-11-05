@@ -4,7 +4,7 @@ export interface Catalog {
   readonly targets: readonly Target[];
 }
 export interface Preferences {
-  readonly missionIds: readonly number[];
+  readonly missionId: number | null;
   readonly conditions: Conditions;
   readonly weaponIds: readonly number[];
   readonly targetIds: readonly number[];
@@ -13,7 +13,7 @@ export interface Preferences {
 }
 export function initialPreferences(mobile: boolean, catalog: Catalog): Preferences {
   return {
-    missionIds: [],
+    missionId: null,
     conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
     weaponIds: catalog.weapons
       .filter((w) => w.category !== 'UNUSED' && (!mobile || w.id === 1))
@@ -57,8 +57,7 @@ export function targetCandidates(
         t.category !== 'EXCLUDED' &&
         (!t.partOf || state.showParts) &&
         (!t.missionVariant || state.showMissionVariants) &&
-        (state.missionIds.length === 0 ||
-          t.missionIds.some((id) => state.missionIds.includes(id))) &&
+        (state.missionId === null || t.missionIds.includes(state.missionId)) &&
         t.name.toLowerCase().includes(search)
     )
     .toSorted(compareTargets);
@@ -71,9 +70,31 @@ export function weaponCandidates(weapons: readonly Weapon[], query = ''): Weapon
 }
 export function selectedTargets(state: Preferences, targets: readonly Target[]): Target[] {
   const selected = new Set(state.targetIds);
-  return targets
-    .filter((t) => t.category !== 'EXCLUDED' && selected.has(t.id))
-    .toSorted(compareTargets);
+  return targetCandidates(state, targets).filter((t) => selected.has(t.id));
+}
+export function selectMission(
+  state: Preferences,
+  missionId: number | null,
+  targets: readonly Target[]
+): Preferences {
+  if (state.missionId === missionId) return state;
+  const next = { ...state, missionId };
+  return { ...next, targetIds: targetCandidates(next, targets).map((target) => target.id) };
+}
+export function changeTargetIncludes(
+  state: Preferences,
+  includes: Pick<Preferences, 'showParts' | 'showMissionVariants'>,
+  targets: readonly Target[]
+): Preferences {
+  const before = new Set(targetCandidates(state, targets).map((target) => target.id));
+  const selected = new Set(state.targetIds);
+  const next = { ...state, ...includes };
+  return {
+    ...next,
+    targetIds: targetCandidates(next, targets)
+      .filter((target) => !before.has(target.id) || selected.has(target.id))
+      .map((target) => target.id),
+  };
 }
 export function selectedWeapons(state: Preferences, weapons: readonly Weapon[]): Weapon[] {
   const selected = new Set(state.weaponIds);

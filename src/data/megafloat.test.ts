@@ -46,7 +46,7 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
   }
 });
 
-test('親3行と未裏付けシャッター基本行を除外し、子部位11行の選択を保持する', () => {
+test('親3行と未裏付けシャッター基本行を除外し、子部位11行へ表示条件を適用する', () => {
   const excluded = [418, 423, 429, 503];
   const parts = [424, 430, 420, 422, 500, 501, 419, 421, 426, 502, 425];
   const common = [424, 430, 420, 422, 500, 501, 502];
@@ -62,7 +62,6 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 4,
         targetIds: parts,
         showParts,
         showMissionVariants,
@@ -72,7 +71,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
         selectedTargets(saved, targets)
           .map((row) => row.id)
           .sort((a, b) => a - b)
-      ).toEqual([...parts].sort((a, b) => a - b));
+      ).toEqual([...visible].sort((a, b) => a - b));
       expect(
         targetCandidates(saved, targets, 'MEGAFLOAT')
           .filter((row) => row.partOf === 418 || excluded.includes(row.id))

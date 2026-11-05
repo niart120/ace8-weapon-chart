@@ -6,7 +6,7 @@ import { targets, weapons } from './masters';
 test('M6は小型BUNKERを復帰し、TYPHOON・HANGARと大型BUNKERを除く', () => {
   const initial = initialPreferences(false, { targets, weapons });
   const selected = targetCandidates(
-    { ...initial, showParts: true, showMissionVariants: true, missionIds: [6] },
+    { ...initial, showParts: true, showMissionVariants: true, missionId: 6 },
     targets
   );
   const ids = selected.map((t) => t.id);
