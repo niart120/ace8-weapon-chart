@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0](https://github.com/niart120/ace8-weapon-chart/compare/v1.0.0...v1.1.0) (2026-11-05)
+
+
+### Features
+
+* **ui:** 左サイドバーと任務選択を改善 ([7292460](https://github.com/niart120/ace8-weapon-chart/commit/7292460d2ce515d83359dd387f02684fe3d86445))
+* **ui:** 左サイドバーと候補フィルターを実装 ([ebfbc71](https://github.com/niart120/ace8-weapon-chart/commit/ebfbc71df57f968f7ce96b7ee932cd0441777040))
+
+
+### Bug Fixes
+
+* **ui:** 任務と表示範囲の自動選択および操作不具合を修正 ([c2732d1](https://github.com/niart120/ace8-weapon-chart/commit/c2732d1a52ecbfa3f4731e1115504daad9c95e89))
+
+
+### Miscellaneous Chores
+
+* **skill:** PRをマージコミット方式に変更 ([3cb3acc](https://github.com/niart120/ace8-weapon-chart/commit/3cb3accb9e9f27f5205933e3a0d2756ee7613498))
+
 ## 1.0.0 (2026-11-04)
 
 
