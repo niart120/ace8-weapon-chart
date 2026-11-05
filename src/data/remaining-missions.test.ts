@@ -1,13 +1,15 @@
+import { targetCandidates, initialPreferences, selectedTargets } from '../state/preferences';
+
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
-import { initialPreferences, selectedTargets } from '../state/preferences';
 
 test('一括確認の除外だけを任務選択へ反映し、残置指定と通常機・SHADOWの区別を保つ', () => {
   const state = initialPreferences(false, { targets, weapons });
   const ids = (missionId: number) =>
-    selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [missionId] }, targets).map(
-      (target) => target.id
-    );
+    targetCandidates(
+      { ...state, showParts: true, showMissionVariants: true, missionIds: [missionId] },
+      targets
+    ).map((target) => target.id);
   for (const [mission, removed] of [
     [8, [121, 6, 30, 4, 75, 8]],
     [10, [59, 60, 61]],

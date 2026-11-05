@@ -54,7 +54,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
   const initial = initialPreferences(false, catalog);
   for (const id of excluded) expect(initial.targetIds).not.toContain(id);
   for (const id of parts) {
-    expect(initial.targetIds).toContain(id);
+    expect(initial.targetIds).not.toContain(id);
     expect(target(id).partOf).toBe(418);
     expect(target(id).category).not.toBe('EXCLUDED');
   }
@@ -62,7 +62,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 3,
+        version: 4,
         targetIds: parts,
         showParts,
         showMissionVariants,
@@ -72,7 +72,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
         selectedTargets(saved, targets)
           .map((row) => row.id)
           .sort((a, b) => a - b)
-      ).toEqual([...visible].sort((a, b) => a - b));
+      ).toEqual([...parts].sort((a, b) => a - b));
       expect(
         targetCandidates(saved, targets, 'MEGAFLOAT')
           .filter((row) => row.partOf === 418 || excluded.includes(row.id))

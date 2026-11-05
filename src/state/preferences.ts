@@ -4,7 +4,6 @@ export interface Catalog {
   readonly targets: readonly Target[];
 }
 export interface Preferences {
-  readonly targetMode: 'TYPE' | 'MISSION';
   readonly missionIds: readonly number[];
   readonly conditions: Conditions;
   readonly weaponIds: readonly number[];
@@ -14,13 +13,14 @@ export interface Preferences {
 }
 export function initialPreferences(mobile: boolean, catalog: Catalog): Preferences {
   return {
-    targetMode: 'TYPE',
     missionIds: [],
     conditions: { role: 'FIGHTER', parts: [], damageType: 'DIRECT' },
     weaponIds: catalog.weapons
       .filter((w) => w.category !== 'UNUSED' && (!mobile || w.id === 1))
       .map((w) => w.id),
-    targetIds: catalog.targets.filter((t) => t.category !== 'EXCLUDED').map((t) => t.id),
+    targetIds: catalog.targets
+      .filter((t) => t.category !== 'EXCLUDED' && !t.partOf && !t.missionVariant)
+      .map((t) => t.id),
     showMissionVariants: false,
     showParts: false,
   };
@@ -57,6 +57,8 @@ export function targetCandidates(
         t.category !== 'EXCLUDED' &&
         (!t.partOf || state.showParts) &&
         (!t.missionVariant || state.showMissionVariants) &&
+        (state.missionIds.length === 0 ||
+          t.missionIds.some((id) => state.missionIds.includes(id))) &&
         t.name.toLowerCase().includes(search)
     )
     .toSorted(compareTargets);
@@ -68,47 +70,14 @@ export function weaponCandidates(weapons: readonly Weapon[], query = ''): Weapon
     .toSorted((a, b) => a.order - b.order);
 }
 export function selectedTargets(state: Preferences, targets: readonly Target[]): Target[] {
-  if (state.targetMode === 'MISSION') {
-    return targets
-      .filter(
-        (t) =>
-          t.category !== 'EXCLUDED' &&
-          (state.missionIds.length === 0 ||
-            t.missionIds.some((id) => state.missionIds.includes(id)))
-      )
-      .toSorted(compareTargets);
-  }
   const selected = new Set(state.targetIds);
-  return targetCandidates(state, targets).filter((t) => selected.has(t.id));
+  return targets
+    .filter((t) => t.category !== 'EXCLUDED' && selected.has(t.id))
+    .toSorted(compareTargets);
 }
 export function selectedWeapons(state: Preferences, weapons: readonly Weapon[]): Weapon[] {
   const selected = new Set(state.weaponIds);
   return weaponCandidates(weapons).filter((w) => selected.has(w.id));
-}
-export function resetPreferences(
-  state: Preferences,
-  section: 'conditions' | 'weapons' | 'targets' | 'all',
-  mobile: boolean,
-  catalog: Catalog
-): Preferences {
-  const initial = initialPreferences(mobile, catalog);
-  switch (section) {
-    case 'conditions':
-      return { ...state, conditions: initial.conditions };
-    case 'weapons':
-      return { ...state, weaponIds: initial.weaponIds };
-    case 'targets':
-      return {
-        ...state,
-        targetMode: 'TYPE',
-        missionIds: [],
-        targetIds: initial.targetIds,
-        showMissionVariants: false,
-        showParts: false,
-      };
-    case 'all':
-      return initial;
-  }
 }
 const targetNameOrder = new Intl.Collator('en', { numeric: true });
 export function compareTargetNames(a: string, b: string): number {

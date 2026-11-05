@@ -31,8 +31,7 @@ export function restorePreferences(
 ): Preferences {
   if (
     !isRecord(value) ||
-    value.version !== 3 ||
-    (value.targetMode !== 'TYPE' && value.targetMode !== 'MISSION') ||
+    value.version !== 4 ||
     !numbers(value.missionIds) ||
     !isRecord(value.conditions) ||
     !numbers(value.weaponIds) ||
@@ -52,7 +51,6 @@ export function restorePreferences(
     catalog.targets.filter((t) => t.category !== 'EXCLUDED').map((t) => t.id)
   );
   return {
-    targetMode: value.targetMode,
     missionIds: [...new Set(value.missionIds.filter((id) => isSelectableMission(id)))],
     conditions: {
       role: value.conditions.role,
@@ -83,8 +81,7 @@ export function writePreferences(storage: StorageLike | null, state: Preferences
     storage?.setItem(
       storageKey,
       JSON.stringify({
-        version: 3,
-        targetMode: state.targetMode,
+        version: 4,
         missionIds: state.missionIds,
         conditions: state.conditions,
         weaponIds: state.weaponIds,

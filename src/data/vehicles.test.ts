@@ -20,9 +20,10 @@ test('未裏付けの車両とIED基本行を除外し、確認済みのレー�
     expect(selectedTargets({ ...expanded, targetIds: [id] }, targets)).toEqual([]);
     for (const missions of [[], [9], [23], [24]]) {
       expect(
-        selectedTargets({ ...expanded, targetMode: 'MISSION', missionIds: missions }, targets).map(
-          (t) => t.id
-        )
+        targetCandidates(
+          { ...expanded, showParts: true, showMissionVariants: true, missionIds: missions },
+          targets
+        ).map((t) => t.id)
       ).not.toContain(id);
     }
   }

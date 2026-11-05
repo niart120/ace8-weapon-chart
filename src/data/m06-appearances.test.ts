@@ -1,10 +1,14 @@
+import { targetCandidates, initialPreferences } from '../state/preferences';
+
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
-import { initialPreferences, selectedTargets } from '../state/preferences';
 
 test('M6は小型BUNKERを復帰し、TYPHOON・HANGARと大型BUNKERを除く', () => {
   const initial = initialPreferences(false, { targets, weapons });
-  const selected = selectedTargets({ ...initial, targetMode: 'MISSION', missionIds: [6] }, targets);
+  const selected = targetCandidates(
+    { ...initial, showParts: true, showMissionVariants: true, missionIds: [6] },
+    targets
+  );
   const ids = selected.map((t) => t.id);
   expect(ids).toContain(91);
   for (const id of [92, 95, 96]) expect(ids).not.toContain(id);
