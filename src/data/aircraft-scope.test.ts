@@ -13,9 +13,12 @@ test('M26のUNKNOWNは命中数未確定で掲載し、UAVの未裏付け基本�
     missionIds: [26],
   });
   if (!unknown) throw new Error('UNKNOWNが見つからない');
-  expect(selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [26] }, targets)).toContain(
-    unknown
-  );
+  expect(
+    targetCandidates(
+      { ...state, showParts: true, showMissionVariants: true, missionId: 26 },
+      targets
+    )
+  ).toContain(unknown);
   for (const weapon of weapons.filter((w) => w.category !== 'UNUSED')) {
     for (const damageType of ['DIRECT', 'BLAST', 'DIRECT+BLAST'] as const) {
       expect(
@@ -53,11 +56,12 @@ test('護衛対象のSHUTTLE TRANSPORTは基本行とM20行をともに掲載し
   const state = { ...initial, targetIds: [497, 262], showMissionVariants: true };
   expect(targetCandidates(state, targets, 'SHUTTLE TRANSPORT')).toEqual([]);
   expect(selectedTargets(state, targets)).toEqual([]);
-  for (const missionIds of [[], [20]]) {
+  for (const missionId of [null, 20]) {
     expect(
-      selectedTargets({ ...state, targetMode: 'MISSION', missionIds }, targets).filter((t) =>
-        t.name.startsWith('SHUTTLE TRANSPORT')
-      )
+      targetCandidates(
+        { ...state, showParts: true, showMissionVariants: true, missionId },
+        targets
+      ).filter((t) => t.name.startsWith('SHUTTLE TRANSPORT'))
     ).toEqual([]);
   }
 });

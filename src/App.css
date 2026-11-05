@@ -24,28 +24,6 @@
   letter-spacing: 0.04em;
   margin-left: 16px;
 }
-.desktop-controls {
-  padding: 18px 20px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--surface);
-}
-.calculation-controls {
-  display: grid;
-  grid-template-columns: minmax(420px, 1fr) auto;
-  column-gap: 40px;
-  position: relative;
-  padding-right: 34px;
-}
-.conditions-reset {
-  position: absolute;
-  top: -8px;
-  right: -7px;
-}
-.role-parts {
-  display: grid;
-  gap: 18px;
-}
 .segments {
   display: flex;
   flex-wrap: wrap;
@@ -76,29 +54,6 @@
   white-space: nowrap;
   min-height: 21px;
 }
-.damage-options {
-  align-self: start;
-}
-.table-toolbar {
-  display: flex;
-  gap: 9px;
-  align-items: center;
-}
-.table-toolbar > button {
-  font-size: 16px;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-  min-width: 108px;
-}
-.table-toolbar .reset-all {
-  min-width: 72px;
-  font-size: 14px;
-  color: var(--muted);
-  background: transparent;
-}
-.toolbar-spacer {
-  flex: 1;
-}
 .icon-button {
   display: grid;
   place-items: center;
@@ -109,9 +64,6 @@
   background: transparent;
   color: var(--muted);
   flex-shrink: 0;
-}
-.mobile-settings {
-  display: none;
 }
 .table-scroll {
   flex: 1;
@@ -186,45 +138,6 @@ td.hp {
 tbody tr:last-child > * {
   border-bottom: 0;
 }
-.panel {
-  position: fixed;
-  inset: 0 0 0 auto;
-  margin: 0;
-  width: 470px;
-  max-width: 100vw;
-  height: 100dvh;
-  max-height: 100dvh;
-  padding: 0;
-  border: 0;
-  border-left: 1px solid var(--line);
-  color: var(--text);
-  background: var(--surface);
-  box-shadow: -15px 0 50px #14223824;
-  overflow: auto;
-}
-.panel::backdrop {
-  background: #15243759;
-}
-.panel-heading {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 17px 22px;
-  position: sticky;
-  top: 0;
-  z-index: 4;
-  border-bottom: 1px solid var(--line);
-  background: var(--surface);
-}
-.panel-heading h2 {
-  flex: 1;
-  font-size: 18px;
-  letter-spacing: 0.03em;
-}
-.panel-options {
-  padding: 19px 22px 15px;
-  border-bottom: 1px solid var(--line);
-}
 .search {
   border: 1px solid var(--line);
   border-radius: 5px;
@@ -295,52 +208,6 @@ tbody tr:last-child > * {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
   font-size: 14px;
-}
-.panel > .calculation-controls {
-  display: flex;
-  flex-direction: column;
-  padding: 22px;
-  gap: 26px;
-}
-.panel > .calculation-controls .conditions-reset {
-  display: none;
-}
-.panel > .calculation-controls .role-parts {
-  gap: 26px;
-}
-.panel > .calculation-controls .damage-options {
-  align-self: stretch;
-}
-.panel > .calculation-controls .part-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.panel > .calculation-controls .role-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.panel > .calculation-controls .segments button {
-  min-height: 42px;
-}
-.target-tabs {
-  display: flex;
-  padding: 0 22px;
-  border-bottom: 1px solid var(--line);
-}
-.target-tabs button {
-  flex: 1;
-  border: 0;
-  border-radius: 0;
-  border-bottom: 2px solid transparent;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--muted);
-}
-.target-tabs button[aria-selected='true'] {
-  border-bottom-color: var(--selected);
-  color: var(--text);
 }
 .mission-options {
   padding: 18px 22px;
@@ -418,25 +285,6 @@ th:first-child .sort-button {
 .hits-unknown {
   color: var(--muted);
 }
-@media (max-width: 1100px) and (min-width: 768px) {
-  .calculation-controls {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .damage-options {
-    grid-row: 2;
-  }
-  .desktop-controls {
-    padding: 16px;
-  }
-  .part-options {
-    max-width: none;
-  }
-  .app-shell {
-    padding: 18px;
-    gap: 16px;
-  }
-}
 @media (max-width: 767px) {
   .app-shell {
     padding: 16px 12px 12px;
@@ -448,36 +296,6 @@ th:first-child .sort-button {
   .app-heading h1 span {
     font-size: 14px;
     margin-left: 9px;
-  }
-  .desktop-controls {
-    display: none;
-  }
-  .mobile-settings {
-    display: block;
-  }
-  .table-toolbar {
-    gap: 7px;
-  }
-  .table-toolbar > button {
-    min-width: 0;
-    padding: 8px 12px;
-    font-size: 14px;
-    min-height: 40px;
-  }
-  .table-toolbar .reset-all {
-    min-width: 0;
-    padding: 8px 6px;
-    font-size: 14px;
-  }
-  .table-toolbar .icon-button {
-    width: 32px;
-  }
-  .panel {
-    width: 100%;
-    border: 0;
-  }
-  .panel-heading {
-    padding: 16px 20px;
   }
   .table-scroll {
     border-radius: 4px;
@@ -503,18 +321,6 @@ th:first-child .sort-button {
   }
   thead th:nth-child(2) {
     min-width: 50px;
-  }
-  .panel .part-options label {
-    font-size: 16px;
-  }
-  .panel .segments button {
-    font-size: 16px;
-  }
-  .panel .target-flags {
-    gap: 13px;
-  }
-  .panel .target-flags label {
-    font-size: 15px;
   }
 }
 @media (prefers-reduced-motion: no-preference) {

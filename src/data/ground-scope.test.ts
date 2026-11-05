@@ -7,9 +7,12 @@ test('破壊後PILLBOXだけを除外し、通常型と確認済み地上目標�
   expect(targets.find((t) => t.id === 340)).toMatchObject({ category: 'EXCLUDED', hp: 10000 });
   expect(selectedTargets(state, targets)).toEqual([]);
   expect(targetCandidates(state, targets, 'PILLBOX').map((t) => t.id)).not.toContain(340);
-  for (const missionIds of [[], [25]]) {
+  for (const missionId of [null, 25]) {
     expect(
-      selectedTargets({ ...state, targetMode: 'MISSION', missionIds }, targets).map((t) => t.id)
+      targetCandidates(
+        { ...state, showParts: true, showMissionVariants: true, missionId },
+        targets
+      ).map((t) => t.id)
     ).not.toContain(340);
   }
   for (const [id, hp, missionIds] of [
@@ -22,9 +25,10 @@ test('破壊後PILLBOXだけを除外し、通常型と確認済み地上目標�
     expect(targets.find((t) => t.id === id)).toMatchObject({ category: 'GROUND', hp, missionIds });
     for (const missionId of missionIds) {
       expect(
-        selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [missionId] }, targets).map(
-          (t) => t.id
-        )
+        targetCandidates(
+          { ...state, showParts: true, showMissionVariants: true, missionId },
+          targets
+        ).map((t) => t.id)
       ).toContain(id);
     }
   }
@@ -44,8 +48,11 @@ test('未裏付けのGROUND基本4行を除外し、CLIMBERとEX-SAMの任務行
       false
     );
   }
-  for (const missionIds of [[], [17], [19], [23]]) {
-    const selected = selectedTargets({ ...saved, targetMode: 'MISSION', missionIds }, targets);
+  for (const missionId of [null, 17, 19, 23]) {
+    const selected = targetCandidates(
+      { ...saved, showParts: true, showMissionVariants: true, missionId },
+      targets
+    );
     expect(selected.some((t) => excludedIds.includes(t.id))).toBe(false);
   }
   for (const [id, hp, missionIds] of [
@@ -55,9 +62,10 @@ test('未裏付けのGROUND基本4行を除外し、CLIMBERとEX-SAMの任務行
     expect(targets.find((t) => t.id === id)).toMatchObject({ category: 'GROUND', hp, missionIds });
     for (const missionId of missionIds) {
       expect(
-        selectedTargets({ ...saved, targetMode: 'MISSION', missionIds: [missionId] }, targets).map(
-          (t) => t.id
-        )
+        targetCandidates(
+          { ...saved, showParts: true, showMissionVariants: true, missionId },
+          targets
+        ).map((t) => t.id)
       ).toContain(id);
     }
   }

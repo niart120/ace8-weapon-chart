@@ -45,7 +45,7 @@ test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象�
   expect(targetCandidates({ ...expanded, showParts: false }, targets, 'LAND BATTLESHIP')).toEqual(
     []
   );
-  for (const id of partIds) expect(initial.targetIds).toContain(id);
+  for (const id of partIds) expect(initial.targetIds).not.toContain(id);
 });
 
 test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条件を保持する', () => {
@@ -74,7 +74,6 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     for (const showMissionVariants of [false, true]) {
       const saved = {
         ...initial,
-        version: 3,
         targetIds: [153, 488],
         showParts,
         showMissionVariants,
@@ -85,7 +84,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     }
 });
 
-test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件でも選択を保持する', () => {
+test('確認した艦船区分でMSLを計算し、部位・任務表示の4条件を表へ適用する', () => {
   const initial = initialPreferences(false, { targets, weapons });
   const sub = targets.find((t) => t.id === 151)!;
   // HP40、MSL40、MULTIROLEの艦船倍率1、通常MSL耐性1から1発。

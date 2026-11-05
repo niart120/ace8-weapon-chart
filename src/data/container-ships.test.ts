@@ -1,6 +1,7 @@
+import { targetCandidates, initialPreferences, selectedTargets } from '../state/preferences';
+
 import { expect, test } from 'vitest';
 import { targets, weapons } from './masters';
-import { initialPreferences, selectedTargets } from '../state/preferences';
 
 test('コンテナ船を任務接尾辞のない1行に統合し、部位・基本定義の除外と任務絞り込みを維持する', () => {
   const ships = targets.filter(
@@ -29,8 +30,8 @@ test('コンテナ船を任務接尾辞のない1行に統合し、部位・基�
     12,
   ]);
   for (const missionId of [2, 3, 16, 23, 27]) {
-    const missionTargets = selectedTargets(
-      { ...initial, targetMode: 'MISSION', missionIds: [missionId] },
+    const missionTargets = targetCandidates(
+      { ...initial, showParts: true, showMissionVariants: true, missionId },
       targets
     );
     expect(

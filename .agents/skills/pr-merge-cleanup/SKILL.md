@@ -1,6 +1,6 @@
 ---
 name: pr-merge-cleanup
-description: Create, merge, and clean up a GitHub pull request for the current non-main branch. Use when Codex is asked to push the current branch, create a PR, fill the PR template, squash merge it to main, sync local main, and delete local or remote merged branches.
+description: Create, merge, and clean up a GitHub pull request for the current non-main branch. Use when Codex is asked to push the current branch, create a PR, fill the PR template, merge it into main with a merge commit, sync local main, and delete local or remote merged branches.
 ---
 
 # PR作成・マージ・クリーンアップ
@@ -34,8 +34,8 @@ description: Create, merge, and clean up a GitHub pull request for the current n
      - 実行した検証コマンドとその結果を Testing セクションに含める
 
 5. **PRマージ**
-   - 利用可能な GitHub MCP または `gh pr merge --squash` で squash マージを実行
-   - マージ方法: `squash`（1コミットに集約）
+   - 利用可能な GitHub MCP または `gh pr merge --merge` でマージコミットを作成
+   - マージ方法: `merge`（各コミットを保持）
 
 6. **ローカル同期**
    - `git switch main` でmainに切り替え
@@ -70,7 +70,7 @@ description: Create, merge, and clean up a GitHub pull request for the current n
 1. 現在のブランチ名を確認し、mainでないことを確認
 2. ブランチをリモートにプッシュ
 3. PRを作成（タイトルはブランチ名ベース、本文はコミット要約）
-4. PRをsquashマージ
+4. PRをマージコミットでマージ
 5. ローカルのmainを最新化
 6. ローカル・リモートの作業ブランチを削除
 

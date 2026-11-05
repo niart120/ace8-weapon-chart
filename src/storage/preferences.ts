@@ -3,6 +3,7 @@ import { roles } from '../domain/types';
 import { isSelectableMission } from '../domain/catalog';
 import type { DamageType, Role } from '../domain/types';
 import type { Catalog, Preferences } from '../state/preferences';
+import { targetCandidates } from '../state/preferences';
 export const storageKey = 'ace8-weapon-chart.preferences';
 interface StorageLike {
   getItem(key: string): string | null;
@@ -23,6 +24,16 @@ function isRole(value: unknown): value is Role {
 function isDamageType(value: unknown): value is DamageType {
   return value === 'DIRECT' || value === 'BLAST' || value === 'DIRECT+BLAST';
 }
+function isMission(value: unknown, catalog: Catalog): value is number | null {
+  return (
+    value === null ||
+    (typeof value === 'number' &&
+      isSelectableMission(value) &&
+      catalog.targets.some(
+        (target) => target.category !== 'EXCLUDED' && target.missionIds.includes(value)
+      ))
+  );
+}
 export function restorePreferences(
   value: unknown,
   initial: Preferences,
@@ -31,9 +42,8 @@ export function restorePreferences(
 ): Preferences {
   if (
     !isRecord(value) ||
-    value.version !== 3 ||
-    (value.targetMode !== 'TYPE' && value.targetMode !== 'MISSION') ||
-    !numbers(value.missionIds) ||
+    value.version !== 5 ||
+    !isMission(value.missionId, catalog) ||
     !isRecord(value.conditions) ||
     !numbers(value.weaponIds) ||
     !numbers(value.targetIds) ||
@@ -49,11 +59,18 @@ export function restorePreferences(
     catalog.weapons.filter((w) => w.category !== 'UNUSED').map((w) => w.id)
   );
   const targetIds = new Set(
-    catalog.targets.filter((t) => t.category !== 'EXCLUDED').map((t) => t.id)
+    targetCandidates(
+      {
+        ...initial,
+        missionId: value.missionId,
+        showParts: value.showParts,
+        showMissionVariants: value.showMissionVariants,
+      },
+      catalog.targets
+    ).map((target) => target.id)
   );
   return {
-    targetMode: value.targetMode,
-    missionIds: [...new Set(value.missionIds.filter((id) => isSelectableMission(id)))],
+    missionId: value.missionId,
     conditions: {
       role: value.conditions.role,
       damageType: value.conditions.damageType,
@@ -83,9 +100,8 @@ export function writePreferences(storage: StorageLike | null, state: Preferences
     storage?.setItem(
       storageKey,
       JSON.stringify({
-        version: 3,
-        targetMode: state.targetMode,
-        missionIds: state.missionIds,
+        version: 5,
+        missionId: state.missionId,
         conditions: state.conditions,
         weaponIds: state.weaponIds,
         targetIds: state.targetIds,

@@ -15,9 +15,10 @@ test('輸送船の味方・未裏付け任務だけを除外し、確認済み�
     expect(selectedTargets({ ...state, targetIds: [id] }, targets).map((t) => t.id)).toEqual([id]);
     for (const mission of missionIds) {
       expect(
-        selectedTargets({ ...state, targetMode: 'MISSION', missionIds: [mission] }, targets).map(
-          (t) => t.id
-        )
+        targetCandidates(
+          { ...state, showParts: true, showMissionVariants: true, missionId: mission },
+          targets
+        ).map((t) => t.id)
       ).toContain(id);
     }
   }
@@ -27,8 +28,14 @@ test('輸送船の味方・未裏付け任務だけを除外し、確認済み�
     [413, 26],
   ]) {
     expect(
-      selectedTargets(
-        { ...state, targetMode: 'MISSION', missionIds: [mission], targetIds: [id] },
+      targetCandidates(
+        {
+          ...state,
+          showParts: true,
+          showMissionVariants: true,
+          missionId: mission,
+          targetIds: [id],
+        },
         targets
       ).map((t) => t.id)
     ).not.toContain(id);
@@ -44,13 +51,14 @@ test('確認済みの非敵・撃破対象外・PV機体を掲載から除外す
 test('任務限定の除外は他任務・通常機・艦載部位へ波及させない', () => {
   const state = {
     ...initialPreferences(false, { targets, weapons }),
-    targetMode: 'MISSION' as const,
+    showParts: true,
+    showMissionVariants: true,
   };
   const ids = (missionId: number) =>
-    selectedTargets({ ...state, missionIds: [missionId] }, targets).map((t) => t.id);
+    targetCandidates({ ...state, missionId }, targets).map((t) => t.id);
   expect(ids(3)).toEqual(expect.arrayContaining([26, 8]));
   expect(
-    selectedTargets({ ...state, missionIds: [3] }, targets).every((t) => t.category === 'AIRCRAFT')
+    targetCandidates({ ...state, missionId: 3 }, targets).every((t) => t.category === 'AIRCRAFT')
   ).toBe(true);
   expect(ids(2)).not.toContain(12);
   expect(ids(2)).not.toContain(223);
@@ -84,14 +92,17 @@ test('撃破対象外のM28 X-40を除外し、M29の戦闘対象は維持する
     });
     expect(targetCandidates(state, targets).map((t) => t.id)).not.toContain(id);
     expect(selectedTargets(state, targets).map((t) => t.id)).not.toContain(id);
-    for (const missionIds of [[], [missionId]]) {
+    for (const scope of [null, missionId]) {
       expect(
-        selectedTargets({ ...state, targetMode: 'MISSION', missionIds }, targets).map((t) => t.id)
+        targetCandidates(
+          { ...state, showParts: true, showMissionVariants: true, missionId: scope },
+          targets
+        ).map((t) => t.id)
       ).not.toContain(id);
     }
   }
-  const finalBattle = selectedTargets(
-    { ...state, targetMode: 'MISSION', missionIds: [29] },
+  const finalBattle = targetCandidates(
+    { ...state, showParts: true, showMissionVariants: true, missionId: 29 },
     targets
   );
   expect(finalBattle.map((t) => t.id)).toEqual(expect.arrayContaining([457, 458, 459, 460]));
