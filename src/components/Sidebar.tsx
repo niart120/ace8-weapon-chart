@@ -22,13 +22,10 @@ export function Sidebar() {
   );
   useEffect(() => writePreferences(browserStorage(), state), [state]);
   const [mobile, setMobile] = useState(() => window.matchMedia('(max-width: 767px)').matches);
-  useEffect(() => {
-    const query = window.matchMedia('(max-width: 767px)');
-    const update = () => setMobile(query.matches);
-    query.addEventListener('change', update);
-    return () => query.removeEventListener('change', update);
-  }, []);
   const [section, setSection] = useState<Section | null>(null);
+  const menuTrigger = useRef<HTMLButtonElement>(null);
+  const restoreRailFocus = useRef(false);
+  const railVisible = !mobile || section !== null;
   const [lastSection, setLastSection] = useState<Section>('weapons');
   const [revision, setRevision] = useState(0);
   const triggers = useRef<Partial<Record<Section, HTMLButtonElement | null>>>({});
@@ -37,6 +34,29 @@ export function Sidebar() {
   const selections = useRef<Partial<Record<'weapons' | 'targets', SelectionPanelHandle | null>>>(
     {}
   );
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 767px)');
+    const update = () => {
+      if (!query.matches && document.activeElement === menuTrigger.current)
+        restoreRailFocus.current = true;
+      setMobile(query.matches);
+    };
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+  useEffect(() => {
+    if (!mobile && restoreRailFocus.current) {
+      restoreRailFocus.current = false;
+      triggers.current[lastSection]?.focus();
+    }
+    if (
+      mobile &&
+      !section &&
+      Object.values(triggers.current).some((trigger) => trigger === document.activeElement)
+    ) {
+      menuTrigger.current?.focus();
+    }
+  }, [mobile, section, lastSection]);
   useEffect(() => {
     if (section)
       panel.current
@@ -51,7 +71,8 @@ export function Sidebar() {
     }
   }, [mobile, section]);
   const close = () => {
-    if (section) triggers.current[section]?.focus();
+    if (mobile) menuTrigger.current?.focus();
+    else if (section) triggers.current[section]?.focus();
     setSection(null);
   };
   return (
@@ -84,7 +105,45 @@ export function Sidebar() {
         }
       }}
     >
-      <nav className="sidebar-rail" aria-label="表示対象の選択">
+      {mobile && (
+        <header className="mobile-heading app-heading">
+          <button
+            ref={menuTrigger}
+            className="mobile-menu-toggle"
+            type="button"
+            aria-label={railVisible ? 'Close menu' : 'Open menu'}
+            aria-expanded={railVisible}
+            aria-controls="sidebar-rail sidebar-selection"
+            onClick={() => {
+              if (railVisible) {
+                close();
+              } else {
+                setSection(lastSection);
+              }
+            }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              aria-hidden="true"
+            >
+              <path d={railVisible ? 'M6 6l12 12M6 18L18 6' : 'M4 6h16M4 12h16M4 18h16'} />
+            </svg>
+          </button>
+          <h1>
+            ACE COMBAT 8<span>WEAPON GUIDE</span>
+          </h1>
+        </header>
+      )}
+      <nav
+        id="sidebar-rail"
+        className="sidebar-rail"
+        aria-label="表示対象の選択"
+        inert={!railVisible}
+        aria-hidden={!railVisible}
+      >
         {sections.map((kind) => (
           <button
             key={kind}
@@ -97,7 +156,7 @@ export function Sidebar() {
             aria-expanded={section === kind}
             aria-controls={section === kind ? 'sidebar-selection' : undefined}
             onClick={() => {
-              setSection((current) => (current === kind ? null : kind));
+              setSection((current) => (!mobile && current === kind ? null : kind));
               setLastSection(kind);
             }}
           >
@@ -191,11 +250,13 @@ export function Sidebar() {
         inert={mobile && section !== null}
         aria-hidden={mobile && section !== null}
       >
-        <header className="app-heading">
-          <h1>
-            ACE COMBAT 8<span>WEAPON GUIDE</span>
-          </h1>
-        </header>
+        {!mobile && (
+          <header className="app-heading">
+            <h1>
+              ACE COMBAT 8<span>WEAPON GUIDE</span>
+            </h1>
+          </header>
+        )}
         <ResultsTable
           key={revision}
           targets={selectedTargets(state, targets)}

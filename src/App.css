@@ -290,13 +290,6 @@ th:first-child .sort-button {
     padding: 16px 12px 12px;
     gap: 16px;
   }
-  .app-heading h1 {
-    font-size: 22px;
-  }
-  .app-heading h1 span {
-    font-size: 14px;
-    margin-left: 9px;
-  }
   .table-scroll {
     border-radius: 4px;
     scrollbar-gutter: auto;
