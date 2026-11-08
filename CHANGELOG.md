@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/niart120/ace8-weapon-chart/compare/v1.2.1...v1.3.0) (2026-11-08)
+
+
+### Features
+
+* **ui:** モバイルメニューをヘッダーから開閉する ([bc4d1cb](https://github.com/niart120/ace8-weapon-chart/commit/bc4d1cbaa321a71fb586d6cbf285b2e871a28225))
+* **ui:** モバイルメニューをヘッダーから開閉する ([55a7f4b](https://github.com/niart120/ace8-weapon-chart/commit/55a7f4b9fae8dfbe5b43061bd83d9c116c053af3))
+
+
+### Code Refactoring
+
+* **ui:** モバイルメニューの不要な指定とテスト分岐を削除 ([a58ff0f](https://github.com/niart120/ace8-weapon-chart/commit/a58ff0f1964f29a83b0fb8da783109eee1cfb431))
+
 ## [1.2.1](https://github.com/niart120/ace8-weapon-chart/compare/v1.2.0...v1.2.1) (2026-11-08)
 
 
