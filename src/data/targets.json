@@ -31,7 +31,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["A-10C"]
   },
   {
     "id": 2,
@@ -65,7 +66,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["A-50"]
   },
   {
     "id": 5,
@@ -99,7 +101,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["A-6E"]
   },
   {
     "id": 121,
@@ -133,7 +136,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AH-64"]
   },
   {
     "id": 177,
@@ -167,7 +171,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRSHIP"]
   },
   {
     "id": 319,
@@ -203,7 +208,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRSHIP [M24]"]
   },
   {
     "id": 178,
@@ -237,7 +243,8 @@
     },
     "isAir": true,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《AIRSHIP》", "AIRSHIP"]
   },
   {
     "id": 122,
@@ -271,7 +278,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AV-8B"]
   },
   {
     "id": 434,
@@ -305,7 +313,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["B-1"]
   },
   {
     "id": 263,
@@ -339,7 +348,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["B-2"]
   },
   {
     "id": 200,
@@ -373,11 +383,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["C-130"]
   },
   {
     "id": 201,
-    "name": "MSL PALLET《C-130》",
+    "name": "MSL PALLET",
     "category": "AIRCRAFT",
     "order": 11,
     "partOf": 200,
@@ -407,11 +418,13 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 201,
+    "searchNames": ["MSL PALLET《C-130》", "C-130"]
   },
   {
     "id": 202,
-    "name": "MSL PALLET《C-130》",
+    "name": "MSL PALLET",
     "category": "AIRCRAFT",
     "order": 12,
     "partOf": 200,
@@ -441,7 +454,9 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 201,
+    "searchNames": ["MSL PALLET《C-130》", "C-130"]
   },
   {
     "id": 277,
@@ -475,7 +490,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CELAENO"]
   },
   {
     "id": 278,
@@ -509,7 +525,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《CELAENO》", "CELAENO"]
   },
   {
     "id": 280,
@@ -543,7 +560,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GENERATOR《CELAENO》", "CELAENO"]
   },
   {
     "id": 279,
@@ -577,7 +595,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RADOME《CELAENO》", "CELAENO"]
   },
   {
     "id": 281,
@@ -611,7 +630,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《CELAENO》", "CELAENO"]
   },
   {
     "id": 230,
@@ -645,7 +665,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CH-47"]
   },
   {
     "id": 274,
@@ -679,7 +700,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EA-18G"]
   },
   {
     "id": 334,
@@ -713,7 +735,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EA-36"]
   },
   {
     "id": 120,
@@ -747,7 +770,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EA-6B"]
   },
   {
     "id": 458,
@@ -781,7 +805,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ESCORT UAV"]
   },
   {
     "id": 216,
@@ -815,7 +840,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EXPLOSIVE UAV"]
   },
   {
     "id": 493,
@@ -849,7 +875,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EXPLOSIVE UAV"]
   },
   {
     "id": 224,
@@ -885,7 +912,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EXPLOSIVE UAV [M16]"]
   },
   {
     "id": 6,
@@ -919,11 +947,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-14D"]
   },
   {
     "id": 266,
-    "name": "F-14D (SHADOW) [M20]",
+    "name": "F-14D (SHADOW)",
     "category": "AIRCRAFT",
     "order": 27,
     "partOf": null,
@@ -955,7 +984,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["F-14D (SHADOW) [M20]"]
   },
   {
     "id": 66,
@@ -989,11 +1020,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-15C"]
   },
   {
     "id": 134,
-    "name": "F-15E (SHADOW) [M8]",
+    "name": "F-15E (SHADOW)",
     "category": "AIRCRAFT",
     "order": 29,
     "partOf": null,
@@ -1025,7 +1057,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["F-15E (SHADOW) [M8]"]
   },
   {
     "id": 272,
@@ -1059,7 +1093,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-15E"]
   },
   {
     "id": 233,
@@ -1093,7 +1128,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-15J"]
   },
   {
     "id": 26,
@@ -1127,11 +1163,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-16C"]
   },
   {
     "id": 133,
-    "name": "F-16C (SHADOW) [M8]",
+    "name": "F-16C (SHADOW)",
     "category": "AIRCRAFT",
     "order": 33,
     "partOf": null,
@@ -1163,7 +1200,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["F-16C (SHADOW) [M8]"]
   },
   {
     "id": 307,
@@ -1197,11 +1236,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-22A"]
   },
   {
     "id": 268,
-    "name": "F-22A (SHADOW) [M20]",
+    "name": "F-22A (SHADOW)",
     "category": "AIRCRAFT",
     "order": 35,
     "partOf": null,
@@ -1233,7 +1273,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["F-22A (SHADOW) [M20]"]
   },
   {
     "id": 74,
@@ -1267,7 +1309,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-2A"]
   },
   {
     "id": 409,
@@ -1301,7 +1344,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-35C"]
   },
   {
     "id": 7,
@@ -1335,7 +1379,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-4E"]
   },
   {
     "id": 30,
@@ -1369,7 +1414,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18C"]
   },
   {
     "id": 241,
@@ -1403,7 +1449,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18E"]
   },
   {
     "id": 197,
@@ -1437,7 +1484,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18F"]
   },
   {
     "id": 306,
@@ -1471,7 +1519,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FA-36"]
   },
   {
     "id": 209,
@@ -1505,7 +1554,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GREEN 1"]
   },
   {
     "id": 211,
@@ -1539,7 +1589,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GREEN 2"]
   },
   {
     "id": 70,
@@ -1573,11 +1624,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GRIPEN E"]
   },
   {
     "id": 332,
-    "name": "GRIPEN E (SHADOW) [M25]",
+    "name": "GRIPEN E (SHADOW)",
     "category": "AIRCRAFT",
     "order": 46,
     "partOf": null,
@@ -1609,7 +1661,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["GRIPEN E (SHADOW) [M25]"]
   },
   {
     "id": 93,
@@ -1643,7 +1697,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["IL-76"]
   },
   {
     "id": 118,
@@ -1677,7 +1732,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["IL-78"]
   },
   {
     "id": 146,
@@ -1711,7 +1767,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["INTERCEPTOR UAV"]
   },
   {
     "id": 417,
@@ -1745,7 +1802,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["KC-10"]
   },
   {
     "id": 98,
@@ -1779,7 +1837,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LADON"]
   },
   {
     "id": 105,
@@ -1813,7 +1872,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AAM《LADON》", "LADON"]
   },
   {
     "id": 101,
@@ -1847,7 +1907,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《LADON》", "LADON"]
   },
   {
     "id": 212,
@@ -1881,7 +1942,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LADON《LADON》", "LADON"]
   },
   {
     "id": 99,
@@ -1917,7 +1979,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LADON《LADON》 [M7]", "LADON"]
   },
   {
     "id": 100,
@@ -1951,7 +2014,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN ENGINE《LADON》", "LADON"]
   },
   {
     "id": 214,
@@ -1985,7 +2049,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VARIABLE WING《LADON》", "LADON"]
   },
   {
     "id": 103,
@@ -2021,7 +2086,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VARIABLE WING《LADON》 [M7]", "LADON"]
   },
   {
     "id": 213,
@@ -2055,7 +2121,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《LADON》", "LADON"]
   },
   {
     "id": 215,
@@ -2089,7 +2156,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《LADON》", "LADON"]
   },
   {
     "id": 102,
@@ -2125,7 +2193,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《LADON》 [M7]", "LADON"]
   },
   {
     "id": 104,
@@ -2161,7 +2230,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《LADON》 [M7]", "LADON"]
   },
   {
     "id": 473,
@@ -2195,7 +2265,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN ENGINE《CELAENO》", "CELAENO"]
   },
   {
     "id": 474,
@@ -2229,7 +2300,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN PROPELLER《CELAENO》", "CELAENO"]
   },
   {
     "id": 464,
@@ -2263,7 +2335,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MARKER UAV"]
   },
   {
     "id": 29,
@@ -2297,7 +2370,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MI-24"]
   },
   {
     "id": 1,
@@ -2331,11 +2405,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MIG-21BIS"]
   },
   {
     "id": 28,
-    "name": "MIG-29A (SHADOW) [M3]",
+    "name": "MIG-29A (SHADOW)",
     "category": "AIRCRAFT",
     "order": 68,
     "partOf": null,
@@ -2367,7 +2442,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["MIG-29A (SHADOW) [M3]"]
   },
   {
     "id": 67,
@@ -2401,7 +2478,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MIG-29A"]
   },
   {
     "id": 267,
@@ -2437,7 +2515,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MIG-29A (SHADOW) [M20]"]
   },
   {
     "id": 73,
@@ -2471,11 +2550,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MIG-31B"]
   },
   {
     "id": 193,
-    "name": "MIG-31B (SHADOW) [M11]",
+    "name": "MIG-31B (SHADOW)",
     "category": "AIRCRAFT",
     "order": 72,
     "partOf": null,
@@ -2507,7 +2587,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["MIG-31B (SHADOW) [M11]"]
   },
   {
     "id": 4,
@@ -2541,11 +2623,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MIRAGE 2000-5"]
   },
   {
     "id": 135,
-    "name": "MIRAGE 2000-5 (SHADOW) [M8]",
+    "name": "MIRAGE 2000-5 (SHADOW)",
     "category": "AIRCRAFT",
     "order": 74,
     "partOf": null,
@@ -2577,7 +2660,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["MIRAGE 2000-5 (SHADOW) [M8]"]
   },
   {
     "id": 3,
@@ -2611,11 +2696,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MQ-19"]
   },
   {
     "id": 179,
-    "name": "PODARGE",
+    "name": "PODARGE (AIR)",
     "category": "AIRCRAFT",
     "order": 76,
     "partOf": null,
@@ -2645,11 +2731,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PODARGE"]
   },
   {
     "id": 183,
-    "name": "AA GUN《PODARGE》",
+    "name": "AA GUN《PODARGE (AIR)》",
     "category": "AIRCRAFT",
     "order": 77,
     "partOf": 179,
@@ -2679,16 +2766,17 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 378,
     "name": "AA GUN《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 78,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 35,
     "damageMultipliers": {
@@ -2713,7 +2801,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 180,
@@ -2747,7 +2836,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CARGO MODULE《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 192,
@@ -2781,16 +2871,17 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CARGO MODULE《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 374,
     "name": "CIWS《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 81,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 35,
     "damageMultipliers": {
@@ -2815,11 +2906,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 380,
-    "name": "DISP. RAIL GUN《PODARGE》",
+    "name": "DISP. RAIL GUN",
     "category": "AIRCRAFT",
     "order": 82,
     "partOf": 179,
@@ -2849,16 +2941,18 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 313,
+    "searchNames": ["DISP. RAIL GUN《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 373,
     "name": "LAND AEGIS《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 83,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 200,
     "damageMultipliers": {
@@ -2883,16 +2977,17 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND AEGIS《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 377,
     "name": "LAND DESTROYER《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 84,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 200,
     "damageMultipliers": {
@@ -2917,7 +3012,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND DESTROYER《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 182,
@@ -2951,16 +3047,17 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN PROPELLER《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 375,
     "name": "SHUTTER《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 86,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 80,
     "damageMultipliers": {
@@ -2985,11 +3082,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHUTTER《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 379,
-    "name": "SSM LAUNCHER《PODARGE》",
+    "name": "SSM LAUNCHER",
     "category": "AIRCRAFT",
     "order": 87,
     "partOf": 179,
@@ -3019,7 +3117,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 312,
+    "searchNames": ["SSM LAUNCHER《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 187,
@@ -3053,7 +3153,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SUB PROPELLER《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 184,
@@ -3087,16 +3188,18 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 184,
+    "searchNames": ["VLS《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 376,
     "name": "VLS《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 90,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [25],
     "hp": 35,
     "damageMultipliers": {
@@ -3121,16 +3224,17 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 181,
     "name": "WING SPAR《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 91,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [11, 25],
     "hp": 20,
     "damageMultipliers": {
@@ -3155,7 +3259,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 185,
@@ -3189,16 +3294,17 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 186,
     "name": "WING SPAR《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 93,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [11, 25],
     "hp": 60,
     "damageMultipliers": {
@@ -3223,7 +3329,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 188,
@@ -3257,7 +3364,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 189,
@@ -3291,16 +3399,17 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 190,
     "name": "WING SPAR《PODARGE》",
-    "category": "AIRCRAFT",
+    "category": "EXCLUDED",
     "order": 96,
     "partOf": 179,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [11, 25],
     "hp": 40,
     "damageMultipliers": {
@@ -3325,7 +3434,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 191,
@@ -3359,7 +3469,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《PODARGE》", "PODARGE", "PODARGE (AIR)"]
   },
   {
     "id": 22,
@@ -3393,7 +3504,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PURPLE MAGIC 1"]
   },
   {
     "id": 23,
@@ -3427,7 +3539,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PURPLE MAGIC 2"]
   },
   {
     "id": 24,
@@ -3461,7 +3574,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PURPLE MAGIC 3"]
   },
   {
     "id": 25,
@@ -3495,7 +3609,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PURPLE MAGIC 4"]
   },
   {
     "id": 94,
@@ -3529,7 +3644,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUADCOPTER"]
   },
   {
     "id": 210,
@@ -3563,7 +3679,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUADCOPTER"]
   },
   {
     "id": 18,
@@ -3597,7 +3714,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 1"]
   },
   {
     "id": 158,
@@ -3633,7 +3751,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 1 [M10]"]
   },
   {
     "id": 234,
@@ -3669,7 +3788,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 1 [M18]"]
   },
   {
     "id": 81,
@@ -3705,7 +3825,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 1 [M6]"]
   },
   {
     "id": 19,
@@ -3739,7 +3860,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 2"]
   },
   {
     "id": 159,
@@ -3775,7 +3897,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 2 [M10]"]
   },
   {
     "id": 82,
@@ -3811,7 +3934,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 2 [M6]"]
   },
   {
     "id": 20,
@@ -3845,7 +3969,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 3"]
   },
   {
     "id": 160,
@@ -3881,7 +4006,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 3 [M10]"]
   },
   {
     "id": 83,
@@ -3917,7 +4043,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 3 [M6]"]
   },
   {
     "id": 21,
@@ -3951,7 +4078,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 4"]
   },
   {
     "id": 161,
@@ -3987,7 +4115,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 4 [M10]"]
   },
   {
     "id": 84,
@@ -4023,7 +4152,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["QUEEN 4 [M6]"]
   },
   {
     "id": 232,
@@ -4057,7 +4187,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RAFALE M"]
   },
   {
     "id": 282,
@@ -4091,7 +4222,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHIELD UAV"]
   },
   {
     "id": 497,
@@ -4125,7 +4257,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHUTTLE TRANSPORT"]
   },
   {
     "id": 262,
@@ -4161,7 +4294,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHUTTLE TRANSPORT [M20]"]
   },
   {
     "id": 275,
@@ -4195,7 +4329,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["STS SHUTTLE"]
   },
   {
     "id": 27,
@@ -4229,7 +4364,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-25SM"]
   },
   {
     "id": 68,
@@ -4263,11 +4399,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-33"]
   },
   {
     "id": 336,
-    "name": "SU-33 (SHADOW) [M25]",
+    "name": "SU-33 (SHADOW)",
     "category": "AIRCRAFT",
     "order": 124,
     "partOf": null,
@@ -4299,7 +4436,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["SU-33 (SHADOW) [M25]"]
   },
   {
     "id": 75,
@@ -4333,7 +4472,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-34"]
   },
   {
     "id": 265,
@@ -4367,11 +4507,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-35S"]
   },
   {
     "id": 305,
-    "name": "SU-35S (VENTUS) [M23]",
+    "name": "SU-35S (VENTUS)",
     "category": "AIRCRAFT",
     "order": 127,
     "partOf": null,
@@ -4403,7 +4544,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["SU-35S (VENTUS) [M23]"]
   },
   {
     "id": 194,
@@ -4439,7 +4582,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-35S (SHADOW) [M11]"]
   },
   {
     "id": 269,
@@ -4475,7 +4619,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-35S (SHADOW) [M20]"]
   },
   {
     "id": 207,
@@ -4509,11 +4654,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-47"]
   },
   {
     "id": 236,
-    "name": "SU-47 (SHADOW) [M18]",
+    "name": "SU-47 (SHADOW)",
     "category": "AIRCRAFT",
     "order": 131,
     "partOf": null,
@@ -4545,7 +4691,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["SU-47 (SHADOW) [M18]"]
   },
   {
     "id": 235,
@@ -4579,7 +4727,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-57 (SHADOW)"]
   },
   {
     "id": 335,
@@ -4613,7 +4762,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-57"]
   },
   {
     "id": 412,
@@ -4649,7 +4799,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SU-57 (SHADOW) [M26]"]
   },
   {
     "id": 475,
@@ -4683,7 +4834,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SUB PROPELLER《CELAENO》", "CELAENO"]
   },
   {
     "id": 31,
@@ -4717,7 +4869,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TU-160"]
   },
   {
     "id": 8,
@@ -4751,7 +4904,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TU-95"]
   },
   {
     "id": 95,
@@ -4785,11 +4939,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TYPHOON"]
   },
   {
     "id": 333,
-    "name": "TYPHOON (SHADOW) [M25]",
+    "name": "TYPHOON (SHADOW)",
     "category": "AIRCRAFT",
     "order": 139,
     "partOf": null,
@@ -4821,7 +4976,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["TYPHOON (SHADOW) [M25]"]
   },
   {
     "id": 498,
@@ -4855,11 +5012,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["UNKNOWN"]
   },
   {
     "id": 410,
-    "name": "UNKNOWN [M26]",
+    "name": "UNKNOWN",
     "category": "AIRCRAFT",
     "order": 141,
     "partOf": null,
@@ -4891,7 +5049,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "defaultVariant": true,
+    "searchNames": ["UNKNOWN [M26]"]
   },
   {
     "id": 499,
@@ -4925,11 +5085,12 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["UNKNOWN UAV"]
   },
   {
     "id": 411,
-    "name": "UNKNOWN UAV [M26]",
+    "name": "UNKNOWN UAV",
     "category": "AIRCRAFT",
     "order": 143,
     "partOf": null,
@@ -4961,7 +5122,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["UNKNOWN UAV [M26]"]
   },
   {
     "id": 69,
@@ -4995,7 +5158,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["V-22"]
   },
   {
     "id": 476,
@@ -5029,7 +5193,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WING SPAR《CELAENO》", "CELAENO"]
   },
   {
     "id": 457,
@@ -5063,7 +5228,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["X-40"]
   },
   {
     "id": 435,
@@ -5099,7 +5265,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["X-40 [M28]"]
   },
   {
     "id": 45,
@@ -5135,7 +5302,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["X-40 [M3]"]
   },
   {
     "id": 459,
@@ -5169,7 +5337,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["X-40 NOSE UNIT"]
   },
   {
     "id": 460,
@@ -5203,7 +5372,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LASER DESIGNATOR《X-40 NOSE UNIT》", "X-40 NOSE UNIT"]
   },
   {
     "id": 32,
@@ -5237,7 +5407,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN"]
   },
   {
     "id": 483,
@@ -5271,7 +5442,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《TRIUMPHANT》", "TRIUMPHANT"]
   },
   {
     "id": 477,
@@ -5305,7 +5477,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AD TANK"]
   },
   {
     "id": 504,
@@ -5339,7 +5512,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIR BASE"]
   },
   {
     "id": 456,
@@ -5375,7 +5549,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIR BASE [M28]"]
   },
   {
     "id": 79,
@@ -5409,7 +5584,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRBURST GUN"]
   },
   {
     "id": 50,
@@ -5443,7 +5619,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC"]
   },
   {
     "id": 489,
@@ -5477,7 +5654,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC"]
   },
   {
     "id": 199,
@@ -5513,7 +5691,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC [M12]"]
   },
   {
     "id": 416,
@@ -5547,7 +5726,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BATTLECRUISER"]
   },
   {
     "id": 481,
@@ -5581,11 +5761,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CANISTER"]
   },
   {
     "id": 414,
-    "name": "CIWS",
+    "name": "CIWS《GROUND》",
     "category": "GROUND",
     "order": 162,
     "partOf": null,
@@ -5615,7 +5796,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS"]
   },
   {
     "id": 495,
@@ -5649,11 +5831,12 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CLIMBER"]
   },
   {
     "id": 259,
-    "name": "CLIMBER [M19]",
+    "name": "CLIMBER",
     "category": "GROUND",
     "order": 164,
     "partOf": null,
@@ -5685,7 +5868,9 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["CLIMBER [M19]"]
   },
   {
     "id": 318,
@@ -5719,7 +5904,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["COMMAND POST"]
   },
   {
     "id": 316,
@@ -5753,7 +5939,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["COMMAND VEHICLE"]
   },
   {
     "id": 484,
@@ -5787,7 +5974,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["DISP. RAIL GUN《TRIUMPHANT》", "TRIUMPHANT"]
   },
   {
     "id": 317,
@@ -5821,7 +6009,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EPP VEHICLE"]
   },
   {
     "id": 225,
@@ -5855,7 +6044,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["EX-SAM"]
   },
   {
     "id": 34,
@@ -5889,7 +6079,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FUEL TRUCK"]
   },
   {
     "id": 415,
@@ -5923,7 +6114,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FUEL TRUCK"]
   },
   {
     "id": 76,
@@ -5957,7 +6149,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HOWITZER"]
   },
   {
     "id": 487,
@@ -5991,7 +6184,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["IED VEHICLE"]
   },
   {
     "id": 145,
@@ -6027,7 +6221,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["IED VEHICLE [M9]"]
   },
   {
     "id": 320,
@@ -6061,7 +6256,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["JTAC"]
   },
   {
     "id": 106,
@@ -6095,18 +6291,20 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 106,
+    "searchNames": ["LAND AEGIS"]
   },
   {
     "id": 315,
     "name": "LAND AEGIS [M23]",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 177,
     "partOf": null,
     "missionVariant": {
       "missionId": 23
     },
-    "subcategory": "AIR DEFENSE",
+    "subcategory": "OTHER",
     "missionIds": [23],
     "hp": 200,
     "damageMultipliers": {
@@ -6131,7 +6329,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND AEGIS [M23]"]
   },
   {
     "id": 107,
@@ -6165,7 +6364,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 107,
+    "searchNames": ["CIWS《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 327,
@@ -6199,11 +6400,12 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 108,
-    "name": "SHUTTER《LAND AEGIS》",
+    "name": "SHUTTER",
     "category": "GROUND",
     "order": 180,
     "partOf": 106,
@@ -6233,7 +6435,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 108,
+    "searchNames": ["SHUTTER《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 109,
@@ -6267,7 +6471,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 109,
+    "searchNames": ["VLS《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 147,
@@ -6301,7 +6507,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 1"]
   },
   {
     "id": 371,
@@ -6335,7 +6542,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 1"]
   },
   {
     "id": 330,
@@ -6371,11 +6579,12 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 1 [M24]"]
   },
   {
     "id": 148,
-    "name": "AA GUN《LAND BATTLESHIP 1》",
+    "name": "AA GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 185,
     "partOf": 147,
@@ -6405,11 +6614,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 148,
+    "searchNames": ["AA GUN《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 150,
-    "name": "AIRBURST GUN《LAND BATTLESHIP 1》",
+    "name": "AIRBURST GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 186,
     "partOf": 147,
@@ -6439,7 +6650,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 150,
+    "searchNames": ["AIRBURST GUN《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 149,
@@ -6473,7 +6686,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CASEMATE GUN《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 372,
@@ -6507,7 +6721,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN GUN《LAND BATTLESHIP (ROCKY ISLAND)》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 151,
@@ -6541,16 +6756,17 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SUB CATERPILLAR", "LAND BATTLESHIP 1"]
   },
   {
     "id": 152,
     "name": "SUB CATERPILLAR (CORE)",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 190,
     "partOf": 147,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [9],
     "hp": 300,
     "damageMultipliers": {
@@ -6575,7 +6791,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SUB CATERPILLAR (CORE)", "LAND BATTLESHIP 1"]
   },
   {
     "id": 154,
@@ -6609,16 +6826,17 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["THRUSTER《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 488,
     "name": "THRUSTER《LAND BATTLESHIP 1》",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 192,
     "partOf": 147,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [9],
     "hp": 160,
     "damageMultipliers": {
@@ -6643,11 +6861,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["THRUSTER《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 153,
-    "name": "THRUSTER《LAND BATTLESHIP 1》 [M9]",
+    "name": "THRUSTER《LAND BATTLESHIP 1》",
     "category": "GROUND",
     "order": 193,
     "partOf": 147,
@@ -6679,11 +6898,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["THRUSTER《LAND BATTLESHIP 1》 [M9]", "LAND BATTLESHIP 1"]
   },
   {
     "id": 155,
-    "name": "VLS《LAND BATTLESHIP 1》",
+    "name": "VLS《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 194,
     "partOf": 147,
@@ -6713,7 +6934,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 155,
+    "searchNames": ["VLS《LAND BATTLESHIP 1》", "LAND BATTLESHIP 1"]
   },
   {
     "id": 494,
@@ -6747,7 +6970,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 2"]
   },
   {
     "id": 496,
@@ -6781,7 +7005,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 2"]
   },
   {
     "id": 247,
@@ -6817,7 +7042,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 261,
@@ -6853,11 +7079,12 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 248,
-    "name": "AA GUN《LAND BATTLESHIP 2》",
+    "name": "AA GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 199,
     "partOf": 247,
@@ -6887,7 +7114,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 148,
+    "searchNames": ["AA GUN《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 249,
@@ -6921,11 +7150,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 257,
-    "name": "AIRBURST GUN《LAND BATTLESHIP 2》",
+    "name": "AIRBURST GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 201,
     "partOf": 247,
@@ -6955,7 +7185,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 150,
+    "searchNames": ["AIRBURST GUN《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 251,
@@ -6989,7 +7221,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BREACH《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 252,
@@ -7023,16 +7256,17 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 250,
     "name": "CORE UNIT《LAND BATTLESHIP 2》",
-    "category": "GROUND",
+    "category": "EXCLUDED",
     "order": 204,
     "partOf": 247,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [19],
     "hp": 120,
     "damageMultipliers": {
@@ -7057,7 +7291,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CORE UNIT《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 253,
@@ -7091,7 +7326,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HEAT VENT《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 255,
@@ -7125,7 +7361,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN GUN《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 256,
@@ -7159,11 +7396,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SAM《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 254,
-    "name": "VLS《LAND BATTLESHIP 2》",
+    "name": "VLS《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 208,
     "partOf": 247,
@@ -7193,7 +7431,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 155,
+    "searchNames": ["VLS《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 258,
@@ -7227,7 +7467,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《LAND BATTLESHIP 2》", "LAND BATTLESHIP 2 [M19]"]
   },
   {
     "id": 226,
@@ -7261,11 +7502,12 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND BATTLESHIP 3"]
   },
   {
     "id": 227,
-    "name": "AA GUN《LAND BATTLESHIP 3》",
+    "name": "AA GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 211,
     "partOf": 226,
@@ -7295,11 +7537,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 148,
+    "searchNames": ["AA GUN《LAND BATTLESHIP 3》", "LAND BATTLESHIP 3"]
   },
   {
     "id": 229,
-    "name": "AIRBURST GUN《LAND BATTLESHIP 3》",
+    "name": "AIRBURST GUN《LAND BATTLESHIP》",
     "category": "GROUND",
     "order": 212,
     "partOf": 226,
@@ -7329,7 +7573,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 150,
+    "searchNames": ["AIRBURST GUN《LAND BATTLESHIP 3》", "LAND BATTLESHIP 3"]
   },
   {
     "id": 228,
@@ -7363,7 +7609,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAIN GUN《LAND BATTLESHIP 3》", "LAND BATTLESHIP 3"]
   },
   {
     "id": 310,
@@ -7397,7 +7644,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAND DESTROYER"]
   },
   {
     "id": 311,
@@ -7431,11 +7679,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《LAND DESTROYER》", "LAND DESTROYER"]
   },
   {
     "id": 313,
-    "name": "DISP. RAIL GUN《LAND DESTROYER》",
+    "name": "DISP. RAIL GUN",
     "category": "GROUND",
     "order": 216,
     "partOf": 310,
@@ -7465,11 +7714,13 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 313,
+    "searchNames": ["DISP. RAIL GUN《LAND DESTROYER》", "LAND DESTROYER"]
   },
   {
     "id": 314,
-    "name": "DISP. RAIL GUN《LAND DESTROYER》",
+    "name": "DISP. RAIL GUN",
     "category": "GROUND",
     "order": 217,
     "partOf": 310,
@@ -7499,11 +7750,13 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 313,
+    "searchNames": ["DISP. RAIL GUN《LAND DESTROYER》", "LAND DESTROYER"]
   },
   {
     "id": 312,
-    "name": "SSM LAUNCHER《LAND DESTROYER》",
+    "name": "SSM LAUNCHER",
     "category": "GROUND",
     "order": 218,
     "partOf": 310,
@@ -7533,7 +7786,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 312,
+    "searchNames": ["SSM LAUNCHER《LAND DESTROYER》", "LAND DESTROYER"]
   },
   {
     "id": 78,
@@ -7567,7 +7822,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LINKED SAM"]
   },
   {
     "id": 432,
@@ -7601,7 +7857,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LONG-RANGE SAM"]
   },
   {
     "id": 208,
@@ -7635,7 +7892,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MANPADS"]
   },
   {
     "id": 77,
@@ -7669,7 +7927,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MSL CMD POST"]
   },
   {
     "id": 90,
@@ -7703,7 +7962,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLBOX"]
   },
   {
     "id": 325,
@@ -7737,7 +7997,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLBOX"]
   },
   {
     "id": 326,
@@ -7771,7 +8032,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLBOX"]
   },
   {
     "id": 340,
@@ -7805,7 +8067,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLBOX"]
   },
   {
     "id": 479,
@@ -7839,7 +8102,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PUSHBACK TRUCK"]
   },
   {
     "id": 88,
@@ -7873,7 +8137,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RADAR SITE"]
   },
   {
     "id": 39,
@@ -7907,7 +8172,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RADAR TOWER"]
   },
   {
     "id": 36,
@@ -7941,7 +8207,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RADAR VEHICLE"]
   },
   {
     "id": 424,
@@ -7975,7 +8242,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RAIL GUN TURRET《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 131,
@@ -8009,7 +8277,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RKT LAUNCHER"]
   },
   {
     "id": 33,
@@ -8043,7 +8312,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SAM"]
   },
   {
     "id": 51,
@@ -8077,7 +8347,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TANK"]
   },
   {
     "id": 35,
@@ -8111,7 +8382,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TRUCK"]
   },
   {
     "id": 478,
@@ -8145,14 +8417,15 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["XSAM"]
   },
   {
     "id": 382,
-    "name": "AA GUN《PODARGE》",
+    "name": "AA GUN《PODARGE (SEA)》",
     "category": "SHIP",
     "order": 237,
-    "partOf": 179,
+    "partOf": 381,
     "missionVariant": null,
     "subcategory": "PARTS",
     "missionIds": [25],
@@ -8179,7 +8452,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《PODARGE》", "PODARGE", "PODARGE (SEA)"]
   },
   {
     "id": 242,
@@ -8213,7 +8487,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AEGIS"]
   },
   {
     "id": 341,
@@ -8249,11 +8524,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AEGIS [M25]"]
   },
   {
     "id": 244,
-    "name": "AA GUN《AEGIS》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 240,
     "partOf": 242,
@@ -8283,11 +8559,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《AEGIS》", "AEGIS"]
   },
   {
     "id": 343,
-    "name": "AA GUN《AEGIS》 [M25]",
+    "name": "AA GUN《SHIP》 [M25]",
     "category": "SHIP",
     "order": 241,
     "partOf": 242,
@@ -8319,11 +8597,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 343,
+    "searchNames": ["AA GUN《AEGIS》 [M25]", "AEGIS"]
   },
   {
     "id": 245,
-    "name": "CIWS《AEGIS》",
+    "name": "CIWS",
     "category": "SHIP",
     "order": 242,
     "partOf": 242,
@@ -8353,11 +8633,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《AEGIS》", "AEGIS"]
   },
   {
     "id": 344,
-    "name": "CIWS《AEGIS》 [M25]",
+    "name": "CIWS [M25]",
     "category": "SHIP",
     "order": 243,
     "partOf": 242,
@@ -8389,11 +8670,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《AEGIS》 [M25]", "AEGIS"]
   },
   {
     "id": 243,
-    "name": "NAVAL GUN《AEGIS》",
+    "name": "NAVAL GUN",
     "category": "SHIP",
     "order": 244,
     "partOf": 242,
@@ -8423,11 +8705,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 57,
+    "searchNames": ["NAVAL GUN《AEGIS》", "AEGIS"]
   },
   {
     "id": 342,
-    "name": "NAVAL GUN《AEGIS》 [M25]",
+    "name": "NAVAL GUN [M25]",
     "category": "SHIP",
     "order": 245,
     "partOf": 242,
@@ -8459,11 +8743,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 342,
+    "searchNames": ["NAVAL GUN《AEGIS》 [M25]", "AEGIS"]
   },
   {
     "id": 246,
-    "name": "VLS《AEGIS》",
+    "name": "VLS",
     "category": "SHIP",
     "order": 246,
     "partOf": 242,
@@ -8493,11 +8779,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 129,
+    "searchNames": ["VLS《AEGIS》", "AEGIS"]
   },
   {
     "id": 345,
-    "name": "VLS《AEGIS》 [M25]",
+    "name": "VLS [M25]",
     "category": "SHIP",
     "order": 247,
     "partOf": 242,
@@ -8529,7 +8817,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《AEGIS》 [M25]", "AEGIS"]
   },
   {
     "id": 123,
@@ -8563,7 +8852,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRCRAFT CARRIER"]
   },
   {
     "id": 461,
@@ -8597,7 +8887,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRCRAFT CARRIER"]
   },
   {
     "id": 162,
@@ -8633,11 +8924,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRCRAFT CARRIER [M10]"]
   },
   {
     "id": 124,
-    "name": "AA GUN《AIRCRAFT CARRIER》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 251,
     "partOf": 123,
@@ -8667,7 +8959,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《AIRCRAFT CARRIER》", "AIRCRAFT CARRIER"]
   },
   {
     "id": 163,
@@ -8701,7 +8995,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《AIRCRAFT CARRIER》", "AIRCRAFT CARRIER"]
   },
   {
     "id": 125,
@@ -8735,11 +9030,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BATTLECRUISER"]
   },
   {
     "id": 126,
-    "name": "AA GUN《BATTLECRUISER》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 254,
     "partOf": 125,
@@ -8769,11 +9065,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《BATTLECRUISER》", "BATTLECRUISER"]
   },
   {
     "id": 127,
-    "name": "NAVAL GUN《BATTLECRUISER》",
+    "name": "NAVAL GUN",
     "category": "SHIP",
     "order": 255,
     "partOf": 125,
@@ -8803,11 +9101,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 57,
+    "searchNames": ["NAVAL GUN《BATTLECRUISER》", "BATTLECRUISER"]
   },
   {
     "id": 128,
-    "name": "SAM《BATTLECRUISER》",
+    "name": "SAM《SHIP》",
     "category": "SHIP",
     "order": 256,
     "partOf": 125,
@@ -8837,11 +9137,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 65,
+    "searchNames": ["SAM《BATTLECRUISER》", "BATTLECRUISER"]
   },
   {
     "id": 129,
-    "name": "VLS《BATTLECRUISER》",
+    "name": "VLS",
     "category": "SHIP",
     "order": 257,
     "partOf": 125,
@@ -8871,7 +9173,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 129,
+    "searchNames": ["VLS《BATTLECRUISER》", "BATTLECRUISER"]
   },
   {
     "id": 368,
@@ -8905,7 +9209,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 107,
+    "searchNames": ["CIWS《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 12,
@@ -8939,7 +9245,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTAINER SHIP"]
   },
   {
     "id": 491,
@@ -8973,7 +9280,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTAINER SHIP"]
   },
   {
     "id": 492,
@@ -9007,7 +9315,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTAINER SHIP"]
   },
   {
     "id": 222,
@@ -9043,7 +9352,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTAINER SHIP [M16]"]
   },
   {
     "id": 223,
@@ -9077,7 +9387,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MANPADS《CONTAINER SHIP》", "CONTAINER SHIP"]
   },
   {
     "id": 62,
@@ -9111,11 +9422,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CRUISER"]
   },
   {
     "id": 64,
-    "name": "AA GUN《CRUISER》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 265,
     "partOf": 62,
@@ -9145,11 +9457,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《CRUISER》", "CRUISER"]
   },
   {
     "id": 63,
-    "name": "NAVAL GUN《CRUISER》",
+    "name": "NAVAL GUN",
     "category": "SHIP",
     "order": 266,
     "partOf": 62,
@@ -9179,11 +9493,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 57,
+    "searchNames": ["NAVAL GUN《CRUISER》", "CRUISER"]
   },
   {
     "id": 65,
-    "name": "SAM《CRUISER》",
+    "name": "SAM《SHIP》",
     "category": "SHIP",
     "order": 267,
     "partOf": 62,
@@ -9213,7 +9529,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 65,
+    "searchNames": ["SAM《CRUISER》", "CRUISER"]
   },
   {
     "id": 59,
@@ -9247,7 +9565,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["DESTROYER"]
   },
   {
     "id": 361,
@@ -9283,11 +9602,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["DESTROYER [M25]"]
   },
   {
     "id": 60,
-    "name": "AA GUN《DESTROYER》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 270,
     "partOf": 59,
@@ -9317,11 +9637,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《DESTROYER》", "DESTROYER"]
   },
   {
     "id": 362,
-    "name": "AA GUN《DESTROYER》 [M25]",
+    "name": "AA GUN《SHIP》 [M25]",
     "category": "SHIP",
     "order": 271,
     "partOf": 59,
@@ -9353,11 +9675,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 343,
+    "searchNames": ["AA GUN《DESTROYER》 [M25]", "DESTROYER"]
   },
   {
     "id": 61,
-    "name": "NAVAL GUN《DESTROYER》",
+    "name": "NAVAL GUN",
     "category": "SHIP",
     "order": 272,
     "partOf": 59,
@@ -9387,11 +9711,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 57,
+    "searchNames": ["NAVAL GUN《DESTROYER》", "DESTROYER"]
   },
   {
     "id": 363,
-    "name": "NAVAL GUN《DESTROYER》 [M25]",
+    "name": "NAVAL GUN [M25]",
     "category": "SHIP",
     "order": 273,
     "partOf": 59,
@@ -9423,7 +9749,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 342,
+    "searchNames": ["NAVAL GUN《DESTROYER》 [M25]", "DESTROYER"]
   },
   {
     "id": 56,
@@ -9457,7 +9785,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FRIGATE"]
   },
   {
     "id": 364,
@@ -9493,11 +9822,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FRIGATE [M25]"]
   },
   {
     "id": 58,
-    "name": "AA GUN《FRIGATE》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 276,
     "partOf": 56,
@@ -9527,11 +9857,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《FRIGATE》", "FRIGATE"]
   },
   {
     "id": 366,
-    "name": "AA GUN《FRIGATE》 [M25]",
+    "name": "AA GUN《SHIP》 [M25]",
     "category": "SHIP",
     "order": 277,
     "partOf": 56,
@@ -9563,11 +9895,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 343,
+    "searchNames": ["AA GUN《FRIGATE》 [M25]", "FRIGATE"]
   },
   {
     "id": 57,
-    "name": "NAVAL GUN《FRIGATE》",
+    "name": "NAVAL GUN",
     "category": "SHIP",
     "order": 278,
     "partOf": 56,
@@ -9597,11 +9931,13 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 57,
+    "searchNames": ["NAVAL GUN《FRIGATE》", "FRIGATE"]
   },
   {
     "id": 365,
-    "name": "NAVAL GUN《FRIGATE》 [M25]",
+    "name": "NAVAL GUN [M25]",
     "category": "SHIP",
     "order": 279,
     "partOf": 56,
@@ -9633,7 +9969,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 342,
+    "searchNames": ["NAVAL GUN《FRIGATE》 [M25]", "FRIGATE"]
   },
   {
     "id": 413,
@@ -9667,7 +10005,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GAS CARRIER"]
   },
   {
     "id": 52,
@@ -9701,11 +10040,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GUNBOAT"]
   },
   {
     "id": 53,
-    "name": "AA GUN《GUNBOAT》",
+    "name": "AA GUN《SHIP》",
     "category": "SHIP",
     "order": 282,
     "partOf": 52,
@@ -9735,7 +10075,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 53,
+    "searchNames": ["AA GUN《GUNBOAT》", "GUNBOAT"]
   },
   {
     "id": 367,
@@ -9769,7 +10111,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 106,
+    "searchNames": ["LAND AEGIS"]
   },
   {
     "id": 486,
@@ -9803,7 +10147,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAUNCH TUBE《TRIUMPHANT》", "TRIUMPHANT"]
   },
   {
     "id": 198,
@@ -9837,7 +10182,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LCAC"]
   },
   {
     "id": 308,
@@ -9871,11 +10217,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MSL BOAT"]
   },
   {
     "id": 309,
-    "name": "SAM《MSL BOAT》",
+    "name": "SAM《SHIP》",
     "category": "SHIP",
     "order": 287,
     "partOf": 308,
@@ -9905,7 +10252,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 65,
+    "searchNames": ["SAM《MSL BOAT》", "MSL BOAT"]
   },
   {
     "id": 485,
@@ -9939,7 +10288,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《TRIUMPHANT》", "TRIUMPHANT"]
   },
   {
     "id": 54,
@@ -9973,11 +10323,12 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["OIL TANKER"]
   },
   {
     "id": 381,
-    "name": "PODARGE",
+    "name": "PODARGE (SEA)",
     "category": "SHIP",
     "order": 290,
     "partOf": null,
@@ -10007,11 +10358,12 @@
     },
     "isAir": false,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PODARGE"]
   },
   {
     "id": 369,
-    "name": "SHUTTER《LAND AEGIS》",
+    "name": "SHUTTER",
     "category": "SHIP",
     "order": 291,
     "partOf": 106,
@@ -10041,7 +10393,9 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 108,
+    "searchNames": ["SHUTTER《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 471,
@@ -10075,7 +10429,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TRIUMPHANT"]
   },
   {
     "id": 55,
@@ -10111,7 +10466,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TRIUMPHANT [M4]"]
   },
   {
     "id": 472,
@@ -10145,7 +10501,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《TRIUMPHANT》", "TRIUMPHANT [M4]"]
   },
   {
     "id": 370,
@@ -10179,14 +10536,16 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 109,
+    "searchNames": ["VLS《LAND AEGIS》", "LAND AEGIS"]
   },
   {
     "id": 383,
     "name": "VLS《PODARGE》",
     "category": "SHIP",
     "order": 296,
-    "partOf": 179,
+    "partOf": 381,
     "missionVariant": null,
     "subcategory": "PARTS",
     "missionIds": [25],
@@ -10213,7 +10572,9 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 184,
+    "searchNames": ["VLS《PODARGE》", "PODARGE", "PODARGE (SEA)"]
   },
   {
     "id": 490,
@@ -10247,7 +10608,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIR BASE"]
   },
   {
     "id": 204,
@@ -10283,7 +10645,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIR BASE [M12]"]
   },
   {
     "id": 480,
@@ -10317,7 +10680,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AMMO BUNKER"]
   },
   {
     "id": 115,
@@ -10351,7 +10715,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BARRACKS"]
   },
   {
     "id": 329,
@@ -10385,12 +10750,13 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BREACH POINT"]
   },
   {
     "id": 157,
     "name": "BUILDING",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 302,
     "partOf": null,
     "missionVariant": null,
@@ -10419,12 +10785,13 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BUILDING"]
   },
   {
     "id": 80,
     "name": "BUILDING [M5]",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 303,
     "partOf": null,
     "missionVariant": {
@@ -10455,12 +10822,13 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BUILDING [M5]"]
   },
   {
     "id": 136,
     "name": "BUILDING [M8]",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 304,
     "partOf": null,
     "missionVariant": {
@@ -10491,7 +10859,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BUILDING [M8]"]
   },
   {
     "id": 91,
@@ -10525,7 +10894,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BUNKER"]
   },
   {
     "id": 92,
@@ -10559,7 +10929,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BUNKER"]
   },
   {
     "id": 276,
@@ -10593,7 +10964,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTROL CENTER"]
   },
   {
     "id": 117,
@@ -10627,7 +10999,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CONTROL TOWER"]
   },
   {
     "id": 110,
@@ -10661,7 +11034,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CSP TOWER"]
   },
   {
     "id": 17,
@@ -10695,7 +11069,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GAS TANK"]
   },
   {
     "id": 339,
@@ -10729,7 +11104,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GAS TANK"]
   },
   {
     "id": 96,
@@ -10763,7 +11139,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HANGAR"]
   },
   {
     "id": 482,
@@ -10797,7 +11174,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HARDENED DEPOT"]
   },
   {
     "id": 111,
@@ -10831,7 +11209,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HELIOSTAT"]
   },
   {
     "id": 418,
@@ -10865,7 +11244,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["MEGAFLOAT"]
   },
   {
     "id": 423,
@@ -10899,7 +11279,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["MEGAFLOAT"]
   },
   {
     "id": 431,
@@ -10933,7 +11314,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MEGAFLOAT"]
   },
   {
     "id": 430,
@@ -10967,11 +11349,12 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FUSION REACTOR《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 420,
-    "name": "PILLAR (Front)《MEGAFLOAT》",
+    "name": "PILLAR (Front)",
     "category": "STRUCTURE",
     "order": 319,
     "partOf": 418,
@@ -11001,11 +11384,13 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 419,
+    "searchNames": ["PILLAR (Front)《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 422,
-    "name": "PILLAR (EV)《MEGAFLOAT》",
+    "name": "PILLAR (EV)",
     "category": "STRUCTURE",
     "order": 320,
     "partOf": 418,
@@ -11035,7 +11420,9 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 421,
+    "searchNames": ["PILLAR (EV)《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 429,
@@ -11069,16 +11456,17 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["PILLAR《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 500,
     "name": "PILLAR (Front)《MEGAFLOAT》",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 322,
     "partOf": 418,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [27],
     "hp": 100,
     "damageMultipliers": {
@@ -11103,16 +11491,17 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLAR (Front)《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 501,
     "name": "PILLAR (EV)《MEGAFLOAT》",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 323,
     "partOf": 418,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [27],
     "hp": 200,
     "damageMultipliers": {
@@ -11137,11 +11526,12 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PILLAR (EV)《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 419,
-    "name": "PILLAR (Front)《MEGAFLOAT》 [M27]",
+    "name": "PILLAR (Front)",
     "category": "STRUCTURE",
     "order": 324,
     "partOf": 418,
@@ -11173,11 +11563,14 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 419,
+    "defaultVariant": true,
+    "searchNames": ["PILLAR (Front)《MEGAFLOAT》 [M27]", "MEGAFLOAT"]
   },
   {
     "id": 421,
-    "name": "PILLAR (EV)《MEGAFLOAT》 [M27]",
+    "name": "PILLAR (EV)",
     "category": "STRUCTURE",
     "order": 325,
     "partOf": 418,
@@ -11209,7 +11602,10 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "comparisonId": 421,
+    "defaultVariant": true,
+    "searchNames": ["PILLAR (EV)《MEGAFLOAT》 [M27]", "MEGAFLOAT"]
   },
   {
     "id": 503,
@@ -11243,11 +11639,12 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHUTTER《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 426,
-    "name": "SHUTTER《MEGAFLOAT》 [M27]",
+    "name": "SHUTTER《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 327,
     "partOf": 418,
@@ -11279,16 +11676,18 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["SHUTTER《MEGAFLOAT》 [M27]", "MEGAFLOAT"]
   },
   {
     "id": 502,
     "name": "TURRET BASE《MEGAFLOAT》",
-    "category": "STRUCTURE",
+    "category": "EXCLUDED",
     "order": 328,
     "partOf": 418,
     "missionVariant": null,
-    "subcategory": "PARTS",
+    "subcategory": "OTHER",
     "missionIds": [27],
     "hp": 40,
     "damageMultipliers": {
@@ -11313,11 +11712,12 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TURRET BASE《MEGAFLOAT》", "MEGAFLOAT"]
   },
   {
     "id": 425,
-    "name": "TURRET BASE《MEGAFLOAT》 [M27]",
+    "name": "TURRET BASE《MEGAFLOAT》",
     "category": "STRUCTURE",
     "order": 329,
     "partOf": 418,
@@ -11349,7 +11749,9 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["TURRET BASE《MEGAFLOAT》 [M27]", "MEGAFLOAT"]
   },
   {
     "id": 16,
@@ -11383,7 +11785,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["OIL TANK"]
   },
   {
     "id": 132,
@@ -11417,7 +11820,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["OIL TANK"]
   },
   {
     "id": 114,
@@ -11451,7 +11855,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PIPELINE"]
   },
   {
     "id": 113,
@@ -11485,7 +11890,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["REFINERY"]
   },
   {
     "id": 119,
@@ -11519,7 +11925,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SMOKESTACK"]
   },
   {
     "id": 112,
@@ -11553,7 +11960,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SOLAR PANEL"]
   },
   {
     "id": 328,
@@ -11587,7 +11995,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["STRONGPOINT"]
   },
   {
     "id": 89,
@@ -11621,7 +12030,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TENT"]
   },
   {
     "id": 116,
@@ -11655,7 +12065,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WAREHOUSE"]
   },
   {
     "id": 38,
@@ -11689,7 +12100,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WATCHTOWER"]
   },
   {
     "id": 264,
@@ -11723,7 +12135,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BVRAAM"]
   },
   {
     "id": 237,
@@ -11757,7 +12170,8 @@
     },
     "isAir": true,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAUNCH VEHICLE"]
   },
   {
     "id": 238,
@@ -11791,7 +12205,8 @@
     },
     "isAir": true,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LAUNCH VEHICLE DEBRIS"]
   },
   {
     "id": 505,
@@ -11825,11 +12240,12 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MSL DISPENSER"]
   },
   {
     "id": 463,
-    "name": "MSL DISPENSER [M30]",
+    "name": "MSL DISPENSER",
     "category": "OTHER",
     "order": 344,
     "partOf": null,
@@ -11861,7 +12277,9 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "defaultVariant": true,
+    "searchNames": ["MSL DISPENSER [M30]"]
   },
   {
     "id": 462,
@@ -11895,7 +12313,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SLCM"]
   },
   {
     "id": 156,
@@ -11929,7 +12348,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["SWARM DRONES"]
   },
   {
     "id": 465,
@@ -11963,7 +12383,8 @@
     },
     "isAir": true,
     "roleGroup": "none",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["SWARM DRONES"]
   },
   {
     "id": 443,
@@ -11997,7 +12418,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["105 SQ"]
   },
   {
     "id": 442,
@@ -12031,7 +12453,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["107 SQ"]
   },
   {
     "id": 451,
@@ -12065,7 +12488,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["110 SQ"]
   },
   {
     "id": 447,
@@ -12099,7 +12523,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["200 SQ"]
   },
   {
     "id": 448,
@@ -12133,7 +12558,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["301 SQ"]
   },
   {
     "id": 331,
@@ -12167,7 +12593,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["A-10C"]
   },
   {
     "id": 454,
@@ -12201,7 +12628,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN"]
   },
   {
     "id": 291,
@@ -12237,7 +12665,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["AA GUN [M23]"]
   },
   {
     "id": 40,
@@ -12271,7 +12700,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AEGIS"]
   },
   {
     "id": 41,
@@ -12305,7 +12735,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《AEGIS》", "AEGIS"]
   },
   {
     "id": 43,
@@ -12339,7 +12770,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《AEGIS》", "AEGIS"]
   },
   {
     "id": 42,
@@ -12373,7 +12805,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《AEGIS》", "AEGIS"]
   },
   {
     "id": 44,
@@ -12407,7 +12840,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《AEGIS》", "AEGIS"]
   },
   {
     "id": 407,
@@ -12441,7 +12875,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AFANC"]
   },
   {
     "id": 285,
@@ -12477,7 +12912,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["AH-64 [M23]"]
   },
   {
     "id": 218,
@@ -12511,7 +12947,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRCRAFT CARRIER"]
   },
   {
     "id": 174,
@@ -12547,7 +12984,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AIRCRAFT CARRIER [M10]"]
   },
   {
     "id": 175,
@@ -12581,7 +13019,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《AIRCRAFT CARRIER》", "AIRCRAFT CARRIER [M10]"]
   },
   {
     "id": 338,
@@ -12615,7 +13054,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC"]
   },
   {
     "id": 295,
@@ -12651,7 +13091,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["APC [M23]"]
   },
   {
     "id": 322,
@@ -12687,7 +13128,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC [M24]"]
   },
   {
     "id": 323,
@@ -12723,7 +13165,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["APC [M24]"]
   },
   {
     "id": 408,
@@ -12757,7 +13200,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ASSAULT SHIP"]
   },
   {
     "id": 176,
@@ -12793,7 +13237,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ASSAULT SHIP [M10]"]
   },
   {
     "id": 290,
@@ -12829,7 +13274,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["ASSAULT SHIP [M23]"]
   },
   {
     "id": 231,
@@ -12863,7 +13309,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["B-1"]
   },
   {
     "id": 217,
@@ -12897,7 +13344,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BANKER"]
   },
   {
     "id": 49,
@@ -12931,7 +13379,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BP_BPD_aegs_DAM01"]
   },
   {
     "id": 169,
@@ -12965,7 +13414,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["BRAVERY"]
   },
   {
     "id": 170,
@@ -12999,7 +13449,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《BRAVERY》", "BRAVERY"]
   },
   {
     "id": 172,
@@ -13033,7 +13484,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《BRAVERY》", "BRAVERY"]
   },
   {
     "id": 171,
@@ -13067,7 +13519,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《BRAVERY》", "BRAVERY"]
   },
   {
     "id": 173,
@@ -13101,7 +13554,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《BRAVERY》", "BRAVERY"]
   },
   {
     "id": 294,
@@ -13137,7 +13591,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["BRUISER [M23]"]
   },
   {
     "id": 296,
@@ -13173,7 +13628,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["BRUISER [M23]"]
   },
   {
     "id": 301,
@@ -13209,7 +13665,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["BRUISER [M23]"]
   },
   {
     "id": 304,
@@ -13245,7 +13702,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["BRUISER [M23]"]
   },
   {
     "id": 205,
@@ -13279,7 +13737,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["C-130"]
   },
   {
     "id": 203,
@@ -13313,7 +13772,8 @@
     },
     "isAir": true,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ALCM《C-130》", "C-130"]
   },
   {
     "id": 433,
@@ -13347,7 +13807,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CATOBLEPAS"]
   },
   {
     "id": 196,
@@ -13381,7 +13842,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["CH-47"]
   },
   {
     "id": 85,
@@ -13417,7 +13879,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["CH-47 [M6]"]
   },
   {
     "id": 219,
@@ -13451,7 +13914,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CRUISER"]
   },
   {
     "id": 221,
@@ -13485,7 +13949,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《CRUISER》", "CRUISER"]
   },
   {
     "id": 220,
@@ -13519,7 +13984,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《CRUISER》", "CRUISER"]
   },
   {
     "id": 406,
@@ -13553,7 +14019,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["DAUNTLESS"]
   },
   {
     "id": 394,
@@ -13587,7 +14054,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["DESTROYER"]
   },
   {
     "id": 396,
@@ -13621,7 +14089,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《DESTROYER》", "DESTROYER"]
   },
   {
     "id": 395,
@@ -13655,7 +14124,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《DESTROYER》", "DESTROYER"]
   },
   {
     "id": 271,
@@ -13689,7 +14159,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["E-767"]
   },
   {
     "id": 9,
@@ -13725,7 +14196,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["ENDURANCE [M2]"]
   },
   {
     "id": 10,
@@ -13759,7 +14231,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《ENDURANCE》", "ENDURANCE [M2]"]
   },
   {
     "id": 11,
@@ -13793,7 +14266,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《ENDURANCE》", "ENDURANCE [M2]"]
   },
   {
     "id": 389,
@@ -13827,7 +14301,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ENDYMION"]
   },
   {
     "id": 390,
@@ -13861,7 +14336,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《ENDYMION》", "ENDYMION"]
   },
   {
     "id": 392,
@@ -13895,7 +14371,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《ENDYMION》", "ENDYMION"]
   },
   {
     "id": 391,
@@ -13929,7 +14406,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《ENDYMION》", "ENDYMION"]
   },
   {
     "id": 393,
@@ -13963,7 +14441,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《ENDYMION》", "ENDYMION"]
   },
   {
     "id": 284,
@@ -13999,7 +14478,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["F-14D [M23]"]
   },
   {
     "id": 440,
@@ -14033,7 +14513,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-15C"]
   },
   {
     "id": 444,
@@ -14067,7 +14548,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-16C"]
   },
   {
     "id": 427,
@@ -14103,7 +14585,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F-16C [M27]"]
   },
   {
     "id": 239,
@@ -14137,7 +14620,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18C"]
   },
   {
     "id": 143,
@@ -14173,7 +14657,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18C [M9]"]
   },
   {
     "id": 283,
@@ -14209,7 +14694,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["F/A-18C [M23]"]
   },
   {
     "id": 270,
@@ -14243,7 +14729,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18E"]
   },
   {
     "id": 144,
@@ -14279,7 +14766,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["F/A-18E [M9]"]
   },
   {
     "id": 346,
@@ -14313,7 +14801,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FEARLESS"]
   },
   {
     "id": 347,
@@ -14347,7 +14836,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《FEARLESS》", "FEARLESS"]
   },
   {
     "id": 349,
@@ -14381,7 +14871,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《FEARLESS》", "FEARLESS"]
   },
   {
     "id": 348,
@@ -14415,7 +14906,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《FEARLESS》", "FEARLESS"]
   },
   {
     "id": 350,
@@ -14449,7 +14941,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《FEARLESS》", "FEARLESS"]
   },
   {
     "id": 436,
@@ -14483,7 +14976,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FLYING MOLE 1/BRAND"]
   },
   {
     "id": 437,
@@ -14517,7 +15011,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FLYING MOLE 2"]
   },
   {
     "id": 438,
@@ -14551,7 +15046,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FLYING MOLE 3"]
   },
   {
     "id": 439,
@@ -14585,7 +15081,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FLYING MOLE 4"]
   },
   {
     "id": 46,
@@ -14619,7 +15116,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["FRIGATE"]
   },
   {
     "id": 287,
@@ -14655,7 +15153,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["FRIGATE [M23]"]
   },
   {
     "id": 48,
@@ -14689,7 +15188,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《FRIGATE》", "FRIGATE"]
   },
   {
     "id": 289,
@@ -14725,7 +15225,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["AA GUN《FRIGATE》 [M23]", "FRIGATE"]
   },
   {
     "id": 47,
@@ -14759,7 +15260,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《FRIGATE》", "FRIGATE"]
   },
   {
     "id": 288,
@@ -14795,7 +15297,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["NAVAL GUN《FRIGATE》 [M23]", "FRIGATE"]
   },
   {
     "id": 445,
@@ -14829,7 +15332,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GREEN 1"]
   },
   {
     "id": 446,
@@ -14863,7 +15367,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["GREEN 2"]
   },
   {
     "id": 37,
@@ -14897,7 +15402,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HMMWV"]
   },
   {
     "id": 302,
@@ -14933,7 +15439,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["HMMWV [M23]"]
   },
   {
     "id": 87,
@@ -14969,7 +15476,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HMMWV [M6]"]
   },
   {
     "id": 397,
@@ -15003,7 +15511,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["HOBART"]
   },
   {
     "id": 399,
@@ -15037,7 +15546,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《HOBART》", "HOBART"]
   },
   {
     "id": 398,
@@ -15071,7 +15581,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《HOBART》", "HOBART"]
   },
   {
     "id": 297,
@@ -15107,7 +15618,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["HOWITZER [M23]"]
   },
   {
     "id": 71,
@@ -15141,7 +15653,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["JACKPOT"]
   },
   {
     "id": 142,
@@ -15175,7 +15688,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["JACKPOT"]
   },
   {
     "id": 141,
@@ -15211,7 +15725,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["JACKPOT [M9]"]
   },
   {
     "id": 428,
@@ -15247,7 +15762,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["JACKPOT [M27]"]
   },
   {
     "id": 164,
@@ -15281,7 +15797,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["KARKINOS"]
   },
   {
     "id": 165,
@@ -15315,7 +15832,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《KARKINOS》", "KARKINOS"]
   },
   {
     "id": 167,
@@ -15349,7 +15867,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《KARKINOS》", "KARKINOS"]
   },
   {
     "id": 166,
@@ -15383,7 +15902,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《KARKINOS》", "KARKINOS"]
   },
   {
     "id": 168,
@@ -15417,7 +15937,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《KARKINOS》", "KARKINOS"]
   },
   {
     "id": 130,
@@ -15451,7 +15972,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LCAC"]
   },
   {
     "id": 324,
@@ -15487,7 +16009,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LCAC [M24]"]
   },
   {
     "id": 72,
@@ -15523,7 +16046,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["LCAC [M5]"]
   },
   {
     "id": 450,
@@ -15557,7 +16081,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAGNOLIA"]
   },
   {
     "id": 453,
@@ -15591,7 +16116,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MAGNOLIA"]
   },
   {
     "id": 97,
@@ -15625,7 +16151,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["MQ-99"]
   },
   {
     "id": 400,
@@ -15659,7 +16186,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVANTIA"]
   },
   {
     "id": 402,
@@ -15693,7 +16221,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《NAVANTIA》", "NAVANTIA"]
   },
   {
     "id": 401,
@@ -15727,7 +16256,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《NAVANTIA》", "NAVANTIA"]
   },
   {
     "id": 195,
@@ -15761,7 +16291,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["OP0002_uh09_Ally"]
   },
   {
     "id": 403,
@@ -15795,7 +16326,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["PHAETON"]
   },
   {
     "id": 405,
@@ -15829,7 +16361,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《PHAETON》", "PHAETON"]
   },
   {
     "id": 404,
@@ -15863,7 +16396,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《PHAETON》", "PHAETON"]
   },
   {
     "id": 137,
@@ -15897,7 +16431,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 1"]
   },
   {
     "id": 138,
@@ -15931,7 +16466,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 2"]
   },
   {
     "id": 139,
@@ -15965,7 +16501,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 3"]
   },
   {
     "id": 140,
@@ -15999,7 +16536,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["QUEEN 4"]
   },
   {
     "id": 452,
@@ -16033,7 +16571,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RAFALE M"]
   },
   {
     "id": 466,
@@ -16067,7 +16606,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RANGER"]
   },
   {
     "id": 467,
@@ -16101,7 +16641,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《RANGER》", "RANGER"]
   },
   {
     "id": 469,
@@ -16135,7 +16676,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《RANGER》", "RANGER"]
   },
   {
     "id": 468,
@@ -16169,7 +16711,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《RANGER》", "RANGER"]
   },
   {
     "id": 470,
@@ -16203,7 +16746,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《RANGER》", "RANGER"]
   },
   {
     "id": 356,
@@ -16237,7 +16781,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["REDCAP"]
   },
   {
     "id": 357,
@@ -16271,7 +16816,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《REDCAP》", "REDCAP"]
   },
   {
     "id": 359,
@@ -16305,7 +16851,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《REDCAP》", "REDCAP"]
   },
   {
     "id": 358,
@@ -16339,7 +16886,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《REDCAP》", "REDCAP"]
   },
   {
     "id": 360,
@@ -16373,7 +16921,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《REDCAP》", "REDCAP"]
   },
   {
     "id": 384,
@@ -16407,7 +16956,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["REDEMPTION"]
   },
   {
     "id": 385,
@@ -16441,7 +16991,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《REDEMPTION》", "REDEMPTION"]
   },
   {
     "id": 387,
@@ -16475,7 +17026,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《REDEMPTION》", "REDEMPTION"]
   },
   {
     "id": 386,
@@ -16509,7 +17061,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《REDEMPTION》", "REDEMPTION"]
   },
   {
     "id": 388,
@@ -16543,7 +17096,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《REDEMPTION》", "REDEMPTION"]
   },
   {
     "id": 206,
@@ -16577,7 +17131,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["RESISTANCE TRUCK"]
   },
   {
     "id": 298,
@@ -16613,7 +17168,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["RKT LAUNCHER [M23]"]
   },
   {
     "id": 260,
@@ -16647,7 +17203,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["ROSIE"]
   },
   {
     "id": 455,
@@ -16681,7 +17238,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SAM"]
   },
   {
     "id": 441,
@@ -16715,7 +17273,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHARK"]
   },
   {
     "id": 240,
@@ -16749,7 +17308,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SHILAGE VOL"]
   },
   {
     "id": 449,
@@ -16783,7 +17343,8 @@
     },
     "isAir": true,
     "roleGroup": "air",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["SINGLETON"]
   },
   {
     "id": 86,
@@ -16819,7 +17380,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["SPREAD 2 [M6]"]
   },
   {
     "id": 13,
@@ -16853,7 +17415,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["STALWART"]
   },
   {
     "id": 15,
@@ -16887,7 +17450,8 @@
     },
     "isAir": false,
     "roleGroup": "none",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《STALWART》", "STALWART"]
   },
   {
     "id": 14,
@@ -16921,7 +17485,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《STALWART》", "STALWART"]
   },
   {
     "id": 337,
@@ -16955,7 +17520,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TANK"]
   },
   {
     "id": 292,
@@ -16991,7 +17557,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["TANK [M23]"]
   },
   {
     "id": 321,
@@ -17027,7 +17594,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["TANK [M24]"]
   },
   {
     "id": 299,
@@ -17063,7 +17631,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["TRUCK [M23]"]
   },
   {
     "id": 286,
@@ -17097,7 +17666,8 @@
     },
     "isAir": null,
     "roleGroup": null,
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["VALENTINE"]
   },
   {
     "id": 293,
@@ -17133,7 +17703,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["VALENTINE [M23]"]
   },
   {
     "id": 300,
@@ -17169,7 +17740,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["VALENTINE [M23]"]
   },
   {
     "id": 303,
@@ -17205,7 +17777,8 @@
     },
     "isAir": false,
     "roleGroup": "ground",
-    "standardDamage": false
+    "standardDamage": false,
+    "searchNames": ["VALENTINE [M23]"]
   },
   {
     "id": 351,
@@ -17239,7 +17812,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["WILLING"]
   },
   {
     "id": 352,
@@ -17273,7 +17847,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《WILLING》", "WILLING"]
   },
   {
     "id": 354,
@@ -17307,7 +17882,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["CIWS《WILLING》", "WILLING"]
   },
   {
     "id": 353,
@@ -17341,7 +17917,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["NAVAL GUN《WILLING》", "WILLING"]
   },
   {
     "id": 355,
@@ -17375,7 +17952,8 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["VLS《WILLING》", "WILLING"]
   },
   {
     "id": 506,
@@ -17409,6 +17987,7 @@
     },
     "isAir": false,
     "roleGroup": "ship",
-    "standardDamage": true
+    "standardDamage": true,
+    "searchNames": ["AA GUN《AIRCRAFT CARRIER》", "AIRCRAFT CARRIER"]
   }
 ]

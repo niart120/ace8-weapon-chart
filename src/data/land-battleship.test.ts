@@ -23,11 +23,10 @@ test('M24・M25の本体を非掲載とし、M25の主砲を表示する', () =>
   expect(targetCandidates(saved, targets, 'LAND BATTLESHIP 1 [M24]')).toEqual([]);
 });
 
-test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象の部位21行を表示する', () => {
+test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象の部位18行を表示する', () => {
   const bodyIds = [147, 226, 247, 261, 330, 371, 494, 496];
   const partIds = [
-    148, 149, 150, 151, 152, 153, 155, 227, 228, 229, 248, 250, 251, 252, 253, 254, 255, 256, 257,
-    372, 488,
+    148, 149, 150, 151, 153, 155, 227, 228, 229, 248, 251, 252, 253, 254, 255, 256, 257, 372,
   ];
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
@@ -48,7 +47,7 @@ test('陸上戦艦の本体8行を除外し、親が非表示でも掲載対象�
   for (const id of partIds) expect(initial.targetIds).not.toContain(id);
 });
 
-test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条件を保持する', () => {
+test('THRUSTER154を除外し、153を標準掲載し488の元値は除外記録として保持する', () => {
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   const right = targets.find((t) => t.id === 154)!;
@@ -62,7 +61,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
     missionVariant: null,
   });
   expect(mission).toMatchObject({
-    name: 'THRUSTER《LAND BATTLESHIP 1》 [M9]',
+    name: 'THRUSTER《LAND BATTLESHIP 1》',
     hp: 160,
     missionVariant: { missionId: 9 },
   });
@@ -78,7 +77,7 @@ test('THRUSTER154を除外し、153と488の名前・任務耐性差・表示条
         showParts,
         showMissionVariants,
       };
-      const visible = showParts ? (showMissionVariants ? [488, 153] : [488]) : [];
+      const visible = showParts ? [153] : [];
       expect(targetCandidates(saved, targets, 'THRUSTER').map((t) => t.id)).toEqual(visible);
       expect(selectedTargets(saved, targets).map((t) => t.id)).toEqual(visible);
     }
@@ -106,9 +105,7 @@ test('確認した艦船区分でMSLを計算し、部位・任務表示の4条�
       const ids = selectedTargets(state, targets)
         .map((t) => t.id)
         .sort((a, b) => a - b);
-      expect(ids).toEqual(
-        showParts ? (showMissionVariants ? [151, 152, 153, 372, 488] : [151, 152, 372, 488]) : []
-      );
+      expect(ids).toEqual(showParts ? [151, 153, 372] : []);
       expect(state.targetIds).toEqual([151, 152, 153, 372, 488]);
     }
 });
@@ -153,6 +150,9 @@ test('確認済み属性・簡略名・元NPCの親関係を反映し、統合�
     expect(representative.category).toBe('GROUND');
     expect({
       ...old,
+      name: representative.name,
+      searchNames: representative.searchNames,
+      comparisonId: representative.comparisonId,
       id: representative.id,
       order: representative.order,
       category: representative.category,

@@ -57,9 +57,9 @@ for (const width of [320, 390, 1440]) {
     await expect(page.locator('tbody tr')).toHaveCount(17);
     await page.getByRole('checkbox', { name: 'TARGET PARTS' }).check();
     await expect(page.locator('tr[data-target-id="430"]')).toHaveCount(1);
-    await expect(page.locator('tr[data-target-id="419"]')).toHaveCount(0);
+    await expect(page.locator('tr[data-target-id="419"]')).toHaveCount(1);
     await page.getByRole('checkbox', { name: 'MISSION VARIANTS' }).check();
-    await expect(page.locator('tbody tr')).toHaveCount(32);
+    await expect(page.locator('tbody tr')).toHaveCount(27);
     await expect(page.locator('tr[data-target-id="419"]')).toHaveCount(1);
     const gap = await page.locator('.sidebar-include-filter legend').evaluate((legend) => {
       const line = document.querySelector('.sidebar-filter-divider')!;
@@ -73,7 +73,7 @@ for (const width of [320, 390, 1440]) {
     await page.getByRole('checkbox', { name: 'MISSION VARIANTS' }).uncheck();
     await expect(page.locator('tbody tr')).toHaveCount(17);
     await page.getByRole('radio', { name: 'ALL', exact: true }).check();
-    await expect(page.locator('tbody tr')).toHaveCount(125);
+    await expect(page.locator('tbody tr')).toHaveCount(139);
     await expect(page.getByRole('radio', { name: 'M27', exact: true })).not.toBeChecked();
   });
 }

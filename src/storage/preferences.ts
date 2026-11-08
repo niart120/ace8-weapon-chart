@@ -42,7 +42,7 @@ export function restorePreferences(
 ): Preferences {
   if (
     !isRecord(value) ||
-    value.version !== 5 ||
+    value.version !== 6 ||
     !isMission(value.missionId, catalog) ||
     !isRecord(value.conditions) ||
     !numbers(value.weaponIds) ||
@@ -100,7 +100,7 @@ export function writePreferences(storage: StorageLike | null, state: Preferences
     storage?.setItem(
       storageKey,
       JSON.stringify({
-        version: 5,
+        version: 6,
         missionId: state.missionId,
         conditions: state.conditions,
         weaponIds: state.weaponIds,

@@ -17,7 +17,7 @@ test('MISSIONはALLを含む排他選択で、選んだ任務の対象を表に�
   expect(screen.getAllByRole('rowheader')).toHaveLength(4);
   expect(screen.getByRole('radio', { name: 'ALL' })).toHaveProperty('checked', false);
   fireEvent.click(screen.getByRole('radio', { name: 'ALL' }));
-  expect(screen.getAllByRole('rowheader')).toHaveLength(125);
+  expect(screen.getAllByRole('rowheader')).toHaveLength(139);
 });
 
 test('操作列にフォーカスしてもEscapeは検索を先に閉じる', () => {
@@ -99,7 +99,7 @@ test('検索は候補だけを絞り、任務選択は表に反映される', ()
   fireEvent.click(screen.getByRole('button', { name: 'Search targets' }));
   expect(screen.getByRole('searchbox')).toBe(document.activeElement);
   fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'NO MATCH' } });
-  expect(screen.getAllByRole('rowheader')).toHaveLength(125);
+  expect(screen.getAllByRole('rowheader')).toHaveLength(139);
   fireEvent.click(screen.getByRole('button', { name: 'Filter targets' }));
   fireEvent.click(screen.getByRole('radio', { name: /^M1$/ }));
   expect(screen.getAllByRole('rowheader')).toHaveLength(4);

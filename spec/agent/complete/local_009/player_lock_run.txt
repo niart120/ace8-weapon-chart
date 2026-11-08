@@ -1,0 +1,48 @@
+[{'call': '0x147277aca', 'target': '0x147286eb0', 'function': '0x147277410'}, {'call': '0x147277b4d', 'target': '0x147286eb0', 'function': '0x147277410'}, {'call': '0x1472837a2', 'target': '0x147286eb0', 'function': '0x147283700'}, {'call': '0x1472838f3', 'target': '0x147286eb0', 'function': '0x147283700'}, {'call': '0x14728406c', 'target': '0x147286eb0', 'function': '0x147283b80'}, {'call': '0x1472840ef', 'target': '0x147286eb0', 'function': '0x147283b80'}, {'call': '0x147287af2', 'target': '0x147286eb0', 'function': '0x1472878f0'}, {'call': '0x147287cec', 'target': '0x147286eb0', 'function': '0x1472878f0'}, {'call': '0x147287fc3', 'target': '0x147286eb0', 'function': '0x1472878f0'}, {'call': '0x14728825f', 'target': '0x147286eb0', 'function': '0x147288190'}, {'call': '0x147bf0e18', 'target': '0x14738e690', 'function': '0x147bf0d50'}, {'call': '0x147c7e636', 'target': '0x14738e690', 'function': '0x147c7e340'}, {'call': '0x147cb1b39', 'target': '0x14738e690', 'function': '0x147cb19c0'}, {'call': '0x147ce312e', 'target': '0x14738e690', 'function': '0x147ce2d70'}, {'call': '0x147d0fcf6', 'target': '0x14738e690', 'function': '0x147d0fc70'}, {'call': '0x147d13baf', 'target': '0x14738e690', 'function': '0x147d13950'}, {'call': '0x147d13bc2', 'target': '0x14738e2f0', 'function': '0x147d13950'}, {'call': '0x147dd9db8', 'target': '0x14738e690', 'function': '0x147dd9b90'}, {'call': '0x147dfad91', 'target': '0x14738e690', 'function': '0x147dfab20'}, {'call': '0x147eccba9', 'target': '0x14738e690', 'function': '0x147ecca70'}, {'call': '0x147eccce0', 'target': '0x14738e690', 'function': '0x147eccbf0'}]
+0x147277410 479
+0x147283700 172
+0x147283b80 342
+0x1472878f0 558
+0x147288190 66
+0x147bf0d50 147
+0x147c7e340 169
+0x147cb19c0 272
+0x147ce2d70 296
+0x147d0fc70 47
+0x147d13950 235
+0x147dd9b90 320
+0x147dfab20 266
+0x147ecca70 95
+0x147eccbf0 64
+0x1472843e0 706
+0x1472855c0 741
+0x147286eb0 37
+0x1473e5ce0 101
+0x147c7c6c0 388
+0x147d80cd0 1142
+0x147287040 136
+LiveAIPodargeWing0xa90 0x147c7f010 19
+LiveAIPodargeWing0xa98 0x147c7f050 2
+LiveAIPodargeWing0xae8 0x146cf6930 2
+LiveAIGameObject0xa90 0x147c7f010 19
+LiveAIGameObject0xa98 0x147c7f050 2
+LiveAIGameObject0xae8 0x146cf6930 2
+0x147383190 104
+0x147386ef0 830
+0x14738dc40 90
+0x14738e2f0 214
+0x147390690 205
+0x147390990 80
+0x147390ac0 294
+0x147392600 182
+0x147392cf0 62
+0x147395440 164
+0x147395790 396
+0x147396600 338
+0x14739d950 170
+0x14739f950 54
+0x14739faa0 292
+0x1473a0f50 374
+0x1473a22c0 1052
+0x1473acb10 2210
+registration_slots 3

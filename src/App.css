@@ -330,3 +330,13 @@ th:first-child .sort-button {
       border-color 0.12s;
   }
 }
+.target-affiliations summary {
+  cursor: pointer;
+}
+.target-affiliations > div {
+  max-width: 24rem;
+  white-space: pre-line;
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding-top: 0.4rem;
+}

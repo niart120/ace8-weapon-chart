@@ -1,0 +1,139 @@
+{
+  "excludedIds": [
+    378, 181, 186, 190, 80, 136, 157, 250, 152, 373, 377, 374, 375, 376, 500, 501, 315, 488, 502
+  ],
+  "groups": [
+    {
+      "id": 201,
+      "name": "MSL PALLET",
+      "targetIds": [201, 202]
+    },
+    {
+      "id": 107,
+      "name": "CIWS《LAND AEGIS》",
+      "targetIds": [107, 368]
+    },
+    {
+      "id": 313,
+      "name": "DISP. RAIL GUN",
+      "targetIds": [380, 313, 314]
+    },
+    {
+      "id": 106,
+      "name": "LAND AEGIS",
+      "targetIds": [106, 367]
+    },
+    {
+      "id": 108,
+      "name": "SHUTTER",
+      "targetIds": [108, 369]
+    },
+    {
+      "id": 312,
+      "name": "SSM LAUNCHER",
+      "targetIds": [379, 312]
+    },
+    {
+      "id": 184,
+      "name": "VLS《PODARGE》",
+      "targetIds": [184, 383]
+    },
+    {
+      "id": 109,
+      "name": "VLS《LAND AEGIS》",
+      "targetIds": [109, 370]
+    },
+    {
+      "id": 148,
+      "name": "AA GUN《LAND BATTLESHIP》",
+      "targetIds": [148, 248, 227]
+    },
+    {
+      "id": 150,
+      "name": "AIRBURST GUN《LAND BATTLESHIP》",
+      "targetIds": [150, 257, 229]
+    },
+    {
+      "id": 155,
+      "name": "VLS《LAND BATTLESHIP》",
+      "targetIds": [155, 254]
+    },
+    {
+      "id": 53,
+      "name": "AA GUN《SHIP》",
+      "targetIds": [244, 124, 126, 64, 60, 58, 53]
+    },
+    {
+      "id": 343,
+      "name": "AA GUN《SHIP》 [M25]",
+      "targetIds": [343, 362, 366]
+    },
+    {
+      "id": 57,
+      "name": "NAVAL GUN",
+      "targetIds": [243, 127, 63, 61, 57]
+    },
+    {
+      "id": 342,
+      "name": "NAVAL GUN [M25]",
+      "targetIds": [342, 363, 365]
+    },
+    {
+      "id": 129,
+      "name": "VLS",
+      "targetIds": [246, 129]
+    },
+    {
+      "id": 65,
+      "name": "SAM《SHIP》",
+      "targetIds": [128, 65, 309]
+    },
+    {
+      "id": 419,
+      "name": "PILLAR (Front)",
+      "targetIds": [420, 419]
+    },
+    {
+      "id": 421,
+      "name": "PILLAR (EV)",
+      "targetIds": [422, 421]
+    }
+  ],
+  "names": {
+    "266": "F-14D (SHADOW)",
+    "134": "F-15E (SHADOW)",
+    "133": "F-16C (SHADOW)",
+    "268": "F-22A (SHADOW)",
+    "332": "GRIPEN E (SHADOW)",
+    "28": "MIG-29A (SHADOW)",
+    "193": "MIG-31B (SHADOW)",
+    "135": "MIRAGE 2000-5 (SHADOW)",
+    "336": "SU-33 (SHADOW)",
+    "305": "SU-35S (VENTUS)",
+    "236": "SU-47 (SHADOW)",
+    "333": "TYPHOON (SHADOW)",
+    "410": "UNKNOWN",
+    "411": "UNKNOWN UAV",
+    "259": "CLIMBER",
+    "463": "MSL DISPENSER",
+    "153": "THRUSTER《LAND BATTLESHIP 1》",
+    "425": "TURRET BASE《MEGAFLOAT》",
+    "426": "SHUTTER《MEGAFLOAT》",
+    "179": "PODARGE (AIR)",
+    "381": "PODARGE (SEA)",
+    "183": "AA GUN《PODARGE (AIR)》",
+    "382": "AA GUN《PODARGE (SEA)》",
+    "245": "CIWS",
+    "344": "CIWS [M25]",
+    "414": "CIWS《GROUND》",
+    "345": "VLS [M25]"
+  },
+  "defaultVariantIds": [
+    266, 134, 133, 268, 332, 28, 193, 135, 336, 305, 236, 333, 410, 411, 259, 463, 153, 419, 421,
+    425, 426
+  ],
+  "parents": {
+    "382": 381,
+    "383": 381
+  }
+}

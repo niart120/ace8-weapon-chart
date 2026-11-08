@@ -11,7 +11,9 @@ test('SWARM DRONESを1行に統合し、全出現任務でHP非適用・必要�
   const published = targets.filter((t) => t.name === 'SWARM DRONES' && t.category !== 'EXCLUDED');
   expect(published).toHaveLength(1);
   expect(targets.find((t) => t.id === 465)).toMatchObject({ category: 'EXCLUDED', hp: null });
-  expect(selectedTargets({ ...state, targetIds: [156, 465] }, targets)).toEqual(published);
+  expect(
+    selectedTargets({ ...state, targetIds: [156, 465] }, targets).flatMap((t) => t.members)
+  ).toEqual(published);
   for (const target of published) {
     const missionIds = [9, 10, 19, 30];
     expect(target).toMatchObject({

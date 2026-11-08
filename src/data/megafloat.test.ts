@@ -8,7 +8,7 @@ const target = (id: number) => targets.find((row) => row.id === id)!;
 const weapon = (name: string) => weapons.find((row) => row.name === name)!;
 const conditions = { role: 'MULTIROLE', parts: [], damageType: 'DIRECT' } as const;
 
-test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性差を保持する', () => {
+test('Front/EVのM27有効値を標準とし、固定ID・元HP・内外と任務の耐性差を保持する', () => {
   expect(targets).toHaveLength(506);
   expect(new Set(targets.map((row) => row.id)).size).toBe(506);
   for (const [id, type, hp, missionVariant] of [
@@ -20,7 +20,7 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
     [421, 'EV', 200, { missionId: 27 }],
   ] as const) {
     expect(target(id)).toMatchObject({
-      name: `PILLAR (${type})《MEGAFLOAT》${missionVariant ? ' [M27]' : ''}`,
+      name: `PILLAR (${type})${[500, 501].includes(id) ? '《MEGAFLOAT》' : ''}`,
       hp,
       partOf: 418,
       missionVariant,
@@ -39,17 +39,17 @@ test('Front/EVとM27を併記し、固定ID・元HP・内外と任務の耐性�
   ] as const)
     expect(target(id)).toMatchObject({ hp, partOf });
   expect(target(503).name).toBe('SHUTTER《MEGAFLOAT》');
-  expect(target(426).name).toBe('SHUTTER《MEGAFLOAT》 [M27]');
+  expect(target(426).name).toBe('SHUTTER《MEGAFLOAT》');
   for (const key of ['guidedBomb', 'bomb', 'rocket', 'mpbm'] as const) {
     expect(target(503).damageMultipliers[key]).toBe(1);
     expect(target(426).damageMultipliers[key]).toBe(0);
   }
 });
 
-test('親3行と未裏付けシャッター基本行を除外し、子部位11行へ表示条件を適用する', () => {
-  const excluded = [418, 423, 429, 503];
-  const parts = [424, 430, 420, 422, 500, 501, 419, 421, 426, 502, 425];
-  const common = [424, 430, 420, 422, 500, 501, 502];
+test('親3行と未裏付けシャッター基本行を除外し、集約した子部位へ表示条件を適用する', () => {
+  const excluded = [418, 423, 429, 503, 500, 501, 502];
+  const parts = [424, 430, 420, 422, 419, 421, 426, 425];
+  const comparisons = [424, 430, 419, 421, 426, 425];
   const catalog = { targets, weapons };
   const initial = initialPreferences(false, catalog);
   for (const id of excluded) expect(initial.targetIds).not.toContain(id);
@@ -66,7 +66,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
         showParts,
         showMissionVariants,
       };
-      const visible = showParts ? (showMissionVariants ? parts : common) : [];
+      const visible = showParts ? comparisons : [];
       expect(
         selectedTargets(saved, targets)
           .map((row) => row.id)
@@ -77,7 +77,7 @@ test('親3行と未裏付けシャッター基本行を除外し、子部位11�
           .filter((row) => row.partOf === 418 || excluded.includes(row.id))
           .map((row) => row.id)
           .sort((a, b) => a - b)
-      ).toEqual([...visible].sort((a, b) => a - b));
+      ).toEqual([...(showParts ? parts : [])].sort((a, b) => a - b));
     }
 });
 

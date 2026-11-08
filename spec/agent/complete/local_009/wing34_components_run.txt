@@ -1,0 +1,222 @@
+UNLINKED PARENT BoxComponent 0x14bc8dab0 0x14bc8db00 8 0x14bc8daf0
+BP_OP0044_norn_Wing_L3_Base_C
+{"name": "AirIntake_GEN_VARIABLE_BP_OP044_norn_AirIntake_C_CAT", "class": "BP_OP0044_norn_AirIntake_Base_C", "index": 3, "properties": {"FireControlSystemComponent": 8, "DamagedStateComponent": 16, "OverlapCollision": 42, "RootComponent": 30, "OnEndPlay": []}, "guidFlag": 0, "remaining": "010000001800000042505f4f503034345f6e6f726e5f416972496e74616b6500", "complete": false}
+{"name": "AirIntake_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 12, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -16, "ChildActorTemplate": 3, "RelativeLocation": [-7118.923588, -35751.511937, 591.78078], "ComponentTags": ["AirIntake", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Engine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 13, "properties": {"ChildActorClass": -17, "ChildActorTemplate": 5, "ComponentTags": ["Engine", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Flap_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 14, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -18, "ChildActorTemplate": 4, "ComponentTags": ["FlapBP", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 16, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 17, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 18, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 19, "properties": {"InducedExplosionSystem": 22}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 20, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 21, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 22, "properties": {"FallSpeed": 9.806650161743164, "MaxFollowAngle": 30.0, "BoxSize": [4000.0, 4000.0, 900.0], "CollisionOffset": [-1000.0, -3000.0, 0.0], "InducedHitEffect": -61, "bPlayInducedHitCameraShake": 1, "SpawnInducedHitShakeType": 26, "InducedHitSoundID": -7}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 23, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_Wing_L4_Base_C
+{"name": "LiveAIFireControlSystemComponent", "class": "LiveAIFireControlSystemComponent", "index": 3, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 4, "properties": {"InducedExplosionSystem": 5}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 5, "properties": {"FallSpeed": 9.806650161743164, "MaxFollowAngle": 40.0, "BoxSize": [4000.0, 7000.0, 1000.0], "CollisionOffset": [-2000.0, -6000.0, 0.0], "InducedHitEffect": -34, "bPlayInducedHitCameraShake": 1, "SpawnInducedHitShakeType": 26, "InducedHitSoundID": -7}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 6, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_Wing_R3_Base_C
+{"name": "AirIntake_GEN_VARIABLE_BP_OP044_norn_AirIntake_C_CAT", "class": "BP_OP0044_norn_AirIntake_Base_C", "index": 3, "properties": {"FireControlSystemComponent": 8, "DamagedStateComponent": 16, "OverlapCollision": 42, "RootComponent": 30, "OnEndPlay": []}, "guidFlag": 0, "remaining": "010000001800000042505f4f503034345f6e6f726e5f416972496e74616b6500", "complete": false}
+{"name": "AirIntake_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 12, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -16, "ChildActorTemplate": 3, "RelativeLocation": [-7119.020978, 35751.684249, 581.499195], "ComponentTags": ["AirIntake", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Engine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 13, "properties": {"ChildActorClass": -17, "ChildActorTemplate": 5, "ComponentTags": ["Engine", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Flap_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 14, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -18, "ChildActorTemplate": 4, "RelativeRotation": [0.0, -2.5579538954801977e-13, 4.1514694383489946e-13], "ComponentTags": ["FlapBP", "WingChild"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 16, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 17, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 18, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 19, "properties": {"InducedExplosionSystem": 22}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 20, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 21, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 22, "properties": {"FallSpeed": 9.806650161743164, "MaxFollowAngle": 30.0, "BoxSize": [4000.0, 4000.0, 900.0], "CollisionOffset": [1000.0, 3000.0, 0.0], "InducedHitEffect": -61, "bPlayInducedHitCameraShake": 1, "SpawnInducedHitShakeType": 26, "InducedHitSoundID": -7}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 23, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_Wing_R4_Base_C
+{"name": "LiveAIFireControlSystemComponent", "class": "LiveAIFireControlSystemComponent", "index": 3, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 4, "properties": {"InducedExplosionSystem": 5}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 5, "properties": {"FallSpeed": 9.806650161743164, "MaxFollowAngle": 40.0, "BoxSize": [4000.0, 7000.0, 1000.0], "CollisionOffset": [2000.0, 6000.0, 0.0], "InducedHitEffect": -34, "bPlayInducedHitCameraShake": 1, "SpawnInducedHitShakeType": 26, "InducedHitSoundID": -7}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 6, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_MS12_01_CP_C
+{"name": "PropellerCollision", "class": "BoxComponent", "index": 3, "error": "list index out of range"}
+{"name": "AIState", "class": "LiveAIStateComponent", "index": 40, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Cargo1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 42, "properties": {"ChildActorClass": -5, "ChildActorTemplate": 4, "RelativeLocation": [-3150.0, 0.0, -910.0000000000002], "ComponentTags": ["Cargo_0", "OtherParts"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LeftEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 43, "properties": {"ChildActorTemplate": 7}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "RightEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 44, "properties": {"ChildActorTemplate": 8}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 45, "properties": {"ChildActorTemplate": 5}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 46, "properties": {"ChildActorTemplate": 6}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 47, "properties": {"ChildActorTemplate": 10}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 48, "properties": {"ChildActorTemplate": 11}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 49, "properties": {"ChildActorTemplate": 12}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 50, "properties": {"ChildActorTemplate": 13}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 51, "properties": {"ChildActorTemplate": 14}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 52, "properties": {"ChildActorTemplate": 15}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 53, "properties": {"ChildActorTemplate": 16}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 54, "properties": {"ChildActorTemplate": 17}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 55, "properties": {"ChildActorTemplate": 18}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 56, "properties": {"ChildActorTemplate": 19}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 59, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 60, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 61, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 62, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 63, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 64, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 65, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 66, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 67, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 68, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 69, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 70, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 71, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 72, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 73, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 74, "properties": {"InducedExplosionSystem": 94}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 85, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 86, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 87, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 88, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPlane", "class": "LiveInducedExplosionSystemPlane", "index": 89, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeCargo_0", "class": "LiveInducedExplosionSystemPodargeCargo", "index": 90, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeCargo", "class": "LiveInducedExplosionSystemPodargeCargo", "index": 91, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 92, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 93, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargePlane_0", "class": "LiveInducedExplosionSystemPodargePlane", "index": 94, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargePlane", "class": "LiveInducedExplosionSystemPodargePlane", "index": 95, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 96, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 97, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 98, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 99, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 100, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 101, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 102, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 103, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_Base_C
+{"name": "PropellerCollision", "class": "BoxComponent", "index": 3, "error": "list index out of range"}
+{"name": "AIState", "class": "LiveAIStateComponent", "index": 42, "properties": {"BlackboardAsset": -14, "LuaAssets": {"RootLua": {"LuaScript": -281}, "EvadeLua": {"LuaScript": -282}, "EvadeMissileNearLua": {"LuaScript": -285}, "EvadeMissileFarLua": {"LuaScript": -284}, "EvadeGunLua": {"LuaScript": -283}, "EvadeSpecialLua": {"LuaScript": -284}, "BlackoutLua": {"LuaScript": -288}, "ProvokeLua": {"LuaScript": -288}, "ProvokeNearLua": {"LuaScript": -290}, "ProvokeMidLua": {"LuaScript": -289}, "ProvokeFarLua": {"LuaScript": -289}, "EscapeFromPursuerLua": {"LuaScript": -286}, "MoveAwayFromTargetLua": {"LuaScript": -287}, "PursueTargetLua": {"LuaScript": -291}}}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LeftAirIntake_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 44, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -17, "ChildActorTemplate": 7, "RelativeLocation": [-617.517846, -10497.309902, 1630.895272], "ComponentTags": ["LeftAirIntake", "OtherParts"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LeftEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 45, "properties": {"ChildActorClass": -19, "ChildActorTemplate": 10, "ComponentTags": ["LeftEngine", "OtherParts"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "RightAirIntake_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 46, "properties": {"bIsShowHUDBoxChildActor": false, "ChildActorClass": -17, "ChildActorTemplate": 8, "RelativeLocation": [-617.517846, 10535.132495, 1630.895272], "ComponentTags": ["RightAirIntake", "OtherParts"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "RightEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 47, "properties": {"ChildActorClass": -20, "ChildActorTemplate": 11, "ComponentTags": ["RightEngine", "OtherParts"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 48, "properties": {"ChildActorClass": -15, "ChildActorTemplate": 5, "ComponentTags": ["OtherParts", "Weapon"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 49, "properties": {"ChildActorClass": -15, "ChildActorTemplate": 6, "ComponentTags": ["OtherParts", "Weapon"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 50, "properties": {"ChildActorClass": -18, "ChildActorTemplate": 12, "ComponentTags": ["OtherParts", "Weapon"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 51, "properties": {"ChildActorClass": -18, "ChildActorTemplate": 13, "ComponentTags": ["OtherParts", "Weapon"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 52, "properties": {"ChildActorClass": -33, "ChildActorTemplate": 14, "ComponentTags": ["LeftWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 53, "properties": {"ChildActorClass": -34, "ChildActorTemplate": 15, "ComponentTags": ["LeftWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 54, "properties": {"ChildActorClass": -35, "ChildActorTemplate": 16, "ComponentTags": ["LeftWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 55, "properties": {"ChildActorClass": -36, "ChildActorTemplate": 17, "ComponentTags": ["LeftWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 56, "properties": {"ChildActorClass": -37, "ChildActorTemplate": 18, "ComponentTags": ["RightWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 57, "properties": {"ChildActorClass": -38, "ChildActorTemplate": 19, "ComponentTags": ["RightWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 58, "properties": {"ChildActorClass": -39, "ChildActorTemplate": 20, "ComponentTags": ["RightWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 59, "properties": {"ChildActorClass": -40, "ChildActorTemplate": 21, "ComponentTags": ["RightWing", "Wing"]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 62, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 63, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 64, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 65, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 66, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 67, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 68, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 69, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 70, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 71, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 72, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 73, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 74, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 75, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 76, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 77, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 78, "properties": {"InducedExplosionSystem": 106}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 97, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 98, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 99, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 100, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPlane", "class": "LiveInducedExplosionSystemPlane", "index": 101, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 102, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 103, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 104, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 105, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargePlane_0", "class": "LiveInducedExplosionSystemPodargePlane", "index": 106, "properties": {"SearchRange": 1000.0, "BoxSize": [13000.0, 10000.0, 3000.0], "CollisionOffset": [908.636308, 2.5e-05, -961.178165], "InducedHitSoundID": -3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargePlane", "class": "LiveInducedExplosionSystemPodargePlane", "index": 107, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 108, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 109, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 110, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 111, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 112, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 113, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 114, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 115, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 116, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 117, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 118, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 119, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 120, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 121, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 122, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 123, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_OP0044_norn_MS25_CP_C
+{"name": "PropellerCollision", "class": "BoxComponent", "index": 3, "error": "list index out of range"}
+{"name": "AIState", "class": "LiveAIStateComponent", "index": 38, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "GroundShip_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 40, "properties": {"RelativeLocation": [-1000.0, 0.0, -2600.0]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LeftEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 41, "properties": {"ChildActorClass": -24, "ChildActorTemplate": 6}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "RightEngine_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 42, "properties": {"ChildActorClass": -25, "ChildActorTemplate": 7}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 43, "properties": {"ChildActorClass": -32, "ChildActorTemplate": 4}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Turret_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 44, "properties": {"ChildActorClass": -32, "ChildActorTemplate": 5}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 45, "properties": {"ChildActorClass": -34, "ChildActorTemplate": 9}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "VLS_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 46, "properties": {"ChildActorClass": -34, "ChildActorTemplate": 10}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 47, "properties": {"ChildActorClass": -41, "ChildActorTemplate": 11}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 48, "properties": {"ChildActorClass": -42, "ChildActorTemplate": 12}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 49, "properties": {"ChildActorClass": -43, "ChildActorTemplate": 13}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_L4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 50, "properties": {"ChildActorClass": -44, "ChildActorTemplate": 14}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R1_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 51, "properties": {"ChildActorClass": -45, "ChildActorTemplate": 15}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R2_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 52, "properties": {"ChildActorClass": -46, "ChildActorTemplate": 16}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R3_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 53, "properties": {"ChildActorClass": -47, "ChildActorTemplate": 17}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "Wing_R4_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 54, "properties": {"ChildActorClass": -48, "ChildActorTemplate": 18}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 57, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 58, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 59, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 60, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 61, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 62, "properties": {}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 63, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 64, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 65, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 66, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 67, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 68, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 69, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 70, "properties": {"InducedExplosionSystem": 0}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "DamagedStateComponent", "class": "LiveDamagedStateComponent", "index": 71, "properties": {"InducedExplosionSystem": 102}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 93, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 94, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 95, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionArrangement", "class": "LiveInducedExplosionSystemArrangement", "index": 96, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPlane", "class": "LiveInducedExplosionSystemPlane", "index": 97, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 98, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 99, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeEngine_0", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 100, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeEngine", "class": "LiveInducedExplosionSystemPodargeEngine", "index": 101, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargePlane_0", "class": "LiveInducedExplosionSystemPodargePlane", "index": 102, "properties": {"InducedHitSoundID": -1}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargePlane", "class": "LiveInducedExplosionSystemPodargePlane", "index": 103, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 104, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 105, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 106, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 107, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 108, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 109, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 110, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 111, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 112, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 113, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 114, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 115, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 116, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 117, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveInducedExplosionSystemPodargeWing_0", "class": "LiveInducedExplosionSystemPodargeWing", "index": 118, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "InducedExplosionPodargeWing", "class": "LiveInducedExplosionSystemPodargeWing", "index": 119, "properties": {}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_GR036_ldbs1_SubCat_C
+{"name": "LiveChildActor_GEN_VARIABLE_BP_GR036_ldbs1_SubCat_Core_C_CAT", "class": "BP_GR036_ldbs1_SubCat_Core_C", "index": 3, "properties": {"OverlapCollision": 28, "RootComponent": 20, "OnEndPlay": []}, "guidFlag": 0, "remaining": "010000001b00000042505f47523033365f6c646273315f5375624361745f436f726500", "complete": false}
+{"name": "SubCat_Core_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 12, "properties": {"ChildActorClass": -25, "ChildActorTemplate": 3, "RelativeLocation": [1.7870164867872518e-06, 319.99999999999955, -390.0], "RelativeRotation": [0.0, 90.0, 0.0]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCommonDead_0", "class": "LiveUniqueStateMachine_StateCommonDead", "index": 13, "properties": {"bVanishAllComponents": false, "bDeactivateComponent": 1, "DeactivateComponent": {"ComponentName": "SM_Body"}, "bEnableExplodeVFX": 1, "ExplodeVFX": {"AttachComponentName": "SM_Body", "AttachSocketName": "SOC_SubCat_Armr_L1", "RelativeOffset": {"Rotation": [0.0, -0.0, 0.9999999999999999, 6.123233995736766e-17]}, "VFXSystem": -403, "bEnableSound": 1, "ActivateSoundEvent": -3, "bPlayCameraShake": 1, "SpawnShakeType": 30}}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCoreDead_0", "class": "LiveUniqueStateMachine_StateCoreDead", "index": 14, "properties": {"ComponentName": "SubCat_Core", "bEnablePhysicsActor": 1, "PhysicsActors": [{"ComponentName": "SM_Body", "Socket": "SOC_SubCat_Armr_L1", "PhysicsActorClass": -24, "OverwiteStaticMesh": 0, "ImpulseVelocity": 2000.0, "ImpulseOriginMin": [-1200.0, 500.0, -1500.0], "ImpulseOriginMax": [1200.0, 500.0, -1000.0], "ImpulseWeightCOM": 0.10000000149011612}], "StateId": "Damaged", "Priority": 99, "PrerequisiteState": ["Default"], "HitControl": 1}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateDefault_0", "class": "LiveUniqueStateMachine_StateDefault", "index": 15, "properties": {"HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_GEN_VARIABLE", "class": "LiveUniqueStateMachineComponent", "index": 16, "properties": {"RefreshTiming": 6, "States": [15, 14, 13]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+BP_GR036_ldbs1_SubCat_Core_C
+{"name": "Default__BP_GR036_ldbs1_SubCat_Core_C", "class": "BP_GR036_ldbs1_SubCat_Core_C", "index": 3, "properties": {"UberGraphFrame": {}, "bShowHUDBox": false, "bIsIgnoreScoreBoard": 1, "OverlapCollision": 12, "GameObjectId": 2004, "GameObjectSubId": 100, "GameObjectCategory": 6, "GameObjectBossCategory": 2, "MaxHealth": 300.0, "ObjNameID": "ContainerGround_Name_Subcaterpillar", "DamageSound": {"bEnableDamageSound": 1, "ExplosionSoundEvent": -1}, "HitCenterOffset": [0.0, -400.0, 150.0], "PlugHolder": 6, "RootComponent": 8, "OnEndPlay": [{"object": 6, "function": "OnOwnerActorEndPlay"}]}, "guidFlag": 0, "remaining": "", "complete": true}

@@ -92,6 +92,7 @@ export function validateMasters(
       multiplierKeys.add(component.targetMultiplierKey);
     }
   }
+  const comparisons = new Map<number, Record<string, unknown>>();
   for (const target of targets) {
     requireValue(
       isRecord(target) && [...targetCategories, 'EXCLUDED'].includes(String(target.category)),
@@ -141,6 +142,45 @@ export function validateMasters(
     );
     for (const key of multiplierKeys)
       requireValue(nullable(target.damageMultipliers[key]), `耐性値欠落: ${target.id}/${key}`);
+    requireValue(
+      target.searchNames === undefined ||
+        (Array.isArray(target.searchNames) &&
+          target.searchNames.every((name) => typeof name === 'string' && name.length > 0)),
+      '検索名不備'
+    );
+    requireValue(
+      target.defaultVariant === undefined ||
+        (typeof target.defaultVariant === 'boolean' && target.missionVariant !== null),
+      '標準任務条件不備'
+    );
+    if (target.comparisonId !== undefined) {
+      requireValue(
+        typeof target.comparisonId === 'number' &&
+          targetIds.has(target.comparisonId) &&
+          target.category !== 'EXCLUDED',
+        '比較ID不備'
+      );
+      const previous = comparisons.get(target.comparisonId);
+      if (previous) {
+        requireValue(
+          ['name', 'hp', 'isAir', 'roleGroup', 'standardDamage'].every(
+            (key) => previous[key] === target[key]
+          ),
+          '比較条件不一致'
+        );
+        requireValue(isRecord(previous.damageMultipliers), '比較耐性不備');
+        const rates = previous.damageMultipliers;
+        requireValue(
+          Object.keys(rates).length === Object.keys(target.damageMultipliers).length &&
+            Object.entries(target.damageMultipliers).every(([key, rate]) => rates[key] === rate),
+          '比較耐性不一致'
+        );
+      } else comparisons.set(target.comparisonId, target);
+    }
+  }
+  for (const [id] of comparisons) {
+    const representative = targets.find((t: unknown) => isRecord(t) && t.id === id);
+    requireValue(isRecord(representative) && representative.comparisonId === id, '比較代表の不備');
   }
   // A malformed parent cycle would prevent stable grouping during regeneration.
   for (const target of targets) {

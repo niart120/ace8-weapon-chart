@@ -19,7 +19,7 @@ test('同梱文字列の全31識別子と生成ラベルが一致する', () => 
 
 test('EXCLUDEDを含む全任務差分の配信名がゲーム内番号に一致する', () => {
   for (const target of targets) {
-    if (!target.missionVariant) continue;
+    if (!target.missionVariant || target.defaultVariant) continue;
     const suffix = suffixes.get(target.missionVariant.missionId);
     expect(suffix).toBeDefined();
     expect(target.name.endsWith(` ${suffix}`)).toBe(true);

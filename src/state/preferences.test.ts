@@ -6,7 +6,9 @@ test('PC初回は全兵装、スマートフォン初回は通常MSL、目標は
   expect(initialPreferences(false, catalog).weaponIds).toHaveLength(31);
   expect(initialPreferences(true, catalog).weaponIds).toEqual([1]);
   expect(initialPreferences(false, catalog).targetIds).toHaveLength(
-    targets.filter((t) => t.category !== 'EXCLUDED' && !t.partOf && !t.missionVariant).length
+    targets.filter(
+      (t) => t.category !== 'EXCLUDED' && !t.partOf && (!t.missionVariant || t.defaultVariant)
+    ).length
   );
 });
 
