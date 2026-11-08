@@ -38,10 +38,6 @@ test('モバイルではTabがパネルと操作列を循環し、リサイズ�
 }) => {
   await page.setViewportSize({ width: 1440, height: 720 });
   await page.goto('/');
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
   await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
   await page.getByRole('button', { name: 'HP', exact: true }).focus();
   await page.setViewportSize({ width: 390, height: 720 });

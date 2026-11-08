@@ -77,7 +77,7 @@ export function Sidebar() {
   };
   return (
     <div
-      className={`workspace-layout${section ? ' sidebar-open' : ''}${railVisible ? ' rail-open' : ''}`}
+      className={`workspace-layout${section ? ' sidebar-open' : ''}`}
       onKeyDown={(event) => {
         if (event.key === 'Escape' && section) {
           event.preventDefault();

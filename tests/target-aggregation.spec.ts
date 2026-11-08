@@ -3,10 +3,6 @@ import { expect, test } from '@playwright/test';
 test('所属検索で一部解除した集約行を混合表示し、保存復元後も一行にまとめる', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
   await page.getByRole('button', { name: 'Filter targets' }).click();
   await page.getByRole('checkbox', { name: 'TARGET PARTS' }).check();
@@ -23,10 +19,6 @@ test('所属検索で一部解除した集約行を混合表示し、保存復�
     'mixed'
   );
   await page.reload();
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
   await expect(page.locator('tbody tr')).toHaveCount(217);
   const row = page.locator('tr[data-target-id="53"]');
   await expect(row.getByRole('rowheader')).toHaveText('AA GUN《SHIP》');
@@ -43,10 +35,7 @@ test('所属検索で一部解除した集約行を混合表示し、保存復�
 test('モバイルでM27標準値を表示し、ターゲット列には名称だけを表示する', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
+  await page.getByRole('button', { name: 'Open menu' }).click();
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
   await page.getByRole('button', { name: 'Filter targets' }).click();
   await page.getByRole('radio', { name: 'M27', exact: true }).check();

@@ -35,6 +35,7 @@
 | --- | --- | --- |
 | src/components/Sidebar.tsx | 変更 | ヘッダー、開閉、フォーカス管理 |
 | src/components/sidebar.css | 変更 | モバイル配置と開閉アニメーション |
+| src/App.css | 変更 | 新ヘッダーで上書きされる旧モバイル見出し指定を削除 |
 | src/App.test.tsx | 変更 | 2状態とパネル復元の検証 |
 | tests/mobile-menu.spec.ts | 新規 | モバイル操作、画面幅切り替えの検証 |
 | tests/app.spec.ts、tests/sidebar-regressions.spec.ts、tests/target-aggregation.spec.ts | 変更 | 新しい入口・閉じ方への追従 |
@@ -82,3 +83,14 @@
 - `pnpm format:check` と `git diff --check` で整形を確認。
 - 320pxの武器パネル画像を目視確認。実機タッチ操作は未検証。
 - ビルド時はJavaScript出力が500kBを超える警告あり（約513.6kB）。ビルドは成功。
+
+## 8. 実装後の点検
+
+2026-11-09、実装コミット `55a7f4b` 後に差分を点検。
+
+- モバイルではピラーとパネルの開閉が一致するため、`rail-open` クラスを削除し `sidebar-open` に統一。
+- 新ヘッダーの指定で上書きされる旧モバイル見出しCSSを削除。
+- PC幅固定テストの到達しないモバイル分岐を削除。モバイル幅固定テストは条件分岐をなくして直接メニューを開く。
+- `restoreRailFocus` は画面幅変更後のDOM更新を待ってフォーカスを復元するため維持。開閉状態ではない。
+- 本番コードにモック専用の状態・分岐・仮テキストは確認されなかった。テストの `mockImplementation` は画面幅判定の模擬処理であり維持。
+- `docs/initial/mock.xlsx` は今回の変更外の初期資料として維持。

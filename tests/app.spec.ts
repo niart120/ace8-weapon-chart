@@ -139,10 +139,7 @@ for (const width of [390, 1440]) {
 test('設定アコーディオンの値保持とキーボード操作', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 720 });
   await page.goto('/');
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
+  await page.getByRole('button', { name: 'Open menu' }).click();
   await page.getByRole('button', { name: 'SETTINGS', exact: true }).click();
   await page.getByRole('button', { name: 'ATTACKER', exact: true }).click();
   for (const name of ['ROLE', 'DAMAGE TYPE', 'PARTS']) {
@@ -165,10 +162,7 @@ test('設定アコーディオンの値保持とキーボード操作', async ({
 test('候補0件の狭い画面でもフィルターを操作し、外側クリックで閉じる', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
   await page.goto('/');
-  if (page.viewportSize()!.width < 768) {
-    await page.getByRole('button', { name: 'Open menu' }).click();
-    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  }
+  await page.getByRole('button', { name: 'Open menu' }).click();
   await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
   await page.getByRole('button', { name: 'Search targets' }).click();
   await page.getByRole('searchbox').fill('NO_MATCH_123');

@@ -249,7 +249,7 @@
     transform: translateX(-100%);
     visibility: hidden;
   }
-  .rail-open .sidebar-rail {
+  .sidebar-open .sidebar-rail {
     transform: translateX(0);
     visibility: visible;
   }
@@ -259,7 +259,7 @@
     height: calc(100dvh - var(--mobile-header-height));
     padding-top: 12px;
   }
-  .rail-open .sidebar-main {
+  .sidebar-open .sidebar-main {
     margin-left: var(--rail-width);
   }
   .sidebar-panel {
