@@ -1,4 +1,4 @@
-import { afterEach, expect, test, beforeEach } from 'vitest';
+import { afterEach, expect, test, beforeEach, vi } from 'vitest';
 // @vitest-environment happy-dom
 
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
@@ -7,6 +7,48 @@ import App from './App';
 beforeEach(() => window.localStorage.clear());
 
 afterEach(cleanup);
+
+test('モバイルのハンバーガーでピラーとパネルをまとめて出し入れする', () => {
+  const matchMedia = window.matchMedia.bind(window);
+  const media = vi.spyOn(window, 'matchMedia').mockImplementation((query) => {
+    const result = matchMedia(query);
+    Object.defineProperty(result, 'matches', { value: true });
+    return result;
+  });
+  try {
+    render(<App />);
+    const menu = screen.getByRole('button', { name: 'Open menu' });
+    expect(screen.queryByRole('navigation')).toBeNull();
+    fireEvent.click(menu);
+    expect(screen.getByRole('navigation')).toBeTruthy();
+    expect(screen.getByRole('complementary', { name: 'WEAPONS' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'WEAPONS' }));
+    expect(screen.getByRole('complementary', { name: 'WEAPONS' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'TARGETS' }));
+    expect(screen.getByRole('complementary', { name: 'TARGETS' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Close menu' }));
+    expect(screen.queryByRole('navigation')).toBeNull();
+    expect(screen.queryByRole('complementary')).toBeNull();
+    expect(screen.getByRole('main').hasAttribute('inert')).toBe(false);
+    fireEvent.click(menu);
+    expect(screen.getByRole('complementary', { name: 'TARGETS' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'SETTINGS' }));
+    fireEvent.click(screen.getByRole('button', { name: 'ATTACKER' }));
+    fireEvent.click(menu);
+    fireEvent.click(menu);
+    expect(screen.getByRole('complementary', { name: 'SETTINGS' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'ATTACKER' }).getAttribute('aria-pressed')).toBe(
+      'true'
+    );
+    fireEvent.keyDown(screen.getByRole('complementary'), { key: 'Escape' });
+    expect(screen.queryByRole('navigation')).toBeNull();
+    expect(screen.queryByRole('complementary')).toBeNull();
+    expect(document.activeElement).toBe(menu);
+  } finally {
+    cleanup();
+    media.mockRestore();
+  }
+});
 
 test('MISSIONはALLを含む排他選択で、選んだ任務の対象を表に自動選択する', () => {
   render(<App />);

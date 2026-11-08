@@ -4,6 +4,13 @@ for (const width of [320, 390, 1440]) {
   test(`Escapeの優先順とフォーカス ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 720 });
     await page.goto('/');
+    if (page.viewportSize()!.width < 768) {
+      await page.getByRole('button', { name: 'Open menu' }).click();
+      await expect(page.locator('.sidebar-rail')).toHaveCSS(
+        'transform',
+        'matrix(1, 0, 0, 1, 0, 0)'
+      );
+    }
     const trigger = page.getByRole('button', { name: 'TARGETS', exact: true });
     await trigger.click();
     await expect(page.getByRole('button', { name: 'Search targets', exact: true })).toBeFocused();
@@ -20,7 +27,9 @@ for (const width of [320, 390, 1440]) {
     await expect(page.getByRole('complementary')).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(page.getByRole('complementary')).toHaveCount(0);
-    await expect(trigger).toBeFocused();
+    await expect(
+      width < 768 ? page.getByRole('button', { name: 'Open menu' }) : trigger
+    ).toBeFocused();
   });
 }
 
@@ -29,6 +38,10 @@ test('モバイルではTabがパネルと操作列を循環し、リサイズ�
 }) => {
   await page.setViewportSize({ width: 1440, height: 720 });
   await page.goto('/');
+  if (page.viewportSize()!.width < 768) {
+    await page.getByRole('button', { name: 'Open menu' }).click();
+    await expect(page.locator('.sidebar-rail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+  }
   await page.getByRole('button', { name: 'WEAPONS', exact: true }).click();
   await page.getByRole('button', { name: 'HP', exact: true }).focus();
   await page.setViewportSize({ width: 390, height: 720 });
@@ -36,14 +49,16 @@ test('モバイルではTabがパネルと操作列を循環し、リサイズ�
   await expect(page.getByRole('button', { name: 'Search weapons', exact: true })).toBeFocused();
   for (let index = 0; index < 55; index++) {
     await page.keyboard.press('Tab');
-    expect(await page.evaluate(() => !!document.activeElement?.closest('aside, nav'))).toBe(true);
+    expect(
+      await page.evaluate(() => !!document.activeElement?.closest('aside, nav, .mobile-heading'))
+    ).toBe(true);
   }
-  await page.getByRole('button', { name: 'WEAPONS', exact: true }).focus();
+  await page.getByRole('button', { name: 'Close menu', exact: true }).focus();
   await page.keyboard.press('Shift+Tab');
   expect(await page.evaluate(() => !!document.activeElement?.closest('aside'))).toBe(true);
   await page.keyboard.press('Escape');
   await expect(page.locator('main')).not.toHaveAttribute('inert', '');
-  await expect(page.getByRole('button', { name: 'WEAPONS', exact: true })).toBeFocused();
+  await expect(page.getByRole('button', { name: 'Open menu' })).toBeFocused();
 });
 
 for (const width of [320, 390, 1440]) {
@@ -51,6 +66,13 @@ for (const width of [320, 390, 1440]) {
     await page.setViewportSize({ width, height: 720 });
     await page.emulateMedia({ colorScheme: 'dark' });
     await page.goto('/');
+    if (page.viewportSize()!.width < 768) {
+      await page.getByRole('button', { name: 'Open menu' }).click();
+      await expect(page.locator('.sidebar-rail')).toHaveCSS(
+        'transform',
+        'matrix(1, 0, 0, 1, 0, 0)'
+      );
+    }
     await page.getByRole('button', { name: 'TARGETS', exact: true }).click();
     await page.getByRole('button', { name: 'Filter targets' }).click();
     await page.getByRole('radio', { name: 'M27', exact: true }).check();
