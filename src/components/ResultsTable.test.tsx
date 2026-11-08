@@ -5,6 +5,40 @@ import { ResultsTable } from './ResultsTable';
 import { target, missile } from '../test/fixtures/combat';
 afterEach(cleanup);
 
+test('集約したターゲット列は名称だけを表示し、折りたたみや追加情報を持たない', () => {
+  render(
+    <ResultsTable
+      targets={[
+        {
+          ...target,
+          id: 1,
+          comparisonId: 1,
+          name: 'AA GUN《SHIP》',
+          searchNames: ['AA GUN《AEGIS》'],
+          missionIds: [11],
+        },
+        {
+          ...target,
+          id: 2,
+          comparisonId: 1,
+          name: 'AA GUN《SHIP》',
+          searchNames: ['AA GUN《FRIGATE》'],
+          missionIds: [25],
+        },
+      ]}
+      weapons={[missile]}
+      conditions={{ role: 'MULTIROLE', parts: [], damageType: 'DIRECT' }}
+    />
+  );
+  const headers = screen.getAllByRole('rowheader');
+  expect(headers).toHaveLength(1);
+  expect(headers[0].textContent).toBe('AA GUN《SHIP》');
+  expect(headers[0].querySelector('details, summary')).toBeNull();
+  expect(headers[0].children).toHaveLength(0);
+  fireEvent.click(headers[0]);
+  expect(headers[0].textContent).toBe('AA GUN《SHIP》');
+});
+
 test('HP非適用はHPをハイフン、命中数を疑問符とし、HP順の両方向で末尾に置く', () => {
   render(
     <ResultsTable

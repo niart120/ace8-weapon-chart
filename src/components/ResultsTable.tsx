@@ -2,20 +2,7 @@ import type { DefeatRequirementResult, Target, Weapon, Conditions } from '../dom
 import { useMemo, useState } from 'react';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { compareTargetHealth, compareTargetNames, compareTargets } from '../state/preferences';
-import { groupTargets, targetAffiliations, type TargetGroup } from '../state/target-groups';
-
-function TargetName({ target }: { target: TargetGroup }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <details
-      className="target-affiliations"
-      onToggle={(event) => setOpen(event.currentTarget.open)}
-    >
-      <summary>{target.name}</summary>
-      {open && <div>{targetAffiliations(target.members)}</div>}
-    </details>
-  );
-}
+import { groupTargets, type TargetGroup } from '../state/target-groups';
 
 type Sort = { key: 'target' | 'hp' | number; direction: 'ascending' | 'descending' } | null;
 const resultRank = (result: DefeatRequirementResult) =>
@@ -123,9 +110,7 @@ export function ResultsTable({
         <tbody>
           {ordered.map(({ target, results }) => (
             <tr key={target.id} data-target-id={target.id}>
-              <th scope="row">
-                <TargetName target={target} />
-              </th>
+              <th scope="row">{target.name}</th>
               <td className="hp">{target.hp ?? '-'}</td>
               {weapons.map((weapon) => {
                 const result = results.get(weapon.id);
