@@ -5,7 +5,6 @@
 
 ### Bug Fixes
 
-* **results:** ターゲット列の折りたたみと追加情報を削除 ([f2399f6](https://github.com/niart120/ace8-weapon-chart/commit/f2399f6a4abdda4788d61ee274e7255f87f1a76a))
 * **results:** ターゲット列の折りたたみと追加情報を削除 ([27832c6](https://github.com/niart120/ace8-weapon-chart/commit/27832c6a6496a15abbc15e2739f8f675b8cb4d54))
 
 ## [1.2.0](https://github.com/niart120/ace8-weapon-chart/compare/v1.1.0...v1.2.0) (2026-11-08)
