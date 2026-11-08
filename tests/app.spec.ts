@@ -156,7 +156,7 @@ for (const width of [390, 1440]) {
         localStorage.setItem(
           'ace8-weapon-chart.preferences',
           JSON.stringify({
-            version: 5,
+            version: 6,
             missionId: null,
             weaponIds: [21],
             targetIds: [26, 156, 465, 430, 153],
@@ -179,7 +179,7 @@ for (const width of [390, 1440]) {
     await page.getByRole('searchbox').fill('F-16C');
     await page.getByRole('button', { name: 'Filter targets' }).click();
     await page.getByRole('radio', { name: 'M3', exact: true }).check();
-    await expect(page.locator('tbody tr')).toHaveCount(9);
+    await expect(page.locator('tbody tr')).toHaveCount(10);
     await page.getByRole('checkbox', { name: 'MISSION VARIANTS' }).check();
     await expect(page.locator('tbody tr')).toHaveCount(10);
     await page.keyboard.press('Escape');
@@ -204,6 +204,6 @@ for (const width of [390, 1440]) {
     await page.getByRole('button', { name: 'Reset all' }).click();
     await expect(page.getByRole('dialog')).toHaveCount(0);
     await expect(page.locator('thead th')).toHaveCount(width === 390 ? 3 : 33);
-    await expect(page.locator('tbody tr')).toHaveCount(125);
+    await expect(page.locator('tbody tr')).toHaveCount(139);
   });
 }

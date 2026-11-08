@@ -100,7 +100,8 @@ def main():
     mission_exclusions=read(Path(__file__).with_name('target-mission-exclusions.json'))
     indexed,evidence=index_module.build_index(catalog['targets'],npcs,models,table('DT_LiveAircraft'),all_missions,mission_exclusions)
     (local/'target-browsing-evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    result={'weapons':weapons,'targets':indexed,'sources':sources,'modifiers':modifiers}
+    presentation=read(Path(__file__).with_name('target-presentation.json'))
+    result={'weapons':weapons,'targets':indexed,'sources':sources,'modifiers':modifiers,'presentation':presentation}
     (local/'generation-input.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Resolved {len(sources)} source definitions')
 

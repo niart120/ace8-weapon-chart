@@ -1,4 +1,5 @@
 import type { Conditions, Target, Weapon } from '../domain/types';
+import { groupTargets, type TargetGroup } from './target-groups';
 export interface Catalog {
   readonly weapons: readonly Weapon[];
   readonly targets: readonly Target[];
@@ -19,7 +20,9 @@ export function initialPreferences(mobile: boolean, catalog: Catalog): Preferenc
       .filter((w) => w.category !== 'UNUSED' && (!mobile || w.id === 1))
       .map((w) => w.id),
     targetIds: catalog.targets
-      .filter((t) => t.category !== 'EXCLUDED' && !t.partOf && !t.missionVariant)
+      .filter(
+        (t) => t.category !== 'EXCLUDED' && !t.partOf && (!t.missionVariant || t.defaultVariant)
+      )
       .map((t) => t.id),
     showMissionVariants: false,
     showParts: false,
@@ -56,9 +59,9 @@ export function targetCandidates(
       (t) =>
         t.category !== 'EXCLUDED' &&
         (!t.partOf || state.showParts) &&
-        (!t.missionVariant || state.showMissionVariants) &&
+        (!t.missionVariant || t.defaultVariant || state.showMissionVariants) &&
         (state.missionId === null || t.missionIds.includes(state.missionId)) &&
-        t.name.toLowerCase().includes(search)
+        [t.name, ...(t.searchNames ?? [])].some((name) => name.toLowerCase().includes(search))
     )
     .toSorted(compareTargets);
 }
@@ -68,9 +71,11 @@ export function weaponCandidates(weapons: readonly Weapon[], query = ''): Weapon
     .filter((w) => w.category !== 'UNUSED' && w.name.toLowerCase().includes(search))
     .toSorted((a, b) => a.order - b.order);
 }
-export function selectedTargets(state: Preferences, targets: readonly Target[]): Target[] {
+export function selectedTargets(state: Preferences, targets: readonly Target[]): TargetGroup[] {
   const selected = new Set(state.targetIds);
-  return targetCandidates(state, targets).filter((t) => selected.has(t.id));
+  return groupTargets(targetCandidates(state, targets).filter((t) => selected.has(t.id))).toSorted(
+    compareTargets
+  );
 }
 export function selectMission(
   state: Preferences,

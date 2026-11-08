@@ -2,6 +2,7 @@ import { useEffect, useImperativeHandle, useRef, useState } from 'react';
 import type { Dispatch, Ref, SetStateAction } from 'react';
 import { targets, weapons } from '../data/masters';
 import { targetCategories, weaponCategories } from '../domain/types';
+import type { Weapon } from '../domain/types';
 import { visibleMissions, isSelectableMission, targetSubcategories } from '../domain/catalog';
 import {
   changeTargetIncludes,
@@ -13,15 +14,18 @@ import {
   weaponCandidates,
 } from '../state/preferences';
 import type { Preferences } from '../state/preferences';
+import { groupTargets, targetAffiliations, type TargetGroup } from '../state/target-groups';
 
 function GroupCheckbox({
   name,
   selection,
   onChange,
+  item = false,
 }: {
   name: string;
   selection: 'all' | 'some' | 'none';
   onChange: () => void;
+  item?: boolean;
 }) {
   const input = useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -31,7 +35,7 @@ function GroupCheckbox({
     <input
       ref={input}
       type="checkbox"
-      aria-label={`${name} all`}
+      aria-label={item ? name : `${name} all`}
       aria-checked={selection === 'some' ? 'mixed' : selection === 'all'}
       checked={selection === 'all'}
       onChange={onChange}
@@ -325,11 +329,15 @@ export function SelectionPanel({
                   : (Object.entries(targetSubcategories).find(([key]) => key === category)?.[1] ??
                     [])
                 ).map((subcategory) => {
-                  const items = shown.filter(
+                  const sourceItems = shown.filter(
                     (item) =>
                       subcategory === null ||
                       ('subcategory' in item && item.subcategory === subcategory)
                   );
+                  const items: readonly (Weapon | TargetGroup)[] =
+                    kind === 'targets'
+                      ? groupTargets(sourceItems.filter((item) => 'hp' in item))
+                      : sourceItems.filter((item): item is Weapon => !('hp' in item));
                   if (!items.length) return null;
                   const subgroupIds = all
                     .filter(
@@ -361,17 +369,41 @@ export function SelectionPanel({
                       )}
                       {items.map((item) => (
                         <label key={item.id}>
-                          <input
-                            type="checkbox"
-                            checked={state[field].includes(item.id)}
-                            onChange={() =>
-                              setState((current) => ({
-                                ...current,
-                                [field]: toggleId(current[field], item.id),
-                              }))
-                            }
-                          />
-                          <span>{item.name}</span>
+                          {'members' in item ? (
+                            <GroupCheckbox
+                              item
+                              name={item.name}
+                              selection={groupSelection(
+                                state.targetIds,
+                                item.members.map((t) => t.id)
+                              )}
+                              onChange={() =>
+                                setState((current) => ({
+                                  ...current,
+                                  targetIds: toggleGroup(
+                                    current.targetIds,
+                                    item.members.map((t) => t.id)
+                                  ),
+                                }))
+                              }
+                            />
+                          ) : (
+                            <input
+                              type="checkbox"
+                              checked={state[field].includes(item.id)}
+                              onChange={() =>
+                                setState((current) => ({
+                                  ...current,
+                                  [field]: toggleId(current[field], item.id),
+                                }))
+                              }
+                            />
+                          )}
+                          <span
+                            title={'members' in item ? targetAffiliations(item.members) : undefined}
+                          >
+                            {item.name}
+                          </span>
                           {'hp' in item && <span className="option-hp">{item.hp ?? '-'}</span>}
                         </label>
                       ))}

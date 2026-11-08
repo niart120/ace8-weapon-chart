@@ -1,6 +1,7 @@
 import { validateMasters } from '../../src/domain/validate.ts';
 import type { Modifiers, Target, Weapon } from '../../src/domain/types';
 import { withMissionLabel } from './mission-label.ts';
+import { applyTargetPresentation, type TargetPresentation } from './target-presentation.ts';
 export interface SourceRef {
   readonly table: string;
   readonly row: string;
@@ -14,6 +15,7 @@ export type TargetDefinition = Omit<Target, keyof ResolvedTarget> & {
   readonly sourceRefs: readonly SourceRef[];
 };
 export interface GenerationInput {
+  readonly presentation?: TargetPresentation;
   readonly weapons: readonly Weapon[];
   readonly targets: readonly TargetDefinition[];
   readonly sources: Readonly<Record<string, ResolvedTarget>>;
@@ -44,7 +46,10 @@ export function generateMasters(input: GenerationInput): Masters {
   });
   const masters = {
     weapons: [...input.weapons].sort(byOrder),
-    targets: targets.sort(byOrder),
+    targets: (input.presentation
+      ? applyTargetPresentation(targets, input.presentation)
+      : targets
+    ).sort(byOrder),
     modifiers: input.modifiers,
   };
   if ([...masters.weapons, ...masters.targets].some((row) => 'sourceRefs' in row))

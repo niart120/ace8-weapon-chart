@@ -1,0 +1,96 @@
+0x14728450b 706
+0x147284883 je 0x147284893
+0x147284885 test rbx, rbx
+0x147284888 je 0x147284893
+0x14728488a cmp byte ptr [rbx + 0x117a], r14b
+0x147284891 jne 0x1472848ac
+0x147284893 mov rax, qword ptr [rbx]
+0x147284896 mov rcx, rbx
+0x147284899 call qword ptr [rax + 0xae8]
+0x14728592b 741
+0x147285eb0 call 0x1470bdc90
+0x147285eb5 test al, al
+0x147285eb7 je 0x147285ec2
+0x147285eb9 cmp byte ptr [rbx + 0x117a], 0
+0x147285ec0 jne 0x147285ee4
+0x147285ec2 mov rax, qword ptr [rbx]
+0x147285ec5 mov rcx, rbx
+0x147285ec8 call qword ptr [rax + 0xae8]
+0x147286eb0 37
+0x147286ed4 call 0x1470bdc90
+0x147286ed9 test al, al
+0x147286edb je 0x147286ee6
+0x147286edd cmp byte ptr [rbx + 0x117a], 0
+0x147286ee4 jne 0x147286eff
+0x147286ee6 mov rax, qword ptr [rbx]
+0x147286ee9 mov rcx, rbx
+0x147286eec call qword ptr [rax + 0xae8]
+0x1473e5e37 101
+0x1473e5e37 movzx eax, byte ptr [rsi + 0x88]
+0x1473e5e3e mov rbx, qword ptr [rsp + 0x38]
+0x1473e5e43 mov rsi, qword ptr [rsp + 0x40]
+0x1473e5e48 mov byte ptr [r14 + 0x117a], al
+0x1473e5e4f add rsp, 0x20
+0x1473e5e53 pop r14
+0x1473e5e55 ret 
+0x147c7c6c0 388
+0x147c7c995 mov byte ptr [rdi + 0x1170], r14b
+0x147c7c99c mov dword ptr [rdi + 0x1174], 0x3f800000
+0x147c7c9a6 mov word ptr [rdi + 0x1178], r14w
+0x147c7c9ae mov byte ptr [rdi + 0x117a], r14b
+0x147c7c9b5 mov byte ptr [rdi + 0x1180], r14b
+0x147c7c9bc mov dword ptr [rdi + 0x1184], 0x3f800000
+0x147c7c9c6 mov byte ptr [rdi + 0x1188], 1
+0x147c7c9cd mov qword ptr [rdi + 0x118c], r14
+0x147c7c9e2 mov qword ptr [rdi + 0x11a8], r14
+0x147c7c9e9 mov qword ptr [rdi + 0x11b4], r14
+0x147c7c9f0 mov word ptr [rdi + 0x11b0], r14w
+0x147c7c9f8 mov byte ptr [rdi + 0x11b2], r14b
+0x147c7c9ff mov qword ptr [rdi + 0x11c0], r14
+0x147c7ca06 mov qword ptr [rdi + 0x11e8], r14
+0x147c7ca0d mov dword ptr [rdi + 0x11c8], r14d
+0x147c7ca14 mov byte ptr [rdi + 0x11cc], 1
+0x147d80d0a 1142
+0x147d80ed6 call 0x1470bdc90
+0x147d80edb test al, al
+0x147d80edd je 0x147d80ee8
+0x147d80edf cmp byte ptr [rbx + 0x117a], 0
+0x147d80ee6 jne 0x147d80f16
+0x147d80ee8 mov rax, qword ptr [rbx]
+0x147d80eeb mov rcx, rbx
+0x147d80eee call qword ptr [rax + 0xae8]
+0x147ec27a3 55
+0x147ec279a mov al, 1
+0x147ec279c mov rbx, qword ptr [rsp + 0x30]
+0x147ec27a1 je 0x147ec27b3
+0x147ec27a3 cmp byte ptr [rbp + 0x11b2], 0
+0x147ec27aa jne 0x147ec27b3
+0x147ec27ac movzx eax, byte ptr [rbp + 0x338]
+0x147ec27b3 add rsp, 0x20
+0x147ec27b7 pop rbp
+0x147c61135 232
+0x147cd5b04 878
+0x147cd70f0 310
+BP_GR036_ldbs1_SubCat_C
+{"name": "LiveChildActor_GEN_VARIABLE_BP_GR036_ldbs1_SubCat_Core_C_CAT", "class": "BP_GR036_ldbs1_SubCat_Core_C", "index": 3, "properties": {"OverlapCollision": 28, "RootComponent": 20, "OnEndPlay": []}, "guidFlag": 0, "remaining": "010000001b00000042505f47523033365f6c646273315f5375624361745f436f726500", "complete": false}
+{"name": "SubCat_Core_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 12, "properties": {"ChildActorClass": -25, "ChildActorTemplate": 3, "RelativeLocation": [1.7870164867872518e-06, 319.99999999999955, -390.0], "RelativeRotation": [0.0, 90.0, 0.0]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCommonDead_0", "class": "LiveUniqueStateMachine_StateCommonDead", "index": 13, "properties": {"bVanishAllComponents": false, "bDeactivateComponent": 1, "DeactivateComponent": {"ComponentName": "SM_Body"}, "bEnableExplodeVFX": 1, "ExplodeVFX": {"AttachComponentName": "SM_Body", "AttachSocketName": "SOC_SubCat_Armr_L1", "RelativeOffset": {"Rotation": [0.0, -0.0, 0.9999999999999999, 6.123233995736766e-17]}, "VFXSystem": -403, "bEnableSound": 1, "ActivateSoundEvent": -3, "bPlayCameraShake": 1, "SpawnShakeType": 30}}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCoreDead_0", "class": "LiveUniqueStateMachine_StateCoreDead", "index": 14, "properties": {"ComponentName": "SubCat_Core", "bEnablePhysicsActor": 1, "PhysicsActors": [{"ComponentName": "SM_Body", "Socket": "SOC_SubCat_Armr_L1", "PhysicsActorClass": -24, "OverwiteStaticMesh": 0, "ImpulseVelocity": 2000.0, "ImpulseOriginMin": [-1200.0, 500.0, -1500.0], "ImpulseOriginMax": [1200.0, 500.0, -1000.0], "ImpulseWeightCOM": 0.10000000149011612}], "StateId": "Damaged", "Priority": 99, "PrerequisiteState": ["Default"], "HitControl": 1}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateDefault_0", "class": "LiveUniqueStateMachine_StateDefault", "index": 15, "properties": {"HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_GEN_VARIABLE", "class": "LiveUniqueStateMachineComponent", "index": 16, "properties": {"RefreshTiming": 6, "States": [15, 14, 13]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+BP_GR036_ldbs1_SubCat_Core_C
+{"name": "Default__BP_GR036_ldbs1_SubCat_Core_C", "class": "BP_GR036_ldbs1_SubCat_Core_C", "index": 3, "properties": {"UberGraphFrame": {}, "bShowHUDBox": false, "bIsIgnoreScoreBoard": 1, "OverlapCollision": 12, "GameObjectId": 2004, "GameObjectSubId": 100, "GameObjectCategory": 6, "GameObjectBossCategory": 2, "MaxHealth": 300.0, "ObjNameID": "ContainerGround_Name_Subcaterpillar", "DamageSound": {"bEnableDamageSound": 1, "ExplosionSoundEvent": -1}, "HitCenterOffset": [0.0, -400.0, 150.0], "PlugHolder": 6, "RootComponent": 8, "OnEndPlay": [{"object": 6, "function": "OnOwnerActorEndPlay"}]}, "guidFlag": 0, "remaining": "", "complete": true}
+BP_GR037_ldbs2_Bridge_C
+{"name": "MainCore_GEN_VARIABLE_BP_GR037_ldbs2_MainCore_C_CAT", "class": "BP_GR037_ldbs2_MainCore_C", "index": 3, "properties": {"OverlapCollision": 24, "RootComponent": 17, "OnEndPlay": []}, "guidFlag": 0, "remaining": "010000001800000042505f47523033375f6c646273325f4d61696e436f726500", "complete": false}
+{"name": "MainCore_GEN_VARIABLE", "class": "LiveChildActorComponent", "index": 8, "properties": {"ChildActorClass": -31, "ChildActorTemplate": 3, "RelativeLocation": [1832.0, -400.0, 890.0]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCommonDead_0", "class": "LiveUniqueStateMachine_StateCommonDead", "index": 9, "properties": {"bVanishAllComponents": false, "ExplodeVFX": {"AttachComponentName": "MainCore"}}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCoreDead_0", "class": "LiveUniqueStateMachine_StateCoreDead", "index": 10, "properties": {"ComponentName": "MainCore", "Priority": 1, "HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateDamagedByEvent_0", "class": "LiveUniqueStateMachine_StateDamagedByEvent", "index": 11, "properties": {"TransitionEvent": "ToOpen", "bDeactivateComponents": 1, "DeactivateComponents": [{"ComponentName": "SM_Bridge", "bChildComponentOnly": false, "AttachedChildComponentSocket": "*"}], "bEnableBrokenMesh": 1, "BrokenStaticMeshes": [{"ComponentName": "RootComponent", "Socket": "None", "StaticMesh": -743, "bReplaceSM": false}], "bEnableExplodeVFX": 1, "ExplodeVFXs": [{"AttachComponentName": "MainCore", "AttachSocketName": "None", "RelativeOffset": {"Rotation": [-0.0, 0.0, -0.7071067811865476, 0.7071067811865477], "Translation": {}, "Scale3D": [1.0, 1.0, 1.0]}, "VFXSystem": -474, "VFXType": 1, "WarmUpTime": 0, "bEnableSound": false, "ActivateSoundEvent": 0, "DeactivateSoundEvent": 0, "bPlayCameraShake": false, "SpawnShakeType": 24}], "StateId": "Open", "Priority": 10, "HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateDefault_0", "class": "LiveUniqueStateMachine_StateDefault", "index": 12, "properties": {"HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_GEN_VARIABLE", "class": "LiveUniqueStateMachineComponent", "index": 13, "properties": {"RefreshTiming": 6, "bUseDefaultState": 1, "DefaultState": "Default", "States": [12, 11, 9, 10]}, "guidFlag": 0, "remaining": "00000000", "complete": true}
+BP_GR037_ldbs2_MainCore_C
+{"name": "ComponentDelegateBinding_0", "class": "ComponentDelegateBinding", "index": 3, "properties": {"ComponentDelegateBindings": [{"ComponentPropertyName": "LiveUniqueStateMachine", "DelegatePropertyName": "OnStateActivated", "FunctionNameToBind": "BndEvt__BP_GR036_ldbs1_SubCat_LiveUniqueStateMachine_K2Node_ComponentBoundEvent_0_LiveUniqeStateActivatedSignature__DelegateSignature"}]}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateCommonDead_0", "class": "LiveUniqueStateMachine_StateCommonDead", "index": 7, "properties": {"bEnableExplodeVFX": 1, "ExplodeVFX": {"VFXSystem": -32}}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateDefault_0", "class": "LiveUniqueStateMachine_StateDefault", "index": 8, "properties": {"HitControl": 3}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_StateTransition_0", "class": "LiveUniqueStateMachine_StateTransition", "index": 9, "properties": {"TransitionEvent": "ToOpen", "StateId": "Open", "Priority": 1, "HitControl": 2}, "guidFlag": 0, "remaining": "", "complete": true}
+{"name": "LiveUniqueStateMachine_GEN_VARIABLE", "class": "LiveUniqueStateMachineComponent", "index": 10, "properties": {"RefreshTiming": 6, "bUseDefaultState": 1, "DefaultState": "Default", "States": [8, 9, 7]}, "guidFlag": 0, "remaining": "00000000", "complete": true}

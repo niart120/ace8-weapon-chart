@@ -74,7 +74,7 @@ test('MEGAFLOATの属性を保持し、親構造物3行とシャッター基本�
       targets.find((target) => target.id === id),
       `ID${id}`
     ).toMatchObject({
-      category: excluded || id === 503 ? 'EXCLUDED' : 'STRUCTURE',
+      category: excluded || [500, 501, 503].includes(id) ? 'EXCLUDED' : 'STRUCTURE',
       isAir: false,
       roleGroup: 'ground',
       standardDamage: !excluded,

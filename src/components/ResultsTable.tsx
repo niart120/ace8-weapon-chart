@@ -2,6 +2,20 @@ import type { DefeatRequirementResult, Target, Weapon, Conditions } from '../dom
 import { useMemo, useState } from 'react';
 import { calculateDefeatRequirement } from '../domain/calculate';
 import { compareTargetHealth, compareTargetNames, compareTargets } from '../state/preferences';
+import { groupTargets, targetAffiliations, type TargetGroup } from '../state/target-groups';
+
+function TargetName({ target }: { target: TargetGroup }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <details
+      className="target-affiliations"
+      onToggle={(event) => setOpen(event.currentTarget.open)}
+    >
+      <summary>{target.name}</summary>
+      {open && <div>{targetAffiliations(target.members)}</div>}
+    </details>
+  );
+}
 
 type Sort = { key: 'target' | 'hp' | number; direction: 'ascending' | 'descending' } | null;
 const resultRank = (result: DefeatRequirementResult) =>
@@ -27,7 +41,7 @@ export function ResultsTable({
   weapons,
   conditions,
 }: {
-  targets: readonly Target[];
+  targets: readonly (Target | TargetGroup)[];
   weapons: readonly Weapon[];
   conditions: Conditions;
 }) {
@@ -37,7 +51,9 @@ export function ResultsTable({
   if (sort && !activeSort) setSort(null);
   const rows = useMemo(
     () =>
-      targets.map((target) => ({
+      groupTargets(
+        targets.flatMap((target) => ('members' in target ? target.members : [target]))
+      ).map((target) => ({
         target,
         results: new Map(
           weapons.map((weapon) => [
@@ -107,7 +123,9 @@ export function ResultsTable({
         <tbody>
           {ordered.map(({ target, results }) => (
             <tr key={target.id} data-target-id={target.id}>
-              <th scope="row">{target.name}</th>
+              <th scope="row">
+                <TargetName target={target} />
+              </th>
               <td className="hp">{target.hp ?? '-'}</td>
               {weapons.map((weapon) => {
                 const result = results.get(weapon.id);

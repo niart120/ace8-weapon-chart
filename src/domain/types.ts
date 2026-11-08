@@ -30,6 +30,9 @@ export interface Weapon {
   readonly calculation: 'hits' | 'tls' | 'unresolved';
 }
 export interface Target {
+  readonly comparisonId?: number;
+  readonly searchNames?: readonly string[];
+  readonly defaultVariant?: boolean;
   readonly id: number;
   readonly name: string;
   readonly category: TargetCategory;
