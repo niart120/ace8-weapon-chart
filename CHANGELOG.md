@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/niart120/ace8-weapon-chart/compare/v1.1.0...v1.2.0) (2026-11-08)
+
+
+### Features
+
+* **targets:** 合意済みの表示集約と掲載整理を反映 ([7503ff6](https://github.com/niart120/ace8-weapon-chart/commit/7503ff616c76da6b86645aa216836a27f76021f2))
+* **targets:** 合意済みの表示集約と掲載整理を反映 ([e2a6385](https://github.com/niart120/ace8-weapon-chart/commit/e2a6385c1dbbbc3433a35cea09310a4a535482de))
+
 ## [1.1.0](https://github.com/niart120/ace8-weapon-chart/compare/v1.0.0...v1.1.0) (2026-11-05)
 
 
